@@ -2,6 +2,9 @@
     "doctrine/instantiator": {
         "version": "1.1.0"
     },
+    "paragonie/random_compat": {
+        "version": "v2.0.11"
+    },
     "phpdocumentor/reflection-common": {
         "version": "1.0.1"
     },
@@ -46,6 +49,9 @@
     },
     "symfony/cache": {
         "version": "v4.0.0"
+    },
+    "symfony/class-loader": {
+        "version": "v3.4.0"
     },
     "symfony/config": {
         "version": "v4.0.0"
@@ -113,7 +119,13 @@
             "ref": "55a81726745b54cc6f8d845f1a094ed7d9ed2e32"
         }
     },
+    "symfony/polyfill-apcu": {
+        "version": "v1.6.0"
+    },
     "symfony/polyfill-mbstring": {
+        "version": "v1.6.0"
+    },
+    "symfony/polyfill-php70": {
         "version": "v1.6.0"
     },
     "symfony/process": {
