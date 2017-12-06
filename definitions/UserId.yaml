@@ -1,0 +1,12 @@
+definition:
+  type: SimpleIdentifier
+  className: MyVendor\User\UserId
+  parent: ~
+  interfaces: []
+  traits: []
+  constructor:
+    id:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: ~

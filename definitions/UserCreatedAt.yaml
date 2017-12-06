@@ -1,0 +1,12 @@
+definition:
+  type: DateTimeValueObject
+  className: MyVendor\User\UserCreatedAt
+  parent: \DateTime
+  interfaces: []
+  traits: []
+  constructor:
+    value:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: ~
