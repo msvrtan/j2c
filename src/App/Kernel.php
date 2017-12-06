@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\CompilerPass\JsonToConfigFactoryPass;
+use App\Service\JsonToConfig\Factory;
+use NullDevelopment\Skeleton\Core\ObjectConfigurationLoader;
+use NullDevelopment\Skeleton\ObjectConfigurationLoaderCompilerPass;
+use NullDevelopment\Skeleton\PhpSpecGeneratorRegistrationCompilerPass;
+use NullDevelopment\Skeleton\PhpUnitGeneratorRegistrationCompilerPass;
+use NullDevelopment\Skeleton\TacticianHandlerRegistrationCompilerPass;
+use NullDevelopment\Skeleton\TacticianMiddlewareRegistrationCompilerPass;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -59,5 +67,21 @@ class Kernel extends BaseKernel
             $routes->import($confDir.'/routes/'.$this->environment.'/**/*'.self::CONFIG_EXTS, '/', 'glob');
         }
         $routes->import($confDir.'/routes'.self::CONFIG_EXTS, '/', 'glob');
+    }
+
+    public function build(ContainerBuilder $container)
+    {
+        $container->registerForAutoconfiguration(Factory::class)
+            ->addTag('json2Config');
+        $container->registerForAutoconfiguration(ObjectConfigurationLoader::class)
+            ->addTag('skeleton.object_configuration_loader');
+
+        $container->addCompilerPass(new JsonToConfigFactoryPass());
+
+        $container->addCompilerPass(new TacticianHandlerRegistrationCompilerPass());
+        $container->addCompilerPass(new TacticianMiddlewareRegistrationCompilerPass());
+        $container->addCompilerPass(new PhpUnitGeneratorRegistrationCompilerPass());
+        $container->addCompilerPass(new PhpSpecGeneratorRegistrationCompilerPass());
+        $container->addCompilerPass(new ObjectConfigurationLoaderCompilerPass());
     }
 }
