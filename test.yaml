@@ -1,0 +1,7 @@
+id:
+  - App\Service\JsonToConfig\ValueObject\Id\IntegerId
+  - App\Service\JsonToConfig\ValueObject\Simple\SimpleInteger
+name:
+  - App\Service\JsonToConfig\ValueObject\Simple\SimpleString
+full_name:
+  - App\Service\JsonToConfig\ValueObject\Simple\SimpleString

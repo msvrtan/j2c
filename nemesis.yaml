@@ -1,0 +1,10 @@
+paths:
+  code:
+    "lib/src/MyVendor/": "MyVendor\\"
+  spec:
+    "lib/spec/MyVendor/": spec\MyVendor\
+  tests:
+    "lib/tests/MyVendor/": Tests\MyVendor\
+phpunit:
+  base_namespace: Tests\MyVendor
+  base_test_class_name: \PHPUnit\Framework\TestCase

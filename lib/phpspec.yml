@@ -1,0 +1,6 @@
+formatter.name: progress
+suites:
+    generated_spec:
+        namespace: MyVendor
+        src_path: %paths.config%/src
+        spec_path: %paths.config%/
