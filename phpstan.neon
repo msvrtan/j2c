@@ -1,6 +1,8 @@
 parameters:
 	bootstrap: tests/bootstrap.php
 	ignoreErrors:
+	    - '#Parameter .* Mockery\\MockInterface given.#'
+	    - '#Call to an undefined static method NullDevelopment\\Skeleton\\Php\\Structure\\Visibility\:\:PRIVATE\(\).#'
 	includes:
 	    - vendor/phpstan/phpstan-phpunit/extension.neon
 	    - vendor/phpstan/phpstan-phpunit/rules.neon
