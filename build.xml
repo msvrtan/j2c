@@ -9,6 +9,12 @@
     <target name="all" depends="test,fix-codestandards,phpstan"/>
     <target name="test" depends="phpspec,phpunit"/>
 
+
+    <target name="output" description="Run checks on output">
+        <exec command="./vendor/bin/phpunit lib/tests" passthru="true" checkreturn="true"/>
+        <exec command="./vendor/bin/phpspec run --config=lib/phpspec.yml" passthru="true" checkreturn="true"/>
+    </target>
+
     <target name="fix-codestandards" depends="phpcbf,php-cs-fixer-fix,phpmd,phpcs"/>
     <target name="check-codestandards" depends="php-cs-fixer-check,phpmd,phpcs"/>
 
@@ -31,7 +37,7 @@
     </target>
 
     <target name="phpstan" description="Run phpstan">
-        <exec command="./vendor/bin/phpstan analyse -l 7 -c phpstan.neon src tests" passthru="true" checkreturn="true"/>
+        <exec command="./vendor/bin/phpstan analyse -l 7 -c phpstan.neon lib/src lib/tests src tests" passthru="true" checkreturn="true"/>
     </target>
 
     <target name="php-cs-fixer-check" description="Run php-cs-fixer check">
@@ -39,45 +45,56 @@
     </target>
 
     <target name="phpmd" description="Run phpmd">
-        <parallel threadCount="4">
-            <phingcall target="phpmd-task">
-                <property name="path" value="src"/>
-            </phingcall>
-            <phingcall target="phpmd-task">
-                <property name="path" value="tests"/>
-            </phingcall>
-        </parallel>
+        <phingcall target="phpmd-task">
+            <property name="path" value="lib/src"/>
+        </phingcall>
+        <phingcall target="phpmd-task">
+            <property name="path" value="lib/tests"/>
+        </phingcall>
+        <phingcall target="phpmd-task">
+            <property name="path" value="src"/>
+        </phingcall>
+        <phingcall target="phpmd-task">
+            <property name="path" value="tests"/>
+        </phingcall>
     </target>
 
     <target name="phpcs" description="Run phpcs">
-        <parallel threadCount="4">
-            <phingcall target="phpcs-task">
-                <property name="path" value="src"/>
-            </phingcall>
-            <phingcall target="phpcs-task">
-                <property name="path" value="tests"/>
-            </phingcall>
-        </parallel>
+        <phingcall target="phpcs-task">
+            <property name="path" value="lib/src"/>
+        </phingcall>
+        <phingcall target="phpcs-task">
+            <property name="path" value="lib/tests"/>
+        </phingcall>
+        <phingcall target="phpcs-task">
+            <property name="path" value="src"/>
+        </phingcall>
+        <phingcall target="phpcs-task">
+            <property name="path" value="tests"/>
+        </phingcall>
     </target>
 
     <target name="phpcbf" description="Run phpcbf">
-        <parallel threadCount="4">
-            <retry retrycount="3">
-                <phingcall target="phpcbf-task">
-                    <property name="path" value="src"/>
-                </phingcall>
-            </retry>
-            <retry retrycount="3">
-                <phingcall target="phpcbf-task">
-                    <property name="path" value="tests"/>
-                </phingcall>
-            </retry>
-            <retry retrycount="3">
-                <phingcall target="phpcbf-task">
-                    <property name="path" value="spec"/>
-                </phingcall>
-            </retry>
-        </parallel>
+        <retry retrycount="3">
+            <phingcall target="phpcbf-task">
+                <property name="path" value="lib"/>
+            </phingcall>
+        </retry>
+        <retry retrycount="3">
+            <phingcall target="phpcbf-task">
+                <property name="path" value="src"/>
+            </phingcall>
+        </retry>
+        <retry retrycount="3">
+            <phingcall target="phpcbf-task">
+                <property name="path" value="tests"/>
+            </phingcall>
+        </retry>
+        <retry retrycount="3">
+            <phingcall target="phpcbf-task">
+                <property name="path" value="spec"/>
+            </phingcall>
+        </retry>
     </target>
 
     <target name="phpmd-task" description="Run php mess detector">
