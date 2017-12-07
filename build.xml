@@ -11,6 +11,7 @@
 
 
     <target name="output" description="Run checks on output">
+        <exec command="find lib/ -type f -name '*.php' -print0 | xargs -0 -n1 php -l" passthru="true" checkreturn="true"/>
         <exec command="./vendor/bin/phpunit lib/tests" passthru="true" checkreturn="true"/>
         <exec command="./vendor/bin/phpspec run --config=lib/phpspec.yml" passthru="true" checkreturn="true"/>
     </target>
