@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App;
 
-use App\CompilerPass\JsonToConfigFactoryPass;
-use App\Service\JsonToConfig\Factory;
+use App\CompilerPass\JsonDetectorFactoryPass;
+use App\Service\JsonDetector\Factory;
 use NullDevelopment\Skeleton\Core\ObjectConfigurationLoader;
 use NullDevelopment\Skeleton\ObjectConfigurationLoaderCompilerPass;
 use NullDevelopment\Skeleton\PhpSpecGeneratorRegistrationCompilerPass;
@@ -76,7 +76,7 @@ class Kernel extends BaseKernel
         $container->registerForAutoconfiguration(ObjectConfigurationLoader::class)
             ->addTag('skeleton.object_configuration_loader');
 
-        $container->addCompilerPass(new JsonToConfigFactoryPass());
+        $container->addCompilerPass(new JsonDetectorFactoryPass());
 
         $container->addCompilerPass(new TacticianHandlerRegistrationCompilerPass());
         $container->addCompilerPass(new TacticianMiddlewareRegistrationCompilerPass());
