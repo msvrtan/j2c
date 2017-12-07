@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: MyVendor\Product\ProductWeight
+  parent: ~
+  interfaces: []
+  traits: []
+  constructor:
+    weight:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: ~

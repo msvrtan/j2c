@@ -50,6 +50,7 @@ class SimpleEntityTestNetteGeneratorTest extends SfTestCase
     {
         return [
             ['UserEntity'],
+            ['ProductEntity'],
         ];
     }
 

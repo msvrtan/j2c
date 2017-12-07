@@ -50,7 +50,7 @@ class SimpleIdentifierTestNetteGeneratorTest extends SfTestCase
     {
         return [
             ['UserId'],
-            //['UsernameSpec'],
+            ['ProductId'],
         ];
     }
 
