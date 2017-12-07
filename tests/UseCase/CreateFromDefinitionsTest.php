@@ -6,6 +6,7 @@ namespace Tests\UseCase;
 
 use App\Config\Path\Readers\FinderFactory;
 use App\File\FileFactory;
+use Exception;
 use League\Tactician\CommandBus;
 use NullDevelopment\Skeleton\Core\ObjectConfigurationLoaderCollection;
 use NullDevelopment\Skeleton\Php\Structure\ClassName;
@@ -32,8 +33,9 @@ class CreateFromDefinitionsTest extends SfTestCase
 
     public function testGenerateAllExistingDefinitions()
     {
-        $path  = getcwd().'/definitions';
-        $yamls = $this->getService(FinderFactory::class)->create()->files()->in($path)->name('*.yaml');
+        $path    = getcwd().'/definitions';
+        $yamls   = $this->getService(FinderFactory::class)->create()->files()->in($path)->name('*.yaml');
+        $allIsOk = true;
 
         /** @var SplFileInfo $yaml */
         foreach ($yamls as $yaml) {
@@ -41,21 +43,26 @@ class CreateFromDefinitionsTest extends SfTestCase
 
             $classDefinition = $this->loaders->findAndLoad($config);
 
-            $results = $this->commandBus->handle($classDefinition);
+            try {
+                $results = $this->commandBus->handle($classDefinition);
 
-            // Assert
-            foreach ($results as $result) {
-                $namespaceName = $result->getName();
-                foreach (array_keys($result->getClasses()) as $className) {
-                    $this->writeFile(
+                // Assert
+                foreach ($results as $result) {
+                    $namespaceName = $result->getName();
+                    foreach (array_keys($result->getClasses()) as $className) {
+                        $this->writeFile(
                         new ClassName($className, $namespaceName),
                         $result->__toString()
-                    );
+                        );
+                    }
                 }
+            } catch (Exception $e) {
+                echo $e->getMessage();
+                $allIsOk = false;
             }
         }
 
-        self::assertTrue(true);
+        self::assertTrue($allIsOk);
     }
 
     private function getFilePath(ClassName $className): string

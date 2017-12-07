@@ -50,7 +50,7 @@ class SimpleValueObjectTestNetteGeneratorTest extends SfTestCase
     {
         return [
             ['Username'],
-            //['UsernameSpec'],
+            ['ProductWeight'],
         ];
     }
 
