@@ -29,11 +29,20 @@ class LetMiddleware implements PartialCodeGeneratorMiddleware
             $beConstructedWithArguments = [];
             /** @var MethodParameter $parameter */
             foreach ($definition->getConstructorParameters() as $parameter) {
-                $beConstructedWithArguments[] = '$'.$parameter->getName().' = '.$parameter->suggestValue();
+                if (false === in_array($parameter->getClassFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
+                    $namespace->addUse($parameter->getClassFullName());
+
+                    $letMethod->addParameter($parameter->getName())
+                        ->setTypeHint($parameter->getClassFullName());
+
+                    $beConstructedWithArguments[] = '$'.$parameter->getName();
+                } else {
+                    $beConstructedWithArguments[] = '$'.$parameter->getName().' = '.$parameter->suggestValue();
+                }
             }
 
             $letMethod->addBody(
-                '$this->beConstructedWith('.implode(',', $beConstructedWithArguments).');'
+                '$this->beConstructedWith('.implode(', ', $beConstructedWithArguments).');'
             );
 
             $initializableMethod = $class->addMethod('it_is_initializable');
@@ -42,7 +51,7 @@ class LetMiddleware implements PartialCodeGeneratorMiddleware
 
             if (true === $definition->hasParent()) {
                 $initializableMethod->addBody(
-                    '$this->shouldHaveType('.$definition->getParent()->getClassName().'::class);'
+                    '$this->shouldHaveType('.$definition->getParentClassName().'::class);'
                 );
             }
 

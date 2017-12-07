@@ -47,6 +47,11 @@ class MethodParameter
         return $this->className;
     }
 
+    public function getClassFullName(): string
+    {
+        return $this->className->getFullName();
+    }
+
     public function isNullable(): bool
     {
         return $this->nullable;
@@ -64,11 +69,19 @@ class MethodParameter
 
     public function suggestValue()
     {
-        if ('string' === $this->getClassName()->getFullName()) {
+        if ('string' === $this->getClassFullName()) {
             return "'".$this->getName()."'";
-        } elseif ('int' === $this->getClassName()->getFullName()) {
+        } elseif ('int' === $this->getClassFullName()) {
             return 1;
+        } elseif ('float' === $this->getClassFullName()) {
+            return 2.0;
+        } elseif ('bool' === $this->getClassFullName()) {
+            return true;
+        } elseif ('array' === $this->getClassFullName()) {
+            return ['data'];
         }
+
+        return '$'.$this->getName();
 
         throw new Exception('UNSUPPORTED SUGGEST VALUE');
     }
