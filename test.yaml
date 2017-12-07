@@ -1,7 +1,11 @@
-id:
-  - App\Service\JsonToConfig\ValueObject\Id\IntegerId
-  - App\Service\JsonToConfig\ValueObject\Simple\SimpleInteger
-name:
-  - App\Service\JsonToConfig\ValueObject\Simple\SimpleString
-full_name:
-  - App\Service\JsonToConfig\ValueObject\Simple\SimpleString
+fields:
+  id:
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Id\IntegerId
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+  name:
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+  full_name:
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
