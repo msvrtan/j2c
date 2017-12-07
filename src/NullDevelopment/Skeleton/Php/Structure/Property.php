@@ -59,6 +59,11 @@ class Property
         return $this->structureName;
     }
 
+    public function getStructureFullName(): string
+    {
+        return $this->structureName->getFullName();
+    }
+
     public function isNullable(): bool
     {
         return $this->nullable;
@@ -91,11 +96,19 @@ class Property
 
     public function suggestValue()
     {
-        if ('string' === $this->getStructureName()->getFullName()) {
+        if ('string' === $this->getStructureFullName()) {
             return "'".$this->getName()."'";
-        } elseif ('int' === $this->getStructureName()->getFullName()) {
+        } elseif ('int' === $this->getStructureFullName()) {
             return 1;
+        } elseif ('float' === $this->getStructureFullName()) {
+            return 2.0;
+        } elseif ('bool' === $this->getStructureFullName()) {
+            return true;
+        } elseif ('array' === $this->getStructureFullName()) {
+            return ['data'];
         }
+
+        return '$'.$this->getName();
 
         throw new Exception('UNSUPPORTED SUGGEST VALUE');
     }

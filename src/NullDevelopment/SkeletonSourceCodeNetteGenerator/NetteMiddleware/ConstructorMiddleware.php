@@ -32,14 +32,18 @@ class ConstructorMiddleware implements PartialCodeGeneratorMiddleware
                 $constructorMethod->addBody($assign);
 
                 $constructorMethod->addParameter($parameter->getName())
-                    ->setTypeHint($parameter->getClassName()->getName());
+                    ->setTypeHint($parameter->getClassFullName());
                 $class->addProperty($parameter->getName())
                     ->setVisibility(Visibility::PRIVATE)
                     ->addComment('@var '.$parameter->getClassName()->getName());
 
                 $class->addMethod('get'.ucfirst($parameter->getName()))
-                    ->setReturnType($parameter->getClassName()->getName())
+                    ->setReturnType($parameter->getClassFullName())
                     ->addBody('return $this->'.$parameter->getName().';');
+
+                if (false === in_array($parameter->getClassFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
+                    $namespace->addUse($parameter->getClassFullName());
+                }
             }
         }
 

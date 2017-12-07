@@ -18,23 +18,30 @@ class TestSerializationMiddleware implements PartialCodeGeneratorMiddleware
 
         /** @var ClassType $class */
         foreach ($namespace->getClasses() as $class) {
-            /* @var Property $property */
-            foreach ($definition->getProperties() as $parameter) {
-                $serializeBody = sprintf(
-                    'self::assertEquals($this->%s, $this->sut->serialize());',
-                    $parameter->getName()
-                );
+            if (1 === count($definition->getProperties())) {
+                /* @var Property $property */
+                foreach ($definition->getProperties() as $property) {
+                    $serializeBody = sprintf(
+                        'self::assertEquals($this->%s, $this->sut->serialize());',
+                        $property->getName()
+                    );
 
-                $class->addMethod('testSerialize')
-                    ->addBody($serializeBody);
+                    $class->addMethod('testSerialize')
+                        ->addBody($serializeBody);
 
-                $deserializeBody = sprintf(
-                    'self::assertEquals($this->sut, $this->sut->deserialize($this->%s));',
-                    $parameter->getName()
-                );
+                    $deserializeBody = sprintf(
+                        'self::assertEquals($this->sut, $this->sut->deserialize($this->%s));',
+                        $property->getName()
+                    );
 
-                $class->addMethod('testDeserialize')
-                    ->addBody($deserializeBody);
+                    $class->addMethod('testDeserialize')
+                        ->addBody($deserializeBody);
+                }
+            } else {
+                $class->addMethod('testSerializeAndDeserialize')
+                    ->addBody('$serialized = $this->sut->serialize();')
+                    ->addBody('self::assertEquals($this->sut, '.$definition->getClassName().'::deserialize($serialized));')
+                ;
             }
         }
 

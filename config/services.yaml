@@ -88,6 +88,10 @@ services:
         tags:
             - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\DateTimeValueObject' }
 
+    NullDevelopment\SkeletonSourceCodeNetteGenerator\NetteGenerator\SimpleEntityNetteGenerator:
+        tags:
+            - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleEntity' }
+
     NullDevelopment\SkeletonSourceCodeNetteGenerator\NetteGenerator\SimpleIdentifierNetteGenerator:
         tags:
             - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleIdentifier' }
