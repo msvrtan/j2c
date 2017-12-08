@@ -7,10 +7,10 @@ namespace App\Service\JsonDetector\ValueObject\Simple;
 use App\Service\JsonDetector\ValueObject;
 
 /**
- * @see SimpleFloatSpec
- * @see SimpleFloatTest
+ * @see SimpleDateTimeSpec
+ * @see SimpleDateTimeTest
  */
-class SimpleFloat implements ValueObject
+class SimpleDateTime implements ValueObject
 {
     /** @var string */
     private $key;
@@ -22,11 +22,11 @@ class SimpleFloat implements ValueObject
 
     public function getPriority(): int
     {
-        return ValueObject::LOW;
+        return ValueObject::NORMAL;
     }
 
     public function getSorting(): int
     {
-        return 30;
+        return 5;
     }
 }
