@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\App\Service\JsonDetector\Factory\ValueObject\Simple;
 
 use App\Service\JsonDetector\Factory\ValueObject\Simple\SimpleFloatValueObjectFactory;
+use App\Service\JsonDetector\ValueObject\Simple\SimpleFloat;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;
 
@@ -16,20 +17,20 @@ class SimpleFloatValueObjectFactoryTest extends TestCase
 {
     use MockeryPHPUnitIntegration;
     /** @var SimpleFloatValueObjectFactory */
-    private $simpleFloatValueObjectFactory;
+    private $sut;
 
     public function setUp()
     {
-        $this->simpleFloatValueObjectFactory = new SimpleFloatValueObjectFactory();
+        $this->sut = new SimpleFloatValueObjectFactory();
     }
 
     public function testIsSatisfiedBy()
     {
-        $this->markTestSkipped('Skipping');
+        self::assertTrue($this->sut->isSatisfiedBy('amount', 2.1));
     }
 
     public function testCreate()
     {
-        $this->markTestSkipped('Skipping');
+        self::assertInstanceOf(SimpleFloat::class, $this->sut->create('amount'));
     }
 }

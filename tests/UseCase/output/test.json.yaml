@@ -1,0 +1,36 @@
+key: User
+name: User
+namespace: MyVendor
+inputKey: ''
+sorting: 16
+fields:
+  id:
+    key: id
+    name: UserId
+    inputKey: '["id"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Id\IntegerId
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 200
+  full_name:
+    key: full_name
+    name: UserFullName
+    inputKey: '["full_name"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  name:
+    key: name
+    name: UserName
+    inputKey: '["name"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  created_at:
+    key: created_at
+    name: UserCreatedAt
+    inputKey: '["created_at"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 5

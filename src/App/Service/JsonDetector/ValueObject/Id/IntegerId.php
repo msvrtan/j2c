@@ -22,6 +22,11 @@ class IntegerId implements ValueObject
 
     public function getPriority(): int
     {
-        return ValueObject::NORMAL;
+        return ValueObject::HIGH;
+    }
+
+    public function getSorting(): int
+    {
+        return 200;
     }
 }

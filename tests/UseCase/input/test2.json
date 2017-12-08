@@ -1,0 +1,9 @@
+{
+  "address": {
+    "streetName": "Somewhere",
+    "street_number": 53
+  },
+  "full_name": "John Doe",
+  "id": 123,
+  "name": "John"
+}

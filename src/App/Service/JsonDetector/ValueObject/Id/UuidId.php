@@ -24,4 +24,9 @@ class UuidId implements ValueObject
     {
         return ValueObject::NORMAL;
     }
+
+    public function getSorting(): int
+    {
+        return 200;
+    }
 }

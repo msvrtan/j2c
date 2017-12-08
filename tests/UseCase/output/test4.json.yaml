@@ -1,0 +1,3181 @@
+key: PullRequestHook
+name: PullRequestHook
+namespace: GitHub\WebHook
+inputKey: ''
+sorting: 16
+fields:
+  action:
+    key: action
+    name: PullRequestHookAction
+    inputKey: '["action"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  number:
+    key: number
+    name: PullRequestHookNumber
+    inputKey: '["number"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 30
+  installation:
+    key: Installation
+    name: Installation
+    namespace: GitHub\WebHook\PullRequestHook
+    inputKey: '["installation"]'
+    sorting: 16
+    fields:
+      id:
+        key: id
+        name: InstallationId
+        inputKey: '["installation"]["id"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Id\IntegerId
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 200
+  organization:
+    key: Organization
+    name: Organization
+    namespace: GitHub\WebHook\PullRequestHook
+    inputKey: '["organization"]'
+    sorting: 16
+    fields:
+      id:
+        key: id
+        name: OrganizationId
+        inputKey: '["organization"]["id"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Id\IntegerId
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 200
+      description:
+        key: description
+        name: OrganizationDescription
+        inputKey: '["organization"]["description"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      login:
+        key: login
+        name: OrganizationLogin
+        inputKey: '["organization"]["login"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      avatar_url:
+        key: avatar_url
+        name: OrganizationAvatarUrl
+        inputKey: '["organization"]["avatar_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      events_url:
+        key: events_url
+        name: OrganizationEventsUrl
+        inputKey: '["organization"]["events_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      hooks_url:
+        key: hooks_url
+        name: OrganizationHooksUrl
+        inputKey: '["organization"]["hooks_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      issues_url:
+        key: issues_url
+        name: OrganizationIssuesUrl
+        inputKey: '["organization"]["issues_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      members_url:
+        key: members_url
+        name: OrganizationMembersUrl
+        inputKey: '["organization"]["members_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      public_members_url:
+        key: public_members_url
+        name: OrganizationPublicMembersUrl
+        inputKey: '["organization"]["public_members_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      repos_url:
+        key: repos_url
+        name: OrganizationReposUrl
+        inputKey: '["organization"]["repos_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      url:
+        key: url
+        name: OrganizationUrl
+        inputKey: '["organization"]["url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+  pull_request:
+    key: PullRequest
+    name: PullRequest
+    namespace: GitHub\WebHook\PullRequestHook
+    inputKey: '["pull_request"]'
+    sorting: 16
+    fields:
+      id:
+        key: id
+        name: PullRequestId
+        inputKey: '["pull_request"]["id"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Id\IntegerId
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleTimestamp
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 200
+      additions:
+        key: additions
+        name: PullRequestAdditions
+        inputKey: '["pull_request"]["additions"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      author_association:
+        key: author_association
+        name: PullRequestAuthorAssociation
+        inputKey: '["pull_request"]["author_association"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      body:
+        key: body
+        name: PullRequestBody
+        inputKey: '["pull_request"]["body"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      changed_files:
+        key: changed_files
+        name: PullRequestChangedFiles
+        inputKey: '["pull_request"]["changed_files"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      comments:
+        key: comments
+        name: PullRequestComments
+        inputKey: '["pull_request"]["comments"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      commits:
+        key: commits
+        name: PullRequestCommits
+        inputKey: '["pull_request"]["commits"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      deletions:
+        key: deletions
+        name: PullRequestDeletions
+        inputKey: '["pull_request"]["deletions"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      mergeable_state:
+        key: mergeable_state
+        name: PullRequestMergeableState
+        inputKey: '["pull_request"]["mergeable_state"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      number:
+        key: number
+        name: PullRequestNumber
+        inputKey: '["pull_request"]["number"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      review_comments:
+        key: review_comments
+        name: PullRequestReviewComments
+        inputKey: '["pull_request"]["review_comments"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      state:
+        key: state
+        name: PullRequestState
+        inputKey: '["pull_request"]["state"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      title:
+        key: title
+        name: PullRequestTitle
+        inputKey: '["pull_request"]["title"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      locked:
+        key: locked
+        name: PullRequestLocked
+        inputKey: '["pull_request"]["locked"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      maintainer_can_modify:
+        key: maintainer_can_modify
+        name: PullRequestMaintainerCanModify
+        inputKey: '["pull_request"]["maintainer_can_modify"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      merged:
+        key: merged
+        name: PullRequestMerged
+        inputKey: '["pull_request"]["merged"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      assignees:
+        key: Assignees
+        name: Assignees
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["assignees"]'
+        sorting: 16
+      base:
+        key: Base
+        name: Base
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["base"]'
+        sorting: 16
+        fields:
+          label:
+            key: label
+            name: BaseLabel
+            inputKey: '["pull_request"]["base"]["label"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          ref:
+            key: ref
+            name: BaseRef
+            inputKey: '["pull_request"]["base"]["ref"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          sha:
+            key: sha
+            name: BaseSha
+            inputKey: '["pull_request"]["base"]["sha"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          repo:
+            key: Repo
+            name: Repo
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
+            inputKey: '["pull_request"]["base"]["repo"]'
+            sorting: 16
+            fields:
+              id:
+                key: id
+                name: RepoId
+                inputKey: '["pull_request"]["base"]["repo"]["id"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Id\IntegerId
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleTimestamp
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 200
+              default_branch:
+                key: default_branch
+                name: RepoDefaultBranch
+                inputKey: '["pull_request"]["base"]["repo"]["default_branch"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              description:
+                key: description
+                name: RepoDescription
+                inputKey: '["pull_request"]["base"]["repo"]["description"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              forks:
+                key: forks
+                name: RepoForks
+                inputKey: '["pull_request"]["base"]["repo"]["forks"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              forks_count:
+                key: forks_count
+                name: RepoForksCount
+                inputKey: '["pull_request"]["base"]["repo"]["forks_count"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              full_name:
+                key: full_name
+                name: RepoFullName
+                inputKey: '["pull_request"]["base"]["repo"]["full_name"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              language:
+                key: language
+                name: RepoLanguage
+                inputKey: '["pull_request"]["base"]["repo"]["language"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              name:
+                key: name
+                name: RepoName
+                inputKey: '["pull_request"]["base"]["repo"]["name"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              open_issues:
+                key: open_issues
+                name: RepoOpenIssues
+                inputKey: '["pull_request"]["base"]["repo"]["open_issues"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              open_issues_count:
+                key: open_issues_count
+                name: RepoOpenIssuesCount
+                inputKey: '["pull_request"]["base"]["repo"]["open_issues_count"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              size:
+                key: size
+                name: RepoSize
+                inputKey: '["pull_request"]["base"]["repo"]["size"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              ssh_url:
+                key: ssh_url
+                name: RepoSshUrl
+                inputKey: '["pull_request"]["base"]["repo"]["ssh_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              stargazers_count:
+                key: stargazers_count
+                name: RepoStargazersCount
+                inputKey: '["pull_request"]["base"]["repo"]["stargazers_count"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              watchers:
+                key: watchers
+                name: RepoWatchers
+                inputKey: '["pull_request"]["base"]["repo"]["watchers"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              watchers_count:
+                key: watchers_count
+                name: RepoWatchersCount
+                inputKey: '["pull_request"]["base"]["repo"]["watchers_count"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              archived:
+                key: archived
+                name: RepoArchived
+                inputKey: '["pull_request"]["base"]["repo"]["archived"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              fork:
+                key: fork
+                name: RepoFork
+                inputKey: '["pull_request"]["base"]["repo"]["fork"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              has_downloads:
+                key: has_downloads
+                name: RepoHasDownloads
+                inputKey: '["pull_request"]["base"]["repo"]["has_downloads"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              has_issues:
+                key: has_issues
+                name: RepoHasIssues
+                inputKey: '["pull_request"]["base"]["repo"]["has_issues"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              has_pages:
+                key: has_pages
+                name: RepoHasPages
+                inputKey: '["pull_request"]["base"]["repo"]["has_pages"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              has_projects:
+                key: has_projects
+                name: RepoHasProjects
+                inputKey: '["pull_request"]["base"]["repo"]["has_projects"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              has_wiki:
+                key: has_wiki
+                name: RepoHasWiki
+                inputKey: '["pull_request"]["base"]["repo"]["has_wiki"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              private:
+                key: private
+                name: RepoPrivate
+                inputKey: '["pull_request"]["base"]["repo"]["private"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              owner:
+                key: Owner
+                name: Owner
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
+                inputKey: '["pull_request"]["base"]["repo"]["owner"]'
+                sorting: 16
+                fields:
+                  id:
+                    key: id
+                    name: OwnerId
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["id"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Id\IntegerId
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                    sorting: 200
+                  gravatar_id:
+                    key: gravatar_id
+                    name: OwnerGravatarId
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["gravatar_id"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 30
+                  login:
+                    key: login
+                    name: OwnerLogin
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["login"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 30
+                  type:
+                    key: type
+                    name: OwnerType
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["type"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 30
+                  site_admin:
+                    key: site_admin
+                    name: OwnerSiteAdmin
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["site_admin"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                    sorting: 20
+                  avatar_url:
+                    key: avatar_url
+                    name: OwnerAvatarUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["avatar_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  events_url:
+                    key: events_url
+                    name: OwnerEventsUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["events_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  followers_url:
+                    key: followers_url
+                    name: OwnerFollowersUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["followers_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  following_url:
+                    key: following_url
+                    name: OwnerFollowingUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["following_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  gists_url:
+                    key: gists_url
+                    name: OwnerGistsUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["gists_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  html_url:
+                    key: html_url
+                    name: OwnerHtmlUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["html_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  organizations_url:
+                    key: organizations_url
+                    name: OwnerOrganizationsUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["organizations_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  received_events_url:
+                    key: received_events_url
+                    name: OwnerReceivedEventsUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["received_events_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  repos_url:
+                    key: repos_url
+                    name: OwnerReposUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["repos_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  starred_url:
+                    key: starred_url
+                    name: OwnerStarredUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["starred_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  subscriptions_url:
+                    key: subscriptions_url
+                    name: OwnerSubscriptionsUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["subscriptions_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  url:
+                    key: url
+                    name: OwnerUrl
+                    inputKey: '["pull_request"]["base"]["repo"]["owner"]["url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+              archive_url:
+                key: archive_url
+                name: RepoArchiveUrl
+                inputKey: '["pull_request"]["base"]["repo"]["archive_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              assignees_url:
+                key: assignees_url
+                name: RepoAssigneesUrl
+                inputKey: '["pull_request"]["base"]["repo"]["assignees_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              blobs_url:
+                key: blobs_url
+                name: RepoBlobsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["blobs_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              branches_url:
+                key: branches_url
+                name: RepoBranchesUrl
+                inputKey: '["pull_request"]["base"]["repo"]["branches_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              clone_url:
+                key: clone_url
+                name: RepoCloneUrl
+                inputKey: '["pull_request"]["base"]["repo"]["clone_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              collaborators_url:
+                key: collaborators_url
+                name: RepoCollaboratorsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["collaborators_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              comments_url:
+                key: comments_url
+                name: RepoCommentsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["comments_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              commits_url:
+                key: commits_url
+                name: RepoCommitsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["commits_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              compare_url:
+                key: compare_url
+                name: RepoCompareUrl
+                inputKey: '["pull_request"]["base"]["repo"]["compare_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              contents_url:
+                key: contents_url
+                name: RepoContentsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["contents_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              contributors_url:
+                key: contributors_url
+                name: RepoContributorsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["contributors_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              deployments_url:
+                key: deployments_url
+                name: RepoDeploymentsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["deployments_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              downloads_url:
+                key: downloads_url
+                name: RepoDownloadsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["downloads_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              events_url:
+                key: events_url
+                name: RepoEventsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["events_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              forks_url:
+                key: forks_url
+                name: RepoForksUrl
+                inputKey: '["pull_request"]["base"]["repo"]["forks_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              git_commits_url:
+                key: git_commits_url
+                name: RepoGitCommitsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["git_commits_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              git_refs_url:
+                key: git_refs_url
+                name: RepoGitRefsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["git_refs_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              git_tags_url:
+                key: git_tags_url
+                name: RepoGitTagsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["git_tags_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              git_url:
+                key: git_url
+                name: RepoGitUrl
+                inputKey: '["pull_request"]["base"]["repo"]["git_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              hooks_url:
+                key: hooks_url
+                name: RepoHooksUrl
+                inputKey: '["pull_request"]["base"]["repo"]["hooks_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              html_url:
+                key: html_url
+                name: RepoHtmlUrl
+                inputKey: '["pull_request"]["base"]["repo"]["html_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              issue_comment_url:
+                key: issue_comment_url
+                name: RepoIssueCommentUrl
+                inputKey: '["pull_request"]["base"]["repo"]["issue_comment_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              issue_events_url:
+                key: issue_events_url
+                name: RepoIssueEventsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["issue_events_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              issues_url:
+                key: issues_url
+                name: RepoIssuesUrl
+                inputKey: '["pull_request"]["base"]["repo"]["issues_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              keys_url:
+                key: keys_url
+                name: RepoKeysUrl
+                inputKey: '["pull_request"]["base"]["repo"]["keys_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              labels_url:
+                key: labels_url
+                name: RepoLabelsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["labels_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              languages_url:
+                key: languages_url
+                name: RepoLanguagesUrl
+                inputKey: '["pull_request"]["base"]["repo"]["languages_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              merges_url:
+                key: merges_url
+                name: RepoMergesUrl
+                inputKey: '["pull_request"]["base"]["repo"]["merges_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              milestones_url:
+                key: milestones_url
+                name: RepoMilestonesUrl
+                inputKey: '["pull_request"]["base"]["repo"]["milestones_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              notifications_url:
+                key: notifications_url
+                name: RepoNotificationsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["notifications_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              pulls_url:
+                key: pulls_url
+                name: RepoPullsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["pulls_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              releases_url:
+                key: releases_url
+                name: RepoReleasesUrl
+                inputKey: '["pull_request"]["base"]["repo"]["releases_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              stargazers_url:
+                key: stargazers_url
+                name: RepoStargazersUrl
+                inputKey: '["pull_request"]["base"]["repo"]["stargazers_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              statuses_url:
+                key: statuses_url
+                name: RepoStatusesUrl
+                inputKey: '["pull_request"]["base"]["repo"]["statuses_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              subscribers_url:
+                key: subscribers_url
+                name: RepoSubscribersUrl
+                inputKey: '["pull_request"]["base"]["repo"]["subscribers_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              subscription_url:
+                key: subscription_url
+                name: RepoSubscriptionUrl
+                inputKey: '["pull_request"]["base"]["repo"]["subscription_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              svn_url:
+                key: svn_url
+                name: RepoSvnUrl
+                inputKey: '["pull_request"]["base"]["repo"]["svn_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              tags_url:
+                key: tags_url
+                name: RepoTagsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["tags_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              teams_url:
+                key: teams_url
+                name: RepoTeamsUrl
+                inputKey: '["pull_request"]["base"]["repo"]["teams_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              trees_url:
+                key: trees_url
+                name: RepoTreesUrl
+                inputKey: '["pull_request"]["base"]["repo"]["trees_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              url:
+                key: url
+                name: RepoUrl
+                inputKey: '["pull_request"]["base"]["repo"]["url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              created_at:
+                key: created_at
+                name: RepoCreatedAt
+                inputKey: '["pull_request"]["base"]["repo"]["created_at"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 5
+              pushed_at:
+                key: pushed_at
+                name: RepoPushedAt
+                inputKey: '["pull_request"]["base"]["repo"]["pushed_at"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 5
+              updated_at:
+                key: updated_at
+                name: RepoUpdatedAt
+                inputKey: '["pull_request"]["base"]["repo"]["updated_at"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 5
+              homepage:
+                key: homepage
+                name: RepoHomepage
+                inputKey: '["pull_request"]["base"]["repo"]["homepage"]'
+                suggestions: {  }
+                sorting: 0
+              license:
+                key: license
+                name: RepoLicense
+                inputKey: '["pull_request"]["base"]["repo"]["license"]'
+                suggestions: {  }
+                sorting: 0
+              mirror_url:
+                key: mirror_url
+                name: RepoMirrorUrl
+                inputKey: '["pull_request"]["base"]["repo"]["mirror_url"]'
+                suggestions: {  }
+                sorting: 0
+          user:
+            key: User
+            name: User
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
+            inputKey: '["pull_request"]["base"]["user"]'
+            sorting: 16
+            fields:
+              id:
+                key: id
+                name: UserId
+                inputKey: '["pull_request"]["base"]["user"]["id"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Id\IntegerId
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 200
+              gravatar_id:
+                key: gravatar_id
+                name: UserGravatarId
+                inputKey: '["pull_request"]["base"]["user"]["gravatar_id"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              login:
+                key: login
+                name: UserLogin
+                inputKey: '["pull_request"]["base"]["user"]["login"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              type:
+                key: type
+                name: UserType
+                inputKey: '["pull_request"]["base"]["user"]["type"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              site_admin:
+                key: site_admin
+                name: UserSiteAdmin
+                inputKey: '["pull_request"]["base"]["user"]["site_admin"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              avatar_url:
+                key: avatar_url
+                name: UserAvatarUrl
+                inputKey: '["pull_request"]["base"]["user"]["avatar_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              events_url:
+                key: events_url
+                name: UserEventsUrl
+                inputKey: '["pull_request"]["base"]["user"]["events_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              followers_url:
+                key: followers_url
+                name: UserFollowersUrl
+                inputKey: '["pull_request"]["base"]["user"]["followers_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              following_url:
+                key: following_url
+                name: UserFollowingUrl
+                inputKey: '["pull_request"]["base"]["user"]["following_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              gists_url:
+                key: gists_url
+                name: UserGistsUrl
+                inputKey: '["pull_request"]["base"]["user"]["gists_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              html_url:
+                key: html_url
+                name: UserHtmlUrl
+                inputKey: '["pull_request"]["base"]["user"]["html_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              organizations_url:
+                key: organizations_url
+                name: UserOrganizationsUrl
+                inputKey: '["pull_request"]["base"]["user"]["organizations_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              received_events_url:
+                key: received_events_url
+                name: UserReceivedEventsUrl
+                inputKey: '["pull_request"]["base"]["user"]["received_events_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              repos_url:
+                key: repos_url
+                name: UserReposUrl
+                inputKey: '["pull_request"]["base"]["user"]["repos_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              starred_url:
+                key: starred_url
+                name: UserStarredUrl
+                inputKey: '["pull_request"]["base"]["user"]["starred_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              subscriptions_url:
+                key: subscriptions_url
+                name: UserSubscriptionsUrl
+                inputKey: '["pull_request"]["base"]["user"]["subscriptions_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              url:
+                key: url
+                name: UserUrl
+                inputKey: '["pull_request"]["base"]["user"]["url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+      head:
+        key: Head
+        name: Head
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["head"]'
+        sorting: 16
+        fields:
+          label:
+            key: label
+            name: HeadLabel
+            inputKey: '["pull_request"]["head"]["label"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          ref:
+            key: ref
+            name: HeadRef
+            inputKey: '["pull_request"]["head"]["ref"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          sha:
+            key: sha
+            name: HeadSha
+            inputKey: '["pull_request"]["head"]["sha"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          repo:
+            key: Repo
+            name: Repo
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
+            inputKey: '["pull_request"]["head"]["repo"]'
+            sorting: 16
+            fields:
+              id:
+                key: id
+                name: RepoId
+                inputKey: '["pull_request"]["head"]["repo"]["id"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Id\IntegerId
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleTimestamp
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 200
+              default_branch:
+                key: default_branch
+                name: RepoDefaultBranch
+                inputKey: '["pull_request"]["head"]["repo"]["default_branch"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              description:
+                key: description
+                name: RepoDescription
+                inputKey: '["pull_request"]["head"]["repo"]["description"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              forks:
+                key: forks
+                name: RepoForks
+                inputKey: '["pull_request"]["head"]["repo"]["forks"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              forks_count:
+                key: forks_count
+                name: RepoForksCount
+                inputKey: '["pull_request"]["head"]["repo"]["forks_count"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              full_name:
+                key: full_name
+                name: RepoFullName
+                inputKey: '["pull_request"]["head"]["repo"]["full_name"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              language:
+                key: language
+                name: RepoLanguage
+                inputKey: '["pull_request"]["head"]["repo"]["language"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              name:
+                key: name
+                name: RepoName
+                inputKey: '["pull_request"]["head"]["repo"]["name"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              open_issues:
+                key: open_issues
+                name: RepoOpenIssues
+                inputKey: '["pull_request"]["head"]["repo"]["open_issues"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              open_issues_count:
+                key: open_issues_count
+                name: RepoOpenIssuesCount
+                inputKey: '["pull_request"]["head"]["repo"]["open_issues_count"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              size:
+                key: size
+                name: RepoSize
+                inputKey: '["pull_request"]["head"]["repo"]["size"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              ssh_url:
+                key: ssh_url
+                name: RepoSshUrl
+                inputKey: '["pull_request"]["head"]["repo"]["ssh_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              stargazers_count:
+                key: stargazers_count
+                name: RepoStargazersCount
+                inputKey: '["pull_request"]["head"]["repo"]["stargazers_count"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              watchers:
+                key: watchers
+                name: RepoWatchers
+                inputKey: '["pull_request"]["head"]["repo"]["watchers"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              watchers_count:
+                key: watchers_count
+                name: RepoWatchersCount
+                inputKey: '["pull_request"]["head"]["repo"]["watchers_count"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 30
+              archived:
+                key: archived
+                name: RepoArchived
+                inputKey: '["pull_request"]["head"]["repo"]["archived"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              fork:
+                key: fork
+                name: RepoFork
+                inputKey: '["pull_request"]["head"]["repo"]["fork"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              has_downloads:
+                key: has_downloads
+                name: RepoHasDownloads
+                inputKey: '["pull_request"]["head"]["repo"]["has_downloads"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              has_issues:
+                key: has_issues
+                name: RepoHasIssues
+                inputKey: '["pull_request"]["head"]["repo"]["has_issues"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              has_pages:
+                key: has_pages
+                name: RepoHasPages
+                inputKey: '["pull_request"]["head"]["repo"]["has_pages"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              has_projects:
+                key: has_projects
+                name: RepoHasProjects
+                inputKey: '["pull_request"]["head"]["repo"]["has_projects"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              has_wiki:
+                key: has_wiki
+                name: RepoHasWiki
+                inputKey: '["pull_request"]["head"]["repo"]["has_wiki"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              private:
+                key: private
+                name: RepoPrivate
+                inputKey: '["pull_request"]["head"]["repo"]["private"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              owner:
+                key: Owner
+                name: Owner
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
+                inputKey: '["pull_request"]["head"]["repo"]["owner"]'
+                sorting: 16
+                fields:
+                  id:
+                    key: id
+                    name: OwnerId
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["id"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Id\IntegerId
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                    sorting: 200
+                  gravatar_id:
+                    key: gravatar_id
+                    name: OwnerGravatarId
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["gravatar_id"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 30
+                  login:
+                    key: login
+                    name: OwnerLogin
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["login"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 30
+                  type:
+                    key: type
+                    name: OwnerType
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["type"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 30
+                  site_admin:
+                    key: site_admin
+                    name: OwnerSiteAdmin
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["site_admin"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                    sorting: 20
+                  avatar_url:
+                    key: avatar_url
+                    name: OwnerAvatarUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["avatar_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  events_url:
+                    key: events_url
+                    name: OwnerEventsUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["events_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  followers_url:
+                    key: followers_url
+                    name: OwnerFollowersUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["followers_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  following_url:
+                    key: following_url
+                    name: OwnerFollowingUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["following_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  gists_url:
+                    key: gists_url
+                    name: OwnerGistsUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["gists_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  html_url:
+                    key: html_url
+                    name: OwnerHtmlUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["html_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  organizations_url:
+                    key: organizations_url
+                    name: OwnerOrganizationsUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["organizations_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  received_events_url:
+                    key: received_events_url
+                    name: OwnerReceivedEventsUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["received_events_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  repos_url:
+                    key: repos_url
+                    name: OwnerReposUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["repos_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  starred_url:
+                    key: starred_url
+                    name: OwnerStarredUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["starred_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  subscriptions_url:
+                    key: subscriptions_url
+                    name: OwnerSubscriptionsUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["subscriptions_url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+                  url:
+                    key: url
+                    name: OwnerUrl
+                    inputKey: '["pull_request"]["head"]["repo"]["owner"]["url"]'
+                    suggestions:
+                      - App\Service\JsonDetector\ValueObject\Generix\Url
+                      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                    sorting: 10
+              archive_url:
+                key: archive_url
+                name: RepoArchiveUrl
+                inputKey: '["pull_request"]["head"]["repo"]["archive_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              assignees_url:
+                key: assignees_url
+                name: RepoAssigneesUrl
+                inputKey: '["pull_request"]["head"]["repo"]["assignees_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              blobs_url:
+                key: blobs_url
+                name: RepoBlobsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["blobs_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              branches_url:
+                key: branches_url
+                name: RepoBranchesUrl
+                inputKey: '["pull_request"]["head"]["repo"]["branches_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              clone_url:
+                key: clone_url
+                name: RepoCloneUrl
+                inputKey: '["pull_request"]["head"]["repo"]["clone_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              collaborators_url:
+                key: collaborators_url
+                name: RepoCollaboratorsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["collaborators_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              comments_url:
+                key: comments_url
+                name: RepoCommentsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["comments_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              commits_url:
+                key: commits_url
+                name: RepoCommitsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["commits_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              compare_url:
+                key: compare_url
+                name: RepoCompareUrl
+                inputKey: '["pull_request"]["head"]["repo"]["compare_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              contents_url:
+                key: contents_url
+                name: RepoContentsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["contents_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              contributors_url:
+                key: contributors_url
+                name: RepoContributorsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["contributors_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              deployments_url:
+                key: deployments_url
+                name: RepoDeploymentsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["deployments_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              downloads_url:
+                key: downloads_url
+                name: RepoDownloadsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["downloads_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              events_url:
+                key: events_url
+                name: RepoEventsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["events_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              forks_url:
+                key: forks_url
+                name: RepoForksUrl
+                inputKey: '["pull_request"]["head"]["repo"]["forks_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              git_commits_url:
+                key: git_commits_url
+                name: RepoGitCommitsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["git_commits_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              git_refs_url:
+                key: git_refs_url
+                name: RepoGitRefsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["git_refs_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              git_tags_url:
+                key: git_tags_url
+                name: RepoGitTagsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["git_tags_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              git_url:
+                key: git_url
+                name: RepoGitUrl
+                inputKey: '["pull_request"]["head"]["repo"]["git_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              hooks_url:
+                key: hooks_url
+                name: RepoHooksUrl
+                inputKey: '["pull_request"]["head"]["repo"]["hooks_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              html_url:
+                key: html_url
+                name: RepoHtmlUrl
+                inputKey: '["pull_request"]["head"]["repo"]["html_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              issue_comment_url:
+                key: issue_comment_url
+                name: RepoIssueCommentUrl
+                inputKey: '["pull_request"]["head"]["repo"]["issue_comment_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              issue_events_url:
+                key: issue_events_url
+                name: RepoIssueEventsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["issue_events_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              issues_url:
+                key: issues_url
+                name: RepoIssuesUrl
+                inputKey: '["pull_request"]["head"]["repo"]["issues_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              keys_url:
+                key: keys_url
+                name: RepoKeysUrl
+                inputKey: '["pull_request"]["head"]["repo"]["keys_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              labels_url:
+                key: labels_url
+                name: RepoLabelsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["labels_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              languages_url:
+                key: languages_url
+                name: RepoLanguagesUrl
+                inputKey: '["pull_request"]["head"]["repo"]["languages_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              merges_url:
+                key: merges_url
+                name: RepoMergesUrl
+                inputKey: '["pull_request"]["head"]["repo"]["merges_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              milestones_url:
+                key: milestones_url
+                name: RepoMilestonesUrl
+                inputKey: '["pull_request"]["head"]["repo"]["milestones_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              notifications_url:
+                key: notifications_url
+                name: RepoNotificationsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["notifications_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              pulls_url:
+                key: pulls_url
+                name: RepoPullsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["pulls_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              releases_url:
+                key: releases_url
+                name: RepoReleasesUrl
+                inputKey: '["pull_request"]["head"]["repo"]["releases_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              stargazers_url:
+                key: stargazers_url
+                name: RepoStargazersUrl
+                inputKey: '["pull_request"]["head"]["repo"]["stargazers_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              statuses_url:
+                key: statuses_url
+                name: RepoStatusesUrl
+                inputKey: '["pull_request"]["head"]["repo"]["statuses_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              subscribers_url:
+                key: subscribers_url
+                name: RepoSubscribersUrl
+                inputKey: '["pull_request"]["head"]["repo"]["subscribers_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              subscription_url:
+                key: subscription_url
+                name: RepoSubscriptionUrl
+                inputKey: '["pull_request"]["head"]["repo"]["subscription_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              svn_url:
+                key: svn_url
+                name: RepoSvnUrl
+                inputKey: '["pull_request"]["head"]["repo"]["svn_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              tags_url:
+                key: tags_url
+                name: RepoTagsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["tags_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              teams_url:
+                key: teams_url
+                name: RepoTeamsUrl
+                inputKey: '["pull_request"]["head"]["repo"]["teams_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              trees_url:
+                key: trees_url
+                name: RepoTreesUrl
+                inputKey: '["pull_request"]["head"]["repo"]["trees_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              url:
+                key: url
+                name: RepoUrl
+                inputKey: '["pull_request"]["head"]["repo"]["url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              created_at:
+                key: created_at
+                name: RepoCreatedAt
+                inputKey: '["pull_request"]["head"]["repo"]["created_at"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 5
+              pushed_at:
+                key: pushed_at
+                name: RepoPushedAt
+                inputKey: '["pull_request"]["head"]["repo"]["pushed_at"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 5
+              updated_at:
+                key: updated_at
+                name: RepoUpdatedAt
+                inputKey: '["pull_request"]["head"]["repo"]["updated_at"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 5
+              homepage:
+                key: homepage
+                name: RepoHomepage
+                inputKey: '["pull_request"]["head"]["repo"]["homepage"]'
+                suggestions: {  }
+                sorting: 0
+              license:
+                key: license
+                name: RepoLicense
+                inputKey: '["pull_request"]["head"]["repo"]["license"]'
+                suggestions: {  }
+                sorting: 0
+              mirror_url:
+                key: mirror_url
+                name: RepoMirrorUrl
+                inputKey: '["pull_request"]["head"]["repo"]["mirror_url"]'
+                suggestions: {  }
+                sorting: 0
+          user:
+            key: User
+            name: User
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
+            inputKey: '["pull_request"]["head"]["user"]'
+            sorting: 16
+            fields:
+              id:
+                key: id
+                name: UserId
+                inputKey: '["pull_request"]["head"]["user"]["id"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Id\IntegerId
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+                sorting: 200
+              gravatar_id:
+                key: gravatar_id
+                name: UserGravatarId
+                inputKey: '["pull_request"]["head"]["user"]["gravatar_id"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              login:
+                key: login
+                name: UserLogin
+                inputKey: '["pull_request"]["head"]["user"]["login"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              type:
+                key: type
+                name: UserType
+                inputKey: '["pull_request"]["head"]["user"]["type"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 30
+              site_admin:
+                key: site_admin
+                name: UserSiteAdmin
+                inputKey: '["pull_request"]["head"]["user"]["site_admin"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              avatar_url:
+                key: avatar_url
+                name: UserAvatarUrl
+                inputKey: '["pull_request"]["head"]["user"]["avatar_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              events_url:
+                key: events_url
+                name: UserEventsUrl
+                inputKey: '["pull_request"]["head"]["user"]["events_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              followers_url:
+                key: followers_url
+                name: UserFollowersUrl
+                inputKey: '["pull_request"]["head"]["user"]["followers_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              following_url:
+                key: following_url
+                name: UserFollowingUrl
+                inputKey: '["pull_request"]["head"]["user"]["following_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              gists_url:
+                key: gists_url
+                name: UserGistsUrl
+                inputKey: '["pull_request"]["head"]["user"]["gists_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              html_url:
+                key: html_url
+                name: UserHtmlUrl
+                inputKey: '["pull_request"]["head"]["user"]["html_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              organizations_url:
+                key: organizations_url
+                name: UserOrganizationsUrl
+                inputKey: '["pull_request"]["head"]["user"]["organizations_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              received_events_url:
+                key: received_events_url
+                name: UserReceivedEventsUrl
+                inputKey: '["pull_request"]["head"]["user"]["received_events_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              repos_url:
+                key: repos_url
+                name: UserReposUrl
+                inputKey: '["pull_request"]["head"]["user"]["repos_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              starred_url:
+                key: starred_url
+                name: UserStarredUrl
+                inputKey: '["pull_request"]["head"]["user"]["starred_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              subscriptions_url:
+                key: subscriptions_url
+                name: UserSubscriptionsUrl
+                inputKey: '["pull_request"]["head"]["user"]["subscriptions_url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+              url:
+                key: url
+                name: UserUrl
+                inputKey: '["pull_request"]["head"]["user"]["url"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+      _links:
+        key: Links
+        name: Links
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["_links"]'
+        sorting: 16
+        fields:
+          comments:
+            key: Comments
+            name: Comments
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
+            inputKey: '["pull_request"]["_links"]["comments"]'
+            sorting: 16
+            fields:
+              href:
+                key: href
+                name: CommentsHref
+                inputKey: '["pull_request"]["_links"]["comments"]["href"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+          commits:
+            key: Commits
+            name: Commits
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
+            inputKey: '["pull_request"]["_links"]["commits"]'
+            sorting: 16
+            fields:
+              href:
+                key: href
+                name: CommitsHref
+                inputKey: '["pull_request"]["_links"]["commits"]["href"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+          html:
+            key: Html
+            name: Html
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
+            inputKey: '["pull_request"]["_links"]["html"]'
+            sorting: 16
+            fields:
+              href:
+                key: href
+                name: HtmlHref
+                inputKey: '["pull_request"]["_links"]["html"]["href"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+          issue:
+            key: Issue
+            name: Issue
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
+            inputKey: '["pull_request"]["_links"]["issue"]'
+            sorting: 16
+            fields:
+              href:
+                key: href
+                name: IssueHref
+                inputKey: '["pull_request"]["_links"]["issue"]["href"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+          review_comment:
+            key: ReviewComment
+            name: ReviewComment
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
+            inputKey: '["pull_request"]["_links"]["review_comment"]'
+            sorting: 16
+            fields:
+              href:
+                key: href
+                name: ReviewCommentHref
+                inputKey: '["pull_request"]["_links"]["review_comment"]["href"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+          review_comments:
+            key: ReviewComments
+            name: ReviewComments
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
+            inputKey: '["pull_request"]["_links"]["review_comments"]'
+            sorting: 16
+            fields:
+              href:
+                key: href
+                name: ReviewCommentsHref
+                inputKey: '["pull_request"]["_links"]["review_comments"]["href"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+          self:
+            key: Self
+            name: Self
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
+            inputKey: '["pull_request"]["_links"]["self"]'
+            sorting: 16
+            fields:
+              href:
+                key: href
+                name: SelfHref
+                inputKey: '["pull_request"]["_links"]["self"]["href"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+          statuses:
+            key: Statuses
+            name: Statuses
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
+            inputKey: '["pull_request"]["_links"]["statuses"]'
+            sorting: 16
+            fields:
+              href:
+                key: href
+                name: StatusesHref
+                inputKey: '["pull_request"]["_links"]["statuses"]["href"]'
+                suggestions:
+                  - App\Service\JsonDetector\ValueObject\Generix\Url
+                  - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+                sorting: 10
+      requested_reviewers:
+        key: RequestedReviewers
+        name: RequestedReviewers
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["requested_reviewers"]'
+        sorting: 16
+      user:
+        key: User
+        name: User
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["user"]'
+        sorting: 16
+        fields:
+          id:
+            key: id
+            name: UserId
+            inputKey: '["pull_request"]["user"]["id"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Id\IntegerId
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+            sorting: 200
+          gravatar_id:
+            key: gravatar_id
+            name: UserGravatarId
+            inputKey: '["pull_request"]["user"]["gravatar_id"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          login:
+            key: login
+            name: UserLogin
+            inputKey: '["pull_request"]["user"]["login"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          type:
+            key: type
+            name: UserType
+            inputKey: '["pull_request"]["user"]["type"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          site_admin:
+            key: site_admin
+            name: UserSiteAdmin
+            inputKey: '["pull_request"]["user"]["site_admin"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+            sorting: 20
+          avatar_url:
+            key: avatar_url
+            name: UserAvatarUrl
+            inputKey: '["pull_request"]["user"]["avatar_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          events_url:
+            key: events_url
+            name: UserEventsUrl
+            inputKey: '["pull_request"]["user"]["events_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          followers_url:
+            key: followers_url
+            name: UserFollowersUrl
+            inputKey: '["pull_request"]["user"]["followers_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          following_url:
+            key: following_url
+            name: UserFollowingUrl
+            inputKey: '["pull_request"]["user"]["following_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          gists_url:
+            key: gists_url
+            name: UserGistsUrl
+            inputKey: '["pull_request"]["user"]["gists_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          html_url:
+            key: html_url
+            name: UserHtmlUrl
+            inputKey: '["pull_request"]["user"]["html_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          organizations_url:
+            key: organizations_url
+            name: UserOrganizationsUrl
+            inputKey: '["pull_request"]["user"]["organizations_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          received_events_url:
+            key: received_events_url
+            name: UserReceivedEventsUrl
+            inputKey: '["pull_request"]["user"]["received_events_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          repos_url:
+            key: repos_url
+            name: UserReposUrl
+            inputKey: '["pull_request"]["user"]["repos_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          starred_url:
+            key: starred_url
+            name: UserStarredUrl
+            inputKey: '["pull_request"]["user"]["starred_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          subscriptions_url:
+            key: subscriptions_url
+            name: UserSubscriptionsUrl
+            inputKey: '["pull_request"]["user"]["subscriptions_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          url:
+            key: url
+            name: UserUrl
+            inputKey: '["pull_request"]["user"]["url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+      comments_url:
+        key: comments_url
+        name: PullRequestCommentsUrl
+        inputKey: '["pull_request"]["comments_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      commits_url:
+        key: commits_url
+        name: PullRequestCommitsUrl
+        inputKey: '["pull_request"]["commits_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      diff_url:
+        key: diff_url
+        name: PullRequestDiffUrl
+        inputKey: '["pull_request"]["diff_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      html_url:
+        key: html_url
+        name: PullRequestHtmlUrl
+        inputKey: '["pull_request"]["html_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      issue_url:
+        key: issue_url
+        name: PullRequestIssueUrl
+        inputKey: '["pull_request"]["issue_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      patch_url:
+        key: patch_url
+        name: PullRequestPatchUrl
+        inputKey: '["pull_request"]["patch_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      review_comment_url:
+        key: review_comment_url
+        name: PullRequestReviewCommentUrl
+        inputKey: '["pull_request"]["review_comment_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      review_comments_url:
+        key: review_comments_url
+        name: PullRequestReviewCommentsUrl
+        inputKey: '["pull_request"]["review_comments_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      statuses_url:
+        key: statuses_url
+        name: PullRequestStatusesUrl
+        inputKey: '["pull_request"]["statuses_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      url:
+        key: url
+        name: PullRequestUrl
+        inputKey: '["pull_request"]["url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      created_at:
+        key: created_at
+        name: PullRequestCreatedAt
+        inputKey: '["pull_request"]["created_at"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 5
+      updated_at:
+        key: updated_at
+        name: PullRequestUpdatedAt
+        inputKey: '["pull_request"]["updated_at"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 5
+      assignee:
+        key: assignee
+        name: PullRequestAssignee
+        inputKey: '["pull_request"]["assignee"]'
+        suggestions: {  }
+        sorting: 0
+      closed_at:
+        key: closed_at
+        name: PullRequestClosedAt
+        inputKey: '["pull_request"]["closed_at"]'
+        suggestions: {  }
+        sorting: 0
+      merge_commit_sha:
+        key: merge_commit_sha
+        name: PullRequestMergeCommitSha
+        inputKey: '["pull_request"]["merge_commit_sha"]'
+        suggestions: {  }
+        sorting: 0
+      mergeable:
+        key: mergeable
+        name: PullRequestMergeable
+        inputKey: '["pull_request"]["mergeable"]'
+        suggestions: {  }
+        sorting: 0
+      merged_at:
+        key: merged_at
+        name: PullRequestMergedAt
+        inputKey: '["pull_request"]["merged_at"]'
+        suggestions: {  }
+        sorting: 0
+      merged_by:
+        key: merged_by
+        name: PullRequestMergedBy
+        inputKey: '["pull_request"]["merged_by"]'
+        suggestions: {  }
+        sorting: 0
+      milestone:
+        key: milestone
+        name: PullRequestMilestone
+        inputKey: '["pull_request"]["milestone"]'
+        suggestions: {  }
+        sorting: 0
+      rebaseable:
+        key: rebaseable
+        name: PullRequestRebaseable
+        inputKey: '["pull_request"]["rebaseable"]'
+        suggestions: {  }
+        sorting: 0
+  repository:
+    key: Repository
+    name: Repository
+    namespace: GitHub\WebHook\PullRequestHook
+    inputKey: '["repository"]'
+    sorting: 16
+    fields:
+      id:
+        key: id
+        name: RepositoryId
+        inputKey: '["repository"]["id"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Id\IntegerId
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleTimestamp
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 200
+      default_branch:
+        key: default_branch
+        name: RepositoryDefaultBranch
+        inputKey: '["repository"]["default_branch"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      description:
+        key: description
+        name: RepositoryDescription
+        inputKey: '["repository"]["description"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      forks:
+        key: forks
+        name: RepositoryForks
+        inputKey: '["repository"]["forks"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      forks_count:
+        key: forks_count
+        name: RepositoryForksCount
+        inputKey: '["repository"]["forks_count"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      full_name:
+        key: full_name
+        name: RepositoryFullName
+        inputKey: '["repository"]["full_name"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      language:
+        key: language
+        name: RepositoryLanguage
+        inputKey: '["repository"]["language"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      name:
+        key: name
+        name: RepositoryName
+        inputKey: '["repository"]["name"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      open_issues:
+        key: open_issues
+        name: RepositoryOpenIssues
+        inputKey: '["repository"]["open_issues"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      open_issues_count:
+        key: open_issues_count
+        name: RepositoryOpenIssuesCount
+        inputKey: '["repository"]["open_issues_count"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      size:
+        key: size
+        name: RepositorySize
+        inputKey: '["repository"]["size"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      ssh_url:
+        key: ssh_url
+        name: RepositorySshUrl
+        inputKey: '["repository"]["ssh_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      stargazers_count:
+        key: stargazers_count
+        name: RepositoryStargazersCount
+        inputKey: '["repository"]["stargazers_count"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      watchers:
+        key: watchers
+        name: RepositoryWatchers
+        inputKey: '["repository"]["watchers"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      watchers_count:
+        key: watchers_count
+        name: RepositoryWatchersCount
+        inputKey: '["repository"]["watchers_count"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 30
+      archived:
+        key: archived
+        name: RepositoryArchived
+        inputKey: '["repository"]["archived"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      fork:
+        key: fork
+        name: RepositoryFork
+        inputKey: '["repository"]["fork"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      has_downloads:
+        key: has_downloads
+        name: RepositoryHasDownloads
+        inputKey: '["repository"]["has_downloads"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      has_issues:
+        key: has_issues
+        name: RepositoryHasIssues
+        inputKey: '["repository"]["has_issues"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      has_pages:
+        key: has_pages
+        name: RepositoryHasPages
+        inputKey: '["repository"]["has_pages"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      has_projects:
+        key: has_projects
+        name: RepositoryHasProjects
+        inputKey: '["repository"]["has_projects"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      has_wiki:
+        key: has_wiki
+        name: RepositoryHasWiki
+        inputKey: '["repository"]["has_wiki"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      private:
+        key: private
+        name: RepositoryPrivate
+        inputKey: '["repository"]["private"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      owner:
+        key: Owner
+        name: Owner
+        namespace: GitHub\WebHook\PullRequestHook\Repository
+        inputKey: '["repository"]["owner"]'
+        sorting: 16
+        fields:
+          id:
+            key: id
+            name: OwnerId
+            inputKey: '["repository"]["owner"]["id"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Id\IntegerId
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+            sorting: 200
+          gravatar_id:
+            key: gravatar_id
+            name: OwnerGravatarId
+            inputKey: '["repository"]["owner"]["gravatar_id"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          login:
+            key: login
+            name: OwnerLogin
+            inputKey: '["repository"]["owner"]["login"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          type:
+            key: type
+            name: OwnerType
+            inputKey: '["repository"]["owner"]["type"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 30
+          site_admin:
+            key: site_admin
+            name: OwnerSiteAdmin
+            inputKey: '["repository"]["owner"]["site_admin"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+            sorting: 20
+          avatar_url:
+            key: avatar_url
+            name: OwnerAvatarUrl
+            inputKey: '["repository"]["owner"]["avatar_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          events_url:
+            key: events_url
+            name: OwnerEventsUrl
+            inputKey: '["repository"]["owner"]["events_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          followers_url:
+            key: followers_url
+            name: OwnerFollowersUrl
+            inputKey: '["repository"]["owner"]["followers_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          following_url:
+            key: following_url
+            name: OwnerFollowingUrl
+            inputKey: '["repository"]["owner"]["following_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          gists_url:
+            key: gists_url
+            name: OwnerGistsUrl
+            inputKey: '["repository"]["owner"]["gists_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          html_url:
+            key: html_url
+            name: OwnerHtmlUrl
+            inputKey: '["repository"]["owner"]["html_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          organizations_url:
+            key: organizations_url
+            name: OwnerOrganizationsUrl
+            inputKey: '["repository"]["owner"]["organizations_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          received_events_url:
+            key: received_events_url
+            name: OwnerReceivedEventsUrl
+            inputKey: '["repository"]["owner"]["received_events_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          repos_url:
+            key: repos_url
+            name: OwnerReposUrl
+            inputKey: '["repository"]["owner"]["repos_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          starred_url:
+            key: starred_url
+            name: OwnerStarredUrl
+            inputKey: '["repository"]["owner"]["starred_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          subscriptions_url:
+            key: subscriptions_url
+            name: OwnerSubscriptionsUrl
+            inputKey: '["repository"]["owner"]["subscriptions_url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+          url:
+            key: url
+            name: OwnerUrl
+            inputKey: '["repository"]["owner"]["url"]'
+            suggestions:
+              - App\Service\JsonDetector\ValueObject\Generix\Url
+              - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+            sorting: 10
+      archive_url:
+        key: archive_url
+        name: RepositoryArchiveUrl
+        inputKey: '["repository"]["archive_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      assignees_url:
+        key: assignees_url
+        name: RepositoryAssigneesUrl
+        inputKey: '["repository"]["assignees_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      blobs_url:
+        key: blobs_url
+        name: RepositoryBlobsUrl
+        inputKey: '["repository"]["blobs_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      branches_url:
+        key: branches_url
+        name: RepositoryBranchesUrl
+        inputKey: '["repository"]["branches_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      clone_url:
+        key: clone_url
+        name: RepositoryCloneUrl
+        inputKey: '["repository"]["clone_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      collaborators_url:
+        key: collaborators_url
+        name: RepositoryCollaboratorsUrl
+        inputKey: '["repository"]["collaborators_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      comments_url:
+        key: comments_url
+        name: RepositoryCommentsUrl
+        inputKey: '["repository"]["comments_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      commits_url:
+        key: commits_url
+        name: RepositoryCommitsUrl
+        inputKey: '["repository"]["commits_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      compare_url:
+        key: compare_url
+        name: RepositoryCompareUrl
+        inputKey: '["repository"]["compare_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      contents_url:
+        key: contents_url
+        name: RepositoryContentsUrl
+        inputKey: '["repository"]["contents_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      contributors_url:
+        key: contributors_url
+        name: RepositoryContributorsUrl
+        inputKey: '["repository"]["contributors_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      deployments_url:
+        key: deployments_url
+        name: RepositoryDeploymentsUrl
+        inputKey: '["repository"]["deployments_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      downloads_url:
+        key: downloads_url
+        name: RepositoryDownloadsUrl
+        inputKey: '["repository"]["downloads_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      events_url:
+        key: events_url
+        name: RepositoryEventsUrl
+        inputKey: '["repository"]["events_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      forks_url:
+        key: forks_url
+        name: RepositoryForksUrl
+        inputKey: '["repository"]["forks_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      git_commits_url:
+        key: git_commits_url
+        name: RepositoryGitCommitsUrl
+        inputKey: '["repository"]["git_commits_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      git_refs_url:
+        key: git_refs_url
+        name: RepositoryGitRefsUrl
+        inputKey: '["repository"]["git_refs_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      git_tags_url:
+        key: git_tags_url
+        name: RepositoryGitTagsUrl
+        inputKey: '["repository"]["git_tags_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      git_url:
+        key: git_url
+        name: RepositoryGitUrl
+        inputKey: '["repository"]["git_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      hooks_url:
+        key: hooks_url
+        name: RepositoryHooksUrl
+        inputKey: '["repository"]["hooks_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      html_url:
+        key: html_url
+        name: RepositoryHtmlUrl
+        inputKey: '["repository"]["html_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      issue_comment_url:
+        key: issue_comment_url
+        name: RepositoryIssueCommentUrl
+        inputKey: '["repository"]["issue_comment_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      issue_events_url:
+        key: issue_events_url
+        name: RepositoryIssueEventsUrl
+        inputKey: '["repository"]["issue_events_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      issues_url:
+        key: issues_url
+        name: RepositoryIssuesUrl
+        inputKey: '["repository"]["issues_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      keys_url:
+        key: keys_url
+        name: RepositoryKeysUrl
+        inputKey: '["repository"]["keys_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      labels_url:
+        key: labels_url
+        name: RepositoryLabelsUrl
+        inputKey: '["repository"]["labels_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      languages_url:
+        key: languages_url
+        name: RepositoryLanguagesUrl
+        inputKey: '["repository"]["languages_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      merges_url:
+        key: merges_url
+        name: RepositoryMergesUrl
+        inputKey: '["repository"]["merges_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      milestones_url:
+        key: milestones_url
+        name: RepositoryMilestonesUrl
+        inputKey: '["repository"]["milestones_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      notifications_url:
+        key: notifications_url
+        name: RepositoryNotificationsUrl
+        inputKey: '["repository"]["notifications_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      pulls_url:
+        key: pulls_url
+        name: RepositoryPullsUrl
+        inputKey: '["repository"]["pulls_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      releases_url:
+        key: releases_url
+        name: RepositoryReleasesUrl
+        inputKey: '["repository"]["releases_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      stargazers_url:
+        key: stargazers_url
+        name: RepositoryStargazersUrl
+        inputKey: '["repository"]["stargazers_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      statuses_url:
+        key: statuses_url
+        name: RepositoryStatusesUrl
+        inputKey: '["repository"]["statuses_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      subscribers_url:
+        key: subscribers_url
+        name: RepositorySubscribersUrl
+        inputKey: '["repository"]["subscribers_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      subscription_url:
+        key: subscription_url
+        name: RepositorySubscriptionUrl
+        inputKey: '["repository"]["subscription_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      svn_url:
+        key: svn_url
+        name: RepositorySvnUrl
+        inputKey: '["repository"]["svn_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      tags_url:
+        key: tags_url
+        name: RepositoryTagsUrl
+        inputKey: '["repository"]["tags_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      teams_url:
+        key: teams_url
+        name: RepositoryTeamsUrl
+        inputKey: '["repository"]["teams_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      trees_url:
+        key: trees_url
+        name: RepositoryTreesUrl
+        inputKey: '["repository"]["trees_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      url:
+        key: url
+        name: RepositoryUrl
+        inputKey: '["repository"]["url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      created_at:
+        key: created_at
+        name: RepositoryCreatedAt
+        inputKey: '["repository"]["created_at"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 5
+      pushed_at:
+        key: pushed_at
+        name: RepositoryPushedAt
+        inputKey: '["repository"]["pushed_at"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 5
+      updated_at:
+        key: updated_at
+        name: RepositoryUpdatedAt
+        inputKey: '["repository"]["updated_at"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 5
+      homepage:
+        key: homepage
+        name: RepositoryHomepage
+        inputKey: '["repository"]["homepage"]'
+        suggestions: {  }
+        sorting: 0
+      license:
+        key: license
+        name: RepositoryLicense
+        inputKey: '["repository"]["license"]'
+        suggestions: {  }
+        sorting: 0
+      mirror_url:
+        key: mirror_url
+        name: RepositoryMirrorUrl
+        inputKey: '["repository"]["mirror_url"]'
+        suggestions: {  }
+        sorting: 0
+  sender:
+    key: Sender
+    name: Sender
+    namespace: GitHub\WebHook\PullRequestHook
+    inputKey: '["sender"]'
+    sorting: 16
+    fields:
+      id:
+        key: id
+        name: SenderId
+        inputKey: '["sender"]["id"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Id\IntegerId
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 200
+      gravatar_id:
+        key: gravatar_id
+        name: SenderGravatarId
+        inputKey: '["sender"]["gravatar_id"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      login:
+        key: login
+        name: SenderLogin
+        inputKey: '["sender"]["login"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      type:
+        key: type
+        name: SenderType
+        inputKey: '["sender"]["type"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      site_admin:
+        key: site_admin
+        name: SenderSiteAdmin
+        inputKey: '["sender"]["site_admin"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      avatar_url:
+        key: avatar_url
+        name: SenderAvatarUrl
+        inputKey: '["sender"]["avatar_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      events_url:
+        key: events_url
+        name: SenderEventsUrl
+        inputKey: '["sender"]["events_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      followers_url:
+        key: followers_url
+        name: SenderFollowersUrl
+        inputKey: '["sender"]["followers_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      following_url:
+        key: following_url
+        name: SenderFollowingUrl
+        inputKey: '["sender"]["following_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      gists_url:
+        key: gists_url
+        name: SenderGistsUrl
+        inputKey: '["sender"]["gists_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      html_url:
+        key: html_url
+        name: SenderHtmlUrl
+        inputKey: '["sender"]["html_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      organizations_url:
+        key: organizations_url
+        name: SenderOrganizationsUrl
+        inputKey: '["sender"]["organizations_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      received_events_url:
+        key: received_events_url
+        name: SenderReceivedEventsUrl
+        inputKey: '["sender"]["received_events_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      repos_url:
+        key: repos_url
+        name: SenderReposUrl
+        inputKey: '["sender"]["repos_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      starred_url:
+        key: starred_url
+        name: SenderStarredUrl
+        inputKey: '["sender"]["starred_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      subscriptions_url:
+        key: subscriptions_url
+        name: SenderSubscriptionsUrl
+        inputKey: '["sender"]["subscriptions_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      url:
+        key: url
+        name: SenderUrl
+        inputKey: '["sender"]["url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10

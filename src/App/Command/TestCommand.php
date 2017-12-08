@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Command;
 
-use App\Service\JsonToConfig;
+use App\Service\JsonDetector;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -23,34 +23,22 @@ class TestCommand extends ContainerAwareCommand
     {
         $this
             ->setDescription('Test')
-            ->addArgument('file', InputArgument::REQUIRED, 'File to load');
+            ->addArgument('file', InputArgument::REQUIRED, 'File to load')
+        ->addArgument('name', InputArgument::REQUIRED, 'Base name');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $io = new SymfonyStyle($input, $output);
 
-        $j2config = $this->getService(JsonToConfig::class);
+        $jsonDetector = $this->getService(JsonDetector::class);
 
         $data = $this->loadJsonFile($input->getArgument('file'));
 
-        //print_r($data);
+        $config = $jsonDetector->detect($data, $input->getArgument('name'));
 
-        $config = $j2config->createConfig($data);
-
-        //print_r($config);
-
-        $dump = [];
-
-        foreach ($config as $key => $list) {
-            $dump[$key] = [];
-            foreach ($list as $item) {
-                $dump[$key][] = get_class($item);
-            }
-        }
-
-        $yaml = Yaml::dump($dump, 7, 2);
-        file_put_contents('test.yaml', $yaml);
+        $yaml = Yaml::dump($config->toArray(), 15, 2);
+        file_put_contents($input->getArgument('file').'.yaml', $yaml);
 
         $io->writeln('Finished!');
     }
