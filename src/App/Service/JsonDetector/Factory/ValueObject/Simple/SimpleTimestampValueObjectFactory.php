@@ -20,6 +20,10 @@ class SimpleTimestampValueObjectFactory implements Factory
 
     public function isSatisfiedBy(string $key, $value): bool
     {
+        if (true === is_array($value)) {
+            return false;
+        }
+
         if (null == $this->detectFormat((string) $value)) {
             return false;
         }

@@ -11,7 +11,7 @@ class ConfigSpec extends ObjectBehavior
 {
     public function let()
     {
-        $this->beConstructedWith($baseName = '', $namespace ='', []);
+        $this->beConstructedWith($baseName = '', $namespace = '', []);
     }
 
     public function it_is_initializable()

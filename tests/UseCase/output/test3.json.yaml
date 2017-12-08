@@ -7,6 +7,7 @@ fields:
   id:
     key: id
     name: UserId
+    namespace: MyVendor\User
     inputKey: '["id"]'
     suggestions:
       - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -15,6 +16,7 @@ fields:
   full_name:
     key: full_name
     name: UserFullName
+    namespace: MyVendor\User
     inputKey: '["full_name"]'
     suggestions:
       - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -22,6 +24,7 @@ fields:
   name:
     key: name
     name: UserName
+    namespace: MyVendor\User
     inputKey: '["name"]'
     suggestions:
       - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -31,11 +34,13 @@ fields:
     name: Address
     namespace: MyVendor\User
     inputKey: '["address"]'
+    suggestions: {  }
     sorting: 16
     fields:
       streetName:
         key: streetName
         name: AddressStreetName
+        namespace: MyVendor\User\Address
         inputKey: '["address"]["streetName"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -43,6 +48,7 @@ fields:
       street_number:
         key: street_number
         name: AddressStreetNumber
+        namespace: MyVendor\User\Address
         inputKey: '["address"]["street_number"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -52,11 +58,13 @@ fields:
         name: City
         namespace: MyVendor\User\Address
         inputKey: '["address"]["city"]'
+        suggestions: {  }
         sorting: 16
         fields:
           name:
             key: name
             name: CityName
+            namespace: MyVendor\User\Address\City
             inputKey: '["address"]["city"]["name"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -66,11 +74,13 @@ fields:
             name: Country
             namespace: MyVendor\User\Address\City
             inputKey: '["address"]["city"]["country"]'
+            suggestions: {  }
             sorting: 16
             fields:
               code:
                 key: code
                 name: CountryCode
+                namespace: MyVendor\User\Address\City\Country
                 inputKey: '["address"]["city"]["country"]["code"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString

@@ -67,17 +67,18 @@ class Config
     public function toArray($input = ''): array
     {
         $result = [
-            'key'      => $this->baseName,
-            'name'     => $this->baseName,
-            'namespace'=> $this->namespace,
-            'inputKey' => $input,
-            'sorting'  => 16,
+            'key'       => $this->baseName,
+            'name'      => $this->baseName,
+            'namespace' => $this->namespace,
+            'inputKey'  => $input,
+            'sorting'   => 16,
         ];
 
         foreach ($this->elements as $key => $list) {
             $resultItem = [
                 'key'         => $key,
                 'name'        => $this->baseName.str_replace('_', '', ucwords($key, '_')),
+                'namespace'   => $this->namespace.'\\'.$this->baseName,
                 'inputKey'    => $input.'["'.$key.'"]',
                 'suggestions' => [],
                 'sorting'     => 0,
@@ -89,7 +90,7 @@ class Config
                 }
             }
             if (true === array_key_exists($key, $this->configs)) {
-                $resultItem = $this->configs[$key]->toArray($input.'["'.$key.'"]');
+                $resultItem = array_merge($resultItem, $this->configs[$key]->toArray($input.'["'.$key.'"]'));
             }
 
             $result['fields'][$key] = $resultItem;

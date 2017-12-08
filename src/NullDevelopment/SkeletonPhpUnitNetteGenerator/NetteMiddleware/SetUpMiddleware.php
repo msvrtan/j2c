@@ -80,7 +80,7 @@ class SetUpMiddleware implements PartialCodeGeneratorMiddleware
             }
         }
         $zzz = [];
-        foreach ($refl->getConstructor()->getParameters()  as $param) {
+        foreach ($refl->getConstructor()->getParameters() as $param) {
             if ($param->getType()) {
                 $type = $param->getType()->__toString();
                 if ('string' === $type) {

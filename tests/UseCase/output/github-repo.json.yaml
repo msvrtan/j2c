@@ -1,0 +1,964 @@
+key: Repo
+name: Repo
+namespace: GitHub
+inputKey: ''
+sorting: 16
+fields:
+  id:
+    key: id
+    name: RepoId
+    namespace: GitHub\Repo
+    inputKey: '["id"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Id\IntegerId
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 200
+  default_branch:
+    key: default_branch
+    name: RepoDefaultBranch
+    namespace: GitHub\Repo
+    inputKey: '["default_branch"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  description:
+    key: description
+    name: RepoDescription
+    namespace: GitHub\Repo
+    inputKey: '["description"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  forks:
+    key: forks
+    name: RepoForks
+    namespace: GitHub\Repo
+    inputKey: '["forks"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 30
+  forks_count:
+    key: forks_count
+    name: RepoForksCount
+    namespace: GitHub\Repo
+    inputKey: '["forks_count"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 30
+  full_name:
+    key: full_name
+    name: RepoFullName
+    namespace: GitHub\Repo
+    inputKey: '["full_name"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  homepage:
+    key: homepage
+    name: RepoHomepage
+    namespace: GitHub\Repo
+    inputKey: '["homepage"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  language:
+    key: language
+    name: RepoLanguage
+    namespace: GitHub\Repo
+    inputKey: '["language"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  name:
+    key: name
+    name: RepoName
+    namespace: GitHub\Repo
+    inputKey: '["name"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  network_count:
+    key: network_count
+    name: RepoNetworkCount
+    namespace: GitHub\Repo
+    inputKey: '["network_count"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 30
+  open_issues:
+    key: open_issues
+    name: RepoOpenIssues
+    namespace: GitHub\Repo
+    inputKey: '["open_issues"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 30
+  open_issues_count:
+    key: open_issues_count
+    name: RepoOpenIssuesCount
+    namespace: GitHub\Repo
+    inputKey: '["open_issues_count"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 30
+  size:
+    key: size
+    name: RepoSize
+    namespace: GitHub\Repo
+    inputKey: '["size"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 30
+  ssh_url:
+    key: ssh_url
+    name: RepoSshUrl
+    namespace: GitHub\Repo
+    inputKey: '["ssh_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  stargazers_count:
+    key: stargazers_count
+    name: RepoStargazersCount
+    namespace: GitHub\Repo
+    inputKey: '["stargazers_count"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 30
+  subscribers_count:
+    key: subscribers_count
+    name: RepoSubscribersCount
+    namespace: GitHub\Repo
+    inputKey: '["subscribers_count"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 30
+  watchers:
+    key: watchers
+    name: RepoWatchers
+    namespace: GitHub\Repo
+    inputKey: '["watchers"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 30
+  watchers_count:
+    key: watchers_count
+    name: RepoWatchersCount
+    namespace: GitHub\Repo
+    inputKey: '["watchers_count"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+    sorting: 30
+  archived:
+    key: archived
+    name: RepoArchived
+    namespace: GitHub\Repo
+    inputKey: '["archived"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+    sorting: 20
+  fork:
+    key: fork
+    name: RepoFork
+    namespace: GitHub\Repo
+    inputKey: '["fork"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+    sorting: 20
+  has_downloads:
+    key: has_downloads
+    name: RepoHasDownloads
+    namespace: GitHub\Repo
+    inputKey: '["has_downloads"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+    sorting: 20
+  has_issues:
+    key: has_issues
+    name: RepoHasIssues
+    namespace: GitHub\Repo
+    inputKey: '["has_issues"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+    sorting: 20
+  has_pages:
+    key: has_pages
+    name: RepoHasPages
+    namespace: GitHub\Repo
+    inputKey: '["has_pages"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+    sorting: 20
+  has_projects:
+    key: has_projects
+    name: RepoHasProjects
+    namespace: GitHub\Repo
+    inputKey: '["has_projects"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+    sorting: 20
+  has_wiki:
+    key: has_wiki
+    name: RepoHasWiki
+    namespace: GitHub\Repo
+    inputKey: '["has_wiki"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+    sorting: 20
+  private:
+    key: private
+    name: RepoPrivate
+    namespace: GitHub\Repo
+    inputKey: '["private"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+    sorting: 20
+  organization:
+    key: Organization
+    name: Organization
+    namespace: GitHub\Repo
+    inputKey: '["organization"]'
+    suggestions: {  }
+    sorting: 16
+    fields:
+      id:
+        key: id
+        name: OrganizationId
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["id"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Id\IntegerId
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 200
+      gravatar_id:
+        key: gravatar_id
+        name: OrganizationGravatarId
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["gravatar_id"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      login:
+        key: login
+        name: OrganizationLogin
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["login"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      type:
+        key: type
+        name: OrganizationType
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["type"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      site_admin:
+        key: site_admin
+        name: OrganizationSiteAdmin
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["site_admin"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      avatar_url:
+        key: avatar_url
+        name: OrganizationAvatarUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["avatar_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      events_url:
+        key: events_url
+        name: OrganizationEventsUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["events_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      followers_url:
+        key: followers_url
+        name: OrganizationFollowersUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["followers_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      following_url:
+        key: following_url
+        name: OrganizationFollowingUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["following_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      gists_url:
+        key: gists_url
+        name: OrganizationGistsUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["gists_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      html_url:
+        key: html_url
+        name: OrganizationHtmlUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["html_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      organizations_url:
+        key: organizations_url
+        name: OrganizationOrganizationsUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["organizations_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      received_events_url:
+        key: received_events_url
+        name: OrganizationReceivedEventsUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["received_events_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      repos_url:
+        key: repos_url
+        name: OrganizationReposUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["repos_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      starred_url:
+        key: starred_url
+        name: OrganizationStarredUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["starred_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      subscriptions_url:
+        key: subscriptions_url
+        name: OrganizationSubscriptionsUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["subscriptions_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      url:
+        key: url
+        name: OrganizationUrl
+        namespace: GitHub\Repo\Organization
+        inputKey: '["organization"]["url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+  owner:
+    key: Owner
+    name: Owner
+    namespace: GitHub\Repo
+    inputKey: '["owner"]'
+    suggestions: {  }
+    sorting: 16
+    fields:
+      id:
+        key: id
+        name: OwnerId
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["id"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Id\IntegerId
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+        sorting: 200
+      gravatar_id:
+        key: gravatar_id
+        name: OwnerGravatarId
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["gravatar_id"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      login:
+        key: login
+        name: OwnerLogin
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["login"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      type:
+        key: type
+        name: OwnerType
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["type"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      site_admin:
+        key: site_admin
+        name: OwnerSiteAdmin
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["site_admin"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      avatar_url:
+        key: avatar_url
+        name: OwnerAvatarUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["avatar_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      events_url:
+        key: events_url
+        name: OwnerEventsUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["events_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      followers_url:
+        key: followers_url
+        name: OwnerFollowersUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["followers_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      following_url:
+        key: following_url
+        name: OwnerFollowingUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["following_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      gists_url:
+        key: gists_url
+        name: OwnerGistsUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["gists_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      html_url:
+        key: html_url
+        name: OwnerHtmlUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["html_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      organizations_url:
+        key: organizations_url
+        name: OwnerOrganizationsUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["organizations_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      received_events_url:
+        key: received_events_url
+        name: OwnerReceivedEventsUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["received_events_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      repos_url:
+        key: repos_url
+        name: OwnerReposUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["repos_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      starred_url:
+        key: starred_url
+        name: OwnerStarredUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["starred_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      subscriptions_url:
+        key: subscriptions_url
+        name: OwnerSubscriptionsUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["subscriptions_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      url:
+        key: url
+        name: OwnerUrl
+        namespace: GitHub\Repo\Owner
+        inputKey: '["owner"]["url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+  permissions:
+    key: Permissions
+    name: Permissions
+    namespace: GitHub\Repo
+    inputKey: '["permissions"]'
+    suggestions: {  }
+    sorting: 16
+    fields:
+      admin:
+        key: admin
+        name: PermissionsAdmin
+        namespace: GitHub\Repo\Permissions
+        inputKey: '["permissions"]["admin"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      pull:
+        key: pull
+        name: PermissionsPull
+        namespace: GitHub\Repo\Permissions
+        inputKey: '["permissions"]["pull"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      push:
+        key: push
+        name: PermissionsPush
+        namespace: GitHub\Repo\Permissions
+        inputKey: '["permissions"]["push"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+  archive_url:
+    key: archive_url
+    name: RepoArchiveUrl
+    namespace: GitHub\Repo
+    inputKey: '["archive_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  assignees_url:
+    key: assignees_url
+    name: RepoAssigneesUrl
+    namespace: GitHub\Repo
+    inputKey: '["assignees_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  blobs_url:
+    key: blobs_url
+    name: RepoBlobsUrl
+    namespace: GitHub\Repo
+    inputKey: '["blobs_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  branches_url:
+    key: branches_url
+    name: RepoBranchesUrl
+    namespace: GitHub\Repo
+    inputKey: '["branches_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  clone_url:
+    key: clone_url
+    name: RepoCloneUrl
+    namespace: GitHub\Repo
+    inputKey: '["clone_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  collaborators_url:
+    key: collaborators_url
+    name: RepoCollaboratorsUrl
+    namespace: GitHub\Repo
+    inputKey: '["collaborators_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  comments_url:
+    key: comments_url
+    name: RepoCommentsUrl
+    namespace: GitHub\Repo
+    inputKey: '["comments_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  commits_url:
+    key: commits_url
+    name: RepoCommitsUrl
+    namespace: GitHub\Repo
+    inputKey: '["commits_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  compare_url:
+    key: compare_url
+    name: RepoCompareUrl
+    namespace: GitHub\Repo
+    inputKey: '["compare_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  contents_url:
+    key: contents_url
+    name: RepoContentsUrl
+    namespace: GitHub\Repo
+    inputKey: '["contents_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  contributors_url:
+    key: contributors_url
+    name: RepoContributorsUrl
+    namespace: GitHub\Repo
+    inputKey: '["contributors_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  deployments_url:
+    key: deployments_url
+    name: RepoDeploymentsUrl
+    namespace: GitHub\Repo
+    inputKey: '["deployments_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  downloads_url:
+    key: downloads_url
+    name: RepoDownloadsUrl
+    namespace: GitHub\Repo
+    inputKey: '["downloads_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  events_url:
+    key: events_url
+    name: RepoEventsUrl
+    namespace: GitHub\Repo
+    inputKey: '["events_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  forks_url:
+    key: forks_url
+    name: RepoForksUrl
+    namespace: GitHub\Repo
+    inputKey: '["forks_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  git_commits_url:
+    key: git_commits_url
+    name: RepoGitCommitsUrl
+    namespace: GitHub\Repo
+    inputKey: '["git_commits_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  git_refs_url:
+    key: git_refs_url
+    name: RepoGitRefsUrl
+    namespace: GitHub\Repo
+    inputKey: '["git_refs_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  git_tags_url:
+    key: git_tags_url
+    name: RepoGitTagsUrl
+    namespace: GitHub\Repo
+    inputKey: '["git_tags_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  git_url:
+    key: git_url
+    name: RepoGitUrl
+    namespace: GitHub\Repo
+    inputKey: '["git_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  hooks_url:
+    key: hooks_url
+    name: RepoHooksUrl
+    namespace: GitHub\Repo
+    inputKey: '["hooks_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  html_url:
+    key: html_url
+    name: RepoHtmlUrl
+    namespace: GitHub\Repo
+    inputKey: '["html_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  issue_comment_url:
+    key: issue_comment_url
+    name: RepoIssueCommentUrl
+    namespace: GitHub\Repo
+    inputKey: '["issue_comment_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  issue_events_url:
+    key: issue_events_url
+    name: RepoIssueEventsUrl
+    namespace: GitHub\Repo
+    inputKey: '["issue_events_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  issues_url:
+    key: issues_url
+    name: RepoIssuesUrl
+    namespace: GitHub\Repo
+    inputKey: '["issues_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  keys_url:
+    key: keys_url
+    name: RepoKeysUrl
+    namespace: GitHub\Repo
+    inputKey: '["keys_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  labels_url:
+    key: labels_url
+    name: RepoLabelsUrl
+    namespace: GitHub\Repo
+    inputKey: '["labels_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  languages_url:
+    key: languages_url
+    name: RepoLanguagesUrl
+    namespace: GitHub\Repo
+    inputKey: '["languages_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  merges_url:
+    key: merges_url
+    name: RepoMergesUrl
+    namespace: GitHub\Repo
+    inputKey: '["merges_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  milestones_url:
+    key: milestones_url
+    name: RepoMilestonesUrl
+    namespace: GitHub\Repo
+    inputKey: '["milestones_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  notifications_url:
+    key: notifications_url
+    name: RepoNotificationsUrl
+    namespace: GitHub\Repo
+    inputKey: '["notifications_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  pulls_url:
+    key: pulls_url
+    name: RepoPullsUrl
+    namespace: GitHub\Repo
+    inputKey: '["pulls_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  releases_url:
+    key: releases_url
+    name: RepoReleasesUrl
+    namespace: GitHub\Repo
+    inputKey: '["releases_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  stargazers_url:
+    key: stargazers_url
+    name: RepoStargazersUrl
+    namespace: GitHub\Repo
+    inputKey: '["stargazers_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  statuses_url:
+    key: statuses_url
+    name: RepoStatusesUrl
+    namespace: GitHub\Repo
+    inputKey: '["statuses_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  subscribers_url:
+    key: subscribers_url
+    name: RepoSubscribersUrl
+    namespace: GitHub\Repo
+    inputKey: '["subscribers_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  subscription_url:
+    key: subscription_url
+    name: RepoSubscriptionUrl
+    namespace: GitHub\Repo
+    inputKey: '["subscription_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  svn_url:
+    key: svn_url
+    name: RepoSvnUrl
+    namespace: GitHub\Repo
+    inputKey: '["svn_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  tags_url:
+    key: tags_url
+    name: RepoTagsUrl
+    namespace: GitHub\Repo
+    inputKey: '["tags_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  teams_url:
+    key: teams_url
+    name: RepoTeamsUrl
+    namespace: GitHub\Repo
+    inputKey: '["teams_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  trees_url:
+    key: trees_url
+    name: RepoTreesUrl
+    namespace: GitHub\Repo
+    inputKey: '["trees_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  url:
+    key: url
+    name: RepoUrl
+    namespace: GitHub\Repo
+    inputKey: '["url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  created_at:
+    key: created_at
+    name: RepoCreatedAt
+    namespace: GitHub\Repo
+    inputKey: '["created_at"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 5
+  pushed_at:
+    key: pushed_at
+    name: RepoPushedAt
+    namespace: GitHub\Repo
+    inputKey: '["pushed_at"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 5
+  updated_at:
+    key: updated_at
+    name: RepoUpdatedAt
+    namespace: GitHub\Repo
+    inputKey: '["updated_at"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 5
+  mirror_url:
+    key: mirror_url
+    name: RepoMirrorUrl
+    namespace: GitHub\Repo
+    inputKey: '["mirror_url"]'
+    suggestions: {  }
+    sorting: 0

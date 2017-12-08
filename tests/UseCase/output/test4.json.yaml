@@ -7,6 +7,7 @@ fields:
   action:
     key: action
     name: PullRequestHookAction
+    namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["action"]'
     suggestions:
       - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -14,6 +15,7 @@ fields:
   number:
     key: number
     name: PullRequestHookNumber
+    namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["number"]'
     suggestions:
       - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -23,11 +25,13 @@ fields:
     name: Installation
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["installation"]'
+    suggestions: {  }
     sorting: 16
     fields:
       id:
         key: id
         name: InstallationId
+        namespace: GitHub\WebHook\PullRequestHook\Installation
         inputKey: '["installation"]["id"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -38,11 +42,13 @@ fields:
     name: Organization
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["organization"]'
+    suggestions: {  }
     sorting: 16
     fields:
       id:
         key: id
         name: OrganizationId
+        namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["id"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -51,6 +57,7 @@ fields:
       description:
         key: description
         name: OrganizationDescription
+        namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["description"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -58,6 +65,7 @@ fields:
       login:
         key: login
         name: OrganizationLogin
+        namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["login"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -65,6 +73,7 @@ fields:
       avatar_url:
         key: avatar_url
         name: OrganizationAvatarUrl
+        namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["avatar_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -73,6 +82,7 @@ fields:
       events_url:
         key: events_url
         name: OrganizationEventsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["events_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -81,6 +91,7 @@ fields:
       hooks_url:
         key: hooks_url
         name: OrganizationHooksUrl
+        namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["hooks_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -89,6 +100,7 @@ fields:
       issues_url:
         key: issues_url
         name: OrganizationIssuesUrl
+        namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["issues_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -97,6 +109,7 @@ fields:
       members_url:
         key: members_url
         name: OrganizationMembersUrl
+        namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["members_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -105,6 +118,7 @@ fields:
       public_members_url:
         key: public_members_url
         name: OrganizationPublicMembersUrl
+        namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["public_members_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -113,6 +127,7 @@ fields:
       repos_url:
         key: repos_url
         name: OrganizationReposUrl
+        namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["repos_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -121,6 +136,7 @@ fields:
       url:
         key: url
         name: OrganizationUrl
+        namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -131,11 +147,13 @@ fields:
     name: PullRequest
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["pull_request"]'
+    suggestions: {  }
     sorting: 16
     fields:
       id:
         key: id
         name: PullRequestId
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["id"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -145,6 +163,7 @@ fields:
       additions:
         key: additions
         name: PullRequestAdditions
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["additions"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -152,6 +171,7 @@ fields:
       author_association:
         key: author_association
         name: PullRequestAuthorAssociation
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["author_association"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -159,6 +179,7 @@ fields:
       body:
         key: body
         name: PullRequestBody
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["body"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -166,6 +187,7 @@ fields:
       changed_files:
         key: changed_files
         name: PullRequestChangedFiles
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["changed_files"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -173,6 +195,7 @@ fields:
       comments:
         key: comments
         name: PullRequestComments
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["comments"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -180,6 +203,7 @@ fields:
       commits:
         key: commits
         name: PullRequestCommits
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["commits"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -187,6 +211,7 @@ fields:
       deletions:
         key: deletions
         name: PullRequestDeletions
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["deletions"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -194,6 +219,7 @@ fields:
       mergeable_state:
         key: mergeable_state
         name: PullRequestMergeableState
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["mergeable_state"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -201,6 +227,7 @@ fields:
       number:
         key: number
         name: PullRequestNumber
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["number"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -208,6 +235,7 @@ fields:
       review_comments:
         key: review_comments
         name: PullRequestReviewComments
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["review_comments"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -215,6 +243,7 @@ fields:
       state:
         key: state
         name: PullRequestState
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["state"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -222,6 +251,7 @@ fields:
       title:
         key: title
         name: PullRequestTitle
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["title"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -229,6 +259,7 @@ fields:
       locked:
         key: locked
         name: PullRequestLocked
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["locked"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -236,6 +267,7 @@ fields:
       maintainer_can_modify:
         key: maintainer_can_modify
         name: PullRequestMaintainerCanModify
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["maintainer_can_modify"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -243,6 +275,7 @@ fields:
       merged:
         key: merged
         name: PullRequestMerged
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["merged"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -252,17 +285,21 @@ fields:
         name: Assignees
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["assignees"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleCollection
         sorting: 16
       base:
         key: Base
         name: Base
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["base"]'
+        suggestions: {  }
         sorting: 16
         fields:
           label:
             key: label
             name: BaseLabel
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
             inputKey: '["pull_request"]["base"]["label"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -270,6 +307,7 @@ fields:
           ref:
             key: ref
             name: BaseRef
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
             inputKey: '["pull_request"]["base"]["ref"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -277,6 +315,7 @@ fields:
           sha:
             key: sha
             name: BaseSha
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
             inputKey: '["pull_request"]["base"]["sha"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -286,11 +325,13 @@ fields:
             name: Repo
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
             inputKey: '["pull_request"]["base"]["repo"]'
+            suggestions: {  }
             sorting: 16
             fields:
               id:
                 key: id
                 name: RepoId
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["id"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -300,6 +341,7 @@ fields:
               default_branch:
                 key: default_branch
                 name: RepoDefaultBranch
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["default_branch"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -307,6 +349,7 @@ fields:
               description:
                 key: description
                 name: RepoDescription
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["description"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -314,6 +357,7 @@ fields:
               forks:
                 key: forks
                 name: RepoForks
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["forks"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -321,6 +365,7 @@ fields:
               forks_count:
                 key: forks_count
                 name: RepoForksCount
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["forks_count"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -328,6 +373,7 @@ fields:
               full_name:
                 key: full_name
                 name: RepoFullName
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["full_name"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -335,6 +381,7 @@ fields:
               language:
                 key: language
                 name: RepoLanguage
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["language"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -342,6 +389,7 @@ fields:
               name:
                 key: name
                 name: RepoName
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["name"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -349,6 +397,7 @@ fields:
               open_issues:
                 key: open_issues
                 name: RepoOpenIssues
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["open_issues"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -356,6 +405,7 @@ fields:
               open_issues_count:
                 key: open_issues_count
                 name: RepoOpenIssuesCount
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["open_issues_count"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -363,6 +413,7 @@ fields:
               size:
                 key: size
                 name: RepoSize
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["size"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -370,6 +421,7 @@ fields:
               ssh_url:
                 key: ssh_url
                 name: RepoSshUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["ssh_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -377,6 +429,7 @@ fields:
               stargazers_count:
                 key: stargazers_count
                 name: RepoStargazersCount
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["stargazers_count"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -384,6 +437,7 @@ fields:
               watchers:
                 key: watchers
                 name: RepoWatchers
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["watchers"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -391,6 +445,7 @@ fields:
               watchers_count:
                 key: watchers_count
                 name: RepoWatchersCount
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["watchers_count"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -398,6 +453,7 @@ fields:
               archived:
                 key: archived
                 name: RepoArchived
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["archived"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -405,6 +461,7 @@ fields:
               fork:
                 key: fork
                 name: RepoFork
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["fork"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -412,6 +469,7 @@ fields:
               has_downloads:
                 key: has_downloads
                 name: RepoHasDownloads
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["has_downloads"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -419,6 +477,7 @@ fields:
               has_issues:
                 key: has_issues
                 name: RepoHasIssues
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["has_issues"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -426,6 +485,7 @@ fields:
               has_pages:
                 key: has_pages
                 name: RepoHasPages
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["has_pages"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -433,6 +493,7 @@ fields:
               has_projects:
                 key: has_projects
                 name: RepoHasProjects
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["has_projects"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -440,6 +501,7 @@ fields:
               has_wiki:
                 key: has_wiki
                 name: RepoHasWiki
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["has_wiki"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -447,6 +509,7 @@ fields:
               private:
                 key: private
                 name: RepoPrivate
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["private"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -456,11 +519,13 @@ fields:
                 name: Owner
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["owner"]'
+                suggestions: {  }
                 sorting: 16
                 fields:
                   id:
                     key: id
                     name: OwnerId
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["id"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -469,6 +534,7 @@ fields:
                   gravatar_id:
                     key: gravatar_id
                     name: OwnerGravatarId
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["gravatar_id"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -476,6 +542,7 @@ fields:
                   login:
                     key: login
                     name: OwnerLogin
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["login"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -483,6 +550,7 @@ fields:
                   type:
                     key: type
                     name: OwnerType
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["type"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -490,6 +558,7 @@ fields:
                   site_admin:
                     key: site_admin
                     name: OwnerSiteAdmin
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["site_admin"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -497,6 +566,7 @@ fields:
                   avatar_url:
                     key: avatar_url
                     name: OwnerAvatarUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["avatar_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -505,6 +575,7 @@ fields:
                   events_url:
                     key: events_url
                     name: OwnerEventsUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["events_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -513,6 +584,7 @@ fields:
                   followers_url:
                     key: followers_url
                     name: OwnerFollowersUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["followers_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -521,6 +593,7 @@ fields:
                   following_url:
                     key: following_url
                     name: OwnerFollowingUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["following_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -529,6 +602,7 @@ fields:
                   gists_url:
                     key: gists_url
                     name: OwnerGistsUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["gists_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -537,6 +611,7 @@ fields:
                   html_url:
                     key: html_url
                     name: OwnerHtmlUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["html_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -545,6 +620,7 @@ fields:
                   organizations_url:
                     key: organizations_url
                     name: OwnerOrganizationsUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["organizations_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -553,6 +629,7 @@ fields:
                   received_events_url:
                     key: received_events_url
                     name: OwnerReceivedEventsUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["received_events_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -561,6 +638,7 @@ fields:
                   repos_url:
                     key: repos_url
                     name: OwnerReposUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["repos_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -569,6 +647,7 @@ fields:
                   starred_url:
                     key: starred_url
                     name: OwnerStarredUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["starred_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -577,6 +656,7 @@ fields:
                   subscriptions_url:
                     key: subscriptions_url
                     name: OwnerSubscriptionsUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["subscriptions_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -585,6 +665,7 @@ fields:
                   url:
                     key: url
                     name: OwnerUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -593,6 +674,7 @@ fields:
               archive_url:
                 key: archive_url
                 name: RepoArchiveUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["archive_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -601,6 +683,7 @@ fields:
               assignees_url:
                 key: assignees_url
                 name: RepoAssigneesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["assignees_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -609,6 +692,7 @@ fields:
               blobs_url:
                 key: blobs_url
                 name: RepoBlobsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["blobs_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -617,6 +701,7 @@ fields:
               branches_url:
                 key: branches_url
                 name: RepoBranchesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["branches_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -625,6 +710,7 @@ fields:
               clone_url:
                 key: clone_url
                 name: RepoCloneUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["clone_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -633,6 +719,7 @@ fields:
               collaborators_url:
                 key: collaborators_url
                 name: RepoCollaboratorsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["collaborators_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -641,6 +728,7 @@ fields:
               comments_url:
                 key: comments_url
                 name: RepoCommentsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["comments_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -649,6 +737,7 @@ fields:
               commits_url:
                 key: commits_url
                 name: RepoCommitsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["commits_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -657,6 +746,7 @@ fields:
               compare_url:
                 key: compare_url
                 name: RepoCompareUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["compare_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -665,6 +755,7 @@ fields:
               contents_url:
                 key: contents_url
                 name: RepoContentsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["contents_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -673,6 +764,7 @@ fields:
               contributors_url:
                 key: contributors_url
                 name: RepoContributorsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["contributors_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -681,6 +773,7 @@ fields:
               deployments_url:
                 key: deployments_url
                 name: RepoDeploymentsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["deployments_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -689,6 +782,7 @@ fields:
               downloads_url:
                 key: downloads_url
                 name: RepoDownloadsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["downloads_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -697,6 +791,7 @@ fields:
               events_url:
                 key: events_url
                 name: RepoEventsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["events_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -705,6 +800,7 @@ fields:
               forks_url:
                 key: forks_url
                 name: RepoForksUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["forks_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -713,6 +809,7 @@ fields:
               git_commits_url:
                 key: git_commits_url
                 name: RepoGitCommitsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["git_commits_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -721,6 +818,7 @@ fields:
               git_refs_url:
                 key: git_refs_url
                 name: RepoGitRefsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["git_refs_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -729,6 +827,7 @@ fields:
               git_tags_url:
                 key: git_tags_url
                 name: RepoGitTagsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["git_tags_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -737,6 +836,7 @@ fields:
               git_url:
                 key: git_url
                 name: RepoGitUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["git_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -745,6 +845,7 @@ fields:
               hooks_url:
                 key: hooks_url
                 name: RepoHooksUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["hooks_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -753,6 +854,7 @@ fields:
               html_url:
                 key: html_url
                 name: RepoHtmlUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["html_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -761,6 +863,7 @@ fields:
               issue_comment_url:
                 key: issue_comment_url
                 name: RepoIssueCommentUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["issue_comment_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -769,6 +872,7 @@ fields:
               issue_events_url:
                 key: issue_events_url
                 name: RepoIssueEventsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["issue_events_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -777,6 +881,7 @@ fields:
               issues_url:
                 key: issues_url
                 name: RepoIssuesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["issues_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -785,6 +890,7 @@ fields:
               keys_url:
                 key: keys_url
                 name: RepoKeysUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["keys_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -793,6 +899,7 @@ fields:
               labels_url:
                 key: labels_url
                 name: RepoLabelsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["labels_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -801,6 +908,7 @@ fields:
               languages_url:
                 key: languages_url
                 name: RepoLanguagesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["languages_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -809,6 +917,7 @@ fields:
               merges_url:
                 key: merges_url
                 name: RepoMergesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["merges_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -817,6 +926,7 @@ fields:
               milestones_url:
                 key: milestones_url
                 name: RepoMilestonesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["milestones_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -825,6 +935,7 @@ fields:
               notifications_url:
                 key: notifications_url
                 name: RepoNotificationsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["notifications_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -833,6 +944,7 @@ fields:
               pulls_url:
                 key: pulls_url
                 name: RepoPullsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["pulls_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -841,6 +953,7 @@ fields:
               releases_url:
                 key: releases_url
                 name: RepoReleasesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["releases_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -849,6 +962,7 @@ fields:
               stargazers_url:
                 key: stargazers_url
                 name: RepoStargazersUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["stargazers_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -857,6 +971,7 @@ fields:
               statuses_url:
                 key: statuses_url
                 name: RepoStatusesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["statuses_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -865,6 +980,7 @@ fields:
               subscribers_url:
                 key: subscribers_url
                 name: RepoSubscribersUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["subscribers_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -873,6 +989,7 @@ fields:
               subscription_url:
                 key: subscription_url
                 name: RepoSubscriptionUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["subscription_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -881,6 +998,7 @@ fields:
               svn_url:
                 key: svn_url
                 name: RepoSvnUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["svn_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -889,6 +1007,7 @@ fields:
               tags_url:
                 key: tags_url
                 name: RepoTagsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["tags_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -897,6 +1016,7 @@ fields:
               teams_url:
                 key: teams_url
                 name: RepoTeamsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["teams_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -905,6 +1025,7 @@ fields:
               trees_url:
                 key: trees_url
                 name: RepoTreesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["trees_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -913,6 +1034,7 @@ fields:
               url:
                 key: url
                 name: RepoUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -921,6 +1043,7 @@ fields:
               created_at:
                 key: created_at
                 name: RepoCreatedAt
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["created_at"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -929,6 +1052,7 @@ fields:
               pushed_at:
                 key: pushed_at
                 name: RepoPushedAt
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["pushed_at"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -937,6 +1061,7 @@ fields:
               updated_at:
                 key: updated_at
                 name: RepoUpdatedAt
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["updated_at"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -945,18 +1070,21 @@ fields:
               homepage:
                 key: homepage
                 name: RepoHomepage
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["homepage"]'
                 suggestions: {  }
                 sorting: 0
               license:
                 key: license
                 name: RepoLicense
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["license"]'
                 suggestions: {  }
                 sorting: 0
               mirror_url:
                 key: mirror_url
                 name: RepoMirrorUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["mirror_url"]'
                 suggestions: {  }
                 sorting: 0
@@ -965,11 +1093,13 @@ fields:
             name: User
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
             inputKey: '["pull_request"]["base"]["user"]'
+            suggestions: {  }
             sorting: 16
             fields:
               id:
                 key: id
                 name: UserId
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["id"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -978,6 +1108,7 @@ fields:
               gravatar_id:
                 key: gravatar_id
                 name: UserGravatarId
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["gravatar_id"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -985,6 +1116,7 @@ fields:
               login:
                 key: login
                 name: UserLogin
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["login"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -992,6 +1124,7 @@ fields:
               type:
                 key: type
                 name: UserType
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["type"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -999,6 +1132,7 @@ fields:
               site_admin:
                 key: site_admin
                 name: UserSiteAdmin
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["site_admin"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -1006,6 +1140,7 @@ fields:
               avatar_url:
                 key: avatar_url
                 name: UserAvatarUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["avatar_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1014,6 +1149,7 @@ fields:
               events_url:
                 key: events_url
                 name: UserEventsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["events_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1022,6 +1158,7 @@ fields:
               followers_url:
                 key: followers_url
                 name: UserFollowersUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["followers_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1030,6 +1167,7 @@ fields:
               following_url:
                 key: following_url
                 name: UserFollowingUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["following_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1038,6 +1176,7 @@ fields:
               gists_url:
                 key: gists_url
                 name: UserGistsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["gists_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1046,6 +1185,7 @@ fields:
               html_url:
                 key: html_url
                 name: UserHtmlUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["html_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1054,6 +1194,7 @@ fields:
               organizations_url:
                 key: organizations_url
                 name: UserOrganizationsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["organizations_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1062,6 +1203,7 @@ fields:
               received_events_url:
                 key: received_events_url
                 name: UserReceivedEventsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["received_events_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1070,6 +1212,7 @@ fields:
               repos_url:
                 key: repos_url
                 name: UserReposUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["repos_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1078,6 +1221,7 @@ fields:
               starred_url:
                 key: starred_url
                 name: UserStarredUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["starred_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1086,6 +1230,7 @@ fields:
               subscriptions_url:
                 key: subscriptions_url
                 name: UserSubscriptionsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["subscriptions_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1094,6 +1239,7 @@ fields:
               url:
                 key: url
                 name: UserUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1104,11 +1250,13 @@ fields:
         name: Head
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["head"]'
+        suggestions: {  }
         sorting: 16
         fields:
           label:
             key: label
             name: HeadLabel
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
             inputKey: '["pull_request"]["head"]["label"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1116,6 +1264,7 @@ fields:
           ref:
             key: ref
             name: HeadRef
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
             inputKey: '["pull_request"]["head"]["ref"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1123,6 +1272,7 @@ fields:
           sha:
             key: sha
             name: HeadSha
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
             inputKey: '["pull_request"]["head"]["sha"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1132,11 +1282,13 @@ fields:
             name: Repo
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
             inputKey: '["pull_request"]["head"]["repo"]'
+            suggestions: {  }
             sorting: 16
             fields:
               id:
                 key: id
                 name: RepoId
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["id"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -1146,6 +1298,7 @@ fields:
               default_branch:
                 key: default_branch
                 name: RepoDefaultBranch
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["default_branch"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1153,6 +1306,7 @@ fields:
               description:
                 key: description
                 name: RepoDescription
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["description"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1160,6 +1314,7 @@ fields:
               forks:
                 key: forks
                 name: RepoForks
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["forks"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -1167,6 +1322,7 @@ fields:
               forks_count:
                 key: forks_count
                 name: RepoForksCount
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["forks_count"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -1174,6 +1330,7 @@ fields:
               full_name:
                 key: full_name
                 name: RepoFullName
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["full_name"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1181,6 +1338,7 @@ fields:
               language:
                 key: language
                 name: RepoLanguage
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["language"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1188,6 +1346,7 @@ fields:
               name:
                 key: name
                 name: RepoName
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["name"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1195,6 +1354,7 @@ fields:
               open_issues:
                 key: open_issues
                 name: RepoOpenIssues
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["open_issues"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -1202,6 +1362,7 @@ fields:
               open_issues_count:
                 key: open_issues_count
                 name: RepoOpenIssuesCount
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["open_issues_count"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -1209,6 +1370,7 @@ fields:
               size:
                 key: size
                 name: RepoSize
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["size"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -1216,6 +1378,7 @@ fields:
               ssh_url:
                 key: ssh_url
                 name: RepoSshUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["ssh_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1223,6 +1386,7 @@ fields:
               stargazers_count:
                 key: stargazers_count
                 name: RepoStargazersCount
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["stargazers_count"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -1230,6 +1394,7 @@ fields:
               watchers:
                 key: watchers
                 name: RepoWatchers
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["watchers"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -1237,6 +1402,7 @@ fields:
               watchers_count:
                 key: watchers_count
                 name: RepoWatchersCount
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["watchers_count"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -1244,6 +1410,7 @@ fields:
               archived:
                 key: archived
                 name: RepoArchived
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["archived"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -1251,6 +1418,7 @@ fields:
               fork:
                 key: fork
                 name: RepoFork
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["fork"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -1258,6 +1426,7 @@ fields:
               has_downloads:
                 key: has_downloads
                 name: RepoHasDownloads
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["has_downloads"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -1265,6 +1434,7 @@ fields:
               has_issues:
                 key: has_issues
                 name: RepoHasIssues
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["has_issues"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -1272,6 +1442,7 @@ fields:
               has_pages:
                 key: has_pages
                 name: RepoHasPages
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["has_pages"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -1279,6 +1450,7 @@ fields:
               has_projects:
                 key: has_projects
                 name: RepoHasProjects
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["has_projects"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -1286,6 +1458,7 @@ fields:
               has_wiki:
                 key: has_wiki
                 name: RepoHasWiki
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["has_wiki"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -1293,6 +1466,7 @@ fields:
               private:
                 key: private
                 name: RepoPrivate
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["private"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -1302,11 +1476,13 @@ fields:
                 name: Owner
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["owner"]'
+                suggestions: {  }
                 sorting: 16
                 fields:
                   id:
                     key: id
                     name: OwnerId
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["id"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -1315,6 +1491,7 @@ fields:
                   gravatar_id:
                     key: gravatar_id
                     name: OwnerGravatarId
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["gravatar_id"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1322,6 +1499,7 @@ fields:
                   login:
                     key: login
                     name: OwnerLogin
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["login"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1329,6 +1507,7 @@ fields:
                   type:
                     key: type
                     name: OwnerType
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["type"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1336,6 +1515,7 @@ fields:
                   site_admin:
                     key: site_admin
                     name: OwnerSiteAdmin
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["site_admin"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -1343,6 +1523,7 @@ fields:
                   avatar_url:
                     key: avatar_url
                     name: OwnerAvatarUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["avatar_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1351,6 +1532,7 @@ fields:
                   events_url:
                     key: events_url
                     name: OwnerEventsUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["events_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1359,6 +1541,7 @@ fields:
                   followers_url:
                     key: followers_url
                     name: OwnerFollowersUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["followers_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1367,6 +1550,7 @@ fields:
                   following_url:
                     key: following_url
                     name: OwnerFollowingUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["following_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1375,6 +1559,7 @@ fields:
                   gists_url:
                     key: gists_url
                     name: OwnerGistsUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["gists_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1383,6 +1568,7 @@ fields:
                   html_url:
                     key: html_url
                     name: OwnerHtmlUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["html_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1391,6 +1577,7 @@ fields:
                   organizations_url:
                     key: organizations_url
                     name: OwnerOrganizationsUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["organizations_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1399,6 +1586,7 @@ fields:
                   received_events_url:
                     key: received_events_url
                     name: OwnerReceivedEventsUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["received_events_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1407,6 +1595,7 @@ fields:
                   repos_url:
                     key: repos_url
                     name: OwnerReposUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["repos_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1415,6 +1604,7 @@ fields:
                   starred_url:
                     key: starred_url
                     name: OwnerStarredUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["starred_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1423,6 +1613,7 @@ fields:
                   subscriptions_url:
                     key: subscriptions_url
                     name: OwnerSubscriptionsUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["subscriptions_url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1431,6 +1622,7 @@ fields:
                   url:
                     key: url
                     name: OwnerUrl
+                    namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["url"]'
                     suggestions:
                       - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1439,6 +1631,7 @@ fields:
               archive_url:
                 key: archive_url
                 name: RepoArchiveUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["archive_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1447,6 +1640,7 @@ fields:
               assignees_url:
                 key: assignees_url
                 name: RepoAssigneesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["assignees_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1455,6 +1649,7 @@ fields:
               blobs_url:
                 key: blobs_url
                 name: RepoBlobsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["blobs_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1463,6 +1658,7 @@ fields:
               branches_url:
                 key: branches_url
                 name: RepoBranchesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["branches_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1471,6 +1667,7 @@ fields:
               clone_url:
                 key: clone_url
                 name: RepoCloneUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["clone_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1479,6 +1676,7 @@ fields:
               collaborators_url:
                 key: collaborators_url
                 name: RepoCollaboratorsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["collaborators_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1487,6 +1685,7 @@ fields:
               comments_url:
                 key: comments_url
                 name: RepoCommentsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["comments_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1495,6 +1694,7 @@ fields:
               commits_url:
                 key: commits_url
                 name: RepoCommitsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["commits_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1503,6 +1703,7 @@ fields:
               compare_url:
                 key: compare_url
                 name: RepoCompareUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["compare_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1511,6 +1712,7 @@ fields:
               contents_url:
                 key: contents_url
                 name: RepoContentsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["contents_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1519,6 +1721,7 @@ fields:
               contributors_url:
                 key: contributors_url
                 name: RepoContributorsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["contributors_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1527,6 +1730,7 @@ fields:
               deployments_url:
                 key: deployments_url
                 name: RepoDeploymentsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["deployments_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1535,6 +1739,7 @@ fields:
               downloads_url:
                 key: downloads_url
                 name: RepoDownloadsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["downloads_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1543,6 +1748,7 @@ fields:
               events_url:
                 key: events_url
                 name: RepoEventsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["events_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1551,6 +1757,7 @@ fields:
               forks_url:
                 key: forks_url
                 name: RepoForksUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["forks_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1559,6 +1766,7 @@ fields:
               git_commits_url:
                 key: git_commits_url
                 name: RepoGitCommitsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["git_commits_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1567,6 +1775,7 @@ fields:
               git_refs_url:
                 key: git_refs_url
                 name: RepoGitRefsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["git_refs_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1575,6 +1784,7 @@ fields:
               git_tags_url:
                 key: git_tags_url
                 name: RepoGitTagsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["git_tags_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1583,6 +1793,7 @@ fields:
               git_url:
                 key: git_url
                 name: RepoGitUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["git_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1591,6 +1802,7 @@ fields:
               hooks_url:
                 key: hooks_url
                 name: RepoHooksUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["hooks_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1599,6 +1811,7 @@ fields:
               html_url:
                 key: html_url
                 name: RepoHtmlUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["html_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1607,6 +1820,7 @@ fields:
               issue_comment_url:
                 key: issue_comment_url
                 name: RepoIssueCommentUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["issue_comment_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1615,6 +1829,7 @@ fields:
               issue_events_url:
                 key: issue_events_url
                 name: RepoIssueEventsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["issue_events_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1623,6 +1838,7 @@ fields:
               issues_url:
                 key: issues_url
                 name: RepoIssuesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["issues_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1631,6 +1847,7 @@ fields:
               keys_url:
                 key: keys_url
                 name: RepoKeysUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["keys_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1639,6 +1856,7 @@ fields:
               labels_url:
                 key: labels_url
                 name: RepoLabelsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["labels_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1647,6 +1865,7 @@ fields:
               languages_url:
                 key: languages_url
                 name: RepoLanguagesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["languages_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1655,6 +1874,7 @@ fields:
               merges_url:
                 key: merges_url
                 name: RepoMergesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["merges_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1663,6 +1883,7 @@ fields:
               milestones_url:
                 key: milestones_url
                 name: RepoMilestonesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["milestones_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1671,6 +1892,7 @@ fields:
               notifications_url:
                 key: notifications_url
                 name: RepoNotificationsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["notifications_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1679,6 +1901,7 @@ fields:
               pulls_url:
                 key: pulls_url
                 name: RepoPullsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["pulls_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1687,6 +1910,7 @@ fields:
               releases_url:
                 key: releases_url
                 name: RepoReleasesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["releases_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1695,6 +1919,7 @@ fields:
               stargazers_url:
                 key: stargazers_url
                 name: RepoStargazersUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["stargazers_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1703,6 +1928,7 @@ fields:
               statuses_url:
                 key: statuses_url
                 name: RepoStatusesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["statuses_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1711,6 +1937,7 @@ fields:
               subscribers_url:
                 key: subscribers_url
                 name: RepoSubscribersUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["subscribers_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1719,6 +1946,7 @@ fields:
               subscription_url:
                 key: subscription_url
                 name: RepoSubscriptionUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["subscription_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1727,6 +1955,7 @@ fields:
               svn_url:
                 key: svn_url
                 name: RepoSvnUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["svn_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1735,6 +1964,7 @@ fields:
               tags_url:
                 key: tags_url
                 name: RepoTagsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["tags_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1743,6 +1973,7 @@ fields:
               teams_url:
                 key: teams_url
                 name: RepoTeamsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["teams_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1751,6 +1982,7 @@ fields:
               trees_url:
                 key: trees_url
                 name: RepoTreesUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["trees_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1759,6 +1991,7 @@ fields:
               url:
                 key: url
                 name: RepoUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1767,6 +2000,7 @@ fields:
               created_at:
                 key: created_at
                 name: RepoCreatedAt
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["created_at"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -1775,6 +2009,7 @@ fields:
               pushed_at:
                 key: pushed_at
                 name: RepoPushedAt
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["pushed_at"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -1783,6 +2018,7 @@ fields:
               updated_at:
                 key: updated_at
                 name: RepoUpdatedAt
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["updated_at"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -1791,18 +2027,21 @@ fields:
               homepage:
                 key: homepage
                 name: RepoHomepage
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["homepage"]'
                 suggestions: {  }
                 sorting: 0
               license:
                 key: license
                 name: RepoLicense
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["license"]'
                 suggestions: {  }
                 sorting: 0
               mirror_url:
                 key: mirror_url
                 name: RepoMirrorUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["mirror_url"]'
                 suggestions: {  }
                 sorting: 0
@@ -1811,11 +2050,13 @@ fields:
             name: User
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
             inputKey: '["pull_request"]["head"]["user"]'
+            suggestions: {  }
             sorting: 16
             fields:
               id:
                 key: id
                 name: UserId
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["id"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -1824,6 +2065,7 @@ fields:
               gravatar_id:
                 key: gravatar_id
                 name: UserGravatarId
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["gravatar_id"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1831,6 +2073,7 @@ fields:
               login:
                 key: login
                 name: UserLogin
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["login"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1838,6 +2081,7 @@ fields:
               type:
                 key: type
                 name: UserType
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["type"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -1845,6 +2089,7 @@ fields:
               site_admin:
                 key: site_admin
                 name: UserSiteAdmin
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["site_admin"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -1852,6 +2097,7 @@ fields:
               avatar_url:
                 key: avatar_url
                 name: UserAvatarUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["avatar_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1860,6 +2106,7 @@ fields:
               events_url:
                 key: events_url
                 name: UserEventsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["events_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1868,6 +2115,7 @@ fields:
               followers_url:
                 key: followers_url
                 name: UserFollowersUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["followers_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1876,6 +2124,7 @@ fields:
               following_url:
                 key: following_url
                 name: UserFollowingUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["following_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1884,6 +2133,7 @@ fields:
               gists_url:
                 key: gists_url
                 name: UserGistsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["gists_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1892,6 +2142,7 @@ fields:
               html_url:
                 key: html_url
                 name: UserHtmlUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["html_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1900,6 +2151,7 @@ fields:
               organizations_url:
                 key: organizations_url
                 name: UserOrganizationsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["organizations_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1908,6 +2160,7 @@ fields:
               received_events_url:
                 key: received_events_url
                 name: UserReceivedEventsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["received_events_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1916,6 +2169,7 @@ fields:
               repos_url:
                 key: repos_url
                 name: UserReposUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["repos_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1924,6 +2178,7 @@ fields:
               starred_url:
                 key: starred_url
                 name: UserStarredUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["starred_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1932,6 +2187,7 @@ fields:
               subscriptions_url:
                 key: subscriptions_url
                 name: UserSubscriptionsUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["subscriptions_url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1940,6 +2196,7 @@ fields:
               url:
                 key: url
                 name: UserUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["url"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1950,6 +2207,7 @@ fields:
         name: Links
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["_links"]'
+        suggestions: {  }
         sorting: 16
         fields:
           comments:
@@ -1957,11 +2215,13 @@ fields:
             name: Comments
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["comments"]'
+            suggestions: {  }
             sorting: 16
             fields:
               href:
                 key: href
                 name: CommentsHref
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Comments
                 inputKey: '["pull_request"]["_links"]["comments"]["href"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1972,11 +2232,13 @@ fields:
             name: Commits
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["commits"]'
+            suggestions: {  }
             sorting: 16
             fields:
               href:
                 key: href
                 name: CommitsHref
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Commits
                 inputKey: '["pull_request"]["_links"]["commits"]["href"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -1987,11 +2249,13 @@ fields:
             name: Html
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["html"]'
+            suggestions: {  }
             sorting: 16
             fields:
               href:
                 key: href
                 name: HtmlHref
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Html
                 inputKey: '["pull_request"]["_links"]["html"]["href"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2002,11 +2266,13 @@ fields:
             name: Issue
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["issue"]'
+            suggestions: {  }
             sorting: 16
             fields:
               href:
                 key: href
                 name: IssueHref
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Issue
                 inputKey: '["pull_request"]["_links"]["issue"]["href"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2017,11 +2283,13 @@ fields:
             name: ReviewComment
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["review_comment"]'
+            suggestions: {  }
             sorting: 16
             fields:
               href:
                 key: href
                 name: ReviewCommentHref
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\ReviewComment
                 inputKey: '["pull_request"]["_links"]["review_comment"]["href"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2032,11 +2300,13 @@ fields:
             name: ReviewComments
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["review_comments"]'
+            suggestions: {  }
             sorting: 16
             fields:
               href:
                 key: href
                 name: ReviewCommentsHref
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\ReviewComments
                 inputKey: '["pull_request"]["_links"]["review_comments"]["href"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2047,11 +2317,13 @@ fields:
             name: Self
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["self"]'
+            suggestions: {  }
             sorting: 16
             fields:
               href:
                 key: href
                 name: SelfHref
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Self
                 inputKey: '["pull_request"]["_links"]["self"]["href"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2062,11 +2334,13 @@ fields:
             name: Statuses
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["statuses"]'
+            suggestions: {  }
             sorting: 16
             fields:
               href:
                 key: href
                 name: StatusesHref
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Statuses
                 inputKey: '["pull_request"]["_links"]["statuses"]["href"]'
                 suggestions:
                   - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2077,17 +2351,21 @@ fields:
         name: RequestedReviewers
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["requested_reviewers"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleCollection
         sorting: 16
       user:
         key: User
         name: User
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["user"]'
+        suggestions: {  }
         sorting: 16
         fields:
           id:
             key: id
             name: UserId
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["id"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -2096,6 +2374,7 @@ fields:
           gravatar_id:
             key: gravatar_id
             name: UserGravatarId
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["gravatar_id"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2103,6 +2382,7 @@ fields:
           login:
             key: login
             name: UserLogin
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["login"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2110,6 +2390,7 @@ fields:
           type:
             key: type
             name: UserType
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["type"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2117,6 +2398,7 @@ fields:
           site_admin:
             key: site_admin
             name: UserSiteAdmin
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["site_admin"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -2124,6 +2406,7 @@ fields:
           avatar_url:
             key: avatar_url
             name: UserAvatarUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["avatar_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2132,6 +2415,7 @@ fields:
           events_url:
             key: events_url
             name: UserEventsUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["events_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2140,6 +2424,7 @@ fields:
           followers_url:
             key: followers_url
             name: UserFollowersUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["followers_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2148,6 +2433,7 @@ fields:
           following_url:
             key: following_url
             name: UserFollowingUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["following_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2156,6 +2442,7 @@ fields:
           gists_url:
             key: gists_url
             name: UserGistsUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["gists_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2164,6 +2451,7 @@ fields:
           html_url:
             key: html_url
             name: UserHtmlUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["html_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2172,6 +2460,7 @@ fields:
           organizations_url:
             key: organizations_url
             name: UserOrganizationsUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["organizations_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2180,6 +2469,7 @@ fields:
           received_events_url:
             key: received_events_url
             name: UserReceivedEventsUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["received_events_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2188,6 +2478,7 @@ fields:
           repos_url:
             key: repos_url
             name: UserReposUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["repos_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2196,6 +2487,7 @@ fields:
           starred_url:
             key: starred_url
             name: UserStarredUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["starred_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2204,6 +2496,7 @@ fields:
           subscriptions_url:
             key: subscriptions_url
             name: UserSubscriptionsUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["subscriptions_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2212,6 +2505,7 @@ fields:
           url:
             key: url
             name: UserUrl
+            namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2220,6 +2514,7 @@ fields:
       comments_url:
         key: comments_url
         name: PullRequestCommentsUrl
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["comments_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2228,6 +2523,7 @@ fields:
       commits_url:
         key: commits_url
         name: PullRequestCommitsUrl
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["commits_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2236,6 +2532,7 @@ fields:
       diff_url:
         key: diff_url
         name: PullRequestDiffUrl
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["diff_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2244,6 +2541,7 @@ fields:
       html_url:
         key: html_url
         name: PullRequestHtmlUrl
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["html_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2252,6 +2550,7 @@ fields:
       issue_url:
         key: issue_url
         name: PullRequestIssueUrl
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["issue_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2260,6 +2559,7 @@ fields:
       patch_url:
         key: patch_url
         name: PullRequestPatchUrl
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["patch_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2268,6 +2568,7 @@ fields:
       review_comment_url:
         key: review_comment_url
         name: PullRequestReviewCommentUrl
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["review_comment_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2276,6 +2577,7 @@ fields:
       review_comments_url:
         key: review_comments_url
         name: PullRequestReviewCommentsUrl
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["review_comments_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2284,6 +2586,7 @@ fields:
       statuses_url:
         key: statuses_url
         name: PullRequestStatusesUrl
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["statuses_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2292,6 +2595,7 @@ fields:
       url:
         key: url
         name: PullRequestUrl
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2300,6 +2604,7 @@ fields:
       created_at:
         key: created_at
         name: PullRequestCreatedAt
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["created_at"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -2308,6 +2613,7 @@ fields:
       updated_at:
         key: updated_at
         name: PullRequestUpdatedAt
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["updated_at"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -2316,48 +2622,56 @@ fields:
       assignee:
         key: assignee
         name: PullRequestAssignee
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["assignee"]'
         suggestions: {  }
         sorting: 0
       closed_at:
         key: closed_at
         name: PullRequestClosedAt
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["closed_at"]'
         suggestions: {  }
         sorting: 0
       merge_commit_sha:
         key: merge_commit_sha
         name: PullRequestMergeCommitSha
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["merge_commit_sha"]'
         suggestions: {  }
         sorting: 0
       mergeable:
         key: mergeable
         name: PullRequestMergeable
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["mergeable"]'
         suggestions: {  }
         sorting: 0
       merged_at:
         key: merged_at
         name: PullRequestMergedAt
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["merged_at"]'
         suggestions: {  }
         sorting: 0
       merged_by:
         key: merged_by
         name: PullRequestMergedBy
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["merged_by"]'
         suggestions: {  }
         sorting: 0
       milestone:
         key: milestone
         name: PullRequestMilestone
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["milestone"]'
         suggestions: {  }
         sorting: 0
       rebaseable:
         key: rebaseable
         name: PullRequestRebaseable
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["rebaseable"]'
         suggestions: {  }
         sorting: 0
@@ -2366,11 +2680,13 @@ fields:
     name: Repository
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["repository"]'
+    suggestions: {  }
     sorting: 16
     fields:
       id:
         key: id
         name: RepositoryId
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["id"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -2380,6 +2696,7 @@ fields:
       default_branch:
         key: default_branch
         name: RepositoryDefaultBranch
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["default_branch"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2387,6 +2704,7 @@ fields:
       description:
         key: description
         name: RepositoryDescription
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["description"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2394,6 +2712,7 @@ fields:
       forks:
         key: forks
         name: RepositoryForks
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["forks"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -2401,6 +2720,7 @@ fields:
       forks_count:
         key: forks_count
         name: RepositoryForksCount
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["forks_count"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -2408,6 +2728,7 @@ fields:
       full_name:
         key: full_name
         name: RepositoryFullName
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["full_name"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2415,6 +2736,7 @@ fields:
       language:
         key: language
         name: RepositoryLanguage
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["language"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2422,6 +2744,7 @@ fields:
       name:
         key: name
         name: RepositoryName
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["name"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2429,6 +2752,7 @@ fields:
       open_issues:
         key: open_issues
         name: RepositoryOpenIssues
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["open_issues"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -2436,6 +2760,7 @@ fields:
       open_issues_count:
         key: open_issues_count
         name: RepositoryOpenIssuesCount
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["open_issues_count"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -2443,6 +2768,7 @@ fields:
       size:
         key: size
         name: RepositorySize
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["size"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -2450,6 +2776,7 @@ fields:
       ssh_url:
         key: ssh_url
         name: RepositorySshUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["ssh_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2457,6 +2784,7 @@ fields:
       stargazers_count:
         key: stargazers_count
         name: RepositoryStargazersCount
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["stargazers_count"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -2464,6 +2792,7 @@ fields:
       watchers:
         key: watchers
         name: RepositoryWatchers
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["watchers"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -2471,6 +2800,7 @@ fields:
       watchers_count:
         key: watchers_count
         name: RepositoryWatchersCount
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["watchers_count"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -2478,6 +2808,7 @@ fields:
       archived:
         key: archived
         name: RepositoryArchived
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["archived"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -2485,6 +2816,7 @@ fields:
       fork:
         key: fork
         name: RepositoryFork
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["fork"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -2492,6 +2824,7 @@ fields:
       has_downloads:
         key: has_downloads
         name: RepositoryHasDownloads
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["has_downloads"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -2499,6 +2832,7 @@ fields:
       has_issues:
         key: has_issues
         name: RepositoryHasIssues
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["has_issues"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -2506,6 +2840,7 @@ fields:
       has_pages:
         key: has_pages
         name: RepositoryHasPages
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["has_pages"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -2513,6 +2848,7 @@ fields:
       has_projects:
         key: has_projects
         name: RepositoryHasProjects
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["has_projects"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -2520,6 +2856,7 @@ fields:
       has_wiki:
         key: has_wiki
         name: RepositoryHasWiki
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["has_wiki"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -2527,6 +2864,7 @@ fields:
       private:
         key: private
         name: RepositoryPrivate
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["private"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -2536,11 +2874,13 @@ fields:
         name: Owner
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["owner"]'
+        suggestions: {  }
         sorting: 16
         fields:
           id:
             key: id
             name: OwnerId
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["id"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -2549,6 +2889,7 @@ fields:
           gravatar_id:
             key: gravatar_id
             name: OwnerGravatarId
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["gravatar_id"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2556,6 +2897,7 @@ fields:
           login:
             key: login
             name: OwnerLogin
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["login"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2563,6 +2905,7 @@ fields:
           type:
             key: type
             name: OwnerType
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["type"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -2570,6 +2913,7 @@ fields:
           site_admin:
             key: site_admin
             name: OwnerSiteAdmin
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["site_admin"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -2577,6 +2921,7 @@ fields:
           avatar_url:
             key: avatar_url
             name: OwnerAvatarUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["avatar_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2585,6 +2930,7 @@ fields:
           events_url:
             key: events_url
             name: OwnerEventsUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["events_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2593,6 +2939,7 @@ fields:
           followers_url:
             key: followers_url
             name: OwnerFollowersUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["followers_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2601,6 +2948,7 @@ fields:
           following_url:
             key: following_url
             name: OwnerFollowingUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["following_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2609,6 +2957,7 @@ fields:
           gists_url:
             key: gists_url
             name: OwnerGistsUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["gists_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2617,6 +2966,7 @@ fields:
           html_url:
             key: html_url
             name: OwnerHtmlUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["html_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2625,6 +2975,7 @@ fields:
           organizations_url:
             key: organizations_url
             name: OwnerOrganizationsUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["organizations_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2633,6 +2984,7 @@ fields:
           received_events_url:
             key: received_events_url
             name: OwnerReceivedEventsUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["received_events_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2641,6 +2993,7 @@ fields:
           repos_url:
             key: repos_url
             name: OwnerReposUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["repos_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2649,6 +3002,7 @@ fields:
           starred_url:
             key: starred_url
             name: OwnerStarredUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["starred_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2657,6 +3011,7 @@ fields:
           subscriptions_url:
             key: subscriptions_url
             name: OwnerSubscriptionsUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["subscriptions_url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2665,6 +3020,7 @@ fields:
           url:
             key: url
             name: OwnerUrl
+            namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["url"]'
             suggestions:
               - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2673,6 +3029,7 @@ fields:
       archive_url:
         key: archive_url
         name: RepositoryArchiveUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["archive_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2681,6 +3038,7 @@ fields:
       assignees_url:
         key: assignees_url
         name: RepositoryAssigneesUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["assignees_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2689,6 +3047,7 @@ fields:
       blobs_url:
         key: blobs_url
         name: RepositoryBlobsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["blobs_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2697,6 +3056,7 @@ fields:
       branches_url:
         key: branches_url
         name: RepositoryBranchesUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["branches_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2705,6 +3065,7 @@ fields:
       clone_url:
         key: clone_url
         name: RepositoryCloneUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["clone_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2713,6 +3074,7 @@ fields:
       collaborators_url:
         key: collaborators_url
         name: RepositoryCollaboratorsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["collaborators_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2721,6 +3083,7 @@ fields:
       comments_url:
         key: comments_url
         name: RepositoryCommentsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["comments_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2729,6 +3092,7 @@ fields:
       commits_url:
         key: commits_url
         name: RepositoryCommitsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["commits_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2737,6 +3101,7 @@ fields:
       compare_url:
         key: compare_url
         name: RepositoryCompareUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["compare_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2745,6 +3110,7 @@ fields:
       contents_url:
         key: contents_url
         name: RepositoryContentsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["contents_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2753,6 +3119,7 @@ fields:
       contributors_url:
         key: contributors_url
         name: RepositoryContributorsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["contributors_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2761,6 +3128,7 @@ fields:
       deployments_url:
         key: deployments_url
         name: RepositoryDeploymentsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["deployments_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2769,6 +3137,7 @@ fields:
       downloads_url:
         key: downloads_url
         name: RepositoryDownloadsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["downloads_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2777,6 +3146,7 @@ fields:
       events_url:
         key: events_url
         name: RepositoryEventsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["events_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2785,6 +3155,7 @@ fields:
       forks_url:
         key: forks_url
         name: RepositoryForksUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["forks_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2793,6 +3164,7 @@ fields:
       git_commits_url:
         key: git_commits_url
         name: RepositoryGitCommitsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["git_commits_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2801,6 +3173,7 @@ fields:
       git_refs_url:
         key: git_refs_url
         name: RepositoryGitRefsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["git_refs_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2809,6 +3182,7 @@ fields:
       git_tags_url:
         key: git_tags_url
         name: RepositoryGitTagsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["git_tags_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2817,6 +3191,7 @@ fields:
       git_url:
         key: git_url
         name: RepositoryGitUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["git_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2825,6 +3200,7 @@ fields:
       hooks_url:
         key: hooks_url
         name: RepositoryHooksUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["hooks_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2833,6 +3209,7 @@ fields:
       html_url:
         key: html_url
         name: RepositoryHtmlUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["html_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2841,6 +3218,7 @@ fields:
       issue_comment_url:
         key: issue_comment_url
         name: RepositoryIssueCommentUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["issue_comment_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2849,6 +3227,7 @@ fields:
       issue_events_url:
         key: issue_events_url
         name: RepositoryIssueEventsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["issue_events_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2857,6 +3236,7 @@ fields:
       issues_url:
         key: issues_url
         name: RepositoryIssuesUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["issues_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2865,6 +3245,7 @@ fields:
       keys_url:
         key: keys_url
         name: RepositoryKeysUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["keys_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2873,6 +3254,7 @@ fields:
       labels_url:
         key: labels_url
         name: RepositoryLabelsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["labels_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2881,6 +3263,7 @@ fields:
       languages_url:
         key: languages_url
         name: RepositoryLanguagesUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["languages_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2889,6 +3272,7 @@ fields:
       merges_url:
         key: merges_url
         name: RepositoryMergesUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["merges_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2897,6 +3281,7 @@ fields:
       milestones_url:
         key: milestones_url
         name: RepositoryMilestonesUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["milestones_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2905,6 +3290,7 @@ fields:
       notifications_url:
         key: notifications_url
         name: RepositoryNotificationsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["notifications_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2913,6 +3299,7 @@ fields:
       pulls_url:
         key: pulls_url
         name: RepositoryPullsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["pulls_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2921,6 +3308,7 @@ fields:
       releases_url:
         key: releases_url
         name: RepositoryReleasesUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["releases_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2929,6 +3317,7 @@ fields:
       stargazers_url:
         key: stargazers_url
         name: RepositoryStargazersUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["stargazers_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2937,6 +3326,7 @@ fields:
       statuses_url:
         key: statuses_url
         name: RepositoryStatusesUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["statuses_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2945,6 +3335,7 @@ fields:
       subscribers_url:
         key: subscribers_url
         name: RepositorySubscribersUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["subscribers_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2953,6 +3344,7 @@ fields:
       subscription_url:
         key: subscription_url
         name: RepositorySubscriptionUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["subscription_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2961,6 +3353,7 @@ fields:
       svn_url:
         key: svn_url
         name: RepositorySvnUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["svn_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2969,6 +3362,7 @@ fields:
       tags_url:
         key: tags_url
         name: RepositoryTagsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["tags_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2977,6 +3371,7 @@ fields:
       teams_url:
         key: teams_url
         name: RepositoryTeamsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["teams_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2985,6 +3380,7 @@ fields:
       trees_url:
         key: trees_url
         name: RepositoryTreesUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["trees_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -2993,6 +3389,7 @@ fields:
       url:
         key: url
         name: RepositoryUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3001,6 +3398,7 @@ fields:
       created_at:
         key: created_at
         name: RepositoryCreatedAt
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["created_at"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -3009,6 +3407,7 @@ fields:
       pushed_at:
         key: pushed_at
         name: RepositoryPushedAt
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["pushed_at"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -3017,6 +3416,7 @@ fields:
       updated_at:
         key: updated_at
         name: RepositoryUpdatedAt
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["updated_at"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -3025,18 +3425,21 @@ fields:
       homepage:
         key: homepage
         name: RepositoryHomepage
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["homepage"]'
         suggestions: {  }
         sorting: 0
       license:
         key: license
         name: RepositoryLicense
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["license"]'
         suggestions: {  }
         sorting: 0
       mirror_url:
         key: mirror_url
         name: RepositoryMirrorUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["mirror_url"]'
         suggestions: {  }
         sorting: 0
@@ -3045,11 +3448,13 @@ fields:
     name: Sender
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["sender"]'
+    suggestions: {  }
     sorting: 16
     fields:
       id:
         key: id
         name: SenderId
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["id"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -3058,6 +3463,7 @@ fields:
       gravatar_id:
         key: gravatar_id
         name: SenderGravatarId
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["gravatar_id"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -3065,6 +3471,7 @@ fields:
       login:
         key: login
         name: SenderLogin
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["login"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -3072,6 +3479,7 @@ fields:
       type:
         key: type
         name: SenderType
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["type"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -3079,6 +3487,7 @@ fields:
       site_admin:
         key: site_admin
         name: SenderSiteAdmin
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["site_admin"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
@@ -3086,6 +3495,7 @@ fields:
       avatar_url:
         key: avatar_url
         name: SenderAvatarUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["avatar_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3094,6 +3504,7 @@ fields:
       events_url:
         key: events_url
         name: SenderEventsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["events_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3102,6 +3513,7 @@ fields:
       followers_url:
         key: followers_url
         name: SenderFollowersUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["followers_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3110,6 +3522,7 @@ fields:
       following_url:
         key: following_url
         name: SenderFollowingUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["following_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3118,6 +3531,7 @@ fields:
       gists_url:
         key: gists_url
         name: SenderGistsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["gists_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3126,6 +3540,7 @@ fields:
       html_url:
         key: html_url
         name: SenderHtmlUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["html_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3134,6 +3549,7 @@ fields:
       organizations_url:
         key: organizations_url
         name: SenderOrganizationsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["organizations_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3142,6 +3558,7 @@ fields:
       received_events_url:
         key: received_events_url
         name: SenderReceivedEventsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["received_events_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3150,6 +3567,7 @@ fields:
       repos_url:
         key: repos_url
         name: SenderReposUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["repos_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3158,6 +3576,7 @@ fields:
       starred_url:
         key: starred_url
         name: SenderStarredUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["starred_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3166,6 +3585,7 @@ fields:
       subscriptions_url:
         key: subscriptions_url
         name: SenderSubscriptionsUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["subscriptions_url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url
@@ -3174,6 +3594,7 @@ fields:
       url:
         key: url
         name: SenderUrl
+        namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["url"]'
         suggestions:
           - App\Service\JsonDetector\ValueObject\Generix\Url

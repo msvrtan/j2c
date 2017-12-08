@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\UseCase;
 
 use App\File\FileFactory;
+use App\Service\Config;
 use App\Service\JsonDetector;
 use NullDevelopment\Skeleton\Php\Structure\ClassName;
 use Symfony\Component\Filesystem\Filesystem;
@@ -33,7 +34,9 @@ class DetectSingleJsonFileTest extends SfTestCase
     {
         $data = $this->loadJsonFile($inputFileName);
 
-        $config = $this->jsonDecoder->detect($data, $baseName, $namespace);
+        $config = new Config($baseName, $namespace, []);
+
+        $config = $this->jsonDecoder->detect($config, $data);
 
         $yaml = Yaml::dump($config->toArray(), 15, 2);
 
@@ -54,6 +57,11 @@ class DetectSingleJsonFileTest extends SfTestCase
             ['test2.json', 'User', 'MyVendor'],
             ['test3.json', 'User', 'MyVendor'],
             ['test4.json', 'PullRequestHook', 'GitHub\\WebHook'],
+            ['github-branch.json', 'Branch', 'GitHub'],
+            ['github-branches.json', 'Branches', 'GitHub\\FFF'],
+            ['github-commit-status.json', 'CommitStatus', 'GitHub'],
+            ['github-commit.json', 'Commit', 'GitHub'],
+            ['github-repo.json', 'Repo', 'GitHub'],
         ];
     }
 

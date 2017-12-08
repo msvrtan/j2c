@@ -1,0 +1,206 @@
+key: Commit
+name: Commit
+namespace: GitHub
+inputKey: ''
+sorting: 16
+fields:
+  message:
+    key: message
+    name: CommitMessage
+    namespace: GitHub\Commit
+    inputKey: '["message"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  sha:
+    key: sha
+    name: CommitSha
+    namespace: GitHub\Commit
+    inputKey: '["sha"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  author:
+    key: Author
+    name: Author
+    namespace: GitHub\Commit
+    inputKey: '["author"]'
+    suggestions: {  }
+    sorting: 16
+    fields:
+      email:
+        key: email
+        name: AuthorEmail
+        namespace: GitHub\Commit\Author
+        inputKey: '["author"]["email"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\EmailAddress
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 50
+      name:
+        key: name
+        name: AuthorName
+        namespace: GitHub\Commit\Author
+        inputKey: '["author"]["name"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      date:
+        key: date
+        name: AuthorDate
+        namespace: GitHub\Commit\Author
+        inputKey: '["author"]["date"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 5
+  committer:
+    key: Committer
+    name: Committer
+    namespace: GitHub\Commit
+    inputKey: '["committer"]'
+    suggestions: {  }
+    sorting: 16
+    fields:
+      email:
+        key: email
+        name: CommitterEmail
+        namespace: GitHub\Commit\Committer
+        inputKey: '["committer"]["email"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\EmailAddress
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 50
+      name:
+        key: name
+        name: CommitterName
+        namespace: GitHub\Commit\Committer
+        inputKey: '["committer"]["name"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      date:
+        key: date
+        name: CommitterDate
+        namespace: GitHub\Commit\Committer
+        inputKey: '["committer"]["date"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 5
+  parents:
+    key: Parents
+    name: Parents
+    namespace: GitHub\Commit
+    inputKey: '["parents"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleCollection
+    sorting: 16
+    fields:
+      sha:
+        key: sha
+        name: ParentsSha
+        namespace: GitHub\Commit\Parents
+        inputKey: '["parents"]["sha"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      html_url:
+        key: html_url
+        name: ParentsHtmlUrl
+        namespace: GitHub\Commit\Parents
+        inputKey: '["parents"]["html_url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+      url:
+        key: url
+        name: ParentsUrl
+        namespace: GitHub\Commit\Parents
+        inputKey: '["parents"]["url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+  tree:
+    key: Tree
+    name: Tree
+    namespace: GitHub\Commit
+    inputKey: '["tree"]'
+    suggestions: {  }
+    sorting: 16
+    fields:
+      sha:
+        key: sha
+        name: TreeSha
+        namespace: GitHub\Commit\Tree
+        inputKey: '["tree"]["sha"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      url:
+        key: url
+        name: TreeUrl
+        namespace: GitHub\Commit\Tree
+        inputKey: '["tree"]["url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10
+  verification:
+    key: Verification
+    name: Verification
+    namespace: GitHub\Commit
+    inputKey: '["verification"]'
+    suggestions: {  }
+    sorting: 16
+    fields:
+      reason:
+        key: reason
+        name: VerificationReason
+        namespace: GitHub\Commit\Verification
+        inputKey: '["verification"]["reason"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      verified:
+        key: verified
+        name: VerificationVerified
+        namespace: GitHub\Commit\Verification
+        inputKey: '["verification"]["verified"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      payload:
+        key: payload
+        name: VerificationPayload
+        namespace: GitHub\Commit\Verification
+        inputKey: '["verification"]["payload"]'
+        suggestions: {  }
+        sorting: 0
+      signature:
+        key: signature
+        name: VerificationSignature
+        namespace: GitHub\Commit\Verification
+        inputKey: '["verification"]["signature"]'
+        suggestions: {  }
+        sorting: 0
+  html_url:
+    key: html_url
+    name: CommitHtmlUrl
+    namespace: GitHub\Commit
+    inputKey: '["html_url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10
+  url:
+    key: url
+    name: CommitUrl
+    namespace: GitHub\Commit
+    inputKey: '["url"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Generix\Url
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 10

@@ -51,8 +51,8 @@ class CreateFromDefinitionsTest extends SfTestCase
                     $namespaceName = $result->getName();
                     foreach (array_keys($result->getClasses()) as $className) {
                         $this->writeFile(
-                        new ClassName($className, $namespaceName),
-                        $result->__toString()
+                            new ClassName($className, $namespaceName),
+                            $result->__toString()
                         );
                     }
                 }

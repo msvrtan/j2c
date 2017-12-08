@@ -34,7 +34,7 @@ class SerializationMiddleware implements PartialCodeGeneratorMiddleware
                         ->setTypeHint($property->getStructureName()->getName());
                 }
             } else {
-                $serializeList   =[];
+                $serializeList   = [];
                 $deserializeList = [];
 
                 $serializeMethod = $class->addMethod('serialize')

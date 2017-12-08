@@ -26,7 +26,7 @@ class SpecGetterMiddleware implements PartialCodeGeneratorMiddleware
                     $property->suggestValue()
                 );
 
-                $getterMethod= $class->addMethod('it_exposes_'.$property->getName())->addBody($body);
+                $getterMethod = $class->addMethod('it_exposes_'.$property->getName())->addBody($body);
 
                 if (false === in_array($property->getStructureFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
                     $namespace->addUse($property->getStructureFullName());
