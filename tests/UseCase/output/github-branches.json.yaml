@@ -1,0 +1,39 @@
+key: Branches
+name: Branches
+namespace: GitHub\FFF
+inputKey: ''
+sorting: 16
+fields:
+  name:
+    key: name
+    name: BranchesName
+    namespace: GitHub\FFF\Branches
+    inputKey: '["name"]'
+    suggestions:
+      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+    sorting: 30
+  commit:
+    key: Commit
+    name: Commit
+    namespace: GitHub\FFF\Branches
+    inputKey: '["commit"]'
+    suggestions: {  }
+    sorting: 16
+    fields:
+      sha:
+        key: sha
+        name: CommitSha
+        namespace: GitHub\FFF\Branches\Commit
+        inputKey: '["commit"]["sha"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 30
+      url:
+        key: url
+        name: CommitUrl
+        namespace: GitHub\FFF\Branches\Commit
+        inputKey: '["commit"]["url"]'
+        suggestions:
+          - App\Service\JsonDetector\ValueObject\Generix\Url
+          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+        sorting: 10

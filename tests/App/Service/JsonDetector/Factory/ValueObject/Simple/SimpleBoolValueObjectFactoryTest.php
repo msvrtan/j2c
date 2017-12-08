@@ -16,11 +16,11 @@ class SimpleBoolValueObjectFactoryTest extends TestCase
 {
     use MockeryPHPUnitIntegration;
     /** @var SimpleBoolValueObjectFactory */
-    private $simpleBoolValueObjectFactory;
+    private $sut;
 
     public function setUp()
     {
-        $this->simpleBoolValueObjectFactory = new SimpleBoolValueObjectFactory();
+        $this->sut = new SimpleBoolValueObjectFactory();
     }
 
     public function testIsSatisfiedBy()

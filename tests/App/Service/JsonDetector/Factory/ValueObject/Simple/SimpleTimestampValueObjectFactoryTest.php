@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \App\Service\JsonDetector\Factory\ValueObject\Simple\SimpleTimestampValueObjectFactory
- * @group todo
+ * @group  todo
  */
 class SimpleTimestampValueObjectFactoryTest extends TestCase
 {

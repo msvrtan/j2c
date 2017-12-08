@@ -40,8 +40,9 @@ class TestSerializationMiddleware implements PartialCodeGeneratorMiddleware
             } else {
                 $class->addMethod('testSerializeAndDeserialize')
                     ->addBody('$serialized = $this->sut->serialize();')
-                    ->addBody('self::assertEquals($this->sut, '.$definition->getClassName().'::deserialize($serialized));')
-                ;
+                    ->addBody(
+                        'self::assertEquals($this->sut, '.$definition->getClassName().'::deserialize($serialized));'
+                    );
             }
         }
 

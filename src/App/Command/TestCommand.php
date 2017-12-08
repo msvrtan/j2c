@@ -24,7 +24,7 @@ class TestCommand extends ContainerAwareCommand
         $this
             ->setDescription('Test')
             ->addArgument('file', InputArgument::REQUIRED, 'File to load')
-        ->addArgument('name', InputArgument::REQUIRED, 'Base name');
+            ->addArgument('name', InputArgument::REQUIRED, 'Base name');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

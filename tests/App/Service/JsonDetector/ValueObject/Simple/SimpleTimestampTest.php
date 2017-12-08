@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \App\Service\JsonDetector\ValueObject\Simple\SimpleTimestamp
- * @group todo
+ * @group  todo
  */
 class SimpleTimestampTest extends TestCase
 {

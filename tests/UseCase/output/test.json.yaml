@@ -7,6 +7,7 @@ fields:
   id:
     key: id
     name: UserId
+    namespace: MyVendor\User
     inputKey: '["id"]'
     suggestions:
       - App\Service\JsonDetector\ValueObject\Id\IntegerId
@@ -15,6 +16,7 @@ fields:
   full_name:
     key: full_name
     name: UserFullName
+    namespace: MyVendor\User
     inputKey: '["full_name"]'
     suggestions:
       - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -22,6 +24,7 @@ fields:
   name:
     key: name
     name: UserName
+    namespace: MyVendor\User
     inputKey: '["name"]'
     suggestions:
       - App\Service\JsonDetector\ValueObject\Simple\SimpleString
@@ -29,6 +32,7 @@ fields:
   created_at:
     key: created_at
     name: UserCreatedAt
+    namespace: MyVendor\User
     inputKey: '["created_at"]'
     suggestions:
       - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime

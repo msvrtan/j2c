@@ -25,17 +25,20 @@ class JsonDetector
         $this->factories = $factories;
     }
 
-    public function detect(array $data, string $baseName, string $namespace): Config
+    public function detect(Config $config, array $data): Config
     {
-        $config = new Config($baseName, $namespace, []);
-
         foreach ($data as $key => $value) {
-            $config->addKey($key);
-
-            if (is_array($value)) {
-                $subConfig = $this->detect($value, $key, $namespace.'\\'.ucfirst($config->getBaseName()));
-                $config->addConfig($key, $subConfig);
+            if (true === is_int($key)) {
+                return $this->detect($config, $value);
             } else {
+                $config->addKey($key);
+
+                if (is_array($value)) {
+                    $subConfig = new Config($key, $config->getNamespace().'\\'.ucfirst($config->getBaseName()), []);
+
+                    $this->detect($subConfig, $value);
+                    $config->addConfig($key, $subConfig);
+                }
                 foreach ($this->factories as $factory) {
                     if (true === $factory->isSatisfiedBy($key, $value)) {
                         $config->addSuggestion($key, $factory->create($key));

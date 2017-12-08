@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
- * @group todo
+ * @group  todo
  */
 class SimpleDateTimeTest extends TestCase
 {
