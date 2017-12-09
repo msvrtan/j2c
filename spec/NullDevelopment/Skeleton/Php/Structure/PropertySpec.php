@@ -7,6 +7,7 @@ namespace spec\NullDevelopment\Skeleton\Php\Structure;
 use NullDevelopment\Skeleton\Php\Structure\ClassName;
 use NullDevelopment\Skeleton\Php\Structure\Property;
 use NullDevelopment\Skeleton\Php\Structure\StructureName;
+use NullDevelopment\Skeleton\Php\Structure\Variable;
 use NullDevelopment\Skeleton\Php\Structure\Visibility;
 use PhpSpec\ObjectBehavior;
 
@@ -29,6 +30,7 @@ class PropertySpec extends ObjectBehavior
     public function it_is_initializable()
     {
         $this->shouldHaveType(Property::class);
+        $this->shouldImplement(Variable::class);
     }
 
     public function it_exposes_name()
