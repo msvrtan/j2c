@@ -10,7 +10,7 @@ use Exception;
  * @see PropertySpec
  * @see PropertyTest
  */
-class Property
+class Property implements Variable
 {
     /** @var string */
     private $name;
