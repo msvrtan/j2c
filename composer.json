@@ -8,6 +8,7 @@
         "myclabs/php-enum": "^1.5",
         "nette/php-generator": "^3.0",
         "nikic/php-parser": "^3.1",
+        "roave/better-reflection": "^2.0",
         "symfony/console": "^3.4",
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^3.4",
