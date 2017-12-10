@@ -10,9 +10,9 @@ fields:
     namespace: GitHub\CommitStatus
     inputKey: '["id"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Id\IntegerId
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleTimestamp
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+      - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleTimestamp
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
     sorting: 200
   context:
     key: context
@@ -20,7 +20,7 @@ fields:
     namespace: GitHub\CommitStatus
     inputKey: '["context"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 30
   description:
     key: description
@@ -28,7 +28,7 @@ fields:
     namespace: GitHub\CommitStatus
     inputKey: '["description"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 30
   state:
     key: state
@@ -36,7 +36,7 @@ fields:
     namespace: GitHub\CommitStatus
     inputKey: '["state"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 30
   creator:
     key: Creator
@@ -52,8 +52,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["id"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Id\IntegerId
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+          - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
         sorting: 200
       gravatar_id:
         key: gravatar_id
@@ -61,7 +61,7 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["gravatar_id"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
       login:
         key: login
@@ -69,7 +69,7 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["login"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
       type:
         key: type
@@ -77,7 +77,7 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["type"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
       site_admin:
         key: site_admin
@@ -85,7 +85,7 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["site_admin"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
         sorting: 20
       avatar_url:
         key: avatar_url
@@ -93,8 +93,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["avatar_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       events_url:
         key: events_url
@@ -102,8 +102,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["events_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       followers_url:
         key: followers_url
@@ -111,8 +111,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["followers_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       following_url:
         key: following_url
@@ -120,8 +120,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["following_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       gists_url:
         key: gists_url
@@ -129,8 +129,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["gists_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       html_url:
         key: html_url
@@ -138,8 +138,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["html_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       organizations_url:
         key: organizations_url
@@ -147,8 +147,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["organizations_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       received_events_url:
         key: received_events_url
@@ -156,8 +156,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["received_events_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       repos_url:
         key: repos_url
@@ -165,8 +165,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["repos_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       starred_url:
         key: starred_url
@@ -174,8 +174,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["starred_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       subscriptions_url:
         key: subscriptions_url
@@ -183,8 +183,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["subscriptions_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       url:
         key: url
@@ -192,8 +192,8 @@ fields:
         namespace: GitHub\CommitStatus\Creator
         inputKey: '["creator"]["url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
   target_url:
     key: target_url
@@ -201,8 +201,8 @@ fields:
     namespace: GitHub\CommitStatus
     inputKey: '["target_url"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Generix\Url
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 10
   url:
     key: url
@@ -210,8 +210,8 @@ fields:
     namespace: GitHub\CommitStatus
     inputKey: '["url"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Generix\Url
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 10
   created_at:
     key: created_at
@@ -219,8 +219,8 @@ fields:
     namespace: GitHub\CommitStatus
     inputKey: '["created_at"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 5
   updated_at:
     key: updated_at
@@ -228,6 +228,6 @@ fields:
     namespace: GitHub\CommitStatus
     inputKey: '["updated_at"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 5

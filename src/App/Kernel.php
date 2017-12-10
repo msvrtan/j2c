@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App;
 
 use App\CompilerPass\JsonDetectorFactoryPass;
-use App\Service\JsonDetector\Factory;
+use JsonToConfig\JsonDetector\Factory;
 use NullDevelopment\Skeleton\Core\ObjectConfigurationLoader;
 use NullDevelopment\Skeleton\ObjectConfigurationLoaderCompilerPass;
 use NullDevelopment\Skeleton\PhpSpecGeneratorRegistrationCompilerPass;

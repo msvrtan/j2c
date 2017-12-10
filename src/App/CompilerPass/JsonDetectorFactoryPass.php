@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\CompilerPass;
 
-use App\Service\JsonDetector;
+use JsonToConfig\JsonDetector;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;

@@ -5,15 +5,15 @@ declare(strict_types=1);
 namespace Tests\UseCase;
 
 use App\File\FileFactory;
-use App\Service\Config;
-use App\Service\JsonDetector;
+use JsonToConfig\Config;
+use JsonToConfig\JsonDetector;
 use NullDevelopment\Skeleton\Php\Structure\ClassName;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Yaml\Yaml;
 use Tests\TestCase\SfTestCase;
 
 /**
- * @covers \App\Service\JsonDetector
+ * @covers \JsonToConfig\JsonDetector
  * @group  usecase
  */
 class DetectSingleJsonFileTest extends SfTestCase

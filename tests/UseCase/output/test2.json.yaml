@@ -10,8 +10,8 @@ fields:
     namespace: MyVendor\User
     inputKey: '["id"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Id\IntegerId
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+      - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
     sorting: 200
   full_name:
     key: full_name
@@ -19,7 +19,7 @@ fields:
     namespace: MyVendor\User
     inputKey: '["full_name"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 30
   name:
     key: name
@@ -27,7 +27,7 @@ fields:
     namespace: MyVendor\User
     inputKey: '["name"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 30
   address:
     key: Address
@@ -43,7 +43,7 @@ fields:
         namespace: MyVendor\User\Address
         inputKey: '["address"]["streetName"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
       street_number:
         key: street_number
@@ -51,5 +51,5 @@ fields:
         namespace: MyVendor\User\Address
         inputKey: '["address"]["street_number"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleInteger
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
         sorting: 30

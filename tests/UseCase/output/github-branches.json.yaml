@@ -10,7 +10,7 @@ fields:
     namespace: GitHub\FFF\Branches
     inputKey: '["name"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 30
   commit:
     key: Commit
@@ -26,7 +26,7 @@ fields:
         namespace: GitHub\FFF\Branches\Commit
         inputKey: '["commit"]["sha"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
       url:
         key: url
@@ -34,6 +34,6 @@ fields:
         namespace: GitHub\FFF\Branches\Commit
         inputKey: '["commit"]["url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
