@@ -10,7 +10,7 @@ fields:
     namespace: GitHub\Commit
     inputKey: '["message"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 30
   sha:
     key: sha
@@ -18,7 +18,7 @@ fields:
     namespace: GitHub\Commit
     inputKey: '["sha"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 30
   author:
     key: Author
@@ -34,8 +34,8 @@ fields:
         namespace: GitHub\Commit\Author
         inputKey: '["author"]["email"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\EmailAddress
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\EmailAddress
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 50
       name:
         key: name
@@ -43,7 +43,7 @@ fields:
         namespace: GitHub\Commit\Author
         inputKey: '["author"]["name"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
       date:
         key: date
@@ -51,8 +51,8 @@ fields:
         namespace: GitHub\Commit\Author
         inputKey: '["author"]["date"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 5
   committer:
     key: Committer
@@ -68,8 +68,8 @@ fields:
         namespace: GitHub\Commit\Committer
         inputKey: '["committer"]["email"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\EmailAddress
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\EmailAddress
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 50
       name:
         key: name
@@ -77,7 +77,7 @@ fields:
         namespace: GitHub\Commit\Committer
         inputKey: '["committer"]["name"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
       date:
         key: date
@@ -85,8 +85,8 @@ fields:
         namespace: GitHub\Commit\Committer
         inputKey: '["committer"]["date"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleDateTime
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 5
   parents:
     key: Parents
@@ -94,7 +94,7 @@ fields:
     namespace: GitHub\Commit
     inputKey: '["parents"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleCollection
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
     sorting: 16
     fields:
       sha:
@@ -103,7 +103,7 @@ fields:
         namespace: GitHub\Commit\Parents
         inputKey: '["parents"]["sha"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
       html_url:
         key: html_url
@@ -111,8 +111,8 @@ fields:
         namespace: GitHub\Commit\Parents
         inputKey: '["parents"]["html_url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
       url:
         key: url
@@ -120,8 +120,8 @@ fields:
         namespace: GitHub\Commit\Parents
         inputKey: '["parents"]["url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
   tree:
     key: Tree
@@ -137,7 +137,7 @@ fields:
         namespace: GitHub\Commit\Tree
         inputKey: '["tree"]["sha"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
       url:
         key: url
@@ -145,8 +145,8 @@ fields:
         namespace: GitHub\Commit\Tree
         inputKey: '["tree"]["url"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Generix\Url
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
   verification:
     key: Verification
@@ -162,7 +162,7 @@ fields:
         namespace: GitHub\Commit\Verification
         inputKey: '["verification"]["reason"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
       verified:
         key: verified
@@ -170,7 +170,7 @@ fields:
         namespace: GitHub\Commit\Verification
         inputKey: '["verification"]["verified"]'
         suggestions:
-          - App\Service\JsonDetector\ValueObject\Simple\SimpleBool
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
         sorting: 20
       payload:
         key: payload
@@ -192,8 +192,8 @@ fields:
     namespace: GitHub\Commit
     inputKey: '["html_url"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Generix\Url
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 10
   url:
     key: url
@@ -201,6 +201,6 @@ fields:
     namespace: GitHub\Commit
     inputKey: '["url"]'
     suggestions:
-      - App\Service\JsonDetector\ValueObject\Generix\Url
-      - App\Service\JsonDetector\ValueObject\Simple\SimpleString
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 10
