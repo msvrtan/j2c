@@ -41,6 +41,11 @@ services:
         public: true
 
 
+    Miro\:
+        resource: '../src/Miro'
+        public: true
+
+
 
     App\File\FileFactory:
         public: true
@@ -99,6 +104,10 @@ services:
     NullDevelopment\SkeletonSourceCodeNetteGenerator\NetteGenerator\SimpleValueObjectNetteGenerator:
         tags:
             - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleValueObject' }
+
+    NullDevelopment\SkeletonSourceCodeNetteGenerator\NetteGenerator\SimpleCollectionNetteGenerator:
+        tags:
+            - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleCollection' }
 
 
     NullDevelopment\SkeletonPhpUnitNetteGenerator\PHPUnitTestMiddleware:
