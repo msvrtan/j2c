@@ -59,13 +59,13 @@ class ProductEntitySpec extends ObjectBehavior
     {
         $id->serialize()->shouldBeCalled()->willReturn(1);
         $weight->serialize()->shouldBeCalled()->willReturn(1);
-        $updatedAt->format('c')->shouldBeCalled()->willReturn('2018-03-04 14:15:16');
-        $this->serialize()->shouldReturn(['id' => 1, 'title' => 'title', 'description' => 'description', 'weight' => 1, 'updatedAt' => '2018-03-04 14:15:16']);
+        $updatedAt->format('c')->shouldBeCalled()->willReturn('2018-01-01 00:01:00');
+        $this->serialize()->shouldReturn(['id' => 1, 'title' => 'title', 'description' => 'description', 'weight' => 1, 'updatedAt' => '2018-01-01 00:01:00']);
     }
 
 
     public function it_is_deserializable()
     {
-        $this->deserialize(['id' => 1, 'title' => 'title', 'description' => 'description', 'weight' => 1, 'updatedAt' => '2018-03-04 14:15:16'])->shouldReturnAnInstanceOf(ProductEntity::class);
+        $this->deserialize(['id' => 1, 'title' => 'title', 'description' => 'description', 'weight' => 1, 'updatedAt' => '2018-01-01 00:01:00'])->shouldReturnAnInstanceOf(ProductEntity::class);
     }
 }

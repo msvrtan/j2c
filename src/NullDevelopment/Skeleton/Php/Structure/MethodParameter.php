@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace NullDevelopment\Skeleton\Php\Structure;
 
-use Exception;
+use Miro\ExampleMaker\ExampleMaker;
 
 /**
  * @see MethodParameterSpec
@@ -69,20 +69,8 @@ class MethodParameter implements Variable
 
     public function suggestValue()
     {
-        if ('string' === $this->getStructureFullName()) {
-            return "'".$this->getName()."'";
-        } elseif ('int' === $this->getStructureFullName()) {
-            return 1;
-        } elseif ('float' === $this->getStructureFullName()) {
-            return 2.0;
-        } elseif ('bool' === $this->getStructureFullName()) {
-            return true;
-        } elseif ('array' === $this->getStructureFullName()) {
-            return ['data'];
-        }
+        $exampleMaker = new ExampleMaker();
 
-        return '$'.$this->getName();
-
-        throw new Exception('UNSUPPORTED SUGGEST VALUE');
+        return $exampleMaker->instance($this);
     }
 }

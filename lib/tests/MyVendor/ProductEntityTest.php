@@ -41,7 +41,7 @@ class ProductEntityTest extends TestCase
         $this->title = 'title';
         $this->description = 'description';
         $this->weight = new ProductWeight(1);
-        $this->updatedAt = new DateTime('2018-03-04 14:15:16');
+        $this->updatedAt = new DateTime('2018-01-01 00:01:00');
         $this->sut = new ProductEntity($this->id, $this->title, $this->description, $this->weight, $this->updatedAt);
     }
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteMiddleware;
 
+use Miro\ExampleMaker\ExampleMaker;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteMiddleware\SpecSerializationMiddleware;
 use PHPUnit\Framework\TestCase;
@@ -20,7 +21,7 @@ class SpecSerializationMiddlewareTest extends TestCase
 
     public function setUp()
     {
-        $this->specSerializationMiddleware = new SpecSerializationMiddleware();
+        $this->specSerializationMiddleware = new SpecSerializationMiddleware(new ExampleMaker());
     }
 
     public function testExecute()

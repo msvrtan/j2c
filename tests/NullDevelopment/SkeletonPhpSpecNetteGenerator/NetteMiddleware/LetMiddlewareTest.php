@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteMiddleware;
 
+use Miro\ExampleMaker\ExampleMaker;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteMiddleware\LetMiddleware;
 use PHPUnit\Framework\TestCase;
@@ -20,7 +21,7 @@ class LetMiddlewareTest extends TestCase
 
     public function setUp()
     {
-        $this->letMiddleware = new LetMiddleware();
+        $this->letMiddleware = new LetMiddleware(new ExampleMaker());
     }
 
     public function testExecute()

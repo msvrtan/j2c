@@ -45,8 +45,8 @@ class UserEntityTest extends TestCase
         $this->firstName = 'firstName';
         $this->lastName = 'lastName';
         $this->username = new Username('username');
-        $this->createdAt = new UserCreatedAt('2018-02-03 12:23:34');
-        $this->updatedAt = new DateTime('2018-03-04 14:15:16');
+        $this->createdAt = new UserCreatedAt('2018-01-01 00:01:00');
+        $this->updatedAt = new DateTime('2018-01-01 00:01:00');
         $this->sut = new UserEntity($this->id, $this->firstName, $this->lastName, $this->username, $this->createdAt, $this->updatedAt);
     }
 

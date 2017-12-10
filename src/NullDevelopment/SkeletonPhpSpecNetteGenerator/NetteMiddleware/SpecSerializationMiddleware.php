@@ -5,14 +5,22 @@ declare(strict_types=1);
 namespace NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteMiddleware;
 
 use DateTime;
+use Miro\ExampleMaker\ExampleMaker;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpNamespace;
 use NullDevelopment\Skeleton\Php\Structure\Property;
 use NullDevelopment\SkeletonNetteGenerator\PartialCodeGeneratorMiddleware;
-use ReflectionClass;
 
 class SpecSerializationMiddleware implements PartialCodeGeneratorMiddleware
 {
+    /** @var ExampleMaker */
+    private $exampleMaker;
+
+    public function __construct(ExampleMaker $exampleMaker)
+    {
+        $this->exampleMaker = $exampleMaker;
+    }
+
     public function execute($definition, callable $next)
     {
         /** @var PhpNamespace $namespace */
@@ -30,7 +38,7 @@ class SpecSerializationMiddleware implements PartialCodeGeneratorMiddleware
             } else {
                 /* @var Property $property */
                 foreach ($definition->getProperties() as $property) {
-                    $input[] = sprintf("'%s' => %s", $property->getName(), $this->suggestValue($property));
+                    $input[] = sprintf("'%s' => %s", $property->getName(), $this->exampleMaker->value($property));
                 }
 
                 $input = '['.implode(', ', $input).']';
@@ -48,7 +56,11 @@ class SpecSerializationMiddleware implements PartialCodeGeneratorMiddleware
                 ->addBody($deserializeBody);
 
             foreach ($definition->getProperties() as $property) {
-                if (false === in_array($property->getStructureFullName(), ['int', 'string', 'float', 'bool', 'array', 'DateTime'])) {
+                if (false === in_array(
+                        $property->getStructureFullName(),
+                        ['int', 'string', 'float', 'bool', 'array', 'DateTime']
+                    )
+                ) {
                     $namespace->addUse($property->getStructureFullName());
 
                     $serializeMethod->addParameter($property->getName())
@@ -58,7 +70,7 @@ class SpecSerializationMiddleware implements PartialCodeGeneratorMiddleware
                         sprintf(
                             '$%s->serialize()->shouldBeCalled()->willReturn(%s);',
                             $property->getName(),
-                            $this->suggestValue($property)
+                            $this->exampleMaker->value($property)
                         )
                     );
                 } elseif ('DateTime' === $property->getStructureFullName()) {
@@ -71,7 +83,7 @@ class SpecSerializationMiddleware implements PartialCodeGeneratorMiddleware
                         sprintf(
                             '$%s->format(\'c\')->shouldBeCalled()->willReturn(%s);',
                             $property->getName(),
-                            "'2018-03-04 14:15:16'"
+                            "'2018-01-01 00:01:00'"
                         )
                     );
                 }
@@ -81,62 +93,5 @@ class SpecSerializationMiddleware implements PartialCodeGeneratorMiddleware
         }
 
         return $namespace;
-    }
-
-    /**
-     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
-     * @SuppressWarnings(PHPMD.NPathComplexity)
-     */
-    private function suggestValue(Property $property)
-    {
-        if ('string' === $property->getStructureFullName()) {
-            return "'".$property->getName()."'";
-        } elseif ('int' === $property->getStructureFullName()) {
-            return 1;
-        } elseif ('float' === $property->getStructureFullName()) {
-            return 2.0;
-        } elseif ('bool' === $property->getStructureFullName()) {
-            return true;
-        } elseif ('array' === $property->getStructureFullName()) {
-            return ['data'];
-        } elseif ('DateTime' === $property->getStructureFullName()) {
-            return "'2018-03-04 14:15:16'";
-        }
-        $refl = new ReflectionClass($property->getStructureFullName());
-
-        while ($parent = $refl->getParentClass()) {
-            if (DateTime::class === $parent->getName()) {
-                return "'2018-02-03 12:23:34'";
-            }
-        }
-
-        $zzz = [];
-        foreach ($refl->getConstructor()->getParameters() as $parameter) {
-            if (null !== $parameter->getType()) {
-                $type = $parameter->getType()->__toString();
-
-                if ('string' === $type) {
-                    $zzz[] = "'".$property->getName()."'";
-                } elseif ('int' === $type) {
-                    $zzz[] = 1;
-                } elseif ('float' === $type) {
-                    $zzz[] = 2.0;
-                } elseif ('bool' === $type) {
-                    $zzz[] = true;
-                } elseif ('array' === $type) {
-                    $zzz[] = ['data'];
-                } else {
-                    $zzz[] = "'".$property->getName()."'";
-                }
-            } else {
-                $zzz[] = "'".$property->getName()."'";
-            }
-        }
-
-        if (count($zzz) > 1) {
-            return '['.implode(', ', $zzz).']';
-        }
-
-        return implode(', ', $zzz);
     }
 }

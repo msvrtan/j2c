@@ -66,14 +66,14 @@ class UserEntitySpec extends ObjectBehavior
     {
         $id->serialize()->shouldBeCalled()->willReturn(1);
         $username->serialize()->shouldBeCalled()->willReturn('username');
-        $createdAt->serialize()->shouldBeCalled()->willReturn('2018-02-03 12:23:34');
-        $updatedAt->format('c')->shouldBeCalled()->willReturn('2018-03-04 14:15:16');
-        $this->serialize()->shouldReturn(['id' => 1, 'firstName' => 'firstName', 'lastName' => 'lastName', 'username' => 'username', 'createdAt' => '2018-02-03 12:23:34', 'updatedAt' => '2018-03-04 14:15:16']);
+        $createdAt->serialize()->shouldBeCalled()->willReturn('2018-01-01 00:01:00');
+        $updatedAt->format('c')->shouldBeCalled()->willReturn('2018-01-01 00:01:00');
+        $this->serialize()->shouldReturn(['id' => 1, 'firstName' => 'firstName', 'lastName' => 'lastName', 'username' => 'username', 'createdAt' => '2018-01-01 00:01:00', 'updatedAt' => '2018-01-01 00:01:00']);
     }
 
 
     public function it_is_deserializable()
     {
-        $this->deserialize(['id' => 1, 'firstName' => 'firstName', 'lastName' => 'lastName', 'username' => 'username', 'createdAt' => '2018-02-03 12:23:34', 'updatedAt' => '2018-03-04 14:15:16'])->shouldReturnAnInstanceOf(UserEntity::class);
+        $this->deserialize(['id' => 1, 'firstName' => 'firstName', 'lastName' => 'lastName', 'username' => 'username', 'createdAt' => '2018-01-01 00:01:00', 'updatedAt' => '2018-01-01 00:01:00'])->shouldReturnAnInstanceOf(UserEntity::class);
     }
 }

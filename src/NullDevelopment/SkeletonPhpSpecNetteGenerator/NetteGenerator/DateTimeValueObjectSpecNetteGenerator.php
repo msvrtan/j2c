@@ -45,39 +45,29 @@ class DateTimeValueObjectSpecNetteGenerator extends BaseNetteGenerator
 
         /** @var ClassType $class */
         foreach ($namespace->getClasses() as $class) {
-            ///
             // Let
-            ///
-            ///
-            $letMethod = $class->addMethod('let')
-                ->setVisibility(Visibility::PUBLIC);
+            $class->addMethod('let')
+                ->setVisibility(Visibility::PUBLIC)
+                ->addBody('$this->beConstructedWith(\'2018-01-01 11:22:33\');');
 
-            $letMethod->addBody(
-                '$this->beConstructedWith(\'2018-01-01 11:22:33\');'
-            );
+            // Initializable
 
-            $initializableMethod = $class->addMethod('it_is_initializable');
-            $initializableMethod->addBody('$this->shouldHaveType('.$definition->getClassName().'::class);');
-            $initializableMethod->addBody('$this->shouldHaveType(DateTime::class);');
+            $class->addMethod('it_is_initializable')
+                ->addBody('$this->shouldHaveType('.$definition->getClassName().'::class);')
+                ->addBody('$this->shouldHaveType(DateTime::class);');
 
-            ///
             // ToString
-            ///
 
             $class->addMethod('it_is_castable_to_string')
                 ->addBody('$this->__toString()->shouldReturn(\'2018-01-01T11:22:33+00:00\');');
 
-            ///
             // createFromFormat
-            ///
 
             $class->addMethod('it_can_be_created_from_custom_format')
                 ->addBody('$result = $this->createFromFormat(DateTime::ATOM, \'2018-01-01T11:22:33Z\');')
                 ->addBody('$result->__toString()->shouldReturn(\'2018-01-01T11:22:33+00:00\');');
 
-            ///
             // Serialization / deserialization
-            ///
 
             $class->addMethod('it_is_serializable')
                 ->addBody('$this->serialize()->shouldReturn(\'2018-01-01T11:22:33+00:00\');');
