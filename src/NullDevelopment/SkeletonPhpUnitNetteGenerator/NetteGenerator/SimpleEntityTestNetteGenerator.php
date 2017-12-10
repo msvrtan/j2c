@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace NullDevelopment\SkeletonPhpUnitNetteGenerator\NetteGenerator;
 
+use Miro\ExampleMaker\ExampleMaker;
 use Nette\PhpGenerator\PhpNamespace;
 use NullDevelopment\Skeleton\SourceCode\Definition\SimpleEntity;
 use NullDevelopment\SkeletonNetteGenerator\BaseNetteGenerator;
@@ -24,7 +25,7 @@ class SimpleEntityTestNetteGenerator extends BaseNetteGenerator
         $middleware = [
             new TestSerializationMiddleware(),
             new TestGetterMiddleware(),
-            new SetUpMiddleware(),
+            new SetUpMiddleware(new ExampleMaker()),
             new TestMiddleware(),
             new TestNamespaceMiddleware(),
         ];

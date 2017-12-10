@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteMiddleware;
 
+use Miro\ExampleMaker\ExampleMaker;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpNamespace;
 use NullDevelopment\Skeleton\Php\Structure\MethodParameter;
@@ -12,6 +13,14 @@ use NullDevelopment\SkeletonNetteGenerator\PartialCodeGeneratorMiddleware;
 
 class LetMiddleware implements PartialCodeGeneratorMiddleware
 {
+    /** @var ExampleMaker */
+    private $exampleMaker;
+
+    public function __construct(ExampleMaker $exampleMaker)
+    {
+        $this->exampleMaker = $exampleMaker;
+    }
+
     public function execute($definition, callable $next)
     {
         /** @var PhpNamespace $namespace */

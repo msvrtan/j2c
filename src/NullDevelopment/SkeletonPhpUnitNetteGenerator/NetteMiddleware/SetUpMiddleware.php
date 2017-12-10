@@ -4,16 +4,23 @@ declare(strict_types=1);
 
 namespace NullDevelopment\SkeletonPhpUnitNetteGenerator\NetteMiddleware;
 
-use DateTime;
+use Miro\ExampleMaker\ExampleMaker;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpNamespace;
 use NullDevelopment\Skeleton\Php\Structure\MethodParameter;
 use NullDevelopment\Skeleton\Php\Structure\Visibility;
 use NullDevelopment\SkeletonNetteGenerator\PartialCodeGeneratorMiddleware;
-use ReflectionClass;
 
 class SetUpMiddleware implements PartialCodeGeneratorMiddleware
 {
+    /** @var ExampleMaker */
+    private $exampleMaker;
+
+    public function __construct(ExampleMaker $exampleMaker)
+    {
+        $this->exampleMaker = $exampleMaker;
+    }
+
     public function execute($definition, callable $next)
     {
         /** @var PhpNamespace $namespace */
@@ -32,7 +39,7 @@ class SetUpMiddleware implements PartialCodeGeneratorMiddleware
             /** @var MethodParameter $parameter */
             foreach ($definition->getConstructorParameters() as $parameter) {
                 $setUpMethod->addBody(
-                    sprintf('$this->%s = %s;', $parameter->getName(), $this->suggestValue($parameter))
+                    sprintf('$this->%s = %s;', $parameter->getName(), $this->exampleMaker->instance($parameter))
                 );
                 $constructorParams[] = '$this->'.$parameter->getName();
 
@@ -51,58 +58,5 @@ class SetUpMiddleware implements PartialCodeGeneratorMiddleware
         }
 
         return $namespace;
-    }
-
-    /**
-     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
-     */
-    private function suggestValue(MethodParameter $parameter)
-    {
-        if ('string' === $parameter->getStructureFullName()) {
-            return "'".$parameter->getName()."'";
-        } elseif ('int' === $parameter->getStructureFullName()) {
-            return 1;
-        } elseif ('float' === $parameter->getStructureFullName()) {
-            return 2.0;
-        } elseif ('bool' === $parameter->getStructureFullName()) {
-            return true;
-        } elseif ('array' === $parameter->getStructureFullName()) {
-            return ['data'];
-        } elseif ('DateTime' === $parameter->getStructureFullName()) {
-            return "new DateTime('2018-03-04 14:15:16')";
-        }
-
-        $refl = new ReflectionClass($parameter->getStructureFullName());
-
-        while ($parent = $refl->getParentClass()) {
-            if (DateTime::class === $parent->getName()) {
-                return 'new '.ucfirst($parameter->getStructureName()->getName())."('2018-02-03 12:23:34')";
-            }
-        }
-        $zzz = [];
-        foreach ($refl->getConstructor()->getParameters() as $param) {
-            if ($param->getType()) {
-                $type = $param->getType()->__toString();
-                if ('string' === $type) {
-                    $zzz[] = "'".$parameter->getName()."'";
-                } elseif ('int' === $type) {
-                    $zzz[] = 1;
-                } elseif ('float' === $type) {
-                    $zzz[] = 2.0;
-                } elseif ('bool' === $type) {
-                    $zzz[] = true;
-                } elseif ('array' === $type) {
-                    $zzz[] = ['data'];
-                } else {
-                    $zzz[] = "'".$parameter->getName()."'";
-                }
-            }
-        }
-
-        return 'new '.ucfirst($parameter->getStructureName()->getName()).'('.implode(', ', $zzz).')';
-
-        return;
-
-        return '$'.$parameter->getName();
     }
 }

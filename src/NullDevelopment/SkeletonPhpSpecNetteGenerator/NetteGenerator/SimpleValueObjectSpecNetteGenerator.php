@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteGenerator;
 
+use Miro\ExampleMaker\ExampleMaker;
 use Nette\PhpGenerator\PhpNamespace;
 use NullDevelopment\Skeleton\SourceCode\Definition\SimpleValueObject;
 use NullDevelopment\SkeletonNetteGenerator\BaseNetteGenerator;
@@ -23,10 +24,10 @@ class SimpleValueObjectSpecNetteGenerator extends BaseNetteGenerator
     public function __construct()
     {
         $middleware = [
-            new SpecSerializationMiddleware(),
-            new SpecToStringMiddleware(),
-            new SpecGetterMiddleware(),
-            new LetMiddleware(),
+            new SpecSerializationMiddleware(new ExampleMaker()),
+            new SpecToStringMiddleware(new ExampleMaker()),
+            new SpecGetterMiddleware(new ExampleMaker()),
+            new LetMiddleware(new ExampleMaker()),
             new SpecMiddleware(),
             new SpecNamespaceMiddleware(),
         ];

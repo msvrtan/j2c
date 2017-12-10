@@ -42,11 +42,11 @@ class DateTimeValueObjectTestNetteGenerator extends BaseNetteGenerator
 
         $class = $namespace->addClass($definition->getClassName().'Test');
 
-        $class->setExtends('PHPUnit\\Framework\\TestCase');
-        $namespace->addUse('PHPUnit\\Framework\\TestCase');
-        $namespace->addUse($definition->getFullClassName());
-        $class->addComment('@covers \\'.$definition->getFullClassName());
-        $class->addComment('@group  todo');
+        $namespace->addUse('PHPUnit\\Framework\\TestCase')
+            ->addUse($definition->getFullClassName());
+        $class->setExtends('PHPUnit\\Framework\\TestCase')
+            ->addComment('@covers \\'.$definition->getFullClassName())
+            ->addComment('@group  todo');
 
         $class->addProperty('value')
             ->setVisibility(Visibility::PRIVATE)
@@ -56,26 +56,19 @@ class DateTimeValueObjectTestNetteGenerator extends BaseNetteGenerator
             ->setVisibility(Visibility::PRIVATE)
             ->addComment('@var '.$definition->getClassName());
 
-        ///
         // Set up
-        ///
 
-        $setUpMethod = $class->addMethod('setUp')
-            ->setVisibility(Visibility::PUBLIC);
+        $class->addMethod('setUp')
+            ->setVisibility(Visibility::PUBLIC)
+            ->addBody(sprintf('$this->value = %s;', "'2018-01-01T11:22:33+00:00'"))
+            ->addBody(sprintf('$this->sut = new %s($this->value);', $definition->getClassName()));
 
-        $setUpMethod->addBody(sprintf('$this->value = %s;', "'2018-01-01T11:22:33+00:00'"));
-        $setUpMethod->addBody(sprintf('$this->sut = new %s($this->value);', $definition->getClassName()));
-
-        ///
         // To string
-        ///
 
         $class->addMethod('testToString')
             ->addBody('self::assertSame($this->value, $this->sut->__toString());');
 
-        ///
         // Serialize / deserialize
-        ///
 
         $class->addMethod('testSerialize')
             ->addBody('self::assertEquals($this->value, $this->sut->serialize());');
