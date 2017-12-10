@@ -33,7 +33,7 @@ class SpecSerializationMiddleware implements PartialCodeGeneratorMiddleware
             if (1 === count($definition->getProperties())) {
                 /* @var Property $property */
                 foreach ($definition->getProperties() as $property) {
-                    $input = $property->suggestValue();
+                    $input = $this->exampleMaker->value($property);
                 }
             } else {
                 /* @var Property $property */

@@ -22,7 +22,7 @@ class TestToStringMiddleware implements PartialCodeGeneratorMiddleware
             foreach ($definition->getProperties() as $property) {
                 $cast = '';
 
-                if (false === is_string($property->suggestValue())) {
+                if (true === in_array($property->getStructureFullName(), ['int', 'float'])) {
                     $cast = '(string) ';
                 }
 

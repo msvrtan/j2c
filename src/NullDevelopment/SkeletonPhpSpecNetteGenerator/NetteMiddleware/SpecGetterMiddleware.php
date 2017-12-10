@@ -29,19 +29,24 @@ class SpecGetterMiddleware implements PartialCodeGeneratorMiddleware
         foreach ($namespace->getClasses() as $class) {
             /* @var Property $property */
             foreach ($definition->getProperties() as $property) {
-                $body = sprintf(
-                    '$this->%s()->shouldReturn(%s);',
-                    'get'.ucfirst($property->getName()),
-                    $property->suggestValue()
-                );
+                $propertyName = $property->getName();
+                $propertyType = $property->getStructureFullName();
 
-                $getterMethod = $class->addMethod('it_exposes_'.$property->getName())->addBody($body);
+                $getterMethod = $class->addMethod('it_exposes_'.$propertyName);
 
-                if (false === in_array($property->getStructureFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
-                    $namespace->addUse($property->getStructureFullName());
+                if (true === in_array($propertyType, ['int', 'string', 'float', 'bool', 'array'])) {
+                    $getterMethod->addBody(
+                        sprintf('$this->get%s()->shouldReturn(%s);', ucfirst($propertyName), $this->exampleMaker->value($property))
+                    );
+                } else {
+                    $getterMethod->addBody(
+                        sprintf('$this->get%s()->shouldReturn($%s);', ucfirst($propertyName), $propertyName)
+                    );
 
-                    $getterMethod->addParameter($property->getName())
-                        ->setTypeHint($property->getStructureFullName());
+                    $namespace->addUse($propertyType);
+
+                    $getterMethod->addParameter($propertyName)
+                        ->setTypeHint($propertyType);
                 }
             }
         }
