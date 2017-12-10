@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace NullDevelopment\Skeleton\Php\Structure;
 
-use Miro\ExampleMaker\ExampleMaker;
-
 /**
  * @see MethodParameterSpec
  * @see MethodParameterTest
@@ -65,12 +63,5 @@ class MethodParameter implements Variable
     public function getDefaultValue()
     {
         return $this->defaultValue;
-    }
-
-    public function suggestValue()
-    {
-        $exampleMaker = new ExampleMaker();
-
-        return $exampleMaker->instance($this);
     }
 }

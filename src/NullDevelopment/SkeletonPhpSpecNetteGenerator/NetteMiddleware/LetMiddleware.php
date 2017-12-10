@@ -46,7 +46,7 @@ class LetMiddleware implements PartialCodeGeneratorMiddleware
 
                     $beConstructedWithArguments[] = '$'.$parameter->getName();
                 } else {
-                    $beConstructedWithArguments[] = '$'.$parameter->getName().' = '.$parameter->suggestValue();
+                    $beConstructedWithArguments[] = '$'.$parameter->getName().' = '.$this->exampleMaker->instance($parameter);
                 }
             }
 

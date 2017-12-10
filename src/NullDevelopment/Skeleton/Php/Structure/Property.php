@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace NullDevelopment\Skeleton\Php\Structure;
 
-use Exception;
-
 /**
  * @see PropertySpec
  * @see PropertyTest
@@ -92,24 +90,5 @@ class Property implements Variable
     public function isGetter(): bool
     {
         return $this->getter;
-    }
-
-    public function suggestValue()
-    {
-        if ('string' === $this->getStructureFullName()) {
-            return "'".$this->getName()."'";
-        } elseif ('int' === $this->getStructureFullName()) {
-            return 1;
-        } elseif ('float' === $this->getStructureFullName()) {
-            return 2.0;
-        } elseif ('bool' === $this->getStructureFullName()) {
-            return true;
-        } elseif ('array' === $this->getStructureFullName()) {
-            return ['data'];
-        }
-
-        return '$'.$this->getName();
-
-        throw new Exception('UNSUPPORTED SUGGEST VALUE');
     }
 }
