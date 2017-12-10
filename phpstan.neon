@@ -2,6 +2,7 @@ parameters:
 	bootstrap: tests/bootstrap.php
 	ignoreErrors:
 	    - '#Parameter .* Mockery\\MockInterface given.#'
+	    - '#Call to an undefined method Mockery\\ExpectationInterface|Mockery\\ExpectsHigherOrderMessage\:\:andReturn().#'
 	    - '#Call to an undefined static method NullDevelopment\\Skeleton\\Php\\Structure\\Visibility\:\:PRIVATE\(\).#'
 	includes:
 	    - vendor/phpstan/phpstan-phpunit/extension.neon
