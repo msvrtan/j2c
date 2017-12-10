@@ -6,6 +6,7 @@ namespace spec\NullDevelopment\Skeleton\Php\Structure;
 
 use NullDevelopment\Skeleton\Php\Structure\ClassName;
 use NullDevelopment\Skeleton\Php\Structure\MethodParameter;
+use NullDevelopment\Skeleton\Php\Structure\Variable;
 use PhpSpec\ObjectBehavior;
 
 class MethodParameterSpec extends ObjectBehavior
@@ -18,6 +19,7 @@ class MethodParameterSpec extends ObjectBehavior
     public function it_is_initializable()
     {
         $this->shouldHaveType(MethodParameter::class);
+        $this->shouldImplement(Variable::class);
     }
 
     public function it_exposes_name()
@@ -27,7 +29,7 @@ class MethodParameterSpec extends ObjectBehavior
 
     public function it_exposes_class_name(ClassName $className)
     {
-        $this->getClassName()->shouldReturn($className);
+        $this->getStructureName()->shouldReturn($className);
     }
 
     public function it_knows_if_its_nullable()

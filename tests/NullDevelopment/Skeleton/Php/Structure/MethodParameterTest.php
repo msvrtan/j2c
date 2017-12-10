@@ -51,9 +51,9 @@ class MethodParameterTest extends TestCase
         self::assertEquals($this->name, $this->methodParameter->getName());
     }
 
-    public function testGetClassName()
+    public function testGetStructureName()
     {
-        self::assertEquals($this->className, $this->methodParameter->getClassName());
+        self::assertEquals($this->className, $this->methodParameter->getStructureName());
     }
 
     public function testIsNullable()
