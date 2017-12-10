@@ -32,25 +32,25 @@ class ConstructorMiddleware implements PartialCodeGeneratorMiddleware
                 $constructorMethod->addBody($assign);
 
                 $constructorMethod->addParameter($parameter->getName())
-                    ->setTypeHint($parameter->getClassFullName())
+                    ->setTypeHint($parameter->getStructureFullName())
                     ->setNullable($parameter->isNullable());
 
                 $property = $class->addProperty($parameter->getName())
                     ->setVisibility(Visibility::PRIVATE);
 
                 if (true === $parameter->isNullable()) {
-                    $property->addComment('@var '.$parameter->getClassName()->getName().'|null');
+                    $property->addComment('@var '.$parameter->getStructureName()->getName().'|null');
                 } else {
-                    $property->addComment('@var '.$parameter->getClassName()->getName());
+                    $property->addComment('@var '.$parameter->getStructureName()->getName());
                 }
 
                 $class->addMethod('get'.ucfirst($parameter->getName()))
-                    ->setReturnType($parameter->getClassFullName())
+                    ->setReturnType($parameter->getStructureFullName())
                     ->setReturnNullable($parameter->isNullable())
                     ->addBody('return $this->'.$parameter->getName().';');
 
-                if (false === in_array($parameter->getClassFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
-                    $namespace->addUse($parameter->getClassFullName());
+                if (false === in_array($parameter->getStructureFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
+                    $namespace->addUse($parameter->getStructureFullName());
                 }
             }
         }

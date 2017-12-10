@@ -29,11 +29,11 @@ class LetMiddleware implements PartialCodeGeneratorMiddleware
             $beConstructedWithArguments = [];
             /** @var MethodParameter $parameter */
             foreach ($definition->getConstructorParameters() as $parameter) {
-                if (false === in_array($parameter->getClassFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
-                    $namespace->addUse($parameter->getClassFullName());
+                if (false === in_array($parameter->getStructureFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
+                    $namespace->addUse($parameter->getStructureFullName());
 
                     $letMethod->addParameter($parameter->getName())
-                        ->setTypeHint($parameter->getClassFullName());
+                        ->setTypeHint($parameter->getStructureFullName());
 
                     $beConstructedWithArguments[] = '$'.$parameter->getName();
                 } else {
@@ -57,7 +57,7 @@ class LetMiddleware implements PartialCodeGeneratorMiddleware
 
             if (true === $definition->hasInterfaces()) {
                 foreach ($definition->getInterfaces() as $interface) {
-                    $initializableMethod->addBody('$this->shouldImplement('.$interface->getClassName().'::class);');
+                    $initializableMethod->addBody('$this->shouldImplement('.$interface->getStructureName().'::class);');
                 }
             }
         }

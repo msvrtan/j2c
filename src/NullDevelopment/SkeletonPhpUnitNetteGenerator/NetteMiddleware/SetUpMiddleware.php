@@ -36,8 +36,8 @@ class SetUpMiddleware implements PartialCodeGeneratorMiddleware
                 );
                 $constructorParams[] = '$this->'.$parameter->getName();
 
-                if (false === in_array($parameter->getClassFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
-                    $namespace->addUse($parameter->getClassFullName());
+                if (false === in_array($parameter->getStructureFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
+                    $namespace->addUse($parameter->getStructureFullName());
                 }
             }
 
@@ -58,25 +58,25 @@ class SetUpMiddleware implements PartialCodeGeneratorMiddleware
      */
     private function suggestValue(MethodParameter $parameter)
     {
-        if ('string' === $parameter->getClassFullName()) {
+        if ('string' === $parameter->getStructureFullName()) {
             return "'".$parameter->getName()."'";
-        } elseif ('int' === $parameter->getClassFullName()) {
+        } elseif ('int' === $parameter->getStructureFullName()) {
             return 1;
-        } elseif ('float' === $parameter->getClassFullName()) {
+        } elseif ('float' === $parameter->getStructureFullName()) {
             return 2.0;
-        } elseif ('bool' === $parameter->getClassFullName()) {
+        } elseif ('bool' === $parameter->getStructureFullName()) {
             return true;
-        } elseif ('array' === $parameter->getClassFullName()) {
+        } elseif ('array' === $parameter->getStructureFullName()) {
             return ['data'];
-        } elseif ('DateTime' === $parameter->getClassFullName()) {
+        } elseif ('DateTime' === $parameter->getStructureFullName()) {
             return "new DateTime('2018-03-04 14:15:16')";
         }
 
-        $refl = new ReflectionClass($parameter->getClassFullName());
+        $refl = new ReflectionClass($parameter->getStructureFullName());
 
         while ($parent = $refl->getParentClass()) {
             if (DateTime::class === $parent->getName()) {
-                return 'new '.ucfirst($parameter->getClassName()->getName())."('2018-02-03 12:23:34')";
+                return 'new '.ucfirst($parameter->getStructureName()->getName())."('2018-02-03 12:23:34')";
             }
         }
         $zzz = [];
@@ -99,7 +99,7 @@ class SetUpMiddleware implements PartialCodeGeneratorMiddleware
             }
         }
 
-        return 'new '.ucfirst($parameter->getClassName()->getName()).'('.implode(', ', $zzz).')';
+        return 'new '.ucfirst($parameter->getStructureName()->getName()).'('.implode(', ', $zzz).')';
 
         return;
 
