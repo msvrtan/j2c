@@ -43,7 +43,7 @@ class ExampleMaker
         foreach ($refl->getConstructor()->getParameters() as $parameter) {
             if ($parameter->getType()) {
                 $paramAsVar = new SimpleVariable(
-                    $variable->getName(),
+                    $parameter->getName(),
                     ClassName::createFromFullyQualified($parameter->getType()->__toString())
                 );
 
@@ -54,7 +54,7 @@ class ExampleMaker
             }
         }
 
-        return 'new '.$variable->getStructureName()->getName().'('.implode(', ', $arguments).')';
+        return 'new \\'.$variable->getStructureName()->getFullName().'('.implode(', ', $arguments).')';
     }
 
     /** @SuppressWarnings(PHPMD.CyclomaticComplexity) */
