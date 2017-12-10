@@ -1,0 +1,16 @@
+definition:
+  type: SimpleCollection
+  className: MyVendor\ProductCollection
+  parent: ~
+  interfaces: []
+  traits: []
+  constructor:
+    elements:
+      className: array
+      nullable: false
+      hasDefault: true
+      default: '[]'
+  collectionOf:
+    className: MyVendor\ProductEntity
+    accessor: getId
+    has: MyVendor\Product\ProductId

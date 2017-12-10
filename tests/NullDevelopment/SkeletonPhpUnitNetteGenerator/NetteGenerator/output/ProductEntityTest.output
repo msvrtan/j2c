@@ -37,10 +37,10 @@ class ProductEntityTest extends TestCase
 
     public function setUp()
     {
-        $this->id = new ProductId(1);
+        $this->id = new \MyVendor\Product\ProductId(1);
         $this->title = 'title';
         $this->description = 'description';
-        $this->weight = new ProductWeight(1);
+        $this->weight = new \MyVendor\Product\ProductWeight(1);
         $this->updatedAt = new \DateTime('2018-01-01 00:01:00');
         $this->sut = new ProductEntity($this->id, $this->title, $this->description, $this->weight, $this->updatedAt);
     }

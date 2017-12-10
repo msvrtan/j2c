@@ -49,11 +49,7 @@ class SetUpMiddleware implements PartialCodeGeneratorMiddleware
             }
 
             $setUpMethod->addBody(
-                sprintf(
-                    '$this->sut = new %s(%s);',
-                    $definition->getClassName(),
-                    implode(', ', $constructorParams)
-                )
+                sprintf('$this->sut = new %s(%s);', $definition->getClassName(), implode(', ', $constructorParams))
             );
         }
 

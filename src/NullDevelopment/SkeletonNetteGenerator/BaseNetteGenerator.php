@@ -6,6 +6,7 @@ namespace NullDevelopment\SkeletonNetteGenerator;
 
 use Nette\PhpGenerator\PhpNamespace;
 
+/** @SuppressWarnings("PHPMD.NumberOfChildren") */
 abstract class BaseNetteGenerator
 {
     /** @var callable */
