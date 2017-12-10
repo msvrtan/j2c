@@ -10,7 +10,7 @@ use Exception;
  * @see MethodParameterSpec
  * @see MethodParameterTest
  */
-class MethodParameter
+class MethodParameter implements Variable
 {
     /** @var string */
     private $name;
@@ -42,12 +42,12 @@ class MethodParameter
         return $this->name;
     }
 
-    public function getClassName(): ClassName
+    public function getStructureName(): StructureName
     {
         return $this->className;
     }
 
-    public function getClassFullName(): string
+    public function getStructureFullName(): string
     {
         return $this->className->getFullName();
     }
@@ -69,15 +69,15 @@ class MethodParameter
 
     public function suggestValue()
     {
-        if ('string' === $this->getClassFullName()) {
+        if ('string' === $this->getStructureFullName()) {
             return "'".$this->getName()."'";
-        } elseif ('int' === $this->getClassFullName()) {
+        } elseif ('int' === $this->getStructureFullName()) {
             return 1;
-        } elseif ('float' === $this->getClassFullName()) {
+        } elseif ('float' === $this->getStructureFullName()) {
             return 2.0;
-        } elseif ('bool' === $this->getClassFullName()) {
+        } elseif ('bool' === $this->getStructureFullName()) {
             return true;
-        } elseif ('array' === $this->getClassFullName()) {
+        } elseif ('array' === $this->getStructureFullName()) {
             return ['data'];
         }
 
