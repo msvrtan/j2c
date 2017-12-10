@@ -9,7 +9,75 @@ jobs:
           - APP_DEBUG=1
           - APP_SECRET=123
     working_directory: /var/www
-    parallel: 1
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: cache-v1-{{ checksum "composer.lock" }}
+
+      - run:
+          name: Disable xdebug
+          command: ./etc/circleci2/disable-xdebug.sh
+
+      - run:
+          name: Composer install
+          command: SYMFONY_ENV=test composer install --prefer-dist --no-interaction
+
+      - run:
+          name: PHPSpec
+          command: ./vendor/bin/phpspec run
+
+      - save_cache:
+          key: cache-v1-{{ checksum "composer.lock" }}
+          paths:
+            - /var/www/vendor
+
+      - store_artifacts:
+          path: build
+          destination: build
+
+  phpunit:
+    docker:
+      - image: msvrtan/square:0.2.2
+        environment:
+          - APP_ENV=test
+          - APP_DEBUG=1
+          - APP_SECRET=123
+    working_directory: /var/www
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: cache-v1-{{ checksum "composer.lock" }}
+
+      - run:
+          name: Disable xdebug
+          command: ./etc/circleci2/disable-xdebug.sh
+
+      - run:
+          name: Composer install
+          command: SYMFONY_ENV=test composer install --prefer-dist --no-interaction
+
+      - run:
+          name: PHPUnit
+          command: ./vendor/bin/phpunit
+
+      - save_cache:
+          key: cache-v1-{{ checksum "composer.lock" }}
+          paths:
+            - /var/www/vendor
+
+      - store_artifacts:
+          path: build
+          destination: build
+  code_quality:
+    docker:
+      - image: msvrtan/square:0.2.2
+        environment:
+          - APP_ENV=test
+          - APP_DEBUG=1
+          - APP_SECRET=123
+    working_directory: /var/www
     steps:
       - checkout
 
@@ -27,14 +95,6 @@ jobs:
       - run:
           name: Lint all PHP code files # runs lint only on php files in feature/src/spec/tests folder that are changed since 2017-12-03 (uses hash to determine commit from which to start check)
           command: git diff --name-only --diff-filter=ACMR 6836d6eb5692fd5bea5f3613bfd47ba276a16d53 | grep -E "^(feature|src|spec|tests)\/.*php$" | xargs -n1 php -l 1> /dev/null
-
-      - run:
-          name: PHPSpec
-          command: ./vendor/bin/phpspec run
-
-      - run:
-          name: PHPUnit
-          command: ./vendor/bin/phpunit
 
       - run:
           name: PHPStan
@@ -61,7 +121,6 @@ jobs:
           - APP_DEBUG=1
           - APP_SECRET=123
     working_directory: /var/www
-    parallel: 1
     steps:
       - checkout
 
@@ -88,7 +147,6 @@ jobs:
           - APP_DEBUG=1
           - APP_SECRET=123
     working_directory: /var/www
-    parallel: 1
     steps:
       - checkout
 
@@ -116,5 +174,11 @@ workflows:
   build-and-deploy:
     jobs:
       - build
-      - humbug
-      - codecoverage_phpunit
+      - phpunit
+      - code_quality
+      - humbug:
+          requires:
+            - phpunit
+      - codecoverage_phpunit:
+          requires:
+            - phpunit
