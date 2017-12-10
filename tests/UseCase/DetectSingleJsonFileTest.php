@@ -40,7 +40,7 @@ class DetectSingleJsonFileTest extends SfTestCase
 
         $yaml = Yaml::dump($config->toArray(), 15, 2);
 
-        $outputFileName = __DIR__.'/output/'.$inputFileName.'.yaml';
+        $outputFileName = __DIR__.'/json-config/'.$inputFileName.'.yaml';
 
         if (!is_file($outputFileName)) {
             file_put_contents($outputFileName, $yaml);
@@ -81,7 +81,7 @@ class DetectSingleJsonFileTest extends SfTestCase
 
     protected function loadJsonFile(string $fileName): array
     {
-        $fileContent = file_get_contents(__DIR__.'/input/'.$fileName);
+        $fileContent = file_get_contents(__DIR__.'/json-input/'.$fileName);
 
         return json_decode($fileContent, true);
     }
