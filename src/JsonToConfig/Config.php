@@ -78,12 +78,13 @@ class Config
 
         foreach ($this->elements as $key => $list) {
             $resultItem = [
-                'key'         => $key,
-                'name'        => $this->baseName.str_replace('_', '', ucwords($key, '_')),
-                'namespace'   => $this->namespace.'\\'.$this->baseName,
-                'inputKey'    => $input.'["'.$key.'"]',
-                'suggestions' => [],
-                'sorting'     => 0,
+                'key'          => $key,
+                'propertyName' => lcfirst(str_replace('_', '', ucwords($key, '_'))),
+                'name'         => $this->baseName.str_replace('_', '', ucwords($key, '_')),
+                'namespace'    => $this->namespace.'\\'.$this->baseName,
+                'inputKey'     => $input.'["'.$key.'"]',
+                'suggestions'  => [],
+                'sorting'      => 0,
             ];
             foreach ($list as $item) {
                 $resultItem['suggestions'][] = get_class($item);
