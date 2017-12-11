@@ -178,13 +178,24 @@ class ClassDefinition
             $parent = $this->parent->getFullName();
         }
 
+        $interfaces = [];
+        $traits     = [];
+
+        foreach ($this->interfaces as $interface) {
+            $interfaces[] = $interface->getFullName();
+        }
+
+        foreach ($this->traits as $trait) {
+            $traits[] = $trait->getFullName();
+        }
+
         $items = [
             'type'        => $this->getCurrentType(),
             'className'   => $this->getFullClassName(),
             'parent'      => $parent,
-            'interfaces'  => [], //@TODO
-            'traits'      => [], //@TODO
-            'constructor' => [],
+            'interfaces'  => $interfaces,
+            'traits'      => $traits,
+            'constructor' => null,
         ];
 
         foreach ($this->getConstructorParameters() as $constructorParameter) {
