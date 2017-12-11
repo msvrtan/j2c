@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Miro\ExampleMaker;
+namespace NullDevelopment\Skeleton\ExampleMaker;
 
 /**
  * @see SimpleExampleSpec

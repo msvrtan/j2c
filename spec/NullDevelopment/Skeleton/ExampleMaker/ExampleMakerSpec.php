@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace spec\Miro\ExampleMaker;
+namespace spec\NullDevelopment\Skeleton\ExampleMaker;
 
-use Miro\ExampleMaker\ExampleMaker;
+use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use PhpSpec\ObjectBehavior;
 
 class ExampleMakerSpec extends ObjectBehavior

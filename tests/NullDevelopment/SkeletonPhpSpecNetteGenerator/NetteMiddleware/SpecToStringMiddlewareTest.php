@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteMiddleware;
 
-use Miro\ExampleMaker\ExampleMaker;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteMiddleware\SpecToStringMiddleware;
 use PHPUnit\Framework\TestCase;
 

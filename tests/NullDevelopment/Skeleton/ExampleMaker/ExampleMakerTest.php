@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Tests\Miro\ExampleMaker;
+namespace Tests\NullDevelopment\Skeleton\ExampleMaker;
 
-use Miro\ExampleMaker\ArrayExample;
-use Miro\ExampleMaker\ExampleMaker;
-use Miro\ExampleMaker\InstanceExample;
-use Miro\ExampleMaker\SimpleExample;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+use NullDevelopment\Skeleton\ExampleMaker\ArrayExample;
+use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
+use NullDevelopment\Skeleton\ExampleMaker\InstanceExample;
+use NullDevelopment\Skeleton\ExampleMaker\SimpleExample;
 use NullDevelopment\Skeleton\Php\Structure\ClassName;
 use NullDevelopment\Skeleton\Php\Structure\Variable;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \Miro\ExampleMaker\ExampleMaker
+ * @covers \NullDevelopment\Skeleton\ExampleMaker\ExampleMaker
  * @group  todo
  */
 class ExampleMakerTest extends TestCase

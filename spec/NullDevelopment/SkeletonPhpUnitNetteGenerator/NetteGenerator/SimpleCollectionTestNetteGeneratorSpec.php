@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace spec\NullDevelopment\SkeletonPhpUnitNetteGenerator\NetteGenerator;
 
-use Miro\ExampleMaker\ExampleMaker;
+use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\SkeletonPhpUnitNetteGenerator\NetteGenerator\SimpleCollectionTestNetteGenerator;
 use PhpSpec\ObjectBehavior;
 

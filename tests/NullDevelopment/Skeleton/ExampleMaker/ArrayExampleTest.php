@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tests\Miro\ExampleMaker;
+namespace Tests\NullDevelopment\Skeleton\ExampleMaker;
 
-use Miro\ExampleMaker\ArrayExample;
-use Miro\ExampleMaker\SimpleExample;
+use NullDevelopment\Skeleton\ExampleMaker\ArrayExample;
+use NullDevelopment\Skeleton\ExampleMaker\SimpleExample;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \Miro\ExampleMaker\ArrayExample
+ * @covers \NullDevelopment\Skeleton\ExampleMaker\ArrayExample
  * @group  unit
  */
 class ArrayExampleTest extends TestCase

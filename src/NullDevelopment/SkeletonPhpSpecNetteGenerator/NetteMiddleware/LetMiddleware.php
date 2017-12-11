@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteMiddleware;
 
-use Miro\ExampleMaker\ExampleMaker;
 use Nette\PhpGenerator\ClassType;
 use Nette\PhpGenerator\PhpNamespace;
+use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\Php\Structure\MethodParameter;
 use NullDevelopment\Skeleton\Php\Structure\Visibility;
 use NullDevelopment\SkeletonNetteGenerator\PartialCodeGeneratorMiddleware;

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tests\NullDevelopment\SkeletonPhpUnitNetteGenerator\NetteGenerator;
 
 use League\Tactician\CommandBus;
-use Miro\ExampleMaker\ExampleMaker;
+use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\SourceCode\Loader\SimpleCollectionLoader;
 use NullDevelopment\SkeletonPhpUnitNetteGenerator\NetteGenerator\SimpleCollectionTestNetteGenerator;
 use Tests\TestCase\SfTestCase;
