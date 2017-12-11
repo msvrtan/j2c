@@ -6,6 +6,7 @@ sorting: 16
 fields:
   message:
     key: message
+    propertyName: message
     name: CommitMessage
     namespace: GitHub\Commit
     inputKey: '["message"]'
@@ -14,6 +15,7 @@ fields:
     sorting: 30
   sha:
     key: sha
+    propertyName: sha
     name: CommitSha
     namespace: GitHub\Commit
     inputKey: '["sha"]'
@@ -22,6 +24,7 @@ fields:
     sorting: 30
   author:
     key: Author
+    propertyName: author
     name: Author
     namespace: GitHub\Commit
     inputKey: '["author"]'
@@ -30,6 +33,7 @@ fields:
     fields:
       email:
         key: email
+        propertyName: email
         name: AuthorEmail
         namespace: GitHub\Commit\Author
         inputKey: '["author"]["email"]'
@@ -39,6 +43,7 @@ fields:
         sorting: 50
       name:
         key: name
+        propertyName: name
         name: AuthorName
         namespace: GitHub\Commit\Author
         inputKey: '["author"]["name"]'
@@ -47,6 +52,7 @@ fields:
         sorting: 30
       date:
         key: date
+        propertyName: date
         name: AuthorDate
         namespace: GitHub\Commit\Author
         inputKey: '["author"]["date"]'
@@ -56,6 +62,7 @@ fields:
         sorting: 5
   committer:
     key: Committer
+    propertyName: committer
     name: Committer
     namespace: GitHub\Commit
     inputKey: '["committer"]'
@@ -64,6 +71,7 @@ fields:
     fields:
       email:
         key: email
+        propertyName: email
         name: CommitterEmail
         namespace: GitHub\Commit\Committer
         inputKey: '["committer"]["email"]'
@@ -73,6 +81,7 @@ fields:
         sorting: 50
       name:
         key: name
+        propertyName: name
         name: CommitterName
         namespace: GitHub\Commit\Committer
         inputKey: '["committer"]["name"]'
@@ -81,6 +90,7 @@ fields:
         sorting: 30
       date:
         key: date
+        propertyName: date
         name: CommitterDate
         namespace: GitHub\Commit\Committer
         inputKey: '["committer"]["date"]'
@@ -90,6 +100,7 @@ fields:
         sorting: 5
   parents:
     key: Parents
+    propertyName: parents
     name: Parents
     namespace: GitHub\Commit
     inputKey: '["parents"]'
@@ -99,6 +110,7 @@ fields:
     fields:
       sha:
         key: sha
+        propertyName: sha
         name: ParentsSha
         namespace: GitHub\Commit\Parents
         inputKey: '["parents"]["sha"]'
@@ -107,6 +119,7 @@ fields:
         sorting: 30
       html_url:
         key: html_url
+        propertyName: htmlUrl
         name: ParentsHtmlUrl
         namespace: GitHub\Commit\Parents
         inputKey: '["parents"]["html_url"]'
@@ -116,6 +129,7 @@ fields:
         sorting: 10
       url:
         key: url
+        propertyName: url
         name: ParentsUrl
         namespace: GitHub\Commit\Parents
         inputKey: '["parents"]["url"]'
@@ -129,6 +143,7 @@ fields:
       has: TODO3
   tree:
     key: Tree
+    propertyName: tree
     name: Tree
     namespace: GitHub\Commit
     inputKey: '["tree"]'
@@ -137,6 +152,7 @@ fields:
     fields:
       sha:
         key: sha
+        propertyName: sha
         name: TreeSha
         namespace: GitHub\Commit\Tree
         inputKey: '["tree"]["sha"]'
@@ -145,6 +161,7 @@ fields:
         sorting: 30
       url:
         key: url
+        propertyName: url
         name: TreeUrl
         namespace: GitHub\Commit\Tree
         inputKey: '["tree"]["url"]'
@@ -154,6 +171,7 @@ fields:
         sorting: 10
   verification:
     key: Verification
+    propertyName: verification
     name: Verification
     namespace: GitHub\Commit
     inputKey: '["verification"]'
@@ -162,6 +180,7 @@ fields:
     fields:
       reason:
         key: reason
+        propertyName: reason
         name: VerificationReason
         namespace: GitHub\Commit\Verification
         inputKey: '["verification"]["reason"]'
@@ -170,6 +189,7 @@ fields:
         sorting: 30
       payload:
         key: payload
+        propertyName: payload
         name: VerificationPayload
         namespace: GitHub\Commit\Verification
         inputKey: '["verification"]["payload"]'
@@ -178,6 +198,7 @@ fields:
         sorting: 20
       signature:
         key: signature
+        propertyName: signature
         name: VerificationSignature
         namespace: GitHub\Commit\Verification
         inputKey: '["verification"]["signature"]'
@@ -186,6 +207,7 @@ fields:
         sorting: 20
       verified:
         key: verified
+        propertyName: verified
         name: VerificationVerified
         namespace: GitHub\Commit\Verification
         inputKey: '["verification"]["verified"]'
@@ -194,6 +216,7 @@ fields:
         sorting: 20
   html_url:
     key: html_url
+    propertyName: htmlUrl
     name: CommitHtmlUrl
     namespace: GitHub\Commit
     inputKey: '["html_url"]'
@@ -203,6 +226,7 @@ fields:
     sorting: 10
   url:
     key: url
+    propertyName: url
     name: CommitUrl
     namespace: GitHub\Commit
     inputKey: '["url"]'

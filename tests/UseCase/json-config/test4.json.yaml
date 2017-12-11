@@ -6,6 +6,7 @@ sorting: 16
 fields:
   action:
     key: action
+    propertyName: action
     name: PullRequestHookAction
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["action"]'
@@ -14,6 +15,7 @@ fields:
     sorting: 30
   number:
     key: number
+    propertyName: number
     name: PullRequestHookNumber
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["number"]'
@@ -22,6 +24,7 @@ fields:
     sorting: 30
   installation:
     key: Installation
+    propertyName: installation
     name: Installation
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["installation"]'
@@ -30,6 +33,7 @@ fields:
     fields:
       id:
         key: id
+        propertyName: id
         name: InstallationId
         namespace: GitHub\WebHook\PullRequestHook\Installation
         inputKey: '["installation"]["id"]'
@@ -39,6 +43,7 @@ fields:
         sorting: 200
   organization:
     key: Organization
+    propertyName: organization
     name: Organization
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["organization"]'
@@ -47,6 +52,7 @@ fields:
     fields:
       id:
         key: id
+        propertyName: id
         name: OrganizationId
         namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["id"]'
@@ -56,6 +62,7 @@ fields:
         sorting: 200
       description:
         key: description
+        propertyName: description
         name: OrganizationDescription
         namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["description"]'
@@ -64,6 +71,7 @@ fields:
         sorting: 30
       login:
         key: login
+        propertyName: login
         name: OrganizationLogin
         namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["login"]'
@@ -72,6 +80,7 @@ fields:
         sorting: 30
       avatar_url:
         key: avatar_url
+        propertyName: avatarUrl
         name: OrganizationAvatarUrl
         namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["avatar_url"]'
@@ -81,6 +90,7 @@ fields:
         sorting: 10
       events_url:
         key: events_url
+        propertyName: eventsUrl
         name: OrganizationEventsUrl
         namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["events_url"]'
@@ -90,6 +100,7 @@ fields:
         sorting: 10
       hooks_url:
         key: hooks_url
+        propertyName: hooksUrl
         name: OrganizationHooksUrl
         namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["hooks_url"]'
@@ -99,6 +110,7 @@ fields:
         sorting: 10
       issues_url:
         key: issues_url
+        propertyName: issuesUrl
         name: OrganizationIssuesUrl
         namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["issues_url"]'
@@ -108,6 +120,7 @@ fields:
         sorting: 10
       members_url:
         key: members_url
+        propertyName: membersUrl
         name: OrganizationMembersUrl
         namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["members_url"]'
@@ -117,6 +130,7 @@ fields:
         sorting: 10
       public_members_url:
         key: public_members_url
+        propertyName: publicMembersUrl
         name: OrganizationPublicMembersUrl
         namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["public_members_url"]'
@@ -126,6 +140,7 @@ fields:
         sorting: 10
       repos_url:
         key: repos_url
+        propertyName: reposUrl
         name: OrganizationReposUrl
         namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["repos_url"]'
@@ -135,6 +150,7 @@ fields:
         sorting: 10
       url:
         key: url
+        propertyName: url
         name: OrganizationUrl
         namespace: GitHub\WebHook\PullRequestHook\Organization
         inputKey: '["organization"]["url"]'
@@ -144,6 +160,7 @@ fields:
         sorting: 10
   pull_request:
     key: PullRequest
+    propertyName: pullRequest
     name: PullRequest
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["pull_request"]'
@@ -152,6 +169,7 @@ fields:
     fields:
       id:
         key: id
+        propertyName: id
         name: PullRequestId
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["id"]'
@@ -162,6 +180,7 @@ fields:
         sorting: 200
       additions:
         key: additions
+        propertyName: additions
         name: PullRequestAdditions
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["additions"]'
@@ -170,6 +189,7 @@ fields:
         sorting: 30
       author_association:
         key: author_association
+        propertyName: authorAssociation
         name: PullRequestAuthorAssociation
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["author_association"]'
@@ -178,6 +198,7 @@ fields:
         sorting: 30
       body:
         key: body
+        propertyName: body
         name: PullRequestBody
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["body"]'
@@ -186,6 +207,7 @@ fields:
         sorting: 30
       changed_files:
         key: changed_files
+        propertyName: changedFiles
         name: PullRequestChangedFiles
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["changed_files"]'
@@ -194,6 +216,7 @@ fields:
         sorting: 30
       comments:
         key: comments
+        propertyName: comments
         name: PullRequestComments
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["comments"]'
@@ -202,6 +225,7 @@ fields:
         sorting: 30
       commits:
         key: commits
+        propertyName: commits
         name: PullRequestCommits
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["commits"]'
@@ -210,6 +234,7 @@ fields:
         sorting: 30
       deletions:
         key: deletions
+        propertyName: deletions
         name: PullRequestDeletions
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["deletions"]'
@@ -218,6 +243,7 @@ fields:
         sorting: 30
       mergeable_state:
         key: mergeable_state
+        propertyName: mergeableState
         name: PullRequestMergeableState
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["mergeable_state"]'
@@ -226,6 +252,7 @@ fields:
         sorting: 30
       number:
         key: number
+        propertyName: number
         name: PullRequestNumber
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["number"]'
@@ -234,6 +261,7 @@ fields:
         sorting: 30
       review_comments:
         key: review_comments
+        propertyName: reviewComments
         name: PullRequestReviewComments
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["review_comments"]'
@@ -242,6 +270,7 @@ fields:
         sorting: 30
       state:
         key: state
+        propertyName: state
         name: PullRequestState
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["state"]'
@@ -250,6 +279,7 @@ fields:
         sorting: 30
       title:
         key: title
+        propertyName: title
         name: PullRequestTitle
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["title"]'
@@ -258,6 +288,7 @@ fields:
         sorting: 30
       assignee:
         key: assignee
+        propertyName: assignee
         name: PullRequestAssignee
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["assignee"]'
@@ -266,6 +297,7 @@ fields:
         sorting: 20
       closed_at:
         key: closed_at
+        propertyName: closedAt
         name: PullRequestClosedAt
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["closed_at"]'
@@ -274,6 +306,7 @@ fields:
         sorting: 20
       locked:
         key: locked
+        propertyName: locked
         name: PullRequestLocked
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["locked"]'
@@ -282,6 +315,7 @@ fields:
         sorting: 20
       maintainer_can_modify:
         key: maintainer_can_modify
+        propertyName: maintainerCanModify
         name: PullRequestMaintainerCanModify
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["maintainer_can_modify"]'
@@ -290,6 +324,7 @@ fields:
         sorting: 20
       merge_commit_sha:
         key: merge_commit_sha
+        propertyName: mergeCommitSha
         name: PullRequestMergeCommitSha
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["merge_commit_sha"]'
@@ -298,6 +333,7 @@ fields:
         sorting: 20
       mergeable:
         key: mergeable
+        propertyName: mergeable
         name: PullRequestMergeable
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["mergeable"]'
@@ -306,6 +342,7 @@ fields:
         sorting: 20
       merged:
         key: merged
+        propertyName: merged
         name: PullRequestMerged
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["merged"]'
@@ -314,6 +351,7 @@ fields:
         sorting: 20
       merged_at:
         key: merged_at
+        propertyName: mergedAt
         name: PullRequestMergedAt
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["merged_at"]'
@@ -322,6 +360,7 @@ fields:
         sorting: 20
       merged_by:
         key: merged_by
+        propertyName: mergedBy
         name: PullRequestMergedBy
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["merged_by"]'
@@ -330,6 +369,7 @@ fields:
         sorting: 20
       milestone:
         key: milestone
+        propertyName: milestone
         name: PullRequestMilestone
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["milestone"]'
@@ -338,6 +378,7 @@ fields:
         sorting: 20
       rebaseable:
         key: rebaseable
+        propertyName: rebaseable
         name: PullRequestRebaseable
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["rebaseable"]'
@@ -346,6 +387,7 @@ fields:
         sorting: 20
       assignees:
         key: Assignees
+        propertyName: assignees
         name: Assignees
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["assignees"]'
@@ -358,6 +400,7 @@ fields:
           has: TODO3
       base:
         key: Base
+        propertyName: base
         name: Base
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["base"]'
@@ -366,6 +409,7 @@ fields:
         fields:
           label:
             key: label
+            propertyName: label
             name: BaseLabel
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
             inputKey: '["pull_request"]["base"]["label"]'
@@ -374,6 +418,7 @@ fields:
             sorting: 30
           ref:
             key: ref
+            propertyName: ref
             name: BaseRef
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
             inputKey: '["pull_request"]["base"]["ref"]'
@@ -382,6 +427,7 @@ fields:
             sorting: 30
           sha:
             key: sha
+            propertyName: sha
             name: BaseSha
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
             inputKey: '["pull_request"]["base"]["sha"]'
@@ -390,6 +436,7 @@ fields:
             sorting: 30
           repo:
             key: Repo
+            propertyName: repo
             name: Repo
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
             inputKey: '["pull_request"]["base"]["repo"]'
@@ -398,6 +445,7 @@ fields:
             fields:
               id:
                 key: id
+                propertyName: id
                 name: RepoId
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["id"]'
@@ -408,6 +456,7 @@ fields:
                 sorting: 200
               default_branch:
                 key: default_branch
+                propertyName: defaultBranch
                 name: RepoDefaultBranch
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["default_branch"]'
@@ -416,6 +465,7 @@ fields:
                 sorting: 30
               description:
                 key: description
+                propertyName: description
                 name: RepoDescription
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["description"]'
@@ -424,6 +474,7 @@ fields:
                 sorting: 30
               forks:
                 key: forks
+                propertyName: forks
                 name: RepoForks
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["forks"]'
@@ -432,6 +483,7 @@ fields:
                 sorting: 30
               forks_count:
                 key: forks_count
+                propertyName: forksCount
                 name: RepoForksCount
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["forks_count"]'
@@ -440,6 +492,7 @@ fields:
                 sorting: 30
               full_name:
                 key: full_name
+                propertyName: fullName
                 name: RepoFullName
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["full_name"]'
@@ -448,6 +501,7 @@ fields:
                 sorting: 30
               language:
                 key: language
+                propertyName: language
                 name: RepoLanguage
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["language"]'
@@ -456,6 +510,7 @@ fields:
                 sorting: 30
               name:
                 key: name
+                propertyName: name
                 name: RepoName
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["name"]'
@@ -464,6 +519,7 @@ fields:
                 sorting: 30
               open_issues:
                 key: open_issues
+                propertyName: openIssues
                 name: RepoOpenIssues
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["open_issues"]'
@@ -472,6 +528,7 @@ fields:
                 sorting: 30
               open_issues_count:
                 key: open_issues_count
+                propertyName: openIssuesCount
                 name: RepoOpenIssuesCount
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["open_issues_count"]'
@@ -480,6 +537,7 @@ fields:
                 sorting: 30
               size:
                 key: size
+                propertyName: size
                 name: RepoSize
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["size"]'
@@ -488,6 +546,7 @@ fields:
                 sorting: 30
               ssh_url:
                 key: ssh_url
+                propertyName: sshUrl
                 name: RepoSshUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["ssh_url"]'
@@ -496,6 +555,7 @@ fields:
                 sorting: 30
               stargazers_count:
                 key: stargazers_count
+                propertyName: stargazersCount
                 name: RepoStargazersCount
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["stargazers_count"]'
@@ -504,6 +564,7 @@ fields:
                 sorting: 30
               watchers:
                 key: watchers
+                propertyName: watchers
                 name: RepoWatchers
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["watchers"]'
@@ -512,6 +573,7 @@ fields:
                 sorting: 30
               watchers_count:
                 key: watchers_count
+                propertyName: watchersCount
                 name: RepoWatchersCount
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["watchers_count"]'
@@ -520,6 +582,7 @@ fields:
                 sorting: 30
               archived:
                 key: archived
+                propertyName: archived
                 name: RepoArchived
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["archived"]'
@@ -528,6 +591,7 @@ fields:
                 sorting: 20
               fork:
                 key: fork
+                propertyName: fork
                 name: RepoFork
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["fork"]'
@@ -536,6 +600,7 @@ fields:
                 sorting: 20
               has_downloads:
                 key: has_downloads
+                propertyName: hasDownloads
                 name: RepoHasDownloads
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["has_downloads"]'
@@ -544,6 +609,7 @@ fields:
                 sorting: 20
               has_issues:
                 key: has_issues
+                propertyName: hasIssues
                 name: RepoHasIssues
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["has_issues"]'
@@ -552,6 +618,7 @@ fields:
                 sorting: 20
               has_pages:
                 key: has_pages
+                propertyName: hasPages
                 name: RepoHasPages
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["has_pages"]'
@@ -560,6 +627,7 @@ fields:
                 sorting: 20
               has_projects:
                 key: has_projects
+                propertyName: hasProjects
                 name: RepoHasProjects
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["has_projects"]'
@@ -568,6 +636,7 @@ fields:
                 sorting: 20
               has_wiki:
                 key: has_wiki
+                propertyName: hasWiki
                 name: RepoHasWiki
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["has_wiki"]'
@@ -576,6 +645,7 @@ fields:
                 sorting: 20
               homepage:
                 key: homepage
+                propertyName: homepage
                 name: RepoHomepage
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["homepage"]'
@@ -584,6 +654,7 @@ fields:
                 sorting: 20
               license:
                 key: license
+                propertyName: license
                 name: RepoLicense
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["license"]'
@@ -592,6 +663,7 @@ fields:
                 sorting: 20
               mirror_url:
                 key: mirror_url
+                propertyName: mirrorUrl
                 name: RepoMirrorUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["mirror_url"]'
@@ -600,6 +672,7 @@ fields:
                 sorting: 20
               private:
                 key: private
+                propertyName: private
                 name: RepoPrivate
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["private"]'
@@ -608,6 +681,7 @@ fields:
                 sorting: 20
               owner:
                 key: Owner
+                propertyName: owner
                 name: Owner
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["owner"]'
@@ -616,6 +690,7 @@ fields:
                 fields:
                   id:
                     key: id
+                    propertyName: id
                     name: OwnerId
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["id"]'
@@ -625,6 +700,7 @@ fields:
                     sorting: 200
                   gravatar_id:
                     key: gravatar_id
+                    propertyName: gravatarId
                     name: OwnerGravatarId
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["gravatar_id"]'
@@ -633,6 +709,7 @@ fields:
                     sorting: 30
                   login:
                     key: login
+                    propertyName: login
                     name: OwnerLogin
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["login"]'
@@ -641,6 +718,7 @@ fields:
                     sorting: 30
                   type:
                     key: type
+                    propertyName: type
                     name: OwnerType
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["type"]'
@@ -649,6 +727,7 @@ fields:
                     sorting: 30
                   site_admin:
                     key: site_admin
+                    propertyName: siteAdmin
                     name: OwnerSiteAdmin
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["site_admin"]'
@@ -657,6 +736,7 @@ fields:
                     sorting: 20
                   avatar_url:
                     key: avatar_url
+                    propertyName: avatarUrl
                     name: OwnerAvatarUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["avatar_url"]'
@@ -666,6 +746,7 @@ fields:
                     sorting: 10
                   events_url:
                     key: events_url
+                    propertyName: eventsUrl
                     name: OwnerEventsUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["events_url"]'
@@ -675,6 +756,7 @@ fields:
                     sorting: 10
                   followers_url:
                     key: followers_url
+                    propertyName: followersUrl
                     name: OwnerFollowersUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["followers_url"]'
@@ -684,6 +766,7 @@ fields:
                     sorting: 10
                   following_url:
                     key: following_url
+                    propertyName: followingUrl
                     name: OwnerFollowingUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["following_url"]'
@@ -693,6 +776,7 @@ fields:
                     sorting: 10
                   gists_url:
                     key: gists_url
+                    propertyName: gistsUrl
                     name: OwnerGistsUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["gists_url"]'
@@ -702,6 +786,7 @@ fields:
                     sorting: 10
                   html_url:
                     key: html_url
+                    propertyName: htmlUrl
                     name: OwnerHtmlUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["html_url"]'
@@ -711,6 +796,7 @@ fields:
                     sorting: 10
                   organizations_url:
                     key: organizations_url
+                    propertyName: organizationsUrl
                     name: OwnerOrganizationsUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["organizations_url"]'
@@ -720,6 +806,7 @@ fields:
                     sorting: 10
                   received_events_url:
                     key: received_events_url
+                    propertyName: receivedEventsUrl
                     name: OwnerReceivedEventsUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["received_events_url"]'
@@ -729,6 +816,7 @@ fields:
                     sorting: 10
                   repos_url:
                     key: repos_url
+                    propertyName: reposUrl
                     name: OwnerReposUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["repos_url"]'
@@ -738,6 +826,7 @@ fields:
                     sorting: 10
                   starred_url:
                     key: starred_url
+                    propertyName: starredUrl
                     name: OwnerStarredUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["starred_url"]'
@@ -747,6 +836,7 @@ fields:
                     sorting: 10
                   subscriptions_url:
                     key: subscriptions_url
+                    propertyName: subscriptionsUrl
                     name: OwnerSubscriptionsUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["subscriptions_url"]'
@@ -756,6 +846,7 @@ fields:
                     sorting: 10
                   url:
                     key: url
+                    propertyName: url
                     name: OwnerUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner
                     inputKey: '["pull_request"]["base"]["repo"]["owner"]["url"]'
@@ -765,6 +856,7 @@ fields:
                     sorting: 10
               archive_url:
                 key: archive_url
+                propertyName: archiveUrl
                 name: RepoArchiveUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["archive_url"]'
@@ -774,6 +866,7 @@ fields:
                 sorting: 10
               assignees_url:
                 key: assignees_url
+                propertyName: assigneesUrl
                 name: RepoAssigneesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["assignees_url"]'
@@ -783,6 +876,7 @@ fields:
                 sorting: 10
               blobs_url:
                 key: blobs_url
+                propertyName: blobsUrl
                 name: RepoBlobsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["blobs_url"]'
@@ -792,6 +886,7 @@ fields:
                 sorting: 10
               branches_url:
                 key: branches_url
+                propertyName: branchesUrl
                 name: RepoBranchesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["branches_url"]'
@@ -801,6 +896,7 @@ fields:
                 sorting: 10
               clone_url:
                 key: clone_url
+                propertyName: cloneUrl
                 name: RepoCloneUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["clone_url"]'
@@ -810,6 +906,7 @@ fields:
                 sorting: 10
               collaborators_url:
                 key: collaborators_url
+                propertyName: collaboratorsUrl
                 name: RepoCollaboratorsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["collaborators_url"]'
@@ -819,6 +916,7 @@ fields:
                 sorting: 10
               comments_url:
                 key: comments_url
+                propertyName: commentsUrl
                 name: RepoCommentsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["comments_url"]'
@@ -828,6 +926,7 @@ fields:
                 sorting: 10
               commits_url:
                 key: commits_url
+                propertyName: commitsUrl
                 name: RepoCommitsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["commits_url"]'
@@ -837,6 +936,7 @@ fields:
                 sorting: 10
               compare_url:
                 key: compare_url
+                propertyName: compareUrl
                 name: RepoCompareUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["compare_url"]'
@@ -846,6 +946,7 @@ fields:
                 sorting: 10
               contents_url:
                 key: contents_url
+                propertyName: contentsUrl
                 name: RepoContentsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["contents_url"]'
@@ -855,6 +956,7 @@ fields:
                 sorting: 10
               contributors_url:
                 key: contributors_url
+                propertyName: contributorsUrl
                 name: RepoContributorsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["contributors_url"]'
@@ -864,6 +966,7 @@ fields:
                 sorting: 10
               deployments_url:
                 key: deployments_url
+                propertyName: deploymentsUrl
                 name: RepoDeploymentsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["deployments_url"]'
@@ -873,6 +976,7 @@ fields:
                 sorting: 10
               downloads_url:
                 key: downloads_url
+                propertyName: downloadsUrl
                 name: RepoDownloadsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["downloads_url"]'
@@ -882,6 +986,7 @@ fields:
                 sorting: 10
               events_url:
                 key: events_url
+                propertyName: eventsUrl
                 name: RepoEventsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["events_url"]'
@@ -891,6 +996,7 @@ fields:
                 sorting: 10
               forks_url:
                 key: forks_url
+                propertyName: forksUrl
                 name: RepoForksUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["forks_url"]'
@@ -900,6 +1006,7 @@ fields:
                 sorting: 10
               git_commits_url:
                 key: git_commits_url
+                propertyName: gitCommitsUrl
                 name: RepoGitCommitsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["git_commits_url"]'
@@ -909,6 +1016,7 @@ fields:
                 sorting: 10
               git_refs_url:
                 key: git_refs_url
+                propertyName: gitRefsUrl
                 name: RepoGitRefsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["git_refs_url"]'
@@ -918,6 +1026,7 @@ fields:
                 sorting: 10
               git_tags_url:
                 key: git_tags_url
+                propertyName: gitTagsUrl
                 name: RepoGitTagsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["git_tags_url"]'
@@ -927,6 +1036,7 @@ fields:
                 sorting: 10
               git_url:
                 key: git_url
+                propertyName: gitUrl
                 name: RepoGitUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["git_url"]'
@@ -936,6 +1046,7 @@ fields:
                 sorting: 10
               hooks_url:
                 key: hooks_url
+                propertyName: hooksUrl
                 name: RepoHooksUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["hooks_url"]'
@@ -945,6 +1056,7 @@ fields:
                 sorting: 10
               html_url:
                 key: html_url
+                propertyName: htmlUrl
                 name: RepoHtmlUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["html_url"]'
@@ -954,6 +1066,7 @@ fields:
                 sorting: 10
               issue_comment_url:
                 key: issue_comment_url
+                propertyName: issueCommentUrl
                 name: RepoIssueCommentUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["issue_comment_url"]'
@@ -963,6 +1076,7 @@ fields:
                 sorting: 10
               issue_events_url:
                 key: issue_events_url
+                propertyName: issueEventsUrl
                 name: RepoIssueEventsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["issue_events_url"]'
@@ -972,6 +1086,7 @@ fields:
                 sorting: 10
               issues_url:
                 key: issues_url
+                propertyName: issuesUrl
                 name: RepoIssuesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["issues_url"]'
@@ -981,6 +1096,7 @@ fields:
                 sorting: 10
               keys_url:
                 key: keys_url
+                propertyName: keysUrl
                 name: RepoKeysUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["keys_url"]'
@@ -990,6 +1106,7 @@ fields:
                 sorting: 10
               labels_url:
                 key: labels_url
+                propertyName: labelsUrl
                 name: RepoLabelsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["labels_url"]'
@@ -999,6 +1116,7 @@ fields:
                 sorting: 10
               languages_url:
                 key: languages_url
+                propertyName: languagesUrl
                 name: RepoLanguagesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["languages_url"]'
@@ -1008,6 +1126,7 @@ fields:
                 sorting: 10
               merges_url:
                 key: merges_url
+                propertyName: mergesUrl
                 name: RepoMergesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["merges_url"]'
@@ -1017,6 +1136,7 @@ fields:
                 sorting: 10
               milestones_url:
                 key: milestones_url
+                propertyName: milestonesUrl
                 name: RepoMilestonesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["milestones_url"]'
@@ -1026,6 +1146,7 @@ fields:
                 sorting: 10
               notifications_url:
                 key: notifications_url
+                propertyName: notificationsUrl
                 name: RepoNotificationsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["notifications_url"]'
@@ -1035,6 +1156,7 @@ fields:
                 sorting: 10
               pulls_url:
                 key: pulls_url
+                propertyName: pullsUrl
                 name: RepoPullsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["pulls_url"]'
@@ -1044,6 +1166,7 @@ fields:
                 sorting: 10
               releases_url:
                 key: releases_url
+                propertyName: releasesUrl
                 name: RepoReleasesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["releases_url"]'
@@ -1053,6 +1176,7 @@ fields:
                 sorting: 10
               stargazers_url:
                 key: stargazers_url
+                propertyName: stargazersUrl
                 name: RepoStargazersUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["stargazers_url"]'
@@ -1062,6 +1186,7 @@ fields:
                 sorting: 10
               statuses_url:
                 key: statuses_url
+                propertyName: statusesUrl
                 name: RepoStatusesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["statuses_url"]'
@@ -1071,6 +1196,7 @@ fields:
                 sorting: 10
               subscribers_url:
                 key: subscribers_url
+                propertyName: subscribersUrl
                 name: RepoSubscribersUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["subscribers_url"]'
@@ -1080,6 +1206,7 @@ fields:
                 sorting: 10
               subscription_url:
                 key: subscription_url
+                propertyName: subscriptionUrl
                 name: RepoSubscriptionUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["subscription_url"]'
@@ -1089,6 +1216,7 @@ fields:
                 sorting: 10
               svn_url:
                 key: svn_url
+                propertyName: svnUrl
                 name: RepoSvnUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["svn_url"]'
@@ -1098,6 +1226,7 @@ fields:
                 sorting: 10
               tags_url:
                 key: tags_url
+                propertyName: tagsUrl
                 name: RepoTagsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["tags_url"]'
@@ -1107,6 +1236,7 @@ fields:
                 sorting: 10
               teams_url:
                 key: teams_url
+                propertyName: teamsUrl
                 name: RepoTeamsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["teams_url"]'
@@ -1116,6 +1246,7 @@ fields:
                 sorting: 10
               trees_url:
                 key: trees_url
+                propertyName: treesUrl
                 name: RepoTreesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["trees_url"]'
@@ -1125,6 +1256,7 @@ fields:
                 sorting: 10
               url:
                 key: url
+                propertyName: url
                 name: RepoUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["url"]'
@@ -1134,6 +1266,7 @@ fields:
                 sorting: 10
               created_at:
                 key: created_at
+                propertyName: createdAt
                 name: RepoCreatedAt
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["created_at"]'
@@ -1143,6 +1276,7 @@ fields:
                 sorting: 5
               pushed_at:
                 key: pushed_at
+                propertyName: pushedAt
                 name: RepoPushedAt
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["pushed_at"]'
@@ -1152,6 +1286,7 @@ fields:
                 sorting: 5
               updated_at:
                 key: updated_at
+                propertyName: updatedAt
                 name: RepoUpdatedAt
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
                 inputKey: '["pull_request"]["base"]["repo"]["updated_at"]'
@@ -1161,6 +1296,7 @@ fields:
                 sorting: 5
           user:
             key: User
+            propertyName: user
             name: User
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base
             inputKey: '["pull_request"]["base"]["user"]'
@@ -1169,6 +1305,7 @@ fields:
             fields:
               id:
                 key: id
+                propertyName: id
                 name: UserId
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["id"]'
@@ -1178,6 +1315,7 @@ fields:
                 sorting: 200
               gravatar_id:
                 key: gravatar_id
+                propertyName: gravatarId
                 name: UserGravatarId
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["gravatar_id"]'
@@ -1186,6 +1324,7 @@ fields:
                 sorting: 30
               login:
                 key: login
+                propertyName: login
                 name: UserLogin
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["login"]'
@@ -1194,6 +1333,7 @@ fields:
                 sorting: 30
               type:
                 key: type
+                propertyName: type
                 name: UserType
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["type"]'
@@ -1202,6 +1342,7 @@ fields:
                 sorting: 30
               site_admin:
                 key: site_admin
+                propertyName: siteAdmin
                 name: UserSiteAdmin
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["site_admin"]'
@@ -1210,6 +1351,7 @@ fields:
                 sorting: 20
               avatar_url:
                 key: avatar_url
+                propertyName: avatarUrl
                 name: UserAvatarUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["avatar_url"]'
@@ -1219,6 +1361,7 @@ fields:
                 sorting: 10
               events_url:
                 key: events_url
+                propertyName: eventsUrl
                 name: UserEventsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["events_url"]'
@@ -1228,6 +1371,7 @@ fields:
                 sorting: 10
               followers_url:
                 key: followers_url
+                propertyName: followersUrl
                 name: UserFollowersUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["followers_url"]'
@@ -1237,6 +1381,7 @@ fields:
                 sorting: 10
               following_url:
                 key: following_url
+                propertyName: followingUrl
                 name: UserFollowingUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["following_url"]'
@@ -1246,6 +1391,7 @@ fields:
                 sorting: 10
               gists_url:
                 key: gists_url
+                propertyName: gistsUrl
                 name: UserGistsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["gists_url"]'
@@ -1255,6 +1401,7 @@ fields:
                 sorting: 10
               html_url:
                 key: html_url
+                propertyName: htmlUrl
                 name: UserHtmlUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["html_url"]'
@@ -1264,6 +1411,7 @@ fields:
                 sorting: 10
               organizations_url:
                 key: organizations_url
+                propertyName: organizationsUrl
                 name: UserOrganizationsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["organizations_url"]'
@@ -1273,6 +1421,7 @@ fields:
                 sorting: 10
               received_events_url:
                 key: received_events_url
+                propertyName: receivedEventsUrl
                 name: UserReceivedEventsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["received_events_url"]'
@@ -1282,6 +1431,7 @@ fields:
                 sorting: 10
               repos_url:
                 key: repos_url
+                propertyName: reposUrl
                 name: UserReposUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["repos_url"]'
@@ -1291,6 +1441,7 @@ fields:
                 sorting: 10
               starred_url:
                 key: starred_url
+                propertyName: starredUrl
                 name: UserStarredUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["starred_url"]'
@@ -1300,6 +1451,7 @@ fields:
                 sorting: 10
               subscriptions_url:
                 key: subscriptions_url
+                propertyName: subscriptionsUrl
                 name: UserSubscriptionsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["subscriptions_url"]'
@@ -1309,6 +1461,7 @@ fields:
                 sorting: 10
               url:
                 key: url
+                propertyName: url
                 name: UserUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
                 inputKey: '["pull_request"]["base"]["user"]["url"]'
@@ -1318,6 +1471,7 @@ fields:
                 sorting: 10
       head:
         key: Head
+        propertyName: head
         name: Head
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["head"]'
@@ -1326,6 +1480,7 @@ fields:
         fields:
           label:
             key: label
+            propertyName: label
             name: HeadLabel
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
             inputKey: '["pull_request"]["head"]["label"]'
@@ -1334,6 +1489,7 @@ fields:
             sorting: 30
           ref:
             key: ref
+            propertyName: ref
             name: HeadRef
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
             inputKey: '["pull_request"]["head"]["ref"]'
@@ -1342,6 +1498,7 @@ fields:
             sorting: 30
           sha:
             key: sha
+            propertyName: sha
             name: HeadSha
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
             inputKey: '["pull_request"]["head"]["sha"]'
@@ -1350,6 +1507,7 @@ fields:
             sorting: 30
           repo:
             key: Repo
+            propertyName: repo
             name: Repo
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
             inputKey: '["pull_request"]["head"]["repo"]'
@@ -1358,6 +1516,7 @@ fields:
             fields:
               id:
                 key: id
+                propertyName: id
                 name: RepoId
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["id"]'
@@ -1368,6 +1527,7 @@ fields:
                 sorting: 200
               default_branch:
                 key: default_branch
+                propertyName: defaultBranch
                 name: RepoDefaultBranch
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["default_branch"]'
@@ -1376,6 +1536,7 @@ fields:
                 sorting: 30
               description:
                 key: description
+                propertyName: description
                 name: RepoDescription
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["description"]'
@@ -1384,6 +1545,7 @@ fields:
                 sorting: 30
               forks:
                 key: forks
+                propertyName: forks
                 name: RepoForks
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["forks"]'
@@ -1392,6 +1554,7 @@ fields:
                 sorting: 30
               forks_count:
                 key: forks_count
+                propertyName: forksCount
                 name: RepoForksCount
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["forks_count"]'
@@ -1400,6 +1563,7 @@ fields:
                 sorting: 30
               full_name:
                 key: full_name
+                propertyName: fullName
                 name: RepoFullName
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["full_name"]'
@@ -1408,6 +1572,7 @@ fields:
                 sorting: 30
               language:
                 key: language
+                propertyName: language
                 name: RepoLanguage
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["language"]'
@@ -1416,6 +1581,7 @@ fields:
                 sorting: 30
               name:
                 key: name
+                propertyName: name
                 name: RepoName
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["name"]'
@@ -1424,6 +1590,7 @@ fields:
                 sorting: 30
               open_issues:
                 key: open_issues
+                propertyName: openIssues
                 name: RepoOpenIssues
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["open_issues"]'
@@ -1432,6 +1599,7 @@ fields:
                 sorting: 30
               open_issues_count:
                 key: open_issues_count
+                propertyName: openIssuesCount
                 name: RepoOpenIssuesCount
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["open_issues_count"]'
@@ -1440,6 +1608,7 @@ fields:
                 sorting: 30
               size:
                 key: size
+                propertyName: size
                 name: RepoSize
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["size"]'
@@ -1448,6 +1617,7 @@ fields:
                 sorting: 30
               ssh_url:
                 key: ssh_url
+                propertyName: sshUrl
                 name: RepoSshUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["ssh_url"]'
@@ -1456,6 +1626,7 @@ fields:
                 sorting: 30
               stargazers_count:
                 key: stargazers_count
+                propertyName: stargazersCount
                 name: RepoStargazersCount
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["stargazers_count"]'
@@ -1464,6 +1635,7 @@ fields:
                 sorting: 30
               watchers:
                 key: watchers
+                propertyName: watchers
                 name: RepoWatchers
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["watchers"]'
@@ -1472,6 +1644,7 @@ fields:
                 sorting: 30
               watchers_count:
                 key: watchers_count
+                propertyName: watchersCount
                 name: RepoWatchersCount
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["watchers_count"]'
@@ -1480,6 +1653,7 @@ fields:
                 sorting: 30
               archived:
                 key: archived
+                propertyName: archived
                 name: RepoArchived
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["archived"]'
@@ -1488,6 +1662,7 @@ fields:
                 sorting: 20
               fork:
                 key: fork
+                propertyName: fork
                 name: RepoFork
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["fork"]'
@@ -1496,6 +1671,7 @@ fields:
                 sorting: 20
               has_downloads:
                 key: has_downloads
+                propertyName: hasDownloads
                 name: RepoHasDownloads
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["has_downloads"]'
@@ -1504,6 +1680,7 @@ fields:
                 sorting: 20
               has_issues:
                 key: has_issues
+                propertyName: hasIssues
                 name: RepoHasIssues
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["has_issues"]'
@@ -1512,6 +1689,7 @@ fields:
                 sorting: 20
               has_pages:
                 key: has_pages
+                propertyName: hasPages
                 name: RepoHasPages
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["has_pages"]'
@@ -1520,6 +1698,7 @@ fields:
                 sorting: 20
               has_projects:
                 key: has_projects
+                propertyName: hasProjects
                 name: RepoHasProjects
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["has_projects"]'
@@ -1528,6 +1707,7 @@ fields:
                 sorting: 20
               has_wiki:
                 key: has_wiki
+                propertyName: hasWiki
                 name: RepoHasWiki
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["has_wiki"]'
@@ -1536,6 +1716,7 @@ fields:
                 sorting: 20
               homepage:
                 key: homepage
+                propertyName: homepage
                 name: RepoHomepage
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["homepage"]'
@@ -1544,6 +1725,7 @@ fields:
                 sorting: 20
               license:
                 key: license
+                propertyName: license
                 name: RepoLicense
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["license"]'
@@ -1552,6 +1734,7 @@ fields:
                 sorting: 20
               mirror_url:
                 key: mirror_url
+                propertyName: mirrorUrl
                 name: RepoMirrorUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["mirror_url"]'
@@ -1560,6 +1743,7 @@ fields:
                 sorting: 20
               private:
                 key: private
+                propertyName: private
                 name: RepoPrivate
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["private"]'
@@ -1568,6 +1752,7 @@ fields:
                 sorting: 20
               owner:
                 key: Owner
+                propertyName: owner
                 name: Owner
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["owner"]'
@@ -1576,6 +1761,7 @@ fields:
                 fields:
                   id:
                     key: id
+                    propertyName: id
                     name: OwnerId
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["id"]'
@@ -1585,6 +1771,7 @@ fields:
                     sorting: 200
                   gravatar_id:
                     key: gravatar_id
+                    propertyName: gravatarId
                     name: OwnerGravatarId
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["gravatar_id"]'
@@ -1593,6 +1780,7 @@ fields:
                     sorting: 30
                   login:
                     key: login
+                    propertyName: login
                     name: OwnerLogin
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["login"]'
@@ -1601,6 +1789,7 @@ fields:
                     sorting: 30
                   type:
                     key: type
+                    propertyName: type
                     name: OwnerType
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["type"]'
@@ -1609,6 +1798,7 @@ fields:
                     sorting: 30
                   site_admin:
                     key: site_admin
+                    propertyName: siteAdmin
                     name: OwnerSiteAdmin
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["site_admin"]'
@@ -1617,6 +1807,7 @@ fields:
                     sorting: 20
                   avatar_url:
                     key: avatar_url
+                    propertyName: avatarUrl
                     name: OwnerAvatarUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["avatar_url"]'
@@ -1626,6 +1817,7 @@ fields:
                     sorting: 10
                   events_url:
                     key: events_url
+                    propertyName: eventsUrl
                     name: OwnerEventsUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["events_url"]'
@@ -1635,6 +1827,7 @@ fields:
                     sorting: 10
                   followers_url:
                     key: followers_url
+                    propertyName: followersUrl
                     name: OwnerFollowersUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["followers_url"]'
@@ -1644,6 +1837,7 @@ fields:
                     sorting: 10
                   following_url:
                     key: following_url
+                    propertyName: followingUrl
                     name: OwnerFollowingUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["following_url"]'
@@ -1653,6 +1847,7 @@ fields:
                     sorting: 10
                   gists_url:
                     key: gists_url
+                    propertyName: gistsUrl
                     name: OwnerGistsUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["gists_url"]'
@@ -1662,6 +1857,7 @@ fields:
                     sorting: 10
                   html_url:
                     key: html_url
+                    propertyName: htmlUrl
                     name: OwnerHtmlUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["html_url"]'
@@ -1671,6 +1867,7 @@ fields:
                     sorting: 10
                   organizations_url:
                     key: organizations_url
+                    propertyName: organizationsUrl
                     name: OwnerOrganizationsUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["organizations_url"]'
@@ -1680,6 +1877,7 @@ fields:
                     sorting: 10
                   received_events_url:
                     key: received_events_url
+                    propertyName: receivedEventsUrl
                     name: OwnerReceivedEventsUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["received_events_url"]'
@@ -1689,6 +1887,7 @@ fields:
                     sorting: 10
                   repos_url:
                     key: repos_url
+                    propertyName: reposUrl
                     name: OwnerReposUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["repos_url"]'
@@ -1698,6 +1897,7 @@ fields:
                     sorting: 10
                   starred_url:
                     key: starred_url
+                    propertyName: starredUrl
                     name: OwnerStarredUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["starred_url"]'
@@ -1707,6 +1907,7 @@ fields:
                     sorting: 10
                   subscriptions_url:
                     key: subscriptions_url
+                    propertyName: subscriptionsUrl
                     name: OwnerSubscriptionsUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["subscriptions_url"]'
@@ -1716,6 +1917,7 @@ fields:
                     sorting: 10
                   url:
                     key: url
+                    propertyName: url
                     name: OwnerUrl
                     namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
                     inputKey: '["pull_request"]["head"]["repo"]["owner"]["url"]'
@@ -1725,6 +1927,7 @@ fields:
                     sorting: 10
               archive_url:
                 key: archive_url
+                propertyName: archiveUrl
                 name: RepoArchiveUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["archive_url"]'
@@ -1734,6 +1937,7 @@ fields:
                 sorting: 10
               assignees_url:
                 key: assignees_url
+                propertyName: assigneesUrl
                 name: RepoAssigneesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["assignees_url"]'
@@ -1743,6 +1947,7 @@ fields:
                 sorting: 10
               blobs_url:
                 key: blobs_url
+                propertyName: blobsUrl
                 name: RepoBlobsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["blobs_url"]'
@@ -1752,6 +1957,7 @@ fields:
                 sorting: 10
               branches_url:
                 key: branches_url
+                propertyName: branchesUrl
                 name: RepoBranchesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["branches_url"]'
@@ -1761,6 +1967,7 @@ fields:
                 sorting: 10
               clone_url:
                 key: clone_url
+                propertyName: cloneUrl
                 name: RepoCloneUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["clone_url"]'
@@ -1770,6 +1977,7 @@ fields:
                 sorting: 10
               collaborators_url:
                 key: collaborators_url
+                propertyName: collaboratorsUrl
                 name: RepoCollaboratorsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["collaborators_url"]'
@@ -1779,6 +1987,7 @@ fields:
                 sorting: 10
               comments_url:
                 key: comments_url
+                propertyName: commentsUrl
                 name: RepoCommentsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["comments_url"]'
@@ -1788,6 +1997,7 @@ fields:
                 sorting: 10
               commits_url:
                 key: commits_url
+                propertyName: commitsUrl
                 name: RepoCommitsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["commits_url"]'
@@ -1797,6 +2007,7 @@ fields:
                 sorting: 10
               compare_url:
                 key: compare_url
+                propertyName: compareUrl
                 name: RepoCompareUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["compare_url"]'
@@ -1806,6 +2017,7 @@ fields:
                 sorting: 10
               contents_url:
                 key: contents_url
+                propertyName: contentsUrl
                 name: RepoContentsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["contents_url"]'
@@ -1815,6 +2027,7 @@ fields:
                 sorting: 10
               contributors_url:
                 key: contributors_url
+                propertyName: contributorsUrl
                 name: RepoContributorsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["contributors_url"]'
@@ -1824,6 +2037,7 @@ fields:
                 sorting: 10
               deployments_url:
                 key: deployments_url
+                propertyName: deploymentsUrl
                 name: RepoDeploymentsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["deployments_url"]'
@@ -1833,6 +2047,7 @@ fields:
                 sorting: 10
               downloads_url:
                 key: downloads_url
+                propertyName: downloadsUrl
                 name: RepoDownloadsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["downloads_url"]'
@@ -1842,6 +2057,7 @@ fields:
                 sorting: 10
               events_url:
                 key: events_url
+                propertyName: eventsUrl
                 name: RepoEventsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["events_url"]'
@@ -1851,6 +2067,7 @@ fields:
                 sorting: 10
               forks_url:
                 key: forks_url
+                propertyName: forksUrl
                 name: RepoForksUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["forks_url"]'
@@ -1860,6 +2077,7 @@ fields:
                 sorting: 10
               git_commits_url:
                 key: git_commits_url
+                propertyName: gitCommitsUrl
                 name: RepoGitCommitsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["git_commits_url"]'
@@ -1869,6 +2087,7 @@ fields:
                 sorting: 10
               git_refs_url:
                 key: git_refs_url
+                propertyName: gitRefsUrl
                 name: RepoGitRefsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["git_refs_url"]'
@@ -1878,6 +2097,7 @@ fields:
                 sorting: 10
               git_tags_url:
                 key: git_tags_url
+                propertyName: gitTagsUrl
                 name: RepoGitTagsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["git_tags_url"]'
@@ -1887,6 +2107,7 @@ fields:
                 sorting: 10
               git_url:
                 key: git_url
+                propertyName: gitUrl
                 name: RepoGitUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["git_url"]'
@@ -1896,6 +2117,7 @@ fields:
                 sorting: 10
               hooks_url:
                 key: hooks_url
+                propertyName: hooksUrl
                 name: RepoHooksUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["hooks_url"]'
@@ -1905,6 +2127,7 @@ fields:
                 sorting: 10
               html_url:
                 key: html_url
+                propertyName: htmlUrl
                 name: RepoHtmlUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["html_url"]'
@@ -1914,6 +2137,7 @@ fields:
                 sorting: 10
               issue_comment_url:
                 key: issue_comment_url
+                propertyName: issueCommentUrl
                 name: RepoIssueCommentUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["issue_comment_url"]'
@@ -1923,6 +2147,7 @@ fields:
                 sorting: 10
               issue_events_url:
                 key: issue_events_url
+                propertyName: issueEventsUrl
                 name: RepoIssueEventsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["issue_events_url"]'
@@ -1932,6 +2157,7 @@ fields:
                 sorting: 10
               issues_url:
                 key: issues_url
+                propertyName: issuesUrl
                 name: RepoIssuesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["issues_url"]'
@@ -1941,6 +2167,7 @@ fields:
                 sorting: 10
               keys_url:
                 key: keys_url
+                propertyName: keysUrl
                 name: RepoKeysUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["keys_url"]'
@@ -1950,6 +2177,7 @@ fields:
                 sorting: 10
               labels_url:
                 key: labels_url
+                propertyName: labelsUrl
                 name: RepoLabelsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["labels_url"]'
@@ -1959,6 +2187,7 @@ fields:
                 sorting: 10
               languages_url:
                 key: languages_url
+                propertyName: languagesUrl
                 name: RepoLanguagesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["languages_url"]'
@@ -1968,6 +2197,7 @@ fields:
                 sorting: 10
               merges_url:
                 key: merges_url
+                propertyName: mergesUrl
                 name: RepoMergesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["merges_url"]'
@@ -1977,6 +2207,7 @@ fields:
                 sorting: 10
               milestones_url:
                 key: milestones_url
+                propertyName: milestonesUrl
                 name: RepoMilestonesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["milestones_url"]'
@@ -1986,6 +2217,7 @@ fields:
                 sorting: 10
               notifications_url:
                 key: notifications_url
+                propertyName: notificationsUrl
                 name: RepoNotificationsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["notifications_url"]'
@@ -1995,6 +2227,7 @@ fields:
                 sorting: 10
               pulls_url:
                 key: pulls_url
+                propertyName: pullsUrl
                 name: RepoPullsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["pulls_url"]'
@@ -2004,6 +2237,7 @@ fields:
                 sorting: 10
               releases_url:
                 key: releases_url
+                propertyName: releasesUrl
                 name: RepoReleasesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["releases_url"]'
@@ -2013,6 +2247,7 @@ fields:
                 sorting: 10
               stargazers_url:
                 key: stargazers_url
+                propertyName: stargazersUrl
                 name: RepoStargazersUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["stargazers_url"]'
@@ -2022,6 +2257,7 @@ fields:
                 sorting: 10
               statuses_url:
                 key: statuses_url
+                propertyName: statusesUrl
                 name: RepoStatusesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["statuses_url"]'
@@ -2031,6 +2267,7 @@ fields:
                 sorting: 10
               subscribers_url:
                 key: subscribers_url
+                propertyName: subscribersUrl
                 name: RepoSubscribersUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["subscribers_url"]'
@@ -2040,6 +2277,7 @@ fields:
                 sorting: 10
               subscription_url:
                 key: subscription_url
+                propertyName: subscriptionUrl
                 name: RepoSubscriptionUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["subscription_url"]'
@@ -2049,6 +2287,7 @@ fields:
                 sorting: 10
               svn_url:
                 key: svn_url
+                propertyName: svnUrl
                 name: RepoSvnUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["svn_url"]'
@@ -2058,6 +2297,7 @@ fields:
                 sorting: 10
               tags_url:
                 key: tags_url
+                propertyName: tagsUrl
                 name: RepoTagsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["tags_url"]'
@@ -2067,6 +2307,7 @@ fields:
                 sorting: 10
               teams_url:
                 key: teams_url
+                propertyName: teamsUrl
                 name: RepoTeamsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["teams_url"]'
@@ -2076,6 +2317,7 @@ fields:
                 sorting: 10
               trees_url:
                 key: trees_url
+                propertyName: treesUrl
                 name: RepoTreesUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["trees_url"]'
@@ -2085,6 +2327,7 @@ fields:
                 sorting: 10
               url:
                 key: url
+                propertyName: url
                 name: RepoUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["url"]'
@@ -2094,6 +2337,7 @@ fields:
                 sorting: 10
               created_at:
                 key: created_at
+                propertyName: createdAt
                 name: RepoCreatedAt
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["created_at"]'
@@ -2103,6 +2347,7 @@ fields:
                 sorting: 5
               pushed_at:
                 key: pushed_at
+                propertyName: pushedAt
                 name: RepoPushedAt
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["pushed_at"]'
@@ -2112,6 +2357,7 @@ fields:
                 sorting: 5
               updated_at:
                 key: updated_at
+                propertyName: updatedAt
                 name: RepoUpdatedAt
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
                 inputKey: '["pull_request"]["head"]["repo"]["updated_at"]'
@@ -2121,6 +2367,7 @@ fields:
                 sorting: 5
           user:
             key: User
+            propertyName: user
             name: User
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head
             inputKey: '["pull_request"]["head"]["user"]'
@@ -2129,6 +2376,7 @@ fields:
             fields:
               id:
                 key: id
+                propertyName: id
                 name: UserId
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["id"]'
@@ -2138,6 +2386,7 @@ fields:
                 sorting: 200
               gravatar_id:
                 key: gravatar_id
+                propertyName: gravatarId
                 name: UserGravatarId
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["gravatar_id"]'
@@ -2146,6 +2395,7 @@ fields:
                 sorting: 30
               login:
                 key: login
+                propertyName: login
                 name: UserLogin
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["login"]'
@@ -2154,6 +2404,7 @@ fields:
                 sorting: 30
               type:
                 key: type
+                propertyName: type
                 name: UserType
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["type"]'
@@ -2162,6 +2413,7 @@ fields:
                 sorting: 30
               site_admin:
                 key: site_admin
+                propertyName: siteAdmin
                 name: UserSiteAdmin
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["site_admin"]'
@@ -2170,6 +2422,7 @@ fields:
                 sorting: 20
               avatar_url:
                 key: avatar_url
+                propertyName: avatarUrl
                 name: UserAvatarUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["avatar_url"]'
@@ -2179,6 +2432,7 @@ fields:
                 sorting: 10
               events_url:
                 key: events_url
+                propertyName: eventsUrl
                 name: UserEventsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["events_url"]'
@@ -2188,6 +2442,7 @@ fields:
                 sorting: 10
               followers_url:
                 key: followers_url
+                propertyName: followersUrl
                 name: UserFollowersUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["followers_url"]'
@@ -2197,6 +2452,7 @@ fields:
                 sorting: 10
               following_url:
                 key: following_url
+                propertyName: followingUrl
                 name: UserFollowingUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["following_url"]'
@@ -2206,6 +2462,7 @@ fields:
                 sorting: 10
               gists_url:
                 key: gists_url
+                propertyName: gistsUrl
                 name: UserGistsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["gists_url"]'
@@ -2215,6 +2472,7 @@ fields:
                 sorting: 10
               html_url:
                 key: html_url
+                propertyName: htmlUrl
                 name: UserHtmlUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["html_url"]'
@@ -2224,6 +2482,7 @@ fields:
                 sorting: 10
               organizations_url:
                 key: organizations_url
+                propertyName: organizationsUrl
                 name: UserOrganizationsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["organizations_url"]'
@@ -2233,6 +2492,7 @@ fields:
                 sorting: 10
               received_events_url:
                 key: received_events_url
+                propertyName: receivedEventsUrl
                 name: UserReceivedEventsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["received_events_url"]'
@@ -2242,6 +2502,7 @@ fields:
                 sorting: 10
               repos_url:
                 key: repos_url
+                propertyName: reposUrl
                 name: UserReposUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["repos_url"]'
@@ -2251,6 +2512,7 @@ fields:
                 sorting: 10
               starred_url:
                 key: starred_url
+                propertyName: starredUrl
                 name: UserStarredUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["starred_url"]'
@@ -2260,6 +2522,7 @@ fields:
                 sorting: 10
               subscriptions_url:
                 key: subscriptions_url
+                propertyName: subscriptionsUrl
                 name: UserSubscriptionsUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["subscriptions_url"]'
@@ -2269,6 +2532,7 @@ fields:
                 sorting: 10
               url:
                 key: url
+                propertyName: url
                 name: UserUrl
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
                 inputKey: '["pull_request"]["head"]["user"]["url"]'
@@ -2278,6 +2542,7 @@ fields:
                 sorting: 10
       _links:
         key: Links
+        propertyName: links
         name: Links
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["_links"]'
@@ -2286,6 +2551,7 @@ fields:
         fields:
           comments:
             key: Comments
+            propertyName: comments
             name: Comments
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["comments"]'
@@ -2294,6 +2560,7 @@ fields:
             fields:
               href:
                 key: href
+                propertyName: href
                 name: CommentsHref
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Comments
                 inputKey: '["pull_request"]["_links"]["comments"]["href"]'
@@ -2303,6 +2570,7 @@ fields:
                 sorting: 10
           commits:
             key: Commits
+            propertyName: commits
             name: Commits
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["commits"]'
@@ -2311,6 +2579,7 @@ fields:
             fields:
               href:
                 key: href
+                propertyName: href
                 name: CommitsHref
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Commits
                 inputKey: '["pull_request"]["_links"]["commits"]["href"]'
@@ -2320,6 +2589,7 @@ fields:
                 sorting: 10
           html:
             key: Html
+            propertyName: html
             name: Html
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["html"]'
@@ -2328,6 +2598,7 @@ fields:
             fields:
               href:
                 key: href
+                propertyName: href
                 name: HtmlHref
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Html
                 inputKey: '["pull_request"]["_links"]["html"]["href"]'
@@ -2337,6 +2608,7 @@ fields:
                 sorting: 10
           issue:
             key: Issue
+            propertyName: issue
             name: Issue
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["issue"]'
@@ -2345,6 +2617,7 @@ fields:
             fields:
               href:
                 key: href
+                propertyName: href
                 name: IssueHref
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Issue
                 inputKey: '["pull_request"]["_links"]["issue"]["href"]'
@@ -2354,6 +2627,7 @@ fields:
                 sorting: 10
           review_comment:
             key: ReviewComment
+            propertyName: reviewComment
             name: ReviewComment
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["review_comment"]'
@@ -2362,6 +2636,7 @@ fields:
             fields:
               href:
                 key: href
+                propertyName: href
                 name: ReviewCommentHref
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\ReviewComment
                 inputKey: '["pull_request"]["_links"]["review_comment"]["href"]'
@@ -2371,6 +2646,7 @@ fields:
                 sorting: 10
           review_comments:
             key: ReviewComments
+            propertyName: reviewComments
             name: ReviewComments
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["review_comments"]'
@@ -2379,6 +2655,7 @@ fields:
             fields:
               href:
                 key: href
+                propertyName: href
                 name: ReviewCommentsHref
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\ReviewComments
                 inputKey: '["pull_request"]["_links"]["review_comments"]["href"]'
@@ -2388,6 +2665,7 @@ fields:
                 sorting: 10
           self:
             key: Self
+            propertyName: self
             name: Self
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["self"]'
@@ -2396,6 +2674,7 @@ fields:
             fields:
               href:
                 key: href
+                propertyName: href
                 name: SelfHref
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Self
                 inputKey: '["pull_request"]["_links"]["self"]["href"]'
@@ -2405,6 +2684,7 @@ fields:
                 sorting: 10
           statuses:
             key: Statuses
+            propertyName: statuses
             name: Statuses
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links
             inputKey: '["pull_request"]["_links"]["statuses"]'
@@ -2413,6 +2693,7 @@ fields:
             fields:
               href:
                 key: href
+                propertyName: href
                 name: StatusesHref
                 namespace: GitHub\WebHook\PullRequestHook\PullRequest\Links\Statuses
                 inputKey: '["pull_request"]["_links"]["statuses"]["href"]'
@@ -2422,6 +2703,7 @@ fields:
                 sorting: 10
       requested_reviewers:
         key: RequestedReviewers
+        propertyName: requestedReviewers
         name: RequestedReviewers
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["requested_reviewers"]'
@@ -2434,6 +2716,7 @@ fields:
           has: TODO3
       user:
         key: User
+        propertyName: user
         name: User
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["user"]'
@@ -2442,6 +2725,7 @@ fields:
         fields:
           id:
             key: id
+            propertyName: id
             name: UserId
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["id"]'
@@ -2451,6 +2735,7 @@ fields:
             sorting: 200
           gravatar_id:
             key: gravatar_id
+            propertyName: gravatarId
             name: UserGravatarId
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["gravatar_id"]'
@@ -2459,6 +2744,7 @@ fields:
             sorting: 30
           login:
             key: login
+            propertyName: login
             name: UserLogin
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["login"]'
@@ -2467,6 +2753,7 @@ fields:
             sorting: 30
           type:
             key: type
+            propertyName: type
             name: UserType
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["type"]'
@@ -2475,6 +2762,7 @@ fields:
             sorting: 30
           site_admin:
             key: site_admin
+            propertyName: siteAdmin
             name: UserSiteAdmin
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["site_admin"]'
@@ -2483,6 +2771,7 @@ fields:
             sorting: 20
           avatar_url:
             key: avatar_url
+            propertyName: avatarUrl
             name: UserAvatarUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["avatar_url"]'
@@ -2492,6 +2781,7 @@ fields:
             sorting: 10
           events_url:
             key: events_url
+            propertyName: eventsUrl
             name: UserEventsUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["events_url"]'
@@ -2501,6 +2791,7 @@ fields:
             sorting: 10
           followers_url:
             key: followers_url
+            propertyName: followersUrl
             name: UserFollowersUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["followers_url"]'
@@ -2510,6 +2801,7 @@ fields:
             sorting: 10
           following_url:
             key: following_url
+            propertyName: followingUrl
             name: UserFollowingUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["following_url"]'
@@ -2519,6 +2811,7 @@ fields:
             sorting: 10
           gists_url:
             key: gists_url
+            propertyName: gistsUrl
             name: UserGistsUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["gists_url"]'
@@ -2528,6 +2821,7 @@ fields:
             sorting: 10
           html_url:
             key: html_url
+            propertyName: htmlUrl
             name: UserHtmlUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["html_url"]'
@@ -2537,6 +2831,7 @@ fields:
             sorting: 10
           organizations_url:
             key: organizations_url
+            propertyName: organizationsUrl
             name: UserOrganizationsUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["organizations_url"]'
@@ -2546,6 +2841,7 @@ fields:
             sorting: 10
           received_events_url:
             key: received_events_url
+            propertyName: receivedEventsUrl
             name: UserReceivedEventsUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["received_events_url"]'
@@ -2555,6 +2851,7 @@ fields:
             sorting: 10
           repos_url:
             key: repos_url
+            propertyName: reposUrl
             name: UserReposUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["repos_url"]'
@@ -2564,6 +2861,7 @@ fields:
             sorting: 10
           starred_url:
             key: starred_url
+            propertyName: starredUrl
             name: UserStarredUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["starred_url"]'
@@ -2573,6 +2871,7 @@ fields:
             sorting: 10
           subscriptions_url:
             key: subscriptions_url
+            propertyName: subscriptionsUrl
             name: UserSubscriptionsUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["subscriptions_url"]'
@@ -2582,6 +2881,7 @@ fields:
             sorting: 10
           url:
             key: url
+            propertyName: url
             name: UserUrl
             namespace: GitHub\WebHook\PullRequestHook\PullRequest\User
             inputKey: '["pull_request"]["user"]["url"]'
@@ -2591,6 +2891,7 @@ fields:
             sorting: 10
       comments_url:
         key: comments_url
+        propertyName: commentsUrl
         name: PullRequestCommentsUrl
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["comments_url"]'
@@ -2600,6 +2901,7 @@ fields:
         sorting: 10
       commits_url:
         key: commits_url
+        propertyName: commitsUrl
         name: PullRequestCommitsUrl
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["commits_url"]'
@@ -2609,6 +2911,7 @@ fields:
         sorting: 10
       diff_url:
         key: diff_url
+        propertyName: diffUrl
         name: PullRequestDiffUrl
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["diff_url"]'
@@ -2618,6 +2921,7 @@ fields:
         sorting: 10
       html_url:
         key: html_url
+        propertyName: htmlUrl
         name: PullRequestHtmlUrl
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["html_url"]'
@@ -2627,6 +2931,7 @@ fields:
         sorting: 10
       issue_url:
         key: issue_url
+        propertyName: issueUrl
         name: PullRequestIssueUrl
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["issue_url"]'
@@ -2636,6 +2941,7 @@ fields:
         sorting: 10
       patch_url:
         key: patch_url
+        propertyName: patchUrl
         name: PullRequestPatchUrl
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["patch_url"]'
@@ -2645,6 +2951,7 @@ fields:
         sorting: 10
       review_comment_url:
         key: review_comment_url
+        propertyName: reviewCommentUrl
         name: PullRequestReviewCommentUrl
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["review_comment_url"]'
@@ -2654,6 +2961,7 @@ fields:
         sorting: 10
       review_comments_url:
         key: review_comments_url
+        propertyName: reviewCommentsUrl
         name: PullRequestReviewCommentsUrl
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["review_comments_url"]'
@@ -2663,6 +2971,7 @@ fields:
         sorting: 10
       statuses_url:
         key: statuses_url
+        propertyName: statusesUrl
         name: PullRequestStatusesUrl
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["statuses_url"]'
@@ -2672,6 +2981,7 @@ fields:
         sorting: 10
       url:
         key: url
+        propertyName: url
         name: PullRequestUrl
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["url"]'
@@ -2681,6 +2991,7 @@ fields:
         sorting: 10
       created_at:
         key: created_at
+        propertyName: createdAt
         name: PullRequestCreatedAt
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["created_at"]'
@@ -2690,6 +3001,7 @@ fields:
         sorting: 5
       updated_at:
         key: updated_at
+        propertyName: updatedAt
         name: PullRequestUpdatedAt
         namespace: GitHub\WebHook\PullRequestHook\PullRequest
         inputKey: '["pull_request"]["updated_at"]'
@@ -2699,6 +3011,7 @@ fields:
         sorting: 5
   repository:
     key: Repository
+    propertyName: repository
     name: Repository
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["repository"]'
@@ -2707,6 +3020,7 @@ fields:
     fields:
       id:
         key: id
+        propertyName: id
         name: RepositoryId
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["id"]'
@@ -2717,6 +3031,7 @@ fields:
         sorting: 200
       default_branch:
         key: default_branch
+        propertyName: defaultBranch
         name: RepositoryDefaultBranch
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["default_branch"]'
@@ -2725,6 +3040,7 @@ fields:
         sorting: 30
       description:
         key: description
+        propertyName: description
         name: RepositoryDescription
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["description"]'
@@ -2733,6 +3049,7 @@ fields:
         sorting: 30
       forks:
         key: forks
+        propertyName: forks
         name: RepositoryForks
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["forks"]'
@@ -2741,6 +3058,7 @@ fields:
         sorting: 30
       forks_count:
         key: forks_count
+        propertyName: forksCount
         name: RepositoryForksCount
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["forks_count"]'
@@ -2749,6 +3067,7 @@ fields:
         sorting: 30
       full_name:
         key: full_name
+        propertyName: fullName
         name: RepositoryFullName
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["full_name"]'
@@ -2757,6 +3076,7 @@ fields:
         sorting: 30
       language:
         key: language
+        propertyName: language
         name: RepositoryLanguage
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["language"]'
@@ -2765,6 +3085,7 @@ fields:
         sorting: 30
       name:
         key: name
+        propertyName: name
         name: RepositoryName
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["name"]'
@@ -2773,6 +3094,7 @@ fields:
         sorting: 30
       open_issues:
         key: open_issues
+        propertyName: openIssues
         name: RepositoryOpenIssues
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["open_issues"]'
@@ -2781,6 +3103,7 @@ fields:
         sorting: 30
       open_issues_count:
         key: open_issues_count
+        propertyName: openIssuesCount
         name: RepositoryOpenIssuesCount
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["open_issues_count"]'
@@ -2789,6 +3112,7 @@ fields:
         sorting: 30
       size:
         key: size
+        propertyName: size
         name: RepositorySize
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["size"]'
@@ -2797,6 +3121,7 @@ fields:
         sorting: 30
       ssh_url:
         key: ssh_url
+        propertyName: sshUrl
         name: RepositorySshUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["ssh_url"]'
@@ -2805,6 +3130,7 @@ fields:
         sorting: 30
       stargazers_count:
         key: stargazers_count
+        propertyName: stargazersCount
         name: RepositoryStargazersCount
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["stargazers_count"]'
@@ -2813,6 +3139,7 @@ fields:
         sorting: 30
       watchers:
         key: watchers
+        propertyName: watchers
         name: RepositoryWatchers
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["watchers"]'
@@ -2821,6 +3148,7 @@ fields:
         sorting: 30
       watchers_count:
         key: watchers_count
+        propertyName: watchersCount
         name: RepositoryWatchersCount
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["watchers_count"]'
@@ -2829,6 +3157,7 @@ fields:
         sorting: 30
       archived:
         key: archived
+        propertyName: archived
         name: RepositoryArchived
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["archived"]'
@@ -2837,6 +3166,7 @@ fields:
         sorting: 20
       fork:
         key: fork
+        propertyName: fork
         name: RepositoryFork
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["fork"]'
@@ -2845,6 +3175,7 @@ fields:
         sorting: 20
       has_downloads:
         key: has_downloads
+        propertyName: hasDownloads
         name: RepositoryHasDownloads
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["has_downloads"]'
@@ -2853,6 +3184,7 @@ fields:
         sorting: 20
       has_issues:
         key: has_issues
+        propertyName: hasIssues
         name: RepositoryHasIssues
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["has_issues"]'
@@ -2861,6 +3193,7 @@ fields:
         sorting: 20
       has_pages:
         key: has_pages
+        propertyName: hasPages
         name: RepositoryHasPages
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["has_pages"]'
@@ -2869,6 +3202,7 @@ fields:
         sorting: 20
       has_projects:
         key: has_projects
+        propertyName: hasProjects
         name: RepositoryHasProjects
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["has_projects"]'
@@ -2877,6 +3211,7 @@ fields:
         sorting: 20
       has_wiki:
         key: has_wiki
+        propertyName: hasWiki
         name: RepositoryHasWiki
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["has_wiki"]'
@@ -2885,6 +3220,7 @@ fields:
         sorting: 20
       homepage:
         key: homepage
+        propertyName: homepage
         name: RepositoryHomepage
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["homepage"]'
@@ -2893,6 +3229,7 @@ fields:
         sorting: 20
       license:
         key: license
+        propertyName: license
         name: RepositoryLicense
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["license"]'
@@ -2901,6 +3238,7 @@ fields:
         sorting: 20
       mirror_url:
         key: mirror_url
+        propertyName: mirrorUrl
         name: RepositoryMirrorUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["mirror_url"]'
@@ -2909,6 +3247,7 @@ fields:
         sorting: 20
       private:
         key: private
+        propertyName: private
         name: RepositoryPrivate
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["private"]'
@@ -2917,6 +3256,7 @@ fields:
         sorting: 20
       owner:
         key: Owner
+        propertyName: owner
         name: Owner
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["owner"]'
@@ -2925,6 +3265,7 @@ fields:
         fields:
           id:
             key: id
+            propertyName: id
             name: OwnerId
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["id"]'
@@ -2934,6 +3275,7 @@ fields:
             sorting: 200
           gravatar_id:
             key: gravatar_id
+            propertyName: gravatarId
             name: OwnerGravatarId
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["gravatar_id"]'
@@ -2942,6 +3284,7 @@ fields:
             sorting: 30
           login:
             key: login
+            propertyName: login
             name: OwnerLogin
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["login"]'
@@ -2950,6 +3293,7 @@ fields:
             sorting: 30
           type:
             key: type
+            propertyName: type
             name: OwnerType
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["type"]'
@@ -2958,6 +3302,7 @@ fields:
             sorting: 30
           site_admin:
             key: site_admin
+            propertyName: siteAdmin
             name: OwnerSiteAdmin
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["site_admin"]'
@@ -2966,6 +3311,7 @@ fields:
             sorting: 20
           avatar_url:
             key: avatar_url
+            propertyName: avatarUrl
             name: OwnerAvatarUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["avatar_url"]'
@@ -2975,6 +3321,7 @@ fields:
             sorting: 10
           events_url:
             key: events_url
+            propertyName: eventsUrl
             name: OwnerEventsUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["events_url"]'
@@ -2984,6 +3331,7 @@ fields:
             sorting: 10
           followers_url:
             key: followers_url
+            propertyName: followersUrl
             name: OwnerFollowersUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["followers_url"]'
@@ -2993,6 +3341,7 @@ fields:
             sorting: 10
           following_url:
             key: following_url
+            propertyName: followingUrl
             name: OwnerFollowingUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["following_url"]'
@@ -3002,6 +3351,7 @@ fields:
             sorting: 10
           gists_url:
             key: gists_url
+            propertyName: gistsUrl
             name: OwnerGistsUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["gists_url"]'
@@ -3011,6 +3361,7 @@ fields:
             sorting: 10
           html_url:
             key: html_url
+            propertyName: htmlUrl
             name: OwnerHtmlUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["html_url"]'
@@ -3020,6 +3371,7 @@ fields:
             sorting: 10
           organizations_url:
             key: organizations_url
+            propertyName: organizationsUrl
             name: OwnerOrganizationsUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["organizations_url"]'
@@ -3029,6 +3381,7 @@ fields:
             sorting: 10
           received_events_url:
             key: received_events_url
+            propertyName: receivedEventsUrl
             name: OwnerReceivedEventsUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["received_events_url"]'
@@ -3038,6 +3391,7 @@ fields:
             sorting: 10
           repos_url:
             key: repos_url
+            propertyName: reposUrl
             name: OwnerReposUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["repos_url"]'
@@ -3047,6 +3401,7 @@ fields:
             sorting: 10
           starred_url:
             key: starred_url
+            propertyName: starredUrl
             name: OwnerStarredUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["starred_url"]'
@@ -3056,6 +3411,7 @@ fields:
             sorting: 10
           subscriptions_url:
             key: subscriptions_url
+            propertyName: subscriptionsUrl
             name: OwnerSubscriptionsUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["subscriptions_url"]'
@@ -3065,6 +3421,7 @@ fields:
             sorting: 10
           url:
             key: url
+            propertyName: url
             name: OwnerUrl
             namespace: GitHub\WebHook\PullRequestHook\Repository\Owner
             inputKey: '["repository"]["owner"]["url"]'
@@ -3074,6 +3431,7 @@ fields:
             sorting: 10
       archive_url:
         key: archive_url
+        propertyName: archiveUrl
         name: RepositoryArchiveUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["archive_url"]'
@@ -3083,6 +3441,7 @@ fields:
         sorting: 10
       assignees_url:
         key: assignees_url
+        propertyName: assigneesUrl
         name: RepositoryAssigneesUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["assignees_url"]'
@@ -3092,6 +3451,7 @@ fields:
         sorting: 10
       blobs_url:
         key: blobs_url
+        propertyName: blobsUrl
         name: RepositoryBlobsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["blobs_url"]'
@@ -3101,6 +3461,7 @@ fields:
         sorting: 10
       branches_url:
         key: branches_url
+        propertyName: branchesUrl
         name: RepositoryBranchesUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["branches_url"]'
@@ -3110,6 +3471,7 @@ fields:
         sorting: 10
       clone_url:
         key: clone_url
+        propertyName: cloneUrl
         name: RepositoryCloneUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["clone_url"]'
@@ -3119,6 +3481,7 @@ fields:
         sorting: 10
       collaborators_url:
         key: collaborators_url
+        propertyName: collaboratorsUrl
         name: RepositoryCollaboratorsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["collaborators_url"]'
@@ -3128,6 +3491,7 @@ fields:
         sorting: 10
       comments_url:
         key: comments_url
+        propertyName: commentsUrl
         name: RepositoryCommentsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["comments_url"]'
@@ -3137,6 +3501,7 @@ fields:
         sorting: 10
       commits_url:
         key: commits_url
+        propertyName: commitsUrl
         name: RepositoryCommitsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["commits_url"]'
@@ -3146,6 +3511,7 @@ fields:
         sorting: 10
       compare_url:
         key: compare_url
+        propertyName: compareUrl
         name: RepositoryCompareUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["compare_url"]'
@@ -3155,6 +3521,7 @@ fields:
         sorting: 10
       contents_url:
         key: contents_url
+        propertyName: contentsUrl
         name: RepositoryContentsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["contents_url"]'
@@ -3164,6 +3531,7 @@ fields:
         sorting: 10
       contributors_url:
         key: contributors_url
+        propertyName: contributorsUrl
         name: RepositoryContributorsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["contributors_url"]'
@@ -3173,6 +3541,7 @@ fields:
         sorting: 10
       deployments_url:
         key: deployments_url
+        propertyName: deploymentsUrl
         name: RepositoryDeploymentsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["deployments_url"]'
@@ -3182,6 +3551,7 @@ fields:
         sorting: 10
       downloads_url:
         key: downloads_url
+        propertyName: downloadsUrl
         name: RepositoryDownloadsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["downloads_url"]'
@@ -3191,6 +3561,7 @@ fields:
         sorting: 10
       events_url:
         key: events_url
+        propertyName: eventsUrl
         name: RepositoryEventsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["events_url"]'
@@ -3200,6 +3571,7 @@ fields:
         sorting: 10
       forks_url:
         key: forks_url
+        propertyName: forksUrl
         name: RepositoryForksUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["forks_url"]'
@@ -3209,6 +3581,7 @@ fields:
         sorting: 10
       git_commits_url:
         key: git_commits_url
+        propertyName: gitCommitsUrl
         name: RepositoryGitCommitsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["git_commits_url"]'
@@ -3218,6 +3591,7 @@ fields:
         sorting: 10
       git_refs_url:
         key: git_refs_url
+        propertyName: gitRefsUrl
         name: RepositoryGitRefsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["git_refs_url"]'
@@ -3227,6 +3601,7 @@ fields:
         sorting: 10
       git_tags_url:
         key: git_tags_url
+        propertyName: gitTagsUrl
         name: RepositoryGitTagsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["git_tags_url"]'
@@ -3236,6 +3611,7 @@ fields:
         sorting: 10
       git_url:
         key: git_url
+        propertyName: gitUrl
         name: RepositoryGitUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["git_url"]'
@@ -3245,6 +3621,7 @@ fields:
         sorting: 10
       hooks_url:
         key: hooks_url
+        propertyName: hooksUrl
         name: RepositoryHooksUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["hooks_url"]'
@@ -3254,6 +3631,7 @@ fields:
         sorting: 10
       html_url:
         key: html_url
+        propertyName: htmlUrl
         name: RepositoryHtmlUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["html_url"]'
@@ -3263,6 +3641,7 @@ fields:
         sorting: 10
       issue_comment_url:
         key: issue_comment_url
+        propertyName: issueCommentUrl
         name: RepositoryIssueCommentUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["issue_comment_url"]'
@@ -3272,6 +3651,7 @@ fields:
         sorting: 10
       issue_events_url:
         key: issue_events_url
+        propertyName: issueEventsUrl
         name: RepositoryIssueEventsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["issue_events_url"]'
@@ -3281,6 +3661,7 @@ fields:
         sorting: 10
       issues_url:
         key: issues_url
+        propertyName: issuesUrl
         name: RepositoryIssuesUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["issues_url"]'
@@ -3290,6 +3671,7 @@ fields:
         sorting: 10
       keys_url:
         key: keys_url
+        propertyName: keysUrl
         name: RepositoryKeysUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["keys_url"]'
@@ -3299,6 +3681,7 @@ fields:
         sorting: 10
       labels_url:
         key: labels_url
+        propertyName: labelsUrl
         name: RepositoryLabelsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["labels_url"]'
@@ -3308,6 +3691,7 @@ fields:
         sorting: 10
       languages_url:
         key: languages_url
+        propertyName: languagesUrl
         name: RepositoryLanguagesUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["languages_url"]'
@@ -3317,6 +3701,7 @@ fields:
         sorting: 10
       merges_url:
         key: merges_url
+        propertyName: mergesUrl
         name: RepositoryMergesUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["merges_url"]'
@@ -3326,6 +3711,7 @@ fields:
         sorting: 10
       milestones_url:
         key: milestones_url
+        propertyName: milestonesUrl
         name: RepositoryMilestonesUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["milestones_url"]'
@@ -3335,6 +3721,7 @@ fields:
         sorting: 10
       notifications_url:
         key: notifications_url
+        propertyName: notificationsUrl
         name: RepositoryNotificationsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["notifications_url"]'
@@ -3344,6 +3731,7 @@ fields:
         sorting: 10
       pulls_url:
         key: pulls_url
+        propertyName: pullsUrl
         name: RepositoryPullsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["pulls_url"]'
@@ -3353,6 +3741,7 @@ fields:
         sorting: 10
       releases_url:
         key: releases_url
+        propertyName: releasesUrl
         name: RepositoryReleasesUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["releases_url"]'
@@ -3362,6 +3751,7 @@ fields:
         sorting: 10
       stargazers_url:
         key: stargazers_url
+        propertyName: stargazersUrl
         name: RepositoryStargazersUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["stargazers_url"]'
@@ -3371,6 +3761,7 @@ fields:
         sorting: 10
       statuses_url:
         key: statuses_url
+        propertyName: statusesUrl
         name: RepositoryStatusesUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["statuses_url"]'
@@ -3380,6 +3771,7 @@ fields:
         sorting: 10
       subscribers_url:
         key: subscribers_url
+        propertyName: subscribersUrl
         name: RepositorySubscribersUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["subscribers_url"]'
@@ -3389,6 +3781,7 @@ fields:
         sorting: 10
       subscription_url:
         key: subscription_url
+        propertyName: subscriptionUrl
         name: RepositorySubscriptionUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["subscription_url"]'
@@ -3398,6 +3791,7 @@ fields:
         sorting: 10
       svn_url:
         key: svn_url
+        propertyName: svnUrl
         name: RepositorySvnUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["svn_url"]'
@@ -3407,6 +3801,7 @@ fields:
         sorting: 10
       tags_url:
         key: tags_url
+        propertyName: tagsUrl
         name: RepositoryTagsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["tags_url"]'
@@ -3416,6 +3811,7 @@ fields:
         sorting: 10
       teams_url:
         key: teams_url
+        propertyName: teamsUrl
         name: RepositoryTeamsUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["teams_url"]'
@@ -3425,6 +3821,7 @@ fields:
         sorting: 10
       trees_url:
         key: trees_url
+        propertyName: treesUrl
         name: RepositoryTreesUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["trees_url"]'
@@ -3434,6 +3831,7 @@ fields:
         sorting: 10
       url:
         key: url
+        propertyName: url
         name: RepositoryUrl
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["url"]'
@@ -3443,6 +3841,7 @@ fields:
         sorting: 10
       created_at:
         key: created_at
+        propertyName: createdAt
         name: RepositoryCreatedAt
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["created_at"]'
@@ -3452,6 +3851,7 @@ fields:
         sorting: 5
       pushed_at:
         key: pushed_at
+        propertyName: pushedAt
         name: RepositoryPushedAt
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["pushed_at"]'
@@ -3461,6 +3861,7 @@ fields:
         sorting: 5
       updated_at:
         key: updated_at
+        propertyName: updatedAt
         name: RepositoryUpdatedAt
         namespace: GitHub\WebHook\PullRequestHook\Repository
         inputKey: '["repository"]["updated_at"]'
@@ -3470,6 +3871,7 @@ fields:
         sorting: 5
   sender:
     key: Sender
+    propertyName: sender
     name: Sender
     namespace: GitHub\WebHook\PullRequestHook
     inputKey: '["sender"]'
@@ -3478,6 +3880,7 @@ fields:
     fields:
       id:
         key: id
+        propertyName: id
         name: SenderId
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["id"]'
@@ -3487,6 +3890,7 @@ fields:
         sorting: 200
       gravatar_id:
         key: gravatar_id
+        propertyName: gravatarId
         name: SenderGravatarId
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["gravatar_id"]'
@@ -3495,6 +3899,7 @@ fields:
         sorting: 30
       login:
         key: login
+        propertyName: login
         name: SenderLogin
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["login"]'
@@ -3503,6 +3908,7 @@ fields:
         sorting: 30
       type:
         key: type
+        propertyName: type
         name: SenderType
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["type"]'
@@ -3511,6 +3917,7 @@ fields:
         sorting: 30
       site_admin:
         key: site_admin
+        propertyName: siteAdmin
         name: SenderSiteAdmin
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["site_admin"]'
@@ -3519,6 +3926,7 @@ fields:
         sorting: 20
       avatar_url:
         key: avatar_url
+        propertyName: avatarUrl
         name: SenderAvatarUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["avatar_url"]'
@@ -3528,6 +3936,7 @@ fields:
         sorting: 10
       events_url:
         key: events_url
+        propertyName: eventsUrl
         name: SenderEventsUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["events_url"]'
@@ -3537,6 +3946,7 @@ fields:
         sorting: 10
       followers_url:
         key: followers_url
+        propertyName: followersUrl
         name: SenderFollowersUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["followers_url"]'
@@ -3546,6 +3956,7 @@ fields:
         sorting: 10
       following_url:
         key: following_url
+        propertyName: followingUrl
         name: SenderFollowingUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["following_url"]'
@@ -3555,6 +3966,7 @@ fields:
         sorting: 10
       gists_url:
         key: gists_url
+        propertyName: gistsUrl
         name: SenderGistsUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["gists_url"]'
@@ -3564,6 +3976,7 @@ fields:
         sorting: 10
       html_url:
         key: html_url
+        propertyName: htmlUrl
         name: SenderHtmlUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["html_url"]'
@@ -3573,6 +3986,7 @@ fields:
         sorting: 10
       organizations_url:
         key: organizations_url
+        propertyName: organizationsUrl
         name: SenderOrganizationsUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["organizations_url"]'
@@ -3582,6 +3996,7 @@ fields:
         sorting: 10
       received_events_url:
         key: received_events_url
+        propertyName: receivedEventsUrl
         name: SenderReceivedEventsUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["received_events_url"]'
@@ -3591,6 +4006,7 @@ fields:
         sorting: 10
       repos_url:
         key: repos_url
+        propertyName: reposUrl
         name: SenderReposUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["repos_url"]'
@@ -3600,6 +4016,7 @@ fields:
         sorting: 10
       starred_url:
         key: starred_url
+        propertyName: starredUrl
         name: SenderStarredUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["starred_url"]'
@@ -3609,6 +4026,7 @@ fields:
         sorting: 10
       subscriptions_url:
         key: subscriptions_url
+        propertyName: subscriptionsUrl
         name: SenderSubscriptionsUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["subscriptions_url"]'
@@ -3618,6 +4036,7 @@ fields:
         sorting: 10
       url:
         key: url
+        propertyName: url
         name: SenderUrl
         namespace: GitHub\WebHook\PullRequestHook\Sender
         inputKey: '["sender"]["url"]'

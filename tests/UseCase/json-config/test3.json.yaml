@@ -6,6 +6,7 @@ sorting: 16
 fields:
   id:
     key: id
+    propertyName: id
     name: UserId
     namespace: MyVendor\User
     inputKey: '["id"]'
@@ -15,6 +16,7 @@ fields:
     sorting: 200
   full_name:
     key: full_name
+    propertyName: fullName
     name: UserFullName
     namespace: MyVendor\User
     inputKey: '["full_name"]'
@@ -23,6 +25,7 @@ fields:
     sorting: 30
   name:
     key: name
+    propertyName: name
     name: UserName
     namespace: MyVendor\User
     inputKey: '["name"]'
@@ -31,6 +34,7 @@ fields:
     sorting: 30
   address:
     key: Address
+    propertyName: address
     name: Address
     namespace: MyVendor\User
     inputKey: '["address"]'
@@ -39,6 +43,7 @@ fields:
     fields:
       streetName:
         key: streetName
+        propertyName: streetName
         name: AddressStreetName
         namespace: MyVendor\User\Address
         inputKey: '["address"]["streetName"]'
@@ -47,6 +52,7 @@ fields:
         sorting: 30
       street_number:
         key: street_number
+        propertyName: streetNumber
         name: AddressStreetNumber
         namespace: MyVendor\User\Address
         inputKey: '["address"]["street_number"]'
@@ -55,6 +61,7 @@ fields:
         sorting: 30
       city:
         key: City
+        propertyName: city
         name: City
         namespace: MyVendor\User\Address
         inputKey: '["address"]["city"]'
@@ -63,6 +70,7 @@ fields:
         fields:
           name:
             key: name
+            propertyName: name
             name: CityName
             namespace: MyVendor\User\Address\City
             inputKey: '["address"]["city"]["name"]'
@@ -71,6 +79,7 @@ fields:
             sorting: 30
           country:
             key: Country
+            propertyName: country
             name: Country
             namespace: MyVendor\User\Address\City
             inputKey: '["address"]["city"]["country"]'
@@ -79,6 +88,7 @@ fields:
             fields:
               code:
                 key: code
+                propertyName: code
                 name: CountryCode
                 namespace: MyVendor\User\Address\City\Country
                 inputKey: '["address"]["city"]["country"]["code"]'

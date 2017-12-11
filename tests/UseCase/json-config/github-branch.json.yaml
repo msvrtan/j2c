@@ -6,6 +6,7 @@ sorting: 16
 fields:
   name:
     key: name
+    propertyName: name
     name: BranchName
     namespace: GitHub\Branch
     inputKey: '["name"]'
@@ -14,6 +15,7 @@ fields:
     sorting: 30
   protected:
     key: protected
+    propertyName: protected
     name: BranchProtected
     namespace: GitHub\Branch
     inputKey: '["protected"]'
@@ -22,6 +24,7 @@ fields:
     sorting: 20
   commit:
     key: Commit
+    propertyName: commit
     name: Commit
     namespace: GitHub\Branch
     inputKey: '["commit"]'
@@ -30,6 +33,7 @@ fields:
     fields:
       sha:
         key: sha
+        propertyName: sha
         name: CommitSha
         namespace: GitHub\Branch\Commit
         inputKey: '["commit"]["sha"]'
@@ -38,6 +42,7 @@ fields:
         sorting: 30
       author:
         key: Author
+        propertyName: author
         name: Author
         namespace: GitHub\Branch\Commit
         inputKey: '["commit"]["author"]'
@@ -46,6 +51,7 @@ fields:
         fields:
           id:
             key: id
+            propertyName: id
             name: AuthorId
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["id"]'
@@ -55,6 +61,7 @@ fields:
             sorting: 200
           gravatar_id:
             key: gravatar_id
+            propertyName: gravatarId
             name: AuthorGravatarId
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["gravatar_id"]'
@@ -63,6 +70,7 @@ fields:
             sorting: 30
           login:
             key: login
+            propertyName: login
             name: AuthorLogin
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["login"]'
@@ -71,6 +79,7 @@ fields:
             sorting: 30
           type:
             key: type
+            propertyName: type
             name: AuthorType
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["type"]'
@@ -79,6 +88,7 @@ fields:
             sorting: 30
           site_admin:
             key: site_admin
+            propertyName: siteAdmin
             name: AuthorSiteAdmin
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["site_admin"]'
@@ -87,6 +97,7 @@ fields:
             sorting: 20
           avatar_url:
             key: avatar_url
+            propertyName: avatarUrl
             name: AuthorAvatarUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["avatar_url"]'
@@ -96,6 +107,7 @@ fields:
             sorting: 10
           events_url:
             key: events_url
+            propertyName: eventsUrl
             name: AuthorEventsUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["events_url"]'
@@ -105,6 +117,7 @@ fields:
             sorting: 10
           followers_url:
             key: followers_url
+            propertyName: followersUrl
             name: AuthorFollowersUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["followers_url"]'
@@ -114,6 +127,7 @@ fields:
             sorting: 10
           following_url:
             key: following_url
+            propertyName: followingUrl
             name: AuthorFollowingUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["following_url"]'
@@ -123,6 +137,7 @@ fields:
             sorting: 10
           gists_url:
             key: gists_url
+            propertyName: gistsUrl
             name: AuthorGistsUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["gists_url"]'
@@ -132,6 +147,7 @@ fields:
             sorting: 10
           html_url:
             key: html_url
+            propertyName: htmlUrl
             name: AuthorHtmlUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["html_url"]'
@@ -141,6 +157,7 @@ fields:
             sorting: 10
           organizations_url:
             key: organizations_url
+            propertyName: organizationsUrl
             name: AuthorOrganizationsUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["organizations_url"]'
@@ -150,6 +167,7 @@ fields:
             sorting: 10
           received_events_url:
             key: received_events_url
+            propertyName: receivedEventsUrl
             name: AuthorReceivedEventsUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["received_events_url"]'
@@ -159,6 +177,7 @@ fields:
             sorting: 10
           repos_url:
             key: repos_url
+            propertyName: reposUrl
             name: AuthorReposUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["repos_url"]'
@@ -168,6 +187,7 @@ fields:
             sorting: 10
           starred_url:
             key: starred_url
+            propertyName: starredUrl
             name: AuthorStarredUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["starred_url"]'
@@ -177,6 +197,7 @@ fields:
             sorting: 10
           subscriptions_url:
             key: subscriptions_url
+            propertyName: subscriptionsUrl
             name: AuthorSubscriptionsUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["subscriptions_url"]'
@@ -186,6 +207,7 @@ fields:
             sorting: 10
           url:
             key: url
+            propertyName: url
             name: AuthorUrl
             namespace: GitHub\Branch\Commit\Author
             inputKey: '["commit"]["author"]["url"]'
@@ -195,6 +217,7 @@ fields:
             sorting: 10
       commit:
         key: Commit
+        propertyName: commit
         name: Commit
         namespace: GitHub\Branch\Commit
         inputKey: '["commit"]["commit"]'
@@ -203,6 +226,7 @@ fields:
         fields:
           comment_count:
             key: comment_count
+            propertyName: commentCount
             name: CommitCommentCount
             namespace: GitHub\Branch\Commit\Commit
             inputKey: '["commit"]["commit"]["comment_count"]'
@@ -211,6 +235,7 @@ fields:
             sorting: 30
           message:
             key: message
+            propertyName: message
             name: CommitMessage
             namespace: GitHub\Branch\Commit\Commit
             inputKey: '["commit"]["commit"]["message"]'
@@ -219,6 +244,7 @@ fields:
             sorting: 30
           author:
             key: Author
+            propertyName: author
             name: Author
             namespace: GitHub\Branch\Commit\Commit
             inputKey: '["commit"]["commit"]["author"]'
@@ -227,6 +253,7 @@ fields:
             fields:
               email:
                 key: email
+                propertyName: email
                 name: AuthorEmail
                 namespace: GitHub\Branch\Commit\Commit\Author
                 inputKey: '["commit"]["commit"]["author"]["email"]'
@@ -236,6 +263,7 @@ fields:
                 sorting: 50
               name:
                 key: name
+                propertyName: name
                 name: AuthorName
                 namespace: GitHub\Branch\Commit\Commit\Author
                 inputKey: '["commit"]["commit"]["author"]["name"]'
@@ -244,6 +272,7 @@ fields:
                 sorting: 30
               date:
                 key: date
+                propertyName: date
                 name: AuthorDate
                 namespace: GitHub\Branch\Commit\Commit\Author
                 inputKey: '["commit"]["commit"]["author"]["date"]'
@@ -253,6 +282,7 @@ fields:
                 sorting: 5
           committer:
             key: Committer
+            propertyName: committer
             name: Committer
             namespace: GitHub\Branch\Commit\Commit
             inputKey: '["commit"]["commit"]["committer"]'
@@ -261,6 +291,7 @@ fields:
             fields:
               email:
                 key: email
+                propertyName: email
                 name: CommitterEmail
                 namespace: GitHub\Branch\Commit\Commit\Committer
                 inputKey: '["commit"]["commit"]["committer"]["email"]'
@@ -270,6 +301,7 @@ fields:
                 sorting: 50
               name:
                 key: name
+                propertyName: name
                 name: CommitterName
                 namespace: GitHub\Branch\Commit\Commit\Committer
                 inputKey: '["commit"]["commit"]["committer"]["name"]'
@@ -278,6 +310,7 @@ fields:
                 sorting: 30
               date:
                 key: date
+                propertyName: date
                 name: CommitterDate
                 namespace: GitHub\Branch\Commit\Commit\Committer
                 inputKey: '["commit"]["commit"]["committer"]["date"]'
@@ -287,6 +320,7 @@ fields:
                 sorting: 5
           tree:
             key: Tree
+            propertyName: tree
             name: Tree
             namespace: GitHub\Branch\Commit\Commit
             inputKey: '["commit"]["commit"]["tree"]'
@@ -295,6 +329,7 @@ fields:
             fields:
               sha:
                 key: sha
+                propertyName: sha
                 name: TreeSha
                 namespace: GitHub\Branch\Commit\Commit\Tree
                 inputKey: '["commit"]["commit"]["tree"]["sha"]'
@@ -303,6 +338,7 @@ fields:
                 sorting: 30
               url:
                 key: url
+                propertyName: url
                 name: TreeUrl
                 namespace: GitHub\Branch\Commit\Commit\Tree
                 inputKey: '["commit"]["commit"]["tree"]["url"]'
@@ -312,6 +348,7 @@ fields:
                 sorting: 10
           verification:
             key: Verification
+            propertyName: verification
             name: Verification
             namespace: GitHub\Branch\Commit\Commit
             inputKey: '["commit"]["commit"]["verification"]'
@@ -320,6 +357,7 @@ fields:
             fields:
               reason:
                 key: reason
+                propertyName: reason
                 name: VerificationReason
                 namespace: GitHub\Branch\Commit\Commit\Verification
                 inputKey: '["commit"]["commit"]["verification"]["reason"]'
@@ -328,6 +366,7 @@ fields:
                 sorting: 30
               payload:
                 key: payload
+                propertyName: payload
                 name: VerificationPayload
                 namespace: GitHub\Branch\Commit\Commit\Verification
                 inputKey: '["commit"]["commit"]["verification"]["payload"]'
@@ -336,6 +375,7 @@ fields:
                 sorting: 20
               signature:
                 key: signature
+                propertyName: signature
                 name: VerificationSignature
                 namespace: GitHub\Branch\Commit\Commit\Verification
                 inputKey: '["commit"]["commit"]["verification"]["signature"]'
@@ -344,6 +384,7 @@ fields:
                 sorting: 20
               verified:
                 key: verified
+                propertyName: verified
                 name: VerificationVerified
                 namespace: GitHub\Branch\Commit\Commit\Verification
                 inputKey: '["commit"]["commit"]["verification"]["verified"]'
@@ -352,6 +393,7 @@ fields:
                 sorting: 20
           url:
             key: url
+            propertyName: url
             name: CommitUrl
             namespace: GitHub\Branch\Commit\Commit
             inputKey: '["commit"]["commit"]["url"]'
@@ -361,6 +403,7 @@ fields:
             sorting: 10
       committer:
         key: Committer
+        propertyName: committer
         name: Committer
         namespace: GitHub\Branch\Commit
         inputKey: '["commit"]["committer"]'
@@ -369,6 +412,7 @@ fields:
         fields:
           id:
             key: id
+            propertyName: id
             name: CommitterId
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["id"]'
@@ -378,6 +422,7 @@ fields:
             sorting: 200
           gravatar_id:
             key: gravatar_id
+            propertyName: gravatarId
             name: CommitterGravatarId
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["gravatar_id"]'
@@ -386,6 +431,7 @@ fields:
             sorting: 30
           login:
             key: login
+            propertyName: login
             name: CommitterLogin
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["login"]'
@@ -394,6 +440,7 @@ fields:
             sorting: 30
           type:
             key: type
+            propertyName: type
             name: CommitterType
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["type"]'
@@ -402,6 +449,7 @@ fields:
             sorting: 30
           site_admin:
             key: site_admin
+            propertyName: siteAdmin
             name: CommitterSiteAdmin
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["site_admin"]'
@@ -410,6 +458,7 @@ fields:
             sorting: 20
           avatar_url:
             key: avatar_url
+            propertyName: avatarUrl
             name: CommitterAvatarUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["avatar_url"]'
@@ -419,6 +468,7 @@ fields:
             sorting: 10
           events_url:
             key: events_url
+            propertyName: eventsUrl
             name: CommitterEventsUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["events_url"]'
@@ -428,6 +478,7 @@ fields:
             sorting: 10
           followers_url:
             key: followers_url
+            propertyName: followersUrl
             name: CommitterFollowersUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["followers_url"]'
@@ -437,6 +488,7 @@ fields:
             sorting: 10
           following_url:
             key: following_url
+            propertyName: followingUrl
             name: CommitterFollowingUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["following_url"]'
@@ -446,6 +498,7 @@ fields:
             sorting: 10
           gists_url:
             key: gists_url
+            propertyName: gistsUrl
             name: CommitterGistsUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["gists_url"]'
@@ -455,6 +508,7 @@ fields:
             sorting: 10
           html_url:
             key: html_url
+            propertyName: htmlUrl
             name: CommitterHtmlUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["html_url"]'
@@ -464,6 +518,7 @@ fields:
             sorting: 10
           organizations_url:
             key: organizations_url
+            propertyName: organizationsUrl
             name: CommitterOrganizationsUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["organizations_url"]'
@@ -473,6 +528,7 @@ fields:
             sorting: 10
           received_events_url:
             key: received_events_url
+            propertyName: receivedEventsUrl
             name: CommitterReceivedEventsUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["received_events_url"]'
@@ -482,6 +538,7 @@ fields:
             sorting: 10
           repos_url:
             key: repos_url
+            propertyName: reposUrl
             name: CommitterReposUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["repos_url"]'
@@ -491,6 +548,7 @@ fields:
             sorting: 10
           starred_url:
             key: starred_url
+            propertyName: starredUrl
             name: CommitterStarredUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["starred_url"]'
@@ -500,6 +558,7 @@ fields:
             sorting: 10
           subscriptions_url:
             key: subscriptions_url
+            propertyName: subscriptionsUrl
             name: CommitterSubscriptionsUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["subscriptions_url"]'
@@ -509,6 +568,7 @@ fields:
             sorting: 10
           url:
             key: url
+            propertyName: url
             name: CommitterUrl
             namespace: GitHub\Branch\Commit\Committer
             inputKey: '["commit"]["committer"]["url"]'
@@ -518,6 +578,7 @@ fields:
             sorting: 10
       parents:
         key: Parents
+        propertyName: parents
         name: Parents
         namespace: GitHub\Branch\Commit
         inputKey: '["commit"]["parents"]'
@@ -527,6 +588,7 @@ fields:
         fields:
           sha:
             key: sha
+            propertyName: sha
             name: ParentsSha
             namespace: GitHub\Branch\Commit\Parents
             inputKey: '["commit"]["parents"]["sha"]'
@@ -535,6 +597,7 @@ fields:
             sorting: 30
           html_url:
             key: html_url
+            propertyName: htmlUrl
             name: ParentsHtmlUrl
             namespace: GitHub\Branch\Commit\Parents
             inputKey: '["commit"]["parents"]["html_url"]'
@@ -544,6 +607,7 @@ fields:
             sorting: 10
           url:
             key: url
+            propertyName: url
             name: ParentsUrl
             namespace: GitHub\Branch\Commit\Parents
             inputKey: '["commit"]["parents"]["url"]'
@@ -557,6 +621,7 @@ fields:
           has: TODO3
       comments_url:
         key: comments_url
+        propertyName: commentsUrl
         name: CommitCommentsUrl
         namespace: GitHub\Branch\Commit
         inputKey: '["commit"]["comments_url"]'
@@ -566,6 +631,7 @@ fields:
         sorting: 10
       html_url:
         key: html_url
+        propertyName: htmlUrl
         name: CommitHtmlUrl
         namespace: GitHub\Branch\Commit
         inputKey: '["commit"]["html_url"]'
@@ -575,6 +641,7 @@ fields:
         sorting: 10
       url:
         key: url
+        propertyName: url
         name: CommitUrl
         namespace: GitHub\Branch\Commit
         inputKey: '["commit"]["url"]'
@@ -584,6 +651,7 @@ fields:
         sorting: 10
   _links:
     key: Links
+    propertyName: links
     name: Links
     namespace: GitHub\Branch
     inputKey: '["_links"]'
@@ -592,6 +660,7 @@ fields:
     fields:
       html:
         key: html
+        propertyName: html
         name: LinksHtml
         namespace: GitHub\Branch\Links
         inputKey: '["_links"]["html"]'
@@ -601,6 +670,7 @@ fields:
         sorting: 10
       self:
         key: self
+        propertyName: self
         name: LinksSelf
         namespace: GitHub\Branch\Links
         inputKey: '["_links"]["self"]'
@@ -610,6 +680,7 @@ fields:
         sorting: 10
   protection:
     key: Protection
+    propertyName: protection
     name: Protection
     namespace: GitHub\Branch
     inputKey: '["protection"]'
@@ -618,6 +689,7 @@ fields:
     fields:
       enabled:
         key: enabled
+        propertyName: enabled
         name: ProtectionEnabled
         namespace: GitHub\Branch\Protection
         inputKey: '["protection"]["enabled"]'
@@ -626,6 +698,7 @@ fields:
         sorting: 20
       required_status_checks:
         key: RequiredStatusChecks
+        propertyName: requiredStatusChecks
         name: RequiredStatusChecks
         namespace: GitHub\Branch\Protection
         inputKey: '["protection"]["required_status_checks"]'
@@ -634,6 +707,7 @@ fields:
         fields:
           enforcement_level:
             key: enforcement_level
+            propertyName: enforcementLevel
             name: RequiredStatusChecksEnforcementLevel
             namespace: GitHub\Branch\Protection\RequiredStatusChecks
             inputKey: '["protection"]["required_status_checks"]["enforcement_level"]'
@@ -642,6 +716,7 @@ fields:
             sorting: 30
           contexts:
             key: Contexts
+            propertyName: contexts
             name: Contexts
             namespace: GitHub\Branch\Protection\RequiredStatusChecks
             inputKey: '["protection"]["required_status_checks"]["contexts"]'
@@ -654,6 +729,7 @@ fields:
               has: TODO3
   protection_url:
     key: protection_url
+    propertyName: protectionUrl
     name: BranchProtectionUrl
     namespace: GitHub\Branch
     inputKey: '["protection_url"]'
