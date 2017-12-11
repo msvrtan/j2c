@@ -38,8 +38,14 @@ class SetUpMiddleware implements PartialCodeGeneratorMiddleware
             $constructorParams = [];
             /** @var MethodParameter $parameter */
             foreach ($definition->getConstructorParameters() as $parameter) {
+                $exampleValue = $this->exampleMaker->instance($parameter);
+
+                foreach ($exampleValue->classesToImport() as $classToImport) {
+                    $namespace->addUse($classToImport->getFullName());
+                }
+
                 $setUpMethod->addBody(
-                    sprintf('$this->%s = %s;', $parameter->getName(), $this->exampleMaker->instance($parameter))
+                    sprintf('$this->%s = %s;', $parameter->getName(), $exampleValue)
                 );
                 $constructorParams[] = '$this->'.$parameter->getName();
 

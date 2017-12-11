@@ -41,12 +41,12 @@ class UserEntityTest extends TestCase
 
     public function setUp()
     {
-        $this->id = new \MyVendor\User\UserId(1);
+        $this->id = new UserId(1);
         $this->firstName = 'firstName';
         $this->lastName = 'lastName';
-        $this->username = new \MyVendor\User\Username('value');
+        $this->username = new Username('value');
         $this->createdAt = new UserCreatedAt('2018-01-01 00:01:00');
-        $this->updatedAt = new \DateTime('2018-01-01 00:01:00');
+        $this->updatedAt = new DateTime('2018-01-01 00:01:00');
         $this->sut = new UserEntity($this->id, $this->firstName, $this->lastName, $this->username, $this->createdAt, $this->updatedAt);
     }
 

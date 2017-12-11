@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\MyVendor;
 
+use DateTime;
 use MyVendor\ProductCollection;
-use PHPUnit\Framework\TestCase;
 use MyVendor\ProductEntity;
 use MyVendor\Product\ProductId;
 use MyVendor\Product\ProductWeight;
-use DateTime;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \MyVendor\ProductCollection

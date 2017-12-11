@@ -41,9 +41,7 @@ services:
         public: true
 
 
-    Miro\:
-        resource: '../src/Miro'
-        public: true
+    Miro\ExampleMaker\ExampleMaker: ~
 
 
 
