@@ -10,3 +10,7 @@ definition:
       nullable: false
       hasDefault: true
       default: '[]'
+  collectionOf:
+    className: TODO2
+    accessor: getId
+    has: TODO3

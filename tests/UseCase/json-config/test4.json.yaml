@@ -288,6 +288,10 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
         sorting: 16
+        collectionOf:
+          className: TODO2
+          accessor: getId
+          has: TODO3
       base:
         key: Base
         name: Base
@@ -2354,6 +2358,10 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
         sorting: 16
+        collectionOf:
+          className: TODO2
+          accessor: getId
+          has: TODO3
       user:
         key: User
         name: User

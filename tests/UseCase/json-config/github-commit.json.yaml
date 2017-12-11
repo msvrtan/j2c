@@ -123,6 +123,10 @@ fields:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 10
+    collectionOf:
+      className: TODO2
+      accessor: getId
+      has: TODO3
   tree:
     key: Tree
     name: Tree
