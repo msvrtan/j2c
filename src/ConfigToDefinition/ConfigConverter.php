@@ -8,6 +8,7 @@ use Exception;
 use JsonToConfig\JsonDetector\ValueObject\Generix\EmailAddress;
 use JsonToConfig\JsonDetector\ValueObject\Generix\Url;
 use JsonToConfig\JsonDetector\ValueObject\Id\IntegerId;
+use JsonToConfig\JsonDetector\ValueObject\Simple\NullFound;
 use JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool;
 use JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection;
 use JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime;
@@ -77,6 +78,8 @@ class ConfigConverter
             $results[] = $this->createSimpleDateTimeValueObject($input);
         } elseif (SimpleCollection::class === $suggestion) {
             $results[] = $this->createSimpleCollection($input);
+        } elseif (NullFound::class === $suggestion) {
+            $results[] = $this->createSimpleStringValueObject($input);
         } else {
             throw new Exception('@TODO:'.$suggestion);
         }
