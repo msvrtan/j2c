@@ -4,60 +4,49 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\Skeleton\SourceCode\Loader;
 
-use Mockery;
-use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
-use Mockery\MockInterface;
-use NullDevelopment\Skeleton\Core\Loader\ConstructorMethodLoader;
-use NullDevelopment\Skeleton\Core\Loader\InterfaceLoader;
-use NullDevelopment\Skeleton\Core\Loader\PropertyLoader;
-use NullDevelopment\Skeleton\Core\Loader\TraitLoader;
+use NullDevelopment\Skeleton\SourceCode\Definition\SimpleEntity;
 use NullDevelopment\Skeleton\SourceCode\Loader\SimpleEntityLoader;
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase\SfTestCase;
 
 /**
- * @covers \NullDevelopment\Skeleton\SourceCode\Loader\SimpleEntityLoader
- * @group  todo
+ * @group  application
  */
-class SimpleEntityLoaderTest extends TestCase
+class SimpleEntityLoaderTest extends SfTestCase
 {
-    use MockeryPHPUnitIntegration;
-    /** @var MockInterface|InterfaceLoader */
-    private $interfaceLoader;
-    /** @var MockInterface|TraitLoader */
-    private $traitLoader;
-    /** @var MockInterface|ConstructorMethodLoader */
-    private $constructorMethodLoader;
-    /** @var MockInterface|PropertyLoader */
-    private $propertyLoader;
     /** @var SimpleEntityLoader */
-    private $simpleEntityLoader;
+    private $sut;
 
     public function setUp()
     {
-        $this->interfaceLoader         = Mockery::mock(InterfaceLoader::class);
-        $this->traitLoader             = Mockery::mock(TraitLoader::class);
-        $this->constructorMethodLoader = Mockery::mock(ConstructorMethodLoader::class);
-        $this->propertyLoader          = Mockery::mock(PropertyLoader::class);
-        $this->simpleEntityLoader      = new SimpleEntityLoader(
-            $this->interfaceLoader,
-            $this->traitLoader,
-            $this->constructorMethodLoader,
-            $this->propertyLoader
-        );
+        parent::setUp();
+        $this->sut = $this->getService(SimpleEntityLoader::class);
     }
 
-    public function testSupports()
+    /** @dataProvider provideInput */
+    public function testSupports(array $input)
     {
-        $this->markTestSkipped('Skipping');
+        self::assertTrue($this->sut->supports($input));
     }
 
-    public function testLoad()
+    /** @dataProvider provideInput */
+    public function testLoad(array $input)
     {
-        $this->markTestSkipped('Skipping');
+        self::assertInstanceOf(SimpleEntity::class, $this->sut->load($input));
     }
 
-    public function testGetDefaultValues()
+    /** @dataProvider provideInput */
+    public function testToArrayOnDefinitionWorks(array $input)
     {
-        $this->markTestSkipped('Skipping');
+        $definition = $this->sut->load($input);
+
+        self::assertEquals($input, $definition->toArray()['definition']);
+    }
+
+    public function provideInput(): array
+    {
+        return [
+            [$this->loadDefinitionYaml('UserEntity.yaml')],
+            [$this->loadDefinitionYaml('ProductEntity.yaml')],
+        ];
     }
 }
