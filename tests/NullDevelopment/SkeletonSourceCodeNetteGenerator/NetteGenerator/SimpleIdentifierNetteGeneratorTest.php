@@ -49,8 +49,8 @@ class SimpleIdentifierNetteGeneratorTest extends SfTestCase
     public function provideYamlConfigurationNames(): array
     {
         return [
-            ['UserId'],
-            ['ProductId'],
+            ['MyVendor/User/UserId'],
+            ['MyVendor/Product/ProductId'],
         ];
     }
 

@@ -20,10 +20,14 @@ abstract class SfTestCase extends KernelTestCase
         return self::$kernel->getContainer()->get($serviceName);
     }
 
-    protected function loadDefinitionYaml(string $fileName): array
+    protected function loadDefinitionYaml(string $fileName, ?string $path = null): array
     {
         // Define path
-        $path = getcwd().'/definitions/'.$fileName;
+        if (null === $path) {
+            $path = getcwd().'/definitions/'.$fileName;
+        } else {
+            $path .= '/'.$fileName;
+        }
 
         // Load Yaml file content
         $fileContent = file_get_contents($path);

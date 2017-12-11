@@ -45,7 +45,7 @@ class SimpleCollectionLoaderTest extends SfTestCase
     public function provideInput(): array
     {
         return [
-            [$this->loadDefinitionYaml('ProductCollection.yaml')],
+            [$this->loadDefinitionYaml('MyVendor/ProductCollection.yaml')],
         ];
     }
 }

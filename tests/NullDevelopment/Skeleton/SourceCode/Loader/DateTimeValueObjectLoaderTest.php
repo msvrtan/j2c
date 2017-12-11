@@ -107,7 +107,7 @@ class DateTimeValueObjectLoaderTest extends SfTestCase
     public function provideInput(): array
     {
         return [
-            [$this->loadDefinitionYaml('UserCreatedAt.yaml')],
+            [$this->loadDefinitionYaml('MyVendor/User/UserCreatedAt.yaml')],
         ];
     }
 }

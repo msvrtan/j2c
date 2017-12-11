@@ -45,8 +45,8 @@ class SimpleEntityLoaderTest extends SfTestCase
     public function provideInput(): array
     {
         return [
-            [$this->loadDefinitionYaml('UserEntity.yaml')],
-            [$this->loadDefinitionYaml('ProductEntity.yaml')],
+            [$this->loadDefinitionYaml('MyVendor/UserEntity.yaml')],
+            [$this->loadDefinitionYaml('MyVendor/ProductEntity.yaml')],
         ];
     }
 }

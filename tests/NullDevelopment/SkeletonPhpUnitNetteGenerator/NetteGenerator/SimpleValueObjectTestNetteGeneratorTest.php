@@ -49,8 +49,8 @@ class SimpleValueObjectTestNetteGeneratorTest extends SfTestCase
     public function provideYamlConfigurationNames(): array
     {
         return [
-            ['Username'],
-            ['ProductWeight'],
+            ['MyVendor/User/Username'],
+            ['MyVendor/Product/ProductWeight'],
         ];
     }
 

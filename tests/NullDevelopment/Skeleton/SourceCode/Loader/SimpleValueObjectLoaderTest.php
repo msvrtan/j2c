@@ -122,8 +122,8 @@ class SimpleValueObjectLoaderTest extends SfTestCase
     public function provideInput(): array
     {
         return [
-            [$this->loadDefinitionYaml('Username.yaml')],
-            [$this->loadDefinitionYaml('ProductWeight.yaml')],
+            [$this->loadDefinitionYaml('MyVendor/User/Username.yaml')],
+            [$this->loadDefinitionYaml('MyVendor/Product/ProductWeight.yaml')],
         ];
     }
 }

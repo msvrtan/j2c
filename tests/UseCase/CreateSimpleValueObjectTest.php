@@ -58,7 +58,7 @@ class CreateSimpleValueObjectTest extends SfTestCase
     public function provideYamlConfigurationNames(): array
     {
         return [
-            ['Username'],
+            ['MyVendor/User/Username'],
         ];
     }
 
