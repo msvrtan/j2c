@@ -34,9 +34,10 @@ class ConfigConverterTest extends TestCase
     public function testWithoutFields()
     {
         $input = [
-            'name'      => 'User',
-            'namespace' => 'MyVendor',
-            'fields'    => [],
+            'propertyName' => 'user',
+            'name'         => 'User',
+            'namespace'    => 'MyVendor',
+            'fields'       => [],
         ];
 
         $definition = $this->sut->convert($input);
@@ -49,13 +50,15 @@ class ConfigConverterTest extends TestCase
     public function testWithIdentifierOnly()
     {
         $input = [
-            'name'      => 'User',
-            'namespace' => 'MyVendor',
-            'fields'    => [
+            'propertyName' => 'user',
+            'name'         => 'User',
+            'namespace'    => 'MyVendor',
+            'fields'       => [
                 'id' => [
-                    'name'        => 'UserId',
-                    'namespace'   => 'MyVendor\User',
-                    'suggestions' => [
+                    'propertyName' => 'id',
+                    'name'         => 'UserId',
+                    'namespace'    => 'MyVendor\User',
+                    'suggestions'  => [
                         'JsonToConfig\JsonDetector\ValueObject\Id\IntegerId',
                         'JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger',
                     ],
@@ -90,34 +93,36 @@ class ConfigConverterTest extends TestCase
     public function testUser()
     {
         $input = [
-            'name'      => 'User',
-            'namespace' => 'MyVendor',
-            'fields'    => [
-                'id' => [
-                    'name'        => 'UserId',
-                    'namespace'   => 'MyVendor\User',
-                    'suggestions' => [
+            'propertyName' => 'user',
+            'name'         => 'User',
+            'namespace'    => 'MyVendor',
+            'fields'       => [
+                'id'         => [
+                    'propertyName' => 'id',
+                    'name'         => 'UserId',
+                    'namespace'    => 'MyVendor\User',
+                    'suggestions'  => [
                         'JsonToConfig\JsonDetector\ValueObject\Id\IntegerId',
                         'JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger',
                     ],
                 ],
                 'full_name'  => [
-                    'key'         => 'full_name',
-                    'name'        => 'UserFullName',
-                    'namespace'   => 'MyVendor\User',
-                    'suggestions' => ['JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString'],
+                    'propertyName' => 'fullName',
+                    'name'         => 'UserFullName',
+                    'namespace'    => 'MyVendor\User',
+                    'suggestions'  => ['JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString'],
                 ],
                 'name'       => [
-                    'key'         => 'name',
-                    'name'        => 'UserName',
-                    'namespace'   => 'MyVendor\User',
-                    'suggestions' => ['JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString'],
+                    'propertyName' => 'name',
+                    'name'         => 'UserName',
+                    'namespace'    => 'MyVendor\User',
+                    'suggestions'  => ['JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString'],
                 ],
                 'created_at' => [
-                    'key'         => 'created_at',
-                    'name'        => 'UserCreatedAt',
-                    'namespace'   => 'MyVendor\User',
-                    'suggestions' => [
+                    'propertyName' => 'createdAt',
+                    'name'         => 'UserCreatedAt',
+                    'namespace'    => 'MyVendor\User',
+                    'suggestions'  => [
                         'JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime',
                         'JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString',
                     ],
@@ -133,12 +138,14 @@ class ConfigConverterTest extends TestCase
                 null,
                 [],
                 [],
-                new ConstructorMethod([
-                    new MethodParameter('id', new ClassName('UserId', 'MyVendor\User')),
-                    new MethodParameter('fullName', new ClassName('UserFullName', 'MyVendor\User')),
-                    new MethodParameter('name', new ClassName('UserName', 'MyVendor\User')),
-                    new MethodParameter('createdAt', new ClassName('UserCreatedAt', 'MyVendor\User')),
-                ]),
+                new ConstructorMethod(
+                    [
+                        new MethodParameter('id', new ClassName('UserId', 'MyVendor\User')),
+                        new MethodParameter('fullName', new ClassName('UserFullName', 'MyVendor\User')),
+                        new MethodParameter('name', new ClassName('UserName', 'MyVendor\User')),
+                        new MethodParameter('createdAt', new ClassName('UserCreatedAt', 'MyVendor\User')),
+                    ]
+                ),
                 [
                     Property::privateProperty('id', new ClassName('UserId', 'MyVendor\User')),
                     Property::privateProperty('fullName', new ClassName('UserFullName', 'MyVendor\User')),
