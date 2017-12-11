@@ -256,6 +256,22 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
+      assignee:
+        key: assignee
+        name: PullRequestAssignee
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["assignee"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+        sorting: 20
+      closed_at:
+        key: closed_at
+        name: PullRequestClosedAt
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["closed_at"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+        sorting: 20
       locked:
         key: locked
         name: PullRequestLocked
@@ -272,6 +288,22 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
         sorting: 20
+      merge_commit_sha:
+        key: merge_commit_sha
+        name: PullRequestMergeCommitSha
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["merge_commit_sha"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+        sorting: 20
+      mergeable:
+        key: mergeable
+        name: PullRequestMergeable
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["mergeable"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+        sorting: 20
       merged:
         key: merged
         name: PullRequestMerged
@@ -279,6 +311,38 @@ fields:
         inputKey: '["pull_request"]["merged"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      merged_at:
+        key: merged_at
+        name: PullRequestMergedAt
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["merged_at"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+        sorting: 20
+      merged_by:
+        key: merged_by
+        name: PullRequestMergedBy
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["merged_by"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+        sorting: 20
+      milestone:
+        key: milestone
+        name: PullRequestMilestone
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["milestone"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+        sorting: 20
+      rebaseable:
+        key: rebaseable
+        name: PullRequestRebaseable
+        namespace: GitHub\WebHook\PullRequestHook\PullRequest
+        inputKey: '["pull_request"]["rebaseable"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
         sorting: 20
       assignees:
         key: Assignees
@@ -509,6 +573,30 @@ fields:
                 inputKey: '["pull_request"]["base"]["repo"]["has_wiki"]'
                 suggestions:
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              homepage:
+                key: homepage
+                name: RepoHomepage
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
+                inputKey: '["pull_request"]["base"]["repo"]["homepage"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+                sorting: 20
+              license:
+                key: license
+                name: RepoLicense
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
+                inputKey: '["pull_request"]["base"]["repo"]["license"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+                sorting: 20
+              mirror_url:
+                key: mirror_url
+                name: RepoMirrorUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
+                inputKey: '["pull_request"]["base"]["repo"]["mirror_url"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
                 sorting: 20
               private:
                 key: private
@@ -1071,27 +1159,6 @@ fields:
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
                 sorting: 5
-              homepage:
-                key: homepage
-                name: RepoHomepage
-                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
-                inputKey: '["pull_request"]["base"]["repo"]["homepage"]'
-                suggestions: {  }
-                sorting: 0
-              license:
-                key: license
-                name: RepoLicense
-                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
-                inputKey: '["pull_request"]["base"]["repo"]["license"]'
-                suggestions: {  }
-                sorting: 0
-              mirror_url:
-                key: mirror_url
-                name: RepoMirrorUrl
-                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
-                inputKey: '["pull_request"]["base"]["repo"]["mirror_url"]'
-                suggestions: {  }
-                sorting: 0
           user:
             key: User
             name: User
@@ -1466,6 +1533,30 @@ fields:
                 inputKey: '["pull_request"]["head"]["repo"]["has_wiki"]'
                 suggestions:
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+                sorting: 20
+              homepage:
+                key: homepage
+                name: RepoHomepage
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
+                inputKey: '["pull_request"]["head"]["repo"]["homepage"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+                sorting: 20
+              license:
+                key: license
+                name: RepoLicense
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
+                inputKey: '["pull_request"]["head"]["repo"]["license"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+                sorting: 20
+              mirror_url:
+                key: mirror_url
+                name: RepoMirrorUrl
+                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
+                inputKey: '["pull_request"]["head"]["repo"]["mirror_url"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
                 sorting: 20
               private:
                 key: private
@@ -2028,27 +2119,6 @@ fields:
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
                 sorting: 5
-              homepage:
-                key: homepage
-                name: RepoHomepage
-                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
-                inputKey: '["pull_request"]["head"]["repo"]["homepage"]'
-                suggestions: {  }
-                sorting: 0
-              license:
-                key: license
-                name: RepoLicense
-                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
-                inputKey: '["pull_request"]["head"]["repo"]["license"]'
-                suggestions: {  }
-                sorting: 0
-              mirror_url:
-                key: mirror_url
-                name: RepoMirrorUrl
-                namespace: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
-                inputKey: '["pull_request"]["head"]["repo"]["mirror_url"]'
-                suggestions: {  }
-                sorting: 0
           user:
             key: User
             name: User
@@ -2627,62 +2697,6 @@ fields:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 5
-      assignee:
-        key: assignee
-        name: PullRequestAssignee
-        namespace: GitHub\WebHook\PullRequestHook\PullRequest
-        inputKey: '["pull_request"]["assignee"]'
-        suggestions: {  }
-        sorting: 0
-      closed_at:
-        key: closed_at
-        name: PullRequestClosedAt
-        namespace: GitHub\WebHook\PullRequestHook\PullRequest
-        inputKey: '["pull_request"]["closed_at"]'
-        suggestions: {  }
-        sorting: 0
-      merge_commit_sha:
-        key: merge_commit_sha
-        name: PullRequestMergeCommitSha
-        namespace: GitHub\WebHook\PullRequestHook\PullRequest
-        inputKey: '["pull_request"]["merge_commit_sha"]'
-        suggestions: {  }
-        sorting: 0
-      mergeable:
-        key: mergeable
-        name: PullRequestMergeable
-        namespace: GitHub\WebHook\PullRequestHook\PullRequest
-        inputKey: '["pull_request"]["mergeable"]'
-        suggestions: {  }
-        sorting: 0
-      merged_at:
-        key: merged_at
-        name: PullRequestMergedAt
-        namespace: GitHub\WebHook\PullRequestHook\PullRequest
-        inputKey: '["pull_request"]["merged_at"]'
-        suggestions: {  }
-        sorting: 0
-      merged_by:
-        key: merged_by
-        name: PullRequestMergedBy
-        namespace: GitHub\WebHook\PullRequestHook\PullRequest
-        inputKey: '["pull_request"]["merged_by"]'
-        suggestions: {  }
-        sorting: 0
-      milestone:
-        key: milestone
-        name: PullRequestMilestone
-        namespace: GitHub\WebHook\PullRequestHook\PullRequest
-        inputKey: '["pull_request"]["milestone"]'
-        suggestions: {  }
-        sorting: 0
-      rebaseable:
-        key: rebaseable
-        name: PullRequestRebaseable
-        namespace: GitHub\WebHook\PullRequestHook\PullRequest
-        inputKey: '["pull_request"]["rebaseable"]'
-        suggestions: {  }
-        sorting: 0
   repository:
     key: Repository
     name: Repository
@@ -2868,6 +2882,30 @@ fields:
         inputKey: '["repository"]["has_wiki"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+        sorting: 20
+      homepage:
+        key: homepage
+        name: RepositoryHomepage
+        namespace: GitHub\WebHook\PullRequestHook\Repository
+        inputKey: '["repository"]["homepage"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+        sorting: 20
+      license:
+        key: license
+        name: RepositoryLicense
+        namespace: GitHub\WebHook\PullRequestHook\Repository
+        inputKey: '["repository"]["license"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+        sorting: 20
+      mirror_url:
+        key: mirror_url
+        name: RepositoryMirrorUrl
+        namespace: GitHub\WebHook\PullRequestHook\Repository
+        inputKey: '["repository"]["mirror_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
         sorting: 20
       private:
         key: private
@@ -3430,27 +3468,6 @@ fields:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 5
-      homepage:
-        key: homepage
-        name: RepositoryHomepage
-        namespace: GitHub\WebHook\PullRequestHook\Repository
-        inputKey: '["repository"]["homepage"]'
-        suggestions: {  }
-        sorting: 0
-      license:
-        key: license
-        name: RepositoryLicense
-        namespace: GitHub\WebHook\PullRequestHook\Repository
-        inputKey: '["repository"]["license"]'
-        suggestions: {  }
-        sorting: 0
-      mirror_url:
-        key: mirror_url
-        name: RepositoryMirrorUrl
-        namespace: GitHub\WebHook\PullRequestHook\Repository
-        inputKey: '["repository"]["mirror_url"]'
-        suggestions: {  }
-        sorting: 0
   sender:
     key: Sender
     name: Sender

@@ -130,6 +130,11 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    mirrorUrl:
+      className: GitHub\Repo\RepoMirrorUrl
+      nullable: false
+      hasDefault: false
+      default: null
     private:
       className: GitHub\Repo\RepoPrivate
       nullable: false
@@ -367,11 +372,6 @@ definition:
       default: null
     updatedAt:
       className: GitHub\Repo\RepoUpdatedAt
-      nullable: false
-      hasDefault: false
-      default: null
-    mirrorUrl:
-      className: GitHub\Repo\RepoMirrorUrl
       nullable: false
       hasDefault: false
       default: null
