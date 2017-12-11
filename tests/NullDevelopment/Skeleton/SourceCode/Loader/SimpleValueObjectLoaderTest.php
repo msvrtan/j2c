@@ -98,4 +98,32 @@ class SimpleValueObjectLoaderTest extends SfTestCase
 
         yield [$input1];
     }
+
+    /** @dataProvider provideInput */
+    public function testSupports(array $input)
+    {
+        self::assertTrue($this->sut->supports($input));
+    }
+
+    /** @dataProvider provideInput */
+    public function testLoad(array $input)
+    {
+        self::assertInstanceOf(SimpleValueObject::class, $this->sut->load($input));
+    }
+
+    /** @dataProvider provideInput */
+    public function testToArrayOnDefinitionWorks(array $input)
+    {
+        $definition = $this->sut->load($input);
+
+        self::assertEquals($input, $definition->toArray()['definition']);
+    }
+
+    public function provideInput(): array
+    {
+        return [
+            [$this->loadDefinitionYaml('Username.yaml')],
+            [$this->loadDefinitionYaml('ProductWeight.yaml')],
+        ];
+    }
 }

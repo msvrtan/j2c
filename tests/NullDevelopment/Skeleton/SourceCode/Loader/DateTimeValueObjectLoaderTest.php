@@ -4,42 +4,110 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\Skeleton\SourceCode\Loader;
 
-use Mockery;
-use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
-use Mockery\MockInterface;
-use NullDevelopment\Skeleton\Core\Loader\InterfaceLoader;
-use NullDevelopment\Skeleton\Core\Loader\TraitLoader;
+use Generator;
+use NullDevelopment\Skeleton\Php\Structure\ClassName;
+use NullDevelopment\Skeleton\SourceCode\Definition\DateTimeValueObject;
 use NullDevelopment\Skeleton\SourceCode\Loader\DateTimeValueObjectLoader;
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase\SfTestCase;
 
 /**
- * @covers \NullDevelopment\Skeleton\SourceCode\Loader\DateTimeValueObjectLoader
- * @group  todo
+ * @group application
  */
-class DateTimeValueObjectLoaderTest extends TestCase
+class DateTimeValueObjectLoaderTest extends SfTestCase
 {
-    use MockeryPHPUnitIntegration;
-    /** @var MockInterface|InterfaceLoader */
-    private $interfaceLoader;
-    /** @var MockInterface|TraitLoader */
-    private $traitLoader;
     /** @var DateTimeValueObjectLoader */
-    private $dateTimeValueObjectLoader;
+    private $sut;
 
     public function setUp()
     {
-        $this->interfaceLoader           = Mockery::mock(InterfaceLoader::class);
-        $this->traitLoader               = Mockery::mock(TraitLoader::class);
-        $this->dateTimeValueObjectLoader = new DateTimeValueObjectLoader($this->interfaceLoader, $this->traitLoader);
+        parent::setUp();
+        $this->sut = $this->getService(DateTimeValueObjectLoader::class);
     }
 
-    public function testLoad()
+    /**
+     * @dataProvider provideFullyDefinedInput
+     * @dataProvider provideMinimallyDefinedInput
+     */
+    public function testLoader(array $inputConfig)
     {
-        $this->markTestSkipped('Skipping');
+        // Act
+        $result = $this->sut->load($inputConfig);
+
+        // Assert expected instance was returned
+        self::assertInstanceOf(DateTimeValueObject::class, $result);
+
+        // Assert name
+        self::assertEquals(ClassName::createFromFullyQualified('MyVendor\\User\\UserCreatedAt'), $result->getName());
+
+        // Has DateTime as a parent
+        self::assertTrue($result->hasParent());
+        self::assertEquals(new ClassName('DateTime'), $result->getParent());
+
+        // No interfaces
+        self::assertFalse($result->hasInterfaces());
+        self::assertEmpty($result->getInterfaces());
+
+        // No traits
+        self::assertFalse($result->hasTraits());
+        self::assertEmpty($result->getTraits());
+
+        // No constructor
+        self::assertFalse($result->hasConstructorMethod());
+        self::assertNull($result->getConstructorMethod());
+
+        // Has no properties
+        self::assertFalse($result->hasProperties());
+        self::assertCount(0, $result->getProperties());
     }
 
-    public function testGetDefaultValues()
+    public function provideFullyDefinedInput(): Generator
     {
-        $this->markTestSkipped('Skipping');
+        $input1 = [
+            'type'        => 'DateTimeValueObject',
+            'className'   => 'MyVendor\\User\\UserCreatedAt',
+            'parent'      => 'DateTime',
+            'interfaces'  => [],
+            'traits'      => [],
+            'constructor' => [],
+        ];
+
+        yield [$input1];
+    }
+
+    public function provideMinimallyDefinedInput(): Generator
+    {
+        $input1 = [
+            'type'      => 'DateTimeValueObject',
+            'className' => 'MyVendor\\User\\UserCreatedAt',
+        ];
+
+        yield [$input1];
+    }
+
+    /** @dataProvider provideInput */
+    public function testSupports(array $input)
+    {
+        self::assertTrue($this->sut->supports($input));
+    }
+
+    /** @dataProvider provideInput */
+    public function testLoad(array $input)
+    {
+        self::assertInstanceOf(DateTimeValueObject::class, $this->sut->load($input));
+    }
+
+    /** @dataProvider provideInput */
+    public function testToArrayOnDefinitionWorks(array $input)
+    {
+        $definition = $this->sut->load($input);
+
+        self::assertEquals($input, $definition->toArray()['definition']);
+    }
+
+    public function provideInput(): array
+    {
+        return [
+            [$this->loadDefinitionYaml('UserCreatedAt.yaml')],
+        ];
     }
 }
