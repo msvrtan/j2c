@@ -49,8 +49,8 @@ class SimpleEntitySpecNetteGeneratorTest extends SfTestCase
     public function provideYamlConfigurationNames(): array
     {
         return [
-            ['UserEntity'],
-            ['ProductEntity'],
+            ['MyVendor/UserEntity'],
+            ['MyVendor/ProductEntity'],
         ];
     }
 

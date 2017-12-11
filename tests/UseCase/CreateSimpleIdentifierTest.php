@@ -58,7 +58,7 @@ class CreateSimpleIdentifierTest extends SfTestCase
     public function provideYamlConfigurationNames(): array
     {
         return [
-            ['UserId'],
+            ['MyVendor/User/UserId'],
         ];
     }
 

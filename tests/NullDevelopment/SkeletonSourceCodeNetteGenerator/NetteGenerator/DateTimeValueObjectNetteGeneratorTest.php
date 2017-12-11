@@ -49,7 +49,7 @@ class DateTimeValueObjectNetteGeneratorTest extends SfTestCase
     public function provideYamlConfigurationNames(): array
     {
         return [
-            ['UserCreatedAt'],
+            ['MyVendor/User/UserCreatedAt'],
         ];
     }
 

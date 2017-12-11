@@ -49,7 +49,7 @@ class SimpleCollectionNetteGeneratorTest extends SfTestCase
     public function provideYamlConfigurationNames(): array
     {
         return [
-            ['ProductCollection'],
+            ['MyVendor/ProductCollection'],
         ];
     }
 

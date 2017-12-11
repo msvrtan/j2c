@@ -45,8 +45,8 @@ class SimpleIdentifierLoaderTest extends SfTestCase
     public function provideInput(): array
     {
         return [
-            [$this->loadDefinitionYaml('UserId.yaml')],
-            [$this->loadDefinitionYaml('ProductId.yaml')],
+            [$this->loadDefinitionYaml('MyVendor/User/UserId.yaml')],
+            [$this->loadDefinitionYaml('MyVendor/Product/ProductId.yaml')],
         ];
     }
 }

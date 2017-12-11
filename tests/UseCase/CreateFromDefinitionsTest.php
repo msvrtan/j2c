@@ -12,6 +12,7 @@ use NullDevelopment\Skeleton\Core\ObjectConfigurationLoaderCollection;
 use NullDevelopment\Skeleton\Php\Structure\ClassName;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\SplFileInfo;
+use Symfony\Component\Yaml\Yaml;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -39,7 +40,7 @@ class CreateFromDefinitionsTest extends SfTestCase
 
         /** @var SplFileInfo $yaml */
         foreach ($yamls as $yaml) {
-            $config = $this->loadDefinitionYaml($yaml->getFilename());
+            $config = $this->loadDefinitionYaml($yaml->getFilename(), $yaml->getPath());
 
             $classDefinition = $this->loaders->findAndLoad($config);
 
