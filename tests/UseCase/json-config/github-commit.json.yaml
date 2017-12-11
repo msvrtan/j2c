@@ -168,6 +168,22 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         sorting: 30
+      payload:
+        key: payload
+        name: VerificationPayload
+        namespace: GitHub\Commit\Verification
+        inputKey: '["verification"]["payload"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+        sorting: 20
+      signature:
+        key: signature
+        name: VerificationSignature
+        namespace: GitHub\Commit\Verification
+        inputKey: '["verification"]["signature"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+        sorting: 20
       verified:
         key: verified
         name: VerificationVerified
@@ -176,20 +192,6 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
         sorting: 20
-      payload:
-        key: payload
-        name: VerificationPayload
-        namespace: GitHub\Commit\Verification
-        inputKey: '["verification"]["payload"]'
-        suggestions: {  }
-        sorting: 0
-      signature:
-        key: signature
-        name: VerificationSignature
-        namespace: GitHub\Commit\Verification
-        inputKey: '["verification"]["signature"]'
-        suggestions: {  }
-        sorting: 0
   html_url:
     key: html_url
     name: CommitHtmlUrl

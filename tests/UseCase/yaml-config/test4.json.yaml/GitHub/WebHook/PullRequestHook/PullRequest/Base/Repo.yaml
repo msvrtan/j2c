@@ -115,6 +115,21 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    homepage:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\RepoHomepage
+      nullable: false
+      hasDefault: false
+      default: null
+    license:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\RepoLicense
+      nullable: false
+      hasDefault: false
+      default: null
+    mirrorUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\RepoMirrorUrl
+      nullable: false
+      hasDefault: false
+      default: null
     private:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\RepoPrivate
       nullable: false
@@ -342,21 +357,6 @@ definition:
       default: null
     updatedAt:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\RepoUpdatedAt
-      nullable: false
-      hasDefault: false
-      default: null
-    homepage:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\RepoHomepage
-      nullable: false
-      hasDefault: false
-      default: null
-    license:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\RepoLicense
-      nullable: false
-      hasDefault: false
-      default: null
-    mirrorUrl:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\RepoMirrorUrl
       nullable: false
       hasDefault: false
       default: null

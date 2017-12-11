@@ -70,6 +70,16 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    assignee:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestAssignee
+      nullable: false
+      hasDefault: false
+      default: null
+    closedAt:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestClosedAt
+      nullable: false
+      hasDefault: false
+      default: null
     locked:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestLocked
       nullable: false
@@ -80,8 +90,38 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    mergeCommitSha:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergeCommitSha
+      nullable: false
+      hasDefault: false
+      default: null
+    mergeable:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergeable
+      nullable: false
+      hasDefault: false
+      default: null
     merged:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMerged
+      nullable: false
+      hasDefault: false
+      default: null
+    mergedAt:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergedAt
+      nullable: false
+      hasDefault: false
+      default: null
+    mergedBy:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergedBy
+      nullable: false
+      hasDefault: false
+      default: null
+    milestone:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMilestone
+      nullable: false
+      hasDefault: false
+      default: null
+    rebaseable:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestRebaseable
       nullable: false
       hasDefault: false
       default: null
@@ -172,46 +212,6 @@ definition:
       default: null
     updatedAt:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestUpdatedAt
-      nullable: false
-      hasDefault: false
-      default: null
-    assignee:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestAssignee
-      nullable: false
-      hasDefault: false
-      default: null
-    closedAt:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestClosedAt
-      nullable: false
-      hasDefault: false
-      default: null
-    mergeCommitSha:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergeCommitSha
-      nullable: false
-      hasDefault: false
-      default: null
-    mergeable:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergeable
-      nullable: false
-      hasDefault: false
-      default: null
-    mergedAt:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergedAt
-      nullable: false
-      hasDefault: false
-      default: null
-    mergedBy:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergedBy
-      nullable: false
-      hasDefault: false
-      default: null
-    milestone:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMilestone
-      nullable: false
-      hasDefault: false
-      default: null
-    rebaseable:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestRebaseable
       nullable: false
       hasDefault: false
       default: null

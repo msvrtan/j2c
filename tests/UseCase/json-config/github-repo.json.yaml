@@ -205,6 +205,14 @@ fields:
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
     sorting: 20
+  mirror_url:
+    key: mirror_url
+    name: RepoMirrorUrl
+    namespace: GitHub\Repo
+    inputKey: '["mirror_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+    sorting: 20
   private:
     key: private
     name: RepoPrivate
@@ -955,10 +963,3 @@ fields:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     sorting: 5
-  mirror_url:
-    key: mirror_url
-    name: RepoMirrorUrl
-    namespace: GitHub\Repo
-    inputKey: '["mirror_url"]'
-    suggestions: {  }
-    sorting: 0
