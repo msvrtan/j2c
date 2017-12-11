@@ -52,9 +52,15 @@ class SimpleCollectionTestNetteGenerator extends BaseNetteGenerator
         foreach ($namespace->getClasses() as $class) {
             $var = new SimpleVariable('zzz', $definition->getCollectionOf()->getClassName());
 
+            $exampleValue =$this->exampleMaker->instance($var);
+
+            foreach ($exampleValue->classesToImport() as $classToImport) {
+                $namespace->addUse($classToImport->getFullName());
+            }
+
             $class->addMethod('setUp')
                 ->setVisibility(Visibility::PUBLIC)
-                ->addBody(sprintf('$this->elements = [%s];', $this->exampleMaker->instance($var)))
+                ->addBody(sprintf('$this->elements = [%s];', $exampleValue))
                 ->addBody(sprintf('$this->sut = new %s(%s);', $definition->getClassName(), '$this->elements'));
 
             $class->addMethod('testGetElements')

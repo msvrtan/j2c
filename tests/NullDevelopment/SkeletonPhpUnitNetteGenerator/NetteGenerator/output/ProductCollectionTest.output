@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\MyVendor;
 
+use DateTime;
 use MyVendor\ProductCollection;
+use MyVendor\ProductEntity;
+use MyVendor\Product\ProductId;
+use MyVendor\Product\ProductWeight;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -22,7 +26,7 @@ class ProductCollectionTest extends TestCase
 
     public function setUp()
     {
-        $this->elements = [new \MyVendor\ProductEntity(new \MyVendor\Product\ProductId(1), 'title', 'description', new \MyVendor\Product\ProductWeight(1), new \DateTime('2018-01-01 00:01:00'))];
+        $this->elements = [new ProductEntity(new ProductId(1), 'title', 'description', new ProductWeight(1), new DateTime('2018-01-01 00:01:00'))];
         $this->sut = new ProductCollection($this->elements);
     }
 

@@ -18,7 +18,7 @@ use ReflectionClass;
 class ExampleMaker
 {
     /** @SuppressWarnings(PHPMD.CyclomaticComplexity) */
-    public function instance(Variable $variable): string
+    public function instance(Variable $variable): Example
     {
         switch ($variable->getStructureFullName()) {
             case 'int':
@@ -28,14 +28,15 @@ class ExampleMaker
             case 'array':
                 return $this->value($variable);
             case 'DateTime':
-                return "new \DateTime(".$this->value($variable).')';
+                return new InstanceExample(new ClassName('DateTime'), [$this->value($variable)]);
         }
 
         $refl = new ReflectionClass($variable->getStructureFullName());
 
         while ($parent = $refl->getParentClass()) {
             if (DateTime::class === $parent->getName()) {
-                return 'new '.$variable->getStructureName()->getName()."('2018-01-01 00:01:00')";
+                return new InstanceExample($variable->getStructureName(), [new SimpleExample('2018-01-01 00:01:00')]);
+                //return new InstanceExample('new '.$variable->getStructureName()->getName()."('2018-01-01 00:01:00')");
             }
         }
 
@@ -54,32 +55,32 @@ class ExampleMaker
             }
         }
 
-        return 'new \\'.$variable->getStructureName()->getFullName().'('.implode(', ', $arguments).')';
+        return new InstanceExample($variable->getStructureName(), $arguments);
     }
 
     /** @SuppressWarnings(PHPMD.CyclomaticComplexity) */
-    public function value(Variable $variable): string
+    public function value(Variable $variable): Example
     {
         switch ($variable->getStructureFullName()) {
             case 'int':
-                return '1';
+                return new SimpleExample(1);
             case 'string':
-                return sprintf("'%s'", $variable->getName());
+                return new SimpleExample($variable->getName());
             case 'float':
-                return '2.0';
+                return new SimpleExample(2.0);
             case 'bool':
-                return 'true';
+                return new SimpleExample(true);
             case 'array':
-                return "['data']";
+                return new ArrayExample([new SimpleExample('data')]);
             case 'DateTime':
-                return "'2018-01-01 00:01:00'";
+                return new SimpleExample('2018-01-01 00:01:00');
         }
 
         $refl = new ReflectionClass($variable->getStructureFullName());
 
         while ($parent = $refl->getParentClass()) {
             if (DateTime::class === $parent->getName()) {
-                return "'2018-01-01 00:01:00'";
+                return new SimpleExample('2018-01-01 00:01:00');
             }
         }
 
@@ -99,11 +100,11 @@ class ExampleMaker
         }
 
         if (count($arguments) > 1) {
-            return '['.implode(', ', $arguments).']';
+            return new SimpleExample('['.implode(', ', $arguments).']');
         } elseif (1 === count($arguments)) {
-            return array_pop($arguments);
+            return new SimpleExample(array_pop($arguments));
         } else {
-            return 'WTF?';
+            return new SimpleExample('WTF?');
         }
     }
 }

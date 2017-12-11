@@ -4,9 +4,13 @@ declare(strict_types=1);
 
 namespace Tests\Miro\ExampleMaker;
 
+use Miro\ExampleMaker\ArrayExample;
 use Miro\ExampleMaker\ExampleMaker;
+use Miro\ExampleMaker\InstanceExample;
+use Miro\ExampleMaker\SimpleExample;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+use NullDevelopment\Skeleton\Php\Structure\ClassName;
 use NullDevelopment\Skeleton\Php\Structure\Variable;
 use PHPUnit\Framework\TestCase;
 
@@ -30,7 +34,7 @@ class ExampleMakerTest extends TestCase
         $parameter = Mockery::mock(Variable::class);
         $parameter->expects('getStructureFullName')->twice()->andReturn('int');
 
-        self::assertSame('1', $this->exampleMaker->instance($parameter));
+        self::assertEquals(new SimpleExample('1'), $this->exampleMaker->instance($parameter));
     }
 
     public function testItReturnsVariableNameWhenVariableIsInstanceOfString()
@@ -39,7 +43,7 @@ class ExampleMakerTest extends TestCase
         $parameter->expects('getStructureFullName')->twice()->andReturn('string');
         $parameter->expects('getName')->andReturn('description');
 
-        self::assertSame("'description'", $this->exampleMaker->instance($parameter));
+        self::assertEquals(new SimpleExample('description'), $this->exampleMaker->instance($parameter));
     }
 
     public function testItReturnsNumberWithDecimalsForFloat()
@@ -47,7 +51,7 @@ class ExampleMakerTest extends TestCase
         $parameter = Mockery::mock(Variable::class);
         $parameter->expects('getStructureFullName')->twice()->andReturn('float');
 
-        self::assertSame('2.0', $this->exampleMaker->instance($parameter));
+        self::assertEquals(new SimpleExample('2.0'), $this->exampleMaker->instance($parameter));
     }
 
     public function testItReturnsTrueWhenAskedForBoolean()
@@ -55,7 +59,7 @@ class ExampleMakerTest extends TestCase
         $parameter = Mockery::mock(Variable::class);
         $parameter->expects('getStructureFullName')->twice()->andReturn('bool');
 
-        self::assertSame('true', $this->exampleMaker->instance($parameter));
+        self::assertEquals(new SimpleExample(true), $this->exampleMaker->instance($parameter));
     }
 
     public function testItReturnsSimpleArrayWhenAskedForArray()
@@ -63,7 +67,7 @@ class ExampleMakerTest extends TestCase
         $parameter = Mockery::mock(Variable::class);
         $parameter->expects('getStructureFullName')->twice()->andReturn('array');
 
-        self::assertSame("['data']", $this->exampleMaker->instance($parameter));
+        self::assertEquals(new ArrayExample([new SimpleExample('data')]), $this->exampleMaker->instance($parameter));
     }
 
     public function testItReturnsFirstMinuteOf2018ForDateTimeExample()
@@ -71,19 +75,9 @@ class ExampleMakerTest extends TestCase
         $parameter = Mockery::mock(Variable::class);
         $parameter->expects('getStructureFullName')->twice()->andReturn('DateTime');
 
-        self::assertSame("new \DateTime('2018-01-01 00:01:00')", $this->exampleMaker->instance($parameter));
+        self::assertEquals(
+            new InstanceExample(new ClassName('DateTime'), [new SimpleExample('2018-01-01 00:01:00')]),
+            $this->exampleMaker->instance($parameter)
+        );
     }
-
-    ///
-    ///
-    ///
-    ///
-    ///
-    ///
-    ///
-    ///
-    ///
-    ///
-    ///
-    ///
 }
