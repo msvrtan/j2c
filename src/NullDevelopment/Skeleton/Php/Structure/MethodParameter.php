@@ -24,9 +24,9 @@ class MethodParameter implements Variable
     public function __construct(
         string $name,
         ClassName $className,
-        bool $nullable,
-        bool $hasDefaultValue,
-        $defaultValue
+        bool $nullable = false,
+        bool $hasDefaultValue = false,
+        $defaultValue = null
     ) {
         $this->name            = $name;
         $this->className       = $className;
