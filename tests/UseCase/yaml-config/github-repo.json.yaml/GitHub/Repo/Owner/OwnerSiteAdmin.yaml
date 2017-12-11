@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\Owner\OwnerSiteAdmin
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    ownerSiteAdmin:
+      className: bool
+      nullable: false
+      hasDefault: false
+      default: null

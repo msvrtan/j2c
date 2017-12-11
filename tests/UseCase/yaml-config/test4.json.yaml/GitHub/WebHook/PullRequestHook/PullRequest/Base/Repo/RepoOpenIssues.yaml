@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\RepoOpenIssues
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repoOpenIssues:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null

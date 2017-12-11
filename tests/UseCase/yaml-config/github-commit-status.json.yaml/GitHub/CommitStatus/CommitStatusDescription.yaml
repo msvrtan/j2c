@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\CommitStatus\CommitStatusDescription
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    commitStatusDescription:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

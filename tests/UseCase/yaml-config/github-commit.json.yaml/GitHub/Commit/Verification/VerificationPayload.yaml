@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Commit\Verification\VerificationPayload
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    verificationPayload:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

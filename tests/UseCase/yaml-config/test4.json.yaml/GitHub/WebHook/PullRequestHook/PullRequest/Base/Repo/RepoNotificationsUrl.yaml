@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\RepoNotificationsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repoNotificationsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

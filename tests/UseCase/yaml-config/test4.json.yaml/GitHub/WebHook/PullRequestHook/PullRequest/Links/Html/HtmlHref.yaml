@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Html\HtmlHref
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    htmlHref:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

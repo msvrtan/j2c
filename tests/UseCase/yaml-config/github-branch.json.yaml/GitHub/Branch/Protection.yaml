@@ -1,0 +1,17 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\Branch\Protection
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    enabled:
+      className: GitHub\Branch\Protection\ProtectionEnabled
+      nullable: false
+      hasDefault: false
+      default: null
+    requiredStatusChecks:
+      className: GitHub\Branch\Protection\RequiredStatusChecks
+      nullable: false
+      hasDefault: false
+      default: null

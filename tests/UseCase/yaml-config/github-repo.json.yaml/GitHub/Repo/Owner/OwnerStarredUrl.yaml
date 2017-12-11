@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\Owner\OwnerStarredUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    ownerStarredUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

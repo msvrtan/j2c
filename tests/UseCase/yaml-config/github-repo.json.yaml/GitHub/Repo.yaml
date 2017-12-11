@@ -1,0 +1,377 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\Repo
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    id:
+      className: GitHub\Repo\RepoId
+      nullable: false
+      hasDefault: false
+      default: null
+    defaultBranch:
+      className: GitHub\Repo\RepoDefaultBranch
+      nullable: false
+      hasDefault: false
+      default: null
+    description:
+      className: GitHub\Repo\RepoDescription
+      nullable: false
+      hasDefault: false
+      default: null
+    forks:
+      className: GitHub\Repo\RepoForks
+      nullable: false
+      hasDefault: false
+      default: null
+    forksCount:
+      className: GitHub\Repo\RepoForksCount
+      nullable: false
+      hasDefault: false
+      default: null
+    fullName:
+      className: GitHub\Repo\RepoFullName
+      nullable: false
+      hasDefault: false
+      default: null
+    homepage:
+      className: GitHub\Repo\RepoHomepage
+      nullable: false
+      hasDefault: false
+      default: null
+    language:
+      className: GitHub\Repo\RepoLanguage
+      nullable: false
+      hasDefault: false
+      default: null
+    name:
+      className: GitHub\Repo\RepoName
+      nullable: false
+      hasDefault: false
+      default: null
+    networkCount:
+      className: GitHub\Repo\RepoNetworkCount
+      nullable: false
+      hasDefault: false
+      default: null
+    openIssues:
+      className: GitHub\Repo\RepoOpenIssues
+      nullable: false
+      hasDefault: false
+      default: null
+    openIssuesCount:
+      className: GitHub\Repo\RepoOpenIssuesCount
+      nullable: false
+      hasDefault: false
+      default: null
+    size:
+      className: GitHub\Repo\RepoSize
+      nullable: false
+      hasDefault: false
+      default: null
+    sshUrl:
+      className: GitHub\Repo\RepoSshUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    stargazersCount:
+      className: GitHub\Repo\RepoStargazersCount
+      nullable: false
+      hasDefault: false
+      default: null
+    subscribersCount:
+      className: GitHub\Repo\RepoSubscribersCount
+      nullable: false
+      hasDefault: false
+      default: null
+    watchers:
+      className: GitHub\Repo\RepoWatchers
+      nullable: false
+      hasDefault: false
+      default: null
+    watchersCount:
+      className: GitHub\Repo\RepoWatchersCount
+      nullable: false
+      hasDefault: false
+      default: null
+    archived:
+      className: GitHub\Repo\RepoArchived
+      nullable: false
+      hasDefault: false
+      default: null
+    fork:
+      className: GitHub\Repo\RepoFork
+      nullable: false
+      hasDefault: false
+      default: null
+    hasDownloads:
+      className: GitHub\Repo\RepoHasDownloads
+      nullable: false
+      hasDefault: false
+      default: null
+    hasIssues:
+      className: GitHub\Repo\RepoHasIssues
+      nullable: false
+      hasDefault: false
+      default: null
+    hasPages:
+      className: GitHub\Repo\RepoHasPages
+      nullable: false
+      hasDefault: false
+      default: null
+    hasProjects:
+      className: GitHub\Repo\RepoHasProjects
+      nullable: false
+      hasDefault: false
+      default: null
+    hasWiki:
+      className: GitHub\Repo\RepoHasWiki
+      nullable: false
+      hasDefault: false
+      default: null
+    private:
+      className: GitHub\Repo\RepoPrivate
+      nullable: false
+      hasDefault: false
+      default: null
+    organization:
+      className: GitHub\Repo\Organization
+      nullable: false
+      hasDefault: false
+      default: null
+    owner:
+      className: GitHub\Repo\Owner
+      nullable: false
+      hasDefault: false
+      default: null
+    permissions:
+      className: GitHub\Repo\Permissions
+      nullable: false
+      hasDefault: false
+      default: null
+    archiveUrl:
+      className: GitHub\Repo\RepoArchiveUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    assigneesUrl:
+      className: GitHub\Repo\RepoAssigneesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    blobsUrl:
+      className: GitHub\Repo\RepoBlobsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    branchesUrl:
+      className: GitHub\Repo\RepoBranchesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    cloneUrl:
+      className: GitHub\Repo\RepoCloneUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    collaboratorsUrl:
+      className: GitHub\Repo\RepoCollaboratorsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    commentsUrl:
+      className: GitHub\Repo\RepoCommentsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    commitsUrl:
+      className: GitHub\Repo\RepoCommitsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    compareUrl:
+      className: GitHub\Repo\RepoCompareUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    contentsUrl:
+      className: GitHub\Repo\RepoContentsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    contributorsUrl:
+      className: GitHub\Repo\RepoContributorsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    deploymentsUrl:
+      className: GitHub\Repo\RepoDeploymentsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    downloadsUrl:
+      className: GitHub\Repo\RepoDownloadsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    eventsUrl:
+      className: GitHub\Repo\RepoEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    forksUrl:
+      className: GitHub\Repo\RepoForksUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    gitCommitsUrl:
+      className: GitHub\Repo\RepoGitCommitsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    gitRefsUrl:
+      className: GitHub\Repo\RepoGitRefsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    gitTagsUrl:
+      className: GitHub\Repo\RepoGitTagsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    gitUrl:
+      className: GitHub\Repo\RepoGitUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    hooksUrl:
+      className: GitHub\Repo\RepoHooksUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: GitHub\Repo\RepoHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    issueCommentUrl:
+      className: GitHub\Repo\RepoIssueCommentUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    issueEventsUrl:
+      className: GitHub\Repo\RepoIssueEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    issuesUrl:
+      className: GitHub\Repo\RepoIssuesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    keysUrl:
+      className: GitHub\Repo\RepoKeysUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    labelsUrl:
+      className: GitHub\Repo\RepoLabelsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    languagesUrl:
+      className: GitHub\Repo\RepoLanguagesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    mergesUrl:
+      className: GitHub\Repo\RepoMergesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    milestonesUrl:
+      className: GitHub\Repo\RepoMilestonesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    notificationsUrl:
+      className: GitHub\Repo\RepoNotificationsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    pullsUrl:
+      className: GitHub\Repo\RepoPullsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    releasesUrl:
+      className: GitHub\Repo\RepoReleasesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    stargazersUrl:
+      className: GitHub\Repo\RepoStargazersUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    statusesUrl:
+      className: GitHub\Repo\RepoStatusesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    subscribersUrl:
+      className: GitHub\Repo\RepoSubscribersUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    subscriptionUrl:
+      className: GitHub\Repo\RepoSubscriptionUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    svnUrl:
+      className: GitHub\Repo\RepoSvnUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    tagsUrl:
+      className: GitHub\Repo\RepoTagsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    teamsUrl:
+      className: GitHub\Repo\RepoTeamsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    treesUrl:
+      className: GitHub\Repo\RepoTreesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    url:
+      className: GitHub\Repo\RepoUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    createdAt:
+      className: GitHub\Repo\RepoCreatedAt
+      nullable: false
+      hasDefault: false
+      default: null
+    pushedAt:
+      className: GitHub\Repo\RepoPushedAt
+      nullable: false
+      hasDefault: false
+      default: null
+    updatedAt:
+      className: GitHub\Repo\RepoUpdatedAt
+      nullable: false
+      hasDefault: false
+      default: null
+    mirrorUrl:
+      className: GitHub\Repo\RepoMirrorUrl
+      nullable: false
+      hasDefault: false
+      default: null

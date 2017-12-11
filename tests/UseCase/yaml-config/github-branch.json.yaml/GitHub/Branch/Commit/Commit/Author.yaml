@@ -1,0 +1,22 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\Branch\Commit\Commit\Author
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    email:
+      className: GitHub\Branch\Commit\Commit\Author\AuthorEmail
+      nullable: false
+      hasDefault: false
+      default: null
+    name:
+      className: GitHub\Branch\Commit\Commit\Author\AuthorName
+      nullable: false
+      hasDefault: false
+      default: null
+    date:
+      className: GitHub\Branch\Commit\Commit\Author\AuthorDate
+      nullable: false
+      hasDefault: false
+      default: null

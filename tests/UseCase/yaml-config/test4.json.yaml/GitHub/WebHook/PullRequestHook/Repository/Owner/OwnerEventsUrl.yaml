@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerEventsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    ownerEventsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

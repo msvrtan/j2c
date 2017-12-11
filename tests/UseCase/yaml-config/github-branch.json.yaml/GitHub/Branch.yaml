@@ -1,0 +1,37 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\Branch
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    name:
+      className: GitHub\Branch\BranchName
+      nullable: false
+      hasDefault: false
+      default: null
+    protected:
+      className: GitHub\Branch\BranchProtected
+      nullable: false
+      hasDefault: false
+      default: null
+    commit:
+      className: GitHub\Branch\Commit
+      nullable: false
+      hasDefault: false
+      default: null
+    links:
+      className: GitHub\Branch\Links
+      nullable: false
+      hasDefault: false
+      default: null
+    protection:
+      className: GitHub\Branch\Protection
+      nullable: false
+      hasDefault: false
+      default: null
+    protectionUrl:
+      className: GitHub\Branch\BranchProtectionUrl
+      nullable: false
+      hasDefault: false
+      default: null

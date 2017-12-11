@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Branch\Commit\Commit\Author\AuthorEmail
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    authorEmail:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

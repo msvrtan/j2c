@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Head\User\UserFollowingUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    userFollowingUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

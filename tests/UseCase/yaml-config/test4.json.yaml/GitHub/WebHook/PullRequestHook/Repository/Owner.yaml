@@ -1,0 +1,92 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\WebHook\PullRequestHook\Repository\Owner
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    id:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerId
+      nullable: false
+      hasDefault: false
+      default: null
+    gravatarId:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerGravatarId
+      nullable: false
+      hasDefault: false
+      default: null
+    login:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerLogin
+      nullable: false
+      hasDefault: false
+      default: null
+    type:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerType
+      nullable: false
+      hasDefault: false
+      default: null
+    siteAdmin:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerSiteAdmin
+      nullable: false
+      hasDefault: false
+      default: null
+    avatarUrl:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerAvatarUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    eventsUrl:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    followersUrl:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerFollowersUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    followingUrl:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerFollowingUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    gistsUrl:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerGistsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    organizationsUrl:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerOrganizationsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    receivedEventsUrl:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerReceivedEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    reposUrl:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerReposUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    starredUrl:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerStarredUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    subscriptionsUrl:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerSubscriptionsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    url:
+      className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerUrl
+      nullable: false
+      hasDefault: false
+      default: null

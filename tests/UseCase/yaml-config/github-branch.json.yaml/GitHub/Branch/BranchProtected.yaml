@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Branch\BranchProtected
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    branchProtected:
+      className: bool
+      nullable: false
+      hasDefault: false
+      default: null

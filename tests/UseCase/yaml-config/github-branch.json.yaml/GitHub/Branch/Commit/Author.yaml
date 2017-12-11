@@ -1,0 +1,92 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\Branch\Commit\Author
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    id:
+      className: GitHub\Branch\Commit\Author\AuthorId
+      nullable: false
+      hasDefault: false
+      default: null
+    gravatarId:
+      className: GitHub\Branch\Commit\Author\AuthorGravatarId
+      nullable: false
+      hasDefault: false
+      default: null
+    login:
+      className: GitHub\Branch\Commit\Author\AuthorLogin
+      nullable: false
+      hasDefault: false
+      default: null
+    type:
+      className: GitHub\Branch\Commit\Author\AuthorType
+      nullable: false
+      hasDefault: false
+      default: null
+    siteAdmin:
+      className: GitHub\Branch\Commit\Author\AuthorSiteAdmin
+      nullable: false
+      hasDefault: false
+      default: null
+    avatarUrl:
+      className: GitHub\Branch\Commit\Author\AuthorAvatarUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    eventsUrl:
+      className: GitHub\Branch\Commit\Author\AuthorEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    followersUrl:
+      className: GitHub\Branch\Commit\Author\AuthorFollowersUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    followingUrl:
+      className: GitHub\Branch\Commit\Author\AuthorFollowingUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    gistsUrl:
+      className: GitHub\Branch\Commit\Author\AuthorGistsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: GitHub\Branch\Commit\Author\AuthorHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    organizationsUrl:
+      className: GitHub\Branch\Commit\Author\AuthorOrganizationsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    receivedEventsUrl:
+      className: GitHub\Branch\Commit\Author\AuthorReceivedEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    reposUrl:
+      className: GitHub\Branch\Commit\Author\AuthorReposUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    starredUrl:
+      className: GitHub\Branch\Commit\Author\AuthorStarredUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    subscriptionsUrl:
+      className: GitHub\Branch\Commit\Author\AuthorSubscriptionsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    url:
+      className: GitHub\Branch\Commit\Author\AuthorUrl
+      nullable: false
+      hasDefault: false
+      default: null

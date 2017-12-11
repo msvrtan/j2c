@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\RepoGitCommitsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repoGitCommitsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

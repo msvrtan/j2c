@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Branch\Commit\CommitSha
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    commitSha:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

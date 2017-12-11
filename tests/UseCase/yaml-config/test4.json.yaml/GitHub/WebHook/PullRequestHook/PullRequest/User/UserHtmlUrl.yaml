@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\User\UserHtmlUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    userHtmlUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

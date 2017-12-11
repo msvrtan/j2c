@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\Owner\OwnerSubscriptionsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    ownerSubscriptionsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

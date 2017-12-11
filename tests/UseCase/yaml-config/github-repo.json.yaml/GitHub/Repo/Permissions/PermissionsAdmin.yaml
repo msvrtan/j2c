@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\Permissions\PermissionsAdmin
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    permissionsAdmin:
+      className: bool
+      nullable: false
+      hasDefault: false
+      default: null

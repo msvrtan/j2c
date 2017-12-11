@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Branch\Commit\Author\AuthorAvatarUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    authorAvatarUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

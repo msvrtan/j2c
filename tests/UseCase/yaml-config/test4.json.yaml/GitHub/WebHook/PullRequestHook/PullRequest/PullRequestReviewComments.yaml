@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestReviewComments
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    pullRequestReviewComments:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null

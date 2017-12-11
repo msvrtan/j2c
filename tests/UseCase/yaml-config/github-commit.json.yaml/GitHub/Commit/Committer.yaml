@@ -1,0 +1,22 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\Commit\Committer
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    email:
+      className: GitHub\Commit\Committer\CommitterEmail
+      nullable: false
+      hasDefault: false
+      default: null
+    name:
+      className: GitHub\Commit\Committer\CommitterName
+      nullable: false
+      hasDefault: false
+      default: null
+    date:
+      className: GitHub\Commit\Committer\CommitterDate
+      nullable: false
+      hasDefault: false
+      default: null

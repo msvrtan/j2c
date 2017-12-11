@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\Repository\RepositoryStargazersUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repositoryStargazersUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

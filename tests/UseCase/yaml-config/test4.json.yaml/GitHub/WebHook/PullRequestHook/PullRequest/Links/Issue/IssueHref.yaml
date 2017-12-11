@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Issue\IssueHref
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    issueHref:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

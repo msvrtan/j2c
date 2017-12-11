@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Commits\CommitsHref
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    commitsHref:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

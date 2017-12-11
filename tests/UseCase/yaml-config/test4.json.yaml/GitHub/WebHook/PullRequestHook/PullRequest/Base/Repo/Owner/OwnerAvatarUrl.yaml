@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo\Owner\OwnerAvatarUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    ownerAvatarUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

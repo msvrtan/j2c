@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Branch\Commit\Committer\CommitterEventsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    committerEventsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

@@ -1,0 +1,27 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\Commit\Verification
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    reason:
+      className: GitHub\Commit\Verification\VerificationReason
+      nullable: false
+      hasDefault: false
+      default: null
+    verified:
+      className: GitHub\Commit\Verification\VerificationVerified
+      nullable: false
+      hasDefault: false
+      default: null
+    payload:
+      className: GitHub\Commit\Verification\VerificationPayload
+      nullable: false
+      hasDefault: false
+      default: null
+    signature:
+      className: GitHub\Commit\Verification\VerificationSignature
+      nullable: false
+      hasDefault: false
+      default: null

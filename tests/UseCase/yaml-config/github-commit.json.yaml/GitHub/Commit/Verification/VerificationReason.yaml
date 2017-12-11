@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Commit\Verification\VerificationReason
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    verificationReason:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

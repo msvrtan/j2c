@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\Organization\OrganizationReceivedEventsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    organizationReceivedEventsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null
