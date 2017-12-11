@@ -169,4 +169,41 @@ class ClassDefinition
     {
         return $this->properties;
     }
+
+    public function toArray(): array
+    {
+        if (null === $this->parent) {
+            $parent = null;
+        } else {
+            $parent = $this->parent->getFullName();
+        }
+
+        $items = [
+            'type'        => $this->getCurrentType(),
+            'className'   => $this->getFullClassName(),
+            'parent'      => $parent,
+            'interfaces'  => [], //@TODO
+            'traits'      => [], //@TODO
+            'constructor' => [],
+        ];
+
+        foreach ($this->getConstructorParameters() as $constructorParameter) {
+            $items['constructor'][$constructorParameter->getName()] = [
+                'className'  => $constructorParameter->getStructureFullName(),
+                'nullable'   => $constructorParameter->isNullable(),
+                'hasDefault' => $constructorParameter->hasDefaultValue(),
+                'default'    => $constructorParameter->getDefaultValue(),
+            ];
+        }
+
+        return ['definition' => $items];
+    }
+
+    private function getCurrentType()
+    {
+        $fullClassName = get_class($this);
+        $exploded      = explode('\\', $fullClassName);
+
+        return array_pop($exploded);
+    }
 }

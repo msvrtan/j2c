@@ -43,6 +43,10 @@ services:
 
     NullDevelopment\Skeleton\ExampleMaker\ExampleMaker: ~
 
+    ConfigToDefinition\:
+        resource: '../src/ConfigToDefinition'
+        public: true
+
 
 
     App\File\FileFactory:
