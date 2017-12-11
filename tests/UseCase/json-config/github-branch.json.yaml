@@ -549,6 +549,10 @@ fields:
               - JsonToConfig\JsonDetector\ValueObject\Generix\Url
               - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
             sorting: 10
+        collectionOf:
+          className: TODO2
+          accessor: getId
+          has: TODO3
       comments_url:
         key: comments_url
         name: CommitCommentsUrl
@@ -642,6 +646,10 @@ fields:
             suggestions:
               - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
             sorting: 16
+            collectionOf:
+              className: TODO2
+              accessor: getId
+              has: TODO3
   protection_url:
     key: protection_url
     name: BranchProtectionUrl
