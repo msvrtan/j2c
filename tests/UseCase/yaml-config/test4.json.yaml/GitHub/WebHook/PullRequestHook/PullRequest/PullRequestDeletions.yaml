@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestDeletions
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    pullRequestDeletions:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null

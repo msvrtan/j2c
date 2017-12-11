@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\RepoTeamsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repoTeamsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

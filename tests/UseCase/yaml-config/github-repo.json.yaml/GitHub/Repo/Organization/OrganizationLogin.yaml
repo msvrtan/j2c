@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\Organization\OrganizationLogin
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    organizationLogin:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

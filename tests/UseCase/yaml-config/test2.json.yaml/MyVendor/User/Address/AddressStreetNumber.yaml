@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: MyVendor\User\Address\AddressStreetNumber
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    addressStreetNumber:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null

@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\RepoGitTagsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repoGitTagsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

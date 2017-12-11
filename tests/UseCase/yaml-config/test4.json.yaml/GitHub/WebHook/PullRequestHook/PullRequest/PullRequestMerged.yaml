@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMerged
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    pullRequestMerged:
+      className: bool
+      nullable: false
+      hasDefault: false
+      default: null

@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Branch\Commit\Committer\CommitterFollowingUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    committerFollowingUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

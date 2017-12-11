@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\CommitStatus\Creator\CreatorSiteAdmin
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    creatorSiteAdmin:
+      className: bool
+      nullable: false
+      hasDefault: false
+      default: null

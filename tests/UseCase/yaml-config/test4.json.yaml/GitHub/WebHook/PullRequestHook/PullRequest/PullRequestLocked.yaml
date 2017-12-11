@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestLocked
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    pullRequestLocked:
+      className: bool
+      nullable: false
+      hasDefault: false
+      default: null

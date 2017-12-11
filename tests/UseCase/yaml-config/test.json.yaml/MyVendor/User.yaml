@@ -1,0 +1,27 @@
+definition:
+  type: SimpleEntity
+  className: MyVendor\User
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    id:
+      className: MyVendor\User\UserId
+      nullable: false
+      hasDefault: false
+      default: null
+    fullName:
+      className: MyVendor\User\UserFullName
+      nullable: false
+      hasDefault: false
+      default: null
+    name:
+      className: MyVendor\User\UserName
+      nullable: false
+      hasDefault: false
+      default: null
+    createdAt:
+      className: MyVendor\User\UserCreatedAt
+      nullable: false
+      hasDefault: false
+      default: null

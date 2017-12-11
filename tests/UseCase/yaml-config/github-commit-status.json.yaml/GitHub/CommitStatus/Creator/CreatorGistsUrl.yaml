@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\CommitStatus\Creator\CreatorGistsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    creatorGistsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Head\HeadLabel
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    headLabel:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

@@ -1,0 +1,32 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Head
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    label:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\HeadLabel
+      nullable: false
+      hasDefault: false
+      default: null
+    ref:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\HeadRef
+      nullable: false
+      hasDefault: false
+      default: null
+    sha:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\HeadSha
+      nullable: false
+      hasDefault: false
+      default: null
+    repo:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo
+      nullable: false
+      hasDefault: false
+      default: null
+    user:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\User
+      nullable: false
+      hasDefault: false
+      default: null

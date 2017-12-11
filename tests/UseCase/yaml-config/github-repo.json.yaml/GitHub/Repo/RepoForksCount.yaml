@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\RepoForksCount
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repoForksCount:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null

@@ -1,0 +1,47 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Links
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    comments:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Comments
+      nullable: false
+      hasDefault: false
+      default: null
+    commits:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Commits
+      nullable: false
+      hasDefault: false
+      default: null
+    html:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Html
+      nullable: false
+      hasDefault: false
+      default: null
+    issue:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Issue
+      nullable: false
+      hasDefault: false
+      default: null
+    reviewComment:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Links\ReviewComment
+      nullable: false
+      hasDefault: false
+      default: null
+    reviewComments:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Links\ReviewComments
+      nullable: false
+      hasDefault: false
+      default: null
+    self:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Self
+      nullable: false
+      hasDefault: false
+      default: null
+    statuses:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Statuses
+      nullable: false
+      hasDefault: false
+      default: null

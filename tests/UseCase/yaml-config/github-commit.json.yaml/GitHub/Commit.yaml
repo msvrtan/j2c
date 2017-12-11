@@ -1,0 +1,52 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\Commit
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    message:
+      className: GitHub\Commit\CommitMessage
+      nullable: false
+      hasDefault: false
+      default: null
+    sha:
+      className: GitHub\Commit\CommitSha
+      nullable: false
+      hasDefault: false
+      default: null
+    author:
+      className: GitHub\Commit\Author
+      nullable: false
+      hasDefault: false
+      default: null
+    committer:
+      className: GitHub\Commit\Committer
+      nullable: false
+      hasDefault: false
+      default: null
+    parents:
+      className: GitHub\Commit\Parents
+      nullable: false
+      hasDefault: false
+      default: null
+    tree:
+      className: GitHub\Commit\Tree
+      nullable: false
+      hasDefault: false
+      default: null
+    verification:
+      className: GitHub\Commit\Verification
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: GitHub\Commit\CommitHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    url:
+      className: GitHub\Commit\CommitUrl
+      nullable: false
+      hasDefault: false
+      default: null

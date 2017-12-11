@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserReceivedEventsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    userReceivedEventsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

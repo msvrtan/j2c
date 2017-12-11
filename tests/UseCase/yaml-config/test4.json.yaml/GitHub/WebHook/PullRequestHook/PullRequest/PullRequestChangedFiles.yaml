@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestChangedFiles
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    pullRequestChangedFiles:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null

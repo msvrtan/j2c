@@ -1,0 +1,92 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\CommitStatus\Creator
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    id:
+      className: GitHub\CommitStatus\Creator\CreatorId
+      nullable: false
+      hasDefault: false
+      default: null
+    gravatarId:
+      className: GitHub\CommitStatus\Creator\CreatorGravatarId
+      nullable: false
+      hasDefault: false
+      default: null
+    login:
+      className: GitHub\CommitStatus\Creator\CreatorLogin
+      nullable: false
+      hasDefault: false
+      default: null
+    type:
+      className: GitHub\CommitStatus\Creator\CreatorType
+      nullable: false
+      hasDefault: false
+      default: null
+    siteAdmin:
+      className: GitHub\CommitStatus\Creator\CreatorSiteAdmin
+      nullable: false
+      hasDefault: false
+      default: null
+    avatarUrl:
+      className: GitHub\CommitStatus\Creator\CreatorAvatarUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    eventsUrl:
+      className: GitHub\CommitStatus\Creator\CreatorEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    followersUrl:
+      className: GitHub\CommitStatus\Creator\CreatorFollowersUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    followingUrl:
+      className: GitHub\CommitStatus\Creator\CreatorFollowingUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    gistsUrl:
+      className: GitHub\CommitStatus\Creator\CreatorGistsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: GitHub\CommitStatus\Creator\CreatorHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    organizationsUrl:
+      className: GitHub\CommitStatus\Creator\CreatorOrganizationsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    receivedEventsUrl:
+      className: GitHub\CommitStatus\Creator\CreatorReceivedEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    reposUrl:
+      className: GitHub\CommitStatus\Creator\CreatorReposUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    starredUrl:
+      className: GitHub\CommitStatus\Creator\CreatorStarredUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    subscriptionsUrl:
+      className: GitHub\CommitStatus\Creator\CreatorSubscriptionsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    url:
+      className: GitHub\CommitStatus\Creator\CreatorUrl
+      nullable: false
+      hasDefault: false
+      default: null

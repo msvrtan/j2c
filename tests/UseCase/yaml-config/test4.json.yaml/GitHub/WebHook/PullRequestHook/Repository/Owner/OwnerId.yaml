@@ -1,0 +1,12 @@
+definition:
+  type: SimpleIdentifier
+  className: GitHub\WebHook\PullRequestHook\Repository\Owner\OwnerId
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    id:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null

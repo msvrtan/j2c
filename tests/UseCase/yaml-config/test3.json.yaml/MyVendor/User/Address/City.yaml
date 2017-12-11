@@ -1,0 +1,17 @@
+definition:
+  type: SimpleEntity
+  className: MyVendor\User\Address\City
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    name:
+      className: MyVendor\User\Address\City\CityName
+      nullable: false
+      hasDefault: false
+      default: null
+    country:
+      className: MyVendor\User\Address\City\Country
+      nullable: false
+      hasDefault: false
+      default: null

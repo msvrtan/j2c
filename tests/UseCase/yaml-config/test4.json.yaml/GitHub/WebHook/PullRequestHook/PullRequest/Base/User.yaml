@@ -1,0 +1,92 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    id:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserId
+      nullable: false
+      hasDefault: false
+      default: null
+    gravatarId:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserGravatarId
+      nullable: false
+      hasDefault: false
+      default: null
+    login:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserLogin
+      nullable: false
+      hasDefault: false
+      default: null
+    type:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserType
+      nullable: false
+      hasDefault: false
+      default: null
+    siteAdmin:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserSiteAdmin
+      nullable: false
+      hasDefault: false
+      default: null
+    avatarUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserAvatarUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    eventsUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    followersUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserFollowersUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    followingUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserFollowingUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    gistsUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserGistsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    organizationsUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserOrganizationsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    receivedEventsUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserReceivedEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    reposUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserReposUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    starredUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserStarredUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    subscriptionsUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserSubscriptionsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    url:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\User\UserUrl
+      nullable: false
+      hasDefault: false
+      default: null

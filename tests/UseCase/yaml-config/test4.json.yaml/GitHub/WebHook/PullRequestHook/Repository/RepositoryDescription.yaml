@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\Repository\RepositoryDescription
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repositoryDescription:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

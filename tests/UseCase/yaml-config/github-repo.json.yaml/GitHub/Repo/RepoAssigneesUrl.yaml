@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\RepoAssigneesUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repoAssigneesUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

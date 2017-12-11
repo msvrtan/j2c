@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\Organization\OrganizationOrganizationsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    organizationOrganizationsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

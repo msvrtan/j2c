@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\Sender\SenderReposUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    senderReposUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

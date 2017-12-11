@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Statuses\StatusesHref
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    statusesHref:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

@@ -1,0 +1,42 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\WebHook\PullRequestHook
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    action:
+      className: GitHub\WebHook\PullRequestHook\PullRequestHookAction
+      nullable: false
+      hasDefault: false
+      default: null
+    number:
+      className: GitHub\WebHook\PullRequestHook\PullRequestHookNumber
+      nullable: false
+      hasDefault: false
+      default: null
+    installation:
+      className: GitHub\WebHook\PullRequestHook\Installation
+      nullable: false
+      hasDefault: false
+      default: null
+    organization:
+      className: GitHub\WebHook\PullRequestHook\Organization
+      nullable: false
+      hasDefault: false
+      default: null
+    pullRequest:
+      className: GitHub\WebHook\PullRequestHook\PullRequest
+      nullable: false
+      hasDefault: false
+      default: null
+    repository:
+      className: GitHub\WebHook\PullRequestHook\Repository
+      nullable: false
+      hasDefault: false
+      default: null
+    sender:
+      className: GitHub\WebHook\PullRequestHook\Sender
+      nullable: false
+      hasDefault: false
+      default: null

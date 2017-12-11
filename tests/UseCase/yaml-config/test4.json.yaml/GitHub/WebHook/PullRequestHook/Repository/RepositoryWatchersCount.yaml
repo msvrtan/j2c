@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\Repository\RepositoryWatchersCount
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repositoryWatchersCount:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null

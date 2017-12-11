@@ -1,0 +1,12 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Html
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    href:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Links\Html\HtmlHref
+      nullable: false
+      hasDefault: false
+      default: null

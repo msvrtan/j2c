@@ -1,0 +1,17 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\Branch\Links
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    html:
+      className: GitHub\Branch\Links\LinksHtml
+      nullable: false
+      hasDefault: false
+      default: null
+    self:
+      className: GitHub\Branch\Links\LinksSelf
+      nullable: false
+      hasDefault: false
+      default: null

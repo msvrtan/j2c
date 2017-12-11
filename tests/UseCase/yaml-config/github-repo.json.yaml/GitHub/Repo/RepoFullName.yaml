@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\RepoFullName
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repoFullName:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\CommitStatus\Creator\CreatorEventsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    creatorEventsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

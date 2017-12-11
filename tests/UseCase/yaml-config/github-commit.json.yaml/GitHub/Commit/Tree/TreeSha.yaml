@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Commit\Tree\TreeSha
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    treeSha:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

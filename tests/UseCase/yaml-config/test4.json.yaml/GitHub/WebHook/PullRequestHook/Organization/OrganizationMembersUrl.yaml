@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\WebHook\PullRequestHook\Organization\OrganizationMembersUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    organizationMembersUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

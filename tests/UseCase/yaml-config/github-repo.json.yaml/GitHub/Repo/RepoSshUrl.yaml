@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Repo\RepoSshUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    repoSshUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

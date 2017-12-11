@@ -1,0 +1,17 @@
+definition:
+  type: SimpleEntity
+  className: GitHub\FFF\Branches
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    name:
+      className: GitHub\FFF\Branches\BranchesName
+      nullable: false
+      hasDefault: false
+      default: null
+    commit:
+      className: GitHub\FFF\Branches\Commit
+      nullable: false
+      hasDefault: false
+      default: null

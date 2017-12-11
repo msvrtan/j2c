@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: GitHub\Branch\Commit\Committer\CommitterSubscriptionsUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    committerSubscriptionsUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null
