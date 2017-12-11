@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\Miro\ExampleMaker;
+namespace Tests\NullDevelopment\Skeleton\ExampleMaker;
 
-use Miro\ExampleMaker\SimpleExample;
+use NullDevelopment\Skeleton\ExampleMaker\SimpleExample;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \Miro\ExampleMaker\SimpleExample
+ * @covers \NullDevelopment\Skeleton\ExampleMaker\SimpleExample
  * @group  unit
  */
 class SimpleExampleTest extends TestCase

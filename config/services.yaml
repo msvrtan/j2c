@@ -41,7 +41,7 @@ services:
         public: true
 
 
-    Miro\ExampleMaker\ExampleMaker: ~
+    NullDevelopment\Skeleton\ExampleMaker\ExampleMaker: ~
 
 
 

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tests\Miro\ExampleMaker;
+namespace Tests\NullDevelopment\Skeleton\ExampleMaker;
 
-use Miro\ExampleMaker\InstanceExample;
-use Miro\ExampleMaker\SimpleExample;
+use NullDevelopment\Skeleton\ExampleMaker\InstanceExample;
+use NullDevelopment\Skeleton\ExampleMaker\SimpleExample;
 use NullDevelopment\Skeleton\Php\Structure\ClassName;
 use NullDevelopment\Skeleton\Php\Structure\StructureName;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \Miro\ExampleMaker\InstanceExample
+ * @covers \NullDevelopment\Skeleton\ExampleMaker\InstanceExample
  * @group  unit
  */
 class InstanceExampleTest extends TestCase

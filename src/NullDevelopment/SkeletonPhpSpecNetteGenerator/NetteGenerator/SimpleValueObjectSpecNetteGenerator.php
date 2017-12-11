@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteGenerator;
 
-use Miro\ExampleMaker\ExampleMaker;
 use Nette\PhpGenerator\PhpNamespace;
+use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\SourceCode\Definition\SimpleValueObject;
 use NullDevelopment\SkeletonNetteGenerator\BaseNetteGenerator;
 use NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteMiddleware\LetMiddleware;
