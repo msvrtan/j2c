@@ -6,6 +6,7 @@ sorting: 16
 fields:
   id:
     key: id
+    propertyName: id
     name: RepoId
     namespace: GitHub\Repo
     inputKey: '["id"]'
@@ -15,6 +16,7 @@ fields:
     sorting: 200
   default_branch:
     key: default_branch
+    propertyName: defaultBranch
     name: RepoDefaultBranch
     namespace: GitHub\Repo
     inputKey: '["default_branch"]'
@@ -23,6 +25,7 @@ fields:
     sorting: 30
   description:
     key: description
+    propertyName: description
     name: RepoDescription
     namespace: GitHub\Repo
     inputKey: '["description"]'
@@ -31,6 +34,7 @@ fields:
     sorting: 30
   forks:
     key: forks
+    propertyName: forks
     name: RepoForks
     namespace: GitHub\Repo
     inputKey: '["forks"]'
@@ -39,6 +43,7 @@ fields:
     sorting: 30
   forks_count:
     key: forks_count
+    propertyName: forksCount
     name: RepoForksCount
     namespace: GitHub\Repo
     inputKey: '["forks_count"]'
@@ -47,6 +52,7 @@ fields:
     sorting: 30
   full_name:
     key: full_name
+    propertyName: fullName
     name: RepoFullName
     namespace: GitHub\Repo
     inputKey: '["full_name"]'
@@ -55,6 +61,7 @@ fields:
     sorting: 30
   homepage:
     key: homepage
+    propertyName: homepage
     name: RepoHomepage
     namespace: GitHub\Repo
     inputKey: '["homepage"]'
@@ -63,6 +70,7 @@ fields:
     sorting: 30
   language:
     key: language
+    propertyName: language
     name: RepoLanguage
     namespace: GitHub\Repo
     inputKey: '["language"]'
@@ -71,6 +79,7 @@ fields:
     sorting: 30
   name:
     key: name
+    propertyName: name
     name: RepoName
     namespace: GitHub\Repo
     inputKey: '["name"]'
@@ -79,6 +88,7 @@ fields:
     sorting: 30
   network_count:
     key: network_count
+    propertyName: networkCount
     name: RepoNetworkCount
     namespace: GitHub\Repo
     inputKey: '["network_count"]'
@@ -87,6 +97,7 @@ fields:
     sorting: 30
   open_issues:
     key: open_issues
+    propertyName: openIssues
     name: RepoOpenIssues
     namespace: GitHub\Repo
     inputKey: '["open_issues"]'
@@ -95,6 +106,7 @@ fields:
     sorting: 30
   open_issues_count:
     key: open_issues_count
+    propertyName: openIssuesCount
     name: RepoOpenIssuesCount
     namespace: GitHub\Repo
     inputKey: '["open_issues_count"]'
@@ -103,6 +115,7 @@ fields:
     sorting: 30
   size:
     key: size
+    propertyName: size
     name: RepoSize
     namespace: GitHub\Repo
     inputKey: '["size"]'
@@ -111,6 +124,7 @@ fields:
     sorting: 30
   ssh_url:
     key: ssh_url
+    propertyName: sshUrl
     name: RepoSshUrl
     namespace: GitHub\Repo
     inputKey: '["ssh_url"]'
@@ -119,6 +133,7 @@ fields:
     sorting: 30
   stargazers_count:
     key: stargazers_count
+    propertyName: stargazersCount
     name: RepoStargazersCount
     namespace: GitHub\Repo
     inputKey: '["stargazers_count"]'
@@ -127,6 +142,7 @@ fields:
     sorting: 30
   subscribers_count:
     key: subscribers_count
+    propertyName: subscribersCount
     name: RepoSubscribersCount
     namespace: GitHub\Repo
     inputKey: '["subscribers_count"]'
@@ -135,6 +151,7 @@ fields:
     sorting: 30
   watchers:
     key: watchers
+    propertyName: watchers
     name: RepoWatchers
     namespace: GitHub\Repo
     inputKey: '["watchers"]'
@@ -143,6 +160,7 @@ fields:
     sorting: 30
   watchers_count:
     key: watchers_count
+    propertyName: watchersCount
     name: RepoWatchersCount
     namespace: GitHub\Repo
     inputKey: '["watchers_count"]'
@@ -151,6 +169,7 @@ fields:
     sorting: 30
   archived:
     key: archived
+    propertyName: archived
     name: RepoArchived
     namespace: GitHub\Repo
     inputKey: '["archived"]'
@@ -159,6 +178,7 @@ fields:
     sorting: 20
   fork:
     key: fork
+    propertyName: fork
     name: RepoFork
     namespace: GitHub\Repo
     inputKey: '["fork"]'
@@ -167,6 +187,7 @@ fields:
     sorting: 20
   has_downloads:
     key: has_downloads
+    propertyName: hasDownloads
     name: RepoHasDownloads
     namespace: GitHub\Repo
     inputKey: '["has_downloads"]'
@@ -175,6 +196,7 @@ fields:
     sorting: 20
   has_issues:
     key: has_issues
+    propertyName: hasIssues
     name: RepoHasIssues
     namespace: GitHub\Repo
     inputKey: '["has_issues"]'
@@ -183,6 +205,7 @@ fields:
     sorting: 20
   has_pages:
     key: has_pages
+    propertyName: hasPages
     name: RepoHasPages
     namespace: GitHub\Repo
     inputKey: '["has_pages"]'
@@ -191,6 +214,7 @@ fields:
     sorting: 20
   has_projects:
     key: has_projects
+    propertyName: hasProjects
     name: RepoHasProjects
     namespace: GitHub\Repo
     inputKey: '["has_projects"]'
@@ -199,6 +223,7 @@ fields:
     sorting: 20
   has_wiki:
     key: has_wiki
+    propertyName: hasWiki
     name: RepoHasWiki
     namespace: GitHub\Repo
     inputKey: '["has_wiki"]'
@@ -207,6 +232,7 @@ fields:
     sorting: 20
   mirror_url:
     key: mirror_url
+    propertyName: mirrorUrl
     name: RepoMirrorUrl
     namespace: GitHub\Repo
     inputKey: '["mirror_url"]'
@@ -215,6 +241,7 @@ fields:
     sorting: 20
   private:
     key: private
+    propertyName: private
     name: RepoPrivate
     namespace: GitHub\Repo
     inputKey: '["private"]'
@@ -223,6 +250,7 @@ fields:
     sorting: 20
   organization:
     key: Organization
+    propertyName: organization
     name: Organization
     namespace: GitHub\Repo
     inputKey: '["organization"]'
@@ -231,6 +259,7 @@ fields:
     fields:
       id:
         key: id
+        propertyName: id
         name: OrganizationId
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["id"]'
@@ -240,6 +269,7 @@ fields:
         sorting: 200
       gravatar_id:
         key: gravatar_id
+        propertyName: gravatarId
         name: OrganizationGravatarId
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["gravatar_id"]'
@@ -248,6 +278,7 @@ fields:
         sorting: 30
       login:
         key: login
+        propertyName: login
         name: OrganizationLogin
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["login"]'
@@ -256,6 +287,7 @@ fields:
         sorting: 30
       type:
         key: type
+        propertyName: type
         name: OrganizationType
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["type"]'
@@ -264,6 +296,7 @@ fields:
         sorting: 30
       site_admin:
         key: site_admin
+        propertyName: siteAdmin
         name: OrganizationSiteAdmin
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["site_admin"]'
@@ -272,6 +305,7 @@ fields:
         sorting: 20
       avatar_url:
         key: avatar_url
+        propertyName: avatarUrl
         name: OrganizationAvatarUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["avatar_url"]'
@@ -281,6 +315,7 @@ fields:
         sorting: 10
       events_url:
         key: events_url
+        propertyName: eventsUrl
         name: OrganizationEventsUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["events_url"]'
@@ -290,6 +325,7 @@ fields:
         sorting: 10
       followers_url:
         key: followers_url
+        propertyName: followersUrl
         name: OrganizationFollowersUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["followers_url"]'
@@ -299,6 +335,7 @@ fields:
         sorting: 10
       following_url:
         key: following_url
+        propertyName: followingUrl
         name: OrganizationFollowingUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["following_url"]'
@@ -308,6 +345,7 @@ fields:
         sorting: 10
       gists_url:
         key: gists_url
+        propertyName: gistsUrl
         name: OrganizationGistsUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["gists_url"]'
@@ -317,6 +355,7 @@ fields:
         sorting: 10
       html_url:
         key: html_url
+        propertyName: htmlUrl
         name: OrganizationHtmlUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["html_url"]'
@@ -326,6 +365,7 @@ fields:
         sorting: 10
       organizations_url:
         key: organizations_url
+        propertyName: organizationsUrl
         name: OrganizationOrganizationsUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["organizations_url"]'
@@ -335,6 +375,7 @@ fields:
         sorting: 10
       received_events_url:
         key: received_events_url
+        propertyName: receivedEventsUrl
         name: OrganizationReceivedEventsUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["received_events_url"]'
@@ -344,6 +385,7 @@ fields:
         sorting: 10
       repos_url:
         key: repos_url
+        propertyName: reposUrl
         name: OrganizationReposUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["repos_url"]'
@@ -353,6 +395,7 @@ fields:
         sorting: 10
       starred_url:
         key: starred_url
+        propertyName: starredUrl
         name: OrganizationStarredUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["starred_url"]'
@@ -362,6 +405,7 @@ fields:
         sorting: 10
       subscriptions_url:
         key: subscriptions_url
+        propertyName: subscriptionsUrl
         name: OrganizationSubscriptionsUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["subscriptions_url"]'
@@ -371,6 +415,7 @@ fields:
         sorting: 10
       url:
         key: url
+        propertyName: url
         name: OrganizationUrl
         namespace: GitHub\Repo\Organization
         inputKey: '["organization"]["url"]'
@@ -380,6 +425,7 @@ fields:
         sorting: 10
   owner:
     key: Owner
+    propertyName: owner
     name: Owner
     namespace: GitHub\Repo
     inputKey: '["owner"]'
@@ -388,6 +434,7 @@ fields:
     fields:
       id:
         key: id
+        propertyName: id
         name: OwnerId
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["id"]'
@@ -397,6 +444,7 @@ fields:
         sorting: 200
       gravatar_id:
         key: gravatar_id
+        propertyName: gravatarId
         name: OwnerGravatarId
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["gravatar_id"]'
@@ -405,6 +453,7 @@ fields:
         sorting: 30
       login:
         key: login
+        propertyName: login
         name: OwnerLogin
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["login"]'
@@ -413,6 +462,7 @@ fields:
         sorting: 30
       type:
         key: type
+        propertyName: type
         name: OwnerType
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["type"]'
@@ -421,6 +471,7 @@ fields:
         sorting: 30
       site_admin:
         key: site_admin
+        propertyName: siteAdmin
         name: OwnerSiteAdmin
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["site_admin"]'
@@ -429,6 +480,7 @@ fields:
         sorting: 20
       avatar_url:
         key: avatar_url
+        propertyName: avatarUrl
         name: OwnerAvatarUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["avatar_url"]'
@@ -438,6 +490,7 @@ fields:
         sorting: 10
       events_url:
         key: events_url
+        propertyName: eventsUrl
         name: OwnerEventsUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["events_url"]'
@@ -447,6 +500,7 @@ fields:
         sorting: 10
       followers_url:
         key: followers_url
+        propertyName: followersUrl
         name: OwnerFollowersUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["followers_url"]'
@@ -456,6 +510,7 @@ fields:
         sorting: 10
       following_url:
         key: following_url
+        propertyName: followingUrl
         name: OwnerFollowingUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["following_url"]'
@@ -465,6 +520,7 @@ fields:
         sorting: 10
       gists_url:
         key: gists_url
+        propertyName: gistsUrl
         name: OwnerGistsUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["gists_url"]'
@@ -474,6 +530,7 @@ fields:
         sorting: 10
       html_url:
         key: html_url
+        propertyName: htmlUrl
         name: OwnerHtmlUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["html_url"]'
@@ -483,6 +540,7 @@ fields:
         sorting: 10
       organizations_url:
         key: organizations_url
+        propertyName: organizationsUrl
         name: OwnerOrganizationsUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["organizations_url"]'
@@ -492,6 +550,7 @@ fields:
         sorting: 10
       received_events_url:
         key: received_events_url
+        propertyName: receivedEventsUrl
         name: OwnerReceivedEventsUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["received_events_url"]'
@@ -501,6 +560,7 @@ fields:
         sorting: 10
       repos_url:
         key: repos_url
+        propertyName: reposUrl
         name: OwnerReposUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["repos_url"]'
@@ -510,6 +570,7 @@ fields:
         sorting: 10
       starred_url:
         key: starred_url
+        propertyName: starredUrl
         name: OwnerStarredUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["starred_url"]'
@@ -519,6 +580,7 @@ fields:
         sorting: 10
       subscriptions_url:
         key: subscriptions_url
+        propertyName: subscriptionsUrl
         name: OwnerSubscriptionsUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["subscriptions_url"]'
@@ -528,6 +590,7 @@ fields:
         sorting: 10
       url:
         key: url
+        propertyName: url
         name: OwnerUrl
         namespace: GitHub\Repo\Owner
         inputKey: '["owner"]["url"]'
@@ -537,6 +600,7 @@ fields:
         sorting: 10
   permissions:
     key: Permissions
+    propertyName: permissions
     name: Permissions
     namespace: GitHub\Repo
     inputKey: '["permissions"]'
@@ -545,6 +609,7 @@ fields:
     fields:
       admin:
         key: admin
+        propertyName: admin
         name: PermissionsAdmin
         namespace: GitHub\Repo\Permissions
         inputKey: '["permissions"]["admin"]'
@@ -553,6 +618,7 @@ fields:
         sorting: 20
       pull:
         key: pull
+        propertyName: pull
         name: PermissionsPull
         namespace: GitHub\Repo\Permissions
         inputKey: '["permissions"]["pull"]'
@@ -561,6 +627,7 @@ fields:
         sorting: 20
       push:
         key: push
+        propertyName: push
         name: PermissionsPush
         namespace: GitHub\Repo\Permissions
         inputKey: '["permissions"]["push"]'
@@ -569,6 +636,7 @@ fields:
         sorting: 20
   archive_url:
     key: archive_url
+    propertyName: archiveUrl
     name: RepoArchiveUrl
     namespace: GitHub\Repo
     inputKey: '["archive_url"]'
@@ -578,6 +646,7 @@ fields:
     sorting: 10
   assignees_url:
     key: assignees_url
+    propertyName: assigneesUrl
     name: RepoAssigneesUrl
     namespace: GitHub\Repo
     inputKey: '["assignees_url"]'
@@ -587,6 +656,7 @@ fields:
     sorting: 10
   blobs_url:
     key: blobs_url
+    propertyName: blobsUrl
     name: RepoBlobsUrl
     namespace: GitHub\Repo
     inputKey: '["blobs_url"]'
@@ -596,6 +666,7 @@ fields:
     sorting: 10
   branches_url:
     key: branches_url
+    propertyName: branchesUrl
     name: RepoBranchesUrl
     namespace: GitHub\Repo
     inputKey: '["branches_url"]'
@@ -605,6 +676,7 @@ fields:
     sorting: 10
   clone_url:
     key: clone_url
+    propertyName: cloneUrl
     name: RepoCloneUrl
     namespace: GitHub\Repo
     inputKey: '["clone_url"]'
@@ -614,6 +686,7 @@ fields:
     sorting: 10
   collaborators_url:
     key: collaborators_url
+    propertyName: collaboratorsUrl
     name: RepoCollaboratorsUrl
     namespace: GitHub\Repo
     inputKey: '["collaborators_url"]'
@@ -623,6 +696,7 @@ fields:
     sorting: 10
   comments_url:
     key: comments_url
+    propertyName: commentsUrl
     name: RepoCommentsUrl
     namespace: GitHub\Repo
     inputKey: '["comments_url"]'
@@ -632,6 +706,7 @@ fields:
     sorting: 10
   commits_url:
     key: commits_url
+    propertyName: commitsUrl
     name: RepoCommitsUrl
     namespace: GitHub\Repo
     inputKey: '["commits_url"]'
@@ -641,6 +716,7 @@ fields:
     sorting: 10
   compare_url:
     key: compare_url
+    propertyName: compareUrl
     name: RepoCompareUrl
     namespace: GitHub\Repo
     inputKey: '["compare_url"]'
@@ -650,6 +726,7 @@ fields:
     sorting: 10
   contents_url:
     key: contents_url
+    propertyName: contentsUrl
     name: RepoContentsUrl
     namespace: GitHub\Repo
     inputKey: '["contents_url"]'
@@ -659,6 +736,7 @@ fields:
     sorting: 10
   contributors_url:
     key: contributors_url
+    propertyName: contributorsUrl
     name: RepoContributorsUrl
     namespace: GitHub\Repo
     inputKey: '["contributors_url"]'
@@ -668,6 +746,7 @@ fields:
     sorting: 10
   deployments_url:
     key: deployments_url
+    propertyName: deploymentsUrl
     name: RepoDeploymentsUrl
     namespace: GitHub\Repo
     inputKey: '["deployments_url"]'
@@ -677,6 +756,7 @@ fields:
     sorting: 10
   downloads_url:
     key: downloads_url
+    propertyName: downloadsUrl
     name: RepoDownloadsUrl
     namespace: GitHub\Repo
     inputKey: '["downloads_url"]'
@@ -686,6 +766,7 @@ fields:
     sorting: 10
   events_url:
     key: events_url
+    propertyName: eventsUrl
     name: RepoEventsUrl
     namespace: GitHub\Repo
     inputKey: '["events_url"]'
@@ -695,6 +776,7 @@ fields:
     sorting: 10
   forks_url:
     key: forks_url
+    propertyName: forksUrl
     name: RepoForksUrl
     namespace: GitHub\Repo
     inputKey: '["forks_url"]'
@@ -704,6 +786,7 @@ fields:
     sorting: 10
   git_commits_url:
     key: git_commits_url
+    propertyName: gitCommitsUrl
     name: RepoGitCommitsUrl
     namespace: GitHub\Repo
     inputKey: '["git_commits_url"]'
@@ -713,6 +796,7 @@ fields:
     sorting: 10
   git_refs_url:
     key: git_refs_url
+    propertyName: gitRefsUrl
     name: RepoGitRefsUrl
     namespace: GitHub\Repo
     inputKey: '["git_refs_url"]'
@@ -722,6 +806,7 @@ fields:
     sorting: 10
   git_tags_url:
     key: git_tags_url
+    propertyName: gitTagsUrl
     name: RepoGitTagsUrl
     namespace: GitHub\Repo
     inputKey: '["git_tags_url"]'
@@ -731,6 +816,7 @@ fields:
     sorting: 10
   git_url:
     key: git_url
+    propertyName: gitUrl
     name: RepoGitUrl
     namespace: GitHub\Repo
     inputKey: '["git_url"]'
@@ -740,6 +826,7 @@ fields:
     sorting: 10
   hooks_url:
     key: hooks_url
+    propertyName: hooksUrl
     name: RepoHooksUrl
     namespace: GitHub\Repo
     inputKey: '["hooks_url"]'
@@ -749,6 +836,7 @@ fields:
     sorting: 10
   html_url:
     key: html_url
+    propertyName: htmlUrl
     name: RepoHtmlUrl
     namespace: GitHub\Repo
     inputKey: '["html_url"]'
@@ -758,6 +846,7 @@ fields:
     sorting: 10
   issue_comment_url:
     key: issue_comment_url
+    propertyName: issueCommentUrl
     name: RepoIssueCommentUrl
     namespace: GitHub\Repo
     inputKey: '["issue_comment_url"]'
@@ -767,6 +856,7 @@ fields:
     sorting: 10
   issue_events_url:
     key: issue_events_url
+    propertyName: issueEventsUrl
     name: RepoIssueEventsUrl
     namespace: GitHub\Repo
     inputKey: '["issue_events_url"]'
@@ -776,6 +866,7 @@ fields:
     sorting: 10
   issues_url:
     key: issues_url
+    propertyName: issuesUrl
     name: RepoIssuesUrl
     namespace: GitHub\Repo
     inputKey: '["issues_url"]'
@@ -785,6 +876,7 @@ fields:
     sorting: 10
   keys_url:
     key: keys_url
+    propertyName: keysUrl
     name: RepoKeysUrl
     namespace: GitHub\Repo
     inputKey: '["keys_url"]'
@@ -794,6 +886,7 @@ fields:
     sorting: 10
   labels_url:
     key: labels_url
+    propertyName: labelsUrl
     name: RepoLabelsUrl
     namespace: GitHub\Repo
     inputKey: '["labels_url"]'
@@ -803,6 +896,7 @@ fields:
     sorting: 10
   languages_url:
     key: languages_url
+    propertyName: languagesUrl
     name: RepoLanguagesUrl
     namespace: GitHub\Repo
     inputKey: '["languages_url"]'
@@ -812,6 +906,7 @@ fields:
     sorting: 10
   merges_url:
     key: merges_url
+    propertyName: mergesUrl
     name: RepoMergesUrl
     namespace: GitHub\Repo
     inputKey: '["merges_url"]'
@@ -821,6 +916,7 @@ fields:
     sorting: 10
   milestones_url:
     key: milestones_url
+    propertyName: milestonesUrl
     name: RepoMilestonesUrl
     namespace: GitHub\Repo
     inputKey: '["milestones_url"]'
@@ -830,6 +926,7 @@ fields:
     sorting: 10
   notifications_url:
     key: notifications_url
+    propertyName: notificationsUrl
     name: RepoNotificationsUrl
     namespace: GitHub\Repo
     inputKey: '["notifications_url"]'
@@ -839,6 +936,7 @@ fields:
     sorting: 10
   pulls_url:
     key: pulls_url
+    propertyName: pullsUrl
     name: RepoPullsUrl
     namespace: GitHub\Repo
     inputKey: '["pulls_url"]'
@@ -848,6 +946,7 @@ fields:
     sorting: 10
   releases_url:
     key: releases_url
+    propertyName: releasesUrl
     name: RepoReleasesUrl
     namespace: GitHub\Repo
     inputKey: '["releases_url"]'
@@ -857,6 +956,7 @@ fields:
     sorting: 10
   stargazers_url:
     key: stargazers_url
+    propertyName: stargazersUrl
     name: RepoStargazersUrl
     namespace: GitHub\Repo
     inputKey: '["stargazers_url"]'
@@ -866,6 +966,7 @@ fields:
     sorting: 10
   statuses_url:
     key: statuses_url
+    propertyName: statusesUrl
     name: RepoStatusesUrl
     namespace: GitHub\Repo
     inputKey: '["statuses_url"]'
@@ -875,6 +976,7 @@ fields:
     sorting: 10
   subscribers_url:
     key: subscribers_url
+    propertyName: subscribersUrl
     name: RepoSubscribersUrl
     namespace: GitHub\Repo
     inputKey: '["subscribers_url"]'
@@ -884,6 +986,7 @@ fields:
     sorting: 10
   subscription_url:
     key: subscription_url
+    propertyName: subscriptionUrl
     name: RepoSubscriptionUrl
     namespace: GitHub\Repo
     inputKey: '["subscription_url"]'
@@ -893,6 +996,7 @@ fields:
     sorting: 10
   svn_url:
     key: svn_url
+    propertyName: svnUrl
     name: RepoSvnUrl
     namespace: GitHub\Repo
     inputKey: '["svn_url"]'
@@ -902,6 +1006,7 @@ fields:
     sorting: 10
   tags_url:
     key: tags_url
+    propertyName: tagsUrl
     name: RepoTagsUrl
     namespace: GitHub\Repo
     inputKey: '["tags_url"]'
@@ -911,6 +1016,7 @@ fields:
     sorting: 10
   teams_url:
     key: teams_url
+    propertyName: teamsUrl
     name: RepoTeamsUrl
     namespace: GitHub\Repo
     inputKey: '["teams_url"]'
@@ -920,6 +1026,7 @@ fields:
     sorting: 10
   trees_url:
     key: trees_url
+    propertyName: treesUrl
     name: RepoTreesUrl
     namespace: GitHub\Repo
     inputKey: '["trees_url"]'
@@ -929,6 +1036,7 @@ fields:
     sorting: 10
   url:
     key: url
+    propertyName: url
     name: RepoUrl
     namespace: GitHub\Repo
     inputKey: '["url"]'
@@ -938,6 +1046,7 @@ fields:
     sorting: 10
   created_at:
     key: created_at
+    propertyName: createdAt
     name: RepoCreatedAt
     namespace: GitHub\Repo
     inputKey: '["created_at"]'
@@ -947,6 +1056,7 @@ fields:
     sorting: 5
   pushed_at:
     key: pushed_at
+    propertyName: pushedAt
     name: RepoPushedAt
     namespace: GitHub\Repo
     inputKey: '["pushed_at"]'
@@ -956,6 +1066,7 @@ fields:
     sorting: 5
   updated_at:
     key: updated_at
+    propertyName: updatedAt
     name: RepoUpdatedAt
     namespace: GitHub\Repo
     inputKey: '["updated_at"]'

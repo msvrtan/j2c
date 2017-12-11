@@ -6,6 +6,7 @@ sorting: 16
 fields:
   id:
     key: id
+    propertyName: id
     name: UserId
     namespace: MyVendor\User
     inputKey: '["id"]'
@@ -15,6 +16,7 @@ fields:
     sorting: 200
   full_name:
     key: full_name
+    propertyName: fullName
     name: UserFullName
     namespace: MyVendor\User
     inputKey: '["full_name"]'
@@ -23,6 +25,7 @@ fields:
     sorting: 30
   name:
     key: name
+    propertyName: name
     name: UserName
     namespace: MyVendor\User
     inputKey: '["name"]'
@@ -31,6 +34,7 @@ fields:
     sorting: 30
   created_at:
     key: created_at
+    propertyName: createdAt
     name: UserCreatedAt
     namespace: MyVendor\User
     inputKey: '["created_at"]'

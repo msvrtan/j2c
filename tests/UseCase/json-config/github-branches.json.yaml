@@ -6,6 +6,7 @@ sorting: 16
 fields:
   name:
     key: name
+    propertyName: name
     name: BranchesName
     namespace: GitHub\FFF\Branches
     inputKey: '["name"]'
@@ -14,6 +15,7 @@ fields:
     sorting: 30
   commit:
     key: Commit
+    propertyName: commit
     name: Commit
     namespace: GitHub\FFF\Branches
     inputKey: '["commit"]'
@@ -22,6 +24,7 @@ fields:
     fields:
       sha:
         key: sha
+        propertyName: sha
         name: CommitSha
         namespace: GitHub\FFF\Branches\Commit
         inputKey: '["commit"]["sha"]'
@@ -30,6 +33,7 @@ fields:
         sorting: 30
       url:
         key: url
+        propertyName: url
         name: CommitUrl
         namespace: GitHub\FFF\Branches\Commit
         inputKey: '["commit"]["url"]'
