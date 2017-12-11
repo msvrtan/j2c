@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace JsonToConfig;
 
+use JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection;
+
 /**
  * @see ConfigSpec
  * @see ConfigTest
@@ -91,6 +93,14 @@ class Config
             }
             if (true === array_key_exists($key, $this->configs)) {
                 $resultItem = array_merge($resultItem, $this->configs[$key]->toArray($input.'["'.$key.'"]'));
+            }
+
+            if (true === in_array(SimpleCollection::class, $resultItem['suggestions'])) {
+                $resultItem['collectionOf'] =[
+                    'className' => 'TODO2',
+                    'accessor'  => 'getId',
+                    'has'       => 'TODO3',
+                ];
             }
 
             $result['fields'][$key] = $resultItem;

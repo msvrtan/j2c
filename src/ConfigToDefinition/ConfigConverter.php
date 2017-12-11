@@ -142,9 +142,9 @@ class ConfigConverter
         );
 
         $collectionOf = new CollectionOf(
-            new ClassName('TODO'),
+            new ClassName($input['collectionOf']['className']),
             'getId',
-            new ClassName('TODO2')
+            new ClassName($input['collectionOf']['has'])
         );
 
         return new Definition\SimpleCollection($className, null, [], [], $constructor, [], $collectionOf);
