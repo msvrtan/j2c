@@ -38,4 +38,17 @@ class SimpleCollection extends ClassDefinition implements SourceCode
     {
         return $this->collectionOf;
     }
+
+    public function toArray(): array
+    {
+        $data= parent::toArray();
+
+        $data['definition']['collectionOf']=[
+            'className' => $this->collectionOf->getClassName()->getFullName(),
+            'accessor'  => $this->collectionOf->getAccessor(),
+            'has'       => $this->collectionOf->getHas()->getFullName(),
+        ];
+
+        return $data;
+    }
 }
