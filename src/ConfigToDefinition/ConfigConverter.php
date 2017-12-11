@@ -156,8 +156,8 @@ class ConfigConverter
     private function processFieldsToConstructorParameters(array $fields): array
     {
         $parameters = [];
-        foreach ($fields as $key => $item) {
-            $name      = lcfirst(str_replace('_', '', ucwords($key, '_')));
+        foreach ($fields as $item) {
+            $name      = $item['propertyName'];
             $className = new ClassName($item['name'], $item['namespace']);
 
             $parameters[] = new MethodParameter($name, $className);
@@ -169,8 +169,8 @@ class ConfigConverter
     private function processFieldsToProperties(array $fields): array
     {
         $properties = [];
-        foreach ($fields as $key => $item) {
-            $name      = lcfirst(str_replace('_', '', ucwords($key, '_')));
+        foreach ($fields as $item) {
+            $name      = $item['propertyName'];
             $className = new ClassName($item['name'], $item['namespace']);
 
             $properties[] = Property::privateProperty($name, $className);
