@@ -5,6 +5,11 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
+    city:
+      className: MyVendor\User\Address\City
+      nullable: false
+      hasDefault: false
+      default: null
     streetName:
       className: MyVendor\User\Address\AddressStreetName
       nullable: false
@@ -12,11 +17,6 @@ definition:
       default: null
     streetNumber:
       className: MyVendor\User\Address\AddressStreetNumber
-      nullable: false
-      hasDefault: false
-      default: null
-    city:
-      className: MyVendor\User\Address\City
       nullable: false
       hasDefault: false
       default: null

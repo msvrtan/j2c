@@ -1,7 +1,6 @@
 key: Branch
 className: GitHub\Branch
 inputKey: ''
-sorting: 16
 fields:
   name:
     key: name
@@ -10,22 +9,12 @@ fields:
     inputKey: '["name"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 30
-  protected:
-    key: protected
-    propertyName: protected
-    className: GitHub\Branch\BranchProtected
-    inputKey: '["protected"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-    sorting: 20
   commit:
     key: Commit
     propertyName: commit
     className: GitHub\Branch\Commit
     inputKey: '["commit"]'
     suggestions: {  }
-    sorting: 16
     fields:
       sha:
         key: sha
@@ -34,196 +23,27 @@ fields:
         inputKey: '["commit"]["sha"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 30
-      author:
-        key: Author
-        propertyName: author
-        className: GitHub\Branch\Commit\Author
-        inputKey: '["commit"]["author"]'
-        suggestions: {  }
-        sorting: 16
-        fields:
-          id:
-            key: id
-            propertyName: id
-            className: GitHub\Branch\Commit\Author\AuthorId
-            inputKey: '["commit"]["author"]["id"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-            sorting: 200
-          gravatar_id:
-            key: gravatar_id
-            propertyName: gravatarId
-            className: GitHub\Branch\Commit\Author\AuthorGravatarId
-            inputKey: '["commit"]["author"]["gravatar_id"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 30
-          login:
-            key: login
-            propertyName: login
-            className: GitHub\Branch\Commit\Author\AuthorLogin
-            inputKey: '["commit"]["author"]["login"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 30
-          type:
-            key: type
-            propertyName: type
-            className: GitHub\Branch\Commit\Author\AuthorType
-            inputKey: '["commit"]["author"]["type"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 30
-          site_admin:
-            key: site_admin
-            propertyName: siteAdmin
-            className: GitHub\Branch\Commit\Author\AuthorSiteAdmin
-            inputKey: '["commit"]["author"]["site_admin"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-            sorting: 20
-          avatar_url:
-            key: avatar_url
-            propertyName: avatarUrl
-            className: GitHub\Branch\Commit\Author\AuthorAvatarUrl
-            inputKey: '["commit"]["author"]["avatar_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          events_url:
-            key: events_url
-            propertyName: eventsUrl
-            className: GitHub\Branch\Commit\Author\AuthorEventsUrl
-            inputKey: '["commit"]["author"]["events_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          followers_url:
-            key: followers_url
-            propertyName: followersUrl
-            className: GitHub\Branch\Commit\Author\AuthorFollowersUrl
-            inputKey: '["commit"]["author"]["followers_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          following_url:
-            key: following_url
-            propertyName: followingUrl
-            className: GitHub\Branch\Commit\Author\AuthorFollowingUrl
-            inputKey: '["commit"]["author"]["following_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          gists_url:
-            key: gists_url
-            propertyName: gistsUrl
-            className: GitHub\Branch\Commit\Author\AuthorGistsUrl
-            inputKey: '["commit"]["author"]["gists_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          html_url:
-            key: html_url
-            propertyName: htmlUrl
-            className: GitHub\Branch\Commit\Author\AuthorHtmlUrl
-            inputKey: '["commit"]["author"]["html_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          organizations_url:
-            key: organizations_url
-            propertyName: organizationsUrl
-            className: GitHub\Branch\Commit\Author\AuthorOrganizationsUrl
-            inputKey: '["commit"]["author"]["organizations_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          received_events_url:
-            key: received_events_url
-            propertyName: receivedEventsUrl
-            className: GitHub\Branch\Commit\Author\AuthorReceivedEventsUrl
-            inputKey: '["commit"]["author"]["received_events_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          repos_url:
-            key: repos_url
-            propertyName: reposUrl
-            className: GitHub\Branch\Commit\Author\AuthorReposUrl
-            inputKey: '["commit"]["author"]["repos_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          starred_url:
-            key: starred_url
-            propertyName: starredUrl
-            className: GitHub\Branch\Commit\Author\AuthorStarredUrl
-            inputKey: '["commit"]["author"]["starred_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          subscriptions_url:
-            key: subscriptions_url
-            propertyName: subscriptionsUrl
-            className: GitHub\Branch\Commit\Author\AuthorSubscriptionsUrl
-            inputKey: '["commit"]["author"]["subscriptions_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          url:
-            key: url
-            propertyName: url
-            className: GitHub\Branch\Commit\Author\AuthorUrl
-            inputKey: '["commit"]["author"]["url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
       commit:
         key: Commit
         propertyName: commit
         className: GitHub\Branch\Commit\Commit
         inputKey: '["commit"]["commit"]'
         suggestions: {  }
-        sorting: 16
         fields:
-          comment_count:
-            key: comment_count
-            propertyName: commentCount
-            className: GitHub\Branch\Commit\Commit\CommitCommentCount
-            inputKey: '["commit"]["commit"]["comment_count"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-            sorting: 30
-          message:
-            key: message
-            propertyName: message
-            className: GitHub\Branch\Commit\Commit\CommitMessage
-            inputKey: '["commit"]["commit"]["message"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 30
           author:
             key: Author
             propertyName: author
             className: GitHub\Branch\Commit\Commit\Author
             inputKey: '["commit"]["commit"]["author"]'
             suggestions: {  }
-            sorting: 16
             fields:
+              name:
+                key: name
+                propertyName: name
+                className: GitHub\Branch\Commit\Commit\Author\AuthorName
+                inputKey: '["commit"]["commit"]["author"]["name"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
               email:
                 key: email
                 propertyName: email
@@ -232,15 +52,6 @@ fields:
                 suggestions:
                   - JsonToConfig\JsonDetector\ValueObject\Generix\EmailAddress
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-                sorting: 50
-              name:
-                key: name
-                propertyName: name
-                className: GitHub\Branch\Commit\Commit\Author\AuthorName
-                inputKey: '["commit"]["commit"]["author"]["name"]'
-                suggestions:
-                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-                sorting: 30
               date:
                 key: date
                 propertyName: date
@@ -249,15 +60,20 @@ fields:
                 suggestions:
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-                sorting: 5
           committer:
             key: Committer
             propertyName: committer
             className: GitHub\Branch\Commit\Commit\Committer
             inputKey: '["commit"]["commit"]["committer"]'
             suggestions: {  }
-            sorting: 16
             fields:
+              name:
+                key: name
+                propertyName: name
+                className: GitHub\Branch\Commit\Commit\Committer\CommitterName
+                inputKey: '["commit"]["commit"]["committer"]["name"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
               email:
                 key: email
                 propertyName: email
@@ -266,15 +82,6 @@ fields:
                 suggestions:
                   - JsonToConfig\JsonDetector\ValueObject\Generix\EmailAddress
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-                sorting: 50
-              name:
-                key: name
-                propertyName: name
-                className: GitHub\Branch\Commit\Commit\Committer\CommitterName
-                inputKey: '["commit"]["commit"]["committer"]["name"]'
-                suggestions:
-                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-                sorting: 30
               date:
                 key: date
                 propertyName: date
@@ -283,14 +90,19 @@ fields:
                 suggestions:
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-                sorting: 5
+          message:
+            key: message
+            propertyName: message
+            className: GitHub\Branch\Commit\Commit\CommitMessage
+            inputKey: '["commit"]["commit"]["message"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
           tree:
             key: Tree
             propertyName: tree
             className: GitHub\Branch\Commit\Commit\Tree
             inputKey: '["commit"]["commit"]["tree"]'
             suggestions: {  }
-            sorting: 16
             fields:
               sha:
                 key: sha
@@ -299,7 +111,6 @@ fields:
                 inputKey: '["commit"]["commit"]["tree"]["sha"]'
                 suggestions:
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-                sorting: 30
               url:
                 key: url
                 propertyName: url
@@ -308,47 +119,6 @@ fields:
                 suggestions:
                   - JsonToConfig\JsonDetector\ValueObject\Generix\Url
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-                sorting: 10
-          verification:
-            key: Verification
-            propertyName: verification
-            className: GitHub\Branch\Commit\Commit\Verification
-            inputKey: '["commit"]["commit"]["verification"]'
-            suggestions: {  }
-            sorting: 16
-            fields:
-              reason:
-                key: reason
-                propertyName: reason
-                className: GitHub\Branch\Commit\Commit\Verification\VerificationReason
-                inputKey: '["commit"]["commit"]["verification"]["reason"]'
-                suggestions:
-                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-                sorting: 30
-              payload:
-                key: payload
-                propertyName: payload
-                className: GitHub\Branch\Commit\Commit\Verification\VerificationPayload
-                inputKey: '["commit"]["commit"]["verification"]["payload"]'
-                suggestions:
-                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
-                sorting: 20
-              signature:
-                key: signature
-                propertyName: signature
-                className: GitHub\Branch\Commit\Commit\Verification\VerificationSignature
-                inputKey: '["commit"]["commit"]["verification"]["signature"]'
-                suggestions:
-                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
-                sorting: 20
-              verified:
-                key: verified
-                propertyName: verified
-                className: GitHub\Branch\Commit\Commit\Verification\VerificationVerified
-                inputKey: '["commit"]["commit"]["verification"]["verified"]'
-                suggestions:
-                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-                sorting: 20
           url:
             key: url
             propertyName: url
@@ -357,221 +127,48 @@ fields:
             suggestions:
               - JsonToConfig\JsonDetector\ValueObject\Generix\Url
               - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-      committer:
-        key: Committer
-        propertyName: committer
-        className: GitHub\Branch\Commit\Committer
-        inputKey: '["commit"]["committer"]'
-        suggestions: {  }
-        sorting: 16
-        fields:
-          id:
-            key: id
-            propertyName: id
-            className: GitHub\Branch\Commit\Committer\CommitterId
-            inputKey: '["commit"]["committer"]["id"]'
+          comment_count:
+            key: comment_count
+            propertyName: commentCount
+            className: GitHub\Branch\Commit\Commit\CommitCommentCount
+            inputKey: '["commit"]["commit"]["comment_count"]'
             suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
               - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-            sorting: 200
-          gravatar_id:
-            key: gravatar_id
-            propertyName: gravatarId
-            className: GitHub\Branch\Commit\Committer\CommitterGravatarId
-            inputKey: '["commit"]["committer"]["gravatar_id"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 30
-          login:
-            key: login
-            propertyName: login
-            className: GitHub\Branch\Commit\Committer\CommitterLogin
-            inputKey: '["commit"]["committer"]["login"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 30
-          type:
-            key: type
-            propertyName: type
-            className: GitHub\Branch\Commit\Committer\CommitterType
-            inputKey: '["commit"]["committer"]["type"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 30
-          site_admin:
-            key: site_admin
-            propertyName: siteAdmin
-            className: GitHub\Branch\Commit\Committer\CommitterSiteAdmin
-            inputKey: '["commit"]["committer"]["site_admin"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-            sorting: 20
-          avatar_url:
-            key: avatar_url
-            propertyName: avatarUrl
-            className: GitHub\Branch\Commit\Committer\CommitterAvatarUrl
-            inputKey: '["commit"]["committer"]["avatar_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          events_url:
-            key: events_url
-            propertyName: eventsUrl
-            className: GitHub\Branch\Commit\Committer\CommitterEventsUrl
-            inputKey: '["commit"]["committer"]["events_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          followers_url:
-            key: followers_url
-            propertyName: followersUrl
-            className: GitHub\Branch\Commit\Committer\CommitterFollowersUrl
-            inputKey: '["commit"]["committer"]["followers_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          following_url:
-            key: following_url
-            propertyName: followingUrl
-            className: GitHub\Branch\Commit\Committer\CommitterFollowingUrl
-            inputKey: '["commit"]["committer"]["following_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          gists_url:
-            key: gists_url
-            propertyName: gistsUrl
-            className: GitHub\Branch\Commit\Committer\CommitterGistsUrl
-            inputKey: '["commit"]["committer"]["gists_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          html_url:
-            key: html_url
-            propertyName: htmlUrl
-            className: GitHub\Branch\Commit\Committer\CommitterHtmlUrl
-            inputKey: '["commit"]["committer"]["html_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          organizations_url:
-            key: organizations_url
-            propertyName: organizationsUrl
-            className: GitHub\Branch\Commit\Committer\CommitterOrganizationsUrl
-            inputKey: '["commit"]["committer"]["organizations_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          received_events_url:
-            key: received_events_url
-            propertyName: receivedEventsUrl
-            className: GitHub\Branch\Commit\Committer\CommitterReceivedEventsUrl
-            inputKey: '["commit"]["committer"]["received_events_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          repos_url:
-            key: repos_url
-            propertyName: reposUrl
-            className: GitHub\Branch\Commit\Committer\CommitterReposUrl
-            inputKey: '["commit"]["committer"]["repos_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          starred_url:
-            key: starred_url
-            propertyName: starredUrl
-            className: GitHub\Branch\Commit\Committer\CommitterStarredUrl
-            inputKey: '["commit"]["committer"]["starred_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          subscriptions_url:
-            key: subscriptions_url
-            propertyName: subscriptionsUrl
-            className: GitHub\Branch\Commit\Committer\CommitterSubscriptionsUrl
-            inputKey: '["commit"]["committer"]["subscriptions_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          url:
-            key: url
-            propertyName: url
-            className: GitHub\Branch\Commit\Committer\CommitterUrl
-            inputKey: '["commit"]["committer"]["url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-      parents:
-        key: Parents
-        propertyName: parents
-        className: GitHub\Branch\Commit\Parents
-        inputKey: '["commit"]["parents"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
-        sorting: 16
-        fields:
-          sha:
-            key: sha
-            propertyName: sha
-            className: GitHub\Branch\Commit\Parents\ParentsSha
-            inputKey: '["commit"]["parents"]["sha"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 30
-          html_url:
-            key: html_url
-            propertyName: htmlUrl
-            className: GitHub\Branch\Commit\Parents\ParentsHtmlUrl
-            inputKey: '["commit"]["parents"]["html_url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-          url:
-            key: url
-            propertyName: url
-            className: GitHub\Branch\Commit\Parents\ParentsUrl
-            inputKey: '["commit"]["parents"]["url"]'
-            suggestions:
-              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 10
-        collectionOf:
-          className: TODO2
-          accessor: getId
-          has: TODO3
-      comments_url:
-        key: comments_url
-        propertyName: commentsUrl
-        className: GitHub\Branch\Commit\CommitCommentsUrl
-        inputKey: '["commit"]["comments_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      html_url:
-        key: html_url
-        propertyName: htmlUrl
-        className: GitHub\Branch\Commit\CommitHtmlUrl
-        inputKey: '["commit"]["html_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
+          verification:
+            key: Verification
+            propertyName: verification
+            className: GitHub\Branch\Commit\Commit\Verification
+            inputKey: '["commit"]["commit"]["verification"]'
+            suggestions: {  }
+            fields:
+              verified:
+                key: verified
+                propertyName: verified
+                className: GitHub\Branch\Commit\Commit\Verification\VerificationVerified
+                inputKey: '["commit"]["commit"]["verification"]["verified"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+              reason:
+                key: reason
+                propertyName: reason
+                className: GitHub\Branch\Commit\Commit\Verification\VerificationReason
+                inputKey: '["commit"]["commit"]["verification"]["reason"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+              signature:
+                key: signature
+                propertyName: signature
+                className: GitHub\Branch\Commit\Commit\Verification\VerificationSignature
+                inputKey: '["commit"]["commit"]["verification"]["signature"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+              payload:
+                key: payload
+                propertyName: payload
+                className: GitHub\Branch\Commit\Commit\Verification\VerificationPayload
+                inputKey: '["commit"]["commit"]["verification"]["payload"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
       url:
         key: url
         propertyName: url
@@ -580,24 +177,342 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
+      html_url:
+        key: html_url
+        propertyName: htmlUrl
+        className: GitHub\Branch\Commit\CommitHtmlUrl
+        inputKey: '["commit"]["html_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      comments_url:
+        key: comments_url
+        propertyName: commentsUrl
+        className: GitHub\Branch\Commit\CommitCommentsUrl
+        inputKey: '["commit"]["comments_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      author:
+        key: Author
+        propertyName: author
+        className: GitHub\Branch\Commit\Author
+        inputKey: '["commit"]["author"]'
+        suggestions: {  }
+        fields:
+          login:
+            key: login
+            propertyName: login
+            className: GitHub\Branch\Commit\Author\AuthorLogin
+            inputKey: '["commit"]["author"]["login"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          id:
+            key: id
+            propertyName: id
+            className: GitHub\Branch\Commit\Author\AuthorId
+            inputKey: '["commit"]["author"]["id"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+          avatar_url:
+            key: avatar_url
+            propertyName: avatarUrl
+            className: GitHub\Branch\Commit\Author\AuthorAvatarUrl
+            inputKey: '["commit"]["author"]["avatar_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          gravatar_id:
+            key: gravatar_id
+            propertyName: gravatarId
+            className: GitHub\Branch\Commit\Author\AuthorGravatarId
+            inputKey: '["commit"]["author"]["gravatar_id"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          url:
+            key: url
+            propertyName: url
+            className: GitHub\Branch\Commit\Author\AuthorUrl
+            inputKey: '["commit"]["author"]["url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          html_url:
+            key: html_url
+            propertyName: htmlUrl
+            className: GitHub\Branch\Commit\Author\AuthorHtmlUrl
+            inputKey: '["commit"]["author"]["html_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          followers_url:
+            key: followers_url
+            propertyName: followersUrl
+            className: GitHub\Branch\Commit\Author\AuthorFollowersUrl
+            inputKey: '["commit"]["author"]["followers_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          following_url:
+            key: following_url
+            propertyName: followingUrl
+            className: GitHub\Branch\Commit\Author\AuthorFollowingUrl
+            inputKey: '["commit"]["author"]["following_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          gists_url:
+            key: gists_url
+            propertyName: gistsUrl
+            className: GitHub\Branch\Commit\Author\AuthorGistsUrl
+            inputKey: '["commit"]["author"]["gists_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          starred_url:
+            key: starred_url
+            propertyName: starredUrl
+            className: GitHub\Branch\Commit\Author\AuthorStarredUrl
+            inputKey: '["commit"]["author"]["starred_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          subscriptions_url:
+            key: subscriptions_url
+            propertyName: subscriptionsUrl
+            className: GitHub\Branch\Commit\Author\AuthorSubscriptionsUrl
+            inputKey: '["commit"]["author"]["subscriptions_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          organizations_url:
+            key: organizations_url
+            propertyName: organizationsUrl
+            className: GitHub\Branch\Commit\Author\AuthorOrganizationsUrl
+            inputKey: '["commit"]["author"]["organizations_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          repos_url:
+            key: repos_url
+            propertyName: reposUrl
+            className: GitHub\Branch\Commit\Author\AuthorReposUrl
+            inputKey: '["commit"]["author"]["repos_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          events_url:
+            key: events_url
+            propertyName: eventsUrl
+            className: GitHub\Branch\Commit\Author\AuthorEventsUrl
+            inputKey: '["commit"]["author"]["events_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          received_events_url:
+            key: received_events_url
+            propertyName: receivedEventsUrl
+            className: GitHub\Branch\Commit\Author\AuthorReceivedEventsUrl
+            inputKey: '["commit"]["author"]["received_events_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          type:
+            key: type
+            propertyName: type
+            className: GitHub\Branch\Commit\Author\AuthorType
+            inputKey: '["commit"]["author"]["type"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          site_admin:
+            key: site_admin
+            propertyName: siteAdmin
+            className: GitHub\Branch\Commit\Author\AuthorSiteAdmin
+            inputKey: '["commit"]["author"]["site_admin"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+      committer:
+        key: Committer
+        propertyName: committer
+        className: GitHub\Branch\Commit\Committer
+        inputKey: '["commit"]["committer"]'
+        suggestions: {  }
+        fields:
+          login:
+            key: login
+            propertyName: login
+            className: GitHub\Branch\Commit\Committer\CommitterLogin
+            inputKey: '["commit"]["committer"]["login"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          id:
+            key: id
+            propertyName: id
+            className: GitHub\Branch\Commit\Committer\CommitterId
+            inputKey: '["commit"]["committer"]["id"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+          avatar_url:
+            key: avatar_url
+            propertyName: avatarUrl
+            className: GitHub\Branch\Commit\Committer\CommitterAvatarUrl
+            inputKey: '["commit"]["committer"]["avatar_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          gravatar_id:
+            key: gravatar_id
+            propertyName: gravatarId
+            className: GitHub\Branch\Commit\Committer\CommitterGravatarId
+            inputKey: '["commit"]["committer"]["gravatar_id"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          url:
+            key: url
+            propertyName: url
+            className: GitHub\Branch\Commit\Committer\CommitterUrl
+            inputKey: '["commit"]["committer"]["url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          html_url:
+            key: html_url
+            propertyName: htmlUrl
+            className: GitHub\Branch\Commit\Committer\CommitterHtmlUrl
+            inputKey: '["commit"]["committer"]["html_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          followers_url:
+            key: followers_url
+            propertyName: followersUrl
+            className: GitHub\Branch\Commit\Committer\CommitterFollowersUrl
+            inputKey: '["commit"]["committer"]["followers_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          following_url:
+            key: following_url
+            propertyName: followingUrl
+            className: GitHub\Branch\Commit\Committer\CommitterFollowingUrl
+            inputKey: '["commit"]["committer"]["following_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          gists_url:
+            key: gists_url
+            propertyName: gistsUrl
+            className: GitHub\Branch\Commit\Committer\CommitterGistsUrl
+            inputKey: '["commit"]["committer"]["gists_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          starred_url:
+            key: starred_url
+            propertyName: starredUrl
+            className: GitHub\Branch\Commit\Committer\CommitterStarredUrl
+            inputKey: '["commit"]["committer"]["starred_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          subscriptions_url:
+            key: subscriptions_url
+            propertyName: subscriptionsUrl
+            className: GitHub\Branch\Commit\Committer\CommitterSubscriptionsUrl
+            inputKey: '["commit"]["committer"]["subscriptions_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          organizations_url:
+            key: organizations_url
+            propertyName: organizationsUrl
+            className: GitHub\Branch\Commit\Committer\CommitterOrganizationsUrl
+            inputKey: '["commit"]["committer"]["organizations_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          repos_url:
+            key: repos_url
+            propertyName: reposUrl
+            className: GitHub\Branch\Commit\Committer\CommitterReposUrl
+            inputKey: '["commit"]["committer"]["repos_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          events_url:
+            key: events_url
+            propertyName: eventsUrl
+            className: GitHub\Branch\Commit\Committer\CommitterEventsUrl
+            inputKey: '["commit"]["committer"]["events_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          received_events_url:
+            key: received_events_url
+            propertyName: receivedEventsUrl
+            className: GitHub\Branch\Commit\Committer\CommitterReceivedEventsUrl
+            inputKey: '["commit"]["committer"]["received_events_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          type:
+            key: type
+            propertyName: type
+            className: GitHub\Branch\Commit\Committer\CommitterType
+            inputKey: '["commit"]["committer"]["type"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          site_admin:
+            key: site_admin
+            propertyName: siteAdmin
+            className: GitHub\Branch\Commit\Committer\CommitterSiteAdmin
+            inputKey: '["commit"]["committer"]["site_admin"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+      parents:
+        key: Parents
+        propertyName: parents
+        className: GitHub\Branch\Commit\Parents
+        inputKey: '["commit"]["parents"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
+        fields:
+          sha:
+            key: sha
+            propertyName: sha
+            className: GitHub\Branch\Commit\Parents\ParentsSha
+            inputKey: '["commit"]["parents"]["sha"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          url:
+            key: url
+            propertyName: url
+            className: GitHub\Branch\Commit\Parents\ParentsUrl
+            inputKey: '["commit"]["parents"]["url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          html_url:
+            key: html_url
+            propertyName: htmlUrl
+            className: GitHub\Branch\Commit\Parents\ParentsHtmlUrl
+            inputKey: '["commit"]["parents"]["html_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+        collectionOf:
+          className: TODO2
+          accessor: getId
+          has: TODO3
   _links:
     key: Links
     propertyName: links
     className: GitHub\Branch\Links
     inputKey: '["_links"]'
     suggestions: {  }
-    sorting: 16
     fields:
-      html:
-        key: html
-        propertyName: html
-        className: GitHub\Branch\Links\LinksHtml
-        inputKey: '["_links"]["html"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
       self:
         key: self
         propertyName: self
@@ -606,14 +521,27 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
+      html:
+        key: html
+        propertyName: html
+        className: GitHub\Branch\Links\LinksHtml
+        inputKey: '["_links"]["html"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  protected:
+    key: protected
+    propertyName: protected
+    className: GitHub\Branch\BranchProtected
+    inputKey: '["protected"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
   protection:
     key: Protection
     propertyName: protection
     className: GitHub\Branch\Protection
     inputKey: '["protection"]'
     suggestions: {  }
-    sorting: 16
     fields:
       enabled:
         key: enabled
@@ -622,14 +550,12 @@ fields:
         inputKey: '["protection"]["enabled"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-        sorting: 20
       required_status_checks:
         key: RequiredStatusChecks
         propertyName: requiredStatusChecks
         className: GitHub\Branch\Protection\RequiredStatusChecks
         inputKey: '["protection"]["required_status_checks"]'
         suggestions: {  }
-        sorting: 16
         fields:
           enforcement_level:
             key: enforcement_level
@@ -638,7 +564,6 @@ fields:
             inputKey: '["protection"]["required_status_checks"]["enforcement_level"]'
             suggestions:
               - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-            sorting: 30
           contexts:
             key: Contexts
             propertyName: contexts
@@ -646,7 +571,6 @@ fields:
             inputKey: '["protection"]["required_status_checks"]["contexts"]'
             suggestions:
               - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
-            sorting: 16
             collectionOf:
               className: TODO2
               accessor: getId
@@ -659,4 +583,3 @@ fields:
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Generix\Url
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10

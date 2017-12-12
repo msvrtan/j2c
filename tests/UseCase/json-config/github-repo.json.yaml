@@ -1,7 +1,6 @@
 key: Repo
 className: GitHub\Repo
 inputKey: ''
-sorting: 16
 fields:
   id:
     key: id
@@ -11,63 +10,6 @@ fields:
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 200
-  default_branch:
-    key: default_branch
-    propertyName: defaultBranch
-    className: GitHub\Repo\RepoDefaultBranch
-    inputKey: '["default_branch"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 30
-  description:
-    key: description
-    propertyName: description
-    className: GitHub\Repo\RepoDescription
-    inputKey: '["description"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 30
-  forks:
-    key: forks
-    propertyName: forks
-    className: GitHub\Repo\RepoForks
-    inputKey: '["forks"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 30
-  forks_count:
-    key: forks_count
-    propertyName: forksCount
-    className: GitHub\Repo\RepoForksCount
-    inputKey: '["forks_count"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 30
-  full_name:
-    key: full_name
-    propertyName: fullName
-    className: GitHub\Repo\RepoFullName
-    inputKey: '["full_name"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 30
-  homepage:
-    key: homepage
-    propertyName: homepage
-    className: GitHub\Repo\RepoHomepage
-    inputKey: '["homepage"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 30
-  language:
-    key: language
-    propertyName: language
-    className: GitHub\Repo\RepoLanguage
-    inputKey: '["language"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 30
   name:
     key: name
     propertyName: name
@@ -75,316 +17,27 @@ fields:
     inputKey: '["name"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 30
-  network_count:
-    key: network_count
-    propertyName: networkCount
-    className: GitHub\Repo\RepoNetworkCount
-    inputKey: '["network_count"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 30
-  open_issues:
-    key: open_issues
-    propertyName: openIssues
-    className: GitHub\Repo\RepoOpenIssues
-    inputKey: '["open_issues"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 30
-  open_issues_count:
-    key: open_issues_count
-    propertyName: openIssuesCount
-    className: GitHub\Repo\RepoOpenIssuesCount
-    inputKey: '["open_issues_count"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 30
-  size:
-    key: size
-    propertyName: size
-    className: GitHub\Repo\RepoSize
-    inputKey: '["size"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 30
-  ssh_url:
-    key: ssh_url
-    propertyName: sshUrl
-    className: GitHub\Repo\RepoSshUrl
-    inputKey: '["ssh_url"]'
+  full_name:
+    key: full_name
+    propertyName: fullName
+    className: GitHub\Repo\RepoFullName
+    inputKey: '["full_name"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 30
-  stargazers_count:
-    key: stargazers_count
-    propertyName: stargazersCount
-    className: GitHub\Repo\RepoStargazersCount
-    inputKey: '["stargazers_count"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 30
-  subscribers_count:
-    key: subscribers_count
-    propertyName: subscribersCount
-    className: GitHub\Repo\RepoSubscribersCount
-    inputKey: '["subscribers_count"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 30
-  watchers:
-    key: watchers
-    propertyName: watchers
-    className: GitHub\Repo\RepoWatchers
-    inputKey: '["watchers"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 30
-  watchers_count:
-    key: watchers_count
-    propertyName: watchersCount
-    className: GitHub\Repo\RepoWatchersCount
-    inputKey: '["watchers_count"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 30
-  archived:
-    key: archived
-    propertyName: archived
-    className: GitHub\Repo\RepoArchived
-    inputKey: '["archived"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-    sorting: 20
-  fork:
-    key: fork
-    propertyName: fork
-    className: GitHub\Repo\RepoFork
-    inputKey: '["fork"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-    sorting: 20
-  has_downloads:
-    key: has_downloads
-    propertyName: hasDownloads
-    className: GitHub\Repo\RepoHasDownloads
-    inputKey: '["has_downloads"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-    sorting: 20
-  has_issues:
-    key: has_issues
-    propertyName: hasIssues
-    className: GitHub\Repo\RepoHasIssues
-    inputKey: '["has_issues"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-    sorting: 20
-  has_pages:
-    key: has_pages
-    propertyName: hasPages
-    className: GitHub\Repo\RepoHasPages
-    inputKey: '["has_pages"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-    sorting: 20
-  has_projects:
-    key: has_projects
-    propertyName: hasProjects
-    className: GitHub\Repo\RepoHasProjects
-    inputKey: '["has_projects"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-    sorting: 20
-  has_wiki:
-    key: has_wiki
-    propertyName: hasWiki
-    className: GitHub\Repo\RepoHasWiki
-    inputKey: '["has_wiki"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-    sorting: 20
-  mirror_url:
-    key: mirror_url
-    propertyName: mirrorUrl
-    className: GitHub\Repo\RepoMirrorUrl
-    inputKey: '["mirror_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
-    sorting: 20
-  private:
-    key: private
-    propertyName: private
-    className: GitHub\Repo\RepoPrivate
-    inputKey: '["private"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-    sorting: 20
-  organization:
-    key: Organization
-    propertyName: organization
-    className: GitHub\Repo\Organization
-    inputKey: '["organization"]'
-    suggestions: {  }
-    sorting: 16
-    fields:
-      id:
-        key: id
-        propertyName: id
-        className: GitHub\Repo\Organization\OrganizationId
-        inputKey: '["organization"]["id"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-        sorting: 200
-      gravatar_id:
-        key: gravatar_id
-        propertyName: gravatarId
-        className: GitHub\Repo\Organization\OrganizationGravatarId
-        inputKey: '["organization"]["gravatar_id"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 30
-      login:
-        key: login
-        propertyName: login
-        className: GitHub\Repo\Organization\OrganizationLogin
-        inputKey: '["organization"]["login"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 30
-      type:
-        key: type
-        propertyName: type
-        className: GitHub\Repo\Organization\OrganizationType
-        inputKey: '["organization"]["type"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 30
-      site_admin:
-        key: site_admin
-        propertyName: siteAdmin
-        className: GitHub\Repo\Organization\OrganizationSiteAdmin
-        inputKey: '["organization"]["site_admin"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-        sorting: 20
-      avatar_url:
-        key: avatar_url
-        propertyName: avatarUrl
-        className: GitHub\Repo\Organization\OrganizationAvatarUrl
-        inputKey: '["organization"]["avatar_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      events_url:
-        key: events_url
-        propertyName: eventsUrl
-        className: GitHub\Repo\Organization\OrganizationEventsUrl
-        inputKey: '["organization"]["events_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      followers_url:
-        key: followers_url
-        propertyName: followersUrl
-        className: GitHub\Repo\Organization\OrganizationFollowersUrl
-        inputKey: '["organization"]["followers_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      following_url:
-        key: following_url
-        propertyName: followingUrl
-        className: GitHub\Repo\Organization\OrganizationFollowingUrl
-        inputKey: '["organization"]["following_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      gists_url:
-        key: gists_url
-        propertyName: gistsUrl
-        className: GitHub\Repo\Organization\OrganizationGistsUrl
-        inputKey: '["organization"]["gists_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      html_url:
-        key: html_url
-        propertyName: htmlUrl
-        className: GitHub\Repo\Organization\OrganizationHtmlUrl
-        inputKey: '["organization"]["html_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      organizations_url:
-        key: organizations_url
-        propertyName: organizationsUrl
-        className: GitHub\Repo\Organization\OrganizationOrganizationsUrl
-        inputKey: '["organization"]["organizations_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      received_events_url:
-        key: received_events_url
-        propertyName: receivedEventsUrl
-        className: GitHub\Repo\Organization\OrganizationReceivedEventsUrl
-        inputKey: '["organization"]["received_events_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      repos_url:
-        key: repos_url
-        propertyName: reposUrl
-        className: GitHub\Repo\Organization\OrganizationReposUrl
-        inputKey: '["organization"]["repos_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      starred_url:
-        key: starred_url
-        propertyName: starredUrl
-        className: GitHub\Repo\Organization\OrganizationStarredUrl
-        inputKey: '["organization"]["starred_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      subscriptions_url:
-        key: subscriptions_url
-        propertyName: subscriptionsUrl
-        className: GitHub\Repo\Organization\OrganizationSubscriptionsUrl
-        inputKey: '["organization"]["subscriptions_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      url:
-        key: url
-        propertyName: url
-        className: GitHub\Repo\Organization\OrganizationUrl
-        inputKey: '["organization"]["url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
   owner:
     key: Owner
     propertyName: owner
     className: GitHub\Repo\Owner
     inputKey: '["owner"]'
     suggestions: {  }
-    sorting: 16
     fields:
+      login:
+        key: login
+        propertyName: login
+        className: GitHub\Repo\Owner\OwnerLogin
+        inputKey: '["owner"]["login"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
       id:
         key: id
         propertyName: id
@@ -393,39 +46,6 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-        sorting: 200
-      gravatar_id:
-        key: gravatar_id
-        propertyName: gravatarId
-        className: GitHub\Repo\Owner\OwnerGravatarId
-        inputKey: '["owner"]["gravatar_id"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 30
-      login:
-        key: login
-        propertyName: login
-        className: GitHub\Repo\Owner\OwnerLogin
-        inputKey: '["owner"]["login"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 30
-      type:
-        key: type
-        propertyName: type
-        className: GitHub\Repo\Owner\OwnerType
-        inputKey: '["owner"]["type"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 30
-      site_admin:
-        key: site_admin
-        propertyName: siteAdmin
-        className: GitHub\Repo\Owner\OwnerSiteAdmin
-        inputKey: '["owner"]["site_admin"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-        sorting: 20
       avatar_url:
         key: avatar_url
         propertyName: avatarUrl
@@ -434,97 +54,13 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      events_url:
-        key: events_url
-        propertyName: eventsUrl
-        className: GitHub\Repo\Owner\OwnerEventsUrl
-        inputKey: '["owner"]["events_url"]'
+      gravatar_id:
+        key: gravatar_id
+        propertyName: gravatarId
+        className: GitHub\Repo\Owner\OwnerGravatarId
+        inputKey: '["owner"]["gravatar_id"]'
         suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      followers_url:
-        key: followers_url
-        propertyName: followersUrl
-        className: GitHub\Repo\Owner\OwnerFollowersUrl
-        inputKey: '["owner"]["followers_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      following_url:
-        key: following_url
-        propertyName: followingUrl
-        className: GitHub\Repo\Owner\OwnerFollowingUrl
-        inputKey: '["owner"]["following_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      gists_url:
-        key: gists_url
-        propertyName: gistsUrl
-        className: GitHub\Repo\Owner\OwnerGistsUrl
-        inputKey: '["owner"]["gists_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      html_url:
-        key: html_url
-        propertyName: htmlUrl
-        className: GitHub\Repo\Owner\OwnerHtmlUrl
-        inputKey: '["owner"]["html_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      organizations_url:
-        key: organizations_url
-        propertyName: organizationsUrl
-        className: GitHub\Repo\Owner\OwnerOrganizationsUrl
-        inputKey: '["owner"]["organizations_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      received_events_url:
-        key: received_events_url
-        propertyName: receivedEventsUrl
-        className: GitHub\Repo\Owner\OwnerReceivedEventsUrl
-        inputKey: '["owner"]["received_events_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      repos_url:
-        key: repos_url
-        propertyName: reposUrl
-        className: GitHub\Repo\Owner\OwnerReposUrl
-        inputKey: '["owner"]["repos_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      starred_url:
-        key: starred_url
-        propertyName: starredUrl
-        className: GitHub\Repo\Owner\OwnerStarredUrl
-        inputKey: '["owner"]["starred_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-      subscriptions_url:
-        key: subscriptions_url
-        propertyName: subscriptionsUrl
-        className: GitHub\Repo\Owner\OwnerSubscriptionsUrl
-        inputKey: '["owner"]["subscriptions_url"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
       url:
         key: url
         propertyName: url
@@ -533,219 +69,107 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10
-  permissions:
-    key: Permissions
-    propertyName: permissions
-    className: GitHub\Repo\Permissions
-    inputKey: '["permissions"]'
-    suggestions: {  }
-    sorting: 16
-    fields:
-      admin:
-        key: admin
-        propertyName: admin
-        className: GitHub\Repo\Permissions\PermissionsAdmin
-        inputKey: '["permissions"]["admin"]'
+      html_url:
+        key: html_url
+        propertyName: htmlUrl
+        className: GitHub\Repo\Owner\OwnerHtmlUrl
+        inputKey: '["owner"]["html_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      followers_url:
+        key: followers_url
+        propertyName: followersUrl
+        className: GitHub\Repo\Owner\OwnerFollowersUrl
+        inputKey: '["owner"]["followers_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      following_url:
+        key: following_url
+        propertyName: followingUrl
+        className: GitHub\Repo\Owner\OwnerFollowingUrl
+        inputKey: '["owner"]["following_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      gists_url:
+        key: gists_url
+        propertyName: gistsUrl
+        className: GitHub\Repo\Owner\OwnerGistsUrl
+        inputKey: '["owner"]["gists_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      starred_url:
+        key: starred_url
+        propertyName: starredUrl
+        className: GitHub\Repo\Owner\OwnerStarredUrl
+        inputKey: '["owner"]["starred_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      subscriptions_url:
+        key: subscriptions_url
+        propertyName: subscriptionsUrl
+        className: GitHub\Repo\Owner\OwnerSubscriptionsUrl
+        inputKey: '["owner"]["subscriptions_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      organizations_url:
+        key: organizations_url
+        propertyName: organizationsUrl
+        className: GitHub\Repo\Owner\OwnerOrganizationsUrl
+        inputKey: '["owner"]["organizations_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      repos_url:
+        key: repos_url
+        propertyName: reposUrl
+        className: GitHub\Repo\Owner\OwnerReposUrl
+        inputKey: '["owner"]["repos_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      events_url:
+        key: events_url
+        propertyName: eventsUrl
+        className: GitHub\Repo\Owner\OwnerEventsUrl
+        inputKey: '["owner"]["events_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      received_events_url:
+        key: received_events_url
+        propertyName: receivedEventsUrl
+        className: GitHub\Repo\Owner\OwnerReceivedEventsUrl
+        inputKey: '["owner"]["received_events_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      type:
+        key: type
+        propertyName: type
+        className: GitHub\Repo\Owner\OwnerType
+        inputKey: '["owner"]["type"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      site_admin:
+        key: site_admin
+        propertyName: siteAdmin
+        className: GitHub\Repo\Owner\OwnerSiteAdmin
+        inputKey: '["owner"]["site_admin"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-        sorting: 20
-      pull:
-        key: pull
-        propertyName: pull
-        className: GitHub\Repo\Permissions\PermissionsPull
-        inputKey: '["permissions"]["pull"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-        sorting: 20
-      push:
-        key: push
-        propertyName: push
-        className: GitHub\Repo\Permissions\PermissionsPush
-        inputKey: '["permissions"]["push"]'
-        suggestions:
-          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
-        sorting: 20
-  archive_url:
-    key: archive_url
-    propertyName: archiveUrl
-    className: GitHub\Repo\RepoArchiveUrl
-    inputKey: '["archive_url"]'
+  private:
+    key: private
+    propertyName: private
+    className: GitHub\Repo\RepoPrivate
+    inputKey: '["private"]'
     suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  assignees_url:
-    key: assignees_url
-    propertyName: assigneesUrl
-    className: GitHub\Repo\RepoAssigneesUrl
-    inputKey: '["assignees_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  blobs_url:
-    key: blobs_url
-    propertyName: blobsUrl
-    className: GitHub\Repo\RepoBlobsUrl
-    inputKey: '["blobs_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  branches_url:
-    key: branches_url
-    propertyName: branchesUrl
-    className: GitHub\Repo\RepoBranchesUrl
-    inputKey: '["branches_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  clone_url:
-    key: clone_url
-    propertyName: cloneUrl
-    className: GitHub\Repo\RepoCloneUrl
-    inputKey: '["clone_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  collaborators_url:
-    key: collaborators_url
-    propertyName: collaboratorsUrl
-    className: GitHub\Repo\RepoCollaboratorsUrl
-    inputKey: '["collaborators_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  comments_url:
-    key: comments_url
-    propertyName: commentsUrl
-    className: GitHub\Repo\RepoCommentsUrl
-    inputKey: '["comments_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  commits_url:
-    key: commits_url
-    propertyName: commitsUrl
-    className: GitHub\Repo\RepoCommitsUrl
-    inputKey: '["commits_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  compare_url:
-    key: compare_url
-    propertyName: compareUrl
-    className: GitHub\Repo\RepoCompareUrl
-    inputKey: '["compare_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  contents_url:
-    key: contents_url
-    propertyName: contentsUrl
-    className: GitHub\Repo\RepoContentsUrl
-    inputKey: '["contents_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  contributors_url:
-    key: contributors_url
-    propertyName: contributorsUrl
-    className: GitHub\Repo\RepoContributorsUrl
-    inputKey: '["contributors_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  deployments_url:
-    key: deployments_url
-    propertyName: deploymentsUrl
-    className: GitHub\Repo\RepoDeploymentsUrl
-    inputKey: '["deployments_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  downloads_url:
-    key: downloads_url
-    propertyName: downloadsUrl
-    className: GitHub\Repo\RepoDownloadsUrl
-    inputKey: '["downloads_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  events_url:
-    key: events_url
-    propertyName: eventsUrl
-    className: GitHub\Repo\RepoEventsUrl
-    inputKey: '["events_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  forks_url:
-    key: forks_url
-    propertyName: forksUrl
-    className: GitHub\Repo\RepoForksUrl
-    inputKey: '["forks_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  git_commits_url:
-    key: git_commits_url
-    propertyName: gitCommitsUrl
-    className: GitHub\Repo\RepoGitCommitsUrl
-    inputKey: '["git_commits_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  git_refs_url:
-    key: git_refs_url
-    propertyName: gitRefsUrl
-    className: GitHub\Repo\RepoGitRefsUrl
-    inputKey: '["git_refs_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  git_tags_url:
-    key: git_tags_url
-    propertyName: gitTagsUrl
-    className: GitHub\Repo\RepoGitTagsUrl
-    inputKey: '["git_tags_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  git_url:
-    key: git_url
-    propertyName: gitUrl
-    className: GitHub\Repo\RepoGitUrl
-    inputKey: '["git_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  hooks_url:
-    key: hooks_url
-    propertyName: hooksUrl
-    className: GitHub\Repo\RepoHooksUrl
-    inputKey: '["hooks_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
   html_url:
     key: html_url
     propertyName: htmlUrl
@@ -754,178 +178,20 @@ fields:
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Generix\Url
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  issue_comment_url:
-    key: issue_comment_url
-    propertyName: issueCommentUrl
-    className: GitHub\Repo\RepoIssueCommentUrl
-    inputKey: '["issue_comment_url"]'
+  description:
+    key: description
+    propertyName: description
+    className: GitHub\Repo\RepoDescription
+    inputKey: '["description"]'
     suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  issue_events_url:
-    key: issue_events_url
-    propertyName: issueEventsUrl
-    className: GitHub\Repo\RepoIssueEventsUrl
-    inputKey: '["issue_events_url"]'
+  fork:
+    key: fork
+    propertyName: fork
+    className: GitHub\Repo\RepoFork
+    inputKey: '["fork"]'
     suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  issues_url:
-    key: issues_url
-    propertyName: issuesUrl
-    className: GitHub\Repo\RepoIssuesUrl
-    inputKey: '["issues_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  keys_url:
-    key: keys_url
-    propertyName: keysUrl
-    className: GitHub\Repo\RepoKeysUrl
-    inputKey: '["keys_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  labels_url:
-    key: labels_url
-    propertyName: labelsUrl
-    className: GitHub\Repo\RepoLabelsUrl
-    inputKey: '["labels_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  languages_url:
-    key: languages_url
-    propertyName: languagesUrl
-    className: GitHub\Repo\RepoLanguagesUrl
-    inputKey: '["languages_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  merges_url:
-    key: merges_url
-    propertyName: mergesUrl
-    className: GitHub\Repo\RepoMergesUrl
-    inputKey: '["merges_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  milestones_url:
-    key: milestones_url
-    propertyName: milestonesUrl
-    className: GitHub\Repo\RepoMilestonesUrl
-    inputKey: '["milestones_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  notifications_url:
-    key: notifications_url
-    propertyName: notificationsUrl
-    className: GitHub\Repo\RepoNotificationsUrl
-    inputKey: '["notifications_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  pulls_url:
-    key: pulls_url
-    propertyName: pullsUrl
-    className: GitHub\Repo\RepoPullsUrl
-    inputKey: '["pulls_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  releases_url:
-    key: releases_url
-    propertyName: releasesUrl
-    className: GitHub\Repo\RepoReleasesUrl
-    inputKey: '["releases_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  stargazers_url:
-    key: stargazers_url
-    propertyName: stargazersUrl
-    className: GitHub\Repo\RepoStargazersUrl
-    inputKey: '["stargazers_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  statuses_url:
-    key: statuses_url
-    propertyName: statusesUrl
-    className: GitHub\Repo\RepoStatusesUrl
-    inputKey: '["statuses_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  subscribers_url:
-    key: subscribers_url
-    propertyName: subscribersUrl
-    className: GitHub\Repo\RepoSubscribersUrl
-    inputKey: '["subscribers_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  subscription_url:
-    key: subscription_url
-    propertyName: subscriptionUrl
-    className: GitHub\Repo\RepoSubscriptionUrl
-    inputKey: '["subscription_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  svn_url:
-    key: svn_url
-    propertyName: svnUrl
-    className: GitHub\Repo\RepoSvnUrl
-    inputKey: '["svn_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  tags_url:
-    key: tags_url
-    propertyName: tagsUrl
-    className: GitHub\Repo\RepoTagsUrl
-    inputKey: '["tags_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  teams_url:
-    key: teams_url
-    propertyName: teamsUrl
-    className: GitHub\Repo\RepoTeamsUrl
-    inputKey: '["teams_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
-  trees_url:
-    key: trees_url
-    propertyName: treesUrl
-    className: GitHub\Repo\RepoTreesUrl
-    inputKey: '["trees_url"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
   url:
     key: url
     propertyName: url
@@ -934,7 +200,294 @@ fields:
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Generix\Url
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 10
+  forks_url:
+    key: forks_url
+    propertyName: forksUrl
+    className: GitHub\Repo\RepoForksUrl
+    inputKey: '["forks_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  keys_url:
+    key: keys_url
+    propertyName: keysUrl
+    className: GitHub\Repo\RepoKeysUrl
+    inputKey: '["keys_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  collaborators_url:
+    key: collaborators_url
+    propertyName: collaboratorsUrl
+    className: GitHub\Repo\RepoCollaboratorsUrl
+    inputKey: '["collaborators_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  teams_url:
+    key: teams_url
+    propertyName: teamsUrl
+    className: GitHub\Repo\RepoTeamsUrl
+    inputKey: '["teams_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  hooks_url:
+    key: hooks_url
+    propertyName: hooksUrl
+    className: GitHub\Repo\RepoHooksUrl
+    inputKey: '["hooks_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  issue_events_url:
+    key: issue_events_url
+    propertyName: issueEventsUrl
+    className: GitHub\Repo\RepoIssueEventsUrl
+    inputKey: '["issue_events_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  events_url:
+    key: events_url
+    propertyName: eventsUrl
+    className: GitHub\Repo\RepoEventsUrl
+    inputKey: '["events_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  assignees_url:
+    key: assignees_url
+    propertyName: assigneesUrl
+    className: GitHub\Repo\RepoAssigneesUrl
+    inputKey: '["assignees_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  branches_url:
+    key: branches_url
+    propertyName: branchesUrl
+    className: GitHub\Repo\RepoBranchesUrl
+    inputKey: '["branches_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  tags_url:
+    key: tags_url
+    propertyName: tagsUrl
+    className: GitHub\Repo\RepoTagsUrl
+    inputKey: '["tags_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  blobs_url:
+    key: blobs_url
+    propertyName: blobsUrl
+    className: GitHub\Repo\RepoBlobsUrl
+    inputKey: '["blobs_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  git_tags_url:
+    key: git_tags_url
+    propertyName: gitTagsUrl
+    className: GitHub\Repo\RepoGitTagsUrl
+    inputKey: '["git_tags_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  git_refs_url:
+    key: git_refs_url
+    propertyName: gitRefsUrl
+    className: GitHub\Repo\RepoGitRefsUrl
+    inputKey: '["git_refs_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  trees_url:
+    key: trees_url
+    propertyName: treesUrl
+    className: GitHub\Repo\RepoTreesUrl
+    inputKey: '["trees_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  statuses_url:
+    key: statuses_url
+    propertyName: statusesUrl
+    className: GitHub\Repo\RepoStatusesUrl
+    inputKey: '["statuses_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  languages_url:
+    key: languages_url
+    propertyName: languagesUrl
+    className: GitHub\Repo\RepoLanguagesUrl
+    inputKey: '["languages_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  stargazers_url:
+    key: stargazers_url
+    propertyName: stargazersUrl
+    className: GitHub\Repo\RepoStargazersUrl
+    inputKey: '["stargazers_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  contributors_url:
+    key: contributors_url
+    propertyName: contributorsUrl
+    className: GitHub\Repo\RepoContributorsUrl
+    inputKey: '["contributors_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  subscribers_url:
+    key: subscribers_url
+    propertyName: subscribersUrl
+    className: GitHub\Repo\RepoSubscribersUrl
+    inputKey: '["subscribers_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  subscription_url:
+    key: subscription_url
+    propertyName: subscriptionUrl
+    className: GitHub\Repo\RepoSubscriptionUrl
+    inputKey: '["subscription_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  commits_url:
+    key: commits_url
+    propertyName: commitsUrl
+    className: GitHub\Repo\RepoCommitsUrl
+    inputKey: '["commits_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  git_commits_url:
+    key: git_commits_url
+    propertyName: gitCommitsUrl
+    className: GitHub\Repo\RepoGitCommitsUrl
+    inputKey: '["git_commits_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  comments_url:
+    key: comments_url
+    propertyName: commentsUrl
+    className: GitHub\Repo\RepoCommentsUrl
+    inputKey: '["comments_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  issue_comment_url:
+    key: issue_comment_url
+    propertyName: issueCommentUrl
+    className: GitHub\Repo\RepoIssueCommentUrl
+    inputKey: '["issue_comment_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  contents_url:
+    key: contents_url
+    propertyName: contentsUrl
+    className: GitHub\Repo\RepoContentsUrl
+    inputKey: '["contents_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  compare_url:
+    key: compare_url
+    propertyName: compareUrl
+    className: GitHub\Repo\RepoCompareUrl
+    inputKey: '["compare_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  merges_url:
+    key: merges_url
+    propertyName: mergesUrl
+    className: GitHub\Repo\RepoMergesUrl
+    inputKey: '["merges_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  archive_url:
+    key: archive_url
+    propertyName: archiveUrl
+    className: GitHub\Repo\RepoArchiveUrl
+    inputKey: '["archive_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  downloads_url:
+    key: downloads_url
+    propertyName: downloadsUrl
+    className: GitHub\Repo\RepoDownloadsUrl
+    inputKey: '["downloads_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  issues_url:
+    key: issues_url
+    propertyName: issuesUrl
+    className: GitHub\Repo\RepoIssuesUrl
+    inputKey: '["issues_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  pulls_url:
+    key: pulls_url
+    propertyName: pullsUrl
+    className: GitHub\Repo\RepoPullsUrl
+    inputKey: '["pulls_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  milestones_url:
+    key: milestones_url
+    propertyName: milestonesUrl
+    className: GitHub\Repo\RepoMilestonesUrl
+    inputKey: '["milestones_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  notifications_url:
+    key: notifications_url
+    propertyName: notificationsUrl
+    className: GitHub\Repo\RepoNotificationsUrl
+    inputKey: '["notifications_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  labels_url:
+    key: labels_url
+    propertyName: labelsUrl
+    className: GitHub\Repo\RepoLabelsUrl
+    inputKey: '["labels_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  releases_url:
+    key: releases_url
+    propertyName: releasesUrl
+    className: GitHub\Repo\RepoReleasesUrl
+    inputKey: '["releases_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  deployments_url:
+    key: deployments_url
+    propertyName: deploymentsUrl
+    className: GitHub\Repo\RepoDeploymentsUrl
+    inputKey: '["deployments_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
   created_at:
     key: created_at
     propertyName: createdAt
@@ -943,16 +496,6 @@ fields:
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 5
-  pushed_at:
-    key: pushed_at
-    propertyName: pushedAt
-    className: GitHub\Repo\RepoPushedAt
-    inputKey: '["pushed_at"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 5
   updated_at:
     key: updated_at
     propertyName: updatedAt
@@ -961,4 +504,349 @@ fields:
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 5
+  pushed_at:
+    key: pushed_at
+    propertyName: pushedAt
+    className: GitHub\Repo\RepoPushedAt
+    inputKey: '["pushed_at"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  git_url:
+    key: git_url
+    propertyName: gitUrl
+    className: GitHub\Repo\RepoGitUrl
+    inputKey: '["git_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  ssh_url:
+    key: ssh_url
+    propertyName: sshUrl
+    className: GitHub\Repo\RepoSshUrl
+    inputKey: '["ssh_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  clone_url:
+    key: clone_url
+    propertyName: cloneUrl
+    className: GitHub\Repo\RepoCloneUrl
+    inputKey: '["clone_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  svn_url:
+    key: svn_url
+    propertyName: svnUrl
+    className: GitHub\Repo\RepoSvnUrl
+    inputKey: '["svn_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  homepage:
+    key: homepage
+    propertyName: homepage
+    className: GitHub\Repo\RepoHomepage
+    inputKey: '["homepage"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  size:
+    key: size
+    propertyName: size
+    className: GitHub\Repo\RepoSize
+    inputKey: '["size"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  stargazers_count:
+    key: stargazers_count
+    propertyName: stargazersCount
+    className: GitHub\Repo\RepoStargazersCount
+    inputKey: '["stargazers_count"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  watchers_count:
+    key: watchers_count
+    propertyName: watchersCount
+    className: GitHub\Repo\RepoWatchersCount
+    inputKey: '["watchers_count"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  language:
+    key: language
+    propertyName: language
+    className: GitHub\Repo\RepoLanguage
+    inputKey: '["language"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  has_issues:
+    key: has_issues
+    propertyName: hasIssues
+    className: GitHub\Repo\RepoHasIssues
+    inputKey: '["has_issues"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  has_projects:
+    key: has_projects
+    propertyName: hasProjects
+    className: GitHub\Repo\RepoHasProjects
+    inputKey: '["has_projects"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  has_downloads:
+    key: has_downloads
+    propertyName: hasDownloads
+    className: GitHub\Repo\RepoHasDownloads
+    inputKey: '["has_downloads"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  has_wiki:
+    key: has_wiki
+    propertyName: hasWiki
+    className: GitHub\Repo\RepoHasWiki
+    inputKey: '["has_wiki"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  has_pages:
+    key: has_pages
+    propertyName: hasPages
+    className: GitHub\Repo\RepoHasPages
+    inputKey: '["has_pages"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  forks_count:
+    key: forks_count
+    propertyName: forksCount
+    className: GitHub\Repo\RepoForksCount
+    inputKey: '["forks_count"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  mirror_url:
+    key: mirror_url
+    propertyName: mirrorUrl
+    className: GitHub\Repo\RepoMirrorUrl
+    inputKey: '["mirror_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+  archived:
+    key: archived
+    propertyName: archived
+    className: GitHub\Repo\RepoArchived
+    inputKey: '["archived"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  open_issues_count:
+    key: open_issues_count
+    propertyName: openIssuesCount
+    className: GitHub\Repo\RepoOpenIssuesCount
+    inputKey: '["open_issues_count"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  forks:
+    key: forks
+    propertyName: forks
+    className: GitHub\Repo\RepoForks
+    inputKey: '["forks"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  open_issues:
+    key: open_issues
+    propertyName: openIssues
+    className: GitHub\Repo\RepoOpenIssues
+    inputKey: '["open_issues"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  watchers:
+    key: watchers
+    propertyName: watchers
+    className: GitHub\Repo\RepoWatchers
+    inputKey: '["watchers"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  default_branch:
+    key: default_branch
+    propertyName: defaultBranch
+    className: GitHub\Repo\RepoDefaultBranch
+    inputKey: '["default_branch"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  permissions:
+    key: Permissions
+    propertyName: permissions
+    className: GitHub\Repo\Permissions
+    inputKey: '["permissions"]'
+    suggestions: {  }
+    fields:
+      admin:
+        key: admin
+        propertyName: admin
+        className: GitHub\Repo\Permissions\PermissionsAdmin
+        inputKey: '["permissions"]["admin"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+      push:
+        key: push
+        propertyName: push
+        className: GitHub\Repo\Permissions\PermissionsPush
+        inputKey: '["permissions"]["push"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+      pull:
+        key: pull
+        propertyName: pull
+        className: GitHub\Repo\Permissions\PermissionsPull
+        inputKey: '["permissions"]["pull"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  organization:
+    key: Organization
+    propertyName: organization
+    className: GitHub\Repo\Organization
+    inputKey: '["organization"]'
+    suggestions: {  }
+    fields:
+      login:
+        key: login
+        propertyName: login
+        className: GitHub\Repo\Organization\OrganizationLogin
+        inputKey: '["organization"]["login"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      id:
+        key: id
+        propertyName: id
+        className: GitHub\Repo\Organization\OrganizationId
+        inputKey: '["organization"]["id"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+      avatar_url:
+        key: avatar_url
+        propertyName: avatarUrl
+        className: GitHub\Repo\Organization\OrganizationAvatarUrl
+        inputKey: '["organization"]["avatar_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      gravatar_id:
+        key: gravatar_id
+        propertyName: gravatarId
+        className: GitHub\Repo\Organization\OrganizationGravatarId
+        inputKey: '["organization"]["gravatar_id"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      url:
+        key: url
+        propertyName: url
+        className: GitHub\Repo\Organization\OrganizationUrl
+        inputKey: '["organization"]["url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      html_url:
+        key: html_url
+        propertyName: htmlUrl
+        className: GitHub\Repo\Organization\OrganizationHtmlUrl
+        inputKey: '["organization"]["html_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      followers_url:
+        key: followers_url
+        propertyName: followersUrl
+        className: GitHub\Repo\Organization\OrganizationFollowersUrl
+        inputKey: '["organization"]["followers_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      following_url:
+        key: following_url
+        propertyName: followingUrl
+        className: GitHub\Repo\Organization\OrganizationFollowingUrl
+        inputKey: '["organization"]["following_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      gists_url:
+        key: gists_url
+        propertyName: gistsUrl
+        className: GitHub\Repo\Organization\OrganizationGistsUrl
+        inputKey: '["organization"]["gists_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      starred_url:
+        key: starred_url
+        propertyName: starredUrl
+        className: GitHub\Repo\Organization\OrganizationStarredUrl
+        inputKey: '["organization"]["starred_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      subscriptions_url:
+        key: subscriptions_url
+        propertyName: subscriptionsUrl
+        className: GitHub\Repo\Organization\OrganizationSubscriptionsUrl
+        inputKey: '["organization"]["subscriptions_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      organizations_url:
+        key: organizations_url
+        propertyName: organizationsUrl
+        className: GitHub\Repo\Organization\OrganizationOrganizationsUrl
+        inputKey: '["organization"]["organizations_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      repos_url:
+        key: repos_url
+        propertyName: reposUrl
+        className: GitHub\Repo\Organization\OrganizationReposUrl
+        inputKey: '["organization"]["repos_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      events_url:
+        key: events_url
+        propertyName: eventsUrl
+        className: GitHub\Repo\Organization\OrganizationEventsUrl
+        inputKey: '["organization"]["events_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      received_events_url:
+        key: received_events_url
+        propertyName: receivedEventsUrl
+        className: GitHub\Repo\Organization\OrganizationReceivedEventsUrl
+        inputKey: '["organization"]["received_events_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      type:
+        key: type
+        propertyName: type
+        className: GitHub\Repo\Organization\OrganizationType
+        inputKey: '["organization"]["type"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      site_admin:
+        key: site_admin
+        propertyName: siteAdmin
+        className: GitHub\Repo\Organization\OrganizationSiteAdmin
+        inputKey: '["organization"]["site_admin"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  network_count:
+    key: network_count
+    propertyName: networkCount
+    className: GitHub\Repo\RepoNetworkCount
+    inputKey: '["network_count"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  subscribers_count:
+    key: subscribers_count
+    propertyName: subscribersCount
+    className: GitHub\Repo\RepoSubscribersCount
+    inputKey: '["subscribers_count"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger

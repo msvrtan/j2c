@@ -5,13 +5,13 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    name:
-      className: MyVendor\User\Address\City\CityName
+    country:
+      className: MyVendor\User\Address\City\Country
       nullable: false
       hasDefault: false
       default: null
-    country:
-      className: MyVendor\User\Address\City\Country
+    name:
+      className: MyVendor\User\Address\City\CityName
       nullable: false
       hasDefault: false
       default: null

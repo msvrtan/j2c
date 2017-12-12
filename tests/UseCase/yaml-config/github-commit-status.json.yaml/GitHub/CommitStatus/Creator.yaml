@@ -5,28 +5,13 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    id:
-      className: GitHub\CommitStatus\Creator\CreatorId
-      nullable: false
-      hasDefault: false
-      default: null
-    gravatarId:
-      className: GitHub\CommitStatus\Creator\CreatorGravatarId
-      nullable: false
-      hasDefault: false
-      default: null
     login:
       className: GitHub\CommitStatus\Creator\CreatorLogin
       nullable: false
       hasDefault: false
       default: null
-    type:
-      className: GitHub\CommitStatus\Creator\CreatorType
-      nullable: false
-      hasDefault: false
-      default: null
-    siteAdmin:
-      className: GitHub\CommitStatus\Creator\CreatorSiteAdmin
+    id:
+      className: GitHub\CommitStatus\Creator\CreatorId
       nullable: false
       hasDefault: false
       default: null
@@ -35,8 +20,18 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    eventsUrl:
-      className: GitHub\CommitStatus\Creator\CreatorEventsUrl
+    gravatarId:
+      className: GitHub\CommitStatus\Creator\CreatorGravatarId
+      nullable: false
+      hasDefault: false
+      default: null
+    url:
+      className: GitHub\CommitStatus\Creator\CreatorUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: GitHub\CommitStatus\Creator\CreatorHtmlUrl
       nullable: false
       hasDefault: false
       default: null
@@ -55,26 +50,6 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    htmlUrl:
-      className: GitHub\CommitStatus\Creator\CreatorHtmlUrl
-      nullable: false
-      hasDefault: false
-      default: null
-    organizationsUrl:
-      className: GitHub\CommitStatus\Creator\CreatorOrganizationsUrl
-      nullable: false
-      hasDefault: false
-      default: null
-    receivedEventsUrl:
-      className: GitHub\CommitStatus\Creator\CreatorReceivedEventsUrl
-      nullable: false
-      hasDefault: false
-      default: null
-    reposUrl:
-      className: GitHub\CommitStatus\Creator\CreatorReposUrl
-      nullable: false
-      hasDefault: false
-      default: null
     starredUrl:
       className: GitHub\CommitStatus\Creator\CreatorStarredUrl
       nullable: false
@@ -85,8 +60,33 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    url:
-      className: GitHub\CommitStatus\Creator\CreatorUrl
+    organizationsUrl:
+      className: GitHub\CommitStatus\Creator\CreatorOrganizationsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    reposUrl:
+      className: GitHub\CommitStatus\Creator\CreatorReposUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    eventsUrl:
+      className: GitHub\CommitStatus\Creator\CreatorEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    receivedEventsUrl:
+      className: GitHub\CommitStatus\Creator\CreatorReceivedEventsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    type:
+      className: GitHub\CommitStatus\Creator\CreatorType
+      nullable: false
+      hasDefault: false
+      default: null
+    siteAdmin:
+      className: GitHub\CommitStatus\Creator\CreatorSiteAdmin
       nullable: false
       hasDefault: false
       default: null

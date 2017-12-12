@@ -10,13 +10,13 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    pull:
-      className: GitHub\Repo\Permissions\PermissionsPull
+    push:
+      className: GitHub\Repo\Permissions\PermissionsPush
       nullable: false
       hasDefault: false
       default: null
-    push:
-      className: GitHub\Repo\Permissions\PermissionsPush
+    pull:
+      className: GitHub\Repo\Permissions\PermissionsPull
       nullable: false
       hasDefault: false
       default: null

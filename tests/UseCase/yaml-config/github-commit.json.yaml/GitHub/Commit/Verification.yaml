@@ -5,13 +5,13 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    reason:
-      className: GitHub\Commit\Verification\VerificationReason
+    verified:
+      className: GitHub\Commit\Verification\VerificationVerified
       nullable: false
       hasDefault: false
       default: null
-    payload:
-      className: GitHub\Commit\Verification\VerificationPayload
+    reason:
+      className: GitHub\Commit\Verification\VerificationReason
       nullable: false
       hasDefault: false
       default: null
@@ -20,8 +20,8 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    verified:
-      className: GitHub\Commit\Verification\VerificationVerified
+    payload:
+      className: GitHub\Commit\Verification\VerificationPayload
       nullable: false
       hasDefault: false
       default: null

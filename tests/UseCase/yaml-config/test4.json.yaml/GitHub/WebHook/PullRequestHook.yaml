@@ -10,13 +10,13 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    number:
-      className: GitHub\WebHook\PullRequestHook\PullRequestHookNumber
+    installation:
+      className: GitHub\WebHook\PullRequestHook\Installation
       nullable: false
       hasDefault: false
       default: null
-    installation:
-      className: GitHub\WebHook\PullRequestHook\Installation
+    number:
+      className: GitHub\WebHook\PullRequestHook\PullRequestHookNumber
       nullable: false
       hasDefault: false
       default: null

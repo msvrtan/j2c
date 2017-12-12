@@ -1,7 +1,6 @@
 key: Branches
 className: GitHub\FFF\Branches
 inputKey: ''
-sorting: 16
 fields:
   name:
     key: name
@@ -10,14 +9,12 @@ fields:
     inputKey: '["name"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 30
   commit:
     key: Commit
     propertyName: commit
     className: GitHub\FFF\Branches\Commit
     inputKey: '["commit"]'
     suggestions: {  }
-    sorting: 16
     fields:
       sha:
         key: sha
@@ -26,7 +23,6 @@ fields:
         inputKey: '["commit"]["sha"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 30
       url:
         key: url
         propertyName: url
@@ -35,4 +31,3 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 10

@@ -5,13 +5,13 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    html:
-      className: GitHub\Branch\Links\LinksHtml
+    self:
+      className: GitHub\Branch\Links\LinksSelf
       nullable: false
       hasDefault: false
       default: null
-    self:
-      className: GitHub\Branch\Links\LinksSelf
+    html:
+      className: GitHub\Branch\Links\LinksHtml
       nullable: false
       hasDefault: false
       default: null

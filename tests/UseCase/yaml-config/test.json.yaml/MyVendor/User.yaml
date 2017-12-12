@@ -5,8 +5,8 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    id:
-      className: MyVendor\User\UserId
+    createdAt:
+      className: MyVendor\User\UserCreatedAt
       nullable: false
       hasDefault: false
       default: null
@@ -15,13 +15,13 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    name:
-      className: MyVendor\User\UserName
+    id:
+      className: MyVendor\User\UserId
       nullable: false
       hasDefault: false
       default: null
-    createdAt:
-      className: MyVendor\User\UserCreatedAt
+    name:
+      className: MyVendor\User\UserName
       nullable: false
       hasDefault: false
       default: null

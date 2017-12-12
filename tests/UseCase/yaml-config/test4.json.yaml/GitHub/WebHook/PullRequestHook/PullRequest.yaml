@@ -5,8 +5,8 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    id:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestId
+    links:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Links
       nullable: false
       hasDefault: false
       default: null
@@ -15,8 +15,23 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    assignee:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestAssignee
+      nullable: false
+      hasDefault: false
+      default: null
+    assignees:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Assignees
+      nullable: false
+      hasDefault: false
+      default: null
     authorAssociation:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestAuthorAssociation
+      nullable: false
+      hasDefault: false
+      default: null
+    base:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base
       nullable: false
       hasDefault: false
       default: null
@@ -30,8 +45,18 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    closedAt:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestClosedAt
+      nullable: false
+      hasDefault: false
+      default: null
     comments:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestComments
+      nullable: false
+      hasDefault: false
+      default: null
+    commentsUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestCommentsUrl
       nullable: false
       hasDefault: false
       default: null
@@ -40,43 +65,43 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    commitsUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestCommitsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    createdAt:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestCreatedAt
+      nullable: false
+      hasDefault: false
+      default: null
     deletions:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestDeletions
       nullable: false
       hasDefault: false
       default: null
-    mergeableState:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergeableState
+    diffUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestDiffUrl
       nullable: false
       hasDefault: false
       default: null
-    number:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestNumber
+    head:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head
       nullable: false
       hasDefault: false
       default: null
-    reviewComments:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestReviewComments
+    htmlUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestHtmlUrl
       nullable: false
       hasDefault: false
       default: null
-    state:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestState
+    id:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestId
       nullable: false
       hasDefault: false
       default: null
-    title:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestTitle
-      nullable: false
-      hasDefault: false
-      default: null
-    assignee:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestAssignee
-      nullable: false
-      hasDefault: false
-      default: null
-    closedAt:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestClosedAt
+    issueUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestIssueUrl
       nullable: false
       hasDefault: false
       default: null
@@ -100,6 +125,11 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    mergeableState:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergeableState
+      nullable: false
+      hasDefault: false
+      default: null
     merged:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMerged
       nullable: false
@@ -120,63 +150,8 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    rebaseable:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestRebaseable
-      nullable: false
-      hasDefault: false
-      default: null
-    assignees:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Assignees
-      nullable: false
-      hasDefault: false
-      default: null
-    base:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Base
-      nullable: false
-      hasDefault: false
-      default: null
-    head:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head
-      nullable: false
-      hasDefault: false
-      default: null
-    links:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Links
-      nullable: false
-      hasDefault: false
-      default: null
-    requestedReviewers:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\RequestedReviewers
-      nullable: false
-      hasDefault: false
-      default: null
-    user:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\User
-      nullable: false
-      hasDefault: false
-      default: null
-    commentsUrl:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestCommentsUrl
-      nullable: false
-      hasDefault: false
-      default: null
-    commitsUrl:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestCommitsUrl
-      nullable: false
-      hasDefault: false
-      default: null
-    diffUrl:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestDiffUrl
-      nullable: false
-      hasDefault: false
-      default: null
-    htmlUrl:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestHtmlUrl
-      nullable: false
-      hasDefault: false
-      default: null
-    issueUrl:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestIssueUrl
+    number:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestNumber
       nullable: false
       hasDefault: false
       default: null
@@ -185,8 +160,23 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    rebaseable:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestRebaseable
+      nullable: false
+      hasDefault: false
+      default: null
+    requestedReviewers:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\RequestedReviewers
+      nullable: false
+      hasDefault: false
+      default: null
     reviewCommentUrl:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestReviewCommentUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    reviewComments:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestReviewComments
       nullable: false
       hasDefault: false
       default: null
@@ -195,8 +185,23 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    state:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestState
+      nullable: false
+      hasDefault: false
+      default: null
     statusesUrl:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestStatusesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    title:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestTitle
+      nullable: false
+      hasDefault: false
+      default: null
+    updatedAt:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestUpdatedAt
       nullable: false
       hasDefault: false
       default: null
@@ -205,13 +210,8 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    createdAt:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestCreatedAt
-      nullable: false
-      hasDefault: false
-      default: null
-    updatedAt:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestUpdatedAt
+    user:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\User
       nullable: false
       hasDefault: false
       default: null
