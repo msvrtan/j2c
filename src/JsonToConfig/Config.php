@@ -72,7 +72,6 @@ class Config
             'key'       => $this->baseName,
             'className' => $this->namespace.'\\'.$this->baseName,
             'inputKey'  => $input,
-            'sorting'   => 16,
         ];
 
         foreach ($this->elements as $key => $list) {
@@ -87,13 +86,9 @@ class Config
                 'className'    => $elementNamespace.'\\'.$className,
                 'inputKey'     => $input.'["'.$key.'"]',
                 'suggestions'  => [],
-                'sorting'      => 0,
             ];
             foreach ($list as $item) {
                 $resultItem['suggestions'][] = get_class($item);
-                if (0 === $resultItem['sorting']) {
-                    $resultItem['sorting'] = $item->getSorting();
-                }
             }
             if (true === array_key_exists($key, $this->configs)) {
                 $resultItem = array_merge($resultItem, $this->configs[$key]->toArray($input.'["'.$key.'"]'));
@@ -108,24 +103,6 @@ class Config
             }
 
             $result['fields'][$key] = $resultItem;
-        }
-
-        if (true === array_key_exists('fields', $result)) {
-            uasort(
-                $result['fields'],
-                function ($first, $second) {
-                    $firstSorting = $first['sorting'];
-                    $secondSorting = $second['sorting'];
-
-                    if ($secondSorting > $firstSorting) {
-                        return 1;
-                    } elseif ($secondSorting < $firstSorting) {
-                        return -1;
-                    }
-
-                    return strcmp($first['key'], $second['key']);
-                }
-            );
         }
 
         return $result;
