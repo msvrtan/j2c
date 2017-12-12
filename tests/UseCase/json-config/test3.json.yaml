@@ -1,6 +1,7 @@
 key: User
 name: User
 namespace: MyVendor
+className: MyVendor\User
 inputKey: ''
 sorting: 16
 fields:
@@ -9,6 +10,7 @@ fields:
     propertyName: id
     name: UserId
     namespace: MyVendor\User
+    className: MyVendor\User\UserId
     inputKey: '["id"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
@@ -19,6 +21,7 @@ fields:
     propertyName: fullName
     name: UserFullName
     namespace: MyVendor\User
+    className: MyVendor\User\UserFullName
     inputKey: '["full_name"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -28,6 +31,7 @@ fields:
     propertyName: name
     name: UserName
     namespace: MyVendor\User
+    className: MyVendor\User\UserName
     inputKey: '["name"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -37,6 +41,7 @@ fields:
     propertyName: address
     name: Address
     namespace: MyVendor\User
+    className: MyVendor\User\Address
     inputKey: '["address"]'
     suggestions: {  }
     sorting: 16
@@ -46,6 +51,7 @@ fields:
         propertyName: streetName
         name: AddressStreetName
         namespace: MyVendor\User\Address
+        className: MyVendor\User\Address\AddressStreetName
         inputKey: '["address"]["streetName"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -55,6 +61,7 @@ fields:
         propertyName: streetNumber
         name: AddressStreetNumber
         namespace: MyVendor\User\Address
+        className: MyVendor\User\Address\AddressStreetNumber
         inputKey: '["address"]["street_number"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
@@ -64,6 +71,7 @@ fields:
         propertyName: city
         name: City
         namespace: MyVendor\User\Address
+        className: MyVendor\User\Address\City
         inputKey: '["address"]["city"]'
         suggestions: {  }
         sorting: 16
@@ -73,6 +81,7 @@ fields:
             propertyName: name
             name: CityName
             namespace: MyVendor\User\Address\City
+            className: MyVendor\User\Address\City\CityName
             inputKey: '["address"]["city"]["name"]'
             suggestions:
               - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -82,6 +91,7 @@ fields:
             propertyName: country
             name: Country
             namespace: MyVendor\User\Address\City
+            className: MyVendor\User\Address\City\Country
             inputKey: '["address"]["city"]["country"]'
             suggestions: {  }
             sorting: 16
@@ -91,6 +101,7 @@ fields:
                 propertyName: code
                 name: CountryCode
                 namespace: MyVendor\User\Address\City\Country
+                className: MyVendor\User\Address\City\Country\CountryCode
                 inputKey: '["address"]["city"]["country"]["code"]'
                 suggestions:
                   - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString

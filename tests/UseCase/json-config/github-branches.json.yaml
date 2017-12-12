@@ -1,6 +1,7 @@
 key: Branches
 name: Branches
 namespace: GitHub\FFF
+className: GitHub\FFF\Branches
 inputKey: ''
 sorting: 16
 fields:
@@ -9,6 +10,7 @@ fields:
     propertyName: name
     name: BranchesName
     namespace: GitHub\FFF\Branches
+    className: GitHub\FFF\Branches\BranchesName
     inputKey: '["name"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -18,6 +20,7 @@ fields:
     propertyName: commit
     name: Commit
     namespace: GitHub\FFF\Branches
+    className: GitHub\FFF\Branches\Commit
     inputKey: '["commit"]'
     suggestions: {  }
     sorting: 16
@@ -27,6 +30,7 @@ fields:
         propertyName: sha
         name: CommitSha
         namespace: GitHub\FFF\Branches\Commit
+        className: GitHub\FFF\Branches\Commit\CommitSha
         inputKey: '["commit"]["sha"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -36,6 +40,7 @@ fields:
         propertyName: url
         name: CommitUrl
         namespace: GitHub\FFF\Branches\Commit
+        className: GitHub\FFF\Branches\Commit\CommitUrl
         inputKey: '["commit"]["url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url

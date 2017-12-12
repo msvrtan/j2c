@@ -1,6 +1,7 @@
 key: User
 name: User
 namespace: MyVendor
+className: MyVendor\User
 inputKey: ''
 sorting: 16
 fields:
@@ -9,6 +10,7 @@ fields:
     propertyName: id
     name: UserId
     namespace: MyVendor\User
+    className: MyVendor\User\UserId
     inputKey: '["id"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
@@ -19,6 +21,7 @@ fields:
     propertyName: fullName
     name: UserFullName
     namespace: MyVendor\User
+    className: MyVendor\User\UserFullName
     inputKey: '["full_name"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -28,6 +31,7 @@ fields:
     propertyName: name
     name: UserName
     namespace: MyVendor\User
+    className: MyVendor\User\UserName
     inputKey: '["name"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -37,6 +41,7 @@ fields:
     propertyName: createdAt
     name: UserCreatedAt
     namespace: MyVendor\User
+    className: MyVendor\User\UserCreatedAt
     inputKey: '["created_at"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
