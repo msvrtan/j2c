@@ -70,8 +70,6 @@ class Config
     {
         $result = [
             'key'       => $this->baseName,
-            'name'      => $this->baseName,
-            'namespace' => $this->namespace,
             'className' => $this->namespace.'\\'.$this->baseName,
             'inputKey'  => $input,
             'sorting'   => 16,
@@ -86,8 +84,6 @@ class Config
             $resultItem = [
                 'key'          => $key,
                 'propertyName' => lcfirst($name),
-                'name'         => $className,
-                'namespace'    => $elementNamespace,
                 'className'    => $elementNamespace.'\\'.$className,
                 'inputKey'     => $input.'["'.$key.'"]',
                 'suggestions'  => [],
