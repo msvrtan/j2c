@@ -24,9 +24,4 @@ class Url implements ValueObject
     {
         return ValueObject::NORMAL;
     }
-
-    public function getSorting(): int
-    {
-        return 10;
-    }
 }

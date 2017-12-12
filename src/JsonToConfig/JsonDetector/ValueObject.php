@@ -12,6 +12,4 @@ interface ValueObject
     const HIGH   = 70;
 
     public function getPriority(): int;
-
-    public function getSorting(): int;
 }
