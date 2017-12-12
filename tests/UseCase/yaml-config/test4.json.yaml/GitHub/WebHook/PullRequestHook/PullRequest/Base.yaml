@@ -15,13 +15,13 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    sha:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\BaseSha
+    repo:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
       nullable: false
       hasDefault: false
       default: null
-    repo:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\Repo
+    sha:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Base\BaseSha
       nullable: false
       hasDefault: false
       default: null

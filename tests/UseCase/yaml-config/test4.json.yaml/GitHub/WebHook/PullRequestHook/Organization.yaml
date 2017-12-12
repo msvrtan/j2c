@@ -5,23 +5,13 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    id:
-      className: GitHub\WebHook\PullRequestHook\Organization\OrganizationId
+    avatarUrl:
+      className: GitHub\WebHook\PullRequestHook\Organization\OrganizationAvatarUrl
       nullable: false
       hasDefault: false
       default: null
     description:
       className: GitHub\WebHook\PullRequestHook\Organization\OrganizationDescription
-      nullable: false
-      hasDefault: false
-      default: null
-    login:
-      className: GitHub\WebHook\PullRequestHook\Organization\OrganizationLogin
-      nullable: false
-      hasDefault: false
-      default: null
-    avatarUrl:
-      className: GitHub\WebHook\PullRequestHook\Organization\OrganizationAvatarUrl
       nullable: false
       hasDefault: false
       default: null
@@ -35,8 +25,18 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    id:
+      className: GitHub\WebHook\PullRequestHook\Organization\OrganizationId
+      nullable: false
+      hasDefault: false
+      default: null
     issuesUrl:
       className: GitHub\WebHook\PullRequestHook\Organization\OrganizationIssuesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    login:
+      className: GitHub\WebHook\PullRequestHook\Organization\OrganizationLogin
       nullable: false
       hasDefault: false
       default: null

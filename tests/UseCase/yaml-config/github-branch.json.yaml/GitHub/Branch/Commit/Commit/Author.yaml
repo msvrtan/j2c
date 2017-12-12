@@ -5,13 +5,13 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    email:
-      className: GitHub\Branch\Commit\Commit\Author\AuthorEmail
+    name:
+      className: GitHub\Branch\Commit\Commit\Author\AuthorName
       nullable: false
       hasDefault: false
       default: null
-    name:
-      className: GitHub\Branch\Commit\Commit\Author\AuthorName
+    email:
+      className: GitHub\Branch\Commit\Commit\Author\AuthorEmail
       nullable: false
       hasDefault: false
       default: null

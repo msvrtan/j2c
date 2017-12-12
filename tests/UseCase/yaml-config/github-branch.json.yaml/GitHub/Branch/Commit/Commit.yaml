@@ -5,16 +5,6 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    commentCount:
-      className: GitHub\Branch\Commit\Commit\CommitCommentCount
-      nullable: false
-      hasDefault: false
-      default: null
-    message:
-      className: GitHub\Branch\Commit\Commit\CommitMessage
-      nullable: false
-      hasDefault: false
-      default: null
     author:
       className: GitHub\Branch\Commit\Commit\Author
       nullable: false
@@ -25,18 +15,28 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    message:
+      className: GitHub\Branch\Commit\Commit\CommitMessage
+      nullable: false
+      hasDefault: false
+      default: null
     tree:
       className: GitHub\Branch\Commit\Commit\Tree
       nullable: false
       hasDefault: false
       default: null
-    verification:
-      className: GitHub\Branch\Commit\Commit\Verification
+    url:
+      className: GitHub\Branch\Commit\Commit\CommitUrl
       nullable: false
       hasDefault: false
       default: null
-    url:
-      className: GitHub\Branch\Commit\Commit\CommitUrl
+    commentCount:
+      className: GitHub\Branch\Commit\Commit\CommitCommentCount
+      nullable: false
+      hasDefault: false
+      default: null
+    verification:
+      className: GitHub\Branch\Commit\Commit\Verification
       nullable: false
       hasDefault: false
       default: null

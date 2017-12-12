@@ -5,18 +5,13 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
+    url:
+      className: GitHub\CommitStatus\CommitStatusUrl
+      nullable: false
+      hasDefault: false
+      default: null
     id:
       className: GitHub\CommitStatus\CommitStatusId
-      nullable: false
-      hasDefault: false
-      default: null
-    context:
-      className: GitHub\CommitStatus\CommitStatusContext
-      nullable: false
-      hasDefault: false
-      default: null
-    description:
-      className: GitHub\CommitStatus\CommitStatusDescription
       nullable: false
       hasDefault: false
       default: null
@@ -25,8 +20,8 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    creator:
-      className: GitHub\CommitStatus\Creator
+    description:
+      className: GitHub\CommitStatus\CommitStatusDescription
       nullable: false
       hasDefault: false
       default: null
@@ -35,8 +30,8 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    url:
-      className: GitHub\CommitStatus\CommitStatusUrl
+    context:
+      className: GitHub\CommitStatus\CommitStatusContext
       nullable: false
       hasDefault: false
       default: null
@@ -47,6 +42,11 @@ definition:
       default: null
     updatedAt:
       className: GitHub\CommitStatus\CommitStatusUpdatedAt
+      nullable: false
+      hasDefault: false
+      default: null
+    creator:
+      className: GitHub\CommitStatus\Creator
       nullable: false
       hasDefault: false
       default: null

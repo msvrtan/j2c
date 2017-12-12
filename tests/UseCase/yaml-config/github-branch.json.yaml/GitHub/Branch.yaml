@@ -10,11 +10,6 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    protected:
-      className: GitHub\Branch\BranchProtected
-      nullable: false
-      hasDefault: false
-      default: null
     commit:
       className: GitHub\Branch\Commit
       nullable: false
@@ -22,6 +17,11 @@ definition:
       default: null
     links:
       className: GitHub\Branch\Links
+      nullable: false
+      hasDefault: false
+      default: null
+    protected:
+      className: GitHub\Branch\BranchProtected
       nullable: false
       hasDefault: false
       default: null

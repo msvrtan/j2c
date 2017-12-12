@@ -5,143 +5,13 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    id:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoId
-      nullable: false
-      hasDefault: false
-      default: null
-    defaultBranch:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoDefaultBranch
-      nullable: false
-      hasDefault: false
-      default: null
-    description:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoDescription
-      nullable: false
-      hasDefault: false
-      default: null
-    forks:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoForks
-      nullable: false
-      hasDefault: false
-      default: null
-    forksCount:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoForksCount
-      nullable: false
-      hasDefault: false
-      default: null
-    fullName:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoFullName
-      nullable: false
-      hasDefault: false
-      default: null
-    language:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoLanguage
-      nullable: false
-      hasDefault: false
-      default: null
-    name:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoName
-      nullable: false
-      hasDefault: false
-      default: null
-    openIssues:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoOpenIssues
-      nullable: false
-      hasDefault: false
-      default: null
-    openIssuesCount:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoOpenIssuesCount
-      nullable: false
-      hasDefault: false
-      default: null
-    size:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoSize
-      nullable: false
-      hasDefault: false
-      default: null
-    sshUrl:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoSshUrl
-      nullable: false
-      hasDefault: false
-      default: null
-    stargazersCount:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoStargazersCount
-      nullable: false
-      hasDefault: false
-      default: null
-    watchers:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoWatchers
-      nullable: false
-      hasDefault: false
-      default: null
-    watchersCount:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoWatchersCount
+    archiveUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoArchiveUrl
       nullable: false
       hasDefault: false
       default: null
     archived:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoArchived
-      nullable: false
-      hasDefault: false
-      default: null
-    fork:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoFork
-      nullable: false
-      hasDefault: false
-      default: null
-    hasDownloads:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHasDownloads
-      nullable: false
-      hasDefault: false
-      default: null
-    hasIssues:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHasIssues
-      nullable: false
-      hasDefault: false
-      default: null
-    hasPages:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHasPages
-      nullable: false
-      hasDefault: false
-      default: null
-    hasProjects:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHasProjects
-      nullable: false
-      hasDefault: false
-      default: null
-    hasWiki:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHasWiki
-      nullable: false
-      hasDefault: false
-      default: null
-    homepage:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHomepage
-      nullable: false
-      hasDefault: false
-      default: null
-    license:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoLicense
-      nullable: false
-      hasDefault: false
-      default: null
-    mirrorUrl:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoMirrorUrl
-      nullable: false
-      hasDefault: false
-      default: null
-    private:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoPrivate
-      nullable: false
-      hasDefault: false
-      default: null
-    owner:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
-      nullable: false
-      hasDefault: false
-      default: null
-    archiveUrl:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoArchiveUrl
       nullable: false
       hasDefault: false
       default: null
@@ -195,8 +65,23 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    createdAt:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoCreatedAt
+      nullable: false
+      hasDefault: false
+      default: null
+    defaultBranch:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoDefaultBranch
+      nullable: false
+      hasDefault: false
+      default: null
     deploymentsUrl:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoDeploymentsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    description:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoDescription
       nullable: false
       hasDefault: false
       default: null
@@ -210,8 +95,28 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    fork:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoFork
+      nullable: false
+      hasDefault: false
+      default: null
+    forks:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoForks
+      nullable: false
+      hasDefault: false
+      default: null
+    forksCount:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoForksCount
+      nullable: false
+      hasDefault: false
+      default: null
     forksUrl:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoForksUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    fullName:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoFullName
       nullable: false
       hasDefault: false
       default: null
@@ -235,6 +140,36 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    hasDownloads:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHasDownloads
+      nullable: false
+      hasDefault: false
+      default: null
+    hasIssues:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHasIssues
+      nullable: false
+      hasDefault: false
+      default: null
+    hasPages:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHasPages
+      nullable: false
+      hasDefault: false
+      default: null
+    hasProjects:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHasProjects
+      nullable: false
+      hasDefault: false
+      default: null
+    hasWiki:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHasWiki
+      nullable: false
+      hasDefault: false
+      default: null
+    homepage:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHomepage
+      nullable: false
+      hasDefault: false
+      default: null
     hooksUrl:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHooksUrl
       nullable: false
@@ -242,6 +177,11 @@ definition:
       default: null
     htmlUrl:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    id:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoId
       nullable: false
       hasDefault: false
       default: null
@@ -270,8 +210,18 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    language:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoLanguage
+      nullable: false
+      hasDefault: false
+      default: null
     languagesUrl:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoLanguagesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    license:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoLicense
       nullable: false
       hasDefault: false
       default: null
@@ -285,8 +235,38 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    mirrorUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoMirrorUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    name:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoName
+      nullable: false
+      hasDefault: false
+      default: null
     notificationsUrl:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoNotificationsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    openIssues:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoOpenIssues
+      nullable: false
+      hasDefault: false
+      default: null
+    openIssuesCount:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoOpenIssuesCount
+      nullable: false
+      hasDefault: false
+      default: null
+    owner:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\Owner
+      nullable: false
+      hasDefault: false
+      default: null
+    private:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoPrivate
       nullable: false
       hasDefault: false
       default: null
@@ -295,8 +275,28 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    pushedAt:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoPushedAt
+      nullable: false
+      hasDefault: false
+      default: null
     releasesUrl:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoReleasesUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    size:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoSize
+      nullable: false
+      hasDefault: false
+      default: null
+    sshUrl:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoSshUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    stargazersCount:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoStargazersCount
       nullable: false
       hasDefault: false
       default: null
@@ -340,23 +340,23 @@ definition:
       nullable: false
       hasDefault: false
       default: null
+    updatedAt:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoUpdatedAt
+      nullable: false
+      hasDefault: false
+      default: null
     url:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoUrl
       nullable: false
       hasDefault: false
       default: null
-    createdAt:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoCreatedAt
+    watchers:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoWatchers
       nullable: false
       hasDefault: false
       default: null
-    pushedAt:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoPushedAt
-      nullable: false
-      hasDefault: false
-      default: null
-    updatedAt:
-      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoUpdatedAt
+    watchersCount:
+      className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoWatchersCount
       nullable: false
       hasDefault: false
       default: null

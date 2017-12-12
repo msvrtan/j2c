@@ -1,40 +1,13 @@
 key: User
 className: MyVendor\User
 inputKey: ''
-sorting: 16
 fields:
-  id:
-    key: id
-    propertyName: id
-    className: MyVendor\User\UserId
-    inputKey: '["id"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-    sorting: 200
-  full_name:
-    key: full_name
-    propertyName: fullName
-    className: MyVendor\User\UserFullName
-    inputKey: '["full_name"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 30
-  name:
-    key: name
-    propertyName: name
-    className: MyVendor\User\UserName
-    inputKey: '["name"]'
-    suggestions:
-      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-    sorting: 30
   address:
     key: Address
     propertyName: address
     className: MyVendor\User\Address
     inputKey: '["address"]'
     suggestions: {  }
-    sorting: 16
     fields:
       streetName:
         key: streetName
@@ -43,7 +16,6 @@ fields:
         inputKey: '["address"]["streetName"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
-        sorting: 30
       street_number:
         key: street_number
         propertyName: streetNumber
@@ -51,4 +23,25 @@ fields:
         inputKey: '["address"]["street_number"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
-        sorting: 30
+  full_name:
+    key: full_name
+    propertyName: fullName
+    className: MyVendor\User\UserFullName
+    inputKey: '["full_name"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  id:
+    key: id
+    propertyName: id
+    className: MyVendor\User\UserId
+    inputKey: '["id"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  name:
+    key: name
+    propertyName: name
+    className: MyVendor\User\UserName
+    inputKey: '["name"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString

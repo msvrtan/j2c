@@ -10,13 +10,28 @@ definition:
       nullable: false
       hasDefault: false
       default: null
-    author:
-      className: GitHub\Branch\Commit\Author
+    commit:
+      className: GitHub\Branch\Commit\Commit
       nullable: false
       hasDefault: false
       default: null
-    commit:
-      className: GitHub\Branch\Commit\Commit
+    url:
+      className: GitHub\Branch\Commit\CommitUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: GitHub\Branch\Commit\CommitHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    commentsUrl:
+      className: GitHub\Branch\Commit\CommitCommentsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    author:
+      className: GitHub\Branch\Commit\Author
       nullable: false
       hasDefault: false
       default: null
@@ -27,21 +42,6 @@ definition:
       default: null
     parents:
       className: GitHub\Branch\Commit\Parents
-      nullable: false
-      hasDefault: false
-      default: null
-    commentsUrl:
-      className: GitHub\Branch\Commit\CommitCommentsUrl
-      nullable: false
-      hasDefault: false
-      default: null
-    htmlUrl:
-      className: GitHub\Branch\Commit\CommitHtmlUrl
-      nullable: false
-      hasDefault: false
-      default: null
-    url:
-      className: GitHub\Branch\Commit\CommitUrl
       nullable: false
       hasDefault: false
       default: null
