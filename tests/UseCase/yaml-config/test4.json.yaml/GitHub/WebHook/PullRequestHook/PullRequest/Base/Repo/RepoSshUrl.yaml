@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repoSshUrl:
+    sshUrl:
       className: string
       nullable: false
       hasDefault: false

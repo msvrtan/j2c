@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repoGitRefsUrl:
+    gitRefsUrl:
       className: string
       nullable: false
       hasDefault: false

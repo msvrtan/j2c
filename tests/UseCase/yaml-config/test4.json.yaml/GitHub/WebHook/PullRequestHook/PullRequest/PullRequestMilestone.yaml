@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    pullRequestMilestone:
+    milestone:
       className: string
       nullable: false
       hasDefault: false

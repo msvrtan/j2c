@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    senderSiteAdmin:
+    siteAdmin:
       className: bool
       nullable: false
       hasDefault: false

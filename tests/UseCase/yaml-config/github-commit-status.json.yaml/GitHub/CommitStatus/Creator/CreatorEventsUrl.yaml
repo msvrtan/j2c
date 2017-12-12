@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    creatorEventsUrl:
+    eventsUrl:
       className: string
       nullable: false
       hasDefault: false

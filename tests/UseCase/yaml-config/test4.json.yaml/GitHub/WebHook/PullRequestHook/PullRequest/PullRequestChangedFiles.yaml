@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    pullRequestChangedFiles:
+    changedFiles:
       className: int
       nullable: false
       hasDefault: false

@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    committerReposUrl:
+    reposUrl:
       className: string
       nullable: false
       hasDefault: false

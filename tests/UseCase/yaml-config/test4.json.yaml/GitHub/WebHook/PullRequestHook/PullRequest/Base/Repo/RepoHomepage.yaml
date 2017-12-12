@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repoHomepage:
+    homepage:
       className: string
       nullable: false
       hasDefault: false

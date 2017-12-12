@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repositoryWatchers:
+    watchers:
       className: int
       nullable: false
       hasDefault: false

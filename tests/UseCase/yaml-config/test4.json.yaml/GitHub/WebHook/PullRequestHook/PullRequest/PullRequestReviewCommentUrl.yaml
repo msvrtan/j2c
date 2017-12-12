@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    pullRequestReviewCommentUrl:
+    reviewCommentUrl:
       className: string
       nullable: false
       hasDefault: false

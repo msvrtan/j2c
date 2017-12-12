@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    treeSha:
+    sha:
       className: string
       nullable: false
       hasDefault: false

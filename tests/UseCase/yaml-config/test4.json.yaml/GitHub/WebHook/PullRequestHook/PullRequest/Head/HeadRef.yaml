@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    headRef:
+    ref:
       className: string
       nullable: false
       hasDefault: false

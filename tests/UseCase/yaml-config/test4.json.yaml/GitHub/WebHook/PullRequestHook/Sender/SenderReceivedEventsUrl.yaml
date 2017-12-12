@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    senderReceivedEventsUrl:
+    receivedEventsUrl:
       className: string
       nullable: false
       hasDefault: false

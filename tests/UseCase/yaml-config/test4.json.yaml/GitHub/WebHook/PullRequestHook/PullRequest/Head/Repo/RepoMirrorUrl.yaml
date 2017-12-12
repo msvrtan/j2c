@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repoMirrorUrl:
+    mirrorUrl:
       className: string
       nullable: false
       hasDefault: false

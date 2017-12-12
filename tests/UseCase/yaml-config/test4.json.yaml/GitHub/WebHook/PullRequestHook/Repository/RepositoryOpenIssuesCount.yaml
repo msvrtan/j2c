@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repositoryOpenIssuesCount:
+    openIssuesCount:
       className: int
       nullable: false
       hasDefault: false

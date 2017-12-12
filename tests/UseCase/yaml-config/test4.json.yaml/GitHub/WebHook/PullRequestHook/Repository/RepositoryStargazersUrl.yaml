@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repositoryStargazersUrl:
+    stargazersUrl:
       className: string
       nullable: false
       hasDefault: false

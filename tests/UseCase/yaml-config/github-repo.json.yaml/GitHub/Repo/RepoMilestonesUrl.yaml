@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repoMilestonesUrl:
+    milestonesUrl:
       className: string
       nullable: false
       hasDefault: false

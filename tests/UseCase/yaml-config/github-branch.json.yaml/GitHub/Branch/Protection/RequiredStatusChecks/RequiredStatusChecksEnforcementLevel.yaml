@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    requiredStatusChecksEnforcementLevel:
+    enforcementLevel:
       className: string
       nullable: false
       hasDefault: false

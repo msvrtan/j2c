@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    pullRequestMaintainerCanModify:
+    maintainerCanModify:
       className: bool
       nullable: false
       hasDefault: false

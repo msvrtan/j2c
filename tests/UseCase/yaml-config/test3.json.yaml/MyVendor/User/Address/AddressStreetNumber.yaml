@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    addressStreetNumber:
+    streetNumber:
       className: int
       nullable: false
       hasDefault: false

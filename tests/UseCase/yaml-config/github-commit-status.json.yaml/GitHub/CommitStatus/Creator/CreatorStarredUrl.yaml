@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    creatorStarredUrl:
+    starredUrl:
       className: string
       nullable: false
       hasDefault: false

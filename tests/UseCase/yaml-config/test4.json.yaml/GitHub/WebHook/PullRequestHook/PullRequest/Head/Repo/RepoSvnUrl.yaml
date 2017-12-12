@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repoSvnUrl:
+    svnUrl:
       className: string
       nullable: false
       hasDefault: false

@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repositorySubscriptionUrl:
+    subscriptionUrl:
       className: string
       nullable: false
       hasDefault: false

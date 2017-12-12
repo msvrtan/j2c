@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repositoryStargazersCount:
+    stargazersCount:
       className: int
       nullable: false
       hasDefault: false

@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    ownerAvatarUrl:
+    avatarUrl:
       className: string
       nullable: false
       hasDefault: false

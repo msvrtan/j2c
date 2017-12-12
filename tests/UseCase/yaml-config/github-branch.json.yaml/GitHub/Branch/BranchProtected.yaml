@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    branchProtected:
+    protected:
       className: bool
       nullable: false
       hasDefault: false

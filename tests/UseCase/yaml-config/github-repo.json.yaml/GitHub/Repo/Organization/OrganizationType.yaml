@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    organizationType:
+    type:
       className: string
       nullable: false
       hasDefault: false

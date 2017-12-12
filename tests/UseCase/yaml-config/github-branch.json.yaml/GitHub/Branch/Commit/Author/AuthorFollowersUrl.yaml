@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    authorFollowersUrl:
+    followersUrl:
       className: string
       nullable: false
       hasDefault: false

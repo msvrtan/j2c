@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    pullRequestMergeCommitSha:
+    mergeCommitSha:
       className: string
       nullable: false
       hasDefault: false

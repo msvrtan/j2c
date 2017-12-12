@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    pullRequestBody:
+    body:
       className: string
       nullable: false
       hasDefault: false

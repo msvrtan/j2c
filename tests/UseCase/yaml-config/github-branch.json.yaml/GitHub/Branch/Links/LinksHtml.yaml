@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    linksHtml:
+    html:
       className: string
       nullable: false
       hasDefault: false

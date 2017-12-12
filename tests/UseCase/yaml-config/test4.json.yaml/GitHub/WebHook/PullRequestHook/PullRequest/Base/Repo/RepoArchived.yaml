@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repoArchived:
+    archived:
       className: bool
       nullable: false
       hasDefault: false
