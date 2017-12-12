@@ -1,0 +1,32 @@
+definition:
+  type: SimpleEntity
+  className: DevboardLib\GitHub\Branch
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    name:
+      className: DevboardLib\GitHub\Branch\BranchName
+      nullable: false
+      hasDefault: false
+      default: null
+    commit:
+      className: DevboardLib\GitHub\Branch\Commit
+      nullable: false
+      hasDefault: false
+      default: null
+    protected:
+      className: DevboardLib\GitHub\Branch\BranchProtected
+      nullable: false
+      hasDefault: false
+      default: null
+    protection:
+      className: DevboardLib\GitHub\Branch\Protection
+      nullable: false
+      hasDefault: false
+      default: null
+    protectionUrl:
+      className: DevboardLib\GitHub\Branch\BranchProtectionUrl
+      nullable: false
+      hasDefault: false
+      default: null

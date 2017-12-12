@@ -1,0 +1,62 @@
+definition:
+  type: SimpleEntity
+  className: DevboardLib\GitHub\GitHubCommit
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    sha:
+      className: DevboardLib\GitHub\Commit\CommitSha
+      nullable: false
+      hasDefault: false
+      default: null
+    author:
+      className: DevboardLib\GitHub\Commit\CommitAuthor
+      nullable: false
+      hasDefault: false
+      default: null
+    committer:
+      className: DevboardLib\GitHub\Commit\CommitCommitter
+      nullable: false
+      hasDefault: false
+      default: null
+    message:
+      className: DevboardLib\GitHub\Commit\CommitMessage
+      nullable: false
+      hasDefault: false
+      default: null
+    tree:
+      className: DevboardLib\GitHub\Commit\CommitTree
+      nullable: false
+      hasDefault: false
+      default: null
+    commentCount:
+      className: DevboardLib\GitHub\Commit\CommitCommentCount
+      nullable: false
+      hasDefault: false
+      default: null
+    verification:
+      className: DevboardLib\GitHub\Commit\CommitVerification
+      nullable: false
+      hasDefault: false
+      default: null
+    apiUrl:
+      className: DevboardLib\GitHub\Commit\CommitApiUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: DevboardLib\GitHub\Commit\CommitHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    commentsUrl:
+      className: DevboardLib\GitHub\Commit\CommitCommentsUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    parents:
+      className: DevboardLib\GitHub\Commit\CommitParentCollection
+      nullable: false
+      hasDefault: false
+      default: null

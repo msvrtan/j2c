@@ -17,7 +17,7 @@ definition:
       default: null
     assignee:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestAssignee
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     assignees:
@@ -47,7 +47,7 @@ definition:
       default: null
     closedAt:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestClosedAt
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     comments:
@@ -117,12 +117,12 @@ definition:
       default: null
     mergeCommitSha:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergeCommitSha
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     mergeable:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergeable
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     mergeableState:
@@ -137,17 +137,17 @@ definition:
       default: null
     mergedAt:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergedAt
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     mergedBy:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMergedBy
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     milestone:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestMilestone
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     number:
@@ -162,7 +162,7 @@ definition:
       default: null
     rebaseable:
       className: GitHub\WebHook\PullRequestHook\PullRequest\PullRequestRebaseable
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     requestedReviewers:

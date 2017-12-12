@@ -280,9 +280,9 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
         collectionOf:
-          className: TODO2
+          className: string
           accessor: getId
-          has: TODO3
+          has: string
       author_association:
         key: author_association
         propertyName: authorAssociation
@@ -2180,9 +2180,9 @@ fields:
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
         collectionOf:
-          className: TODO2
+          className: string
           accessor: getId
-          has: TODO3
+          has: string
       review_comment_url:
         key: review_comment_url
         propertyName: reviewCommentUrl

@@ -503,9 +503,9 @@ fields:
               - JsonToConfig\JsonDetector\ValueObject\Generix\Url
               - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
         collectionOf:
-          className: TODO2
+          className: string
           accessor: getId
-          has: TODO3
+          has: string
   _links:
     key: Links
     propertyName: links
@@ -572,9 +572,9 @@ fields:
             suggestions:
               - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
             collectionOf:
-              className: TODO2
+              className: string
               accessor: getId
-              has: TODO3
+              has: string
   protection_url:
     key: protection_url
     propertyName: protectionUrl
