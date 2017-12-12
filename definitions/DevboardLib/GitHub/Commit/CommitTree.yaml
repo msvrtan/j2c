@@ -1,0 +1,17 @@
+definition:
+  type: SimpleEntity
+  className: DevboardLib\GitHub\Commit\CommitTree
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    sha:
+      className: DevboardLib\GitHub\Commit\Tree\TreeSha
+      nullable: false
+      hasDefault: false
+      default: null
+    url:
+      className: DevboardLib\GitHub\Commit\Tree\TreeUrl
+      nullable: false
+      hasDefault: false
+      default: null

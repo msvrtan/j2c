@@ -1,0 +1,37 @@
+definition:
+  type: SimpleEntity
+  className: DevboardLib\GitHub\Repo\RepoStats
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    networkCount:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null
+    watchersCount:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null
+    stargazersCount:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null
+    subscribersCount:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null
+    openIssuesCount:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null
+    size:
+      className: DevboardLib\GitHub\Repo\RepoStats\RepoSize
+      nullable: false
+      hasDefault: false
+      default: null

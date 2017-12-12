@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: DevboardLib\GitHub\User\UserApiUrl
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    apiUrl:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null
