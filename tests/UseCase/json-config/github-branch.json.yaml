@@ -1,6 +1,4 @@
 key: Branch
-name: Branch
-namespace: GitHub
 className: GitHub\Branch
 inputKey: ''
 sorting: 16
@@ -8,8 +6,6 @@ fields:
   name:
     key: name
     propertyName: name
-    name: BranchName
-    namespace: GitHub\Branch
     className: GitHub\Branch\BranchName
     inputKey: '["name"]'
     suggestions:
@@ -18,8 +14,6 @@ fields:
   protected:
     key: protected
     propertyName: protected
-    name: BranchProtected
-    namespace: GitHub\Branch
     className: GitHub\Branch\BranchProtected
     inputKey: '["protected"]'
     suggestions:
@@ -28,8 +22,6 @@ fields:
   commit:
     key: Commit
     propertyName: commit
-    name: Commit
-    namespace: GitHub\Branch
     className: GitHub\Branch\Commit
     inputKey: '["commit"]'
     suggestions: {  }
@@ -38,8 +30,6 @@ fields:
       sha:
         key: sha
         propertyName: sha
-        name: CommitSha
-        namespace: GitHub\Branch\Commit
         className: GitHub\Branch\Commit\CommitSha
         inputKey: '["commit"]["sha"]'
         suggestions:
@@ -48,8 +38,6 @@ fields:
       author:
         key: Author
         propertyName: author
-        name: Author
-        namespace: GitHub\Branch\Commit
         className: GitHub\Branch\Commit\Author
         inputKey: '["commit"]["author"]'
         suggestions: {  }
@@ -58,8 +46,6 @@ fields:
           id:
             key: id
             propertyName: id
-            name: AuthorId
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorId
             inputKey: '["commit"]["author"]["id"]'
             suggestions:
@@ -69,8 +55,6 @@ fields:
           gravatar_id:
             key: gravatar_id
             propertyName: gravatarId
-            name: AuthorGravatarId
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorGravatarId
             inputKey: '["commit"]["author"]["gravatar_id"]'
             suggestions:
@@ -79,8 +63,6 @@ fields:
           login:
             key: login
             propertyName: login
-            name: AuthorLogin
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorLogin
             inputKey: '["commit"]["author"]["login"]'
             suggestions:
@@ -89,8 +71,6 @@ fields:
           type:
             key: type
             propertyName: type
-            name: AuthorType
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorType
             inputKey: '["commit"]["author"]["type"]'
             suggestions:
@@ -99,8 +79,6 @@ fields:
           site_admin:
             key: site_admin
             propertyName: siteAdmin
-            name: AuthorSiteAdmin
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorSiteAdmin
             inputKey: '["commit"]["author"]["site_admin"]'
             suggestions:
@@ -109,8 +87,6 @@ fields:
           avatar_url:
             key: avatar_url
             propertyName: avatarUrl
-            name: AuthorAvatarUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorAvatarUrl
             inputKey: '["commit"]["author"]["avatar_url"]'
             suggestions:
@@ -120,8 +96,6 @@ fields:
           events_url:
             key: events_url
             propertyName: eventsUrl
-            name: AuthorEventsUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorEventsUrl
             inputKey: '["commit"]["author"]["events_url"]'
             suggestions:
@@ -131,8 +105,6 @@ fields:
           followers_url:
             key: followers_url
             propertyName: followersUrl
-            name: AuthorFollowersUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorFollowersUrl
             inputKey: '["commit"]["author"]["followers_url"]'
             suggestions:
@@ -142,8 +114,6 @@ fields:
           following_url:
             key: following_url
             propertyName: followingUrl
-            name: AuthorFollowingUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorFollowingUrl
             inputKey: '["commit"]["author"]["following_url"]'
             suggestions:
@@ -153,8 +123,6 @@ fields:
           gists_url:
             key: gists_url
             propertyName: gistsUrl
-            name: AuthorGistsUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorGistsUrl
             inputKey: '["commit"]["author"]["gists_url"]'
             suggestions:
@@ -164,8 +132,6 @@ fields:
           html_url:
             key: html_url
             propertyName: htmlUrl
-            name: AuthorHtmlUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorHtmlUrl
             inputKey: '["commit"]["author"]["html_url"]'
             suggestions:
@@ -175,8 +141,6 @@ fields:
           organizations_url:
             key: organizations_url
             propertyName: organizationsUrl
-            name: AuthorOrganizationsUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorOrganizationsUrl
             inputKey: '["commit"]["author"]["organizations_url"]'
             suggestions:
@@ -186,8 +150,6 @@ fields:
           received_events_url:
             key: received_events_url
             propertyName: receivedEventsUrl
-            name: AuthorReceivedEventsUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorReceivedEventsUrl
             inputKey: '["commit"]["author"]["received_events_url"]'
             suggestions:
@@ -197,8 +159,6 @@ fields:
           repos_url:
             key: repos_url
             propertyName: reposUrl
-            name: AuthorReposUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorReposUrl
             inputKey: '["commit"]["author"]["repos_url"]'
             suggestions:
@@ -208,8 +168,6 @@ fields:
           starred_url:
             key: starred_url
             propertyName: starredUrl
-            name: AuthorStarredUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorStarredUrl
             inputKey: '["commit"]["author"]["starred_url"]'
             suggestions:
@@ -219,8 +177,6 @@ fields:
           subscriptions_url:
             key: subscriptions_url
             propertyName: subscriptionsUrl
-            name: AuthorSubscriptionsUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorSubscriptionsUrl
             inputKey: '["commit"]["author"]["subscriptions_url"]'
             suggestions:
@@ -230,8 +186,6 @@ fields:
           url:
             key: url
             propertyName: url
-            name: AuthorUrl
-            namespace: GitHub\Branch\Commit\Author
             className: GitHub\Branch\Commit\Author\AuthorUrl
             inputKey: '["commit"]["author"]["url"]'
             suggestions:
@@ -241,8 +195,6 @@ fields:
       commit:
         key: Commit
         propertyName: commit
-        name: Commit
-        namespace: GitHub\Branch\Commit
         className: GitHub\Branch\Commit\Commit
         inputKey: '["commit"]["commit"]'
         suggestions: {  }
@@ -251,8 +203,6 @@ fields:
           comment_count:
             key: comment_count
             propertyName: commentCount
-            name: CommitCommentCount
-            namespace: GitHub\Branch\Commit\Commit
             className: GitHub\Branch\Commit\Commit\CommitCommentCount
             inputKey: '["commit"]["commit"]["comment_count"]'
             suggestions:
@@ -261,8 +211,6 @@ fields:
           message:
             key: message
             propertyName: message
-            name: CommitMessage
-            namespace: GitHub\Branch\Commit\Commit
             className: GitHub\Branch\Commit\Commit\CommitMessage
             inputKey: '["commit"]["commit"]["message"]'
             suggestions:
@@ -271,8 +219,6 @@ fields:
           author:
             key: Author
             propertyName: author
-            name: Author
-            namespace: GitHub\Branch\Commit\Commit
             className: GitHub\Branch\Commit\Commit\Author
             inputKey: '["commit"]["commit"]["author"]'
             suggestions: {  }
@@ -281,8 +227,6 @@ fields:
               email:
                 key: email
                 propertyName: email
-                name: AuthorEmail
-                namespace: GitHub\Branch\Commit\Commit\Author
                 className: GitHub\Branch\Commit\Commit\Author\AuthorEmail
                 inputKey: '["commit"]["commit"]["author"]["email"]'
                 suggestions:
@@ -292,8 +236,6 @@ fields:
               name:
                 key: name
                 propertyName: name
-                name: AuthorName
-                namespace: GitHub\Branch\Commit\Commit\Author
                 className: GitHub\Branch\Commit\Commit\Author\AuthorName
                 inputKey: '["commit"]["commit"]["author"]["name"]'
                 suggestions:
@@ -302,8 +244,6 @@ fields:
               date:
                 key: date
                 propertyName: date
-                name: AuthorDate
-                namespace: GitHub\Branch\Commit\Commit\Author
                 className: GitHub\Branch\Commit\Commit\Author\AuthorDate
                 inputKey: '["commit"]["commit"]["author"]["date"]'
                 suggestions:
@@ -313,8 +253,6 @@ fields:
           committer:
             key: Committer
             propertyName: committer
-            name: Committer
-            namespace: GitHub\Branch\Commit\Commit
             className: GitHub\Branch\Commit\Commit\Committer
             inputKey: '["commit"]["commit"]["committer"]'
             suggestions: {  }
@@ -323,8 +261,6 @@ fields:
               email:
                 key: email
                 propertyName: email
-                name: CommitterEmail
-                namespace: GitHub\Branch\Commit\Commit\Committer
                 className: GitHub\Branch\Commit\Commit\Committer\CommitterEmail
                 inputKey: '["commit"]["commit"]["committer"]["email"]'
                 suggestions:
@@ -334,8 +270,6 @@ fields:
               name:
                 key: name
                 propertyName: name
-                name: CommitterName
-                namespace: GitHub\Branch\Commit\Commit\Committer
                 className: GitHub\Branch\Commit\Commit\Committer\CommitterName
                 inputKey: '["commit"]["commit"]["committer"]["name"]'
                 suggestions:
@@ -344,8 +278,6 @@ fields:
               date:
                 key: date
                 propertyName: date
-                name: CommitterDate
-                namespace: GitHub\Branch\Commit\Commit\Committer
                 className: GitHub\Branch\Commit\Commit\Committer\CommitterDate
                 inputKey: '["commit"]["commit"]["committer"]["date"]'
                 suggestions:
@@ -355,8 +287,6 @@ fields:
           tree:
             key: Tree
             propertyName: tree
-            name: Tree
-            namespace: GitHub\Branch\Commit\Commit
             className: GitHub\Branch\Commit\Commit\Tree
             inputKey: '["commit"]["commit"]["tree"]'
             suggestions: {  }
@@ -365,8 +295,6 @@ fields:
               sha:
                 key: sha
                 propertyName: sha
-                name: TreeSha
-                namespace: GitHub\Branch\Commit\Commit\Tree
                 className: GitHub\Branch\Commit\Commit\Tree\TreeSha
                 inputKey: '["commit"]["commit"]["tree"]["sha"]'
                 suggestions:
@@ -375,8 +303,6 @@ fields:
               url:
                 key: url
                 propertyName: url
-                name: TreeUrl
-                namespace: GitHub\Branch\Commit\Commit\Tree
                 className: GitHub\Branch\Commit\Commit\Tree\TreeUrl
                 inputKey: '["commit"]["commit"]["tree"]["url"]'
                 suggestions:
@@ -386,8 +312,6 @@ fields:
           verification:
             key: Verification
             propertyName: verification
-            name: Verification
-            namespace: GitHub\Branch\Commit\Commit
             className: GitHub\Branch\Commit\Commit\Verification
             inputKey: '["commit"]["commit"]["verification"]'
             suggestions: {  }
@@ -396,8 +320,6 @@ fields:
               reason:
                 key: reason
                 propertyName: reason
-                name: VerificationReason
-                namespace: GitHub\Branch\Commit\Commit\Verification
                 className: GitHub\Branch\Commit\Commit\Verification\VerificationReason
                 inputKey: '["commit"]["commit"]["verification"]["reason"]'
                 suggestions:
@@ -406,8 +328,6 @@ fields:
               payload:
                 key: payload
                 propertyName: payload
-                name: VerificationPayload
-                namespace: GitHub\Branch\Commit\Commit\Verification
                 className: GitHub\Branch\Commit\Commit\Verification\VerificationPayload
                 inputKey: '["commit"]["commit"]["verification"]["payload"]'
                 suggestions:
@@ -416,8 +336,6 @@ fields:
               signature:
                 key: signature
                 propertyName: signature
-                name: VerificationSignature
-                namespace: GitHub\Branch\Commit\Commit\Verification
                 className: GitHub\Branch\Commit\Commit\Verification\VerificationSignature
                 inputKey: '["commit"]["commit"]["verification"]["signature"]'
                 suggestions:
@@ -426,8 +344,6 @@ fields:
               verified:
                 key: verified
                 propertyName: verified
-                name: VerificationVerified
-                namespace: GitHub\Branch\Commit\Commit\Verification
                 className: GitHub\Branch\Commit\Commit\Verification\VerificationVerified
                 inputKey: '["commit"]["commit"]["verification"]["verified"]'
                 suggestions:
@@ -436,8 +352,6 @@ fields:
           url:
             key: url
             propertyName: url
-            name: CommitUrl
-            namespace: GitHub\Branch\Commit\Commit
             className: GitHub\Branch\Commit\Commit\CommitUrl
             inputKey: '["commit"]["commit"]["url"]'
             suggestions:
@@ -447,8 +361,6 @@ fields:
       committer:
         key: Committer
         propertyName: committer
-        name: Committer
-        namespace: GitHub\Branch\Commit
         className: GitHub\Branch\Commit\Committer
         inputKey: '["commit"]["committer"]'
         suggestions: {  }
@@ -457,8 +369,6 @@ fields:
           id:
             key: id
             propertyName: id
-            name: CommitterId
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterId
             inputKey: '["commit"]["committer"]["id"]'
             suggestions:
@@ -468,8 +378,6 @@ fields:
           gravatar_id:
             key: gravatar_id
             propertyName: gravatarId
-            name: CommitterGravatarId
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterGravatarId
             inputKey: '["commit"]["committer"]["gravatar_id"]'
             suggestions:
@@ -478,8 +386,6 @@ fields:
           login:
             key: login
             propertyName: login
-            name: CommitterLogin
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterLogin
             inputKey: '["commit"]["committer"]["login"]'
             suggestions:
@@ -488,8 +394,6 @@ fields:
           type:
             key: type
             propertyName: type
-            name: CommitterType
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterType
             inputKey: '["commit"]["committer"]["type"]'
             suggestions:
@@ -498,8 +402,6 @@ fields:
           site_admin:
             key: site_admin
             propertyName: siteAdmin
-            name: CommitterSiteAdmin
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterSiteAdmin
             inputKey: '["commit"]["committer"]["site_admin"]'
             suggestions:
@@ -508,8 +410,6 @@ fields:
           avatar_url:
             key: avatar_url
             propertyName: avatarUrl
-            name: CommitterAvatarUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterAvatarUrl
             inputKey: '["commit"]["committer"]["avatar_url"]'
             suggestions:
@@ -519,8 +419,6 @@ fields:
           events_url:
             key: events_url
             propertyName: eventsUrl
-            name: CommitterEventsUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterEventsUrl
             inputKey: '["commit"]["committer"]["events_url"]'
             suggestions:
@@ -530,8 +428,6 @@ fields:
           followers_url:
             key: followers_url
             propertyName: followersUrl
-            name: CommitterFollowersUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterFollowersUrl
             inputKey: '["commit"]["committer"]["followers_url"]'
             suggestions:
@@ -541,8 +437,6 @@ fields:
           following_url:
             key: following_url
             propertyName: followingUrl
-            name: CommitterFollowingUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterFollowingUrl
             inputKey: '["commit"]["committer"]["following_url"]'
             suggestions:
@@ -552,8 +446,6 @@ fields:
           gists_url:
             key: gists_url
             propertyName: gistsUrl
-            name: CommitterGistsUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterGistsUrl
             inputKey: '["commit"]["committer"]["gists_url"]'
             suggestions:
@@ -563,8 +455,6 @@ fields:
           html_url:
             key: html_url
             propertyName: htmlUrl
-            name: CommitterHtmlUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterHtmlUrl
             inputKey: '["commit"]["committer"]["html_url"]'
             suggestions:
@@ -574,8 +464,6 @@ fields:
           organizations_url:
             key: organizations_url
             propertyName: organizationsUrl
-            name: CommitterOrganizationsUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterOrganizationsUrl
             inputKey: '["commit"]["committer"]["organizations_url"]'
             suggestions:
@@ -585,8 +473,6 @@ fields:
           received_events_url:
             key: received_events_url
             propertyName: receivedEventsUrl
-            name: CommitterReceivedEventsUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterReceivedEventsUrl
             inputKey: '["commit"]["committer"]["received_events_url"]'
             suggestions:
@@ -596,8 +482,6 @@ fields:
           repos_url:
             key: repos_url
             propertyName: reposUrl
-            name: CommitterReposUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterReposUrl
             inputKey: '["commit"]["committer"]["repos_url"]'
             suggestions:
@@ -607,8 +491,6 @@ fields:
           starred_url:
             key: starred_url
             propertyName: starredUrl
-            name: CommitterStarredUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterStarredUrl
             inputKey: '["commit"]["committer"]["starred_url"]'
             suggestions:
@@ -618,8 +500,6 @@ fields:
           subscriptions_url:
             key: subscriptions_url
             propertyName: subscriptionsUrl
-            name: CommitterSubscriptionsUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterSubscriptionsUrl
             inputKey: '["commit"]["committer"]["subscriptions_url"]'
             suggestions:
@@ -629,8 +509,6 @@ fields:
           url:
             key: url
             propertyName: url
-            name: CommitterUrl
-            namespace: GitHub\Branch\Commit\Committer
             className: GitHub\Branch\Commit\Committer\CommitterUrl
             inputKey: '["commit"]["committer"]["url"]'
             suggestions:
@@ -640,8 +518,6 @@ fields:
       parents:
         key: Parents
         propertyName: parents
-        name: Parents
-        namespace: GitHub\Branch\Commit
         className: GitHub\Branch\Commit\Parents
         inputKey: '["commit"]["parents"]'
         suggestions:
@@ -651,8 +527,6 @@ fields:
           sha:
             key: sha
             propertyName: sha
-            name: ParentsSha
-            namespace: GitHub\Branch\Commit\Parents
             className: GitHub\Branch\Commit\Parents\ParentsSha
             inputKey: '["commit"]["parents"]["sha"]'
             suggestions:
@@ -661,8 +535,6 @@ fields:
           html_url:
             key: html_url
             propertyName: htmlUrl
-            name: ParentsHtmlUrl
-            namespace: GitHub\Branch\Commit\Parents
             className: GitHub\Branch\Commit\Parents\ParentsHtmlUrl
             inputKey: '["commit"]["parents"]["html_url"]'
             suggestions:
@@ -672,8 +544,6 @@ fields:
           url:
             key: url
             propertyName: url
-            name: ParentsUrl
-            namespace: GitHub\Branch\Commit\Parents
             className: GitHub\Branch\Commit\Parents\ParentsUrl
             inputKey: '["commit"]["parents"]["url"]'
             suggestions:
@@ -687,8 +557,6 @@ fields:
       comments_url:
         key: comments_url
         propertyName: commentsUrl
-        name: CommitCommentsUrl
-        namespace: GitHub\Branch\Commit
         className: GitHub\Branch\Commit\CommitCommentsUrl
         inputKey: '["commit"]["comments_url"]'
         suggestions:
@@ -698,8 +566,6 @@ fields:
       html_url:
         key: html_url
         propertyName: htmlUrl
-        name: CommitHtmlUrl
-        namespace: GitHub\Branch\Commit
         className: GitHub\Branch\Commit\CommitHtmlUrl
         inputKey: '["commit"]["html_url"]'
         suggestions:
@@ -709,8 +575,6 @@ fields:
       url:
         key: url
         propertyName: url
-        name: CommitUrl
-        namespace: GitHub\Branch\Commit
         className: GitHub\Branch\Commit\CommitUrl
         inputKey: '["commit"]["url"]'
         suggestions:
@@ -720,8 +584,6 @@ fields:
   _links:
     key: Links
     propertyName: links
-    name: Links
-    namespace: GitHub\Branch
     className: GitHub\Branch\Links
     inputKey: '["_links"]'
     suggestions: {  }
@@ -730,8 +592,6 @@ fields:
       html:
         key: html
         propertyName: html
-        name: LinksHtml
-        namespace: GitHub\Branch\Links
         className: GitHub\Branch\Links\LinksHtml
         inputKey: '["_links"]["html"]'
         suggestions:
@@ -741,8 +601,6 @@ fields:
       self:
         key: self
         propertyName: self
-        name: LinksSelf
-        namespace: GitHub\Branch\Links
         className: GitHub\Branch\Links\LinksSelf
         inputKey: '["_links"]["self"]'
         suggestions:
@@ -752,8 +610,6 @@ fields:
   protection:
     key: Protection
     propertyName: protection
-    name: Protection
-    namespace: GitHub\Branch
     className: GitHub\Branch\Protection
     inputKey: '["protection"]'
     suggestions: {  }
@@ -762,8 +618,6 @@ fields:
       enabled:
         key: enabled
         propertyName: enabled
-        name: ProtectionEnabled
-        namespace: GitHub\Branch\Protection
         className: GitHub\Branch\Protection\ProtectionEnabled
         inputKey: '["protection"]["enabled"]'
         suggestions:
@@ -772,8 +626,6 @@ fields:
       required_status_checks:
         key: RequiredStatusChecks
         propertyName: requiredStatusChecks
-        name: RequiredStatusChecks
-        namespace: GitHub\Branch\Protection
         className: GitHub\Branch\Protection\RequiredStatusChecks
         inputKey: '["protection"]["required_status_checks"]'
         suggestions: {  }
@@ -782,8 +634,6 @@ fields:
           enforcement_level:
             key: enforcement_level
             propertyName: enforcementLevel
-            name: RequiredStatusChecksEnforcementLevel
-            namespace: GitHub\Branch\Protection\RequiredStatusChecks
             className: GitHub\Branch\Protection\RequiredStatusChecks\RequiredStatusChecksEnforcementLevel
             inputKey: '["protection"]["required_status_checks"]["enforcement_level"]'
             suggestions:
@@ -792,8 +642,6 @@ fields:
           contexts:
             key: Contexts
             propertyName: contexts
-            name: Contexts
-            namespace: GitHub\Branch\Protection\RequiredStatusChecks
             className: GitHub\Branch\Protection\RequiredStatusChecks\Contexts
             inputKey: '["protection"]["required_status_checks"]["contexts"]'
             suggestions:
@@ -806,8 +654,6 @@ fields:
   protection_url:
     key: protection_url
     propertyName: protectionUrl
-    name: BranchProtectionUrl
-    namespace: GitHub\Branch
     className: GitHub\Branch\BranchProtectionUrl
     inputKey: '["protection_url"]'
     suggestions:
