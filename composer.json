@@ -39,12 +39,15 @@
     },
     "autoload": {
         "psr-4": {
+            "DevboardLib\\":"lib/src/DevboardLib/",
             "MyVendor\\":"lib/src/MyVendor/",
             "": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
+            "spec\\DevboardLib\\": "lib/spec/DevboardLib/",
+            "Tests\\DevboardLib\\": "lib/tests/DevboardLib/",
             "spec\\MyVendor\\": "lib/spec/MyVendor/",
             "Tests\\MyVendor\\": "lib/tests/MyVendor/",
             "spec\\": "spec/",
