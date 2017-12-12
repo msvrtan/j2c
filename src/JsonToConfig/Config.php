@@ -72,16 +72,23 @@ class Config
             'key'       => $this->baseName,
             'name'      => $this->baseName,
             'namespace' => $this->namespace,
+            'className' => $this->namespace.'\\'.$this->baseName,
             'inputKey'  => $input,
             'sorting'   => 16,
         ];
 
         foreach ($this->elements as $key => $list) {
+            $name = str_replace('_', '', ucwords($key, '_'));
+
+            $elementNamespace = $this->namespace.'\\'.$this->baseName;
+            $className        = $this->baseName.$name;
+
             $resultItem = [
                 'key'          => $key,
-                'propertyName' => lcfirst(str_replace('_', '', ucwords($key, '_'))),
-                'name'         => $this->baseName.str_replace('_', '', ucwords($key, '_')),
-                'namespace'    => $this->namespace.'\\'.$this->baseName,
+                'propertyName' => lcfirst($name),
+                'name'         => $className,
+                'namespace'    => $elementNamespace,
+                'className'    => $elementNamespace.'\\'.$className,
                 'inputKey'     => $input.'["'.$key.'"]',
                 'suggestions'  => [],
                 'sorting'      => 0,
