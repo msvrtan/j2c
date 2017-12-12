@@ -24,9 +24,4 @@ class IntegerId implements ValueObject
     {
         return ValueObject::HIGH;
     }
-
-    public function getSorting(): int
-    {
-        return 200;
-    }
 }

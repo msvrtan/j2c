@@ -24,9 +24,4 @@ class NullFound implements ValueObject
     {
         return ValueObject::LOW;
     }
-
-    public function getSorting(): int
-    {
-        return 20;
-    }
 }

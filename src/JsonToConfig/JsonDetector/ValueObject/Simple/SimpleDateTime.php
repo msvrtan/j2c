@@ -24,9 +24,4 @@ class SimpleDateTime implements ValueObject
     {
         return ValueObject::NORMAL;
     }
-
-    public function getSorting(): int
-    {
-        return 5;
-    }
 }
