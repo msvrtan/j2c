@@ -1,6 +1,7 @@
 key: Commit
 name: Commit
 namespace: GitHub
+className: GitHub\Commit
 inputKey: ''
 sorting: 16
 fields:
@@ -9,6 +10,7 @@ fields:
     propertyName: message
     name: CommitMessage
     namespace: GitHub\Commit
+    className: GitHub\Commit\CommitMessage
     inputKey: '["message"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -18,6 +20,7 @@ fields:
     propertyName: sha
     name: CommitSha
     namespace: GitHub\Commit
+    className: GitHub\Commit\CommitSha
     inputKey: '["sha"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -27,6 +30,7 @@ fields:
     propertyName: author
     name: Author
     namespace: GitHub\Commit
+    className: GitHub\Commit\Author
     inputKey: '["author"]'
     suggestions: {  }
     sorting: 16
@@ -36,6 +40,7 @@ fields:
         propertyName: email
         name: AuthorEmail
         namespace: GitHub\Commit\Author
+        className: GitHub\Commit\Author\AuthorEmail
         inputKey: '["author"]["email"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\EmailAddress
@@ -46,6 +51,7 @@ fields:
         propertyName: name
         name: AuthorName
         namespace: GitHub\Commit\Author
+        className: GitHub\Commit\Author\AuthorName
         inputKey: '["author"]["name"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -55,6 +61,7 @@ fields:
         propertyName: date
         name: AuthorDate
         namespace: GitHub\Commit\Author
+        className: GitHub\Commit\Author\AuthorDate
         inputKey: '["author"]["date"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -65,6 +72,7 @@ fields:
     propertyName: committer
     name: Committer
     namespace: GitHub\Commit
+    className: GitHub\Commit\Committer
     inputKey: '["committer"]'
     suggestions: {  }
     sorting: 16
@@ -74,6 +82,7 @@ fields:
         propertyName: email
         name: CommitterEmail
         namespace: GitHub\Commit\Committer
+        className: GitHub\Commit\Committer\CommitterEmail
         inputKey: '["committer"]["email"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\EmailAddress
@@ -84,6 +93,7 @@ fields:
         propertyName: name
         name: CommitterName
         namespace: GitHub\Commit\Committer
+        className: GitHub\Commit\Committer\CommitterName
         inputKey: '["committer"]["name"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -93,6 +103,7 @@ fields:
         propertyName: date
         name: CommitterDate
         namespace: GitHub\Commit\Committer
+        className: GitHub\Commit\Committer\CommitterDate
         inputKey: '["committer"]["date"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -103,6 +114,7 @@ fields:
     propertyName: parents
     name: Parents
     namespace: GitHub\Commit
+    className: GitHub\Commit\Parents
     inputKey: '["parents"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
@@ -113,6 +125,7 @@ fields:
         propertyName: sha
         name: ParentsSha
         namespace: GitHub\Commit\Parents
+        className: GitHub\Commit\Parents\ParentsSha
         inputKey: '["parents"]["sha"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -122,6 +135,7 @@ fields:
         propertyName: htmlUrl
         name: ParentsHtmlUrl
         namespace: GitHub\Commit\Parents
+        className: GitHub\Commit\Parents\ParentsHtmlUrl
         inputKey: '["parents"]["html_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -132,6 +146,7 @@ fields:
         propertyName: url
         name: ParentsUrl
         namespace: GitHub\Commit\Parents
+        className: GitHub\Commit\Parents\ParentsUrl
         inputKey: '["parents"]["url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -146,6 +161,7 @@ fields:
     propertyName: tree
     name: Tree
     namespace: GitHub\Commit
+    className: GitHub\Commit\Tree
     inputKey: '["tree"]'
     suggestions: {  }
     sorting: 16
@@ -155,6 +171,7 @@ fields:
         propertyName: sha
         name: TreeSha
         namespace: GitHub\Commit\Tree
+        className: GitHub\Commit\Tree\TreeSha
         inputKey: '["tree"]["sha"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -164,6 +181,7 @@ fields:
         propertyName: url
         name: TreeUrl
         namespace: GitHub\Commit\Tree
+        className: GitHub\Commit\Tree\TreeUrl
         inputKey: '["tree"]["url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -174,6 +192,7 @@ fields:
     propertyName: verification
     name: Verification
     namespace: GitHub\Commit
+    className: GitHub\Commit\Verification
     inputKey: '["verification"]'
     suggestions: {  }
     sorting: 16
@@ -183,6 +202,7 @@ fields:
         propertyName: reason
         name: VerificationReason
         namespace: GitHub\Commit\Verification
+        className: GitHub\Commit\Verification\VerificationReason
         inputKey: '["verification"]["reason"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -192,6 +212,7 @@ fields:
         propertyName: payload
         name: VerificationPayload
         namespace: GitHub\Commit\Verification
+        className: GitHub\Commit\Verification\VerificationPayload
         inputKey: '["verification"]["payload"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
@@ -201,6 +222,7 @@ fields:
         propertyName: signature
         name: VerificationSignature
         namespace: GitHub\Commit\Verification
+        className: GitHub\Commit\Verification\VerificationSignature
         inputKey: '["verification"]["signature"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
@@ -210,6 +232,7 @@ fields:
         propertyName: verified
         name: VerificationVerified
         namespace: GitHub\Commit\Verification
+        className: GitHub\Commit\Verification\VerificationVerified
         inputKey: '["verification"]["verified"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
@@ -219,6 +242,7 @@ fields:
     propertyName: htmlUrl
     name: CommitHtmlUrl
     namespace: GitHub\Commit
+    className: GitHub\Commit\CommitHtmlUrl
     inputKey: '["html_url"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -229,6 +253,7 @@ fields:
     propertyName: url
     name: CommitUrl
     namespace: GitHub\Commit
+    className: GitHub\Commit\CommitUrl
     inputKey: '["url"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Generix\Url

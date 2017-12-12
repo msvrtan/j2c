@@ -1,6 +1,7 @@
 key: CommitStatus
 name: CommitStatus
 namespace: GitHub
+className: GitHub\CommitStatus
 inputKey: ''
 sorting: 16
 fields:
@@ -9,6 +10,7 @@ fields:
     propertyName: id
     name: CommitStatusId
     namespace: GitHub\CommitStatus
+    className: GitHub\CommitStatus\CommitStatusId
     inputKey: '["id"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
@@ -20,6 +22,7 @@ fields:
     propertyName: context
     name: CommitStatusContext
     namespace: GitHub\CommitStatus
+    className: GitHub\CommitStatus\CommitStatusContext
     inputKey: '["context"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -29,6 +32,7 @@ fields:
     propertyName: description
     name: CommitStatusDescription
     namespace: GitHub\CommitStatus
+    className: GitHub\CommitStatus\CommitStatusDescription
     inputKey: '["description"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -38,6 +42,7 @@ fields:
     propertyName: state
     name: CommitStatusState
     namespace: GitHub\CommitStatus
+    className: GitHub\CommitStatus\CommitStatusState
     inputKey: '["state"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -47,6 +52,7 @@ fields:
     propertyName: creator
     name: Creator
     namespace: GitHub\CommitStatus
+    className: GitHub\CommitStatus\Creator
     inputKey: '["creator"]'
     suggestions: {  }
     sorting: 16
@@ -56,6 +62,7 @@ fields:
         propertyName: id
         name: CreatorId
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorId
         inputKey: '["creator"]["id"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
@@ -66,6 +73,7 @@ fields:
         propertyName: gravatarId
         name: CreatorGravatarId
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorGravatarId
         inputKey: '["creator"]["gravatar_id"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -75,6 +83,7 @@ fields:
         propertyName: login
         name: CreatorLogin
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorLogin
         inputKey: '["creator"]["login"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -84,6 +93,7 @@ fields:
         propertyName: type
         name: CreatorType
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorType
         inputKey: '["creator"]["type"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
@@ -93,6 +103,7 @@ fields:
         propertyName: siteAdmin
         name: CreatorSiteAdmin
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorSiteAdmin
         inputKey: '["creator"]["site_admin"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
@@ -102,6 +113,7 @@ fields:
         propertyName: avatarUrl
         name: CreatorAvatarUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorAvatarUrl
         inputKey: '["creator"]["avatar_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -112,6 +124,7 @@ fields:
         propertyName: eventsUrl
         name: CreatorEventsUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorEventsUrl
         inputKey: '["creator"]["events_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -122,6 +135,7 @@ fields:
         propertyName: followersUrl
         name: CreatorFollowersUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorFollowersUrl
         inputKey: '["creator"]["followers_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -132,6 +146,7 @@ fields:
         propertyName: followingUrl
         name: CreatorFollowingUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorFollowingUrl
         inputKey: '["creator"]["following_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -142,6 +157,7 @@ fields:
         propertyName: gistsUrl
         name: CreatorGistsUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorGistsUrl
         inputKey: '["creator"]["gists_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -152,6 +168,7 @@ fields:
         propertyName: htmlUrl
         name: CreatorHtmlUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorHtmlUrl
         inputKey: '["creator"]["html_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -162,6 +179,7 @@ fields:
         propertyName: organizationsUrl
         name: CreatorOrganizationsUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorOrganizationsUrl
         inputKey: '["creator"]["organizations_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -172,6 +190,7 @@ fields:
         propertyName: receivedEventsUrl
         name: CreatorReceivedEventsUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorReceivedEventsUrl
         inputKey: '["creator"]["received_events_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -182,6 +201,7 @@ fields:
         propertyName: reposUrl
         name: CreatorReposUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorReposUrl
         inputKey: '["creator"]["repos_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -192,6 +212,7 @@ fields:
         propertyName: starredUrl
         name: CreatorStarredUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorStarredUrl
         inputKey: '["creator"]["starred_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -202,6 +223,7 @@ fields:
         propertyName: subscriptionsUrl
         name: CreatorSubscriptionsUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorSubscriptionsUrl
         inputKey: '["creator"]["subscriptions_url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -212,6 +234,7 @@ fields:
         propertyName: url
         name: CreatorUrl
         namespace: GitHub\CommitStatus\Creator
+        className: GitHub\CommitStatus\Creator\CreatorUrl
         inputKey: '["creator"]["url"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -222,6 +245,7 @@ fields:
     propertyName: targetUrl
     name: CommitStatusTargetUrl
     namespace: GitHub\CommitStatus
+    className: GitHub\CommitStatus\CommitStatusTargetUrl
     inputKey: '["target_url"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -232,6 +256,7 @@ fields:
     propertyName: url
     name: CommitStatusUrl
     namespace: GitHub\CommitStatus
+    className: GitHub\CommitStatus\CommitStatusUrl
     inputKey: '["url"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Generix\Url
@@ -242,6 +267,7 @@ fields:
     propertyName: createdAt
     name: CommitStatusCreatedAt
     namespace: GitHub\CommitStatus
+    className: GitHub\CommitStatus\CommitStatusCreatedAt
     inputKey: '["created_at"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
@@ -252,6 +278,7 @@ fields:
     propertyName: updatedAt
     name: CommitStatusUpdatedAt
     namespace: GitHub\CommitStatus
+    className: GitHub\CommitStatus\CommitStatusUpdatedAt
     inputKey: '["updated_at"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
