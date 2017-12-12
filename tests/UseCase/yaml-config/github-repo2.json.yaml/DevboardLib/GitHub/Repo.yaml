@@ -1,0 +1,127 @@
+definition:
+  type: SimpleEntity
+  className: DevboardLib\GitHub\Repo
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    id:
+      className: DevboardLib\GitHub\Repo\RepoId
+      nullable: false
+      hasDefault: false
+      default: null
+    fullName:
+      className: DevboardLib\GitHub\Repo\RepoFullName
+      nullable: false
+      hasDefault: false
+      default: null
+    owner:
+      className: DevboardLib\GitHub\Repo\Owner
+      nullable: false
+      hasDefault: false
+      default: null
+    private:
+      className: DevboardLib\GitHub\Repo\RepoPrivate
+      nullable: false
+      hasDefault: false
+      default: null
+    defaultBranch:
+      className: DevboardLib\GitHub\Repo\RepoDefaultBranch
+      nullable: false
+      hasDefault: false
+      default: null
+    fork:
+      className: DevboardLib\GitHub\Repo\RepoFork
+      nullable: false
+      hasDefault: false
+      default: null
+    description:
+      className: DevboardLib\GitHub\Repo\RepoDescription
+      nullable: false
+      hasDefault: false
+      default: null
+    homepage:
+      className: DevboardLib\GitHub\Repo\RepoHomepage
+      nullable: false
+      hasDefault: false
+      default: null
+    language:
+      className: DevboardLib\GitHub\Repo\RepoLanguage
+      nullable: false
+      hasDefault: false
+      default: null
+    mirrorUrl:
+      className: DevboardLib\GitHub\Repo\RepoMirrorUrl
+      nullable: true
+      hasDefault: false
+      default: null
+    archived:
+      className: DevboardLib\GitHub\Repo\RepoArchived
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: DevboardLib\GitHub\Repo\RepoHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    url:
+      className: DevboardLib\GitHub\Repo\RepoUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    gitUrl:
+      className: DevboardLib\GitHub\Repo\RepoGitUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    sshUrl:
+      className: DevboardLib\GitHub\Repo\RepoSshUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    networkCount:
+      className: DevboardLib\GitHub\Repo\RepoNetworkCount
+      nullable: false
+      hasDefault: false
+      default: null
+    watchersCount:
+      className: DevboardLib\GitHub\Repo\RepoWatchersCount
+      nullable: false
+      hasDefault: false
+      default: null
+    stargazersCount:
+      className: DevboardLib\GitHub\Repo\RepoStargazersCount
+      nullable: false
+      hasDefault: false
+      default: null
+    subscribersCount:
+      className: DevboardLib\GitHub\Repo\RepoSubscribersCount
+      nullable: false
+      hasDefault: false
+      default: null
+    openIssuesCount:
+      className: DevboardLib\GitHub\Repo\RepoOpenIssuesCount
+      nullable: false
+      hasDefault: false
+      default: null
+    size:
+      className: DevboardLib\GitHub\Repo\RepoSize
+      nullable: false
+      hasDefault: false
+      default: null
+    createdAt:
+      className: DevboardLib\GitHub\Repo\RepoCreatedAt
+      nullable: false
+      hasDefault: false
+      default: null
+    updatedAt:
+      className: DevboardLib\GitHub\Repo\RepoUpdatedAt
+      nullable: false
+      hasDefault: false
+      default: null
+    pushedAt:
+      className: DevboardLib\GitHub\Repo\RepoPushedAt
+      nullable: false
+      hasDefault: false
+      default: null

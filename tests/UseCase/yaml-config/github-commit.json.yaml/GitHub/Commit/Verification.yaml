@@ -17,11 +17,11 @@ definition:
       default: null
     signature:
       className: GitHub\Commit\Verification\VerificationSignature
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     payload:
       className: GitHub\Commit\Verification\VerificationPayload
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null

@@ -167,7 +167,7 @@ definition:
       default: null
     homepage:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoHomepage
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     hooksUrl:
@@ -222,7 +222,7 @@ definition:
       default: null
     license:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoLicense
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     mergesUrl:
@@ -237,7 +237,7 @@ definition:
       default: null
     mirrorUrl:
       className: GitHub\WebHook\PullRequestHook\PullRequest\Head\Repo\RepoMirrorUrl
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     name:

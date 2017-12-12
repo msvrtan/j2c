@@ -1,0 +1,239 @@
+key: Repo
+className: DevboardLib\GitHub\Repo
+inputKey: ''
+fields:
+  id:
+    key: id
+    propertyName: id
+    className: DevboardLib\GitHub\Repo\RepoId
+    inputKey: '["id"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  full_name:
+    key: full_name
+    propertyName: fullName
+    className: DevboardLib\GitHub\Repo\RepoFullName
+    inputKey: '["full_name"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  owner:
+    key: Owner
+    propertyName: owner
+    className: DevboardLib\GitHub\Repo\Owner
+    inputKey: '["owner"]'
+    suggestions: {  }
+    fields:
+      id:
+        key: id
+        propertyName: id
+        className: DevboardLib\GitHub\Repo\Owner\OwnerId
+        inputKey: '["owner"]["id"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+      login:
+        key: login
+        propertyName: login
+        className: DevboardLib\GitHub\Repo\Owner\OwnerLogin
+        inputKey: '["owner"]["login"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      type:
+        key: type
+        propertyName: type
+        className: DevboardLib\GitHub\Repo\Owner\OwnerType
+        inputKey: '["owner"]["type"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      avatar_url:
+        key: avatar_url
+        propertyName: avatarUrl
+        className: DevboardLib\GitHub\Repo\Owner\OwnerAvatarUrl
+        inputKey: '["owner"]["avatar_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      gravatar_id:
+        key: gravatar_id
+        propertyName: gravatarId
+        className: DevboardLib\GitHub\Repo\Owner\OwnerGravatarId
+        inputKey: '["owner"]["gravatar_id"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      html_url:
+        key: html_url
+        propertyName: htmlUrl
+        className: DevboardLib\GitHub\Repo\Owner\OwnerHtmlUrl
+        inputKey: '["owner"]["html_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      url:
+        key: url
+        propertyName: url
+        className: DevboardLib\GitHub\Repo\Owner\OwnerUrl
+        inputKey: '["owner"]["url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      site_admin:
+        key: site_admin
+        propertyName: siteAdmin
+        className: DevboardLib\GitHub\Repo\Owner\OwnerSiteAdmin
+        inputKey: '["owner"]["site_admin"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  private:
+    key: private
+    propertyName: private
+    className: DevboardLib\GitHub\Repo\RepoPrivate
+    inputKey: '["private"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  default_branch:
+    key: default_branch
+    propertyName: defaultBranch
+    className: DevboardLib\GitHub\Repo\RepoDefaultBranch
+    inputKey: '["default_branch"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  fork:
+    key: fork
+    propertyName: fork
+    className: DevboardLib\GitHub\Repo\RepoFork
+    inputKey: '["fork"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  description:
+    key: description
+    propertyName: description
+    className: DevboardLib\GitHub\Repo\RepoDescription
+    inputKey: '["description"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  homepage:
+    key: homepage
+    propertyName: homepage
+    className: DevboardLib\GitHub\Repo\RepoHomepage
+    inputKey: '["homepage"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  language:
+    key: language
+    propertyName: language
+    className: DevboardLib\GitHub\Repo\RepoLanguage
+    inputKey: '["language"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  mirror_url:
+    key: mirror_url
+    propertyName: mirrorUrl
+    className: DevboardLib\GitHub\Repo\RepoMirrorUrl
+    inputKey: '["mirror_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+  archived:
+    key: archived
+    propertyName: archived
+    className: DevboardLib\GitHub\Repo\RepoArchived
+    inputKey: '["archived"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  html_url:
+    key: html_url
+    propertyName: htmlUrl
+    className: DevboardLib\GitHub\Repo\RepoHtmlUrl
+    inputKey: '["html_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  url:
+    key: url
+    propertyName: url
+    className: DevboardLib\GitHub\Repo\RepoUrl
+    inputKey: '["url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  git_url:
+    key: git_url
+    propertyName: gitUrl
+    className: DevboardLib\GitHub\Repo\RepoGitUrl
+    inputKey: '["git_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  ssh_url:
+    key: ssh_url
+    propertyName: sshUrl
+    className: DevboardLib\GitHub\Repo\RepoSshUrl
+    inputKey: '["ssh_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  network_count:
+    key: network_count
+    propertyName: networkCount
+    className: DevboardLib\GitHub\Repo\RepoNetworkCount
+    inputKey: '["network_count"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  watchers_count:
+    key: watchers_count
+    propertyName: watchersCount
+    className: DevboardLib\GitHub\Repo\RepoWatchersCount
+    inputKey: '["watchers_count"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  stargazers_count:
+    key: stargazers_count
+    propertyName: stargazersCount
+    className: DevboardLib\GitHub\Repo\RepoStargazersCount
+    inputKey: '["stargazers_count"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  subscribers_count:
+    key: subscribers_count
+    propertyName: subscribersCount
+    className: DevboardLib\GitHub\Repo\RepoSubscribersCount
+    inputKey: '["subscribers_count"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  open_issues_count:
+    key: open_issues_count
+    propertyName: openIssuesCount
+    className: DevboardLib\GitHub\Repo\RepoOpenIssuesCount
+    inputKey: '["open_issues_count"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  size:
+    key: size
+    propertyName: size
+    className: DevboardLib\GitHub\Repo\RepoSize
+    inputKey: '["size"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+  created_at:
+    key: created_at
+    propertyName: createdAt
+    className: DevboardLib\GitHub\Repo\RepoCreatedAt
+    inputKey: '["created_at"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  updated_at:
+    key: updated_at
+    propertyName: updatedAt
+    className: DevboardLib\GitHub\Repo\RepoUpdatedAt
+    inputKey: '["updated_at"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  pushed_at:
+    key: pushed_at
+    propertyName: pushedAt
+    className: DevboardLib\GitHub\Repo\RepoPushedAt
+    inputKey: '["pushed_at"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString

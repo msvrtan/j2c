@@ -1,0 +1,22 @@
+definition:
+  type: SimpleEntity
+  className: DevboardLib\GitHub\Commit\Committer
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    name:
+      className: DevboardLib\GitHub\Commit\Committer\CommitterName
+      nullable: false
+      hasDefault: false
+      default: null
+    email:
+      className: DevboardLib\GitHub\Commit\Committer\CommitterEmail
+      nullable: false
+      hasDefault: false
+      default: null
+    date:
+      className: DevboardLib\GitHub\Commit\Committer\CommitterDate
+      nullable: false
+      hasDefault: false
+      default: null

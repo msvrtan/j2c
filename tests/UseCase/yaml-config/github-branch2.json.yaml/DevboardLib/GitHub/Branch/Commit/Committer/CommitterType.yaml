@@ -1,0 +1,12 @@
+definition:
+  type: SimpleValueObject
+  className: DevboardLib\GitHub\Branch\Commit\Committer\CommitterType
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    type:
+      className: string
+      nullable: false
+      hasDefault: false
+      default: null

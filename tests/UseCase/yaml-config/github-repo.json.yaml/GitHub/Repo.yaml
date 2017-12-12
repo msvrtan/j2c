@@ -322,7 +322,7 @@ definition:
       default: null
     mirrorUrl:
       className: GitHub\Repo\RepoMirrorUrl
-      nullable: false
+      nullable: true
       hasDefault: false
       default: null
     archived:

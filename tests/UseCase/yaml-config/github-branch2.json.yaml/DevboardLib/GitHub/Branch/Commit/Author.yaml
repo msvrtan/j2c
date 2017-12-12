@@ -1,0 +1,47 @@
+definition:
+  type: SimpleEntity
+  className: DevboardLib\GitHub\Branch\Commit\Author
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    login:
+      className: DevboardLib\GitHub\Branch\Commit\Author\AuthorLogin
+      nullable: false
+      hasDefault: false
+      default: null
+    id:
+      className: DevboardLib\GitHub\Branch\Commit\Author\AuthorId
+      nullable: false
+      hasDefault: false
+      default: null
+    avatarUrl:
+      className: DevboardLib\GitHub\Branch\Commit\Author\AuthorAvatarUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    gravatarId:
+      className: DevboardLib\GitHub\Branch\Commit\Author\AuthorGravatarId
+      nullable: false
+      hasDefault: false
+      default: null
+    url:
+      className: DevboardLib\GitHub\Branch\Commit\Author\AuthorUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: DevboardLib\GitHub\Branch\Commit\Author\AuthorHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    type:
+      className: DevboardLib\GitHub\Branch\Commit\Author\AuthorType
+      nullable: false
+      hasDefault: false
+      default: null
+    siteAdmin:
+      className: DevboardLib\GitHub\Branch\Commit\Author\AuthorSiteAdmin
+      nullable: false
+      hasDefault: false
+      default: null

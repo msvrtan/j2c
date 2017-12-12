@@ -1,0 +1,418 @@
+key: Branch
+className: DevboardLib\GitHub\Branch
+inputKey: ''
+fields:
+  name:
+    key: name
+    propertyName: name
+    className: DevboardLib\GitHub\Branch\BranchName
+    inputKey: '["name"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+  commit:
+    key: Commit
+    propertyName: commit
+    className: DevboardLib\GitHub\Branch\Commit
+    inputKey: '["commit"]'
+    suggestions: {  }
+    fields:
+      sha:
+        key: sha
+        propertyName: sha
+        className: DevboardLib\GitHub\Branch\Commit\CommitSha
+        inputKey: '["commit"]["sha"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      commit:
+        key: Commit
+        propertyName: commit
+        className: DevboardLib\GitHub\Branch\Commit\Commit
+        inputKey: '["commit"]["commit"]'
+        suggestions: {  }
+        fields:
+          author:
+            key: Author
+            propertyName: author
+            className: DevboardLib\GitHub\Branch\Commit\Commit\Author
+            inputKey: '["commit"]["commit"]["author"]'
+            suggestions: {  }
+            fields:
+              name:
+                key: name
+                propertyName: name
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Author\AuthorName
+                inputKey: '["commit"]["commit"]["author"]["name"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+              email:
+                key: email
+                propertyName: email
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Author\AuthorEmail
+                inputKey: '["commit"]["commit"]["author"]["email"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Generix\EmailAddress
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+              date:
+                key: date
+                propertyName: date
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Author\AuthorDate
+                inputKey: '["commit"]["commit"]["author"]["date"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          committer:
+            key: Committer
+            propertyName: committer
+            className: DevboardLib\GitHub\Branch\Commit\Commit\Committer
+            inputKey: '["commit"]["commit"]["committer"]'
+            suggestions: {  }
+            fields:
+              name:
+                key: name
+                propertyName: name
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Committer\CommitterName
+                inputKey: '["commit"]["commit"]["committer"]["name"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+              email:
+                key: email
+                propertyName: email
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Committer\CommitterEmail
+                inputKey: '["commit"]["commit"]["committer"]["email"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Generix\EmailAddress
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+              date:
+                key: date
+                propertyName: date
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Committer\CommitterDate
+                inputKey: '["commit"]["commit"]["committer"]["date"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          message:
+            key: message
+            propertyName: message
+            className: DevboardLib\GitHub\Branch\Commit\Commit\CommitMessage
+            inputKey: '["commit"]["commit"]["message"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          tree:
+            key: Tree
+            propertyName: tree
+            className: DevboardLib\GitHub\Branch\Commit\Commit\Tree
+            inputKey: '["commit"]["commit"]["tree"]'
+            suggestions: {  }
+            fields:
+              sha:
+                key: sha
+                propertyName: sha
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Tree\TreeSha
+                inputKey: '["commit"]["commit"]["tree"]["sha"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+              url:
+                key: url
+                propertyName: url
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Tree\TreeUrl
+                inputKey: '["commit"]["commit"]["tree"]["url"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          url:
+            key: url
+            propertyName: url
+            className: DevboardLib\GitHub\Branch\Commit\Commit\CommitUrl
+            inputKey: '["commit"]["commit"]["url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          comment_count:
+            key: comment_count
+            propertyName: commentCount
+            className: DevboardLib\GitHub\Branch\Commit\Commit\CommitCommentCount
+            inputKey: '["commit"]["commit"]["comment_count"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+          verification:
+            key: Verification
+            propertyName: verification
+            className: DevboardLib\GitHub\Branch\Commit\Commit\Verification
+            inputKey: '["commit"]["commit"]["verification"]'
+            suggestions: {  }
+            fields:
+              verified:
+                key: verified
+                propertyName: verified
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Verification\VerificationVerified
+                inputKey: '["commit"]["commit"]["verification"]["verified"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+              reason:
+                key: reason
+                propertyName: reason
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Verification\VerificationReason
+                inputKey: '["commit"]["commit"]["verification"]["reason"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+              signature:
+                key: signature
+                propertyName: signature
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Verification\VerificationSignature
+                inputKey: '["commit"]["commit"]["verification"]["signature"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+              payload:
+                key: payload
+                propertyName: payload
+                className: DevboardLib\GitHub\Branch\Commit\Commit\Verification\VerificationPayload
+                inputKey: '["commit"]["commit"]["verification"]["payload"]'
+                suggestions:
+                  - JsonToConfig\JsonDetector\ValueObject\Simple\NullFound
+      url:
+        key: url
+        propertyName: url
+        className: DevboardLib\GitHub\Branch\Commit\CommitUrl
+        inputKey: '["commit"]["url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      html_url:
+        key: html_url
+        propertyName: htmlUrl
+        className: DevboardLib\GitHub\Branch\Commit\CommitHtmlUrl
+        inputKey: '["commit"]["html_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      comments_url:
+        key: comments_url
+        propertyName: commentsUrl
+        className: DevboardLib\GitHub\Branch\Commit\CommitCommentsUrl
+        inputKey: '["commit"]["comments_url"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+      author:
+        key: Author
+        propertyName: author
+        className: DevboardLib\GitHub\Branch\Commit\Author
+        inputKey: '["commit"]["author"]'
+        suggestions: {  }
+        fields:
+          login:
+            key: login
+            propertyName: login
+            className: DevboardLib\GitHub\Branch\Commit\Author\AuthorLogin
+            inputKey: '["commit"]["author"]["login"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          id:
+            key: id
+            propertyName: id
+            className: DevboardLib\GitHub\Branch\Commit\Author\AuthorId
+            inputKey: '["commit"]["author"]["id"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+          avatar_url:
+            key: avatar_url
+            propertyName: avatarUrl
+            className: DevboardLib\GitHub\Branch\Commit\Author\AuthorAvatarUrl
+            inputKey: '["commit"]["author"]["avatar_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          gravatar_id:
+            key: gravatar_id
+            propertyName: gravatarId
+            className: DevboardLib\GitHub\Branch\Commit\Author\AuthorGravatarId
+            inputKey: '["commit"]["author"]["gravatar_id"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          url:
+            key: url
+            propertyName: url
+            className: DevboardLib\GitHub\Branch\Commit\Author\AuthorUrl
+            inputKey: '["commit"]["author"]["url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          html_url:
+            key: html_url
+            propertyName: htmlUrl
+            className: DevboardLib\GitHub\Branch\Commit\Author\AuthorHtmlUrl
+            inputKey: '["commit"]["author"]["html_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          type:
+            key: type
+            propertyName: type
+            className: DevboardLib\GitHub\Branch\Commit\Author\AuthorType
+            inputKey: '["commit"]["author"]["type"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          site_admin:
+            key: site_admin
+            propertyName: siteAdmin
+            className: DevboardLib\GitHub\Branch\Commit\Author\AuthorSiteAdmin
+            inputKey: '["commit"]["author"]["site_admin"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+      committer:
+        key: Committer
+        propertyName: committer
+        className: DevboardLib\GitHub\Branch\Commit\Committer
+        inputKey: '["commit"]["committer"]'
+        suggestions: {  }
+        fields:
+          login:
+            key: login
+            propertyName: login
+            className: DevboardLib\GitHub\Branch\Commit\Committer\CommitterLogin
+            inputKey: '["commit"]["committer"]["login"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          id:
+            key: id
+            propertyName: id
+            className: DevboardLib\GitHub\Branch\Commit\Committer\CommitterId
+            inputKey: '["commit"]["committer"]["id"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Id\IntegerId
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger
+          avatar_url:
+            key: avatar_url
+            propertyName: avatarUrl
+            className: DevboardLib\GitHub\Branch\Commit\Committer\CommitterAvatarUrl
+            inputKey: '["commit"]["committer"]["avatar_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          gravatar_id:
+            key: gravatar_id
+            propertyName: gravatarId
+            className: DevboardLib\GitHub\Branch\Commit\Committer\CommitterGravatarId
+            inputKey: '["commit"]["committer"]["gravatar_id"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          url:
+            key: url
+            propertyName: url
+            className: DevboardLib\GitHub\Branch\Commit\Committer\CommitterUrl
+            inputKey: '["commit"]["committer"]["url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          html_url:
+            key: html_url
+            propertyName: htmlUrl
+            className: DevboardLib\GitHub\Branch\Commit\Committer\CommitterHtmlUrl
+            inputKey: '["commit"]["committer"]["html_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          type:
+            key: type
+            propertyName: type
+            className: DevboardLib\GitHub\Branch\Commit\Committer\CommitterType
+            inputKey: '["commit"]["committer"]["type"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          site_admin:
+            key: site_admin
+            propertyName: siteAdmin
+            className: DevboardLib\GitHub\Branch\Commit\Committer\CommitterSiteAdmin
+            inputKey: '["commit"]["committer"]["site_admin"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+      parents:
+        key: Parents
+        propertyName: parents
+        className: DevboardLib\GitHub\Branch\Commit\Parents
+        inputKey: '["commit"]["parents"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
+        fields:
+          sha:
+            key: sha
+            propertyName: sha
+            className: DevboardLib\GitHub\Branch\Commit\Parents\ParentsSha
+            inputKey: '["commit"]["parents"]["sha"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          url:
+            key: url
+            propertyName: url
+            className: DevboardLib\GitHub\Branch\Commit\Parents\ParentsUrl
+            inputKey: '["commit"]["parents"]["url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          html_url:
+            key: html_url
+            propertyName: htmlUrl
+            className: DevboardLib\GitHub\Branch\Commit\Parents\ParentsHtmlUrl
+            inputKey: '["commit"]["parents"]["html_url"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+        collectionOf:
+          className: string
+          accessor: getId
+          has: string
+  protected:
+    key: protected
+    propertyName: protected
+    className: DevboardLib\GitHub\Branch\BranchProtected
+    inputKey: '["protected"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+  protection:
+    key: Protection
+    propertyName: protection
+    className: DevboardLib\GitHub\Branch\Protection
+    inputKey: '["protection"]'
+    suggestions: {  }
+    fields:
+      enabled:
+        key: enabled
+        propertyName: enabled
+        className: DevboardLib\GitHub\Branch\Protection\ProtectionEnabled
+        inputKey: '["protection"]["enabled"]'
+        suggestions:
+          - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleBool
+      required_status_checks:
+        key: RequiredStatusChecks
+        propertyName: requiredStatusChecks
+        className: DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks
+        inputKey: '["protection"]["required_status_checks"]'
+        suggestions: {  }
+        fields:
+          enforcement_level:
+            key: enforcement_level
+            propertyName: enforcementLevel
+            className: DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\RequiredStatusChecksEnforcementLevel
+            inputKey: '["protection"]["required_status_checks"]["enforcement_level"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
+          contexts:
+            key: Contexts
+            propertyName: contexts
+            className: DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Contexts
+            inputKey: '["protection"]["required_status_checks"]["contexts"]'
+            suggestions:
+              - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
+            collectionOf:
+              className: string
+              accessor: getId
+              has: string
+  protection_url:
+    key: protection_url
+    propertyName: protectionUrl
+    className: DevboardLib\GitHub\Branch\BranchProtectionUrl
+    inputKey: '["protection_url"]'
+    suggestions:
+      - JsonToConfig\JsonDetector\ValueObject\Generix\Url
+      - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
