@@ -53,6 +53,11 @@ class ConstructorMiddleware implements PartialCodeGeneratorMiddleware
                     $namespace->addUse($parameter->getStructureFullName());
                 }
             }
+
+            //@TODO: move this to a middleware!
+            if (count($definition->getConstructorParameters()) >= 10) {
+                $constructorMethod->addComment('@SuppressWarnings(PHPMD.ExcessiveParameterList)');
+            }
         }
 
         return $namespace;

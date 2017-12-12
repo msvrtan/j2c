@@ -29,6 +29,7 @@
             <property name="absoluteLineLimit" value="150"/>
 
         </properties>
+        <exclude-pattern>DevboardLib*</exclude-pattern>
     </rule>
     <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
     <rule ref="Generic.Formatting.MultipleStatementAlignment"/>

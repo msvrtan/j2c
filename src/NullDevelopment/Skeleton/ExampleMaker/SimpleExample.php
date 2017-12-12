@@ -23,6 +23,12 @@ class SimpleExample implements Example
             return "'".$this->value."'";
         }
 
+        if (true === $this->value) {
+            return 'true';
+        } elseif (false === $this->value) {
+            return 'false';
+        }
+
         return (string) $this->value;
     }
 

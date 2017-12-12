@@ -18,11 +18,14 @@ class SerializationMiddleware implements PartialCodeGeneratorMiddleware
 
         /** @var ClassType $class */
         foreach ($namespace->getClasses() as $class) {
-            if (1 === count($definition->getProperties())) {
+            $cnt =count($definition->getProperties());
+
+            if (1 === $cnt
+                && true === in_array($definition->getProperties()[0]->getStructureFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
                 /* @var Property $property */
                 foreach ($definition->getProperties() as $property) {
                     $class->addMethod('serialize')
-                        ->setReturnType($property->getStructureName()->getName())
+                        ->setReturnType($property->getStructureName()->getFullName())
                         ->addBody('return $this->'.$property->getName().';');
 
                     $deserializeMethod = $class->addMethod('deserialize')
@@ -31,7 +34,7 @@ class SerializationMiddleware implements PartialCodeGeneratorMiddleware
                         ->addBody('return new self($'.$property->getName().');');
 
                     $deserializeMethod->addParameter($property->getName())
-                        ->setTypeHint($property->getStructureName()->getName());
+                        ->setTypeHint($property->getStructureName()->getFullName());
                 }
             } else {
                 $serializeList   = [];

@@ -10,6 +10,7 @@ use NullDevelopment\Skeleton\Php\Structure\ClassName;
 use NullDevelopment\Skeleton\Php\Structure\SimpleVariable;
 use NullDevelopment\Skeleton\Php\Structure\Variable;
 use ReflectionClass;
+use Roave\BetterReflection\BetterReflection;
 
 /**
  * @see ExampleMakerSpec
@@ -31,18 +32,37 @@ class ExampleMaker
                 return new InstanceExample(new ClassName('DateTime'), [$this->value($variable)]);
         }
 
-        $refl = new ReflectionClass($variable->getStructureFullName());
+        $refl = (new BetterReflection())
+            ->classReflector()
+            ->reflect($variable->getStructureFullName());
+
+        //$refl = new ReflectionClass($variable->getStructureFullName());
 
         while ($parent = $refl->getParentClass()) {
             if (DateTime::class === $parent->getName()) {
                 return new InstanceExample($variable->getStructureName(), [new SimpleExample('2018-01-01 00:01:00')]);
-                //return new InstanceExample('new '.$variable->getStructureName()->getName()."('2018-01-01 00:01:00')");
             }
         }
 
         $arguments = [];
         foreach ($refl->getConstructor()->getParameters() as $parameter) {
             if ($parameter->getType()) {
+                if (count($parameter->getDocBlockTypes()) > 0) {
+                    $docBlockClassName = $parameter->getDocBlockTypeStrings()[0];
+
+                    if ('[]' === substr($docBlockClassName, -2, 2)) {
+                        $class = substr($docBlockClassName, 0, -2);
+
+                        $paramAsVar = new SimpleVariable(
+                            $parameter->getName(),
+                            ClassName::createFromFullyQualified($class)
+                        );
+
+                        $arguments[] = new ArrayExample([$this->instance($paramAsVar)]);
+                        continue;
+                    }
+                }
+
                 $paramAsVar = new SimpleVariable(
                     $parameter->getName(),
                     ClassName::createFromFullyQualified($parameter->getType()->__toString())
@@ -76,7 +96,11 @@ class ExampleMaker
                 return new SimpleExample('2018-01-01 00:01:00');
         }
 
-        $refl = new ReflectionClass($variable->getStructureFullName());
+        $refl = (new BetterReflection())
+            ->classReflector()
+            ->reflect($variable->getStructureFullName());
+
+        //$refl = new ReflectionClass($variable->getStructureFullName());
 
         while ($parent = $refl->getParentClass()) {
             if (DateTime::class === $parent->getName()) {
@@ -100,7 +124,7 @@ class ExampleMaker
         }
 
         if (count($arguments) > 1) {
-            return new SimpleExample('['.implode(', ', $arguments).']');
+            return new ArrayExample($arguments);
         } elseif (1 === count($arguments)) {
             return new SimpleExample(array_pop($arguments));
         } else {

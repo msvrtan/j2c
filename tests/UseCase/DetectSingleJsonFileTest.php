@@ -58,10 +58,13 @@ class DetectSingleJsonFileTest extends SfTestCase
             ['test3.json', 'User', 'MyVendor'],
             ['test4.json', 'PullRequestHook', 'GitHub\\WebHook'],
             ['github-branch.json', 'Branch', 'GitHub'],
+            ['github-branch2.json', 'Branch', 'DevboardLib\\GitHub'],
             ['github-branches.json', 'Branches', 'GitHub\\FFF'],
             ['github-commit-status.json', 'CommitStatus', 'GitHub'],
             ['github-commit.json', 'Commit', 'GitHub'],
+            ['github-commit2.json', 'Commit', 'DevboardLib\\GitHub'],
             ['github-repo.json', 'Repo', 'GitHub'],
+            ['github-repo2.json', 'Repo', 'DevboardLib\\GitHub'],
         ];
     }
 

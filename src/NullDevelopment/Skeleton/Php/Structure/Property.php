@@ -47,9 +47,9 @@ class Property implements Variable
         $this->getter          = $getter;
     }
 
-    public static function privateProperty(string $name, StructureName $structureName): self
+    public static function privateProperty(string $name, StructureName $structureName, bool $nullable = false): self
     {
-        return new self($name, $structureName, false, false, null, Visibility::PRIVATE(), false, true);
+        return new self($name, $structureName, $nullable, false, null, Visibility::PRIVATE(), false, true);
     }
 
     public function getName(): string

@@ -23,10 +23,16 @@ class CastableToStringMiddleware implements PartialCodeGeneratorMiddleware
                 $toStringMethod = $class->addMethod('__toString')
                     ->setReturnType('string');
 
-                if ('string' !== $property->getStructureFullName()) {
-                    $toStringMethod->addBody('return (string) $this->'.$property->getName().';');
-                } else {
+                if ('bool' === $property->getStructureFullName()) {
+                    $toStringMethod->addBody('if(true === $this->'.$property->getName().'){');
+                    $toStringMethod->addBody("    return 'true';");
+                    $toStringMethod->addBody('}else{');
+                    $toStringMethod->addBody("    return 'false';");
+                    $toStringMethod->addBody('}');
+                } elseif ('string' === $property->getStructureFullName()) {
                     $toStringMethod->addBody('return $this->'.$property->getName().';');
+                } else {
+                    $toStringMethod->addBody('return (string) $this->'.$property->getName().';');
                 }
             }
         }

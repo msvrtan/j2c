@@ -18,7 +18,8 @@ class TestSerializationMiddleware implements PartialCodeGeneratorMiddleware
 
         /** @var ClassType $class */
         foreach ($namespace->getClasses() as $class) {
-            if (1 === count($definition->getProperties())) {
+            if (1 === count($definition->getProperties())
+                && true === in_array($definition->getProperties()[0]->getStructureFullName(), ['int', 'string', 'float', 'bool', 'array'])) {
                 /* @var Property $property */
                 foreach ($definition->getProperties() as $property) {
                     $serializeBody = sprintf(

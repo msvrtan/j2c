@@ -44,7 +44,15 @@ class SimpleEntityTestNetteGenerator extends BaseNetteGenerator
     public function generate(SimpleEntity $definition): PhpNamespace
     {
         $middlewareChain = $this->middlewareChain;
+        /** @var PhpNamespace $namespace */
         $namespace       = $middlewareChain($definition);
+
+        //@TODO: move this to a middleware!
+        if (count($namespace->getUses()) > 10) {
+            foreach ($namespace->getClasses() as $class) {
+                $class->addComment('@SuppressWarnings(PHPMD.CouplingBetweenObjects)');
+            }
+        }
 
         return $namespace;
     }

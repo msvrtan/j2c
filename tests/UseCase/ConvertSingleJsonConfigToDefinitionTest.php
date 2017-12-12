@@ -63,10 +63,16 @@ class ConvertSingleJsonConfigToDefinitionTest extends SfTestCase
             ['test3.json.yaml'],
             ['test4.json.yaml'],
             ['github-branch.json.yaml'],
+            ['github-branch2.json.yaml'],
             ['github-branches.json.yaml'],
             ['github-commit.json.yaml'],
+            ['github-commit2.json.yaml'],
             ['github-commit-status.json.yaml'],
             ['github-repo.json.yaml'],
+            ['github-repo2.json.yaml'],
+            ['_github-repo.json.yaml'],
+            ['_github-branch.json.yaml'],
+            ['_github-commit.json.yaml'],
         ];
     }
 
