@@ -35,8 +35,7 @@ class ConfigConverterTest extends TestCase
     {
         $input = [
             'propertyName' => 'user',
-            'name'         => 'User',
-            'namespace'    => 'MyVendor',
+            'className'    => 'MyVendor\User',
             'fields'       => [],
         ];
 
@@ -51,13 +50,11 @@ class ConfigConverterTest extends TestCase
     {
         $input = [
             'propertyName' => 'user',
-            'name'         => 'User',
-            'namespace'    => 'MyVendor',
+            'className'    => 'MyVendor\User',
             'fields'       => [
                 'id' => [
                     'propertyName' => 'id',
-                    'name'         => 'UserId',
-                    'namespace'    => 'MyVendor\User',
+                    'className'    => 'MyVendor\User\UserId',
                     'suggestions'  => [
                         'JsonToConfig\JsonDetector\ValueObject\Id\IntegerId',
                         'JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger',
@@ -94,13 +91,11 @@ class ConfigConverterTest extends TestCase
     {
         $input = [
             'propertyName' => 'user',
-            'name'         => 'User',
-            'namespace'    => 'MyVendor',
+            'className'    => 'MyVendor\User',
             'fields'       => [
                 'id'         => [
                     'propertyName' => 'id',
-                    'name'         => 'UserId',
-                    'namespace'    => 'MyVendor\User',
+                    'className'    => 'MyVendor\User\UserId',
                     'suggestions'  => [
                         'JsonToConfig\JsonDetector\ValueObject\Id\IntegerId',
                         'JsonToConfig\JsonDetector\ValueObject\Simple\SimpleInteger',
@@ -108,20 +103,17 @@ class ConfigConverterTest extends TestCase
                 ],
                 'full_name'  => [
                     'propertyName' => 'fullName',
-                    'name'         => 'UserFullName',
-                    'namespace'    => 'MyVendor\User',
+                    'className'    => 'MyVendor\User\UserFullName',
                     'suggestions'  => ['JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString'],
                 ],
                 'name'       => [
                     'propertyName' => 'name',
-                    'name'         => 'UserName',
-                    'namespace'    => 'MyVendor\User',
+                    'className'    => 'MyVendor\User\UserName',
                     'suggestions'  => ['JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString'],
                 ],
                 'created_at' => [
                     'propertyName' => 'createdAt',
-                    'name'         => 'UserCreatedAt',
-                    'namespace'    => 'MyVendor\User',
+                    'className'    => 'MyVendor\User\UserCreatedAt',
                     'suggestions'  => [
                         'JsonToConfig\JsonDetector\ValueObject\Simple\SimpleDateTime',
                         'JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString',
@@ -166,16 +158,16 @@ class ConfigConverterTest extends TestCase
                 null,
                 [],
                 [],
-                new ConstructorMethod([new MethodParameter('userFullName', new ClassName('string'))]),
-                [Property::privateProperty('userFullName', new ClassName('string'))]
+                new ConstructorMethod([new MethodParameter('fullName', new ClassName('string'))]),
+                [Property::privateProperty('fullName', new ClassName('string'))]
             ),
             new SimpleValueObject(
                 new ClassName('UserName', 'MyVendor\\User'),
                 null,
                 [],
                 [],
-                new ConstructorMethod([new MethodParameter('userName', new ClassName('string'))]),
-                [Property::privateProperty('userName', new ClassName('string'))]
+                new ConstructorMethod([new MethodParameter('name', new ClassName('string'))]),
+                [Property::privateProperty('name', new ClassName('string'))]
             ),
             new DateTimeValueObject(
                 new ClassName('UserCreatedAt', 'MyVendor\\User'),

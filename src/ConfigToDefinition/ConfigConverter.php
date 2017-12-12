@@ -44,7 +44,7 @@ class ConfigConverter
             $parameters = $this->processFieldsToConstructorParameters($input['fields']);
             $properties = $this->processFieldsToProperties($input['fields']);
 
-            $className = new ClassName($input['name'], $input['namespace']);
+            $className = ClassName::createFromFullyQualified($input['className']);
 
             if (true === empty($parameters)) {
                 $constructor = null;
@@ -89,7 +89,7 @@ class ConfigConverter
 
     private function createSimpleIdentifier(array $input)
     {
-        $className   = new ClassName($input['name'], $input['namespace']);
+        $className   = ClassName::createFromFullyQualified($input['className']);
         $constructor = new ConstructorMethod([new MethodParameter('id', new ClassName('int'))]);
         $properties  = [Property::privateProperty('id', new ClassName('int'))];
 
@@ -98,35 +98,35 @@ class ConfigConverter
 
     private function createSimpleStringValueObject(array $input)
     {
-        $className   = new ClassName($input['name'], $input['namespace']);
-        $constructor = new ConstructorMethod([new MethodParameter(lcfirst($input['name']), new ClassName('string'))]);
-        $properties  = [Property::privateProperty(lcfirst($input['name']), new ClassName('string'))];
+        $className   = ClassName::createFromFullyQualified($input['className']);
+        $constructor = new ConstructorMethod([new MethodParameter($input['propertyName'], new ClassName('string'))]);
+        $properties  = [Property::privateProperty($input['propertyName'], new ClassName('string'))];
 
         return new SimpleValueObject($className, null, [], [], $constructor, $properties);
     }
 
     private function createSimpleIntegerValueObject(array $input)
     {
-        $className   = new ClassName($input['name'], $input['namespace']);
-        $constructor = new ConstructorMethod([new MethodParameter(lcfirst($input['name']), new ClassName('int'))]);
-        $properties  = [Property::privateProperty(lcfirst($input['name']), new ClassName('int'))];
+        $className   = ClassName::createFromFullyQualified($input['className']);
+        $constructor = new ConstructorMethod([new MethodParameter($input['propertyName'], new ClassName('int'))]);
+        $properties  = [Property::privateProperty($input['propertyName'], new ClassName('int'))];
 
         return new SimpleValueObject($className, null, [], [], $constructor, $properties);
     }
 
     private function createSimpleBoolValueObject(array $input)
     {
-        $className = new ClassName($input['name'], $input['namespace']);
+        $className = ClassName::createFromFullyQualified($input['className']);
 
-        $constructor = new ConstructorMethod([new MethodParameter(lcfirst($input['name']), new ClassName('bool'))]);
-        $properties  = [Property::privateProperty(lcfirst($input['name']), new ClassName('bool'))];
+        $constructor = new ConstructorMethod([new MethodParameter($input['propertyName'], new ClassName('bool'))]);
+        $properties  = [Property::privateProperty($input['propertyName'], new ClassName('bool'))];
 
         return new SimpleValueObject($className, null, [], [], $constructor, $properties);
     }
 
     private function createSimpleDateTimeValueObject(array $input)
     {
-        $className = new ClassName($input['name'], $input['namespace']);
+        $className = ClassName::createFromFullyQualified($input['className']);
 
         $parent = new ClassName('DateTime');
 
@@ -138,7 +138,7 @@ class ConfigConverter
 
     private function createSimpleCollection(array $input)
     {
-        $className = new ClassName($input['name'], $input['namespace']);
+        $className = ClassName::createFromFullyQualified($input['className']);
 
         $constructor = new ConstructorMethod(
             [new MethodParameter('elements', new ClassName('array'), false, true, '[]')]
@@ -158,7 +158,7 @@ class ConfigConverter
         $parameters = [];
         foreach ($fields as $item) {
             $name      = $item['propertyName'];
-            $className = new ClassName($item['name'], $item['namespace']);
+            $className = ClassName::createFromFullyQualified($item['className']);
 
             $parameters[] = new MethodParameter($name, $className);
         }
@@ -171,7 +171,7 @@ class ConfigConverter
         $properties = [];
         foreach ($fields as $item) {
             $name      = $item['propertyName'];
-            $className = new ClassName($item['name'], $item['namespace']);
+            $className = ClassName::createFromFullyQualified($item['className']);
 
             $properties[] = Property::privateProperty($name, $className);
         }
