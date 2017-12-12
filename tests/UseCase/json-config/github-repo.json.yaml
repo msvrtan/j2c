@@ -1,6 +1,4 @@
 key: Repo
-name: Repo
-namespace: GitHub
 className: GitHub\Repo
 inputKey: ''
 sorting: 16
@@ -8,8 +6,6 @@ fields:
   id:
     key: id
     propertyName: id
-    name: RepoId
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoId
     inputKey: '["id"]'
     suggestions:
@@ -19,8 +15,6 @@ fields:
   default_branch:
     key: default_branch
     propertyName: defaultBranch
-    name: RepoDefaultBranch
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoDefaultBranch
     inputKey: '["default_branch"]'
     suggestions:
@@ -29,8 +23,6 @@ fields:
   description:
     key: description
     propertyName: description
-    name: RepoDescription
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoDescription
     inputKey: '["description"]'
     suggestions:
@@ -39,8 +31,6 @@ fields:
   forks:
     key: forks
     propertyName: forks
-    name: RepoForks
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoForks
     inputKey: '["forks"]'
     suggestions:
@@ -49,8 +39,6 @@ fields:
   forks_count:
     key: forks_count
     propertyName: forksCount
-    name: RepoForksCount
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoForksCount
     inputKey: '["forks_count"]'
     suggestions:
@@ -59,8 +47,6 @@ fields:
   full_name:
     key: full_name
     propertyName: fullName
-    name: RepoFullName
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoFullName
     inputKey: '["full_name"]'
     suggestions:
@@ -69,8 +55,6 @@ fields:
   homepage:
     key: homepage
     propertyName: homepage
-    name: RepoHomepage
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoHomepage
     inputKey: '["homepage"]'
     suggestions:
@@ -79,8 +63,6 @@ fields:
   language:
     key: language
     propertyName: language
-    name: RepoLanguage
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoLanguage
     inputKey: '["language"]'
     suggestions:
@@ -89,8 +71,6 @@ fields:
   name:
     key: name
     propertyName: name
-    name: RepoName
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoName
     inputKey: '["name"]'
     suggestions:
@@ -99,8 +79,6 @@ fields:
   network_count:
     key: network_count
     propertyName: networkCount
-    name: RepoNetworkCount
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoNetworkCount
     inputKey: '["network_count"]'
     suggestions:
@@ -109,8 +87,6 @@ fields:
   open_issues:
     key: open_issues
     propertyName: openIssues
-    name: RepoOpenIssues
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoOpenIssues
     inputKey: '["open_issues"]'
     suggestions:
@@ -119,8 +95,6 @@ fields:
   open_issues_count:
     key: open_issues_count
     propertyName: openIssuesCount
-    name: RepoOpenIssuesCount
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoOpenIssuesCount
     inputKey: '["open_issues_count"]'
     suggestions:
@@ -129,8 +103,6 @@ fields:
   size:
     key: size
     propertyName: size
-    name: RepoSize
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoSize
     inputKey: '["size"]'
     suggestions:
@@ -139,8 +111,6 @@ fields:
   ssh_url:
     key: ssh_url
     propertyName: sshUrl
-    name: RepoSshUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoSshUrl
     inputKey: '["ssh_url"]'
     suggestions:
@@ -149,8 +119,6 @@ fields:
   stargazers_count:
     key: stargazers_count
     propertyName: stargazersCount
-    name: RepoStargazersCount
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoStargazersCount
     inputKey: '["stargazers_count"]'
     suggestions:
@@ -159,8 +127,6 @@ fields:
   subscribers_count:
     key: subscribers_count
     propertyName: subscribersCount
-    name: RepoSubscribersCount
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoSubscribersCount
     inputKey: '["subscribers_count"]'
     suggestions:
@@ -169,8 +135,6 @@ fields:
   watchers:
     key: watchers
     propertyName: watchers
-    name: RepoWatchers
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoWatchers
     inputKey: '["watchers"]'
     suggestions:
@@ -179,8 +143,6 @@ fields:
   watchers_count:
     key: watchers_count
     propertyName: watchersCount
-    name: RepoWatchersCount
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoWatchersCount
     inputKey: '["watchers_count"]'
     suggestions:
@@ -189,8 +151,6 @@ fields:
   archived:
     key: archived
     propertyName: archived
-    name: RepoArchived
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoArchived
     inputKey: '["archived"]'
     suggestions:
@@ -199,8 +159,6 @@ fields:
   fork:
     key: fork
     propertyName: fork
-    name: RepoFork
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoFork
     inputKey: '["fork"]'
     suggestions:
@@ -209,8 +167,6 @@ fields:
   has_downloads:
     key: has_downloads
     propertyName: hasDownloads
-    name: RepoHasDownloads
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoHasDownloads
     inputKey: '["has_downloads"]'
     suggestions:
@@ -219,8 +175,6 @@ fields:
   has_issues:
     key: has_issues
     propertyName: hasIssues
-    name: RepoHasIssues
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoHasIssues
     inputKey: '["has_issues"]'
     suggestions:
@@ -229,8 +183,6 @@ fields:
   has_pages:
     key: has_pages
     propertyName: hasPages
-    name: RepoHasPages
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoHasPages
     inputKey: '["has_pages"]'
     suggestions:
@@ -239,8 +191,6 @@ fields:
   has_projects:
     key: has_projects
     propertyName: hasProjects
-    name: RepoHasProjects
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoHasProjects
     inputKey: '["has_projects"]'
     suggestions:
@@ -249,8 +199,6 @@ fields:
   has_wiki:
     key: has_wiki
     propertyName: hasWiki
-    name: RepoHasWiki
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoHasWiki
     inputKey: '["has_wiki"]'
     suggestions:
@@ -259,8 +207,6 @@ fields:
   mirror_url:
     key: mirror_url
     propertyName: mirrorUrl
-    name: RepoMirrorUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoMirrorUrl
     inputKey: '["mirror_url"]'
     suggestions:
@@ -269,8 +215,6 @@ fields:
   private:
     key: private
     propertyName: private
-    name: RepoPrivate
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoPrivate
     inputKey: '["private"]'
     suggestions:
@@ -279,8 +223,6 @@ fields:
   organization:
     key: Organization
     propertyName: organization
-    name: Organization
-    namespace: GitHub\Repo
     className: GitHub\Repo\Organization
     inputKey: '["organization"]'
     suggestions: {  }
@@ -289,8 +231,6 @@ fields:
       id:
         key: id
         propertyName: id
-        name: OrganizationId
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationId
         inputKey: '["organization"]["id"]'
         suggestions:
@@ -300,8 +240,6 @@ fields:
       gravatar_id:
         key: gravatar_id
         propertyName: gravatarId
-        name: OrganizationGravatarId
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationGravatarId
         inputKey: '["organization"]["gravatar_id"]'
         suggestions:
@@ -310,8 +248,6 @@ fields:
       login:
         key: login
         propertyName: login
-        name: OrganizationLogin
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationLogin
         inputKey: '["organization"]["login"]'
         suggestions:
@@ -320,8 +256,6 @@ fields:
       type:
         key: type
         propertyName: type
-        name: OrganizationType
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationType
         inputKey: '["organization"]["type"]'
         suggestions:
@@ -330,8 +264,6 @@ fields:
       site_admin:
         key: site_admin
         propertyName: siteAdmin
-        name: OrganizationSiteAdmin
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationSiteAdmin
         inputKey: '["organization"]["site_admin"]'
         suggestions:
@@ -340,8 +272,6 @@ fields:
       avatar_url:
         key: avatar_url
         propertyName: avatarUrl
-        name: OrganizationAvatarUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationAvatarUrl
         inputKey: '["organization"]["avatar_url"]'
         suggestions:
@@ -351,8 +281,6 @@ fields:
       events_url:
         key: events_url
         propertyName: eventsUrl
-        name: OrganizationEventsUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationEventsUrl
         inputKey: '["organization"]["events_url"]'
         suggestions:
@@ -362,8 +290,6 @@ fields:
       followers_url:
         key: followers_url
         propertyName: followersUrl
-        name: OrganizationFollowersUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationFollowersUrl
         inputKey: '["organization"]["followers_url"]'
         suggestions:
@@ -373,8 +299,6 @@ fields:
       following_url:
         key: following_url
         propertyName: followingUrl
-        name: OrganizationFollowingUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationFollowingUrl
         inputKey: '["organization"]["following_url"]'
         suggestions:
@@ -384,8 +308,6 @@ fields:
       gists_url:
         key: gists_url
         propertyName: gistsUrl
-        name: OrganizationGistsUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationGistsUrl
         inputKey: '["organization"]["gists_url"]'
         suggestions:
@@ -395,8 +317,6 @@ fields:
       html_url:
         key: html_url
         propertyName: htmlUrl
-        name: OrganizationHtmlUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationHtmlUrl
         inputKey: '["organization"]["html_url"]'
         suggestions:
@@ -406,8 +326,6 @@ fields:
       organizations_url:
         key: organizations_url
         propertyName: organizationsUrl
-        name: OrganizationOrganizationsUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationOrganizationsUrl
         inputKey: '["organization"]["organizations_url"]'
         suggestions:
@@ -417,8 +335,6 @@ fields:
       received_events_url:
         key: received_events_url
         propertyName: receivedEventsUrl
-        name: OrganizationReceivedEventsUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationReceivedEventsUrl
         inputKey: '["organization"]["received_events_url"]'
         suggestions:
@@ -428,8 +344,6 @@ fields:
       repos_url:
         key: repos_url
         propertyName: reposUrl
-        name: OrganizationReposUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationReposUrl
         inputKey: '["organization"]["repos_url"]'
         suggestions:
@@ -439,8 +353,6 @@ fields:
       starred_url:
         key: starred_url
         propertyName: starredUrl
-        name: OrganizationStarredUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationStarredUrl
         inputKey: '["organization"]["starred_url"]'
         suggestions:
@@ -450,8 +362,6 @@ fields:
       subscriptions_url:
         key: subscriptions_url
         propertyName: subscriptionsUrl
-        name: OrganizationSubscriptionsUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationSubscriptionsUrl
         inputKey: '["organization"]["subscriptions_url"]'
         suggestions:
@@ -461,8 +371,6 @@ fields:
       url:
         key: url
         propertyName: url
-        name: OrganizationUrl
-        namespace: GitHub\Repo\Organization
         className: GitHub\Repo\Organization\OrganizationUrl
         inputKey: '["organization"]["url"]'
         suggestions:
@@ -472,8 +380,6 @@ fields:
   owner:
     key: Owner
     propertyName: owner
-    name: Owner
-    namespace: GitHub\Repo
     className: GitHub\Repo\Owner
     inputKey: '["owner"]'
     suggestions: {  }
@@ -482,8 +388,6 @@ fields:
       id:
         key: id
         propertyName: id
-        name: OwnerId
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerId
         inputKey: '["owner"]["id"]'
         suggestions:
@@ -493,8 +397,6 @@ fields:
       gravatar_id:
         key: gravatar_id
         propertyName: gravatarId
-        name: OwnerGravatarId
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerGravatarId
         inputKey: '["owner"]["gravatar_id"]'
         suggestions:
@@ -503,8 +405,6 @@ fields:
       login:
         key: login
         propertyName: login
-        name: OwnerLogin
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerLogin
         inputKey: '["owner"]["login"]'
         suggestions:
@@ -513,8 +413,6 @@ fields:
       type:
         key: type
         propertyName: type
-        name: OwnerType
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerType
         inputKey: '["owner"]["type"]'
         suggestions:
@@ -523,8 +421,6 @@ fields:
       site_admin:
         key: site_admin
         propertyName: siteAdmin
-        name: OwnerSiteAdmin
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerSiteAdmin
         inputKey: '["owner"]["site_admin"]'
         suggestions:
@@ -533,8 +429,6 @@ fields:
       avatar_url:
         key: avatar_url
         propertyName: avatarUrl
-        name: OwnerAvatarUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerAvatarUrl
         inputKey: '["owner"]["avatar_url"]'
         suggestions:
@@ -544,8 +438,6 @@ fields:
       events_url:
         key: events_url
         propertyName: eventsUrl
-        name: OwnerEventsUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerEventsUrl
         inputKey: '["owner"]["events_url"]'
         suggestions:
@@ -555,8 +447,6 @@ fields:
       followers_url:
         key: followers_url
         propertyName: followersUrl
-        name: OwnerFollowersUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerFollowersUrl
         inputKey: '["owner"]["followers_url"]'
         suggestions:
@@ -566,8 +456,6 @@ fields:
       following_url:
         key: following_url
         propertyName: followingUrl
-        name: OwnerFollowingUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerFollowingUrl
         inputKey: '["owner"]["following_url"]'
         suggestions:
@@ -577,8 +465,6 @@ fields:
       gists_url:
         key: gists_url
         propertyName: gistsUrl
-        name: OwnerGistsUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerGistsUrl
         inputKey: '["owner"]["gists_url"]'
         suggestions:
@@ -588,8 +474,6 @@ fields:
       html_url:
         key: html_url
         propertyName: htmlUrl
-        name: OwnerHtmlUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerHtmlUrl
         inputKey: '["owner"]["html_url"]'
         suggestions:
@@ -599,8 +483,6 @@ fields:
       organizations_url:
         key: organizations_url
         propertyName: organizationsUrl
-        name: OwnerOrganizationsUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerOrganizationsUrl
         inputKey: '["owner"]["organizations_url"]'
         suggestions:
@@ -610,8 +492,6 @@ fields:
       received_events_url:
         key: received_events_url
         propertyName: receivedEventsUrl
-        name: OwnerReceivedEventsUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerReceivedEventsUrl
         inputKey: '["owner"]["received_events_url"]'
         suggestions:
@@ -621,8 +501,6 @@ fields:
       repos_url:
         key: repos_url
         propertyName: reposUrl
-        name: OwnerReposUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerReposUrl
         inputKey: '["owner"]["repos_url"]'
         suggestions:
@@ -632,8 +510,6 @@ fields:
       starred_url:
         key: starred_url
         propertyName: starredUrl
-        name: OwnerStarredUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerStarredUrl
         inputKey: '["owner"]["starred_url"]'
         suggestions:
@@ -643,8 +519,6 @@ fields:
       subscriptions_url:
         key: subscriptions_url
         propertyName: subscriptionsUrl
-        name: OwnerSubscriptionsUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerSubscriptionsUrl
         inputKey: '["owner"]["subscriptions_url"]'
         suggestions:
@@ -654,8 +528,6 @@ fields:
       url:
         key: url
         propertyName: url
-        name: OwnerUrl
-        namespace: GitHub\Repo\Owner
         className: GitHub\Repo\Owner\OwnerUrl
         inputKey: '["owner"]["url"]'
         suggestions:
@@ -665,8 +537,6 @@ fields:
   permissions:
     key: Permissions
     propertyName: permissions
-    name: Permissions
-    namespace: GitHub\Repo
     className: GitHub\Repo\Permissions
     inputKey: '["permissions"]'
     suggestions: {  }
@@ -675,8 +545,6 @@ fields:
       admin:
         key: admin
         propertyName: admin
-        name: PermissionsAdmin
-        namespace: GitHub\Repo\Permissions
         className: GitHub\Repo\Permissions\PermissionsAdmin
         inputKey: '["permissions"]["admin"]'
         suggestions:
@@ -685,8 +553,6 @@ fields:
       pull:
         key: pull
         propertyName: pull
-        name: PermissionsPull
-        namespace: GitHub\Repo\Permissions
         className: GitHub\Repo\Permissions\PermissionsPull
         inputKey: '["permissions"]["pull"]'
         suggestions:
@@ -695,8 +561,6 @@ fields:
       push:
         key: push
         propertyName: push
-        name: PermissionsPush
-        namespace: GitHub\Repo\Permissions
         className: GitHub\Repo\Permissions\PermissionsPush
         inputKey: '["permissions"]["push"]'
         suggestions:
@@ -705,8 +569,6 @@ fields:
   archive_url:
     key: archive_url
     propertyName: archiveUrl
-    name: RepoArchiveUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoArchiveUrl
     inputKey: '["archive_url"]'
     suggestions:
@@ -716,8 +578,6 @@ fields:
   assignees_url:
     key: assignees_url
     propertyName: assigneesUrl
-    name: RepoAssigneesUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoAssigneesUrl
     inputKey: '["assignees_url"]'
     suggestions:
@@ -727,8 +587,6 @@ fields:
   blobs_url:
     key: blobs_url
     propertyName: blobsUrl
-    name: RepoBlobsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoBlobsUrl
     inputKey: '["blobs_url"]'
     suggestions:
@@ -738,8 +596,6 @@ fields:
   branches_url:
     key: branches_url
     propertyName: branchesUrl
-    name: RepoBranchesUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoBranchesUrl
     inputKey: '["branches_url"]'
     suggestions:
@@ -749,8 +605,6 @@ fields:
   clone_url:
     key: clone_url
     propertyName: cloneUrl
-    name: RepoCloneUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoCloneUrl
     inputKey: '["clone_url"]'
     suggestions:
@@ -760,8 +614,6 @@ fields:
   collaborators_url:
     key: collaborators_url
     propertyName: collaboratorsUrl
-    name: RepoCollaboratorsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoCollaboratorsUrl
     inputKey: '["collaborators_url"]'
     suggestions:
@@ -771,8 +623,6 @@ fields:
   comments_url:
     key: comments_url
     propertyName: commentsUrl
-    name: RepoCommentsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoCommentsUrl
     inputKey: '["comments_url"]'
     suggestions:
@@ -782,8 +632,6 @@ fields:
   commits_url:
     key: commits_url
     propertyName: commitsUrl
-    name: RepoCommitsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoCommitsUrl
     inputKey: '["commits_url"]'
     suggestions:
@@ -793,8 +641,6 @@ fields:
   compare_url:
     key: compare_url
     propertyName: compareUrl
-    name: RepoCompareUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoCompareUrl
     inputKey: '["compare_url"]'
     suggestions:
@@ -804,8 +650,6 @@ fields:
   contents_url:
     key: contents_url
     propertyName: contentsUrl
-    name: RepoContentsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoContentsUrl
     inputKey: '["contents_url"]'
     suggestions:
@@ -815,8 +659,6 @@ fields:
   contributors_url:
     key: contributors_url
     propertyName: contributorsUrl
-    name: RepoContributorsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoContributorsUrl
     inputKey: '["contributors_url"]'
     suggestions:
@@ -826,8 +668,6 @@ fields:
   deployments_url:
     key: deployments_url
     propertyName: deploymentsUrl
-    name: RepoDeploymentsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoDeploymentsUrl
     inputKey: '["deployments_url"]'
     suggestions:
@@ -837,8 +677,6 @@ fields:
   downloads_url:
     key: downloads_url
     propertyName: downloadsUrl
-    name: RepoDownloadsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoDownloadsUrl
     inputKey: '["downloads_url"]'
     suggestions:
@@ -848,8 +686,6 @@ fields:
   events_url:
     key: events_url
     propertyName: eventsUrl
-    name: RepoEventsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoEventsUrl
     inputKey: '["events_url"]'
     suggestions:
@@ -859,8 +695,6 @@ fields:
   forks_url:
     key: forks_url
     propertyName: forksUrl
-    name: RepoForksUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoForksUrl
     inputKey: '["forks_url"]'
     suggestions:
@@ -870,8 +704,6 @@ fields:
   git_commits_url:
     key: git_commits_url
     propertyName: gitCommitsUrl
-    name: RepoGitCommitsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoGitCommitsUrl
     inputKey: '["git_commits_url"]'
     suggestions:
@@ -881,8 +713,6 @@ fields:
   git_refs_url:
     key: git_refs_url
     propertyName: gitRefsUrl
-    name: RepoGitRefsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoGitRefsUrl
     inputKey: '["git_refs_url"]'
     suggestions:
@@ -892,8 +722,6 @@ fields:
   git_tags_url:
     key: git_tags_url
     propertyName: gitTagsUrl
-    name: RepoGitTagsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoGitTagsUrl
     inputKey: '["git_tags_url"]'
     suggestions:
@@ -903,8 +731,6 @@ fields:
   git_url:
     key: git_url
     propertyName: gitUrl
-    name: RepoGitUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoGitUrl
     inputKey: '["git_url"]'
     suggestions:
@@ -914,8 +740,6 @@ fields:
   hooks_url:
     key: hooks_url
     propertyName: hooksUrl
-    name: RepoHooksUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoHooksUrl
     inputKey: '["hooks_url"]'
     suggestions:
@@ -925,8 +749,6 @@ fields:
   html_url:
     key: html_url
     propertyName: htmlUrl
-    name: RepoHtmlUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoHtmlUrl
     inputKey: '["html_url"]'
     suggestions:
@@ -936,8 +758,6 @@ fields:
   issue_comment_url:
     key: issue_comment_url
     propertyName: issueCommentUrl
-    name: RepoIssueCommentUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoIssueCommentUrl
     inputKey: '["issue_comment_url"]'
     suggestions:
@@ -947,8 +767,6 @@ fields:
   issue_events_url:
     key: issue_events_url
     propertyName: issueEventsUrl
-    name: RepoIssueEventsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoIssueEventsUrl
     inputKey: '["issue_events_url"]'
     suggestions:
@@ -958,8 +776,6 @@ fields:
   issues_url:
     key: issues_url
     propertyName: issuesUrl
-    name: RepoIssuesUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoIssuesUrl
     inputKey: '["issues_url"]'
     suggestions:
@@ -969,8 +785,6 @@ fields:
   keys_url:
     key: keys_url
     propertyName: keysUrl
-    name: RepoKeysUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoKeysUrl
     inputKey: '["keys_url"]'
     suggestions:
@@ -980,8 +794,6 @@ fields:
   labels_url:
     key: labels_url
     propertyName: labelsUrl
-    name: RepoLabelsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoLabelsUrl
     inputKey: '["labels_url"]'
     suggestions:
@@ -991,8 +803,6 @@ fields:
   languages_url:
     key: languages_url
     propertyName: languagesUrl
-    name: RepoLanguagesUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoLanguagesUrl
     inputKey: '["languages_url"]'
     suggestions:
@@ -1002,8 +812,6 @@ fields:
   merges_url:
     key: merges_url
     propertyName: mergesUrl
-    name: RepoMergesUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoMergesUrl
     inputKey: '["merges_url"]'
     suggestions:
@@ -1013,8 +821,6 @@ fields:
   milestones_url:
     key: milestones_url
     propertyName: milestonesUrl
-    name: RepoMilestonesUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoMilestonesUrl
     inputKey: '["milestones_url"]'
     suggestions:
@@ -1024,8 +830,6 @@ fields:
   notifications_url:
     key: notifications_url
     propertyName: notificationsUrl
-    name: RepoNotificationsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoNotificationsUrl
     inputKey: '["notifications_url"]'
     suggestions:
@@ -1035,8 +839,6 @@ fields:
   pulls_url:
     key: pulls_url
     propertyName: pullsUrl
-    name: RepoPullsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoPullsUrl
     inputKey: '["pulls_url"]'
     suggestions:
@@ -1046,8 +848,6 @@ fields:
   releases_url:
     key: releases_url
     propertyName: releasesUrl
-    name: RepoReleasesUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoReleasesUrl
     inputKey: '["releases_url"]'
     suggestions:
@@ -1057,8 +857,6 @@ fields:
   stargazers_url:
     key: stargazers_url
     propertyName: stargazersUrl
-    name: RepoStargazersUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoStargazersUrl
     inputKey: '["stargazers_url"]'
     suggestions:
@@ -1068,8 +866,6 @@ fields:
   statuses_url:
     key: statuses_url
     propertyName: statusesUrl
-    name: RepoStatusesUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoStatusesUrl
     inputKey: '["statuses_url"]'
     suggestions:
@@ -1079,8 +875,6 @@ fields:
   subscribers_url:
     key: subscribers_url
     propertyName: subscribersUrl
-    name: RepoSubscribersUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoSubscribersUrl
     inputKey: '["subscribers_url"]'
     suggestions:
@@ -1090,8 +884,6 @@ fields:
   subscription_url:
     key: subscription_url
     propertyName: subscriptionUrl
-    name: RepoSubscriptionUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoSubscriptionUrl
     inputKey: '["subscription_url"]'
     suggestions:
@@ -1101,8 +893,6 @@ fields:
   svn_url:
     key: svn_url
     propertyName: svnUrl
-    name: RepoSvnUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoSvnUrl
     inputKey: '["svn_url"]'
     suggestions:
@@ -1112,8 +902,6 @@ fields:
   tags_url:
     key: tags_url
     propertyName: tagsUrl
-    name: RepoTagsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoTagsUrl
     inputKey: '["tags_url"]'
     suggestions:
@@ -1123,8 +911,6 @@ fields:
   teams_url:
     key: teams_url
     propertyName: teamsUrl
-    name: RepoTeamsUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoTeamsUrl
     inputKey: '["teams_url"]'
     suggestions:
@@ -1134,8 +920,6 @@ fields:
   trees_url:
     key: trees_url
     propertyName: treesUrl
-    name: RepoTreesUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoTreesUrl
     inputKey: '["trees_url"]'
     suggestions:
@@ -1145,8 +929,6 @@ fields:
   url:
     key: url
     propertyName: url
-    name: RepoUrl
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoUrl
     inputKey: '["url"]'
     suggestions:
@@ -1156,8 +938,6 @@ fields:
   created_at:
     key: created_at
     propertyName: createdAt
-    name: RepoCreatedAt
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoCreatedAt
     inputKey: '["created_at"]'
     suggestions:
@@ -1167,8 +947,6 @@ fields:
   pushed_at:
     key: pushed_at
     propertyName: pushedAt
-    name: RepoPushedAt
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoPushedAt
     inputKey: '["pushed_at"]'
     suggestions:
@@ -1178,8 +956,6 @@ fields:
   updated_at:
     key: updated_at
     propertyName: updatedAt
-    name: RepoUpdatedAt
-    namespace: GitHub\Repo
     className: GitHub\Repo\RepoUpdatedAt
     inputKey: '["updated_at"]'
     suggestions:

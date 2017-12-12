@@ -1,6 +1,4 @@
 key: User
-name: User
-namespace: MyVendor
 className: MyVendor\User
 inputKey: ''
 sorting: 16
@@ -8,8 +6,6 @@ fields:
   id:
     key: id
     propertyName: id
-    name: UserId
-    namespace: MyVendor\User
     className: MyVendor\User\UserId
     inputKey: '["id"]'
     suggestions:
@@ -19,8 +15,6 @@ fields:
   full_name:
     key: full_name
     propertyName: fullName
-    name: UserFullName
-    namespace: MyVendor\User
     className: MyVendor\User\UserFullName
     inputKey: '["full_name"]'
     suggestions:
@@ -29,8 +23,6 @@ fields:
   name:
     key: name
     propertyName: name
-    name: UserName
-    namespace: MyVendor\User
     className: MyVendor\User\UserName
     inputKey: '["name"]'
     suggestions:
@@ -39,8 +31,6 @@ fields:
   address:
     key: Address
     propertyName: address
-    name: Address
-    namespace: MyVendor\User
     className: MyVendor\User\Address
     inputKey: '["address"]'
     suggestions: {  }
@@ -49,8 +39,6 @@ fields:
       streetName:
         key: streetName
         propertyName: streetName
-        name: AddressStreetName
-        namespace: MyVendor\User\Address
         className: MyVendor\User\Address\AddressStreetName
         inputKey: '["address"]["streetName"]'
         suggestions:
@@ -59,8 +47,6 @@ fields:
       street_number:
         key: street_number
         propertyName: streetNumber
-        name: AddressStreetNumber
-        namespace: MyVendor\User\Address
         className: MyVendor\User\Address\AddressStreetNumber
         inputKey: '["address"]["street_number"]'
         suggestions:

@@ -1,6 +1,4 @@
 key: CommitStatus
-name: CommitStatus
-namespace: GitHub
 className: GitHub\CommitStatus
 inputKey: ''
 sorting: 16
@@ -8,8 +6,6 @@ fields:
   id:
     key: id
     propertyName: id
-    name: CommitStatusId
-    namespace: GitHub\CommitStatus
     className: GitHub\CommitStatus\CommitStatusId
     inputKey: '["id"]'
     suggestions:
@@ -20,8 +16,6 @@ fields:
   context:
     key: context
     propertyName: context
-    name: CommitStatusContext
-    namespace: GitHub\CommitStatus
     className: GitHub\CommitStatus\CommitStatusContext
     inputKey: '["context"]'
     suggestions:
@@ -30,8 +24,6 @@ fields:
   description:
     key: description
     propertyName: description
-    name: CommitStatusDescription
-    namespace: GitHub\CommitStatus
     className: GitHub\CommitStatus\CommitStatusDescription
     inputKey: '["description"]'
     suggestions:
@@ -40,8 +32,6 @@ fields:
   state:
     key: state
     propertyName: state
-    name: CommitStatusState
-    namespace: GitHub\CommitStatus
     className: GitHub\CommitStatus\CommitStatusState
     inputKey: '["state"]'
     suggestions:
@@ -50,8 +40,6 @@ fields:
   creator:
     key: Creator
     propertyName: creator
-    name: Creator
-    namespace: GitHub\CommitStatus
     className: GitHub\CommitStatus\Creator
     inputKey: '["creator"]'
     suggestions: {  }
@@ -60,8 +48,6 @@ fields:
       id:
         key: id
         propertyName: id
-        name: CreatorId
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorId
         inputKey: '["creator"]["id"]'
         suggestions:
@@ -71,8 +57,6 @@ fields:
       gravatar_id:
         key: gravatar_id
         propertyName: gravatarId
-        name: CreatorGravatarId
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorGravatarId
         inputKey: '["creator"]["gravatar_id"]'
         suggestions:
@@ -81,8 +65,6 @@ fields:
       login:
         key: login
         propertyName: login
-        name: CreatorLogin
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorLogin
         inputKey: '["creator"]["login"]'
         suggestions:
@@ -91,8 +73,6 @@ fields:
       type:
         key: type
         propertyName: type
-        name: CreatorType
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorType
         inputKey: '["creator"]["type"]'
         suggestions:
@@ -101,8 +81,6 @@ fields:
       site_admin:
         key: site_admin
         propertyName: siteAdmin
-        name: CreatorSiteAdmin
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorSiteAdmin
         inputKey: '["creator"]["site_admin"]'
         suggestions:
@@ -111,8 +89,6 @@ fields:
       avatar_url:
         key: avatar_url
         propertyName: avatarUrl
-        name: CreatorAvatarUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorAvatarUrl
         inputKey: '["creator"]["avatar_url"]'
         suggestions:
@@ -122,8 +98,6 @@ fields:
       events_url:
         key: events_url
         propertyName: eventsUrl
-        name: CreatorEventsUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorEventsUrl
         inputKey: '["creator"]["events_url"]'
         suggestions:
@@ -133,8 +107,6 @@ fields:
       followers_url:
         key: followers_url
         propertyName: followersUrl
-        name: CreatorFollowersUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorFollowersUrl
         inputKey: '["creator"]["followers_url"]'
         suggestions:
@@ -144,8 +116,6 @@ fields:
       following_url:
         key: following_url
         propertyName: followingUrl
-        name: CreatorFollowingUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorFollowingUrl
         inputKey: '["creator"]["following_url"]'
         suggestions:
@@ -155,8 +125,6 @@ fields:
       gists_url:
         key: gists_url
         propertyName: gistsUrl
-        name: CreatorGistsUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorGistsUrl
         inputKey: '["creator"]["gists_url"]'
         suggestions:
@@ -166,8 +134,6 @@ fields:
       html_url:
         key: html_url
         propertyName: htmlUrl
-        name: CreatorHtmlUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorHtmlUrl
         inputKey: '["creator"]["html_url"]'
         suggestions:
@@ -177,8 +143,6 @@ fields:
       organizations_url:
         key: organizations_url
         propertyName: organizationsUrl
-        name: CreatorOrganizationsUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorOrganizationsUrl
         inputKey: '["creator"]["organizations_url"]'
         suggestions:
@@ -188,8 +152,6 @@ fields:
       received_events_url:
         key: received_events_url
         propertyName: receivedEventsUrl
-        name: CreatorReceivedEventsUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorReceivedEventsUrl
         inputKey: '["creator"]["received_events_url"]'
         suggestions:
@@ -199,8 +161,6 @@ fields:
       repos_url:
         key: repos_url
         propertyName: reposUrl
-        name: CreatorReposUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorReposUrl
         inputKey: '["creator"]["repos_url"]'
         suggestions:
@@ -210,8 +170,6 @@ fields:
       starred_url:
         key: starred_url
         propertyName: starredUrl
-        name: CreatorStarredUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorStarredUrl
         inputKey: '["creator"]["starred_url"]'
         suggestions:
@@ -221,8 +179,6 @@ fields:
       subscriptions_url:
         key: subscriptions_url
         propertyName: subscriptionsUrl
-        name: CreatorSubscriptionsUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorSubscriptionsUrl
         inputKey: '["creator"]["subscriptions_url"]'
         suggestions:
@@ -232,8 +188,6 @@ fields:
       url:
         key: url
         propertyName: url
-        name: CreatorUrl
-        namespace: GitHub\CommitStatus\Creator
         className: GitHub\CommitStatus\Creator\CreatorUrl
         inputKey: '["creator"]["url"]'
         suggestions:
@@ -243,8 +197,6 @@ fields:
   target_url:
     key: target_url
     propertyName: targetUrl
-    name: CommitStatusTargetUrl
-    namespace: GitHub\CommitStatus
     className: GitHub\CommitStatus\CommitStatusTargetUrl
     inputKey: '["target_url"]'
     suggestions:
@@ -254,8 +206,6 @@ fields:
   url:
     key: url
     propertyName: url
-    name: CommitStatusUrl
-    namespace: GitHub\CommitStatus
     className: GitHub\CommitStatus\CommitStatusUrl
     inputKey: '["url"]'
     suggestions:
@@ -265,8 +215,6 @@ fields:
   created_at:
     key: created_at
     propertyName: createdAt
-    name: CommitStatusCreatedAt
-    namespace: GitHub\CommitStatus
     className: GitHub\CommitStatus\CommitStatusCreatedAt
     inputKey: '["created_at"]'
     suggestions:
@@ -276,8 +224,6 @@ fields:
   updated_at:
     key: updated_at
     propertyName: updatedAt
-    name: CommitStatusUpdatedAt
-    namespace: GitHub\CommitStatus
     className: GitHub\CommitStatus\CommitStatusUpdatedAt
     inputKey: '["updated_at"]'
     suggestions:
