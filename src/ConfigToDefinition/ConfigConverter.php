@@ -36,6 +36,10 @@ class ConfigConverter
     /** @SuppressWarnings(PHPMD.CyclomaticComplexity) */
     public function convert(array $input)
     {
+        if (true === in_array($input['className'], ['int', 'string', 'float', 'bool', 'array', 'DateTime'])) {
+            return [];
+        }
+
         $results = [];
 
         if ((false === array_key_exists('suggestions', $input))
@@ -160,7 +164,13 @@ class ConfigConverter
             $name      = $item['propertyName'];
             $className = ClassName::createFromFullyQualified($item['className']);
 
-            $parameters[] = new MethodParameter($name, $className);
+            if (true === in_array(NullFound::class, $item['suggestions'])) {
+                $nullable = true;
+            } else {
+                $nullable = false;
+            }
+
+            $parameters[] = new MethodParameter($name, $className, $nullable);
         }
 
         return $parameters;
@@ -173,7 +183,13 @@ class ConfigConverter
             $name      = $item['propertyName'];
             $className = ClassName::createFromFullyQualified($item['className']);
 
-            $properties[] = Property::privateProperty($name, $className);
+            if (true === in_array(NullFound::class, $item['suggestions'])) {
+                $nullable = true;
+            } else {
+                $nullable = false;
+            }
+
+            $properties[] = Property::privateProperty($name, $className, $nullable);
         }
 
         return $properties;

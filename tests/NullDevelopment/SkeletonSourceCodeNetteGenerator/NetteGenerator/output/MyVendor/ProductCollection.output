@@ -13,6 +13,9 @@ class ProductCollection
     private $elements;
 
 
+    /**
+     * @param ProductEntity[] $elements
+     */
     public function __construct(array $elements = [])
     {
         Assert::allIsInstanceOf($elements, ProductEntity::class);
@@ -29,7 +32,7 @@ class ProductCollection
     public function has(ProductId $id): bool
     {
         foreach ($this->elements as $element) {
-            if ($element->getId()->getId() == $id->getId()) {
+            if ($element->getId() == $id) {
                 return true;
             }
         }
@@ -40,7 +43,7 @@ class ProductCollection
     public function get(ProductId $id)
     {
         foreach ($this->elements as $element) {
-            if ($element->getId()->getId() == $id->getId()) {
+            if ($element->getId() == $id) {
                 return $element;
             }
         }

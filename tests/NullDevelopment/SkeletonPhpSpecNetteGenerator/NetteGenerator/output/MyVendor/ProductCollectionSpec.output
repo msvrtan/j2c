@@ -46,7 +46,6 @@ class ProductCollectionSpec extends ObjectBehavior
     public function it_knows_if_element_is_in_collection(ProductEntity $productEntity, ProductId $productId)
     {
         $productEntity->getId()->shouldBeCalled()->willReturn($productId);
-        $productId->getId()->shouldBeCalled()->willReturn(1);
         $this->has($productId)->shouldReturn(true);
     }
 
@@ -54,7 +53,6 @@ class ProductCollectionSpec extends ObjectBehavior
     public function it_can_return_element_from_collection_by_given_id(ProductEntity $productEntity, ProductId $productId)
     {
         $productEntity->getId()->shouldBeCalled()->willReturn($productId);
-        $productId->getId()->shouldBeCalled()->willReturn(1);
         $this->get($productId)->shouldReturn($productEntity);
     }
 }

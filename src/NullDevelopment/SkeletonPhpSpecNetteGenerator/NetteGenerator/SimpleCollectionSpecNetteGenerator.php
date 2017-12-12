@@ -105,7 +105,7 @@ class SimpleCollectionSpecNetteGenerator extends BaseNetteGenerator
 
             $hasMethod = $class->addMethod('it_knows_if_element_is_in_collection')
                 ->addBody(sprintf('$%s->getId()->shouldBeCalled()->willReturn($%s);', $variableName, $idName))
-                ->addBody(sprintf('$%s->getId()->shouldBeCalled()->willReturn(1);', $idName))
+                //->addBody(sprintf('$%s->getId()->shouldBeCalled()->willReturn(1);', $idName))
                 ->addBody(sprintf('$this->has($%s)->shouldReturn(true);', $idName));
 
             $hasMethod->addParameter($variableName)
@@ -118,7 +118,7 @@ class SimpleCollectionSpecNetteGenerator extends BaseNetteGenerator
 
             $getMethod = $class->addMethod('it_can_return_element_from_collection_by_given_id')
                 ->addBody(sprintf('$%s->getId()->shouldBeCalled()->willReturn($%s);', $variableName, $idName))
-                ->addBody(sprintf('$%s->getId()->shouldBeCalled()->willReturn(1);', $idName))
+                //->addBody(sprintf('$%s->getId()->shouldBeCalled()->willReturn(1);', $idName))
                 ->addBody(sprintf('$this->get($%s)->shouldReturn($%s);', $idName, $variableName));
 
             $getMethod->addParameter($variableName)

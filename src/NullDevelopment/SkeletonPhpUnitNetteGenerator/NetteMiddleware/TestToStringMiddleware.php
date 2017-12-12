@@ -20,17 +20,13 @@ class TestToStringMiddleware implements PartialCodeGeneratorMiddleware
         foreach ($namespace->getClasses() as $class) {
             /* @var Property $property */
             foreach ($definition->getProperties() as $property) {
-                $cast = '';
-
                 if (true === in_array($property->getStructureFullName(), ['int', 'float'])) {
-                    $cast = '(string) ';
+                    $body = sprintf('self::assertSame((string) $this->%s, $this->sut->__toString());', $property->getName());
+                } elseif (true === in_array($property->getStructureFullName(), ['bool'])) {
+                    $body = 'self::assertSame(\'true\', $this->sut->__toString());';
+                } else {
+                    $body = sprintf('self::assertSame($this->%s, $this->sut->__toString());', $property->getName());
                 }
-
-                $body = sprintf(
-                    'self::assertSame(%s$this->%s, $this->sut->__toString());',
-                    $cast,
-                    $property->getName()
-                );
 
                 $class->addMethod('testToString')->addBody($body);
             }

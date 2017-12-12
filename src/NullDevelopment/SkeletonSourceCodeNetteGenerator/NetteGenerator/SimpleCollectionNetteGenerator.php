@@ -65,6 +65,7 @@ class SimpleCollectionNetteGenerator extends BaseNetteGenerator
             $constructorMethod->addBody(
                 sprintf('Assert::allIsInstanceOf($elements, %s::class);', $collectionOf)
             );
+            $constructorMethod->addComment(sprintf('@param %s[] $elements', $collectionOf));
 
             /** @var MethodParameter $parameter */
             foreach ($definition->getConstructorParameters() as $parameter) {
@@ -90,7 +91,7 @@ class SimpleCollectionNetteGenerator extends BaseNetteGenerator
             $hasMethod = $class->addMethod('has')
                 ->setReturnType('bool')
                 ->addBody('foreach ($this->elements as $element) {')
-                ->addBody('    if ($element->getId()->getId() == $id->getId()) {')
+                ->addBody(sprintf('    if ($element->%s() == $id) {', $definition->getCollectionOf()->getAccessor()))
                 ->addBody('        return true;')
                 ->addBody('    }')
                 ->addBody('}')
@@ -101,7 +102,7 @@ class SimpleCollectionNetteGenerator extends BaseNetteGenerator
 
             $getMethod = $class->addMethod('get')
                 ->addBody('foreach ($this->elements as $element) {')
-                ->addBody('    if ($element->getId()->getId() == $id->getId()) {')
+                ->addBody(sprintf('    if ($element->%s() == $id) {', $definition->getCollectionOf()->getAccessor()))
                 ->addBody('        return $element;')
                 ->addBody('    }')
                 ->addBody('}')
@@ -115,8 +116,6 @@ class SimpleCollectionNetteGenerator extends BaseNetteGenerator
             $class->addMethod('count')->setReturnType('int')->addBody('return count($this->elements);');
 
             ///
-            ///
-            ///
 
             $serializeMethod = $class->addMethod('serialize')
                 ->setReturnType('array');
@@ -127,8 +126,6 @@ class SimpleCollectionNetteGenerator extends BaseNetteGenerator
             $serializeMethod->addBody('}');
             $serializeMethod->addBody('return $data;');
 
-            ///
-            ///
             ///
 
             $deserializeMethod = $class->addMethod('deserialize')->setStatic(true)->setReturnType('self');

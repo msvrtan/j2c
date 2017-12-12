@@ -96,9 +96,9 @@ class Config
 
             if (true === in_array(SimpleCollection::class, $resultItem['suggestions'])) {
                 $resultItem['collectionOf'] =[
-                    'className' => 'TODO2',
+                    'className' => 'string',
                     'accessor'  => 'getId',
-                    'has'       => 'TODO3',
+                    'has'       => 'string',
                 ];
             }
 
