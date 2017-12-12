@@ -1,0 +1,12 @@
+definition:
+  type: SimpleIdentifier
+  className: DevboardLib\GitHub\User\UserId
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    id:
+      className: int
+      nullable: false
+      hasDefault: false
+      default: null

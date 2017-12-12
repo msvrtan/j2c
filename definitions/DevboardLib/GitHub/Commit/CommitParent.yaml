@@ -1,0 +1,22 @@
+definition:
+  type: SimpleEntity
+  className: DevboardLib\GitHub\Commit\CommitParent
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constructor:
+    sha:
+      className: DevboardLib\GitHub\Commit\CommitSha
+      nullable: false
+      hasDefault: false
+      default: null
+    apiUrl:
+      className: DevboardLib\GitHub\Commit\CommitParent\ParentApiUrl
+      nullable: false
+      hasDefault: false
+      default: null
+    htmlUrl:
+      className: DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl
+      nullable: false
+      hasDefault: false
+      default: null
