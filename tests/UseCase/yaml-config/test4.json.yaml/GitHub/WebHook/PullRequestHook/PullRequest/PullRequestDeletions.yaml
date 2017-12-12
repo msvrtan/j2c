@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    pullRequestDeletions:
+    deletions:
       className: int
       nullable: false
       hasDefault: false

@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    committerType:
+    type:
       className: string
       nullable: false
       hasDefault: false

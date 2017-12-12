@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    permissionsAdmin:
+    admin:
       className: bool
       nullable: false
       hasDefault: false

@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    baseLabel:
+    label:
       className: string
       nullable: false
       hasDefault: false

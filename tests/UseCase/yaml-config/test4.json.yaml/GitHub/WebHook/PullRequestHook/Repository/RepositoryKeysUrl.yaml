@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repositoryKeysUrl:
+    keysUrl:
       className: string
       nullable: false
       hasDefault: false

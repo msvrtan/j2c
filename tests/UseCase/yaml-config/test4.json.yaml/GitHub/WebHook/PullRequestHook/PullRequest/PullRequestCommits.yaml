@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    pullRequestCommits:
+    commits:
       className: int
       nullable: false
       hasDefault: false

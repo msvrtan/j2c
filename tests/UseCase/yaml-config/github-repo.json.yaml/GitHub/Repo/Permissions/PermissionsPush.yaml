@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    permissionsPush:
+    push:
       className: bool
       nullable: false
       hasDefault: false

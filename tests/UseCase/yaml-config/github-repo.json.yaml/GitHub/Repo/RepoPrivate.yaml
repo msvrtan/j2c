@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repoPrivate:
+    private:
       className: bool
       nullable: false
       hasDefault: false

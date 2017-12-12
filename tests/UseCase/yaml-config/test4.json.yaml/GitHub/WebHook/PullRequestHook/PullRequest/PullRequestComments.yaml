@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    pullRequestComments:
+    comments:
       className: int
       nullable: false
       hasDefault: false

@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    pullRequestPatchUrl:
+    patchUrl:
       className: string
       nullable: false
       hasDefault: false

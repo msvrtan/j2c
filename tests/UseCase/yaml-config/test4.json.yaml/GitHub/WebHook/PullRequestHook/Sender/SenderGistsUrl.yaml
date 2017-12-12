@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    senderGistsUrl:
+    gistsUrl:
       className: string
       nullable: false
       hasDefault: false

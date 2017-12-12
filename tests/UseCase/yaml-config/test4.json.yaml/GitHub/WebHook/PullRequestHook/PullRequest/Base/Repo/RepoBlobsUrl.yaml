@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repoBlobsUrl:
+    blobsUrl:
       className: string
       nullable: false
       hasDefault: false

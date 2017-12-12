@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    userGravatarId:
+    gravatarId:
       className: string
       nullable: false
       hasDefault: false

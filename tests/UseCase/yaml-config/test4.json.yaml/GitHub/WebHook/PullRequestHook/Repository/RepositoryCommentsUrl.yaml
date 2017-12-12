@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repositoryCommentsUrl:
+    commentsUrl:
       className: string
       nullable: false
       hasDefault: false

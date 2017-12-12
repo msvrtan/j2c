@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    userType:
+    type:
       className: string
       nullable: false
       hasDefault: false

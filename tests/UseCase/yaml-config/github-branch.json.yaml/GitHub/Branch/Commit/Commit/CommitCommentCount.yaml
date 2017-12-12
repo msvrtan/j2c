@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    commitCommentCount:
+    commentCount:
       className: int
       nullable: false
       hasDefault: false

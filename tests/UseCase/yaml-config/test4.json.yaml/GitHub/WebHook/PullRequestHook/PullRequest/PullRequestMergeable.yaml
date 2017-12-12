@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    pullRequestMergeable:
+    mergeable:
       className: string
       nullable: false
       hasDefault: false

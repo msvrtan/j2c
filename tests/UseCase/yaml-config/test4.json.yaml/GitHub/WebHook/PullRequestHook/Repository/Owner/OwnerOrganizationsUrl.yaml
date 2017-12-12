@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    ownerOrganizationsUrl:
+    organizationsUrl:
       className: string
       nullable: false
       hasDefault: false

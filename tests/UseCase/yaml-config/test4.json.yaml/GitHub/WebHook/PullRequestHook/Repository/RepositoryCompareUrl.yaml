@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repositoryCompareUrl:
+    compareUrl:
       className: string
       nullable: false
       hasDefault: false

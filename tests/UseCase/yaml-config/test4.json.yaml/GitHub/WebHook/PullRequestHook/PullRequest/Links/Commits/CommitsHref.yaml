@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    commitsHref:
+    href:
       className: string
       nullable: false
       hasDefault: false

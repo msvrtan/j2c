@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    verificationVerified:
+    verified:
       className: bool
       nullable: false
       hasDefault: false

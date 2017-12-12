@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    repositoryLicense:
+    license:
       className: string
       nullable: false
       hasDefault: false
