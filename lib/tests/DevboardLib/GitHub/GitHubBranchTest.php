@@ -8,7 +8,6 @@ use DevboardLib\Generix\EmailAddress;
 use DevboardLib\Generix\GravatarId;
 use DevboardLib\GitHub\Account\AccountType;
 use DevboardLib\GitHub\Branch\BranchProtectionUrl;
-use DevboardLib\GitHub\Commit\Author\AuthorName;
 use DevboardLib\GitHub\Commit\CommitApiUrl;
 use DevboardLib\GitHub\Commit\CommitAuthor;
 use DevboardLib\GitHub\Commit\CommitAuthorDetails;
@@ -39,6 +38,7 @@ use DevboardLib\GitHub\User\UserHtmlUrl;
 use DevboardLib\GitHub\User\UserId;
 use DevboardLib\GitHub\User\UserLogin;
 use DevboardLib\Git\Branch\BranchName;
+use DevboardLib\Git\Commit\Author\AuthorName;
 use PHPUnit\Framework\TestCase;
 
 /**

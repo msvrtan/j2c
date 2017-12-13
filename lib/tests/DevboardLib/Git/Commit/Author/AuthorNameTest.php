@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\DevboardLib\GitHub\Commit\Author;
+namespace Tests\DevboardLib\Git\Commit\Author;
 
-use DevboardLib\GitHub\Commit\Author\AuthorName;
+use DevboardLib\Git\Commit\Author\AuthorName;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DevboardLib\GitHub\Commit\Author\AuthorName
+ * @covers \DevboardLib\Git\Commit\Author\AuthorName
  * @group  todo
  */
 class AuthorNameTest extends TestCase

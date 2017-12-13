@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DevboardLib\GitHub\Commit\Author;
+namespace DevboardLib\Git\Commit\Author;
 
 class AuthorName
 {

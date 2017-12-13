@@ -6,7 +6,7 @@ definition:
   traits: {  }
   constructor:
     name:
-      className: DevboardLib\GitHub\Commit\Author\AuthorName
+      className: DevboardLib\Git\Commit\Author\AuthorName
       nullable: false
       hasDefault: false
       default: null

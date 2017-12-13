@@ -1,6 +1,6 @@
 definition:
   type: SimpleValueObject
-  className: DevboardLib\GitHub\Commit\Author\AuthorName
+  className: DevboardLib\Git\Commit\Author\AuthorName
   parent: null
   interfaces: {  }
   traits: {  }

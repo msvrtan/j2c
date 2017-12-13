@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace spec\DevboardLib\GitHub\Commit\Author;
+namespace spec\DevboardLib\Git\Commit\Author;
 
-use DevboardLib\GitHub\Commit\Author\AuthorName;
+use DevboardLib\Git\Commit\Author\AuthorName;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

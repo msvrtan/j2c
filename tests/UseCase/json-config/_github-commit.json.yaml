@@ -34,7 +34,7 @@ fields:
       name:
         key: name
         propertyName: name
-        className: DevboardLib\GitHub\Commit\Author\AuthorName
+        className: DevboardLib\Git\Commit\Author\AuthorName
         inputKey: '["author"]["name"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
