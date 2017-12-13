@@ -14,7 +14,7 @@ use PHPUnit\Framework\TestCase;
 class AccountLoginTest extends TestCase
 {
     /** @var string */
-    private $login;
+    private $value;
 
     /** @var AccountLogin */
     private $sut;
@@ -22,31 +22,31 @@ class AccountLoginTest extends TestCase
 
     public function setUp()
     {
-        $this->login = 'login';
-        $this->sut = new AccountLogin($this->login);
+        $this->value = 'value';
+        $this->sut = new AccountLogin($this->value);
     }
 
 
-    public function testGetLogin()
+    public function testGetValue()
     {
-        self::assertSame($this->login, $this->sut->getLogin());
+        self::assertSame($this->value, $this->sut->getValue());
     }
 
 
     public function testToString()
     {
-        self::assertSame($this->login, $this->sut->__toString());
+        self::assertSame($this->value, $this->sut->__toString());
     }
 
 
     public function testSerialize()
     {
-        self::assertEquals($this->login, $this->sut->serialize());
+        self::assertEquals($this->value, $this->sut->serialize());
     }
 
 
     public function testDeserialize()
     {
-        self::assertEquals($this->sut, $this->sut->deserialize($this->login));
+        self::assertEquals($this->sut, $this->sut->deserialize($this->value));
     }
 }

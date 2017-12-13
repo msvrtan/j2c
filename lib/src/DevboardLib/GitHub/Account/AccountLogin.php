@@ -11,35 +11,35 @@ namespace DevboardLib\GitHub\Account;
 class AccountLogin
 {
     /** @var string */
-    private $login;
+    private $value;
 
 
-    public function __construct(string $login)
+    public function __construct(string $value)
     {
-        $this->login = $login;
+        $this->value = $value;
     }
 
 
-    public function getLogin(): string
+    public function getValue(): string
     {
-        return $this->login;
+        return $this->value;
     }
 
 
     public function __toString(): string
     {
-        return $this->login;
+        return $this->value;
     }
 
 
     public function serialize(): string
     {
-        return $this->login;
+        return $this->value;
     }
 
 
-    public static function deserialize(string $login): self
+    public static function deserialize(string $value): self
     {
-        return new self($login);
+        return new self($value);
     }
 }

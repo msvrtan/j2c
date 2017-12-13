@@ -5,7 +5,7 @@ definition:
   interfaces: {  }
   traits: {  }
   constructor:
-    login:
+    value:
       className: string
       nullable: false
       hasDefault: false

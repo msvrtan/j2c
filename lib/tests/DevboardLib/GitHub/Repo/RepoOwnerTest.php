@@ -51,7 +51,7 @@ class RepoOwnerTest extends TestCase
     public function setUp()
     {
         $this->id = new AccountId(1);
-        $this->login = new AccountLogin('login');
+        $this->login = new AccountLogin('value');
         $this->type = new AccountType('type');
         $this->avatarUrl = new AccountAvatarUrl('avatarUrl');
         $this->gravatarId = new GravatarId('value');

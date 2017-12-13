@@ -12,7 +12,7 @@ class AccountLoginSpec extends ObjectBehavior
 {
     public function let()
     {
-        $this->beConstructedWith($login = 'login');
+        $this->beConstructedWith($value = 'value');
     }
 
 
@@ -22,26 +22,26 @@ class AccountLoginSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_login()
+    public function it_exposes_value()
     {
-        $this->getLogin()->shouldReturn('login');
+        $this->getValue()->shouldReturn('value');
     }
 
 
     public function it_is_castable_to_string()
     {
-        $this->__toString()->shouldReturn('login');
+        $this->__toString()->shouldReturn('value');
     }
 
 
     public function it_is_serializable()
     {
-        $this->serialize()->shouldReturn('login');
+        $this->serialize()->shouldReturn('value');
     }
 
 
     public function it_is_deserializable()
     {
-        $this->deserialize('login')->shouldReturnAnInstanceOf(AccountLogin::class);
+        $this->deserialize('value')->shouldReturnAnInstanceOf(AccountLogin::class);
     }
 }
