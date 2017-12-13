@@ -54,7 +54,7 @@ class CommitAuthorDetailsTest extends TestCase
         $this->login = new UserLogin('login');
         $this->type = new AccountType('type');
         $this->avatarUrl = new UserAvatarUrl('avatarUrl');
-        $this->gravatarId = new GravatarId('gravatarId');
+        $this->gravatarId = new GravatarId('value');
         $this->htmlUrl = new UserHtmlUrl('htmlUrl');
         $this->apiUrl = new UserApiUrl('apiUrl');
         $this->siteAdmin = true;

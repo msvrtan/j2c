@@ -14,7 +14,7 @@ use PHPUnit\Framework\TestCase;
 class GravatarIdTest extends TestCase
 {
     /** @var string */
-    private $gravatarId;
+    private $value;
 
     /** @var GravatarId */
     private $sut;
@@ -22,31 +22,31 @@ class GravatarIdTest extends TestCase
 
     public function setUp()
     {
-        $this->gravatarId = 'gravatarId';
-        $this->sut = new GravatarId($this->gravatarId);
+        $this->value = 'value';
+        $this->sut = new GravatarId($this->value);
     }
 
 
-    public function testGetGravatarId()
+    public function testGetValue()
     {
-        self::assertSame($this->gravatarId, $this->sut->getGravatarId());
+        self::assertSame($this->value, $this->sut->getValue());
     }
 
 
     public function testToString()
     {
-        self::assertSame($this->gravatarId, $this->sut->__toString());
+        self::assertSame($this->value, $this->sut->__toString());
     }
 
 
     public function testSerialize()
     {
-        self::assertEquals($this->gravatarId, $this->sut->serialize());
+        self::assertEquals($this->value, $this->sut->serialize());
     }
 
 
     public function testDeserialize()
     {
-        self::assertEquals($this->sut, $this->sut->deserialize($this->gravatarId));
+        self::assertEquals($this->sut, $this->sut->deserialize($this->value));
     }
 }

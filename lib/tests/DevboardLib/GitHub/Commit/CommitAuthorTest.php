@@ -44,9 +44,9 @@ class CommitAuthorTest extends TestCase
     public function setUp()
     {
         $this->name = new AuthorName('name');
-        $this->email = new EmailAddress('email');
+        $this->email = new EmailAddress('value');
         $this->date = new CommitDate('2018-01-01 00:01:00');
-        $this->authorDetails = new CommitAuthorDetails(new UserId(1), new UserLogin('login'), new AccountType('type'), new UserAvatarUrl('avatarUrl'), new GravatarId('gravatarId'), new UserHtmlUrl('htmlUrl'), new UserApiUrl('apiUrl'), true);
+        $this->authorDetails = new CommitAuthorDetails(new UserId(1), new UserLogin('login'), new AccountType('type'), new UserAvatarUrl('avatarUrl'), new GravatarId('value'), new UserHtmlUrl('htmlUrl'), new UserApiUrl('apiUrl'), true);
         $this->sut = new CommitAuthor($this->name, $this->email, $this->date, $this->authorDetails);
     }
 

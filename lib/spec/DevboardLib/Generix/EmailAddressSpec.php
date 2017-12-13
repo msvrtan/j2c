@@ -12,7 +12,7 @@ class EmailAddressSpec extends ObjectBehavior
 {
     public function let()
     {
-        $this->beConstructedWith($email = 'email');
+        $this->beConstructedWith($value = 'value');
     }
 
 
@@ -22,26 +22,26 @@ class EmailAddressSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_email()
+    public function it_exposes_value()
     {
-        $this->getEmail()->shouldReturn('email');
+        $this->getValue()->shouldReturn('value');
     }
 
 
     public function it_is_castable_to_string()
     {
-        $this->__toString()->shouldReturn('email');
+        $this->__toString()->shouldReturn('value');
     }
 
 
     public function it_is_serializable()
     {
-        $this->serialize()->shouldReturn('email');
+        $this->serialize()->shouldReturn('value');
     }
 
 
     public function it_is_deserializable()
     {
-        $this->deserialize('email')->shouldReturnAnInstanceOf(EmailAddress::class);
+        $this->deserialize('value')->shouldReturnAnInstanceOf(EmailAddress::class);
     }
 }

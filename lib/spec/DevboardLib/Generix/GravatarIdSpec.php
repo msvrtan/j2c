@@ -12,7 +12,7 @@ class GravatarIdSpec extends ObjectBehavior
 {
     public function let()
     {
-        $this->beConstructedWith($gravatarId = 'gravatarId');
+        $this->beConstructedWith($value = 'value');
     }
 
 
@@ -22,26 +22,26 @@ class GravatarIdSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_gravatarId()
+    public function it_exposes_value()
     {
-        $this->getGravatarId()->shouldReturn('gravatarId');
+        $this->getValue()->shouldReturn('value');
     }
 
 
     public function it_is_castable_to_string()
     {
-        $this->__toString()->shouldReturn('gravatarId');
+        $this->__toString()->shouldReturn('value');
     }
 
 
     public function it_is_serializable()
     {
-        $this->serialize()->shouldReturn('gravatarId');
+        $this->serialize()->shouldReturn('value');
     }
 
 
     public function it_is_deserializable()
     {
-        $this->deserialize('gravatarId')->shouldReturnAnInstanceOf(GravatarId::class);
+        $this->deserialize('value')->shouldReturnAnInstanceOf(GravatarId::class);
     }
 }

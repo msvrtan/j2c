@@ -11,35 +11,35 @@ namespace DevboardLib\Generix;
 class GravatarId
 {
     /** @var string */
-    private $gravatarId;
+    private $value;
 
 
-    public function __construct(string $gravatarId)
+    public function __construct(string $value)
     {
-        $this->gravatarId = $gravatarId;
+        $this->value = $value;
     }
 
 
-    public function getGravatarId(): string
+    public function getValue(): string
     {
-        return $this->gravatarId;
+        return $this->value;
     }
 
 
     public function __toString(): string
     {
-        return $this->gravatarId;
+        return $this->value;
     }
 
 
     public function serialize(): string
     {
-        return $this->gravatarId;
+        return $this->value;
     }
 
 
-    public static function deserialize(string $gravatarId): self
+    public static function deserialize(string $value): self
     {
-        return new self($gravatarId);
+        return new self($value);
     }
 }

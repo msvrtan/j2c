@@ -84,8 +84,8 @@ class GitHubCommitTest extends TestCase
         $this->sha = new CommitSha('sha');
         $this->message = new CommitMessage('message');
         $this->commitDate = new CommitDate('2018-01-01 00:01:00');
-        $this->author = new CommitAuthor(new AuthorName('name'), new EmailAddress('email'), new CommitDate('2018-01-01 00:01:00'), new CommitAuthorDetails(new UserId(1), new UserLogin('login'), new AccountType('type'), new UserAvatarUrl('avatarUrl'), new GravatarId('gravatarId'), new UserHtmlUrl('htmlUrl'), new UserApiUrl('apiUrl'), true));
-        $this->committer = new CommitCommitter(new CommitterName('name'), new EmailAddress('email'), new CommitDate('2018-01-01 00:01:00'), new CommitCommitterDetails(new UserId(1), new UserLogin('login'), new AccountType('type'), new UserAvatarUrl('avatarUrl'), new GravatarId('gravatarId'), new UserHtmlUrl('htmlUrl'), new UserApiUrl('apiUrl'), true));
+        $this->author = new CommitAuthor(new AuthorName('name'), new EmailAddress('value'), new CommitDate('2018-01-01 00:01:00'), new CommitAuthorDetails(new UserId(1), new UserLogin('login'), new AccountType('type'), new UserAvatarUrl('avatarUrl'), new GravatarId('value'), new UserHtmlUrl('htmlUrl'), new UserApiUrl('apiUrl'), true));
+        $this->committer = new CommitCommitter(new CommitterName('name'), new EmailAddress('value'), new CommitDate('2018-01-01 00:01:00'), new CommitCommitterDetails(new UserId(1), new UserLogin('login'), new AccountType('type'), new UserAvatarUrl('avatarUrl'), new GravatarId('value'), new UserHtmlUrl('htmlUrl'), new UserApiUrl('apiUrl'), true));
         $this->tree = new CommitTree(new TreeSha('sha'), new TreeUrl('url'));
         $this->parents = new CommitParentCollection([new CommitParent(new CommitSha('sha'), new ParentApiUrl('apiUrl'), new ParentHtmlUrl('htmlUrl'))]);
         $this->verification = new CommitVerification(new VerificationVerified(true), new VerificationReason('reason'), new VerificationSignature('signature'), new VerificationPayload('payload'));

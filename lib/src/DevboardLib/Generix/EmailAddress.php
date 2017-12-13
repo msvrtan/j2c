@@ -11,35 +11,35 @@ namespace DevboardLib\Generix;
 class EmailAddress
 {
     /** @var string */
-    private $email;
+    private $value;
 
 
-    public function __construct(string $email)
+    public function __construct(string $value)
     {
-        $this->email = $email;
+        $this->value = $value;
     }
 
 
-    public function getEmail(): string
+    public function getValue(): string
     {
-        return $this->email;
+        return $this->value;
     }
 
 
     public function __toString(): string
     {
-        return $this->email;
+        return $this->value;
     }
 
 
     public function serialize(): string
     {
-        return $this->email;
+        return $this->value;
     }
 
 
-    public static function deserialize(string $email): self
+    public static function deserialize(string $value): self
     {
-        return new self($email);
+        return new self($value);
     }
 }

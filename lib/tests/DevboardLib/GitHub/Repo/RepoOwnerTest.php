@@ -54,7 +54,7 @@ class RepoOwnerTest extends TestCase
         $this->login = new AccountLogin('login');
         $this->type = new AccountType('type');
         $this->avatarUrl = new AccountAvatarUrl('avatarUrl');
-        $this->gravatarId = new GravatarId('gravatarId');
+        $this->gravatarId = new GravatarId('value');
         $this->htmlUrl = new AccountHtmlUrl('htmlUrl');
         $this->url = new AccountApiUrl('url');
         $this->siteAdmin = true;

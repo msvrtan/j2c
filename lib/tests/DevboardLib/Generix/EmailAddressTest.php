@@ -14,7 +14,7 @@ use PHPUnit\Framework\TestCase;
 class EmailAddressTest extends TestCase
 {
     /** @var string */
-    private $email;
+    private $value;
 
     /** @var EmailAddress */
     private $sut;
@@ -22,31 +22,31 @@ class EmailAddressTest extends TestCase
 
     public function setUp()
     {
-        $this->email = 'email';
-        $this->sut = new EmailAddress($this->email);
+        $this->value = 'value';
+        $this->sut = new EmailAddress($this->value);
     }
 
 
-    public function testGetEmail()
+    public function testGetValue()
     {
-        self::assertSame($this->email, $this->sut->getEmail());
+        self::assertSame($this->value, $this->sut->getValue());
     }
 
 
     public function testToString()
     {
-        self::assertSame($this->email, $this->sut->__toString());
+        self::assertSame($this->value, $this->sut->__toString());
     }
 
 
     public function testSerialize()
     {
-        self::assertEquals($this->email, $this->sut->serialize());
+        self::assertEquals($this->value, $this->sut->serialize());
     }
 
 
     public function testDeserialize()
     {
-        self::assertEquals($this->sut, $this->sut->deserialize($this->email));
+        self::assertEquals($this->sut, $this->sut->deserialize($this->value));
     }
 }

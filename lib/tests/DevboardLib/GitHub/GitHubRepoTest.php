@@ -90,7 +90,7 @@ class GitHubRepoTest extends TestCase
     {
         $this->id = new RepoId(1);
         $this->fullName = new RepoFullName('fullName');
-        $this->owner = new RepoOwner(new AccountId(1), new AccountLogin('login'), new AccountType('type'), new AccountAvatarUrl('avatarUrl'), new GravatarId('gravatarId'), new AccountHtmlUrl('htmlUrl'), new AccountApiUrl('url'), true);
+        $this->owner = new RepoOwner(new AccountId(1), new AccountLogin('login'), new AccountType('type'), new AccountAvatarUrl('avatarUrl'), new GravatarId('value'), new AccountHtmlUrl('htmlUrl'), new AccountApiUrl('url'), true);
         $this->private = true;
         $this->defaultBranch = new BranchName('name');
         $this->fork = true;
