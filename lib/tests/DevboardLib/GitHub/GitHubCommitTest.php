@@ -13,6 +13,8 @@ use DevboardLib\GitHub\Commit\CommitAuthorDetails;
 use DevboardLib\GitHub\Commit\CommitCommitter;
 use DevboardLib\GitHub\Commit\CommitCommitterDetails;
 use DevboardLib\GitHub\Commit\CommitHtmlUrl;
+use DevboardLib\GitHub\Commit\CommitParent;
+use DevboardLib\GitHub\Commit\CommitParentCollection;
 use DevboardLib\GitHub\Commit\CommitParent\ParentApiUrl;
 use DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl;
 use DevboardLib\GitHub\Commit\CommitSha;
@@ -33,8 +35,6 @@ use DevboardLib\GitHub\User\UserLogin;
 use DevboardLib\Git\Commit\Author\AuthorName;
 use DevboardLib\Git\Commit\CommitDate;
 use DevboardLib\Git\Commit\CommitMessage;
-use DevboardLib\GitHub\Commit\CommitParent;
-use DevboardLib\GitHub\Commit\CommitParentCollection;
 use DevboardLib\Git\Commit\Committer\CommitterName;
 use PHPUnit\Framework\TestCase;
 

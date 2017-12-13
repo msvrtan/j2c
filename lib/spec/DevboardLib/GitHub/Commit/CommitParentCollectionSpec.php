@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace spec\DevboardLib\Git\Commit;
+namespace spec\DevboardLib\GitHub\Commit;
 
-use DevboardLib\GitHub\Commit\CommitSha;
 use DevboardLib\GitHub\Commit\CommitParent;
 use DevboardLib\GitHub\Commit\CommitParentCollection;
+use DevboardLib\GitHub\Commit\CommitSha;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

@@ -2,11 +2,10 @@
 
 declare(strict_types=1);
 
-namespace DevboardLib\Git\Commit;
+namespace DevboardLib\GitHub\Commit;
 
 use DevboardLib\GitHub\Commit\CommitParent\ParentApiUrl;
 use DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl;
-use DevboardLib\GitHub\Commit\CommitSha;
 
 /**
  * @see \spec\DevboardLib\GitHub\Commit\CommitParentSpec

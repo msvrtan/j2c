@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace DevboardLib\Git\Commit;
+namespace DevboardLib\GitHub\Commit;
 
-use DevboardLib\GitHub\Commit\CommitSha;
 use Webmozart\Assert\Assert;
 
 /**
