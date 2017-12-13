@@ -23,7 +23,6 @@ use DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl;
 use DevboardLib\GitHub\Commit\CommitSha;
 use DevboardLib\GitHub\Commit\CommitTree;
 use DevboardLib\GitHub\Commit\CommitVerification;
-use DevboardLib\GitHub\Commit\Committer\CommitterName;
 use DevboardLib\GitHub\Commit\Tree\TreeSha;
 use DevboardLib\GitHub\Commit\Tree\TreeUrl;
 use DevboardLib\GitHub\Commit\Verification\VerificationPayload;
@@ -39,6 +38,7 @@ use DevboardLib\GitHub\User\UserId;
 use DevboardLib\GitHub\User\UserLogin;
 use DevboardLib\Git\Branch\BranchName;
 use DevboardLib\Git\Commit\Author\AuthorName;
+use DevboardLib\Git\Commit\Committer\CommitterName;
 use PHPUnit\Framework\TestCase;
 
 /**

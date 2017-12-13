@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\DevboardLib\GitHub\Commit\Committer;
+namespace Tests\DevboardLib\Git\Commit\Committer;
 
-use DevboardLib\GitHub\Commit\Committer\CommitterName;
+use DevboardLib\Git\Commit\Committer\CommitterName;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DevboardLib\GitHub\Commit\Committer\CommitterName
+ * @covers \DevboardLib\Git\Commit\Committer\CommitterName
  * @group  todo
  */
 class CommitterNameTest extends TestCase

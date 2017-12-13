@@ -6,7 +6,7 @@ definition:
   traits: {  }
   constructor:
     name:
-      className: DevboardLib\GitHub\Commit\Committer\CommitterName
+      className: DevboardLib\Git\Commit\Committer\CommitterName
       nullable: false
       hasDefault: false
       default: null

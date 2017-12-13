@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DevboardLib\GitHub\Commit\Committer;
+namespace DevboardLib\Git\Commit\Committer;
 
 class CommitterName
 {

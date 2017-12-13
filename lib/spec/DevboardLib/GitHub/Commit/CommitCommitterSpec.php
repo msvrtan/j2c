@@ -8,7 +8,7 @@ use DevboardLib\Generix\EmailAddress;
 use DevboardLib\GitHub\Commit\CommitCommitter;
 use DevboardLib\GitHub\Commit\CommitCommitterDetails;
 use DevboardLib\GitHub\Commit\CommitDate;
-use DevboardLib\GitHub\Commit\Committer\CommitterName;
+use DevboardLib\Git\Commit\Committer\CommitterName;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

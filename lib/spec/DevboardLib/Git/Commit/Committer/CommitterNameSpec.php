@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace spec\DevboardLib\GitHub\Commit\Committer;
+namespace spec\DevboardLib\Git\Commit\Committer;
 
-use DevboardLib\GitHub\Commit\Committer\CommitterName;
+use DevboardLib\Git\Commit\Committer\CommitterName;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace DevboardLib\GitHub\Commit;
 
 use DevboardLib\Generix\EmailAddress;
-use DevboardLib\GitHub\Commit\Committer\CommitterName;
+use DevboardLib\Git\Commit\Committer\CommitterName;
 
 class CommitCommitter
 {

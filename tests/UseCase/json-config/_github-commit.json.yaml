@@ -64,7 +64,7 @@ fields:
       name:
         key: name
         propertyName: name
-        className: DevboardLib\GitHub\Commit\Committer\CommitterName
+        className: DevboardLib\Git\Commit\Committer\CommitterName
         inputKey: '["committer"]["name"]'
         suggestions:
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
