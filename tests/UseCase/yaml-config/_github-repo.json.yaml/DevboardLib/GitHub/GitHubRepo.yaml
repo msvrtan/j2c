@@ -26,7 +26,7 @@ definition:
       hasDefault: false
       default: null
     defaultBranch:
-      className: DevboardLib\GitHub\Branch\BranchName
+      className: DevboardLib\Git\Branch\BranchName
       nullable: false
       hasDefault: false
       default: null

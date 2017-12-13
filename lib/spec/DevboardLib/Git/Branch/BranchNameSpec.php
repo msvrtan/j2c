@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace spec\DevboardLib\GitHub\Branch;
+namespace spec\DevboardLib\Git\Branch;
 
-use DevboardLib\GitHub\Branch\BranchName;
+use DevboardLib\Git\Branch\BranchName;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

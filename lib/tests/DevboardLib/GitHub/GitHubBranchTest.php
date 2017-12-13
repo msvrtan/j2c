@@ -7,7 +7,6 @@ namespace Tests\DevboardLib\GitHub;
 use DevboardLib\Generix\EmailAddress;
 use DevboardLib\Generix\GravatarId;
 use DevboardLib\GitHub\Account\AccountType;
-use DevboardLib\GitHub\Branch\BranchName;
 use DevboardLib\GitHub\Branch\BranchProtectionUrl;
 use DevboardLib\GitHub\Commit\Author\AuthorName;
 use DevboardLib\GitHub\Commit\CommitApiUrl;
@@ -39,6 +38,7 @@ use DevboardLib\GitHub\User\UserAvatarUrl;
 use DevboardLib\GitHub\User\UserHtmlUrl;
 use DevboardLib\GitHub\User\UserId;
 use DevboardLib\GitHub\User\UserLogin;
+use DevboardLib\Git\Branch\BranchName;
 use PHPUnit\Framework\TestCase;
 
 /**

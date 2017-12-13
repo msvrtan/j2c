@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace spec\DevboardLib\GitHub;
 
-use DevboardLib\GitHub\Branch\BranchName;
 use DevboardLib\GitHub\Branch\BranchProtectionUrl;
 use DevboardLib\GitHub\GitHubBranch;
 use DevboardLib\GitHub\GitHubCommit;
+use DevboardLib\Git\Branch\BranchName;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

@@ -5,7 +5,7 @@ fields:
   name:
     key: name
     propertyName: name
-    className: DevboardLib\GitHub\Branch\BranchName
+    className: DevboardLib\Git\Branch\BranchName
     inputKey: '["name"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString

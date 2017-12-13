@@ -6,7 +6,7 @@ definition:
   traits: {  }
   constructor:
     name:
-      className: DevboardLib\GitHub\Branch\BranchName
+      className: DevboardLib\Git\Branch\BranchName
       nullable: false
       hasDefault: false
       default: null

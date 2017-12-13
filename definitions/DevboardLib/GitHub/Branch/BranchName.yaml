@@ -1,6 +1,6 @@
 definition:
   type: SimpleValueObject
-  className: DevboardLib\GitHub\Branch\BranchName
+  className: DevboardLib\Git\Branch\BranchName
   parent: null
   interfaces: {  }
   traits: {  }

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\DevboardLib\GitHub\Branch;
+namespace Tests\DevboardLib\Git\Branch;
 
-use DevboardLib\GitHub\Branch\BranchName;
+use DevboardLib\Git\Branch\BranchName;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DevboardLib\GitHub\Branch\BranchName
+ * @covers \DevboardLib\Git\Branch\BranchName
  * @group  todo
  */
 class BranchNameTest extends TestCase

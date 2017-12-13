@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub;
 
-use DevboardLib\GitHub\Branch\BranchName;
 use DevboardLib\GitHub\Branch\BranchProtectionUrl;
+use DevboardLib\Git\Branch\BranchName;
 
 class GitHubBranch
 {

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace spec\DevboardLib\GitHub;
 
-use DevboardLib\GitHub\Branch\BranchName;
 use DevboardLib\GitHub\GitHubRepo;
 use DevboardLib\GitHub\Repo\RepoDescription;
 use DevboardLib\GitHub\Repo\RepoEndpoints;
@@ -16,6 +15,7 @@ use DevboardLib\GitHub\Repo\RepoMirrorUrl;
 use DevboardLib\GitHub\Repo\RepoOwner;
 use DevboardLib\GitHub\Repo\RepoStats;
 use DevboardLib\GitHub\Repo\RepoTimestamps;
+use DevboardLib\Git\Branch\BranchName;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

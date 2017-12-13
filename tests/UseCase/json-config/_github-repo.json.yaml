@@ -94,7 +94,7 @@ fields:
   default_branch:
     key: default_branch
     propertyName: defaultBranch
-    className: DevboardLib\GitHub\Branch\BranchName
+    className: DevboardLib\Git\Branch\BranchName
     inputKey: '["default_branch"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString

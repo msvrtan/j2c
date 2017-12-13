@@ -11,7 +11,6 @@ use DevboardLib\GitHub\Account\AccountHtmlUrl;
 use DevboardLib\GitHub\Account\AccountId;
 use DevboardLib\GitHub\Account\AccountLogin;
 use DevboardLib\GitHub\Account\AccountType;
-use DevboardLib\GitHub\Branch\BranchName;
 use DevboardLib\GitHub\GitHubRepo;
 use DevboardLib\GitHub\Repo\RepoCreatedAt;
 use DevboardLib\GitHub\Repo\RepoDescription;
@@ -31,6 +30,7 @@ use DevboardLib\GitHub\Repo\RepoStats;
 use DevboardLib\GitHub\Repo\RepoStats\RepoSize;
 use DevboardLib\GitHub\Repo\RepoTimestamps;
 use DevboardLib\GitHub\Repo\RepoUpdatedAt;
+use DevboardLib\Git\Branch\BranchName;
 use PHPUnit\Framework\TestCase;
 
 /**
