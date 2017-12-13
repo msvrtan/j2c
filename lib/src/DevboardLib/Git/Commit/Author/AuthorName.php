@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\Git\Commit\Author;
 
+/**
+ * @see \spec\DevboardLib\Git\Commit\Author\AuthorNameSpec
+ * @see \Tests\DevboardLib\Git\Commit\Author\AuthorNameTest
+ */
 class AuthorName
 {
     /** @var string */

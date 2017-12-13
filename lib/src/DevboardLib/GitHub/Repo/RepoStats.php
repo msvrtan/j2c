@@ -6,6 +6,10 @@ namespace DevboardLib\GitHub\Repo;
 
 use DevboardLib\GitHub\Repo\RepoStats\RepoSize;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Repo\RepoStatsSpec
+ * @see \Tests\DevboardLib\GitHub\Repo\RepoStatsTest
+ */
 class RepoStats
 {
     /** @var int */

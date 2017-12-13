@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\Git\Branch;
 
+/**
+ * @see \spec\DevboardLib\Git\Branch\BranchNameSpec
+ * @see \Tests\DevboardLib\Git\Branch\BranchNameTest
+ */
 class BranchName
 {
     /** @var string */

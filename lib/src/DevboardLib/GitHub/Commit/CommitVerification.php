@@ -9,6 +9,10 @@ use DevboardLib\GitHub\Commit\Verification\VerificationReason;
 use DevboardLib\GitHub\Commit\Verification\VerificationSignature;
 use DevboardLib\GitHub\Commit\Verification\VerificationVerified;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\CommitVerificationSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\CommitVerificationTest
+ */
 class CommitVerification
 {
     /** @var VerificationVerified */

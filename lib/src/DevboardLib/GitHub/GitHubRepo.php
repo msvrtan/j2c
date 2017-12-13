@@ -16,6 +16,10 @@ use DevboardLib\GitHub\Repo\RepoStats;
 use DevboardLib\GitHub\Repo\RepoTimestamps;
 use DevboardLib\Git\Branch\BranchName;
 
+/**
+ * @see \spec\DevboardLib\GitHub\GitHubRepoSpec
+ * @see \Tests\DevboardLib\GitHub\GitHubRepoTest
+ */
 class GitHubRepo
 {
     /** @var RepoId */

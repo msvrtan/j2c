@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\Generix;
 
+/**
+ * @see \spec\DevboardLib\Generix\GravatarIdSpec
+ * @see \Tests\DevboardLib\Generix\GravatarIdTest
+ */
 class GravatarId
 {
     /** @var string */

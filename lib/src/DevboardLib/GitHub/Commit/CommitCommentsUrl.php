@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Commit;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\CommitCommentsUrlSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\CommitCommentsUrlTest
+ */
 class CommitCommentsUrl
 {
     /** @var string */

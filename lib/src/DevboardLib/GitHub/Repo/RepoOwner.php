@@ -12,6 +12,10 @@ use DevboardLib\GitHub\Account\AccountId;
 use DevboardLib\GitHub\Account\AccountLogin;
 use DevboardLib\GitHub\Account\AccountType;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Repo\RepoOwnerSpec
+ * @see \Tests\DevboardLib\GitHub\Repo\RepoOwnerTest
+ */
 class RepoOwner
 {
     /** @var AccountId */

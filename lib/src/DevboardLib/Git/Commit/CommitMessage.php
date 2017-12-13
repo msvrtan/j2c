@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\Git\Commit;
 
+/**
+ * @see \spec\DevboardLib\Git\Commit\CommitMessageSpec
+ * @see \Tests\DevboardLib\Git\Commit\CommitMessageTest
+ */
 class CommitMessage
 {
     /** @var string */

@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Account;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Account\AccountApiUrlSpec
+ * @see \Tests\DevboardLib\GitHub\Account\AccountApiUrlTest
+ */
 class AccountApiUrl
 {
     /** @var string */

@@ -7,6 +7,10 @@ namespace DevboardLib\Git\Commit;
 use DevboardLib\GitHub\Commit\CommitSha;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see \spec\DevboardLib\Git\Commit\CommitParentCollectionSpec
+ * @see \Tests\DevboardLib\Git\Commit\CommitParentCollectionTest
+ */
 class CommitParentCollection
 {
     /** @var array|CommitParent[] */

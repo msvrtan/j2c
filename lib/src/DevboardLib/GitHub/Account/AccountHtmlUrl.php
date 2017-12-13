@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Account;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Account\AccountHtmlUrlSpec
+ * @see \Tests\DevboardLib\GitHub\Account\AccountHtmlUrlTest
+ */
 class AccountHtmlUrl
 {
     /** @var string */

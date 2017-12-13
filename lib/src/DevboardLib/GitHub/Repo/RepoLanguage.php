@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Repo;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Repo\RepoLanguageSpec
+ * @see \Tests\DevboardLib\GitHub\Repo\RepoLanguageTest
+ */
 class RepoLanguage
 {
     /** @var string */

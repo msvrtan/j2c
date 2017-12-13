@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Account;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Account\AccountTypeSpec
+ * @see \Tests\DevboardLib\GitHub\Account\AccountTypeTest
+ */
 class AccountType
 {
     /** @var string */

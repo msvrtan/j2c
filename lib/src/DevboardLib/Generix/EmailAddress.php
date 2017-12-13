@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\Generix;
 
+/**
+ * @see \spec\DevboardLib\Generix\EmailAddressSpec
+ * @see \Tests\DevboardLib\Generix\EmailAddressTest
+ */
 class EmailAddress
 {
     /** @var string */

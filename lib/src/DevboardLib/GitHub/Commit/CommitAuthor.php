@@ -8,6 +8,10 @@ use DevboardLib\Generix\EmailAddress;
 use DevboardLib\Git\Commit\Author\AuthorName;
 use DevboardLib\Git\Commit\CommitDate;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\CommitAuthorSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\CommitAuthorTest
+ */
 class CommitAuthor
 {
     /** @var AuthorName */

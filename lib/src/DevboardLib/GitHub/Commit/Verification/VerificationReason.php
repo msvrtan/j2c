@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Commit\Verification;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\Verification\VerificationReasonSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\Verification\VerificationReasonTest
+ */
 class VerificationReason
 {
     /** @var string */

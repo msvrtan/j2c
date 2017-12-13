@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Repo;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Repo\RepoIdSpec
+ * @see \Tests\DevboardLib\GitHub\Repo\RepoIdTest
+ */
 class RepoId
 {
     /** @var int */

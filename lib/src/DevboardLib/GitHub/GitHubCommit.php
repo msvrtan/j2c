@@ -15,6 +15,10 @@ use DevboardLib\Git\Commit\CommitDate;
 use DevboardLib\Git\Commit\CommitMessage;
 use DevboardLib\Git\Commit\CommitParentCollection;
 
+/**
+ * @see \spec\DevboardLib\GitHub\GitHubCommitSpec
+ * @see \Tests\DevboardLib\GitHub\GitHubCommitTest
+ */
 class GitHubCommit
 {
     /** @var CommitSha */

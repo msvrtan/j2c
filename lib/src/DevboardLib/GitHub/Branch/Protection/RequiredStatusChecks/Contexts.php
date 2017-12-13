@@ -7,6 +7,10 @@ namespace DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context\ContextId;
 use Webmozart\Assert\Assert;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\ContextsSpec
+ * @see \Tests\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\ContextsTest
+ */
 class Contexts
 {
     /** @var array|Context[] */

@@ -7,6 +7,10 @@ namespace DevboardLib\GitHub\Branch\Protection;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Contexts;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\RequiredStatusChecksEnforcementLevel;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecksSpec
+ * @see \Tests\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecksTest
+ */
 class RequiredStatusChecks
 {
     /** @var RequiredStatusChecksEnforcementLevel */

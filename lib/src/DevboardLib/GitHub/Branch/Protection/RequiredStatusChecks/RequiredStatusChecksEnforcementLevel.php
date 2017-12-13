@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\RequiredStatusChecksEnforcementLevelSpec
+ * @see \Tests\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\RequiredStatusChecksEnforcementLevelTest
+ */
 class RequiredStatusChecksEnforcementLevel
 {
     /** @var string */

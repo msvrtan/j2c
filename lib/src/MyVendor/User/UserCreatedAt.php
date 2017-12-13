@@ -6,6 +6,10 @@ namespace MyVendor\User;
 
 use DateTime;
 
+/**
+ * @see \spec\MyVendor\User\UserCreatedAtSpec
+ * @see \Tests\MyVendor\User\UserCreatedAtTest
+ */
 class UserCreatedAt extends DateTime
 {
     public function __toString(): string

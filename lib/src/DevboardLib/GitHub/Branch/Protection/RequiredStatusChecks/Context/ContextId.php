@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context\ContextIdSpec
+ * @see \Tests\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context\ContextIdTest
+ */
 class ContextId
 {
     /** @var int */

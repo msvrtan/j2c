@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\Git\Commit\Committer;
 
+/**
+ * @see \spec\DevboardLib\Git\Commit\Committer\CommitterNameSpec
+ * @see \Tests\DevboardLib\Git\Commit\Committer\CommitterNameTest
+ */
 class CommitterName
 {
     /** @var string */

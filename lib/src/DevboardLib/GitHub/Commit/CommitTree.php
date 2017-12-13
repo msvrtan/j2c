@@ -7,6 +7,10 @@ namespace DevboardLib\GitHub\Commit;
 use DevboardLib\GitHub\Commit\Tree\TreeSha;
 use DevboardLib\GitHub\Commit\Tree\TreeUrl;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\CommitTreeSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\CommitTreeTest
+ */
 class CommitTree
 {
     /** @var TreeSha */

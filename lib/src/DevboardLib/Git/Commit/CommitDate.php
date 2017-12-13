@@ -6,6 +6,10 @@ namespace DevboardLib\Git\Commit;
 
 use DateTime;
 
+/**
+ * @see \spec\DevboardLib\Git\Commit\CommitDateSpec
+ * @see \Tests\DevboardLib\Git\Commit\CommitDateTest
+ */
 class CommitDate extends DateTime
 {
     public function __toString(): string

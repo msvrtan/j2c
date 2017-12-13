@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Commit\Verification;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\Verification\VerificationSignatureSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\Verification\VerificationSignatureTest
+ */
 class VerificationSignature
 {
     /** @var string */

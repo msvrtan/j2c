@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Repo;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Repo\RepoMirrorUrlSpec
+ * @see \Tests\DevboardLib\GitHub\Repo\RepoMirrorUrlTest
+ */
 class RepoMirrorUrl
 {
     /** @var string */

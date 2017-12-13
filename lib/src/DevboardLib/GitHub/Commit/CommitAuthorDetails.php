@@ -12,6 +12,10 @@ use DevboardLib\GitHub\User\UserHtmlUrl;
 use DevboardLib\GitHub\User\UserId;
 use DevboardLib\GitHub\User\UserLogin;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\CommitAuthorDetailsSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\CommitAuthorDetailsTest
+ */
 class CommitAuthorDetails
 {
     /** @var UserId */

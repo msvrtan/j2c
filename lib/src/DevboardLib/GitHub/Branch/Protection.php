@@ -6,6 +6,10 @@ namespace DevboardLib\GitHub\Branch;
 
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Branch\ProtectionSpec
+ * @see \Tests\DevboardLib\GitHub\Branch\ProtectionTest
+ */
 class Protection
 {
     /** @var bool */

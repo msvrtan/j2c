@@ -8,6 +8,10 @@ use DevboardLib\GitHub\Commit\CommitParent\ParentApiUrl;
 use DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl;
 use DevboardLib\GitHub\Commit\CommitSha;
 
+/**
+ * @see \spec\DevboardLib\Git\Commit\CommitParentSpec
+ * @see \Tests\DevboardLib\Git\Commit\CommitParentTest
+ */
 class CommitParent
 {
     /** @var CommitSha */

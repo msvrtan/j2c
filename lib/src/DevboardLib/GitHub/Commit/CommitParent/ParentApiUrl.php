@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Commit\CommitParent;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\CommitParent\ParentApiUrlSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\CommitParent\ParentApiUrlTest
+ */
 class ParentApiUrl
 {
     /** @var string */

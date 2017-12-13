@@ -7,6 +7,10 @@ namespace DevboardLib\GitHub;
 use DevboardLib\GitHub\Branch\BranchProtectionUrl;
 use DevboardLib\Git\Branch\BranchName;
 
+/**
+ * @see \spec\DevboardLib\GitHub\GitHubBranchSpec
+ * @see \Tests\DevboardLib\GitHub\GitHubBranchTest
+ */
 class GitHubBranch
 {
     /** @var BranchName */

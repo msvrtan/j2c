@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\User;
 
+/**
+ * @see \spec\DevboardLib\GitHub\User\UserIdSpec
+ * @see \Tests\DevboardLib\GitHub\User\UserIdTest
+ */
 class UserId
 {
     /** @var int */

@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Repo\RepoStats;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Repo\RepoStats\RepoSizeSpec
+ * @see \Tests\DevboardLib\GitHub\Repo\RepoStats\RepoSizeTest
+ */
 class RepoSize
 {
     /** @var int */

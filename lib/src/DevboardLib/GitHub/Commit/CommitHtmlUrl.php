@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Commit;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\CommitHtmlUrlSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\CommitHtmlUrlTest
+ */
 class CommitHtmlUrl
 {
     /** @var string */

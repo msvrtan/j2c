@@ -6,6 +6,10 @@ namespace DevboardLib\GitHub\Repo;
 
 use DateTime;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Repo\RepoPushedAtSpec
+ * @see \Tests\DevboardLib\GitHub\Repo\RepoPushedAtTest
+ */
 class RepoPushedAt extends DateTime
 {
     public function __toString(): string

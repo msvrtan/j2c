@@ -8,6 +8,10 @@ use DevboardLib\Generix\EmailAddress;
 use DevboardLib\Git\Commit\CommitDate;
 use DevboardLib\Git\Commit\Committer\CommitterName;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\CommitCommitterSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\CommitCommitterTest
+ */
 class CommitCommitter
 {
     /** @var CommitterName */

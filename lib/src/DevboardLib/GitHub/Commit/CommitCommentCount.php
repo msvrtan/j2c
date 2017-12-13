@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Commit;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\CommitCommentCountSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\CommitCommentCountTest
+ */
 class CommitCommentCount
 {
     /** @var int */

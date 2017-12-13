@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Branch;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Branch\BranchProtectionUrlSpec
+ * @see \Tests\DevboardLib\GitHub\Branch\BranchProtectionUrlTest
+ */
 class BranchProtectionUrl
 {
     /** @var string */

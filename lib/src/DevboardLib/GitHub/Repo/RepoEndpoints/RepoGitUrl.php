@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Repo\RepoEndpoints;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Repo\RepoEndpoints\RepoGitUrlSpec
+ * @see \Tests\DevboardLib\GitHub\Repo\RepoEndpoints\RepoGitUrlTest
+ */
 class RepoGitUrl
 {
     /** @var string */

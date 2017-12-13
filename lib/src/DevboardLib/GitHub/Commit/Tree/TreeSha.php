@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Commit\Tree;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\Tree\TreeShaSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\Tree\TreeShaTest
+ */
 class TreeSha
 {
     /** @var string */

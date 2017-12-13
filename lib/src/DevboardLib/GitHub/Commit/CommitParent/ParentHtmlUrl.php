@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Commit\CommitParent;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrlSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrlTest
+ */
 class ParentHtmlUrl
 {
     /** @var string */

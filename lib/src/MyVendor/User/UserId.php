@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace MyVendor\User;
 
+/**
+ * @see \spec\MyVendor\User\UserIdSpec
+ * @see \Tests\MyVendor\User\UserIdTest
+ */
 class UserId
 {
     /** @var int */

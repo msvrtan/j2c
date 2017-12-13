@@ -9,6 +9,10 @@ use DevboardLib\GitHub\Repo\RepoEndpoints\RepoGitUrl;
 use DevboardLib\GitHub\Repo\RepoEndpoints\RepoHtmlUrl;
 use DevboardLib\GitHub\Repo\RepoEndpoints\RepoSshUrl;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Repo\RepoEndpointsSpec
+ * @see \Tests\DevboardLib\GitHub\Repo\RepoEndpointsTest
+ */
 class RepoEndpoints
 {
     /** @var RepoHtmlUrl */

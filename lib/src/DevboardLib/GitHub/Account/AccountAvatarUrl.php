@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace DevboardLib\GitHub\Account;
 
+/**
+ * @see \spec\DevboardLib\GitHub\Account\AccountAvatarUrlSpec
+ * @see \Tests\DevboardLib\GitHub\Account\AccountAvatarUrlTest
+ */
 class AccountAvatarUrl
 {
     /** @var string */
