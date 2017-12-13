@@ -9,13 +9,13 @@ use DevboardLib\Generix\GravatarId;
 use DevboardLib\GitHub\Account\AccountType;
 use DevboardLib\GitHub\Commit\CommitAuthor;
 use DevboardLib\GitHub\Commit\CommitAuthorDetails;
-use DevboardLib\GitHub\Commit\CommitDate;
 use DevboardLib\GitHub\User\UserApiUrl;
 use DevboardLib\GitHub\User\UserAvatarUrl;
 use DevboardLib\GitHub\User\UserHtmlUrl;
 use DevboardLib\GitHub\User\UserId;
 use DevboardLib\GitHub\User\UserLogin;
 use DevboardLib\Git\Commit\Author\AuthorName;
+use DevboardLib\Git\Commit\CommitDate;
 use PHPUnit\Framework\TestCase;
 
 /**

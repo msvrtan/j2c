@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace spec\DevboardLib\GitHub\Commit;
+namespace spec\DevboardLib\Git\Commit;
 
-use DevboardLib\GitHub\Commit\CommitMessage;
+use DevboardLib\Git\Commit\CommitMessage;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

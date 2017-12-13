@@ -16,7 +16,7 @@ definition:
       hasDefault: false
       default: null
     date:
-      className: DevboardLib\GitHub\Commit\CommitDate
+      className: DevboardLib\Git\Commit\CommitDate
       nullable: false
       hasDefault: false
       default: null

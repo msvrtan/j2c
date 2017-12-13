@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DevboardLib\GitHub\Commit;
+namespace DevboardLib\Git\Commit;
 
+use DevboardLib\GitHub\Commit\CommitSha;
 use Webmozart\Assert\Assert;
 
 class CommitParentCollection

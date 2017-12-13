@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace spec\DevboardLib\GitHub\Commit;
+namespace spec\DevboardLib\Git\Commit;
 
 use DateTime;
-use DevboardLib\GitHub\Commit\CommitDate;
+use DevboardLib\Git\Commit\CommitDate;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tests\DevboardLib\GitHub\Commit;
+namespace Tests\DevboardLib\Git\Commit;
 
-use DevboardLib\GitHub\Commit\CommitParent;
 use DevboardLib\GitHub\Commit\CommitParent\ParentApiUrl;
 use DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl;
 use DevboardLib\GitHub\Commit\CommitSha;
+use DevboardLib\Git\Commit\CommitParent;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DevboardLib\GitHub\Commit\CommitParent
+ * @covers \DevboardLib\Git\Commit\CommitParent
  * @group  todo
  */
 class CommitParentTest extends TestCase

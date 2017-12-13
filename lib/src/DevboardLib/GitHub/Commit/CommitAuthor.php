@@ -6,6 +6,7 @@ namespace DevboardLib\GitHub\Commit;
 
 use DevboardLib\Generix\EmailAddress;
 use DevboardLib\Git\Commit\Author\AuthorName;
+use DevboardLib\Git\Commit\CommitDate;
 
 class CommitAuthor
 {

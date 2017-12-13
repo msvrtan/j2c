@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\DevboardLib\GitHub\Commit;
+namespace Tests\DevboardLib\Git\Commit;
 
-use DevboardLib\GitHub\Commit\CommitMessage;
+use DevboardLib\Git\Commit\CommitMessage;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DevboardLib\GitHub\Commit\CommitMessage
+ * @covers \DevboardLib\Git\Commit\CommitMessage
  * @group  todo
  */
 class CommitMessageTest extends TestCase

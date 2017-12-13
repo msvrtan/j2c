@@ -1,6 +1,6 @@
 definition:
   type: SimpleEntity
-  className: DevboardLib\GitHub\Commit\CommitParent
+  className: DevboardLib\Git\Commit\CommitParent
   parent: null
   interfaces: {  }
   traits: {  }

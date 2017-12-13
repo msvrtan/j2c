@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\DevboardLib\GitHub\Commit;
+namespace Tests\DevboardLib\Git\Commit;
 
-use DevboardLib\GitHub\Commit\CommitDate;
+use DevboardLib\Git\Commit\CommitDate;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DevboardLib\GitHub\Commit\CommitDate
+ * @covers \DevboardLib\Git\Commit\CommitDate
  * @group  todo
  */
 class CommitDateTest extends TestCase

@@ -7,13 +7,13 @@ namespace DevboardLib\GitHub;
 use DevboardLib\GitHub\Commit\CommitApiUrl;
 use DevboardLib\GitHub\Commit\CommitAuthor;
 use DevboardLib\GitHub\Commit\CommitCommitter;
-use DevboardLib\GitHub\Commit\CommitDate;
 use DevboardLib\GitHub\Commit\CommitHtmlUrl;
-use DevboardLib\GitHub\Commit\CommitMessage;
-use DevboardLib\GitHub\Commit\CommitParentCollection;
 use DevboardLib\GitHub\Commit\CommitSha;
 use DevboardLib\GitHub\Commit\CommitTree;
 use DevboardLib\GitHub\Commit\CommitVerification;
+use DevboardLib\Git\Commit\CommitDate;
+use DevboardLib\Git\Commit\CommitMessage;
+use DevboardLib\Git\Commit\CommitParentCollection;
 
 class GitHubCommit
 {

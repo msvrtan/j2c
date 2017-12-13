@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tests\DevboardLib\GitHub\Commit;
+namespace Tests\DevboardLib\Git\Commit;
 
-use DevboardLib\GitHub\Commit\CommitParent;
-use DevboardLib\GitHub\Commit\CommitParentCollection;
 use DevboardLib\GitHub\Commit\CommitParent\ParentApiUrl;
 use DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl;
 use DevboardLib\GitHub\Commit\CommitSha;
+use DevboardLib\Git\Commit\CommitParent;
+use DevboardLib\Git\Commit\CommitParentCollection;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DevboardLib\GitHub\Commit\CommitParentCollection
+ * @covers \DevboardLib\Git\Commit\CommitParentCollection
  * @group  todo
  */
 class CommitParentCollectionTest extends TestCase

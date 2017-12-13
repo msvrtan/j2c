@@ -1,6 +1,6 @@
 definition:
   type: DateTimeValueObject
-  className: DevboardLib\GitHub\Commit\CommitDate
+  className: DevboardLib\Git\Commit\CommitDate
   parent: DateTime
   interfaces: {  }
   traits: {  }

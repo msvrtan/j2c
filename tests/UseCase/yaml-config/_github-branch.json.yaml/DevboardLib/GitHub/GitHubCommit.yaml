@@ -21,7 +21,7 @@ definition:
       hasDefault: false
       default: null
     message:
-      className: DevboardLib\GitHub\Commit\CommitMessage
+      className: DevboardLib\Git\Commit\CommitMessage
       nullable: false
       hasDefault: false
       default: null
@@ -56,7 +56,7 @@ definition:
       hasDefault: false
       default: null
     parents:
-      className: DevboardLib\GitHub\Commit\CommitParentCollection
+      className: DevboardLib\Git\Commit\CommitParentCollection
       nullable: false
       hasDefault: false
       default: null
