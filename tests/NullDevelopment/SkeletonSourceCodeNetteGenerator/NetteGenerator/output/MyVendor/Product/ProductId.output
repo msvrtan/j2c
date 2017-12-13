@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace MyVendor\Product;
 
+/**
+ * @see \spec\MyVendor\Product\ProductIdSpec
+ * @see \Tests\MyVendor\Product\ProductIdTest
+ */
 class ProductId
 {
     /** @var int */

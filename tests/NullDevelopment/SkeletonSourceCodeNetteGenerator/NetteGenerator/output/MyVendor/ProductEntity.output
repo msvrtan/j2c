@@ -8,6 +8,10 @@ use DateTime;
 use MyVendor\Product\ProductId;
 use MyVendor\Product\ProductWeight;
 
+/**
+ * @see \spec\MyVendor\ProductEntitySpec
+ * @see \Tests\MyVendor\ProductEntityTest
+ */
 class ProductEntity
 {
     /** @var ProductId */

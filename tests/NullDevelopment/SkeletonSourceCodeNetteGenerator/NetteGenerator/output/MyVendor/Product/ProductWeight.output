@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace MyVendor\Product;
 
+/**
+ * @see \spec\MyVendor\Product\ProductWeightSpec
+ * @see \Tests\MyVendor\Product\ProductWeightTest
+ */
 class ProductWeight
 {
     /** @var int */

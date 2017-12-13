@@ -9,6 +9,10 @@ use MyVendor\User\UserCreatedAt;
 use MyVendor\User\UserId;
 use MyVendor\User\Username;
 
+/**
+ * @see \spec\MyVendor\UserEntitySpec
+ * @see \Tests\MyVendor\UserEntityTest
+ */
 class UserEntity
 {
     /** @var UserId */

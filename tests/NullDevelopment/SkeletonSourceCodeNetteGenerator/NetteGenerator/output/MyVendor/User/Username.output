@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace MyVendor\User;
 
+/**
+ * @see \spec\MyVendor\User\UsernameSpec
+ * @see \Tests\MyVendor\User\UsernameTest
+ */
 class Username
 {
     /** @var string */
