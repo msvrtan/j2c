@@ -34,6 +34,9 @@ class ClassMiddleware implements PartialCodeGeneratorMiddleware
             }
         }
 
+        $class->addComment('@see \\spec\\'.$definition->getFullClassName().'Spec');
+        $class->addComment('@see \\Tests\\'.$definition->getFullClassName().'Test');
+
         return $namespace;
     }
 }
