@@ -33,8 +33,8 @@ use DevboardLib\GitHub\User\UserLogin;
 use DevboardLib\Git\Commit\Author\AuthorName;
 use DevboardLib\Git\Commit\CommitDate;
 use DevboardLib\Git\Commit\CommitMessage;
-use DevboardLib\Git\Commit\CommitParent;
-use DevboardLib\Git\Commit\CommitParentCollection;
+use DevboardLib\GitHub\Commit\CommitParent;
+use DevboardLib\GitHub\Commit\CommitParentCollection;
 use DevboardLib\Git\Commit\Committer\CommitterName;
 use PHPUnit\Framework\TestCase;
 

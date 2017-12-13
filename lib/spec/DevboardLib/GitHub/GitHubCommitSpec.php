@@ -14,7 +14,7 @@ use DevboardLib\GitHub\Commit\CommitVerification;
 use DevboardLib\GitHub\GitHubCommit;
 use DevboardLib\Git\Commit\CommitDate;
 use DevboardLib\Git\Commit\CommitMessage;
-use DevboardLib\Git\Commit\CommitParentCollection;
+use DevboardLib\GitHub\Commit\CommitParentCollection;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 

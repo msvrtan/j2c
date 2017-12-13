@@ -7,11 +7,11 @@ namespace Tests\DevboardLib\Git\Commit;
 use DevboardLib\GitHub\Commit\CommitParent\ParentApiUrl;
 use DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl;
 use DevboardLib\GitHub\Commit\CommitSha;
-use DevboardLib\Git\Commit\CommitParent;
+use DevboardLib\GitHub\Commit\CommitParent;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DevboardLib\Git\Commit\CommitParent
+ * @covers \DevboardLib\GitHub\Commit\CommitParent
  * @group  todo
  */
 class CommitParentTest extends TestCase

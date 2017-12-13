@@ -8,8 +8,8 @@ use DevboardLib\GitHub\Commit\CommitSha;
 use Webmozart\Assert\Assert;
 
 /**
- * @see \spec\DevboardLib\Git\Commit\CommitParentCollectionSpec
- * @see \Tests\DevboardLib\Git\Commit\CommitParentCollectionTest
+ * @see \spec\DevboardLib\GitHub\Commit\CommitParentCollectionSpec
+ * @see \Tests\DevboardLib\GitHub\Commit\CommitParentCollectionTest
  */
 class CommitParentCollection
 {

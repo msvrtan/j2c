@@ -56,7 +56,7 @@ definition:
       hasDefault: false
       default: null
     parents:
-      className: DevboardLib\Git\Commit\CommitParentCollection
+      className: DevboardLib\GitHub\Commit\CommitParentCollection
       nullable: false
       hasDefault: false
       default: null

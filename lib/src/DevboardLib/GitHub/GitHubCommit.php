@@ -13,7 +13,7 @@ use DevboardLib\GitHub\Commit\CommitTree;
 use DevboardLib\GitHub\Commit\CommitVerification;
 use DevboardLib\Git\Commit\CommitDate;
 use DevboardLib\Git\Commit\CommitMessage;
-use DevboardLib\Git\Commit\CommitParentCollection;
+use DevboardLib\GitHub\Commit\CommitParentCollection;
 
 /**
  * @see \spec\DevboardLib\GitHub\GitHubCommitSpec

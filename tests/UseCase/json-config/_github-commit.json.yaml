@@ -109,7 +109,7 @@ fields:
   parents:
     key: Parents
     propertyName: parents
-    className: DevboardLib\Git\Commit\CommitParentCollection
+    className: DevboardLib\GitHub\Commit\CommitParentCollection
     inputKey: '["parents"]'
     suggestions:
       - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleCollection
@@ -138,7 +138,7 @@ fields:
           - JsonToConfig\JsonDetector\ValueObject\Generix\Url
           - JsonToConfig\JsonDetector\ValueObject\Simple\SimpleString
     collectionOf:
-      className: DevboardLib\Git\Commit\CommitParent
+      className: DevboardLib\GitHub\Commit\CommitParent
       accessor: getSha
       has: DevboardLib\GitHub\Commit\CommitSha
   verification:
