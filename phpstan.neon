@@ -1,11 +1,11 @@
 parameters:
 	bootstrap: tests/bootstrap.php
 	ignoreErrors:
-	    - '#Parameter .* Mockery\\MockInterface given.#'
-	    - '#Call to an undefined method Mockery\\ExpectationInterface|Mockery\\ExpectsHigherOrderMessage\:\:andReturn().#'
-	    - '#Call to an undefined static method NullDevelopment\\Skeleton\\Php\\Structure\\Visibility\:\:PRIVATE\(\).#'
-	    - '#Call to an undefined method Roave\\BetterReflection\\Reflection\\Reflection\:\:getParentClass\(\).#'
-	    - '#Call to an undefined method Roave\\BetterReflection\\Reflection\\Reflection\:\:getConstructor\(\).#'
+#	    - '#Parameter .* Mockery\\MockInterface given.#'
+#	    - '#Call to an undefined method Mockery\\ExpectationInterface|Mockery\\ExpectsHigherOrderMessage\:\:andReturn().#'
+#	    - '#Call to an undefined static method NullDevelopment\\Skeleton\\Php\\Structure\\Visibility\:\:PRIVATE\(\).#'
+#	    - '#Call to an undefined method Roave\\BetterReflection\\Reflection\\Reflection\:\:getParentClass\(\).#'
+#	    - '#Call to an undefined method Roave\\BetterReflection\\Reflection\\Reflection\:\:getConstructor\(\).#'
 	includes:
 	    - vendor/phpstan/phpstan-phpunit/extension.neon
 	    - vendor/phpstan/phpstan-phpunit/rules.neon
