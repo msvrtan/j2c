@@ -11,114 +11,20 @@ services:
                             # fetching services directly from the container via $container->get() won't work.
                             # The best practice is to be explicit about your dependencies anyway.
 
-    # makes classes in src/ available to be used as services
-    # this creates a service per class whose id is the fully-qualified class name
-    JsonToConfig\JsonDetector\Factory\:
-        resource: '../src/JsonToConfig/JsonDetector/Factory/*'
-
-    # controllers are imported separately to make sure services can be injected
-    # as action arguments even if you don't extend any base controller class
-    App\Controller\:
-        resource: '../src/App/Controller'
-        tags: ['controller.service_arguments']
-
     App\Command\:
         resource: '../src/App/Command'
         tags: ['console.command']
 
-    # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
 
-    JsonToConfig\JsonDetector:
-        public: true
-
-    NullDevelopment\Skeleton\Core\Loader\:
-        resource: '../src/NullDevelopment/Skeleton/Core/Loader'
-        public: true
-
-    NullDevelopment\Skeleton\SourceCode\Loader\:
-        resource: '../src/NullDevelopment/Skeleton/SourceCode/Loader'
-        public: true
+#    NullDevelopment\SkeletonSourceCodeNetteGenerator\NetteGenerator\SimpleCollectionNetteGenerator:
+#        tags:
+#            - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleCollection' }
 
 
-    NullDevelopment\Skeleton\ExampleMaker\ExampleMaker: ~
+#    NullDevelopment\SkeletonPhpUnitNetteGenerator\PHPUnitTestMiddleware:
+#      tags:
+#        - { name: tactician.middleware , priority: 50 }
 
-    ConfigToDefinition\:
-        resource: '../src/ConfigToDefinition'
-        public: true
-
-
-
-    App\File\FileFactory:
-        public: true
-
-    App\Config\ConfigFactory:
-        public: true
-
-    Symfony\Component\Filesystem\Filesystem:
-        public: true
-
-    App\Config\Config:
-        class: App\Config\Config
-        factory: ['@App\Config\ConfigFactory', create]
-        public: true
-
-    App\Config\Path\Readers\SourceCodePathReader: ~
-    App\Config\Path\Readers\FinderFactory: ~
-
-    NullDevelopment\Skeleton\Core\ObjectConfigurationLoaderCollection: ~
-
-
-    NullDevelopment\SkeletonPhpSpecNetteGenerator\NetteGenerator\:
-        resource: '../src/NullDevelopment/SkeletonPhpSpecNetteGenerator/NetteGenerator'
-        public: true
-        tags:
-            - { name: skeleton.php_spec_generator }
-
-
-    NullDevelopment\SkeletonPhpUnitNetteGenerator\NetteGenerator\:
-        resource: '../src/NullDevelopment/SkeletonPhpUnitNetteGenerator/NetteGenerator'
-        public: true
-        tags:
-            - { name: skeleton.php_unit_generator }
-
-
-    NullDevelopment\SkeletonSourceCodeNetteGenerator\NetteGenerator\:
-        resource: '../src/NullDevelopment/SkeletonSourceCodeNetteGenerator/NetteGenerator'
-        public: true
-        tags:
-            - { name: skeleton.source_code_generator }
-
-
-
-    NullDevelopment\SkeletonSourceCodeNetteGenerator\NetteGenerator\DateTimeValueObjectNetteGenerator:
-        tags:
-            - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\DateTimeValueObject' }
-
-    NullDevelopment\SkeletonSourceCodeNetteGenerator\NetteGenerator\SimpleEntityNetteGenerator:
-        tags:
-            - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleEntity' }
-
-    NullDevelopment\SkeletonSourceCodeNetteGenerator\NetteGenerator\SimpleIdentifierNetteGenerator:
-        tags:
-            - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleIdentifier' }
-
-    NullDevelopment\SkeletonSourceCodeNetteGenerator\NetteGenerator\SimpleValueObjectNetteGenerator:
-        tags:
-            - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleValueObject' }
-
-    NullDevelopment\SkeletonSourceCodeNetteGenerator\NetteGenerator\SimpleCollectionNetteGenerator:
-        tags:
-            - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleCollection' }
-
-
-    NullDevelopment\SkeletonPhpUnitNetteGenerator\PHPUnitTestMiddleware:
-      tags:
-        - { name: tactician.middleware , priority: 50 }
-
-    NullDevelopment\SkeletonPhpSpecNetteGenerator\PHPSpecMiddleware:
-      tags:
-        - { name: tactician.middleware , priority: 50 }
 
 
 
