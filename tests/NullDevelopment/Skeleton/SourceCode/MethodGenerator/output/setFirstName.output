@@ -1,0 +1,4 @@
+public function setFirstName(UserFirstName $firstName)
+{
+	$this->firstName = $firstName;
+}
