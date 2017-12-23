@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace NullDevelopment\Skeleton\SourceCode\Method;
 
+use NullDevelopment\PhpStructure\Behaviour\ConstructorMethod as ConstructorMethodInterface;
 use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\Skeleton\SourceCode\Method;
 use Webmozart\Assert\Assert;
 
 /**
  * @see ConstructorMethodSpec
  * @see ConstructorMethodTest
  */
-class ConstructorMethod implements Method
+class ConstructorMethod implements ConstructorMethodInterface
 {
     /** @var Property[] */
     private $properties;
