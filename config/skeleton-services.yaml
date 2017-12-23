@@ -1,0 +1,39 @@
+parameters:
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  NullDevelopment\Skeleton\SourceCode\DefinitionGenerator\SingleValueObjectGenerator:
+    arguments:
+      $methodGenerators:
+        - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator'
+        - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator'
+
+
+  #
+  #
+  # Source code
+  NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator: ~
+  NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator: ~
+  NullDevelopment\Skeleton\SourceCode\MethodGenerator\SetterMethodGenerator: ~
+
+  #
+  #
+  #PhpSpec
+  NullDevelopment\Skeleton\PhpSpec\MethodGenerator\LetMethodGenerator: ~
+  NullDevelopment\Skeleton\PhpSpec\MethodGenerator\InitializableMethodGenerator: ~
+  NullDevelopment\Skeleton\PhpSpec\MethodGenerator\GetterSpecMethodGenerator: ~
+
+  NullDevelopment\Skeleton\PhpSpec\MethodFactory\LetMethodFactory: ~
+  NullDevelopment\Skeleton\PhpSpec\MethodFactory\GetterSpecMethodFactory: ~
+
+
+  #
+  #
+  #Misc
+  NullDevelopment\Skeleton\ExampleMaker\ExampleMaker: ~
+
+
