@@ -1,0 +1,4 @@
+public function let(UserFirstName $firstName)
+{
+	$this->beConstructedWith($firstName);
+}
