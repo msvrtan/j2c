@@ -1,0 +1,17 @@
+class UserEntity
+{
+	/** @var MyVendor\User\UserFirstName */
+	private $firstName;
+
+
+	public function __construct(\UserFirstName $firstName)
+	{
+		$this->firstName = $firstName;
+	}
+
+
+	public function getFirstName(): \UserFirstName
+	{
+		return $this->firstName;
+	}
+}

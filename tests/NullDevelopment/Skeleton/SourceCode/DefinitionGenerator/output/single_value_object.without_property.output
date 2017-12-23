@@ -1,0 +1,7 @@
+class UserEntity extends \MyVendor\Core\BaseModel implements \MyVendor\Core\SomeInterface
+{
+	/** @var MyVendor\User\UserFirstName */
+	private $firstName;
+
+
+}
