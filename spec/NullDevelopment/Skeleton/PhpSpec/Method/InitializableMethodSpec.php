@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace spec\NullDevelopment\Skeleton\PhpSpec\Method;
 
+use NullDevelopment\PhpStructure\Behaviour\Method;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\PhpStructure\DataTypeName\InterfaceName;
 use NullDevelopment\Skeleton\PhpSpec\Method\InitializableMethod;
-use NullDevelopment\Skeleton\SourceCode\Method;
 use PhpSpec\ObjectBehavior;
 
 class InitializableMethodSpec extends ObjectBehavior

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace NullDevelopment\Skeleton\PhpSpec\Method;
 
+use NullDevelopment\PhpStructure\Behaviour\Method;
 use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\Skeleton\SourceCode\Method;
 
 abstract class BaseSpecMethod implements Method
 {

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace NullDevelopment\Skeleton\SourceCode\MethodGenerator;
 
 use Nette\PhpGenerator\Method as NetteMethod;
-use NullDevelopment\Skeleton\SourceCode\Method;
+use NullDevelopment\PhpStructure\Behaviour\Method;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
 
 /**

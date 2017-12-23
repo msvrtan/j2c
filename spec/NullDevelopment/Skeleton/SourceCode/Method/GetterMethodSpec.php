@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace spec\NullDevelopment\Skeleton\SourceCode\Method;
 
+use NullDevelopment\PhpStructure\Behaviour\Method;
 use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\Skeleton\SourceCode\Method;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
 use PhpSpec\ObjectBehavior;
 
