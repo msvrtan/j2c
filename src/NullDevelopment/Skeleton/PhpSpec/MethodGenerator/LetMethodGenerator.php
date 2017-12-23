@@ -33,7 +33,14 @@ class LetMethodGenerator implements MethodGenerator
         return false;
     }
 
-    public function generate(Method $method): string
+    public function generateAsString(Method $method): string
+    {
+        $code = $this->generate($method);
+
+        return $code->__toString();
+    }
+
+    public function generate(Method $method): NetteMethod
     {
         $code = new NetteMethod($method->getName());
 
@@ -53,7 +60,7 @@ class LetMethodGenerator implements MethodGenerator
 
         $this->generateMethodBody($method, $code);
 
-        return $code->__toString();
+        return $code;
     }
 
     protected function generateMethodBody($method, NetteMethod $code)

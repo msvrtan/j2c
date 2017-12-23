@@ -40,7 +40,7 @@ class GetterMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 
     public function it_generates_return_type(GetterMethod $method)
@@ -61,7 +61,7 @@ class GetterMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 
     public function it_generates_nullable_return_type_as_well(GetterMethod $method)
@@ -83,6 +83,6 @@ class GetterMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 }

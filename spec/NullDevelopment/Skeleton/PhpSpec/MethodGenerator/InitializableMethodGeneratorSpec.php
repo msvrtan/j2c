@@ -46,7 +46,7 @@ class InitializableMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 
     public function it_creates_initializable_method_with_parent(
@@ -75,7 +75,7 @@ class InitializableMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 
     public function it_creates_initializable_method_with_interfaces(
@@ -104,6 +104,6 @@ class InitializableMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 }

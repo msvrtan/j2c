@@ -49,7 +49,7 @@ class GetterSpecMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 
     public function it_creates_specification_for_string_property(
@@ -76,7 +76,7 @@ class GetterSpecMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 
     public function it_creates_specification_for_int_property(
@@ -104,6 +104,6 @@ class GetterSpecMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 }

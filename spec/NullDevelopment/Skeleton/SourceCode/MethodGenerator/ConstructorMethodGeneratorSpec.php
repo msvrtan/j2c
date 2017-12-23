@@ -42,6 +42,6 @@ class ConstructorMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 }
