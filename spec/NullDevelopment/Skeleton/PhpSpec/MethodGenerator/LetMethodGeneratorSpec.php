@@ -50,7 +50,7 @@ class LetMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 
     public function it_creates_let_method_for_object_properties(
@@ -75,7 +75,7 @@ class LetMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 
     public function it_creates_let_method_for_combination_of_properties(
@@ -107,6 +107,6 @@ class LetMethodGeneratorSpec extends ObjectBehavior
 
         $expected = implode(PHP_EOL, $lines);
 
-        $this->generate($method)->shouldReturn($expected);
+        $this->generateAsString($method)->shouldReturn($expected);
     }
 }

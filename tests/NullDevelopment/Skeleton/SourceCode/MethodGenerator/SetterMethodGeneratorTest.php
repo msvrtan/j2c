@@ -32,12 +32,12 @@ class SetterMethodGeneratorTest extends TestCase
     }
 
     /** @dataProvider provideMethods */
-    public function testGenerate(SetterMethod $method, string $fileName)
+    public function testGenerateAsString(SetterMethod $method, string $fileName)
     {
         $fileName = __DIR__.'/output/'.$fileName;
         $expected = @file_get_contents($fileName);
 
-        $result = $this->sut->generate($method);
+        $result = $this->sut->generateAsString($method);
 
         if (true === empty($expected)) {
             file_put_contents($fileName, $result);

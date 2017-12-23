@@ -10,7 +10,14 @@ use NullDevelopment\Skeleton\SourceCode\MethodGenerator;
 
 abstract class BaseMethodGenerator implements MethodGenerator
 {
-    public function generate(Method $method): string
+    public function generateAsString(Method $method): string
+    {
+        $code = $this->generate($method);
+
+        return $code->__toString();
+    }
+
+    public function generate(Method $method): NetteMethod
     {
         $code = new NetteMethod($method->getName());
 
@@ -28,7 +35,7 @@ abstract class BaseMethodGenerator implements MethodGenerator
 
         $this->generateMethodBody($method, $code);
 
-        return $code->__toString();
+        return $code;
     }
 
     abstract protected function generateMethodBody($method, NetteMethod $code);

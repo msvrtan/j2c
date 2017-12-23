@@ -38,12 +38,12 @@ class GetterSpecMethodGeneratorTest extends TestCase
     }
 
     /** @dataProvider provideMethods */
-    public function testGenerate(GetterSpecMethod $method, string $fileName)
+    public function testGenerateAsString(GetterSpecMethod $method, string $fileName)
     {
         $fileName = __DIR__.'/output/'.$fileName;
         $expected = @file_get_contents($fileName);
 
-        $result = $this->sut->generate($method);
+        $result = $this->sut->generateAsString($method);
 
         if (true === empty($expected)) {
             file_put_contents($fileName, $result);
