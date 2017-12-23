@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace spec\NullDevelopment\Skeleton\SourceCode\Method;
 
+use NullDevelopment\PhpStructure\Behaviour\ConstructorMethod as ConstructorMethodInterface;
+use NullDevelopment\PhpStructure\Behaviour\Method;
 use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\Skeleton\SourceCode\Method;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
 use PhpSpec\ObjectBehavior;
 
@@ -20,6 +21,7 @@ class ConstructorMethodSpec extends ObjectBehavior
     public function it_is_initializable()
     {
         $this->shouldHaveType(ConstructorMethod::class);
+        $this->shouldImplement(ConstructorMethodInterface::class);
         $this->shouldImplement(Method::class);
     }
 
