@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace NullDevelopment\Skeleton\PhpSpec\MethodGenerator;
 
 use Nette\PhpGenerator\Method as NetteMethod;
+use NullDevelopment\PhpStructure\Behaviour\Method;
 use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\PhpSpec\Method\LetMethod;
-use NullDevelopment\Skeleton\SourceCode\Method;
 use NullDevelopment\Skeleton\SourceCode\MethodGenerator;
 
 /**

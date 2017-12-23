@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace NullDevelopment\Skeleton\SourceCode;
 
+use NullDevelopment\PhpStructure\Behaviour\Method;
+
 interface MethodGenerator
 {
     public function supports(Method $method): bool;
