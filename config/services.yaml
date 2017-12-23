@@ -1,5 +1,6 @@
 imports:
     - { resource: 'tactician-services.yaml' }
+    - { resource: 'skeleton-services.yaml' }
 parameters:
 
 services:
