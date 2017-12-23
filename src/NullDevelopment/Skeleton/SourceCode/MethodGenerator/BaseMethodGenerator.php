@@ -30,7 +30,7 @@ abstract class BaseMethodGenerator implements MethodGenerator
 
         foreach ($method->getParameters() as $parameter) {
             $code->addParameter($parameter->getName())
-                ->setTypeHint($parameter->getInstanceNameAsString());
+                ->setTypeHint($parameter->getInstanceFullName());
         }
 
         $this->generateMethodBody($method, $code);

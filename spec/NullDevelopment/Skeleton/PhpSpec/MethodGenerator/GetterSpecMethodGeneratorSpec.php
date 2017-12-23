@@ -38,10 +38,10 @@ class GetterSpecMethodGeneratorSpec extends ObjectBehavior
 
         $property->isObject()->shouldBeCalled()->willReturn(true);
         $property->getName()->shouldBeCalled()->willReturn('firstName');
-        $property->getInstanceNameAsString()->shouldBeCalled()->willReturn('UserFirstName');
+        $property->getInstanceFullName()->shouldBeCalled()->willReturn('MyVendor\\User\\UserFirstName');
 
         $lines = [
-            'public function it_exposes_first_name(UserFirstName $firstName)',
+            'public function it_exposes_first_name(MyVendor\User\UserFirstName $firstName)',
             '{',
             "\t".'$this->getFirstName()->shouldReturn($firstName);',
             '}',

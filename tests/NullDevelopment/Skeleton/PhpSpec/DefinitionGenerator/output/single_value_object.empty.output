@@ -1,0 +1,25 @@
+class UserEntitySpec extends \PhpSpec\ObjectBehavior
+{
+	public function let(\UserFirstName $firstName)
+	{
+		$this->beConstructedWith($firstName);
+	}
+
+
+	public function it_is_initializable()
+	{
+		$this->shouldHaveType(UserEntity::class);
+	}
+
+
+	public function it_exposes_first_name(\MyVendor\User\UserFirstName $firstName)
+	{
+		$this->getFirstName()->shouldReturn($firstName);
+	}
+
+
+	public function it_exposes_value(\MyVendor\User\UserFirstName $firstName)
+	{
+		$this->getValue()->shouldReturn($firstName);
+	}
+}
