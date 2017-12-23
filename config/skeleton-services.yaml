@@ -6,16 +6,17 @@ services:
     autoconfigure: true
     public: true
 
+
+  #
+  #
+  # Source code
+
   NullDevelopment\Skeleton\SourceCode\DefinitionGenerator\SingleValueObjectGenerator:
     arguments:
       $methodGenerators:
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator'
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator'
 
-
-  #
-  #
-  # Source code
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\SetterMethodGenerator: ~
@@ -23,11 +24,27 @@ services:
   #
   #
   #PhpSpec
+
+  NullDevelopment\Skeleton\PhpSpec\DefinitionGenerator\SpecSingleValueObjectGenerator:
+    arguments:
+      $methodGenerators:
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\LetMethodGenerator'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\InitializableMethodGenerator'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\GetterSpecMethodGenerator'
+
+  NullDevelopment\Skeleton\PhpSpec\DefinitionFactory\SpecSingleValueObjectFactory:
+    arguments:
+      $factories:
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\LetMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\InitializableMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\GetterSpecMethodFactory'
+
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\LetMethodGenerator: ~
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\InitializableMethodGenerator: ~
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\GetterSpecMethodGenerator: ~
 
   NullDevelopment\Skeleton\PhpSpec\MethodFactory\LetMethodFactory: ~
+  NullDevelopment\Skeleton\PhpSpec\MethodFactory\InitializableMethodFactory: ~
   NullDevelopment\Skeleton\PhpSpec\MethodFactory\GetterSpecMethodFactory: ~
 
 

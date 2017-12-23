@@ -32,9 +32,10 @@ class ConstructorMethodGeneratorSpec extends ObjectBehavior
         $method->getParameters()->shouldBeCalled()->willReturn([$property]);
 
         $property->getName()->shouldBeCalled()->willReturn('firstName');
-        $property->getInstanceNameAsString()->shouldBeCalled()->willReturn('UserFirstName');
+        $property->getInstanceFullName()->shouldBeCalled()->willReturn('MyVendor\\User\\UserFirstName');
+
         $lines = [
-            'public function __construct(UserFirstName $firstName)',
+            'public function __construct(MyVendor\User\UserFirstName $firstName)',
             '{',
             "\t".'$this->firstName = $firstName;',
             '}',

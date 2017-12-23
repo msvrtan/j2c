@@ -78,6 +78,7 @@ class SingleValueObjectGeneratorTest extends SfTestCase
 
         $constructorMethod = new ConstructorMethod([$firstName]);
         $getterMethod      = new GetterMethod('getFirstName', $firstName);
+        $getValueMethod    = new GetterMethod('getValue', $firstName);
 
         return [
             [
@@ -89,7 +90,7 @@ class SingleValueObjectGeneratorTest extends SfTestCase
                 'single_value_object.without_property.output',
             ],
             [
-                new SingleValueObject($class, null, [], [], [$firstName], [$constructorMethod, $getterMethod]),
+                new SingleValueObject($class, null, [], [], [$firstName], [$constructorMethod, $getterMethod, $getValueMethod]),
                 'single_value_object.first_name.output',
             ],
         ];

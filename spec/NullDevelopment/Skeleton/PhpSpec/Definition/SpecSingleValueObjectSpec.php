@@ -2,19 +2,18 @@
 
 declare(strict_types=1);
 
-namespace spec\NullDevelopment\Skeleton\SourceCode\Definition;
+namespace spec\NullDevelopment\Skeleton\PhpSpec\Definition;
 
 use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\PhpStructure\DataTypeName\InterfaceName;
 use NullDevelopment\PhpStructure\DataTypeName\TraitName;
-use NullDevelopment\Skeleton\SourceCode;
-use NullDevelopment\Skeleton\SourceCode\Definition\SingleValueObject;
-use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
-use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
+use NullDevelopment\Skeleton\PhpSpec\Definition\SpecSingleValueObject;
+use NullDevelopment\Skeleton\PhpSpec\Method\InitializableMethod;
+use NullDevelopment\Skeleton\PhpSpec\Method\LetMethod;
 use PhpSpec\ObjectBehavior;
 
-class SingleValueObjectSpec extends ObjectBehavior
+class SpecSingleValueObjectSpec extends ObjectBehavior
 {
     public function let(
         ClassName $name,
@@ -22,8 +21,8 @@ class SingleValueObjectSpec extends ObjectBehavior
         InterfaceName $interfaceName1,
         TraitName $traitName1,
         Property $property1,
-        ConstructorMethod $constructorMethod,
-        GetterMethod $getterMethod1
+        LetMethod $letMethod,
+        InitializableMethod $initializableMethod
     ) {
         $this->beConstructedWith(
             $name,
@@ -31,14 +30,13 @@ class SingleValueObjectSpec extends ObjectBehavior
             [$interfaceName1],
             [$traitName1],
             [$property1],
-            [$constructorMethod, $getterMethod1]
+            [$letMethod, $initializableMethod]
         );
     }
 
     public function it_is_initializable()
     {
-        $this->shouldHaveType(SingleValueObject::class);
-        $this->shouldImplement(SourceCode::class);
+        $this->shouldHaveType(SpecSingleValueObject::class);
     }
 
     public function it_exposes_class_name(ClassName $name)
@@ -76,14 +74,14 @@ class SingleValueObjectSpec extends ObjectBehavior
         $this->getTraits()->shouldReturn([$traitName1]);
     }
 
-    public function it_knows_constructor_is_defined()
+    public function it_knows_constructor_is_not_defined()
     {
-        $this->hasConstructorMethod()->shouldReturn(true);
+        $this->hasConstructorMethod()->shouldReturn(false);
     }
 
-    public function it_exposes_constructor(ConstructorMethod $constructorMethod)
+    public function it_exposes_constructor()
     {
-        $this->getConstructorMethod()->shouldReturn($constructorMethod);
+        $this->getConstructorMethod()->shouldReturn(null);
     }
 
     public function it_knows_there_are_properties()
@@ -101,8 +99,8 @@ class SingleValueObjectSpec extends ObjectBehavior
         $this->hasMethods()->shouldReturn(true);
     }
 
-    public function it_exposes_defined_methods(ConstructorMethod $constructorMethod, GetterMethod $getterMethod1)
+    public function it_exposes_defined_methods(LetMethod $letMethod, InitializableMethod $initializableMethod)
     {
-        $this->getMethods()->shouldReturn([$constructorMethod, $getterMethod1]);
+        $this->getMethods()->shouldReturn([$letMethod, $initializableMethod]);
     }
 }

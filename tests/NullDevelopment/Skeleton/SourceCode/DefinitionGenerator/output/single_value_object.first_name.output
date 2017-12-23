@@ -4,13 +4,19 @@ class UserEntity
 	private $firstName;
 
 
-	public function __construct(\UserFirstName $firstName)
+	public function __construct(\MyVendor\User\UserFirstName $firstName)
 	{
 		$this->firstName = $firstName;
 	}
 
 
 	public function getFirstName(): \UserFirstName
+	{
+		return $this->firstName;
+	}
+
+
+	public function getValue(): \UserFirstName
 	{
 		return $this->firstName;
 	}

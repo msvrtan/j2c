@@ -33,10 +33,10 @@ class SetterMethodGeneratorSpec extends ObjectBehavior
         $method->getPropertyName()->shouldBeCalled()->willReturn('firstName');
 
         $property->getName()->shouldBeCalled()->willReturn('firstName');
-        $property->getInstanceNameAsString()->shouldBeCalled()->willReturn('UserFirstName');
+        $property->getInstanceFullName()->shouldBeCalled()->willReturn('MyVendor\\User\\UserFirstName');
 
         $lines = [
-            'public function setFirstName(UserFirstName $firstName)',
+            'public function setFirstName(MyVendor\User\UserFirstName $firstName)',
             '{',
             "\t".'$this->firstName = $firstName;',
             '}',
