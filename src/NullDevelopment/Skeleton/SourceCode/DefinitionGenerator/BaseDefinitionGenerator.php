@@ -43,10 +43,12 @@ abstract class BaseDefinitionGenerator implements DefinitionGenerator
 
         if (true === $definition->hasParent()) {
             $code->setExtends($definition->getParentFullClassName());
+            $namespace->addUse($definition->getParentFullClassName());
         }
 
         foreach ($definition->getInterfaces() as $interface) {
             $code->addImplement($interface->getFullName());
+            $namespace->addUse($interface->getFullName());
         }
 
         foreach ($definition->getProperties() as $property) {
@@ -57,6 +59,10 @@ abstract class BaseDefinitionGenerator implements DefinitionGenerator
                 $propertyCode->setValue($property->getDefaultValue());
             }
             $propertyCode->addComment(sprintf('@var %s', $property->getInstanceNameAsString()));
+
+            if (true === $property->isObject()) {
+                $namespace->addUse($property->getInstanceFullName());
+            }
         }
         $methods = [];
 

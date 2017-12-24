@@ -1,10 +1,14 @@
+namespace MyVendor\Webshop;
+
+use MyVendor\User\UserFirstName;
+
 class UserEntity
 {
-	/** @var MyVendor\User\UserFirstName */
+	/** @var UserFirstName */
 	private $firstName;
 
 
-	public function __construct(\MyVendor\User\UserFirstName $firstName)
+	public function __construct(UserFirstName $firstName)
 	{
 		$this->firstName = $firstName;
 	}

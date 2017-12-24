@@ -1,4 +1,8 @@
-class UserEntitySpec extends \PhpSpec\ObjectBehavior
+namespace spec\MyVendor\Webshop;
+
+use PhpSpec\ObjectBehavior;
+
+class UserEntitySpec extends ObjectBehavior
 {
 	public function let(\UserFirstName $firstName)
 	{

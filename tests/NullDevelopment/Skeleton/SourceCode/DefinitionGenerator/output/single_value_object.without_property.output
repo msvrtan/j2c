@@ -1,6 +1,12 @@
-class UserEntity extends \MyVendor\Core\BaseModel implements \MyVendor\Core\SomeInterface
+namespace MyVendor\Webshop;
+
+use MyVendor\Core\BaseModel;
+use MyVendor\Core\SomeInterface;
+use MyVendor\User\UserFirstName;
+
+class UserEntity extends BaseModel implements SomeInterface
 {
-	/** @var MyVendor\User\UserFirstName */
+	/** @var UserFirstName */
 	private $firstName;
 
 
