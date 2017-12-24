@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\Skeleton\SourceCode;
 
-use Exception;
 use Generator;
 use NullDevelopment\Skeleton\Path\Readers\FinderFactory;
 use NullDevelopment\Skeleton\SourceCode;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoaderCollection;
 use SplFileInfo;
 use Tests\TestCase\SfTestCase;
+use TypeError;
 
 /**
  * @covers \NullDevelopment\Skeleton\SourceCode\DefinitionLoaderCollection
@@ -37,15 +37,15 @@ class DefinitionLoaderCollectionTest extends SfTestCase
         foreach ($this->provideInput() as $input) {
             try {
                 self::assertInstanceOf(SourceCode::class, $this->sut->findAndLoad($input));
-            } catch (\TypeError $e) {
+            } catch (TypeError $e) {
                 echo $e->getMessage().PHP_EOL;
             }
         }
     }
 
-    public function provideInput() : Generator
+    public function provideInput(): Generator
     {
-        $path = getcwd().'/definitions';
+        $path  = getcwd().'/definitions';
         $yamls = $this->getService(FinderFactory::class)->create()->files()->in($path)->name('*.yaml');
 
         /** @var SplFileInfo $yaml */
