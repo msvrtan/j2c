@@ -1,5 +1,7 @@
 namespace spec\MyVendor\Webshop;
 
+use MyVendor\User\UserFirstName;
+use MyVendor\Webshop\UserEntity;
 use PhpSpec\ObjectBehavior;
 
 class UserEntitySpec extends ObjectBehavior
@@ -16,13 +18,13 @@ class UserEntitySpec extends ObjectBehavior
 	}
 
 
-	public function it_exposes_first_name(\MyVendor\User\UserFirstName $firstName)
+	public function it_exposes_first_name(UserFirstName $firstName)
 	{
 		$this->getFirstName()->shouldReturn($firstName);
 	}
 
 
-	public function it_exposes_value(\MyVendor\User\UserFirstName $firstName)
+	public function it_exposes_value(UserFirstName $firstName)
 	{
 		$this->getValue()->shouldReturn($firstName);
 	}
