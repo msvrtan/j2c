@@ -49,4 +49,9 @@ class ConstructorMethod implements ConstructorMethodInterface
     {
         return false;
     }
+
+    public function getImports(): array
+    {
+        return [];
+    }
 }

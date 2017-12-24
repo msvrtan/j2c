@@ -32,4 +32,17 @@ class LetMethod extends BaseSpecMethod
     {
         return $this->properties;
     }
+
+    public function getImports(): array
+    {
+        $imports = [];
+
+        foreach ($this->properties as $property) {
+            if (true === $property->isObject()) {
+                $imports[] = $property->getInstanceFullName();
+            }
+        }
+
+        return $imports;
+    }
 }

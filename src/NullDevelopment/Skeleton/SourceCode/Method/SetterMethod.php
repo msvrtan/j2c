@@ -60,4 +60,9 @@ class SetterMethod implements Method
     {
         return false;
     }
+
+    public function getImports(): array
+    {
+        return [];
+    }
 }

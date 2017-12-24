@@ -60,4 +60,9 @@ class GetterMethod implements Method
     {
         return $this->property->isNullable();
     }
+
+    public function getImports(): array
+    {
+        return [];
+    }
 }

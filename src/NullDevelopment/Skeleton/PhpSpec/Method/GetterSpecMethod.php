@@ -51,4 +51,9 @@ class GetterSpecMethod extends BaseSpecMethod
     {
         return [$this->property];
     }
+
+    public function getImports(): array
+    {
+        return [];
+    }
 }
