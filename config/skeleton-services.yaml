@@ -36,6 +36,9 @@ services:
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\TraitNameCollectionFactory: ~
 
 
+
+
+
   #
   #
   #PhpSpec
@@ -61,6 +64,13 @@ services:
   NullDevelopment\Skeleton\PhpSpec\MethodFactory\LetMethodFactory: ~
   NullDevelopment\Skeleton\PhpSpec\MethodFactory\InitializableMethodFactory: ~
   NullDevelopment\Skeleton\PhpSpec\MethodFactory\GetterSpecMethodFactory: ~
+
+
+
+  NullDevelopment\Skeleton\PhpSpec\DefinitionMiddleware\SpecSingleValueObjectMiddleware:
+    tags:
+      - { name: tactician.middleware , priority: 50 }
+
 
 
   #
