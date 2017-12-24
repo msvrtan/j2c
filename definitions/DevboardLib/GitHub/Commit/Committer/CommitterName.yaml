@@ -1,12 +1,12 @@
 definition:
   type: SimpleValueObject
-  className: DevboardLib\GitHub\Commit\Committer\CommitterName
+  instanceOf: DevboardLib\GitHub\Commit\Committer\CommitterName
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     name:
-      className: string
+      instanceOf: string
       nullable: false
       hasDefault: false
       default: null

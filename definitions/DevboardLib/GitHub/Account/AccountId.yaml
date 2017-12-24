@@ -1,12 +1,12 @@
 definition:
   type: SimpleIdentifier
-  className: DevboardLib\GitHub\Account\AccountId
+  instanceOf: DevboardLib\GitHub\Account\AccountId
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     id:
-      className: int
+      instanceOf: int
       nullable: false
       hasDefault: false
       default: null

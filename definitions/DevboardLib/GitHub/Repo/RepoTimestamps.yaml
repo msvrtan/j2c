@@ -1,22 +1,22 @@
 definition:
   type: SimpleEntity
-  className: DevboardLib\GitHub\Repo\RepoTimestamps
+  instanceOf: DevboardLib\GitHub\Repo\RepoTimestamps
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     createdAt:
-      className: DevboardLib\GitHub\Repo\RepoCreatedAt
+      instanceOf: DevboardLib\GitHub\Repo\RepoCreatedAt
       nullable: false
       hasDefault: false
       default: null
     updatedAt:
-      className: DevboardLib\GitHub\Repo\RepoUpdatedAt
+      instanceOf: DevboardLib\GitHub\Repo\RepoUpdatedAt
       nullable: false
       hasDefault: false
       default: null
     pushedAt:
-      className: DevboardLib\GitHub\Repo\RepoPushedAt
+      instanceOf: DevboardLib\GitHub\Repo\RepoPushedAt
       nullable: false
       hasDefault: false
       default: null

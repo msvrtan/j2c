@@ -1,12 +1,12 @@
 definition:
   type: SimpleValueObject
-  className: DevboardLib\GitHub\User\UserHtmlUrl
+  instanceOf: DevboardLib\GitHub\User\UserHtmlUrl
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     htmlUrl:
-      className: string
+      instanceOf: string
       nullable: false
       hasDefault: false
       default: null

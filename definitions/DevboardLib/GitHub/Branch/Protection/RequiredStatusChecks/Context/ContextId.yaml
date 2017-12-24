@@ -1,12 +1,12 @@
 definition:
   type: SimpleIdentifier
-  className: DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context\ContextId
+  instanceOf: DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context\ContextId
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     id:
-      className: int
+      instanceOf: int
       nullable: false
       hasDefault: false
       default: ~

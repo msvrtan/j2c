@@ -1,47 +1,47 @@
 definition:
   type: SimpleEntity
-  className: DevboardLib\GitHub\Commit\CommitCommitterDetails
+  instanceOf: DevboardLib\GitHub\Commit\CommitCommitterDetails
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     id:
-      className: DevboardLib\GitHub\User\UserId
+      instanceOf: DevboardLib\GitHub\User\UserId
       nullable: false
       hasDefault: false
       default: null
     login:
-      className: DevboardLib\GitHub\User\UserLogin
+      instanceOf: DevboardLib\GitHub\User\UserLogin
       nullable: false
       hasDefault: false
       default: null
     type:
-      className: DevboardLib\GitHub\Account\AccountType
+      instanceOf: DevboardLib\GitHub\Account\AccountType
       nullable: false
       hasDefault: false
       default: null
     avatarUrl:
-      className: DevboardLib\GitHub\User\UserAvatarUrl
+      instanceOf: DevboardLib\GitHub\User\UserAvatarUrl
       nullable: false
       hasDefault: false
       default: null
     gravatarId:
-      className: DevboardLib\Generix\GravatarId
+      instanceOf: DevboardLib\Generix\GravatarId
       nullable: false
       hasDefault: false
       default: null
     htmlUrl:
-      className: DevboardLib\GitHub\User\UserHtmlUrl
+      instanceOf: DevboardLib\GitHub\User\UserHtmlUrl
       nullable: false
       hasDefault: false
       default: null
     apiUrl:
-      className: DevboardLib\GitHub\User\UserApiUrl
+      instanceOf: DevboardLib\GitHub\User\UserApiUrl
       nullable: false
       hasDefault: false
       default: null
     siteAdmin:
-      className: bool
+      instanceOf: bool
       nullable: false
       hasDefault: false
       default: null

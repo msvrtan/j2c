@@ -1,32 +1,32 @@
 definition:
   type: SimpleEntity
-  className: MyVendor\ProductEntity
+  instanceOf: MyVendor\ProductEntity
   parent: ~
   interfaces: []
   traits: []
   constructor:
     id:
-      className: MyVendor\Product\ProductId
+      instanceOf: MyVendor\Product\ProductId
       nullable: false
       hasDefault: false
       default: ~
     title:
-      className: string
+      instanceOf: string
       nullable: false
       hasDefault: false
       default: ~
     description:
-      className: string
+      instanceOf: string
       nullable: true
       hasDefault: false
       default: ~
     weight:
-      className: MyVendor\Product\ProductWeight
+      instanceOf: MyVendor\Product\ProductWeight
       nullable: true
       hasDefault: false
       default: ~
     updatedAt:
-      className: DateTime
+      instanceOf: DateTime
       nullable: false
       hasDefault: false
       default: ~

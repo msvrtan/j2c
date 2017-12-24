@@ -1,27 +1,27 @@
 definition:
   type: SimpleEntity
-  className: DevboardLib\GitHub\Commit\CommitAuthor
+  instanceOf: DevboardLib\GitHub\Commit\CommitAuthor
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     name:
-      className: DevboardLib\GitHub\Commit\Author\AuthorName
+      instanceOf: DevboardLib\GitHub\Commit\Author\AuthorName
       nullable: false
       hasDefault: false
       default: null
     email:
-      className: DevboardLib\Generix\EmailAddress
+      instanceOf: DevboardLib\Generix\EmailAddress
       nullable: false
       hasDefault: false
       default: null
     date:
-      className: DevboardLib\GitHub\Commit\CommitDate
+      instanceOf: DevboardLib\GitHub\Commit\CommitDate
       nullable: false
       hasDefault: false
       default: null
     authorDetails:
-      className: DevboardLib\GitHub\Commit\CommitAuthorDetails
+      instanceOf: DevboardLib\GitHub\Commit\CommitAuthorDetails
       nullable: true
       hasDefault: false
       default: null
