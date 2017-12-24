@@ -21,6 +21,14 @@ services:
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\SetterMethodGenerator: ~
 
+  NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SingleValueObjectLoader: ~
+
+  NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\ConstructorMethodFactory: ~
+  NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\InterfaceNameCollectionFactory: ~
+  NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\PropertyCollectionFactory: ~
+  NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\TraitNameCollectionFactory: ~
+
+
   #
   #
   #PhpSpec
