@@ -33,7 +33,6 @@ class GetterSpecMethodFactorySpec extends ObjectBehavior
         $definition->getMethods()->shouldBeCalled()->willReturn([$method]);
 
         $method->getName()->shouldBeCalled()->willReturn('getFirstName');
-        $method->getPropertyName()->shouldBeCalled()->willReturn('firstName');
         $method->getProperty()->shouldBeCalled()->willReturn($firstName);
 
         $this->create($definition)->shouldHaveCount(1);
@@ -48,7 +47,6 @@ class GetterSpecMethodFactorySpec extends ObjectBehavior
     public function it_creates_getter_spec_method_from_given_getter_method(GetterMethod $method, Property $firstName)
     {
         $method->getName()->shouldBeCalled()->willReturn('getFirstName');
-        $method->getPropertyName()->shouldBeCalled()->willReturn('firstName');
         $method->getProperty()->shouldBeCalled()->willReturn($firstName);
 
         $this->createFromGetterMethod($method)
@@ -58,7 +56,6 @@ class GetterSpecMethodFactorySpec extends ObjectBehavior
     public function it_creates_nice_spec_method_name(GetterMethod $method, Property $firstName)
     {
         $method->getName()->shouldBeCalled()->willReturn('getFirstName');
-        $method->getPropertyName()->shouldBeCalled()->willReturn('firstName');
         $method->getProperty()->shouldBeCalled()->willReturn($firstName);
 
         $result = $this->createFromGetterMethod($method);

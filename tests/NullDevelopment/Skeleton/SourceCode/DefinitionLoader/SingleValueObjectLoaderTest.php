@@ -60,7 +60,8 @@ class SingleValueObjectLoaderTest extends SfTestCase
 
     public function provideInputs(): array
     {
-        $nameProperty = new Property('name', ClassName::create('string'), false, false, null, new Visibility('private'));
+        $nameProperty  = new Property('name', ClassName::create('string'), false, false, null, new Visibility('private'));
+        $valueProperty = new Property('value', ClassName::create('string'), false, false, null, new Visibility('private'));
 
         return [
             [
@@ -72,11 +73,7 @@ class SingleValueObjectLoaderTest extends SfTestCase
                             'instanceOf' => 'string',
                         ],
                     ],
-                    'properties' => [
-                        'name' => [
-                            'instanceOf' => 'string',
-                        ],
-                    ],
+                    'properties' => [],
                 ],
                 new SingleValueObject(
                     ClassName::create('MyCompany\User\UserName'),
@@ -87,6 +84,7 @@ class SingleValueObjectLoaderTest extends SfTestCase
                     [
                         new ConstructorMethod([$nameProperty]),
                         new GetterMethod('getName', $nameProperty),
+                        new GetterMethod('getValue', $nameProperty),
                     ]
                 ),
             ],
@@ -120,6 +118,37 @@ class SingleValueObjectLoaderTest extends SfTestCase
                     [
                         new ConstructorMethod([$nameProperty]),
                         new GetterMethod('getName', $nameProperty),
+                        new GetterMethod('getValue', $nameProperty),
+                    ]
+                ),
+            ],
+            [
+                [
+                    'type'        => 'SingleValueObject',
+                    'instanceOf'  => 'MyCompany\User\UserName',
+                    'parent'      => null,
+                    'interfaces'  => [],
+                    'traits'      => [],
+                    'constructor' => [
+                        'value' => [
+                            'instanceOf' => 'string',
+                            'nullable'   => false,
+                            'hasDefault' => false,
+                            'default'    => null,
+                        ],
+                    ],
+                    'properties' => [],
+                ],
+                new SingleValueObject(
+                    ClassName::create('MyCompany\User\UserName'),
+                    null,
+                    [],
+                    [],
+                    [$valueProperty],
+                    [
+                        new ConstructorMethod([$valueProperty]),
+                        new GetterMethod('getValue', $valueProperty),
+                        new GetterMethod('getValue', $valueProperty),
                     ]
                 ),
             ],

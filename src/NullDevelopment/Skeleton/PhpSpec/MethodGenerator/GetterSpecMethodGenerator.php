@@ -8,13 +8,13 @@ use Nette\PhpGenerator\Method as NetteMethod;
 use NullDevelopment\PhpStructure\Behaviour\Method;
 use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\PhpSpec\Method\GetterSpecMethod;
-use NullDevelopment\Skeleton\SourceCode\MethodGenerator\BaseMethodGenerator;
+use NullDevelopment\Skeleton\SourceCode\MethodGenerator;
 
 /**
  * @see GetterSpecMethodGeneratorSpec
  * @see GetterSpecMethodGeneratorTest
  */
-class GetterSpecMethodGenerator extends BaseMethodGenerator
+class GetterSpecMethodGenerator implements MethodGenerator
 {
     /** @var ExampleMaker */
     private $exampleMaker;
@@ -31,6 +31,36 @@ class GetterSpecMethodGenerator extends BaseMethodGenerator
         }
 
         return false;
+    }
+
+    public function generateAsString(Method $method): string
+    {
+        $code = $this->generate($method);
+
+        return $code->__toString();
+    }
+
+    public function generate(Method $method): NetteMethod
+    {
+        $code = new NetteMethod($method->getName());
+
+        $code->setVisibility((string) $method->getVisibility());
+
+        if ('' !== $method->getReturnType()) {
+            $code->setReturnType($method->getReturnType());
+            $code->setReturnNullable($method->isNullableReturnType());
+        }
+
+        foreach ($method->getParameters() as $parameter) {
+            if (true === $parameter->isObject()) {
+                $code->addParameter($parameter->getName())
+                    ->setTypeHint($parameter->getInstanceFullName());
+            }
+        }
+
+        $this->generateMethodBody($method, $code);
+
+        return $code;
     }
 
     protected function generateMethodBody($method, NetteMethod $code)
