@@ -1,9 +1,15 @@
 paths:
   code:
+    "lib/src/MyVendor/": "MyVendor\\"
+    "lib/src/DevboardLib/": "DevboardLib\\"
     "src/": ""
   spec:
+    "lib/spec/MyVendor/": spec\MyVendor\
+    "lib/spec/DevboardLib/": spec\DevboardLib\
     "spec/": spec\
   tests:
+    "lib/tests/MyVendor/": Tests\MyVendor\
+    "lib/tests/DevboardLib/": Tests\DevboardLib\
     "tests/": Tests\
 phpunit:
   base_namespace: Tests
@@ -15,10 +21,10 @@ phpunit:
     - Behat\Behat\Context\Context
     - Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface
 extensions:
-  NullDev\Skeleton\SkeletonExtension: ~
-  NullDev\BroadwaySkeleton\BroadwaySkeletonExtension: ~
-  NullDev\PHPUnitSkeleton\PHPUnitSkeletonExtension: ~
-  NullDev\PhpSpecSkeleton\PhpSpecSkeletonExtension: ~
-  NullDev\Theater\TheaterExtension: ~
+  NullDevelopment\Skeleton\SkeletonExtension: ~
+  NullDevelopment\BroadwaySkeleton\BroadwaySkeletonExtension: ~
+  NullDevelopment\PHPUnitSkeleton\PHPUnitSkeletonExtension: ~
+  NullDevelopment\PhpSpecSkeleton\PhpSpecSkeletonExtension: ~
+  NullDevelopment\Theater\TheaterExtension: ~
   NullDevelopment\Skeleton\SkeletonExtension: ~
   NullDevelopment\SkeletonNetteGenerator\SkeletonNetteGeneratorExtension: ~
