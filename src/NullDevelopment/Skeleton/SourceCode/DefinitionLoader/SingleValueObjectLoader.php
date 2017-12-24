@@ -77,13 +77,14 @@ class SingleValueObjectLoader implements DefinitionLoader
     public function getDefaultValues(): array
     {
         return [
-            'type'       => 'SingleValueObject',
-            'instanceOf' => null,
-            'parent'     => null,
-            'interfaces' => [],
-            'traits'     => [],
-            'properties' => [],
-            'methods'    => [],
+            'type'        => 'SingleValueObject',
+            'instanceOf'  => null,
+            'parent'      => null,
+            'interfaces'  => [],
+            'traits'      => [],
+            'properties'  => [],
+            'methods'     => [],
+            'constructor' => [],
         ];
     }
 

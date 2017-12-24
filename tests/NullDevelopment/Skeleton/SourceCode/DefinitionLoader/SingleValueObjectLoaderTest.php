@@ -52,6 +52,7 @@ class SingleValueObjectLoaderTest extends SfTestCase
             'traits'     => [],
             'properties' => [],
             'methods'    => [],
+            'constructor'=> [],
         ];
 
         $this->assertEquals($expected, $this->sut->getDefaultValues());
