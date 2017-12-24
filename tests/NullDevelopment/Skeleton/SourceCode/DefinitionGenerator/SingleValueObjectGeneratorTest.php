@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\Skeleton\SourceCode\DefinitionGenerator;
 
-use Nette\PhpGenerator\ClassType;
+use Nette\PhpGenerator\PhpNamespace;
 use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
@@ -58,7 +58,7 @@ class SingleValueObjectGeneratorTest extends SfTestCase
     {
         $result = $this->sut->generate($definition);
 
-        self::assertInstanceOf(ClassType::class, $result);
+        self::assertInstanceOf(PhpNamespace::class, $result);
     }
 
     public function provideSingleValueObject(): array
