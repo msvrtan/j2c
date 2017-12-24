@@ -21,6 +21,11 @@ services:
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\SetterMethodGenerator: ~
 
+  NullDevelopment\Skeleton\SourceCode\DefinitionLoaderCollection:
+    arguments:
+      $loaders:
+        - '@NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SingleValueObjectLoader'
+
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SingleValueObjectLoader: ~
 
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\ConstructorMethodFactory: ~
@@ -60,5 +65,6 @@ services:
   #
   #Misc
   NullDevelopment\Skeleton\ExampleMaker\ExampleMaker: ~
+  NullDevelopment\Skeleton\Path\Readers\FinderFactory: ~
 
 
