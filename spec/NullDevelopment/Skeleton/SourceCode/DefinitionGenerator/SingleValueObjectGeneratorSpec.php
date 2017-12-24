@@ -44,6 +44,8 @@ class SingleValueObjectGeneratorSpec extends ObjectBehavior
         $definition->getMethods()->shouldBeCalled()->willReturn([]);
 
         $lines = [
+            'namespace MyVendor\\WebShop;',
+            '',
             'class UserEntity',
             '{',
             '}',
@@ -66,7 +68,11 @@ class SingleValueObjectGeneratorSpec extends ObjectBehavior
         $definition->getMethods()->shouldBeCalled()->willReturn([]);
 
         $lines = [
-            'class UserEntity extends \\MyVendor\\Core\\BaseModel',
+            'namespace MyVendor\\WebShop;',
+            '',
+            'use MyVendor\\Core\\BaseModel;',
+            '',
+            'class UserEntity extends BaseModel',
             '{',
             '}',
             '',
@@ -88,7 +94,11 @@ class SingleValueObjectGeneratorSpec extends ObjectBehavior
         $definition->getMethods()->shouldBeCalled()->willReturn([]);
 
         $lines = [
-            'class UserEntity implements \\MyVendor\\Core\\SomeInterface',
+            'namespace MyVendor\\WebShop;',
+            '',
+            'use MyVendor\\Core\\SomeInterface;',
+            '',
+            'class UserEntity implements SomeInterface',
             '{',
             '}',
             '',
@@ -108,15 +118,21 @@ class SingleValueObjectGeneratorSpec extends ObjectBehavior
         $definition->getProperties()->shouldBeCalled()->willReturn([$firstName]);
 
         $firstName->getName()->shouldBeCalled()->willReturn('firstName');
+        $firstName->getInstanceNameAsString()->shouldBeCalled()->willReturn('UserFirstName');
         $firstName->getInstanceFullName()->shouldBeCalled()->willReturn('MyVendor\\WebShop\\User\\UserFirstName');
         $firstName->getVisibility()->shouldBeCalled()->willReturn(new Visibility('private'));
         $firstName->hasDefaultValue()->shouldBeCalled()->willReturn(false);
+        $firstName->isObject()->shouldBeCalled()->willReturn(true);
         $definition->getMethods()->shouldBeCalled()->willReturn([]);
 
         $lines = [
+            'namespace MyVendor\\WebShop;',
+            '',
+            'use MyVendor\WebShop\User\UserFirstName;',
+            '',
             'class UserEntity',
             '{',
-            "\t".'/** @var MyVendor\WebShop\User\UserFirstName */',
+            "\t".'/** @var UserFirstName */',
             "\t".'private $firstName;',
             '',
             '',
@@ -141,15 +157,21 @@ class SingleValueObjectGeneratorSpec extends ObjectBehavior
         $definition->getMethods()->shouldBeCalled()->willReturn([]);
 
         $lastName->getName()->shouldBeCalled()->willReturn('lastName');
+        $lastName->getInstanceNameAsString()->shouldBeCalled()->willReturn('UserLastName');
         $lastName->getInstanceFullName()->shouldBeCalled()->willReturn('MyVendor\\WebShop\\User\\UserLastName');
         $lastName->getVisibility()->shouldBeCalled()->willReturn(new Visibility('private'));
         $lastName->hasDefaultValue()->shouldBeCalled()->willReturn(true);
+        $lastName->isObject()->shouldBeCalled()->willReturn(true);
         $lastName->getDefaultValue()->shouldBeCalled()->willReturn('Smith');
 
         $lines = [
+            'namespace MyVendor\\WebShop;',
+            '',
+            'use MyVendor\WebShop\User\UserLastName;',
+            '',
             'class UserEntity',
             '{',
-            "\t".'/** @var MyVendor\WebShop\User\UserLastName */',
+            "\t".'/** @var UserLastName */',
             "\t".'private $lastName = \'Smith\';',
             '',
             '',
