@@ -56,7 +56,7 @@ class SingleValueObjectLoader implements DefinitionLoader
         $parent            = $this->extractParent($data);
         $interfaces        = $this->interfaceNameCollectionFactory->create($data['interfaces']);
         $traits            = $this->traitNameCollectionFactory->create($data['traits']);
-        $properties        = $this->propertyCollectionFactory->create($data['properties']);
+        $properties        = $this->propertyCollectionFactory->create(array_merge($data['properties'], $data['constructor']));
         $constructorMethod = $this->constructorMethodFactory->create($data['constructor']);
         $methods           = [$constructorMethod];
 
