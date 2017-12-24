@@ -1,5 +1,5 @@
 definition:
-  type: SimpleValueObject
+  type: SingleValueObject
   instanceOf: DevboardLib\GitHub\Commit\Author\AuthorName
   parent: null
   interfaces: {  }

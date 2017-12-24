@@ -1,5 +1,5 @@
 definition:
-  type: SimpleValueObject
+  type: SingleValueObject
   instanceOf: DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\RequiredStatusChecksEnforcementLevel
   parent: null
   interfaces: {  }
