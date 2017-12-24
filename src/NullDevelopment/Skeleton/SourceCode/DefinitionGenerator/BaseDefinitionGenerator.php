@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace NullDevelopment\Skeleton\SourceCode\DefinitionGenerator;
 
-use Nette\PhpGenerator\ClassType as NetteClass;
 use Nette\PhpGenerator\PhpNamespace;
 use NullDevelopment\PhpStructure\Type\ClassType;
 use NullDevelopment\Skeleton\SourceCode\DefinitionGenerator;
@@ -31,15 +30,16 @@ abstract class BaseDefinitionGenerator implements DefinitionGenerator
         return $code->__toString();
     }
 
-    public function generate(ClassType $definition): NetteClass
+    /** @SuppressWarnings(PHPMD.CyclomaticComplexity) */
+    public function generate(ClassType $definition): PhpNamespace
     {
         if (null === $definition->getNamespace()) {
-            $namespace = null;
+            $namespace = new PhpNamespace('');
         } else {
             $namespace = new PhpNamespace($definition->getNamespace());
         }
 
-        $code = new NetteClass($definition->getClassName(), $namespace);
+        $code = $namespace->addClass($definition->getClassName());
 
         if (true === $definition->hasParent()) {
             $code->setExtends($definition->getParentFullClassName());
@@ -56,7 +56,7 @@ abstract class BaseDefinitionGenerator implements DefinitionGenerator
             if (true === $property->hasDefaultValue()) {
                 $propertyCode->setValue($property->getDefaultValue());
             }
-            $propertyCode->addComment(sprintf('@var %s', $property->getInstanceFullName()));
+            $propertyCode->addComment(sprintf('@var %s', $property->getInstanceNameAsString()));
         }
         $methods = [];
 
@@ -70,6 +70,6 @@ abstract class BaseDefinitionGenerator implements DefinitionGenerator
 
         $code->setMethods($methods);
 
-        return $code;
+        return $namespace;
     }
 }

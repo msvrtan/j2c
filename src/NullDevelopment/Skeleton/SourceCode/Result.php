@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace NullDevelopment\Skeleton\SourceCode;
 
-use Nette\PhpGenerator\ClassType as NetteClass;
+use Nette\PhpGenerator\PhpNamespace;
 use NullDevelopment\PhpStructure\Type\ClassType;
 
 class Result
 {
     /** @var ClassType */
     private $classType;
-    /** @var NetteClass */
+    /** @var PhpNamespace */
     private $generated;
 
-    public function __construct(ClassType $classType, NetteClass $generated)
+    public function __construct(ClassType $classType, PhpNamespace $generated)
     {
         $this->classType = $classType;
         $this->generated = $generated;
@@ -25,7 +25,7 @@ class Result
         return $this->classType;
     }
 
-    public function getGenerated(): NetteClass
+    public function getGenerated(): PhpNamespace
     {
         return $this->generated;
     }
