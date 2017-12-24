@@ -31,7 +31,12 @@ class GetterSpecMethodFactory implements PhpSpecMethodFactory
 
     public function createFromGetterMethod(GetterMethod $method): GetterSpecMethod
     {
-        $snakeCasePropertyName = strtolower(preg_replace('/[A-Z]/', '_\\0', lcfirst($method->getPropertyName())));
+        $methodName = $method->getName();
+        if (preg_match('/get(?<methodName>.*)/', $methodName, $matches)) {
+            $methodName = $matches['methodName'];
+        }
+
+        $snakeCasePropertyName = strtolower(preg_replace('/[A-Z]/', '_\\0', lcfirst($methodName)));
 
         return new GetterSpecMethod(
             'it_exposes_'.$snakeCasePropertyName,

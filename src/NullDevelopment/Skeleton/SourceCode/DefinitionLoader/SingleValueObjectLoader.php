@@ -61,7 +61,9 @@ class SingleValueObjectLoader implements DefinitionLoader
         $methods           = [$constructorMethod];
 
         foreach ($properties as $property) {
-            $methods[] = new GetterMethod('get'.ucfirst($property->getName()), $property);
+            $methodName = 'get'.ucfirst($property->getName());
+            $methods[]  = new GetterMethod($methodName, $property);
+            $methods[]  = new GetterMethod('getValue', $property);
         }
 
         return new SingleValueObject(
