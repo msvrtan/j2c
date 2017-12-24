@@ -1,6 +1,10 @@
 formatter.name: progress
 suites:
-    generated_spec:
+    MyVendor:
         namespace: MyVendor
+        src_path: %paths.config%/src
+        spec_path: %paths.config%/
+    DevboardLib:
+        namespace: DevboardLib
         src_path: %paths.config%/src
         spec_path: %paths.config%/
