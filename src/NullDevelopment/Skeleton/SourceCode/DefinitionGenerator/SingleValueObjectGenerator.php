@@ -6,6 +6,7 @@ namespace NullDevelopment\Skeleton\SourceCode\DefinitionGenerator;
 
 use NullDevelopment\PhpStructure\Type\ClassType;
 use NullDevelopment\Skeleton\SourceCode\Definition\SingleValueObject;
+use NullDevelopment\Skeleton\SourceCode\Result;
 
 /**
  * @see SingleValueObjectGeneratorSpec
@@ -20,5 +21,12 @@ class SingleValueObjectGenerator extends BaseDefinitionGenerator
         }
 
         return false;
+    }
+
+    public function handleSingleValueObject(SingleValueObject $definition): array
+    {
+        return [
+            new Result($definition, $this->generate($definition)),
+        ];
     }
 }

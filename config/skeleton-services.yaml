@@ -16,6 +16,8 @@ services:
       $methodGenerators:
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator'
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator'
+    tags:
+      - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SingleValueObject' }
 
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator: ~
