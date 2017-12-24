@@ -55,4 +55,20 @@ class InitializableMethod extends BaseSpecMethod
     {
         return [];
     }
+
+    public function getImports(): array
+    {
+        $imports = [
+            $this->className->getFullName(),
+        ];
+        if (null !== $this->parentName) {
+            $imports[] = $this->parentName->getFullName();
+        }
+
+        foreach ($this->interfaces as $interfaceName) {
+            $imports[] = $interfaceName->getFullName();
+        }
+
+        return $imports;
+    }
 }

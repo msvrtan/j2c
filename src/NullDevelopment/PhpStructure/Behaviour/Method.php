@@ -19,4 +19,6 @@ interface Method
     public function getReturnType(): string;
 
     public function isNullableReturnType(): bool;
+
+    public function getImports(): array;
 }
