@@ -1,12 +1,12 @@
 definition:
   type: SimpleValueObject
-  className: DevboardLib\GitHub\Commit\Verification\VerificationVerified
+  instanceOf: DevboardLib\GitHub\Commit\Verification\VerificationVerified
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     verified:
-      className: bool
+      instanceOf: bool
       nullable: false
       hasDefault: false
       default: null

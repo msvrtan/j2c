@@ -1,37 +1,37 @@
 definition:
   type: SimpleEntity
-  className: MyVendor\UserEntity
+  instanceOf: MyVendor\UserEntity
   parent: ~
   interfaces: []
   traits: []
   constructor:
     id:
-      className: MyVendor\User\UserId
+      instanceOf: MyVendor\User\UserId
       nullable: false
       hasDefault: false
       default: ~
     firstName:
-      className: string
+      instanceOf: string
       nullable: false
       hasDefault: false
       default: ~
     lastName:
-      className: string
+      instanceOf: string
       nullable: false
       hasDefault: false
       default: ~
     username:
-      className: MyVendor\User\Username
+      instanceOf: MyVendor\User\Username
       nullable: false
       hasDefault: false
       default: ~
     createdAt:
-      className: MyVendor\User\UserCreatedAt
+      instanceOf: MyVendor\User\UserCreatedAt
       nullable: false
       hasDefault: false
       default: ~
     updatedAt:
-      className: DateTime
+      instanceOf: DateTime
       nullable: false
       hasDefault: false
       default: ~

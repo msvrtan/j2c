@@ -1,12 +1,12 @@
 definition:
   type: SimpleIdentifier
-  className: MyVendor\Product\ProductId
+  instanceOf: MyVendor\Product\ProductId
   parent: ~
   interfaces: []
   traits: []
   constructor:
     id:
-      className: int
+      instanceOf: int
       nullable: false
       hasDefault: false
       default: ~

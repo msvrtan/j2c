@@ -1,12 +1,12 @@
 definition:
   type: SimpleValueObject
-  className: DevboardLib\GitHub\Repo\RepoDescription
+  instanceOf: DevboardLib\GitHub\Repo\RepoDescription
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     description:
-      className: string
+      instanceOf: string
       nullable: false
       hasDefault: false
       default: null

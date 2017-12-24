@@ -1,12 +1,12 @@
 definition:
   type: DateTimeValueObject
-  className: DevboardLib\GitHub\Commit\CommitDate
+  instanceOf: DevboardLib\GitHub\Commit\CommitDate
   parent: DateTime
   interfaces: {  }
   traits: {  }
   constructor:
     value:
-      className: string
+      instanceOf: string
       nullable: false
       hasDefault: false
       default: null

@@ -1,12 +1,12 @@
 definition:
   type: SimpleValueObject
-  className: DevboardLib\GitHub\Commit\CommitCommentCount
+  instanceOf: DevboardLib\GitHub\Commit\CommitCommentCount
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     commentCount:
-      className: int
+      instanceOf: int
       nullable: false
       hasDefault: false
       default: null

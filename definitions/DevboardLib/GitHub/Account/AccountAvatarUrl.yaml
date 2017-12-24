@@ -1,12 +1,12 @@
 definition:
   type: SimpleValueObject
-  className: DevboardLib\GitHub\Account\AccountAvatarUrl
+  instanceOf: DevboardLib\GitHub\Account\AccountAvatarUrl
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     avatarUrl:
-      className: string
+      instanceOf: string
       nullable: false
       hasDefault: false
       default: null

@@ -1,6 +1,6 @@
 definition:
   type: DateTimeValueObject
-  className: MyVendor\User\UserCreatedAt
+  instanceOf: MyVendor\User\UserCreatedAt
   parent: DateTime
   interfaces: []
   traits: []

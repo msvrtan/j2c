@@ -1,57 +1,57 @@
 definition:
   type: SimpleEntity
-  className: DevboardLib\GitHub\GitHubCommit
+  instanceOf: DevboardLib\GitHub\GitHubCommit
   parent: null
   interfaces: {  }
   traits: {  }
   constructor:
     sha:
-      className: DevboardLib\GitHub\Commit\CommitSha
+      instanceOf: DevboardLib\GitHub\Commit\CommitSha
       nullable: false
       hasDefault: false
       default: null
     message:
-      className: DevboardLib\GitHub\Commit\CommitMessage
+      instanceOf: DevboardLib\GitHub\Commit\CommitMessage
       nullable: false
       hasDefault: false
       default: null
     commitDate:
-      className: DevboardLib\GitHub\Commit\CommitDate
+      instanceOf: DevboardLib\GitHub\Commit\CommitDate
       nullable: false
       hasDefault: false
       default: null
     author:
-      className: DevboardLib\GitHub\Commit\CommitAuthor
+      instanceOf: DevboardLib\GitHub\Commit\CommitAuthor
       nullable: false
       hasDefault: false
       default: null
     committer:
-      className: DevboardLib\GitHub\Commit\CommitCommitter
+      instanceOf: DevboardLib\GitHub\Commit\CommitCommitter
       nullable: false
       hasDefault: false
       default: null
     tree:
-      className: DevboardLib\GitHub\Commit\CommitTree
+      instanceOf: DevboardLib\GitHub\Commit\CommitTree
       nullable: false
       hasDefault: false
       default: null
     parents:
-      className: DevboardLib\GitHub\Commit\CommitParentCollection
+      instanceOf: DevboardLib\GitHub\Commit\CommitParentCollection
       nullable: false
       hasDefault: false
       default: null
     verification:
-      className: DevboardLib\GitHub\Commit\CommitVerification
+      instanceOf: DevboardLib\GitHub\Commit\CommitVerification
       nullable: false
       hasDefault: false
       default: null
     apiUrl:
-      className: DevboardLib\GitHub\Commit\CommitApiUrl
+      instanceOf: DevboardLib\GitHub\Commit\CommitApiUrl
       nullable: false
       hasDefault: false
       default: null
     htmlUrl:
-      className: DevboardLib\GitHub\Commit\CommitHtmlUrl
+      instanceOf: DevboardLib\GitHub\Commit\CommitHtmlUrl
       nullable: false
       hasDefault: false
       default: null
