@@ -30,7 +30,10 @@ abstract class BaseDefinitionGenerator implements DefinitionGenerator
         return $code->__toString();
     }
 
-    /** @SuppressWarnings(PHPMD.CyclomaticComplexity) */
+    /**
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings(PHPMD.NPathComplexity)
+     */
     public function generate(ClassType $definition): PhpNamespace
     {
         if (null === $definition->getNamespace()) {
@@ -70,6 +73,9 @@ abstract class BaseDefinitionGenerator implements DefinitionGenerator
             foreach ($definition->getMethods() as $method) {
                 if (true === $methodGenerator->supports($method)) {
                     $methods[] = $methodGenerator->generate($method);
+                    foreach ($method->getImports() as $import) {
+                        $namespace->addUse($import);
+                    }
                 }
             }
         }
