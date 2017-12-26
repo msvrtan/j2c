@@ -1,0 +1,4 @@
+public function serialize(): UserFirstName
+{
+	return $this->firstName->serialize();
+}
