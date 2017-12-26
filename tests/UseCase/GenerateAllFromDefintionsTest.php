@@ -22,10 +22,13 @@ class GenerateAllFromDefintionsTest extends SfTestCase
         $fileSystem       = $this->getService(Filesystem::class);
         $fileFactory      = $this->getService(FileFactory::class);
 
+        $generateList = ['SingleValueObject', 'SimpleIdentifier', 'DateTimeValueObject', 'SimpleEntity'];
+
         foreach ($this->provideInput() as $input) {
-            if (false === in_array($input['type'], ['SingleValueObject', 'SimpleIdentifier', 'DateTimeValueObject'])) {
+            if (false === in_array($input['type'], $generateList)) {
                 continue;
             }
+            try{
 
             $definition = $loaderCollection->findAndLoad($input);
 
@@ -38,6 +41,10 @@ class GenerateAllFromDefintionsTest extends SfTestCase
                 $generated = $result->getGenerated();
                 $output    = '<?php'.PHP_EOL.PHP_EOL.'declare(strict_types=1);'.PHP_EOL.PHP_EOL.str_replace("\t", '    ', $generated);
                 $fileSystem->dumpFile($fileName, $output);
+            }
+
+            }catch (\Throwable $exception){
+                var_dump($exception->getMessage());
             }
         }
         self::assertTrue(true);
