@@ -2,15 +2,28 @@
 
 declare(strict_types=1);
 
-namespace NullDevelopment\Skeleton\SourceCode\MethodGenerator;
+namespace NullDevelopment\Skeleton\PhpSpec\MethodGenerator;
 
 use Nette\PhpGenerator\Method as NetteMethod;
 use NullDevelopment\PhpStructure\Behaviour\Method;
+use NullDevelopment\Skeleton\PhpSpec\Method\SpecDateTimeLetMethod;
 use NullDevelopment\Skeleton\SourceCode\MethodGenerator;
 
-/** @SuppressWarnings("PHPMD.NumberOfChildren") */
-abstract class BaseMethodGenerator implements MethodGenerator
+/**
+ * @see SpecDateTimeLetMethodGeneratorSpec
+ * @see SpecDateTimeLetMethodGeneratorTest
+ */
+class SpecDateTimeLetMethodGenerator implements MethodGenerator
 {
+    public function supports(Method $method): bool
+    {
+        if ($method instanceof SpecDateTimeLetMethod) {
+            return true;
+        }
+
+        return false;
+    }
+
     public function generateAsString(Method $method): string
     {
         $code = $this->generate($method);
@@ -23,7 +36,6 @@ abstract class BaseMethodGenerator implements MethodGenerator
         $code = new NetteMethod($method->getName());
 
         $code->setVisibility((string) $method->getVisibility());
-        $code->setStatic($method->isStatic());
 
         if ('' !== $method->getReturnType()) {
             $code->setReturnType($method->getReturnType());
@@ -31,11 +43,9 @@ abstract class BaseMethodGenerator implements MethodGenerator
         }
 
         foreach ($method->getParameters() as $parameter) {
-            $parameterCode = $code->addParameter($parameter->getName())
-                ->setTypeHint($parameter->getInstanceFullName());
-
-            if (true === $parameter->hasDefaultValue()) {
-                $parameterCode->setDefaultValue($parameter->getDefaultValue());
+            if (true === $parameter->isObject()) {
+                $code->addParameter($parameter->getName())
+                    ->setTypeHint($parameter->getInstanceNameAsString());
             }
         }
 
@@ -44,5 +54,9 @@ abstract class BaseMethodGenerator implements MethodGenerator
         return $code;
     }
 
-    abstract protected function generateMethodBody($method, NetteMethod $code);
+    /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
+    protected function generateMethodBody($method, NetteMethod $code)
+    {
+        $code->addBody('$this->beConstructedWith(\'2018-01-01 11:22:33\');');
+    }
 }

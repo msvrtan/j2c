@@ -23,7 +23,7 @@ class GenerateAllFromDefintionsTest extends SfTestCase
         $fileFactory      = $this->getService(FileFactory::class);
 
         foreach ($this->provideInput() as $input) {
-            if (false === in_array($input['type'], ['SingleValueObject', 'SimpleIdentifier'])) {
+            if (false === in_array($input['type'], ['SingleValueObject', 'SimpleIdentifier', 'DateTimeValueObject'])) {
                 continue;
             }
 
