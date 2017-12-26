@@ -21,4 +21,6 @@ interface Method
     public function isNullableReturnType(): bool;
 
     public function getImports(): array;
+
+    public function isStatic(): bool;
 }

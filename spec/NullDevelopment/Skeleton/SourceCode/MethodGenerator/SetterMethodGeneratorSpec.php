@@ -27,6 +27,7 @@ class SetterMethodGeneratorSpec extends ObjectBehavior
     public function it_will_return_generated_code(SetterMethod $method, Property $property)
     {
         $method->getName()->shouldBeCalled()->willReturn('setFirstName');
+        $method->isStatic()->shouldBeCalled()->willReturn(false);
         $method->getVisibility()->shouldBeCalled()->willReturn(new Visibility('public'));
         $method->getReturnType()->shouldBeCalled()->willReturn('');
         $method->getParameters()->shouldBeCalled()->willReturn([$property]);

@@ -23,4 +23,9 @@ abstract class BaseSpecMethod implements Method
     {
         return false;
     }
+
+    public function isStatic(): bool
+    {
+        return false;
+    }
 }

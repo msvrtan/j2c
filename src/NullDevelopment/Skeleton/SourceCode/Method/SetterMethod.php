@@ -65,4 +65,9 @@ class SetterMethod implements Method
     {
         return [];
     }
+
+    public function isStatic(): bool
+    {
+        return false;
+    }
 }

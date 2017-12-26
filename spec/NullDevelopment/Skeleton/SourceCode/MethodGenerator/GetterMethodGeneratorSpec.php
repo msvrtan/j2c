@@ -26,6 +26,7 @@ class GetterMethodGeneratorSpec extends ObjectBehavior
     public function it_will_return_generated_code(GetterMethod $method)
     {
         $method->getName()->shouldBeCalled()->willReturn('getFirstName');
+        $method->isStatic()->shouldBeCalled()->willReturn(false);
         $method->getVisibility()->shouldBeCalled()->willReturn(new Visibility('public'));
         $method->getReturnType()->shouldBeCalled()->willReturn('');
         $method->getParameters()->shouldBeCalled()->willReturn([]);
@@ -46,6 +47,7 @@ class GetterMethodGeneratorSpec extends ObjectBehavior
     public function it_generates_return_type(GetterMethod $method)
     {
         $method->getName()->shouldBeCalled()->willReturn('getFirstName');
+        $method->isStatic()->shouldBeCalled()->willReturn(false);
         $method->getVisibility()->shouldBeCalled()->willReturn(new Visibility('public'));
         $method->getReturnType()->shouldBeCalled()->willReturn('UserFirstName');
         $method->getParameters()->shouldBeCalled()->willReturn([]);
@@ -67,6 +69,7 @@ class GetterMethodGeneratorSpec extends ObjectBehavior
     public function it_generates_nullable_return_type_as_well(GetterMethod $method)
     {
         $method->getName()->shouldBeCalled()->willReturn('getFirstName');
+        $method->isStatic()->shouldBeCalled()->willReturn(false);
         $method->isNullableReturnType()->shouldBeCalled()->willReturn(false);
         $method->getVisibility()->shouldBeCalled()->willReturn(new Visibility('public'));
         $method->getReturnType()->shouldBeCalled()->willReturn('UserFirstName');
