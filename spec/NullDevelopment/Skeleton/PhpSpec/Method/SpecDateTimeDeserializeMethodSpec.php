@@ -5,21 +5,21 @@ declare(strict_types=1);
 namespace spec\NullDevelopment\Skeleton\PhpSpec\Method;
 
 use NullDevelopment\PhpStructure\Behaviour\Method;
-use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\Skeleton\PhpSpec\Method\SpecToStringMethod;
+use NullDevelopment\PhpStructure\DataTypeName\ClassName;
+use NullDevelopment\Skeleton\PhpSpec\Method\SpecDateTimeDeserializeMethod;
 use PhpSpec\ObjectBehavior;
 
-class SpecToStringMethodSpec extends ObjectBehavior
+class SpecDateTimeDeserializeMethodSpec extends ObjectBehavior
 {
-    public function let(Property $property)
+    public function let(ClassName $className)
     {
-        $this->beConstructedWith($property);
+        $this->beConstructedWith($className);
     }
 
     public function it_is_initializable()
     {
-        $this->shouldHaveType(SpecToStringMethod::class);
+        $this->shouldHaveType(SpecDateTimeDeserializeMethod::class);
         $this->shouldImplement(Method::class);
     }
 
@@ -30,18 +30,7 @@ class SpecToStringMethodSpec extends ObjectBehavior
 
     public function it_exposes_name()
     {
-        $this->getName()->shouldReturn('it_is_castable_to_string');
-    }
-
-    public function it_exposes_property(Property $property)
-    {
-        $this->getProperty()->shouldReturn($property);
-    }
-
-    public function it_exposes_property_name(Property $property)
-    {
-        $property->getName()->shouldBeCalled()->willReturn('firstName');
-        $this->getPropertyName()->shouldReturn('firstName');
+        $this->getName()->shouldReturn('it_is_deserializable');
     }
 
     public function it_has_no_parameters()
