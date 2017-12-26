@@ -28,6 +28,7 @@ class InitializableMethodGeneratorSpec extends ObjectBehavior
     public function it_creates_initializable_method(InitializableMethod $method, ClassName $className)
     {
         $method->getName()->shouldBeCalled()->willReturn('it_is_initializable');
+        $method->isStatic()->shouldBeCalled()->willReturn(false);
         $method->getVisibility()->shouldBeCalled()->willReturn(new Visibility('public'));
         $method->getReturnType()->shouldBeCalled()->willReturn('');
         $method->getParameters()->shouldBeCalled()->willReturn([]);
@@ -55,6 +56,7 @@ class InitializableMethodGeneratorSpec extends ObjectBehavior
         ClassName $parentName
     ) {
         $method->getName()->shouldBeCalled()->willReturn('it_is_initializable');
+        $method->isStatic()->shouldBeCalled()->willReturn(false);
         $method->getVisibility()->shouldBeCalled()->willReturn(new Visibility('public'));
         $method->getReturnType()->shouldBeCalled()->willReturn('');
         $method->getParameters()->shouldBeCalled()->willReturn([]);
@@ -84,6 +86,7 @@ class InitializableMethodGeneratorSpec extends ObjectBehavior
         InterfaceName $interfaceName1
     ) {
         $method->getName()->shouldBeCalled()->willReturn('it_is_initializable');
+        $method->isStatic()->shouldBeCalled()->willReturn(false);
         $method->getVisibility()->shouldBeCalled()->willReturn(new Visibility('public'));
         $method->getReturnType()->shouldBeCalled()->willReturn('');
         $method->getParameters()->shouldBeCalled()->willReturn([]);

@@ -54,4 +54,9 @@ class ConstructorMethod implements ConstructorMethodInterface
     {
         return [];
     }
+
+    public function isStatic(): bool
+    {
+        return false;
+    }
 }

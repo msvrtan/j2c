@@ -22,6 +22,7 @@ abstract class BaseMethodGenerator implements MethodGenerator
         $code = new NetteMethod($method->getName());
 
         $code->setVisibility((string) $method->getVisibility());
+        $code->setStatic($method->isStatic());
 
         if ('' !== $method->getReturnType()) {
             $code->setReturnType($method->getReturnType());
