@@ -70,4 +70,14 @@ class ConstructorMethodTest extends TestCase
     {
         self::assertFalse($this->sut->isNullableReturnType());
     }
+
+    public function testGetImports()
+    {
+        self::assertEquals([], $this->sut->getImports());
+    }
+
+    public function testIsStatic()
+    {
+        self::assertFalse($this->sut->isStatic());
+    }
 }
