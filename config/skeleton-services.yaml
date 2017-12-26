@@ -16,6 +16,7 @@ services:
       $methodGenerators:
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator'
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator'
+        - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\ToStringMethodGenerator'
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\SerializeMethodGenerator'
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\DeserializeMethodGenerator'
     tags:
@@ -23,6 +24,7 @@ services:
 
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator: ~
+  NullDevelopment\Skeleton\SourceCode\MethodGenerator\ToStringMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\SetterMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\SerializeMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\DeserializeMethodGenerator: ~
@@ -53,6 +55,7 @@ services:
         - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\LetMethodGenerator'
         - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\InitializableMethodGenerator'
         - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\GetterSpecMethodGenerator'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\SpecToStringMethodGenerator'
         - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\SpecSerializeMethodGenerator'
         - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\SpecDeserializeMethodGenerator'
 
@@ -62,18 +65,21 @@ services:
         - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\LetMethodFactory'
         - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\InitializableMethodFactory'
         - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\GetterSpecMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecToStringMethodFactory'
         - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecSerializeMethodFactory'
         - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecDeserializeMethodFactory'
 
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\LetMethodGenerator: ~
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\InitializableMethodGenerator: ~
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\GetterSpecMethodGenerator: ~
+  NullDevelopment\Skeleton\PhpSpec\MethodGenerator\SpecToStringMethodGenerator: ~
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\SpecSerializeMethodGenerator: ~
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\SpecDeserializeMethodGenerator: ~
 
   NullDevelopment\Skeleton\PhpSpec\MethodFactory\LetMethodFactory: ~
   NullDevelopment\Skeleton\PhpSpec\MethodFactory\InitializableMethodFactory: ~
   NullDevelopment\Skeleton\PhpSpec\MethodFactory\GetterSpecMethodFactory: ~
+  NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecToStringMethodFactory: ~
   NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecSerializeMethodFactory: ~
   NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecDeserializeMethodFactory: ~
 

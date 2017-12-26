@@ -24,4 +24,22 @@ class UserEntity
 	{
 		return $this->firstName;
 	}
+
+
+	public function __toString(): string
+	{
+		return (string) $this->firstName;
+	}
+
+
+	public function serialize(): \UserFirstName
+	{
+		return $this->firstName->serialize();
+	}
+
+
+	public static function deserialize(string $firstName): self
+	{
+		return new self(new MyVendor\User\UserFirstName($firstName));
+	}
 }

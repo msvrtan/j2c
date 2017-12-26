@@ -13,12 +13,17 @@ use NullDevelopment\PhpStructure\DataTypeName\TraitName;
 use NullDevelopment\Skeleton\SourceCode\Definition\SingleValueObject;
 use NullDevelopment\Skeleton\SourceCode\DefinitionGenerator\SingleValueObjectGenerator;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
+use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
+use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
+use NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod;
 use Tests\TestCase\SfTestCase;
 
 /**
  * @covers \NullDevelopment\Skeleton\SourceCode\DefinitionGenerator\SingleValueObjectGenerator
  * @group  integration
+ *
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 class SingleValueObjectGeneratorTest extends SfTestCase
 {
@@ -80,6 +85,10 @@ class SingleValueObjectGeneratorTest extends SfTestCase
         $getterMethod      = new GetterMethod('getFirstName', $firstName);
         $getValueMethod    = new GetterMethod('getValue', $firstName);
 
+        $toStringMethod   = new ToStringMethod($firstName);
+        $serializeMethod  = new SerializeMethod($class, [$firstName]);
+        $deserializeMethod= new DeserializeMethod($class, [$firstName]);
+
         return [
             [
                 new SingleValueObject($class, null, [], [], [], []),
@@ -90,7 +99,21 @@ class SingleValueObjectGeneratorTest extends SfTestCase
                 'single_value_object.without_property.output',
             ],
             [
-                new SingleValueObject($class, null, [], [], [$firstName], [$constructorMethod, $getterMethod, $getValueMethod]),
+                new SingleValueObject(
+                    $class,
+                    null,
+                    [],
+                    [],
+                    [$firstName],
+                    [
+                        $constructorMethod,
+                        $getterMethod,
+                        $getValueMethod,
+                        $toStringMethod,
+                        $serializeMethod,
+                        $deserializeMethod,
+                    ]
+                ),
                 'single_value_object.first_name.output',
             ],
         ];
