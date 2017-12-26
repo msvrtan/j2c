@@ -22,6 +22,12 @@ class VerificationVerified
     }
 
 
+    public function getValue(): bool
+    {
+        return $this->verified;
+    }
+
+
     public function __toString(): string
     {
         if(true === $this->verified){

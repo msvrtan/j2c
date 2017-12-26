@@ -6,7 +6,6 @@ namespace spec\MyVendor\User;
 
 use MyVendor\User\Username;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class UsernameSpec extends ObjectBehavior
 {
@@ -34,13 +33,13 @@ class UsernameSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('value');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('value')->shouldReturnAnInstanceOf(Username::class);
     }

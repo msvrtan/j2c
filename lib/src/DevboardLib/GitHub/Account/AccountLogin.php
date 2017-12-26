@@ -22,6 +22,12 @@ class AccountLogin
     }
 
 
+    public function getValue(): string
+    {
+        return $this->login;
+    }
+
+
     public function __toString(): string
     {
         return $this->login;

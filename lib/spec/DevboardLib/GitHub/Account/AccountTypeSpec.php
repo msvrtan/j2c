@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Account;
 
 use DevboardLib\GitHub\Account\AccountType;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class AccountTypeSpec extends ObjectBehavior
 {
@@ -28,19 +27,25 @@ class AccountTypeSpec extends ObjectBehavior
     }
 
 
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('type');
+    }
+
+
     public function it_is_castable_to_string()
     {
         $this->__toString()->shouldReturn('type');
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('type');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('type')->shouldReturnAnInstanceOf(AccountType::class);
     }

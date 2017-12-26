@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Account;
 
 use DevboardLib\GitHub\Account\AccountAvatarUrl;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class AccountAvatarUrlSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class AccountAvatarUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_avatarUrl()
+    public function it_exposes_avatar_url()
     {
         $this->getAvatarUrl()->shouldReturn('avatarUrl');
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('avatarUrl');
     }
 
 
@@ -34,13 +39,13 @@ class AccountAvatarUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('avatarUrl');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('avatarUrl')->shouldReturnAnInstanceOf(AccountAvatarUrl::class);
     }

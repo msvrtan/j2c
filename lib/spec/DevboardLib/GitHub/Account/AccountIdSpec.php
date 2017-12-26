@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Account;
 
 use DevboardLib\GitHub\Account\AccountId;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class AccountIdSpec extends ObjectBehavior
 {
@@ -34,13 +33,13 @@ class AccountIdSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn(1);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize(1)->shouldReturnAnInstanceOf(AccountId::class);
     }

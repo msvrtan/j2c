@@ -22,6 +22,12 @@ class AccountAvatarUrl
     }
 
 
+    public function getValue(): string
+    {
+        return $this->avatarUrl;
+    }
+
+
     public function __toString(): string
     {
         return $this->avatarUrl;

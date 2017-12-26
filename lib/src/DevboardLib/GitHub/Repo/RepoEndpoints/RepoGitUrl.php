@@ -22,6 +22,12 @@ class RepoGitUrl
     }
 
 
+    public function getValue(): string
+    {
+        return $this->gitUrl;
+    }
+
+
     public function __toString(): string
     {
         return $this->gitUrl;

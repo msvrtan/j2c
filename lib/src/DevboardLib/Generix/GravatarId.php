@@ -22,6 +22,12 @@ class GravatarId
     }
 
 
+    public function getValue(): string
+    {
+        return $this->gravatarId;
+    }
+
+
     public function __toString(): string
     {
         return $this->gravatarId;

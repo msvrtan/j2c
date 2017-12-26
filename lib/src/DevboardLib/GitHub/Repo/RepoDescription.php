@@ -22,6 +22,12 @@ class RepoDescription
     }
 
 
+    public function getValue(): string
+    {
+        return $this->description;
+    }
+
+
     public function __toString(): string
     {
         return $this->description;

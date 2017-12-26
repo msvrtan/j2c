@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Repo\RepoEndpoints;
 
 use DevboardLib\GitHub\Repo\RepoEndpoints\RepoApiUrl;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class RepoApiUrlSpec extends ObjectBehavior
 {
@@ -28,19 +27,25 @@ class RepoApiUrlSpec extends ObjectBehavior
     }
 
 
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('url');
+    }
+
+
     public function it_is_castable_to_string()
     {
         $this->__toString()->shouldReturn('url');
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('url');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('url')->shouldReturnAnInstanceOf(RepoApiUrl::class);
     }

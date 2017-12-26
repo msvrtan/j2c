@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Repo\RepoEndpoints;
 
 use DevboardLib\GitHub\Repo\RepoEndpoints\RepoGitUrl;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class RepoGitUrlSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class RepoGitUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_gitUrl()
+    public function it_exposes_git_url()
     {
         $this->getGitUrl()->shouldReturn('gitUrl');
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('gitUrl');
     }
 
 
@@ -34,13 +39,13 @@ class RepoGitUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('gitUrl');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('gitUrl')->shouldReturnAnInstanceOf(RepoGitUrl::class);
     }

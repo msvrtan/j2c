@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Account;
 
 use DevboardLib\GitHub\Account\AccountHtmlUrl;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class AccountHtmlUrlSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class AccountHtmlUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_htmlUrl()
+    public function it_exposes_html_url()
     {
         $this->getHtmlUrl()->shouldReturn('htmlUrl');
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('htmlUrl');
     }
 
 
@@ -34,13 +39,13 @@ class AccountHtmlUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('htmlUrl');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('htmlUrl')->shouldReturnAnInstanceOf(AccountHtmlUrl::class);
     }

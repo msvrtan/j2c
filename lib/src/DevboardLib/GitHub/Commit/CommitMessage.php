@@ -22,6 +22,12 @@ class CommitMessage
     }
 
 
+    public function getValue(): string
+    {
+        return $this->message;
+    }
+
+
     public function __toString(): string
     {
         return $this->message;

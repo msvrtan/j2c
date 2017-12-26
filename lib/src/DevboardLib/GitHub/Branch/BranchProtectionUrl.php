@@ -22,6 +22,12 @@ class BranchProtectionUrl
     }
 
 
+    public function getValue(): string
+    {
+        return $this->protectionUrl;
+    }
+
+
     public function __toString(): string
     {
         return $this->protectionUrl;

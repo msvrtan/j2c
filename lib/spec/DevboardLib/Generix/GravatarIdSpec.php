@@ -6,7 +6,6 @@ namespace spec\DevboardLib\Generix;
 
 use DevboardLib\Generix\GravatarId;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class GravatarIdSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class GravatarIdSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_gravatarId()
+    public function it_exposes_gravatar_id()
     {
         $this->getGravatarId()->shouldReturn('gravatarId');
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('gravatarId');
     }
 
 
@@ -34,13 +39,13 @@ class GravatarIdSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('gravatarId');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('gravatarId')->shouldReturnAnInstanceOf(GravatarId::class);
     }

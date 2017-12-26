@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Repo;
 
 use DevboardLib\GitHub\Repo\RepoMirrorUrl;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class RepoMirrorUrlSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class RepoMirrorUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_mirrorUrl()
+    public function it_exposes_mirror_url()
     {
         $this->getMirrorUrl()->shouldReturn('mirrorUrl');
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('mirrorUrl');
     }
 
 
@@ -34,13 +39,13 @@ class RepoMirrorUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('mirrorUrl');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('mirrorUrl')->shouldReturnAnInstanceOf(RepoMirrorUrl::class);
     }

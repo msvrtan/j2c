@@ -7,7 +7,6 @@ namespace spec\MyVendor\User;
 use DateTime;
 use MyVendor\User\UserCreatedAt;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class UserCreatedAtSpec extends ObjectBehavior
 {
@@ -37,7 +36,7 @@ class UserCreatedAtSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('2018-01-01T11:22:33+00:00');
     }

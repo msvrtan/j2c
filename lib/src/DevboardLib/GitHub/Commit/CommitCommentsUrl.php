@@ -22,6 +22,12 @@ class CommitCommentsUrl
     }
 
 
+    public function getValue(): string
+    {
+        return $this->commentsUrl;
+    }
+
+
     public function __toString(): string
     {
         return $this->commentsUrl;

@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Commit\Verification;
 
 use DevboardLib\GitHub\Commit\Verification\VerificationVerified;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class VerificationVerifiedSpec extends ObjectBehavior
 {
@@ -28,19 +27,25 @@ class VerificationVerifiedSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
+    public function it_exposes_value()
     {
-        $this->__toString()->shouldReturn(true);
+        $this->getValue()->shouldReturn(true);
     }
 
 
-    public function it_is_serializable()
+    public function it_is_castable_to_string()
+    {
+        $this->__toString()->shouldReturn('true');
+    }
+
+
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn(true);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize(true)->shouldReturnAnInstanceOf(VerificationVerified::class);
     }

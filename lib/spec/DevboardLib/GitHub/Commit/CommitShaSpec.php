@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Commit;
 
 use DevboardLib\GitHub\Commit\CommitSha;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class CommitShaSpec extends ObjectBehavior
 {
@@ -28,19 +27,25 @@ class CommitShaSpec extends ObjectBehavior
     }
 
 
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('sha');
+    }
+
+
     public function it_is_castable_to_string()
     {
         $this->__toString()->shouldReturn('sha');
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('sha');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('sha')->shouldReturnAnInstanceOf(CommitSha::class);
     }

@@ -22,6 +22,12 @@ class CommitSha
     }
 
 
+    public function getValue(): string
+    {
+        return $this->sha;
+    }
+
+
     public function __toString(): string
     {
         return $this->sha;

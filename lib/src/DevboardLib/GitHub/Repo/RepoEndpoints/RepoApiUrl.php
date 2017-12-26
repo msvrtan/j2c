@@ -22,6 +22,12 @@ class RepoApiUrl
     }
 
 
+    public function getValue(): string
+    {
+        return $this->url;
+    }
+
+
     public function __toString(): string
     {
         return $this->url;

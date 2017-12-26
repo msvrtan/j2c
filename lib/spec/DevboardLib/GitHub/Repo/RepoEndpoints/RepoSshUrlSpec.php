@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Repo\RepoEndpoints;
 
 use DevboardLib\GitHub\Repo\RepoEndpoints\RepoSshUrl;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class RepoSshUrlSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class RepoSshUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_sshUrl()
+    public function it_exposes_ssh_url()
     {
         $this->getSshUrl()->shouldReturn('sshUrl');
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('sshUrl');
     }
 
 
@@ -34,13 +39,13 @@ class RepoSshUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('sshUrl');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('sshUrl')->shouldReturnAnInstanceOf(RepoSshUrl::class);
     }

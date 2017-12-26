@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Commit;
 
 use DevboardLib\GitHub\Commit\CommitCommentsUrl;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class CommitCommentsUrlSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class CommitCommentsUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_commentsUrl()
+    public function it_exposes_comments_url()
     {
         $this->getCommentsUrl()->shouldReturn('commentsUrl');
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('commentsUrl');
     }
 
 
@@ -34,13 +39,13 @@ class CommitCommentsUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('commentsUrl');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('commentsUrl')->shouldReturnAnInstanceOf(CommitCommentsUrl::class);
     }

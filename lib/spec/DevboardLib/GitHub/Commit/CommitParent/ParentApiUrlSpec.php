@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Commit\CommitParent;
 
 use DevboardLib\GitHub\Commit\CommitParent\ParentApiUrl;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class ParentApiUrlSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class ParentApiUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_apiUrl()
+    public function it_exposes_api_url()
     {
         $this->getApiUrl()->shouldReturn('apiUrl');
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('apiUrl');
     }
 
 
@@ -34,13 +39,13 @@ class ParentApiUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('apiUrl');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('apiUrl')->shouldReturnAnInstanceOf(ParentApiUrl::class);
     }

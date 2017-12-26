@@ -22,6 +22,12 @@ class RepoMirrorUrl
     }
 
 
+    public function getValue(): string
+    {
+        return $this->mirrorUrl;
+    }
+
+
     public function __toString(): string
     {
         return $this->mirrorUrl;

@@ -22,6 +22,12 @@ class CommitCommentCount
     }
 
 
+    public function getValue(): int
+    {
+        return $this->commentCount;
+    }
+
+
     public function __toString(): string
     {
         return (string) $this->commentCount;
