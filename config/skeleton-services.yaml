@@ -43,6 +43,17 @@ services:
     tags:
       - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\DateTimeValueObject' }
 
+  NullDevelopment\Skeleton\SourceCode\DefinitionGenerator\SimpleEntityGenerator:
+    arguments:
+      $methodGenerators:
+        - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator'
+        - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator'
+        - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\ToStringMethodGenerator'
+        - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\SerializeMethodGenerator'
+        - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\DeserializeMethodGenerator'
+    tags:
+      - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleEntity' }
+
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\ToStringMethodGenerator: ~
@@ -63,11 +74,13 @@ services:
         - '@NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SingleValueObjectLoader'
         - '@NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleIdentifierLoader'
         - '@NullDevelopment\Skeleton\SourceCode\DefinitionLoader\DateTimeValueObjectLoader'
+        - '@NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleEntityLoader'
 
 
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SingleValueObjectLoader: ~
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleIdentifierLoader: ~
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\DateTimeValueObjectLoader: ~
+  NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleEntityLoader: ~
 
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\ConstructorMethodFactory: ~
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\InterfaceNameCollectionFactory: ~
@@ -148,6 +161,26 @@ services:
 
 
 
+  NullDevelopment\Skeleton\PhpSpec\DefinitionGenerator\SpecSimpleEntityGenerator:
+    arguments:
+      $methodGenerators:
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\LetMethodGenerator'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\InitializableMethodGenerator'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\GetterSpecMethodGenerator'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\SpecToStringMethodGenerator'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\SpecSerializeMethodGenerator'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodGenerator\SpecDeserializeMethodGenerator'
+
+  NullDevelopment\Skeleton\PhpSpec\DefinitionFactory\SpecSimpleEntityFactory:
+    arguments:
+      $factories:
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\LetMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\InitializableMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\GetterSpecMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecToStringMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecSerializeMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecDeserializeMethodFactory'
+
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\LetMethodGenerator: ~
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\InitializableMethodGenerator: ~
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\GetterSpecMethodGenerator: ~
@@ -185,6 +218,10 @@ services:
       - { name: tactician.middleware , priority: 50 }
 
   NullDevelopment\Skeleton\PhpSpec\DefinitionMiddleware\SpecDateTimeValueObjectMiddleware:
+    tags:
+      - { name: tactician.middleware , priority: 50 }
+
+  NullDevelopment\Skeleton\PhpSpec\DefinitionMiddleware\SpecSimpleEntityMiddleware:
     tags:
       - { name: tactician.middleware , priority: 50 }
 
