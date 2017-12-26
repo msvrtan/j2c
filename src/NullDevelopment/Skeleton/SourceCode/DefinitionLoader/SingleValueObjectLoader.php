@@ -11,7 +11,9 @@ use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\ConstructorMeth
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\InterfaceNameCollectionFactory;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\PropertyCollectionFactory;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\TraitNameCollectionFactory;
+use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
+use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
 
 /**
  * @see SingleValueObjectLoaderSpec
@@ -53,6 +55,7 @@ class SingleValueObjectLoader implements DefinitionLoader
     {
         $data = array_merge($this->getDefaultValues(), $input);
 
+        $className         = ClassName::create($data['instanceOf']);
         $parent            = $this->extractParent($data);
         $interfaces        = $this->interfaceNameCollectionFactory->create($data['interfaces']);
         $traits            = $this->traitNameCollectionFactory->create($data['traits']);
@@ -66,8 +69,11 @@ class SingleValueObjectLoader implements DefinitionLoader
             $methods[]  = new GetterMethod('getValue', $property);
         }
 
+        $methods[] = new SerializeMethod($className, $properties);
+        $methods[] = new DeserializeMethod($className, $properties);
+
         return new SingleValueObject(
-            ClassName::create($data['instanceOf']),
+            $className,
             $parent,
             $interfaces,
             $traits,
