@@ -11,7 +11,9 @@ use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Definition\SingleValueObject;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SingleValueObjectLoader;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
+use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
+use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -68,12 +70,8 @@ class SingleValueObjectLoaderTest extends SfTestCase
                 [
                     'type'        => 'SingleValueObject',
                     'instanceOf'  => 'MyCompany\User\UserName',
-                    'constructor' => [
-                        'name' => [
-                            'instanceOf' => 'string',
-                        ],
-                    ],
-                    'properties' => [],
+                    'constructor' => ['name' => ['instanceOf' => 'string']],
+                    'properties'  => [],
                 ],
                 new SingleValueObject(
                     ClassName::create('MyCompany\User\UserName'),
@@ -85,6 +83,8 @@ class SingleValueObjectLoaderTest extends SfTestCase
                         new ConstructorMethod([$nameProperty]),
                         new GetterMethod('getName', $nameProperty),
                         new GetterMethod('getValue', $nameProperty),
+                        new SerializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
+                        new DeserializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
                     ]
                 ),
             ],
@@ -103,11 +103,7 @@ class SingleValueObjectLoaderTest extends SfTestCase
                             'default'    => null,
                         ],
                     ],
-                    'properties' => [
-                        'name' => [
-                            'instanceOf' => 'string',
-                        ],
-                    ],
+                    'properties' => ['name' => ['instanceOf' => 'string']],
                 ],
                 new SingleValueObject(
                     ClassName::create('MyCompany\User\UserName'),
@@ -119,6 +115,8 @@ class SingleValueObjectLoaderTest extends SfTestCase
                         new ConstructorMethod([$nameProperty]),
                         new GetterMethod('getName', $nameProperty),
                         new GetterMethod('getValue', $nameProperty),
+                        new SerializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
+                        new DeserializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
                     ]
                 ),
             ],
@@ -129,15 +127,8 @@ class SingleValueObjectLoaderTest extends SfTestCase
                     'parent'      => null,
                     'interfaces'  => [],
                     'traits'      => [],
-                    'constructor' => [
-                        'value' => [
-                            'instanceOf' => 'string',
-                            'nullable'   => false,
-                            'hasDefault' => false,
-                            'default'    => null,
-                        ],
-                    ],
-                    'properties' => [],
+                    'constructor' => ['value' => ['instanceOf' => 'string']],
+                    'properties'  => [],
                 ],
                 new SingleValueObject(
                     ClassName::create('MyCompany\User\UserName'),
@@ -149,6 +140,8 @@ class SingleValueObjectLoaderTest extends SfTestCase
                         new ConstructorMethod([$valueProperty]),
                         new GetterMethod('getValue', $valueProperty),
                         new GetterMethod('getValue', $valueProperty),
+                        new SerializeMethod(ClassName::create('MyCompany\User\UserName'), [$valueProperty]),
+                        new DeserializeMethod(ClassName::create('MyCompany\User\UserName'), [$valueProperty]),
                     ]
                 ),
             ],
