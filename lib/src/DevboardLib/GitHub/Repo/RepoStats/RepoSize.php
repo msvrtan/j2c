@@ -22,6 +22,12 @@ class RepoSize
     }
 
 
+    public function getValue(): int
+    {
+        return $this->size;
+    }
+
+
     public function __toString(): string
     {
         return (string) $this->size;

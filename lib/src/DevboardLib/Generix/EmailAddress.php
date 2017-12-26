@@ -22,6 +22,12 @@ class EmailAddress
     }
 
 
+    public function getValue(): string
+    {
+        return $this->email;
+    }
+
+
     public function __toString(): string
     {
         return $this->email;

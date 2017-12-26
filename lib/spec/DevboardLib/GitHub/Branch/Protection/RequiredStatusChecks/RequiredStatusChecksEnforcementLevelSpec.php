@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks;
 
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\RequiredStatusChecksEnforcementLevel;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class RequiredStatusChecksEnforcementLevelSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class RequiredStatusChecksEnforcementLevelSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_enforcementLevel()
+    public function it_exposes_enforcement_level()
     {
         $this->getEnforcementLevel()->shouldReturn('enforcementLevel');
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('enforcementLevel');
     }
 
 
@@ -34,13 +39,13 @@ class RequiredStatusChecksEnforcementLevelSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('enforcementLevel');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('enforcementLevel')->shouldReturnAnInstanceOf(RequiredStatusChecksEnforcementLevel::class);
     }

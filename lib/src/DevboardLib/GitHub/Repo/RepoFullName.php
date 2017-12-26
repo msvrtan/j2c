@@ -22,6 +22,12 @@ class RepoFullName
     }
 
 
+    public function getValue(): string
+    {
+        return $this->fullName;
+    }
+
+
     public function __toString(): string
     {
         return $this->fullName;

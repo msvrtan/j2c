@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Branch;
 
 use DevboardLib\GitHub\Branch\BranchProtectionUrl;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class BranchProtectionUrlSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class BranchProtectionUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_protectionUrl()
+    public function it_exposes_protection_url()
     {
         $this->getProtectionUrl()->shouldReturn('protectionUrl');
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('protectionUrl');
     }
 
 
@@ -34,13 +39,13 @@ class BranchProtectionUrlSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('protectionUrl');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('protectionUrl')->shouldReturnAnInstanceOf(BranchProtectionUrl::class);
     }

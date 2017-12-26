@@ -22,6 +22,12 @@ class VerificationPayload
     }
 
 
+    public function getValue(): string
+    {
+        return $this->payload;
+    }
+
+
     public function __toString(): string
     {
         return $this->payload;

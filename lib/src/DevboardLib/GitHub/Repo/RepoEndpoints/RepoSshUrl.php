@@ -22,6 +22,12 @@ class RepoSshUrl
     }
 
 
+    public function getValue(): string
+    {
+        return $this->sshUrl;
+    }
+
+
     public function __toString(): string
     {
         return $this->sshUrl;

@@ -22,6 +22,12 @@ class RepoHomepage
     }
 
 
+    public function getValue(): string
+    {
+        return $this->homepage;
+    }
+
+
     public function __toString(): string
     {
         return $this->homepage;

@@ -17,7 +17,6 @@ class RepoUpdatedAt extends DateTime
     public static function createFromFormat($format, $time, $object = null): self
     {
         $date = parent::createFromFormat($format, $time, $object);
-
         return new self($date->format('c'));
     }
 
@@ -28,7 +27,7 @@ class RepoUpdatedAt extends DateTime
     }
 
 
-    public static function deserialize(string $value): self
+    public static function deserialize($value): self
     {
         return new self($value);
     }

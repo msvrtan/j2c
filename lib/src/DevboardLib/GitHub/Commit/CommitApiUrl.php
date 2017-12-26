@@ -22,6 +22,12 @@ class CommitApiUrl
     }
 
 
+    public function getValue(): string
+    {
+        return $this->apiUrl;
+    }
+
+
     public function __toString(): string
     {
         return $this->apiUrl;

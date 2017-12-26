@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Commit;
 
 use DevboardLib\GitHub\Commit\CommitCommentCount;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class CommitCommentCountSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class CommitCommentCountSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_commentCount()
+    public function it_exposes_comment_count()
     {
         $this->getCommentCount()->shouldReturn(1);
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn(1);
     }
 
 
@@ -34,13 +39,13 @@ class CommitCommentCountSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn(1);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize(1)->shouldReturnAnInstanceOf(CommitCommentCount::class);
     }

@@ -22,6 +22,12 @@ class RepoLanguage
     }
 
 
+    public function getValue(): string
+    {
+        return $this->language;
+    }
+
+
     public function __toString(): string
     {
         return $this->language;

@@ -22,6 +22,12 @@ class RequiredStatusChecksEnforcementLevel
     }
 
 
+    public function getValue(): string
+    {
+        return $this->enforcementLevel;
+    }
+
+
     public function __toString(): string
     {
         return $this->enforcementLevel;

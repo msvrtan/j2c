@@ -7,7 +7,6 @@ namespace spec\DevboardLib\GitHub\Commit;
 use DateTime;
 use DevboardLib\GitHub\Commit\CommitDate;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class CommitDateSpec extends ObjectBehavior
 {
@@ -37,7 +36,7 @@ class CommitDateSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('2018-01-01T11:22:33+00:00');
     }
@@ -45,6 +44,6 @@ class CommitDateSpec extends ObjectBehavior
 
     public function it_is_deserializable()
     {
-        $this->deserialize('2018-01-01T11:22:33+00:00')->shouldReturnAnInstanceOf(UserCreatedAt::class);
+        $this->deserialize('2018-01-01T11:22:33+00:00')->shouldReturnAnInstanceOf(CommitDate::class);
     }
 }

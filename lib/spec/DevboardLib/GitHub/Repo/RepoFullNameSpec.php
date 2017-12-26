@@ -6,7 +6,6 @@ namespace spec\DevboardLib\GitHub\Repo;
 
 use DevboardLib\GitHub\Repo\RepoFullName;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class RepoFullNameSpec extends ObjectBehavior
 {
@@ -22,9 +21,15 @@ class RepoFullNameSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_fullName()
+    public function it_exposes_full_name()
     {
         $this->getFullName()->shouldReturn('fullName');
+    }
+
+
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('fullName');
     }
 
 
@@ -34,13 +39,13 @@ class RepoFullNameSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('fullName');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('fullName')->shouldReturnAnInstanceOf(RepoFullName::class);
     }

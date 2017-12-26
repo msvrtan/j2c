@@ -22,6 +22,12 @@ class VerificationSignature
     }
 
 
+    public function getValue(): string
+    {
+        return $this->signature;
+    }
+
+
     public function __toString(): string
     {
         return $this->signature;

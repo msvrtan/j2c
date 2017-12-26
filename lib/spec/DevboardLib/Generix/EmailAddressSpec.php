@@ -6,7 +6,6 @@ namespace spec\DevboardLib\Generix;
 
 use DevboardLib\Generix\EmailAddress;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class EmailAddressSpec extends ObjectBehavior
 {
@@ -28,19 +27,25 @@ class EmailAddressSpec extends ObjectBehavior
     }
 
 
+    public function it_exposes_value()
+    {
+        $this->getValue()->shouldReturn('email');
+    }
+
+
     public function it_is_castable_to_string()
     {
         $this->__toString()->shouldReturn('email');
     }
 
 
-    public function it_is_serializable()
+    public function it_can_be_serialized()
     {
         $this->serialize()->shouldReturn('email');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized()
     {
         $this->deserialize('email')->shouldReturnAnInstanceOf(EmailAddress::class);
     }

@@ -22,6 +22,12 @@ class VerificationReason
     }
 
 
+    public function getValue(): string
+    {
+        return $this->reason;
+    }
+
+
     public function __toString(): string
     {
         return $this->reason;

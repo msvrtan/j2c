@@ -22,6 +22,12 @@ class AccountType
     }
 
 
+    public function getValue(): string
+    {
+        return $this->type;
+    }
+
+
     public function __toString(): string
     {
         return $this->type;

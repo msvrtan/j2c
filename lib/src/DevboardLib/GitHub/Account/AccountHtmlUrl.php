@@ -22,6 +22,12 @@ class AccountHtmlUrl
     }
 
 
+    public function getValue(): string
+    {
+        return $this->htmlUrl;
+    }
+
+
     public function __toString(): string
     {
         return $this->htmlUrl;
