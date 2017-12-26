@@ -14,6 +14,7 @@ use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\TraitNameCollec
 use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
+use NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod;
 
 /**
  * @see SingleValueObjectLoaderSpec
@@ -67,6 +68,7 @@ class SingleValueObjectLoader implements DefinitionLoader
             $methodName = 'get'.ucfirst($property->getName());
             $methods[]  = new GetterMethod($methodName, $property);
             $methods[]  = new GetterMethod('getValue', $property);
+            $methods[]  = new ToStringMethod($property);
         }
 
         $methods[] = new SerializeMethod($className, $properties);

@@ -14,6 +14,7 @@ use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
+use NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -83,6 +84,7 @@ class SingleValueObjectLoaderTest extends SfTestCase
                         new ConstructorMethod([$nameProperty]),
                         new GetterMethod('getName', $nameProperty),
                         new GetterMethod('getValue', $nameProperty),
+                        new ToStringMethod($nameProperty),
                         new SerializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
                         new DeserializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
                     ]
@@ -115,6 +117,7 @@ class SingleValueObjectLoaderTest extends SfTestCase
                         new ConstructorMethod([$nameProperty]),
                         new GetterMethod('getName', $nameProperty),
                         new GetterMethod('getValue', $nameProperty),
+                        new ToStringMethod($nameProperty),
                         new SerializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
                         new DeserializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
                     ]
@@ -140,6 +143,7 @@ class SingleValueObjectLoaderTest extends SfTestCase
                         new ConstructorMethod([$valueProperty]),
                         new GetterMethod('getValue', $valueProperty),
                         new GetterMethod('getValue', $valueProperty),
+                        new ToStringMethod($valueProperty),
                         new SerializeMethod(ClassName::create('MyCompany\User\UserName'), [$valueProperty]),
                         new DeserializeMethod(ClassName::create('MyCompany\User\UserName'), [$valueProperty]),
                     ]
