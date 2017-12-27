@@ -10,7 +10,7 @@ use PhpSpec\ObjectBehavior;
 
 class ProtectionSpec extends ObjectBehavior
 {
-    public function let(\RequiredStatusChecks $requiredStatusChecks)
+    public function let(RequiredStatusChecks $requiredStatusChecks)
     {
         $this->beConstructedWith($enabled = true, $requiredStatusChecks);
     }

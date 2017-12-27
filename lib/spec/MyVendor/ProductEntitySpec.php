@@ -12,7 +12,7 @@ use PhpSpec\ObjectBehavior;
 
 class ProductEntitySpec extends ObjectBehavior
 {
-    public function let(\ProductId $id, \ProductWeight $weight, DateTime $updatedAt)
+    public function let(ProductId $id, ProductWeight $weight, DateTime $updatedAt)
     {
         $this->beConstructedWith($id, $title = 'title', $description = 'description', $weight, $updatedAt);
     }

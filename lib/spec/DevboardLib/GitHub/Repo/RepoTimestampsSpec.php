@@ -12,7 +12,7 @@ use PhpSpec\ObjectBehavior;
 
 class RepoTimestampsSpec extends ObjectBehavior
 {
-    public function let(\RepoCreatedAt $createdAt, \RepoUpdatedAt $updatedAt, \RepoPushedAt $pushedAt)
+    public function let(RepoCreatedAt $createdAt, RepoUpdatedAt $updatedAt, RepoPushedAt $pushedAt)
     {
         $this->beConstructedWith($createdAt, $updatedAt, $pushedAt);
     }

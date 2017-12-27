@@ -16,7 +16,7 @@ use PhpSpec\ObjectBehavior;
 
 class RepoOwnerSpec extends ObjectBehavior
 {
-    public function let(\AccountId $id, \AccountLogin $login, \AccountType $type, \AccountAvatarUrl $avatarUrl, \GravatarId $gravatarId, \AccountHtmlUrl $htmlUrl, \AccountApiUrl $url)
+    public function let(AccountId $id, AccountLogin $login, AccountType $type, AccountAvatarUrl $avatarUrl, GravatarId $gravatarId, AccountHtmlUrl $htmlUrl, AccountApiUrl $url)
     {
         $this->beConstructedWith($id, $login, $type, $avatarUrl, $gravatarId, $htmlUrl, $url, $siteAdmin = true);
     }

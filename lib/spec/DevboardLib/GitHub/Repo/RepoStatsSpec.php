@@ -10,7 +10,7 @@ use PhpSpec\ObjectBehavior;
 
 class RepoStatsSpec extends ObjectBehavior
 {
-    public function let(\RepoSize $size)
+    public function let(RepoSize $size)
     {
         $this->beConstructedWith($networkCount = 1, $watchersCount = 1, $stargazersCount = 1, $subscribersCount = 1, $openIssuesCount = 1, $size);
     }

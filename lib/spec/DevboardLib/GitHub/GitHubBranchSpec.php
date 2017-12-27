@@ -12,7 +12,7 @@ use PhpSpec\ObjectBehavior;
 
 class GitHubBranchSpec extends ObjectBehavior
 {
-    public function let(\BranchName $name, \GitHubCommit $commit, \BranchProtectionUrl $protectionUrl)
+    public function let(BranchName $name, GitHubCommit $commit, BranchProtectionUrl $protectionUrl)
     {
         $this->beConstructedWith($name, $commit, $protected = true, $protectionUrl);
     }

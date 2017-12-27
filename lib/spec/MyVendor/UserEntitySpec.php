@@ -13,7 +13,7 @@ use PhpSpec\ObjectBehavior;
 
 class UserEntitySpec extends ObjectBehavior
 {
-    public function let(\UserId $id, \Username $username, \UserCreatedAt $createdAt, DateTime $updatedAt)
+    public function let(UserId $id, Username $username, UserCreatedAt $createdAt, DateTime $updatedAt)
     {
         $this->beConstructedWith($id, $firstName = 'firstName', $lastName = 'lastName', $username, $createdAt, $updatedAt);
     }

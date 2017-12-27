@@ -11,7 +11,7 @@ use PhpSpec\ObjectBehavior;
 
 class RequiredStatusChecksSpec extends ObjectBehavior
 {
-    public function let(\RequiredStatusChecksEnforcementLevel $enforcementLevel, \Contexts $contexts)
+    public function let(RequiredStatusChecksEnforcementLevel $enforcementLevel, Contexts $contexts)
     {
         $this->beConstructedWith($enforcementLevel, $contexts);
     }
