@@ -30,13 +30,9 @@ class SerializeMethodGenerator extends BaseMethodGenerator
             $property = $method->getProperties()[0];
 
             if (true === $property->isObject()) {
-                $code->addBody(
-                    sprintf('return $this->%s->serialize();', $property->getName())
-                );
+                $code->addBody(sprintf('return $this->%s->serialize();', $property->getName()));
             } else {
-                $code->addBody(
-                    sprintf('return $this->%s;', $property->getName())
-                );
+                $code->addBody(sprintf('return $this->%s;', $property->getName()));
             }
         } else {
             $serializeList = [];

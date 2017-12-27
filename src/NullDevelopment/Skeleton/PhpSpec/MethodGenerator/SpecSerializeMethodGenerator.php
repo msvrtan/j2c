@@ -72,6 +72,26 @@ class SpecSerializeMethodGenerator implements MethodGenerator
             $values = [];
             foreach ($method->getProperties() as $property) {
                 $values[] = sprintf("'%s' => %s", $property->getName(), $this->exampleMaker->value($property));
+
+                if (true === $property->isObject()) {
+                    if ('DateTime' === $property->getInstanceFullName()) {
+                        $code->addBody(
+                            sprintf(
+                                '$%s->format(\'c\')->shouldBeCalled()->willReturn(%s);',
+                                $property->getName(),
+                                $this->exampleMaker->value($property)
+                            )
+                        );
+                    } else {
+                        $code->addBody(
+                            sprintf(
+                                '$%s->serialize()->shouldBeCalled()->willReturn(%s);',
+                                $property->getName(),
+                                $this->exampleMaker->value($property)
+                            )
+                        );
+                    }
+                }
             }
 
             $value = '['.implode(', ', $values).']';

@@ -99,7 +99,7 @@ class SimpleEntityGeneratorTest extends SfTestCase
                         $deserializeMethod,
                     ]
                 ),
-                'simple_identifier.id.output',
+                'simple_entity.id.output',
             ],
         ];
     }
