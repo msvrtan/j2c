@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace spec\NullDevelopment\Skeleton\PhpUnit\MethodGenerator;
 
-use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\PhpUnit\Method\TestDateTimeCreateFromFormatMethod;
@@ -25,10 +24,8 @@ class TestDateTimeCreateFromFormatMethodGeneratorSpec extends ObjectBehavior
         $this->shouldImplement(MethodGenerator::class);
     }
 
-    public function it_creates_let_method_for_object_properties(
-        TestDateTimeCreateFromFormatMethod $method,
-        Property $property
-    ) {
+    public function it_creates_let_method_for_object_properties(TestDateTimeCreateFromFormatMethod $method)
+    {
         $method->getName()->shouldBeCalled()->willReturn('testCreateFromFormat');
         $method->getVisibility()->shouldBeCalled()->willReturn(new Visibility('public'));
         $method->getReturnType()->shouldBeCalled()->willReturn('');
