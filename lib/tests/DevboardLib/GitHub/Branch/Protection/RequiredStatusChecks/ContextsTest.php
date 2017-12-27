@@ -9,14 +9,10 @@ use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context\ContextId;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Contexts;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Contexts
- * @group  todo
- */
 class ContextsTest extends TestCase
 {
     /** @var array */
-    private $elements;
+    private $elements = [];
 
     /** @var Contexts */
     private $sut;

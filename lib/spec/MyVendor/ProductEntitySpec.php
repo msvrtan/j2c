@@ -24,9 +24,9 @@ class ProductEntitySpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(DateTime $updatedAt)
+    public function it_exposes_id(ProductId $id)
     {
-        $this->getId()->shouldReturn($updatedAt);
+        $this->getId()->shouldReturn($id);
     }
 
 

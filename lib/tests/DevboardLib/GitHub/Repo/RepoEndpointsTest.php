@@ -45,12 +45,6 @@ class RepoEndpointsTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->sshUrl, $this->sut->getId());
-    }
-
-
     public function testGetUrl()
     {
         self::assertSame($this->url, $this->sut->getUrl());

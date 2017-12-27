@@ -28,9 +28,9 @@ class CommitAuthorDetailsSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id()
+    public function it_exposes_id(UserId $id)
     {
-        $this->getId()->shouldReturn(true);
+        $this->getId()->shouldReturn($id);
     }
 
 

@@ -52,9 +52,9 @@ class RepoOwner
     }
 
 
-    public function getId(): bool
+    public function getId(): AccountId
     {
-        return $this->siteAdmin;
+        return $this->id;
     }
 
 

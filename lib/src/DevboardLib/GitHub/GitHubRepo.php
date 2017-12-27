@@ -84,9 +84,9 @@ class GitHubRepo
     }
 
 
-    public function getId(): RepoTimestamps
+    public function getId(): RepoId
     {
-        return $this->repoTimestamps;
+        return $this->id;
     }
 
 

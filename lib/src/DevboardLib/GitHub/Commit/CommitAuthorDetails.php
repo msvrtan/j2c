@@ -52,9 +52,9 @@ class CommitAuthorDetails
     }
 
 
-    public function getId(): bool
+    public function getId(): UserId
     {
-        return $this->siteAdmin;
+        return $this->id;
     }
 
 

@@ -39,12 +39,6 @@ class RepoEndpoints
     }
 
 
-    public function getId(): RepoSshUrl
-    {
-        return $this->sshUrl;
-    }
-
-
     public function getUrl(): RepoApiUrl
     {
         return $this->url;

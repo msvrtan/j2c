@@ -73,12 +73,6 @@ class GitHubCommit
     }
 
 
-    public function getId(): CommitHtmlUrl
-    {
-        return $this->htmlUrl;
-    }
-
-
     public function getMessage(): CommitMessage
     {
         return $this->message;

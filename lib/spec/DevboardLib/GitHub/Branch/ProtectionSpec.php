@@ -28,12 +28,6 @@ class ProtectionSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(RequiredStatusChecks $requiredStatusChecks)
-    {
-        $this->getId()->shouldReturn($requiredStatusChecks);
-    }
-
-
     public function it_exposes_required_status_checks(RequiredStatusChecks $requiredStatusChecks)
     {
         $this->getRequiredStatusChecks()->shouldReturn($requiredStatusChecks);

@@ -40,12 +40,6 @@ class CommitParentTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->htmlUrl, $this->sut->getId());
-    }
-
-
     public function testGetApiUrl()
     {
         self::assertSame($this->apiUrl, $this->sut->getApiUrl());

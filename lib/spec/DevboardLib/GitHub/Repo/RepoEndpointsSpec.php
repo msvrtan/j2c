@@ -31,12 +31,6 @@ class RepoEndpointsSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(RepoSshUrl $sshUrl)
-    {
-        $this->getId()->shouldReturn($sshUrl);
-    }
-
-
     public function it_exposes_url(RepoApiUrl $url)
     {
         $this->getUrl()->shouldReturn($url);

@@ -39,12 +39,6 @@ class CommitVerification
     }
 
 
-    public function getId(): ?VerificationPayload
-    {
-        return $this->payload;
-    }
-
-
     public function getReason(): VerificationReason
     {
         return $this->reason;

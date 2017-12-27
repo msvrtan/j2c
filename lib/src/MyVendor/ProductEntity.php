@@ -36,9 +36,9 @@ class ProductEntity
     }
 
 
-    public function getId(): DateTime
+    public function getId(): ProductId
     {
-        return $this->updatedAt;
+        return $this->id;
     }
 
 

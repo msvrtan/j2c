@@ -11,14 +11,10 @@ use DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl;
 use DevboardLib\GitHub\Commit\CommitSha;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitParentCollection
- * @group  todo
- */
 class CommitParentCollectionTest extends TestCase
 {
     /** @var array */
-    private $elements;
+    private $elements = [];
 
     /** @var CommitParentCollection */
     private $sut;

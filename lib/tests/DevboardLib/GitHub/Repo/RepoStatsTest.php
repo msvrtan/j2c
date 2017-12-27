@@ -50,12 +50,6 @@ class RepoStatsTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->size, $this->sut->getId());
-    }
-
-
     public function testGetWatchersCount()
     {
         self::assertSame($this->watchersCount, $this->sut->getWatchersCount());

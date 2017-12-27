@@ -28,9 +28,9 @@ class RepoOwnerSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id()
+    public function it_exposes_id(AccountId $id)
     {
-        $this->getId()->shouldReturn(true);
+        $this->getId()->shouldReturn($id);
     }
 
 

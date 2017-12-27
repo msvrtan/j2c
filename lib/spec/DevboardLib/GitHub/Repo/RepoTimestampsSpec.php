@@ -30,12 +30,6 @@ class RepoTimestampsSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(RepoPushedAt $pushedAt)
-    {
-        $this->getId()->shouldReturn($pushedAt);
-    }
-
-
     public function it_exposes_updated_at(RepoUpdatedAt $updatedAt)
     {
         $this->getUpdatedAt()->shouldReturn($updatedAt);

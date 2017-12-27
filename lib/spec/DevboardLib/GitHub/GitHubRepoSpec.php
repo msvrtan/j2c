@@ -36,9 +36,9 @@ class GitHubRepoSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(RepoTimestamps $repoTimestamps)
+    public function it_exposes_id(RepoId $id)
     {
-        $this->getId()->shouldReturn($repoTimestamps);
+        $this->getId()->shouldReturn($id);
     }
 
 

@@ -29,12 +29,6 @@ class RequiredStatusChecksSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(Contexts $contexts)
-    {
-        $this->getId()->shouldReturn($contexts);
-    }
-
-
     public function it_exposes_contexts(Contexts $contexts)
     {
         $this->getContexts()->shouldReturn($contexts);

@@ -8,7 +8,6 @@ use MyVendor\ProductCollection;
 use MyVendor\ProductEntity;
 use MyVendor\Product\ProductId;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class ProductCollectionSpec extends ObjectBehavior
 {

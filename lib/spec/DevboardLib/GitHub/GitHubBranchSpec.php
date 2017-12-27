@@ -30,12 +30,6 @@ class GitHubBranchSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(BranchProtectionUrl $protectionUrl)
-    {
-        $this->getId()->shouldReturn($protectionUrl);
-    }
-
-
     public function it_exposes_commit(GitHubCommit $commit)
     {
         $this->getCommit()->shouldReturn($commit);

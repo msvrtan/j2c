@@ -79,12 +79,6 @@ class GitHubBranchTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->protectionUrl, $this->sut->getId());
-    }
-
-
     public function testGetCommit()
     {
         self::assertSame($this->commit, $this->sut->getCommit());

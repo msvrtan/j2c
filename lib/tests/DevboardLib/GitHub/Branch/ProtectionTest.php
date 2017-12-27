@@ -38,12 +38,6 @@ class ProtectionTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->requiredStatusChecks, $this->sut->getId());
-    }
-
-
     public function testGetRequiredStatusChecks()
     {
         self::assertSame($this->requiredStatusChecks, $this->sut->getRequiredStatusChecks());

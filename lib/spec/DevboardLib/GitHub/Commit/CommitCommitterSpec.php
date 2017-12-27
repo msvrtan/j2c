@@ -31,12 +31,6 @@ class CommitCommitterSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(CommitCommitterDetails $committerDetails)
-    {
-        $this->getId()->shouldReturn($committerDetails);
-    }
-
-
     public function it_exposes_email(EmailAddress $email)
     {
         $this->getEmail()->shouldReturn($email);

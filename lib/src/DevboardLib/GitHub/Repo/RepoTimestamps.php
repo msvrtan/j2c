@@ -30,12 +30,6 @@ class RepoTimestamps
     }
 
 
-    public function getId(): RepoPushedAt
-    {
-        return $this->pushedAt;
-    }
-
-
     public function getUpdatedAt(): RepoUpdatedAt
     {
         return $this->updatedAt;

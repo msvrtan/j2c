@@ -28,12 +28,6 @@ class Protection
     }
 
 
-    public function getId(): RequiredStatusChecks
-    {
-        return $this->requiredStatusChecks;
-    }
-
-
     public function getRequiredStatusChecks(): RequiredStatusChecks
     {
         return $this->requiredStatusChecks;

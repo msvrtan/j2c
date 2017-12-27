@@ -35,12 +35,6 @@ class CommitTreeTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->url, $this->sut->getId());
-    }
-
-
     public function testGetUrl()
     {
         self::assertSame($this->url, $this->sut->getUrl());

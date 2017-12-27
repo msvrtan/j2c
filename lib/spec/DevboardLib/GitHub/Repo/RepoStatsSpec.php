@@ -28,12 +28,6 @@ class RepoStatsSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(RepoSize $size)
-    {
-        $this->getId()->shouldReturn($size);
-    }
-
-
     public function it_exposes_watchers_count()
     {
         $this->getWatchersCount()->shouldReturn(1);
