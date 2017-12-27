@@ -8,11 +8,10 @@ use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Contexts;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\RequiredStatusChecksEnforcementLevel;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class RequiredStatusChecksSpec extends ObjectBehavior
 {
-    public function let(RequiredStatusChecksEnforcementLevel $enforcementLevel, Contexts $contexts)
+    public function let(\RequiredStatusChecksEnforcementLevel $enforcementLevel, \Contexts $contexts)
     {
         $this->beConstructedWith($enforcementLevel, $contexts);
     }
@@ -24,9 +23,15 @@ class RequiredStatusChecksSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_enforcementLevel(RequiredStatusChecksEnforcementLevel $enforcementLevel)
+    public function it_exposes_enforcement_level(RequiredStatusChecksEnforcementLevel $enforcementLevel)
     {
         $this->getEnforcementLevel()->shouldReturn($enforcementLevel);
+    }
+
+
+    public function it_exposes_id(Contexts $contexts)
+    {
+        $this->getId()->shouldReturn($contexts);
     }
 
 
@@ -36,16 +41,20 @@ class RequiredStatusChecksSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable(RequiredStatusChecksEnforcementLevel $enforcementLevel, Contexts $contexts)
+    public function it_is_castable_to_string()
     {
-        $enforcementLevel->serialize()->shouldBeCalled()->willReturn('enforcementLevel');
-        $contexts->serialize()->shouldBeCalled()->willReturn(['data']);
-        $this->serialize()->shouldReturn(['enforcementLevel' => 'enforcementLevel', 'contexts' => ['data']]);
+        $this->__toString()->shouldReturn([1]);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_serialized(RequiredStatusChecksEnforcementLevel $enforcementLevel, Contexts $contexts)
     {
-        $this->deserialize(['enforcementLevel' => 'enforcementLevel', 'contexts' => ['data']])->shouldReturnAnInstanceOf(RequiredStatusChecks::class);
+        $this->serialize()->shouldReturn(['enforcementLevel' => 'enforcementLevel', 'contexts' => [1]]);
+    }
+
+
+    public function it_can_be_deserialized(RequiredStatusChecksEnforcementLevel $enforcementLevel, Contexts $contexts)
+    {
+        $this->deserialize(['enforcementLevel' => 'enforcementLevel', 'contexts' => [1]])->shouldReturnAnInstanceOf(RequiredStatusChecks::class);
     }
 }

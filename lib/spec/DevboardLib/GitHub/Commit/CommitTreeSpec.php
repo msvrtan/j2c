@@ -8,11 +8,10 @@ use DevboardLib\GitHub\Commit\CommitTree;
 use DevboardLib\GitHub\Commit\Tree\TreeSha;
 use DevboardLib\GitHub\Commit\Tree\TreeUrl;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class CommitTreeSpec extends ObjectBehavior
 {
-    public function let(TreeSha $sha, TreeUrl $url)
+    public function let(\TreeSha $sha, \TreeUrl $url)
     {
         $this->beConstructedWith($sha, $url);
     }
@@ -30,21 +29,31 @@ class CommitTreeSpec extends ObjectBehavior
     }
 
 
+    public function it_exposes_id(TreeUrl $url)
+    {
+        $this->getId()->shouldReturn($url);
+    }
+
+
     public function it_exposes_url(TreeUrl $url)
     {
         $this->getUrl()->shouldReturn($url);
     }
 
 
-    public function it_is_serializable(TreeSha $sha, TreeUrl $url)
+    public function it_is_castable_to_string()
     {
-        $sha->serialize()->shouldBeCalled()->willReturn('sha');
-        $url->serialize()->shouldBeCalled()->willReturn('url');
+        $this->__toString()->shouldReturn('url');
+    }
+
+
+    public function it_can_be_serialized(TreeSha $sha, TreeUrl $url)
+    {
         $this->serialize()->shouldReturn(['sha' => 'sha', 'url' => 'url']);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized(TreeSha $sha, TreeUrl $url)
     {
         $this->deserialize(['sha' => 'sha', 'url' => 'url'])->shouldReturnAnInstanceOf(CommitTree::class);
     }

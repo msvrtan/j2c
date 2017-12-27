@@ -16,11 +16,14 @@ use DevboardLib\GitHub\Commit\CommitTree;
 use DevboardLib\GitHub\Commit\CommitVerification;
 use DevboardLib\GitHub\GitHubCommit;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
+/**
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ * @SuppressWarnings(PHPMD.ExcessiveParameterList)
+ */
 class GitHubCommitSpec extends ObjectBehavior
 {
-    public function let(CommitSha $sha, CommitMessage $message, CommitDate $commitDate, CommitAuthor $author, CommitCommitter $committer, CommitTree $tree, CommitParentCollection $parents, CommitVerification $verification, CommitApiUrl $apiUrl, CommitHtmlUrl $htmlUrl)
+    public function let(\CommitSha $sha, \CommitMessage $message, \CommitDate $commitDate, \CommitAuthor $author, \CommitCommitter $committer, \CommitTree $tree, \CommitParentCollection $parents, \CommitVerification $verification, \CommitApiUrl $apiUrl, \CommitHtmlUrl $htmlUrl)
     {
         $this->beConstructedWith($sha, $message, $commitDate, $author, $committer, $tree, $parents, $verification, $apiUrl, $htmlUrl);
     }
@@ -38,13 +41,19 @@ class GitHubCommitSpec extends ObjectBehavior
     }
 
 
+    public function it_exposes_id(CommitHtmlUrl $htmlUrl)
+    {
+        $this->getId()->shouldReturn($htmlUrl);
+    }
+
+
     public function it_exposes_message(CommitMessage $message)
     {
         $this->getMessage()->shouldReturn($message);
     }
 
 
-    public function it_exposes_commitDate(CommitDate $commitDate)
+    public function it_exposes_commit_date(CommitDate $commitDate)
     {
         $this->getCommitDate()->shouldReturn($commitDate);
     }
@@ -80,36 +89,32 @@ class GitHubCommitSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_apiUrl(CommitApiUrl $apiUrl)
+    public function it_exposes_api_url(CommitApiUrl $apiUrl)
     {
         $this->getApiUrl()->shouldReturn($apiUrl);
     }
 
 
-    public function it_exposes_htmlUrl(CommitHtmlUrl $htmlUrl)
+    public function it_exposes_html_url(CommitHtmlUrl $htmlUrl)
     {
         $this->getHtmlUrl()->shouldReturn($htmlUrl);
     }
 
 
-    public function it_is_serializable(CommitSha $sha, CommitMessage $message, CommitDate $commitDate, CommitAuthor $author, CommitCommitter $committer, CommitTree $tree, CommitParentCollection $parents, CommitVerification $verification, CommitApiUrl $apiUrl, CommitHtmlUrl $htmlUrl)
+    public function it_is_castable_to_string()
     {
-        $sha->serialize()->shouldBeCalled()->willReturn('sha');
-        $message->serialize()->shouldBeCalled()->willReturn('message');
-        $commitDate->serialize()->shouldBeCalled()->willReturn('2018-01-01 00:01:00');
-        $author->serialize()->shouldBeCalled()->willReturn(['author', 'author', '2018-01-01 00:01:00', [1, 'author', 'author', 'author', 'author', 'author', 'author', true]]);
-        $committer->serialize()->shouldBeCalled()->willReturn(['committer', 'committer', '2018-01-01 00:01:00', [1, 'committer', 'committer', 'committer', 'committer', 'committer', 'committer', true]]);
-        $tree->serialize()->shouldBeCalled()->willReturn(['tree', 'tree']);
-        $parents->serialize()->shouldBeCalled()->willReturn(['data']);
-        $verification->serialize()->shouldBeCalled()->willReturn([true, 'verification', 'verification', 'verification']);
-        $apiUrl->serialize()->shouldBeCalled()->willReturn('apiUrl');
-        $htmlUrl->serialize()->shouldBeCalled()->willReturn('htmlUrl');
-        $this->serialize()->shouldReturn(['sha' => 'sha', 'message' => 'message', 'commitDate' => '2018-01-01 00:01:00', 'author' => ['author', 'author', '2018-01-01 00:01:00', [1, 'author', 'author', 'author', 'author', 'author', 'author', true]], 'committer' => ['committer', 'committer', '2018-01-01 00:01:00', [1, 'committer', 'committer', 'committer', 'committer', 'committer', 'committer', true]], 'tree' => ['tree', 'tree'], 'parents' => ['data'], 'verification' => [true, 'verification', 'verification', 'verification'], 'apiUrl' => 'apiUrl', 'htmlUrl' => 'htmlUrl']);
+        $this->__toString()->shouldReturn('htmlUrl');
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_serialized(CommitSha $sha, CommitMessage $message, CommitDate $commitDate, CommitAuthor $author, CommitCommitter $committer, CommitTree $tree, CommitParentCollection $parents, CommitVerification $verification, CommitApiUrl $apiUrl, CommitHtmlUrl $htmlUrl)
     {
-        $this->deserialize(['sha' => 'sha', 'message' => 'message', 'commitDate' => '2018-01-01 00:01:00', 'author' => ['author', 'author', '2018-01-01 00:01:00', [1, 'author', 'author', 'author', 'author', 'author', 'author', true]], 'committer' => ['committer', 'committer', '2018-01-01 00:01:00', [1, 'committer', 'committer', 'committer', 'committer', 'committer', 'committer', true]], 'tree' => ['tree', 'tree'], 'parents' => ['data'], 'verification' => [true, 'verification', 'verification', 'verification'], 'apiUrl' => 'apiUrl', 'htmlUrl' => 'htmlUrl'])->shouldReturnAnInstanceOf(GitHubCommit::class);
+        $this->serialize()->shouldReturn(['sha' => 'sha', 'message' => 'message', 'commitDate' => '2018-01-01 00:01:00', 'author' => ['name'=>'author', 'email'=>'author', 'date'=>'2018-01-01 00:01:00', 'authorDetails'=>['id'=>1, 'login'=>'author', 'type'=>'author', 'avatarUrl'=>'author', 'gravatarId'=>'author', 'htmlUrl'=>'author', 'apiUrl'=>'author', 'siteAdmin'=>true]], 'committer' => ['name'=>'committer', 'email'=>'committer', 'date'=>'2018-01-01 00:01:00', 'committerDetails'=>['id'=>1, 'login'=>'committer', 'type'=>'committer', 'avatarUrl'=>'committer', 'gravatarId'=>'committer', 'htmlUrl'=>'committer', 'apiUrl'=>'committer', 'siteAdmin'=>true]], 'tree' => ['sha'=>'tree', 'url'=>'tree'], 'parents' => [['sha'=>'elements', 'apiUrl'=>'elements', 'htmlUrl'=>'elements']], 'verification' => ['verified'=>true, 'reason'=>'verification', 'signature'=>'verification', 'payload'=>'verification'], 'apiUrl' => 'apiUrl', 'htmlUrl' => 'htmlUrl']);
+    }
+
+
+    public function it_can_be_deserialized(CommitSha $sha, CommitMessage $message, CommitDate $commitDate, CommitAuthor $author, CommitCommitter $committer, CommitTree $tree, CommitParentCollection $parents, CommitVerification $verification, CommitApiUrl $apiUrl, CommitHtmlUrl $htmlUrl)
+    {
+        $this->deserialize(['sha' => 'sha', 'message' => 'message', 'commitDate' => '2018-01-01 00:01:00', 'author' => ['name'=>'author', 'email'=>'author', 'date'=>'2018-01-01 00:01:00', 'authorDetails'=>['id'=>1, 'login'=>'author', 'type'=>'author', 'avatarUrl'=>'author', 'gravatarId'=>'author', 'htmlUrl'=>'author', 'apiUrl'=>'author', 'siteAdmin'=>true]], 'committer' => ['name'=>'committer', 'email'=>'committer', 'date'=>'2018-01-01 00:01:00', 'committerDetails'=>['id'=>1, 'login'=>'committer', 'type'=>'committer', 'avatarUrl'=>'committer', 'gravatarId'=>'committer', 'htmlUrl'=>'committer', 'apiUrl'=>'committer', 'siteAdmin'=>true]], 'tree' => ['sha'=>'tree', 'url'=>'tree'], 'parents' => [['sha'=>'elements', 'apiUrl'=>'elements', 'htmlUrl'=>'elements']], 'verification' => ['verified'=>true, 'reason'=>'verification', 'signature'=>'verification', 'payload'=>'verification'], 'apiUrl' => 'apiUrl', 'htmlUrl' => 'htmlUrl'])->shouldReturnAnInstanceOf(GitHubCommit::class);
     }
 }

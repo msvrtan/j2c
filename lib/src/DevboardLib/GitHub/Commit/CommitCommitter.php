@@ -37,6 +37,12 @@ class CommitCommitter
     }
 
 
+    public function getId(): ?CommitCommitterDetails
+    {
+        return $this->committerDetails;
+    }
+
+
     public function getEmail(): EmailAddress
     {
         return $this->email;
@@ -52,6 +58,12 @@ class CommitCommitter
     public function getCommitterDetails(): ?CommitCommitterDetails
     {
         return $this->committerDetails;
+    }
+
+
+    public function __toString(): string
+    {
+        return (string) $this->committerDetails;
     }
 
 

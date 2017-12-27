@@ -44,6 +44,12 @@ class RepoStats
     }
 
 
+    public function getId(): RepoSize
+    {
+        return $this->size;
+    }
+
+
     public function getWatchersCount(): int
     {
         return $this->watchersCount;
@@ -71,6 +77,12 @@ class RepoStats
     public function getSize(): RepoSize
     {
         return $this->size;
+    }
+
+
+    public function __toString(): string
+    {
+        return (string) $this->size;
     }
 
 

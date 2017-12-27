@@ -24,18 +24,20 @@ class Context
     }
 
 
-    public function serialize(): array
+    public function __toString(): string
     {
-        return [
-            'id' => $this->id->serialize()
-        ];
+        return (string) $this->id;
     }
 
 
-    public static function deserialize(array $data): self
+    public function serialize(): int
     {
-        return new self(
-            ContextId::deserialize($data['id'])
-        );
+        return $this->id->serialize();
+    }
+
+
+    public static function deserialize(int $id): self
+    {
+        return new self(ContextId::deserialize($id));
     }
 }

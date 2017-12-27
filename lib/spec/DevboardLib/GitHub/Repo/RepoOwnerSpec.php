@@ -13,11 +13,10 @@ use DevboardLib\GitHub\Account\AccountLogin;
 use DevboardLib\GitHub\Account\AccountType;
 use DevboardLib\GitHub\Repo\RepoOwner;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class RepoOwnerSpec extends ObjectBehavior
 {
-    public function let(AccountId $id, AccountLogin $login, AccountType $type, AccountAvatarUrl $avatarUrl, GravatarId $gravatarId, AccountHtmlUrl $htmlUrl, AccountApiUrl $url)
+    public function let(\AccountId $id, \AccountLogin $login, \AccountType $type, \AccountAvatarUrl $avatarUrl, \GravatarId $gravatarId, \AccountHtmlUrl $htmlUrl, \AccountApiUrl $url)
     {
         $this->beConstructedWith($id, $login, $type, $avatarUrl, $gravatarId, $htmlUrl, $url, $siteAdmin = true);
     }
@@ -29,9 +28,9 @@ class RepoOwnerSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(AccountId $id)
+    public function it_exposes_id()
     {
-        $this->getId()->shouldReturn($id);
+        $this->getId()->shouldReturn(true);
     }
 
 
@@ -47,19 +46,19 @@ class RepoOwnerSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_avatarUrl(AccountAvatarUrl $avatarUrl)
+    public function it_exposes_avatar_url(AccountAvatarUrl $avatarUrl)
     {
         $this->getAvatarUrl()->shouldReturn($avatarUrl);
     }
 
 
-    public function it_exposes_gravatarId(GravatarId $gravatarId)
+    public function it_exposes_gravatar_id(GravatarId $gravatarId)
     {
         $this->getGravatarId()->shouldReturn($gravatarId);
     }
 
 
-    public function it_exposes_htmlUrl(AccountHtmlUrl $htmlUrl)
+    public function it_exposes_html_url(AccountHtmlUrl $htmlUrl)
     {
         $this->getHtmlUrl()->shouldReturn($htmlUrl);
     }
@@ -71,26 +70,25 @@ class RepoOwnerSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_siteAdmin()
+    public function it_exposes_site_admin()
     {
         $this->getSiteAdmin()->shouldReturn(true);
     }
 
 
-    public function it_is_serializable(AccountId $id, AccountLogin $login, AccountType $type, AccountAvatarUrl $avatarUrl, GravatarId $gravatarId, AccountHtmlUrl $htmlUrl, AccountApiUrl $url)
+    public function it_is_castable_to_string()
     {
-        $id->serialize()->shouldBeCalled()->willReturn(1);
-        $login->serialize()->shouldBeCalled()->willReturn('login');
-        $type->serialize()->shouldBeCalled()->willReturn('type');
-        $avatarUrl->serialize()->shouldBeCalled()->willReturn('avatarUrl');
-        $gravatarId->serialize()->shouldBeCalled()->willReturn('gravatarId');
-        $htmlUrl->serialize()->shouldBeCalled()->willReturn('htmlUrl');
-        $url->serialize()->shouldBeCalled()->willReturn('url');
+        $this->__toString()->shouldReturn('true');
+    }
+
+
+    public function it_can_be_serialized(AccountId $id, AccountLogin $login, AccountType $type, AccountAvatarUrl $avatarUrl, GravatarId $gravatarId, AccountHtmlUrl $htmlUrl, AccountApiUrl $url)
+    {
         $this->serialize()->shouldReturn(['id' => 1, 'login' => 'login', 'type' => 'type', 'avatarUrl' => 'avatarUrl', 'gravatarId' => 'gravatarId', 'htmlUrl' => 'htmlUrl', 'url' => 'url', 'siteAdmin' => true]);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized(AccountId $id, AccountLogin $login, AccountType $type, AccountAvatarUrl $avatarUrl, GravatarId $gravatarId, AccountHtmlUrl $htmlUrl, AccountApiUrl $url)
     {
         $this->deserialize(['id' => 1, 'login' => 'login', 'type' => 'type', 'avatarUrl' => 'avatarUrl', 'gravatarId' => 'gravatarId', 'htmlUrl' => 'htmlUrl', 'url' => 'url', 'siteAdmin' => true])->shouldReturnAnInstanceOf(RepoOwner::class);
     }

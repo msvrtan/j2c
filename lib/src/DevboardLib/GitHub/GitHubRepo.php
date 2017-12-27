@@ -16,6 +16,10 @@ use DevboardLib\GitHub\Repo\RepoOwner;
 use DevboardLib\GitHub\Repo\RepoStats;
 use DevboardLib\GitHub\Repo\RepoTimestamps;
 
+/**
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ * @SuppressWarnings(PHPMD.ExcessiveParameterList)
+ */
 class GitHubRepo
 {
     /** @var RepoId */
@@ -61,9 +65,6 @@ class GitHubRepo
     private $repoTimestamps;
 
 
-    /**
-     * @SuppressWarnings(PHPMD.ExcessiveParameterList)
-     */
     public function __construct(RepoId $id, RepoFullName $fullName, RepoOwner $owner, bool $private, BranchName $defaultBranch, bool $fork, ?RepoDescription $description, RepoHomepage $homepage, RepoLanguage $language, ?RepoMirrorUrl $mirrorUrl, bool $archived, RepoEndpoints $repoEndpoints, RepoStats $repoStats, RepoTimestamps $repoTimestamps)
     {
         $this->id = $id;
@@ -83,9 +84,9 @@ class GitHubRepo
     }
 
 
-    public function getId(): RepoId
+    public function getId(): RepoTimestamps
     {
-        return $this->id;
+        return $this->repoTimestamps;
     }
 
 
@@ -164,6 +165,12 @@ class GitHubRepo
     public function getRepoTimestamps(): RepoTimestamps
     {
         return $this->repoTimestamps;
+    }
+
+
+    public function __toString(): string
+    {
+        return (string) $this->repoTimestamps;
     }
 
 

@@ -13,11 +13,10 @@ use DevboardLib\GitHub\User\UserHtmlUrl;
 use DevboardLib\GitHub\User\UserId;
 use DevboardLib\GitHub\User\UserLogin;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class CommitCommitterDetailsSpec extends ObjectBehavior
 {
-    public function let(UserId $id, UserLogin $login, AccountType $type, UserAvatarUrl $avatarUrl, GravatarId $gravatarId, UserHtmlUrl $htmlUrl, UserApiUrl $apiUrl)
+    public function let(\UserId $id, \UserLogin $login, \AccountType $type, \UserAvatarUrl $avatarUrl, \GravatarId $gravatarId, \UserHtmlUrl $htmlUrl, \UserApiUrl $apiUrl)
     {
         $this->beConstructedWith($id, $login, $type, $avatarUrl, $gravatarId, $htmlUrl, $apiUrl, $siteAdmin = true);
     }
@@ -29,9 +28,9 @@ class CommitCommitterDetailsSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(UserId $id)
+    public function it_exposes_id()
     {
-        $this->getId()->shouldReturn($id);
+        $this->getId()->shouldReturn(true);
     }
 
 
@@ -47,50 +46,49 @@ class CommitCommitterDetailsSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_avatarUrl(UserAvatarUrl $avatarUrl)
+    public function it_exposes_avatar_url(UserAvatarUrl $avatarUrl)
     {
         $this->getAvatarUrl()->shouldReturn($avatarUrl);
     }
 
 
-    public function it_exposes_gravatarId(GravatarId $gravatarId)
+    public function it_exposes_gravatar_id(GravatarId $gravatarId)
     {
         $this->getGravatarId()->shouldReturn($gravatarId);
     }
 
 
-    public function it_exposes_htmlUrl(UserHtmlUrl $htmlUrl)
+    public function it_exposes_html_url(UserHtmlUrl $htmlUrl)
     {
         $this->getHtmlUrl()->shouldReturn($htmlUrl);
     }
 
 
-    public function it_exposes_apiUrl(UserApiUrl $apiUrl)
+    public function it_exposes_api_url(UserApiUrl $apiUrl)
     {
         $this->getApiUrl()->shouldReturn($apiUrl);
     }
 
 
-    public function it_exposes_siteAdmin()
+    public function it_exposes_site_admin()
     {
         $this->getSiteAdmin()->shouldReturn(true);
     }
 
 
-    public function it_is_serializable(UserId $id, UserLogin $login, AccountType $type, UserAvatarUrl $avatarUrl, GravatarId $gravatarId, UserHtmlUrl $htmlUrl, UserApiUrl $apiUrl)
+    public function it_is_castable_to_string()
     {
-        $id->serialize()->shouldBeCalled()->willReturn(1);
-        $login->serialize()->shouldBeCalled()->willReturn('login');
-        $type->serialize()->shouldBeCalled()->willReturn('type');
-        $avatarUrl->serialize()->shouldBeCalled()->willReturn('avatarUrl');
-        $gravatarId->serialize()->shouldBeCalled()->willReturn('gravatarId');
-        $htmlUrl->serialize()->shouldBeCalled()->willReturn('htmlUrl');
-        $apiUrl->serialize()->shouldBeCalled()->willReturn('apiUrl');
+        $this->__toString()->shouldReturn('true');
+    }
+
+
+    public function it_can_be_serialized(UserId $id, UserLogin $login, AccountType $type, UserAvatarUrl $avatarUrl, GravatarId $gravatarId, UserHtmlUrl $htmlUrl, UserApiUrl $apiUrl)
+    {
         $this->serialize()->shouldReturn(['id' => 1, 'login' => 'login', 'type' => 'type', 'avatarUrl' => 'avatarUrl', 'gravatarId' => 'gravatarId', 'htmlUrl' => 'htmlUrl', 'apiUrl' => 'apiUrl', 'siteAdmin' => true]);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized(UserId $id, UserLogin $login, AccountType $type, UserAvatarUrl $avatarUrl, GravatarId $gravatarId, UserHtmlUrl $htmlUrl, UserApiUrl $apiUrl)
     {
         $this->deserialize(['id' => 1, 'login' => 'login', 'type' => 'type', 'avatarUrl' => 'avatarUrl', 'gravatarId' => 'gravatarId', 'htmlUrl' => 'htmlUrl', 'apiUrl' => 'apiUrl', 'siteAdmin' => true])->shouldReturnAnInstanceOf(CommitCommitterDetails::class);
     }

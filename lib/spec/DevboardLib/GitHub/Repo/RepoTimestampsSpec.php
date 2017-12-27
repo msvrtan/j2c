@@ -9,11 +9,10 @@ use DevboardLib\GitHub\Repo\RepoPushedAt;
 use DevboardLib\GitHub\Repo\RepoTimestamps;
 use DevboardLib\GitHub\Repo\RepoUpdatedAt;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class RepoTimestampsSpec extends ObjectBehavior
 {
-    public function let(RepoCreatedAt $createdAt, RepoUpdatedAt $updatedAt, RepoPushedAt $pushedAt)
+    public function let(\RepoCreatedAt $createdAt, \RepoUpdatedAt $updatedAt, \RepoPushedAt $pushedAt)
     {
         $this->beConstructedWith($createdAt, $updatedAt, $pushedAt);
     }
@@ -25,34 +24,43 @@ class RepoTimestampsSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_createdAt(RepoCreatedAt $createdAt)
+    public function it_exposes_created_at(RepoCreatedAt $createdAt)
     {
         $this->getCreatedAt()->shouldReturn($createdAt);
     }
 
 
-    public function it_exposes_updatedAt(RepoUpdatedAt $updatedAt)
+    public function it_exposes_id(RepoPushedAt $pushedAt)
+    {
+        $this->getId()->shouldReturn($pushedAt);
+    }
+
+
+    public function it_exposes_updated_at(RepoUpdatedAt $updatedAt)
     {
         $this->getUpdatedAt()->shouldReturn($updatedAt);
     }
 
 
-    public function it_exposes_pushedAt(RepoPushedAt $pushedAt)
+    public function it_exposes_pushed_at(RepoPushedAt $pushedAt)
     {
         $this->getPushedAt()->shouldReturn($pushedAt);
     }
 
 
-    public function it_is_serializable(RepoCreatedAt $createdAt, RepoUpdatedAt $updatedAt, RepoPushedAt $pushedAt)
+    public function it_is_castable_to_string()
     {
-        $createdAt->serialize()->shouldBeCalled()->willReturn('2018-01-01 00:01:00');
-        $updatedAt->serialize()->shouldBeCalled()->willReturn('2018-01-01 00:01:00');
-        $pushedAt->serialize()->shouldBeCalled()->willReturn('2018-01-01 00:01:00');
+        $this->__toString()->shouldReturn('2018-01-01 00:01:00');
+    }
+
+
+    public function it_can_be_serialized(RepoCreatedAt $createdAt, RepoUpdatedAt $updatedAt, RepoPushedAt $pushedAt)
+    {
         $this->serialize()->shouldReturn(['createdAt' => '2018-01-01 00:01:00', 'updatedAt' => '2018-01-01 00:01:00', 'pushedAt' => '2018-01-01 00:01:00']);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized(RepoCreatedAt $createdAt, RepoUpdatedAt $updatedAt, RepoPushedAt $pushedAt)
     {
         $this->deserialize(['createdAt' => '2018-01-01 00:01:00', 'updatedAt' => '2018-01-01 00:01:00', 'pushedAt' => '2018-01-01 00:01:00'])->shouldReturnAnInstanceOf(RepoTimestamps::class);
     }

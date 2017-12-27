@@ -17,11 +17,14 @@ use DevboardLib\GitHub\Repo\RepoOwner;
 use DevboardLib\GitHub\Repo\RepoStats;
 use DevboardLib\GitHub\Repo\RepoTimestamps;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
+/**
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ * @SuppressWarnings(PHPMD.ExcessiveParameterList)
+ */
 class GitHubRepoSpec extends ObjectBehavior
 {
-    public function let(RepoId $id, RepoFullName $fullName, RepoOwner $owner, BranchName $defaultBranch, RepoDescription $description, RepoHomepage $homepage, RepoLanguage $language, RepoMirrorUrl $mirrorUrl, RepoEndpoints $repoEndpoints, RepoStats $repoStats, RepoTimestamps $repoTimestamps)
+    public function let(\RepoId $id, \RepoFullName $fullName, \RepoOwner $owner, \BranchName $defaultBranch, \RepoDescription $description, \RepoHomepage $homepage, \RepoLanguage $language, \RepoMirrorUrl $mirrorUrl, \RepoEndpoints $repoEndpoints, \RepoStats $repoStats, \RepoTimestamps $repoTimestamps)
     {
         $this->beConstructedWith($id, $fullName, $owner, $private = true, $defaultBranch, $fork = true, $description, $homepage, $language, $mirrorUrl, $archived = true, $repoEndpoints, $repoStats, $repoTimestamps);
     }
@@ -33,13 +36,13 @@ class GitHubRepoSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(RepoId $id)
+    public function it_exposes_id(RepoTimestamps $repoTimestamps)
     {
-        $this->getId()->shouldReturn($id);
+        $this->getId()->shouldReturn($repoTimestamps);
     }
 
 
-    public function it_exposes_fullName(RepoFullName $fullName)
+    public function it_exposes_full_name(RepoFullName $fullName)
     {
         $this->getFullName()->shouldReturn($fullName);
     }
@@ -57,7 +60,7 @@ class GitHubRepoSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_defaultBranch(BranchName $defaultBranch)
+    public function it_exposes_default_branch(BranchName $defaultBranch)
     {
         $this->getDefaultBranch()->shouldReturn($defaultBranch);
     }
@@ -87,7 +90,7 @@ class GitHubRepoSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_mirrorUrl(RepoMirrorUrl $mirrorUrl)
+    public function it_exposes_mirror_url(RepoMirrorUrl $mirrorUrl)
     {
         $this->getMirrorUrl()->shouldReturn($mirrorUrl);
     }
@@ -99,43 +102,38 @@ class GitHubRepoSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_repoEndpoints(RepoEndpoints $repoEndpoints)
+    public function it_exposes_repo_endpoints(RepoEndpoints $repoEndpoints)
     {
         $this->getRepoEndpoints()->shouldReturn($repoEndpoints);
     }
 
 
-    public function it_exposes_repoStats(RepoStats $repoStats)
+    public function it_exposes_repo_stats(RepoStats $repoStats)
     {
         $this->getRepoStats()->shouldReturn($repoStats);
     }
 
 
-    public function it_exposes_repoTimestamps(RepoTimestamps $repoTimestamps)
+    public function it_exposes_repo_timestamps(RepoTimestamps $repoTimestamps)
     {
         $this->getRepoTimestamps()->shouldReturn($repoTimestamps);
     }
 
 
-    public function it_is_serializable(RepoId $id, RepoFullName $fullName, RepoOwner $owner, BranchName $defaultBranch, RepoDescription $description, RepoHomepage $homepage, RepoLanguage $language, RepoMirrorUrl $mirrorUrl, RepoEndpoints $repoEndpoints, RepoStats $repoStats, RepoTimestamps $repoTimestamps)
+    public function it_is_castable_to_string()
     {
-        $id->serialize()->shouldBeCalled()->willReturn(1);
-        $fullName->serialize()->shouldBeCalled()->willReturn('fullName');
-        $owner->serialize()->shouldBeCalled()->willReturn([1, 'owner', 'owner', 'owner', 'owner', 'owner', 'owner', true]);
-        $defaultBranch->serialize()->shouldBeCalled()->willReturn('defaultBranch');
-        $description->serialize()->shouldBeCalled()->willReturn('description');
-        $homepage->serialize()->shouldBeCalled()->willReturn('homepage');
-        $language->serialize()->shouldBeCalled()->willReturn('language');
-        $mirrorUrl->serialize()->shouldBeCalled()->willReturn('mirrorUrl');
-        $repoEndpoints->serialize()->shouldBeCalled()->willReturn(['repoEndpoints', 'repoEndpoints', 'repoEndpoints', 'repoEndpoints']);
-        $repoStats->serialize()->shouldBeCalled()->willReturn([1, 1, 1, 1, 1, 1]);
-        $repoTimestamps->serialize()->shouldBeCalled()->willReturn(['2018-01-01 00:01:00', '2018-01-01 00:01:00', '2018-01-01 00:01:00']);
-        $this->serialize()->shouldReturn(['id' => 1, 'fullName' => 'fullName', 'owner' => [1, 'owner', 'owner', 'owner', 'owner', 'owner', 'owner', true], 'private' => true, 'defaultBranch' => 'defaultBranch', 'fork' => true, 'description' => 'description', 'homepage' => 'homepage', 'language' => 'language', 'mirrorUrl' => 'mirrorUrl', 'archived' => true, 'repoEndpoints' => ['repoEndpoints', 'repoEndpoints', 'repoEndpoints', 'repoEndpoints'], 'repoStats' => [1, 1, 1, 1, 1, 1], 'repoTimestamps' => ['2018-01-01 00:01:00', '2018-01-01 00:01:00', '2018-01-01 00:01:00']]);
+        $this->__toString()->shouldReturn(['createdAt'=>'2018-01-01 00:01:00', 'updatedAt'=>'2018-01-01 00:01:00', 'pushedAt'=>'2018-01-01 00:01:00']);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_serialized(RepoId $id, RepoFullName $fullName, RepoOwner $owner, BranchName $defaultBranch, RepoDescription $description, RepoHomepage $homepage, RepoLanguage $language, RepoMirrorUrl $mirrorUrl, RepoEndpoints $repoEndpoints, RepoStats $repoStats, RepoTimestamps $repoTimestamps)
     {
-        $this->deserialize(['id' => 1, 'fullName' => 'fullName', 'owner' => [1, 'owner', 'owner', 'owner', 'owner', 'owner', 'owner', true], 'private' => true, 'defaultBranch' => 'defaultBranch', 'fork' => true, 'description' => 'description', 'homepage' => 'homepage', 'language' => 'language', 'mirrorUrl' => 'mirrorUrl', 'archived' => true, 'repoEndpoints' => ['repoEndpoints', 'repoEndpoints', 'repoEndpoints', 'repoEndpoints'], 'repoStats' => [1, 1, 1, 1, 1, 1], 'repoTimestamps' => ['2018-01-01 00:01:00', '2018-01-01 00:01:00', '2018-01-01 00:01:00']])->shouldReturnAnInstanceOf(GitHubRepo::class);
+        $this->serialize()->shouldReturn(['id' => 1, 'fullName' => 'fullName', 'owner' => ['id'=>1, 'login'=>'owner', 'type'=>'owner', 'avatarUrl'=>'owner', 'gravatarId'=>'owner', 'htmlUrl'=>'owner', 'url'=>'owner', 'siteAdmin'=>true], 'private' => true, 'defaultBranch' => 'defaultBranch', 'fork' => true, 'description' => 'description', 'homepage' => 'homepage', 'language' => 'language', 'mirrorUrl' => 'mirrorUrl', 'archived' => true, 'repoEndpoints' => ['htmlUrl'=>'repoEndpoints', 'url'=>'repoEndpoints', 'gitUrl'=>'repoEndpoints', 'sshUrl'=>'repoEndpoints'], 'repoStats' => ['networkCount'=>1, 'watchersCount'=>1, 'stargazersCount'=>1, 'subscribersCount'=>1, 'openIssuesCount'=>1, 'size'=>1], 'repoTimestamps' => ['createdAt'=>'2018-01-01 00:01:00', 'updatedAt'=>'2018-01-01 00:01:00', 'pushedAt'=>'2018-01-01 00:01:00']]);
+    }
+
+
+    public function it_can_be_deserialized(RepoId $id, RepoFullName $fullName, RepoOwner $owner, BranchName $defaultBranch, RepoDescription $description, RepoHomepage $homepage, RepoLanguage $language, RepoMirrorUrl $mirrorUrl, RepoEndpoints $repoEndpoints, RepoStats $repoStats, RepoTimestamps $repoTimestamps)
+    {
+        $this->deserialize(['id' => 1, 'fullName' => 'fullName', 'owner' => ['id'=>1, 'login'=>'owner', 'type'=>'owner', 'avatarUrl'=>'owner', 'gravatarId'=>'owner', 'htmlUrl'=>'owner', 'url'=>'owner', 'siteAdmin'=>true], 'private' => true, 'defaultBranch' => 'defaultBranch', 'fork' => true, 'description' => 'description', 'homepage' => 'homepage', 'language' => 'language', 'mirrorUrl' => 'mirrorUrl', 'archived' => true, 'repoEndpoints' => ['htmlUrl'=>'repoEndpoints', 'url'=>'repoEndpoints', 'gitUrl'=>'repoEndpoints', 'sshUrl'=>'repoEndpoints'], 'repoStats' => ['networkCount'=>1, 'watchersCount'=>1, 'stargazersCount'=>1, 'subscribersCount'=>1, 'openIssuesCount'=>1, 'size'=>1], 'repoTimestamps' => ['createdAt'=>'2018-01-01 00:01:00', 'updatedAt'=>'2018-01-01 00:01:00', 'pushedAt'=>'2018-01-01 00:01:00']])->shouldReturnAnInstanceOf(GitHubRepo::class);
     }
 }

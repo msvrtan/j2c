@@ -29,9 +29,21 @@ class RequiredStatusChecks
     }
 
 
+    public function getId(): Contexts
+    {
+        return $this->contexts;
+    }
+
+
     public function getContexts(): Contexts
     {
         return $this->contexts;
+    }
+
+
+    public function __toString(): string
+    {
+        return (string) $this->contexts;
     }
 
 

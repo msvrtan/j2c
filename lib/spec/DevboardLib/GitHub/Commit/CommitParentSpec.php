@@ -9,11 +9,10 @@ use DevboardLib\GitHub\Commit\CommitParent\ParentApiUrl;
 use DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl;
 use DevboardLib\GitHub\Commit\CommitSha;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class CommitParentSpec extends ObjectBehavior
 {
-    public function let(CommitSha $sha, ParentApiUrl $apiUrl, ParentHtmlUrl $htmlUrl)
+    public function let(\CommitSha $sha, \ParentApiUrl $apiUrl, \ParentHtmlUrl $htmlUrl)
     {
         $this->beConstructedWith($sha, $apiUrl, $htmlUrl);
     }
@@ -31,28 +30,37 @@ class CommitParentSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_apiUrl(ParentApiUrl $apiUrl)
+    public function it_exposes_id(ParentHtmlUrl $htmlUrl)
+    {
+        $this->getId()->shouldReturn($htmlUrl);
+    }
+
+
+    public function it_exposes_api_url(ParentApiUrl $apiUrl)
     {
         $this->getApiUrl()->shouldReturn($apiUrl);
     }
 
 
-    public function it_exposes_htmlUrl(ParentHtmlUrl $htmlUrl)
+    public function it_exposes_html_url(ParentHtmlUrl $htmlUrl)
     {
         $this->getHtmlUrl()->shouldReturn($htmlUrl);
     }
 
 
-    public function it_is_serializable(CommitSha $sha, ParentApiUrl $apiUrl, ParentHtmlUrl $htmlUrl)
+    public function it_is_castable_to_string()
     {
-        $sha->serialize()->shouldBeCalled()->willReturn('sha');
-        $apiUrl->serialize()->shouldBeCalled()->willReturn('apiUrl');
-        $htmlUrl->serialize()->shouldBeCalled()->willReturn('htmlUrl');
+        $this->__toString()->shouldReturn('htmlUrl');
+    }
+
+
+    public function it_can_be_serialized(CommitSha $sha, ParentApiUrl $apiUrl, ParentHtmlUrl $htmlUrl)
+    {
         $this->serialize()->shouldReturn(['sha' => 'sha', 'apiUrl' => 'apiUrl', 'htmlUrl' => 'htmlUrl']);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized(CommitSha $sha, ParentApiUrl $apiUrl, ParentHtmlUrl $htmlUrl)
     {
         $this->deserialize(['sha' => 'sha', 'apiUrl' => 'apiUrl', 'htmlUrl' => 'htmlUrl'])->shouldReturnAnInstanceOf(CommitParent::class);
     }
