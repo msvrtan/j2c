@@ -67,9 +67,9 @@ class TestSimpleIdentifierGeneratorTest extends SfTestCase
         $class  = ClassName::create('spec\\MyVendor\\UserEntityTest');
         $parent = ClassName::create('PhpUnit\\ObjectBehavior');
 
-        $letMethod           = new SetUpMethod($sutClass, [$firstName]);
-        $exposesFirstName    = new TestGetterMethod('it_exposes_first_name', 'getFirstName', $firstName);
-        $exposesValue        = new TestGetterMethod('it_exposes_value', 'getValue', $firstName);
+        $letMethod        = new SetUpMethod($sutClass, [$firstName]);
+        $exposesFirstName = new TestGetterMethod('it_exposes_first_name', 'getFirstName', $firstName);
+        $exposesValue     = new TestGetterMethod('it_exposes_value', 'getValue', $firstName);
 
         return [
             [

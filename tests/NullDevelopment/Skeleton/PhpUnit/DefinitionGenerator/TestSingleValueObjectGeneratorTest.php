@@ -67,9 +67,9 @@ class TestSingleValueObjectGeneratorTest extends SfTestCase
         $class  = ClassName::create('spec\\MyVendor\\UserEntityTest');
         $parent = ClassName::create('PhpUnit\\ObjectBehavior');
 
-        $letMethod           = new SetUpMethod($sutClass, [$firstName]);
-        $exposesFirstName    = new TestGetterMethod('testGetFirstName', 'getFirstName', $firstName);
-        $exposesValue        = new TestGetterMethod('testGetValue', 'getValue', $firstName);
+        $letMethod        = new SetUpMethod($sutClass, [$firstName]);
+        $exposesFirstName = new TestGetterMethod('testGetFirstName', 'getFirstName', $firstName);
+        $exposesValue     = new TestGetterMethod('testGetValue', 'getValue', $firstName);
 
         return [
             [
