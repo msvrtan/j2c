@@ -10,6 +10,11 @@ use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 
 class Fixtures
 {
+    public static function userEntity(): ClassName
+    {
+        return ClassName::create('MyVendor\\UserEntity');
+    }
+
     public static function firstName(): ClassName
     {
         return ClassName::create('MyVendor\\User\\UserFirstName');
