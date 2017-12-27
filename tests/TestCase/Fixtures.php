@@ -55,4 +55,16 @@ class Fixtures
             new Visibility('private')
         );
     }
+
+    public static function nameProperty(): Property
+    {
+        return new Property(
+            'name',
+            ClassName::create('string'),
+            false,
+            false,
+            false,
+            new Visibility('private')
+        );
+    }
 }
