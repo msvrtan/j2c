@@ -38,7 +38,7 @@ class ContextTest extends TestCase
 
     public function testDeserialize()
     {
-        $serialized = $this->sut->serialize();
-        self::assertEquals($this->sut, Context::deserialize($serialized));
+        $serialized = json_encode($this->sut->serialize());
+        self::assertEquals($this->sut, Context::deserialize(json_decode($serialized,true)));
     }
 }

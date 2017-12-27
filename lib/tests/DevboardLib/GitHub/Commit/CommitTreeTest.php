@@ -60,7 +60,7 @@ class CommitTreeTest extends TestCase
 
     public function testDeserialize()
     {
-        $serialized = $this->sut->serialize();
-        self::assertEquals($this->sut, CommitTree::deserialize($serialized));
+        $serialized = json_encode($this->sut->serialize());
+        self::assertEquals($this->sut, CommitTree::deserialize(json_decode($serialized,true)));
     }
 }

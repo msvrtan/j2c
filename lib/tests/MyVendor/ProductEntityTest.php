@@ -88,7 +88,7 @@ class ProductEntityTest extends TestCase
 
     public function testDeserialize()
     {
-        $serialized = $this->sut->serialize();
-        self::assertEquals($this->sut, ProductEntity::deserialize($serialized));
+        $serialized = json_encode($this->sut->serialize());
+        self::assertEquals($this->sut, ProductEntity::deserialize(json_decode($serialized,true)));
     }
 }

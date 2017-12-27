@@ -84,7 +84,7 @@ class RepoEndpointsTest extends TestCase
 
     public function testDeserialize()
     {
-        $serialized = $this->sut->serialize();
-        self::assertEquals($this->sut, RepoEndpoints::deserialize($serialized));
+        $serialized = json_encode($this->sut->serialize());
+        self::assertEquals($this->sut, RepoEndpoints::deserialize(json_decode($serialized,true)));
     }
 }
