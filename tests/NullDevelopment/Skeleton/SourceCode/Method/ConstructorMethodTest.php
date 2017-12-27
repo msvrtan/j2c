@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace Tests\NullDevelopment\Skeleton\SourceCode\Method;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
-use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
 use PHPUnit\Framework\TestCase;
 use Tests\TestCase\Fixtures;
@@ -28,14 +26,7 @@ class ConstructorMethodTest extends TestCase
     {
         $this->properties = [
             Fixtures::firstNameProperty(),
-            new Property(
-                'lastName',
-                ClassName::create('MyVendor\\User\\UserLastName'),
-                false,
-                false,
-                false,
-                new Visibility('private')
-            ),
+            Fixtures::lastNameProperty(),
         ];
         $this->sut = new ConstructorMethod($this->properties);
     }
