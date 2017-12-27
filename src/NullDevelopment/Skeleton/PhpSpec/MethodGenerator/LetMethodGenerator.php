@@ -54,7 +54,7 @@ class LetMethodGenerator implements MethodGenerator
         foreach ($method->getParameters() as $parameter) {
             if (true === $parameter->isObject()) {
                 $code->addParameter($parameter->getName())
-                    ->setTypeHint($parameter->getInstanceNameAsString());
+                    ->setTypeHint($parameter->getInstanceFullName());
             }
         }
 
