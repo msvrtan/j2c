@@ -64,10 +64,10 @@ class LetMethodGeneratorSpec extends ObjectBehavior
 
         $property->isObject()->shouldBeCalled()->willReturn(true);
         $property->getName()->shouldBeCalled()->willReturn('firstName');
-        $property->getInstanceNameAsString()->shouldBeCalled()->willReturn('UserFirstName');
+        $property->getInstanceFullName()->shouldBeCalled()->willReturn('MyVendor\\User\\UserFirstName');
 
         $lines = [
-            'public function let(UserFirstName $firstName)',
+            'public function let(MyVendor\User\UserFirstName $firstName)',
             '{',
             "\t".'$this->beConstructedWith($firstName);',
             '}',
@@ -96,10 +96,10 @@ class LetMethodGeneratorSpec extends ObjectBehavior
 
         $propertyObject->isObject()->shouldBeCalled()->willReturn(true);
         $propertyObject->getName()->shouldBeCalled()->willReturn('firstName');
-        $propertyObject->getInstanceNameAsString()->shouldBeCalled()->willReturn('UserFirstName');
+        $propertyObject->getInstanceFullName()->shouldBeCalled()->willReturn('MyVendor\\User\\UserFirstName');
 
         $lines = [
-            'public function let(UserFirstName $firstName)',
+            'public function let(MyVendor\User\UserFirstName $firstName)',
             '{',
             "\t".'$this->beConstructedWith($name = \'name\', $firstName);',
             '}',
