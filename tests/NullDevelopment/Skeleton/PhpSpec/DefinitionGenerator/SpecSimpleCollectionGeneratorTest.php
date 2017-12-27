@@ -6,14 +6,13 @@ namespace Tests\NullDevelopment\Skeleton\PhpSpec\DefinitionGenerator;
 
 use Nette\PhpGenerator\PhpNamespace;
 use NullDevelopment\PhpStructure\CustomType\CollectionOf;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\PhpSpec\Definition\SpecSimpleCollection;
 use NullDevelopment\Skeleton\PhpSpec\DefinitionGenerator\SpecSimpleCollectionGenerator;
 use NullDevelopment\Skeleton\PhpSpec\Method\GetterSpecMethod;
 use NullDevelopment\Skeleton\PhpSpec\Method\InitializableMethod;
 use NullDevelopment\Skeleton\PhpSpec\Method\LetMethod;
+use Tests\TestCase\Fixtures;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -65,14 +64,7 @@ class SpecSimpleCollectionGeneratorTest extends SfTestCase
     {
         $sutClass = ClassName::create('MyVendor\\Webshop\\UserEntity');
 
-        $firstName = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         $class  = ClassName::create('spec\\MyVendor\\Webshop\\UserEntitySpec');
         $parent = ClassName::create('PhpSpec\\ObjectBehavior');

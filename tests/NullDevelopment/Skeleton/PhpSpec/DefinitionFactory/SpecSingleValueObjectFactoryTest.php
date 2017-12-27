@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Tests\NullDevelopment\Skeleton\PhpSpec\DefinitionFactory;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\PhpSpec\Definition\SpecSingleValueObject;
 use NullDevelopment\Skeleton\PhpSpec\DefinitionFactory\SpecSingleValueObjectFactory;
@@ -16,6 +14,7 @@ use NullDevelopment\Skeleton\PhpSpec\Method\LetMethod;
 use NullDevelopment\Skeleton\SourceCode\Definition\SingleValueObject;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
+use Tests\TestCase\Fixtures;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -42,14 +41,7 @@ class SpecSingleValueObjectFactoryTest extends SfTestCase
 
     public function provideSamples()
     {
-        $firstName = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         $constructorMethod = new ConstructorMethod([$firstName]);
         $getterMethod      = new GetterMethod('getFirstName', $firstName);

@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace Tests\NullDevelopment\Skeleton\PhpSpec\MethodFactory;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\PhpSpec\Method\SpecDeserializeMethod;
 use NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecDeserializeMethodFactory;
 use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecDeserializeMethodFactory
@@ -42,14 +41,7 @@ class SpecDeserializeMethodFactoryTest extends TestCase
     public function provideDeserializeMethods(): array
     {
         $className = ClassName::create('MyVendor\\UserEntity');
-        $firstName = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         return [
             [new DeserializeMethod($className, [$firstName])],

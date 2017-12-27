@@ -10,6 +10,7 @@ use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod
@@ -26,14 +27,7 @@ class ConstructorMethodTest extends TestCase
     public function setUp()
     {
         $this->properties = [
-            new Property(
-                'firstName',
-                ClassName::create('MyVendor\\User\\UserFirstName'),
-                false,
-                false,
-                false,
-                new Visibility('private')
-            ),
+            Fixtures::firstNameProperty(),
             new Property(
                 'lastName',
                 ClassName::create('MyVendor\\User\\UserLastName'),

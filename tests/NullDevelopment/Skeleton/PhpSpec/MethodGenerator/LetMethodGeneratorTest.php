@@ -11,6 +11,7 @@ use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\PhpSpec\Method\LetMethod;
 use NullDevelopment\Skeleton\PhpSpec\MethodGenerator\LetMethodGenerator;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\MethodGenerator\LetMethodGenerator
@@ -53,14 +54,7 @@ class LetMethodGeneratorTest extends TestCase
 
     public function provideMethods(): array
     {
-        $firstName = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         $name = new Property(
             'name',

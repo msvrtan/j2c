@@ -4,13 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\Skeleton\PhpSpec\MethodFactory;
 
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\PhpSpec\Method\LetMethod;
 use NullDevelopment\Skeleton\PhpSpec\MethodFactory\LetMethodFactory;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\MethodFactory\LetMethodFactory
@@ -34,14 +32,7 @@ class LetMethodFactoryTest extends TestCase
 
     public function provideConstructorMethods(): array
     {
-        $firstName = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         return [
             [new ConstructorMethod([])],

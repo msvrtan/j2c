@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace Tests\NullDevelopment\Skeleton\PhpUnit\DefinitionGenerator;
 
 use Nette\PhpGenerator\PhpNamespace;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\PhpUnit\Definition\TestSimpleEntity;
 use NullDevelopment\Skeleton\PhpUnit\DefinitionGenerator\TestSimpleEntityGenerator;
 use NullDevelopment\Skeleton\PhpUnit\Method\SetUpMethod;
 use NullDevelopment\Skeleton\PhpUnit\Method\TestGetterMethod;
+use Tests\TestCase\Fixtures;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -63,7 +62,7 @@ class TestSimpleEntityGeneratorTest extends SfTestCase
     {
         $sutClass = ClassName::create('MyVendor\\Webshop\\UserEntity');
 
-        $firstName = new Property('firstName', ClassName::create('MyVendor\\User\\UserFirstName'), false, false, false, new Visibility('private'));
+        $firstName = Fixtures::firstNameProperty();
 
         $class  = ClassName::create('spec\\MyVendor\\Webshop\\UserEntityTest');
         $parent = ClassName::create('PhpUnit\\ObjectBehavior');

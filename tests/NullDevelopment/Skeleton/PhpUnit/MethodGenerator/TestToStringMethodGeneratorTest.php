@@ -4,13 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\Skeleton\PhpUnit\MethodGenerator;
 
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\PhpUnit\Method\TestToStringMethod;
 use NullDevelopment\Skeleton\PhpUnit\MethodGenerator\TestToStringMethodGenerator;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpUnit\MethodGenerator\TestToStringMethodGenerator
@@ -53,14 +51,7 @@ class TestToStringMethodGeneratorTest extends TestCase
 
     public function provideMethods(): array
     {
-        $firstName = new Property(
-            'username',
-            ClassName::create('MyVendor\\User\\Username'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         return [
             [new TestToStringMethod($firstName), 'it_is_castable_to_string.output'],

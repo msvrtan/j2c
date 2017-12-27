@@ -6,9 +6,9 @@ namespace Tests\NullDevelopment\Skeleton\SourceCode\Method;
 
 use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod
@@ -23,15 +23,8 @@ class ToStringMethodTest extends TestCase
 
     public function setUp()
     {
-        $this->property = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
-        $this->sut = new ToStringMethod($this->property);
+        $this->property = Fixtures::firstNameProperty();
+        $this->sut      = new ToStringMethod($this->property);
     }
 
     public function testGetProperty()
