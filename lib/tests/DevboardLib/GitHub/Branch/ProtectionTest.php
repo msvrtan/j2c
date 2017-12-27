@@ -12,10 +12,6 @@ use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Contexts;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\RequiredStatusChecksEnforcementLevel;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Branch\Protection
- * @group  todo
- */
 class ProtectionTest extends TestCase
 {
     /** @var bool */
@@ -42,13 +38,30 @@ class ProtectionTest extends TestCase
     }
 
 
+    public function testGetId()
+    {
+        self::assertSame($this->requiredStatusChecks, $this->sut->getId());
+    }
+
+
     public function testGetRequiredStatusChecks()
     {
         self::assertSame($this->requiredStatusChecks, $this->sut->getRequiredStatusChecks());
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'enabled'=> true,
+            'requiredStatusChecks'=> ['enforcementLevel'=>'enforcementLevel', 'contexts'=>[1]]
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, Protection::deserialize($serialized));

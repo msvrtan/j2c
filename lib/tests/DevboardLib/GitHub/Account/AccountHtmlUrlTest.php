@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Account;
 use DevboardLib\GitHub\Account\AccountHtmlUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Account\AccountHtmlUrl
- * @group  todo
- */
 class AccountHtmlUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class AccountHtmlUrlTest extends TestCase
     public function testGetHtmlUrl()
     {
         self::assertSame($this->htmlUrl, $this->sut->getHtmlUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->htmlUrl, $this->sut->getValue());
     }
 
 

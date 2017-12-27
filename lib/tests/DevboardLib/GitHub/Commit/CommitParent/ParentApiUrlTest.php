@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit\CommitParent;
 use DevboardLib\GitHub\Commit\CommitParent\ParentApiUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitParent\ParentApiUrl
- * @group  todo
- */
 class ParentApiUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class ParentApiUrlTest extends TestCase
     public function testGetApiUrl()
     {
         self::assertSame($this->apiUrl, $this->sut->getApiUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->apiUrl, $this->sut->getValue());
     }
 
 

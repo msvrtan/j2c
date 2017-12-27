@@ -133,12 +133,6 @@ class GitHubCommit
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->htmlUrl;
-    }
-
-
     public function serialize(): array
     {
         return [

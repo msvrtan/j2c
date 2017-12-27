@@ -11,10 +11,6 @@ use DevboardLib\GitHub\Commit\Verification\VerificationSignature;
 use DevboardLib\GitHub\Commit\Verification\VerificationVerified;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitVerification
- * @group  todo
- */
 class CommitVerificationTest extends TestCase
 {
     /** @var VerificationVerified */
@@ -23,10 +19,10 @@ class CommitVerificationTest extends TestCase
     /** @var VerificationReason */
     private $reason;
 
-    /** @var VerificationSignature */
+    /** @var VerificationSignature|null */
     private $signature;
 
-    /** @var VerificationPayload */
+    /** @var VerificationPayload|null */
     private $payload;
 
     /** @var CommitVerification */
@@ -49,6 +45,12 @@ class CommitVerificationTest extends TestCase
     }
 
 
+    public function testGetId()
+    {
+        self::assertSame($this->payload, $this->sut->getId());
+    }
+
+
     public function testGetReason()
     {
         self::assertSame($this->reason, $this->sut->getReason());
@@ -67,7 +69,20 @@ class CommitVerificationTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'verified'=> true,
+            'reason'=> 'reason',
+            'signature'=> 'signature',
+            'payload'=> 'payload'
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, CommitVerification::deserialize($serialized));

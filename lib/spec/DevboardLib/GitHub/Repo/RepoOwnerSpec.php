@@ -76,14 +76,15 @@ class RepoOwnerSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn('true');
-    }
-
-
     public function it_can_be_serialized(AccountId $id, AccountLogin $login, AccountType $type, AccountAvatarUrl $avatarUrl, GravatarId $gravatarId, AccountHtmlUrl $htmlUrl, AccountApiUrl $url)
     {
+        $id->serialize()->shouldBeCalled()->willReturn(1);
+        $login->serialize()->shouldBeCalled()->willReturn('login');
+        $type->serialize()->shouldBeCalled()->willReturn('type');
+        $avatarUrl->serialize()->shouldBeCalled()->willReturn('avatarUrl');
+        $gravatarId->serialize()->shouldBeCalled()->willReturn('gravatarId');
+        $htmlUrl->serialize()->shouldBeCalled()->willReturn('htmlUrl');
+        $url->serialize()->shouldBeCalled()->willReturn('url');
         $this->serialize()->shouldReturn(['id' => 1, 'login' => 'login', 'type' => 'type', 'avatarUrl' => 'avatarUrl', 'gravatarId' => 'gravatarId', 'htmlUrl' => 'htmlUrl', 'url' => 'url', 'siteAdmin' => true]);
     }
 

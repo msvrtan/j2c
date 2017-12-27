@@ -24,12 +24,6 @@ class Context
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->id;
-    }
-
-
     public function serialize(): int
     {
         return $this->id->serialize();

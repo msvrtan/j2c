@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\User;
 use DevboardLib\GitHub\User\UserApiUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\User\UserApiUrl
- * @group  todo
- */
 class UserApiUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class UserApiUrlTest extends TestCase
     public function testGetApiUrl()
     {
         self::assertSame($this->apiUrl, $this->sut->getApiUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->apiUrl, $this->sut->getValue());
     }
 
 

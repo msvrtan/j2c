@@ -41,12 +41,6 @@ class CommitTree
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->url;
-    }
-
-
     public function serialize(): array
     {
         return [

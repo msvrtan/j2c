@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Repo\RepoEndpoints;
 use DevboardLib\GitHub\Repo\RepoEndpoints\RepoGitUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoEndpoints\RepoGitUrl
- * @group  todo
- */
 class RepoGitUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class RepoGitUrlTest extends TestCase
     public function testGetGitUrl()
     {
         self::assertSame($this->gitUrl, $this->sut->getGitUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->gitUrl, $this->sut->getValue());
     }
 
 

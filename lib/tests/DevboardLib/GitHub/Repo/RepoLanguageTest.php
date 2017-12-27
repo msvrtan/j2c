@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Repo;
 use DevboardLib\GitHub\Repo\RepoLanguage;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoLanguage
- * @group  todo
- */
 class RepoLanguageTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class RepoLanguageTest extends TestCase
     public function testGetLanguage()
     {
         self::assertSame($this->language, $this->sut->getLanguage());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->language, $this->sut->getValue());
     }
 
 

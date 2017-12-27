@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit;
 use DevboardLib\GitHub\Commit\CommitHtmlUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitHtmlUrl
- * @group  todo
- */
 class CommitHtmlUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class CommitHtmlUrlTest extends TestCase
     public function testGetHtmlUrl()
     {
         self::assertSame($this->htmlUrl, $this->sut->getHtmlUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->htmlUrl, $this->sut->getValue());
     }
 
 

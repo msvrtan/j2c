@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Repo;
 use DevboardLib\GitHub\Repo\RepoId;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoId
- * @group  todo
- */
 class RepoIdTest extends TestCase
 {
     /** @var int */

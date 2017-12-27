@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit\Verification;
 use DevboardLib\GitHub\Commit\Verification\VerificationSignature;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\Verification\VerificationSignature
- * @group  todo
- */
 class VerificationSignatureTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class VerificationSignatureTest extends TestCase
     public function testGetSignature()
     {
         self::assertSame($this->signature, $this->sut->getSignature());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->signature, $this->sut->getValue());
     }
 
 

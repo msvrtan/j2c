@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit\Verification;
 use DevboardLib\GitHub\Commit\Verification\VerificationPayload;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\Verification\VerificationPayload
- * @group  todo
- */
 class VerificationPayloadTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class VerificationPayloadTest extends TestCase
     public function testGetPayload()
     {
         self::assertSame($this->payload, $this->sut->getPayload());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->payload, $this->sut->getValue());
     }
 
 

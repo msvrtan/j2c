@@ -168,12 +168,6 @@ class GitHubRepo
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->repoTimestamps;
-    }
-
-
     public function serialize(): array
     {
         if(null === $this->description){

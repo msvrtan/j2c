@@ -8,10 +8,6 @@ use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context\ContextId;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context
- * @group  todo
- */
 class ContextTest extends TestCase
 {
     /** @var ContextId */
@@ -34,7 +30,13 @@ class ContextTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        self::assertEquals($this->id->serialize(), $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, Context::deserialize($serialized));

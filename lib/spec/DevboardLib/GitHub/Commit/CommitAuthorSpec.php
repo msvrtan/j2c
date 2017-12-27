@@ -55,20 +55,18 @@ class CommitAuthorSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn(['id'=>1, 'login'=>'authorDetails', 'type'=>'authorDetails', 'avatarUrl'=>'authorDetails', 'gravatarId'=>'authorDetails', 'htmlUrl'=>'authorDetails', 'apiUrl'=>'authorDetails', 'siteAdmin'=>true]);
-    }
-
-
     public function it_can_be_serialized(AuthorName $name, EmailAddress $email, CommitDate $date, CommitAuthorDetails $authorDetails)
     {
-        $this->serialize()->shouldReturn(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01 00:01:00', 'authorDetails' => ['id'=>1, 'login'=>'authorDetails', 'type'=>'authorDetails', 'avatarUrl'=>'authorDetails', 'gravatarId'=>'authorDetails', 'htmlUrl'=>'authorDetails', 'apiUrl'=>'authorDetails', 'siteAdmin'=>true]]);
+        $name->serialize()->shouldBeCalled()->willReturn('name');
+        $email->serialize()->shouldBeCalled()->willReturn('email');
+        $date->serialize()->shouldBeCalled()->willReturn('2018-01-01T00:01:00+00:00');
+        $authorDetails->serialize()->shouldBeCalled()->willReturn(['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]);
+        $this->serialize()->shouldReturn(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01T00:01:00+00:00', 'authorDetails' => ['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]]);
     }
 
 
     public function it_can_be_deserialized(AuthorName $name, EmailAddress $email, CommitDate $date, CommitAuthorDetails $authorDetails)
     {
-        $this->deserialize(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01 00:01:00', 'authorDetails' => ['id'=>1, 'login'=>'authorDetails', 'type'=>'authorDetails', 'avatarUrl'=>'authorDetails', 'gravatarId'=>'authorDetails', 'htmlUrl'=>'authorDetails', 'apiUrl'=>'authorDetails', 'siteAdmin'=>true]])->shouldReturnAnInstanceOf(CommitAuthor::class);
+        $this->deserialize(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01T00:01:00+00:00', 'authorDetails' => ['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]])->shouldReturnAnInstanceOf(CommitAuthor::class);
     }
 }

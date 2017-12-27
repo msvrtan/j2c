@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Repo\RepoEndpoints;
 use DevboardLib\GitHub\Repo\RepoEndpoints\RepoHtmlUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoEndpoints\RepoHtmlUrl
- * @group  todo
- */
 class RepoHtmlUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class RepoHtmlUrlTest extends TestCase
     public function testGetHtmlUrl()
     {
         self::assertSame($this->htmlUrl, $this->sut->getHtmlUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->htmlUrl, $this->sut->getValue());
     }
 
 

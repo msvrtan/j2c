@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit\Author;
 use DevboardLib\GitHub\Commit\Author\AuthorName;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\Author\AuthorName
- * @group  todo
- */
 class AuthorNameTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class AuthorNameTest extends TestCase
     public function testGetName()
     {
         self::assertSame($this->name, $this->sut->getName());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->name, $this->sut->getValue());
     }
 
 

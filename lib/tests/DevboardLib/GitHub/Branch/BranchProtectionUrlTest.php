@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Branch;
 use DevboardLib\GitHub\Branch\BranchProtectionUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Branch\BranchProtectionUrl
- * @group  todo
- */
 class BranchProtectionUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class BranchProtectionUrlTest extends TestCase
     public function testGetProtectionUrl()
     {
         self::assertSame($this->protectionUrl, $this->sut->getProtectionUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->protectionUrl, $this->sut->getValue());
     }
 
 

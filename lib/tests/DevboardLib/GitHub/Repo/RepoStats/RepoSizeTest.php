@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Repo\RepoStats;
 use DevboardLib\GitHub\Repo\RepoStats\RepoSize;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoStats\RepoSize
- * @group  todo
- */
 class RepoSizeTest extends TestCase
 {
     /** @var int */
@@ -30,6 +26,12 @@ class RepoSizeTest extends TestCase
     public function testGetSize()
     {
         self::assertSame($this->size, $this->sut->getSize());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->size, $this->sut->getValue());
     }
 
 

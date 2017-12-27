@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit\Verification;
 use DevboardLib\GitHub\Commit\Verification\VerificationReason;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\Verification\VerificationReason
- * @group  todo
- */
 class VerificationReasonTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class VerificationReasonTest extends TestCase
     public function testGetReason()
     {
         self::assertSame($this->reason, $this->sut->getReason());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->reason, $this->sut->getValue());
     }
 
 

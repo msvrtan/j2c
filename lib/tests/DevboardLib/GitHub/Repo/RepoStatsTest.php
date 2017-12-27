@@ -8,10 +8,6 @@ use DevboardLib\GitHub\Repo\RepoStats;
 use DevboardLib\GitHub\Repo\RepoStats\RepoSize;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoStats
- * @group  todo
- */
 class RepoStatsTest extends TestCase
 {
     /** @var int */
@@ -54,6 +50,12 @@ class RepoStatsTest extends TestCase
     }
 
 
+    public function testGetId()
+    {
+        self::assertSame($this->size, $this->sut->getId());
+    }
+
+
     public function testGetWatchersCount()
     {
         self::assertSame($this->watchersCount, $this->sut->getWatchersCount());
@@ -84,7 +86,22 @@ class RepoStatsTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'networkCount'=> 1,
+            'watchersCount'=> 1,
+            'stargazersCount'=> 1,
+            'subscribersCount'=> 1,
+            'openIssuesCount'=> 1,
+            'size'=> 1
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, RepoStats::deserialize($serialized));

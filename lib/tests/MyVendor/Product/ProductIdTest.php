@@ -7,10 +7,6 @@ namespace Tests\MyVendor\Product;
 use MyVendor\Product\ProductId;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \MyVendor\Product\ProductId
- * @group  todo
- */
 class ProductIdTest extends TestCase
 {
     /** @var int */

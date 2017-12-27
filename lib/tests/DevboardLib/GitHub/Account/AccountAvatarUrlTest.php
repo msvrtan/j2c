@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Account;
 use DevboardLib\GitHub\Account\AccountAvatarUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Account\AccountAvatarUrl
- * @group  todo
- */
 class AccountAvatarUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class AccountAvatarUrlTest extends TestCase
     public function testGetAvatarUrl()
     {
         self::assertSame($this->avatarUrl, $this->sut->getAvatarUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->avatarUrl, $this->sut->getValue());
     }
 
 

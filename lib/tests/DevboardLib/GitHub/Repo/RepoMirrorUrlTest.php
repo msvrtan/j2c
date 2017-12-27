@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Repo;
 use DevboardLib\GitHub\Repo\RepoMirrorUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoMirrorUrl
- * @group  todo
- */
 class RepoMirrorUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class RepoMirrorUrlTest extends TestCase
     public function testGetMirrorUrl()
     {
         self::assertSame($this->mirrorUrl, $this->sut->getMirrorUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->mirrorUrl, $this->sut->getValue());
     }
 
 

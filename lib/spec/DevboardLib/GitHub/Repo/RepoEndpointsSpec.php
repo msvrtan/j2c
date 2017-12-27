@@ -55,14 +55,12 @@ class RepoEndpointsSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn('sshUrl');
-    }
-
-
     public function it_can_be_serialized(RepoHtmlUrl $htmlUrl, RepoApiUrl $url, RepoGitUrl $gitUrl, RepoSshUrl $sshUrl)
     {
+        $htmlUrl->serialize()->shouldBeCalled()->willReturn('htmlUrl');
+        $url->serialize()->shouldBeCalled()->willReturn('url');
+        $gitUrl->serialize()->shouldBeCalled()->willReturn('gitUrl');
+        $sshUrl->serialize()->shouldBeCalled()->willReturn('sshUrl');
         $this->serialize()->shouldReturn(['htmlUrl' => 'htmlUrl', 'url' => 'url', 'gitUrl' => 'gitUrl', 'sshUrl' => 'sshUrl']);
     }
 

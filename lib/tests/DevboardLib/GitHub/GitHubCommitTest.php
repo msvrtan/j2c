@@ -39,9 +39,8 @@ use DevboardLib\GitHub\User\UserLogin;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DevboardLib\GitHub\GitHubCommit
- * @group  todo
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ * @SuppressWarnings(PHPMD.ExcessiveParameterList)
  */
 class GitHubCommitTest extends TestCase
 {
@@ -83,9 +82,9 @@ class GitHubCommitTest extends TestCase
     {
         $this->sha = new CommitSha('sha');
         $this->message = new CommitMessage('message');
-        $this->commitDate = new CommitDate('2018-01-01 00:01:00');
-        $this->author = new CommitAuthor(new AuthorName('name'), new EmailAddress('email'), new CommitDate('2018-01-01 00:01:00'), new CommitAuthorDetails(new UserId(1), new UserLogin('login'), new AccountType('type'), new UserAvatarUrl('avatarUrl'), new GravatarId('gravatarId'), new UserHtmlUrl('htmlUrl'), new UserApiUrl('apiUrl'), true));
-        $this->committer = new CommitCommitter(new CommitterName('name'), new EmailAddress('email'), new CommitDate('2018-01-01 00:01:00'), new CommitCommitterDetails(new UserId(1), new UserLogin('login'), new AccountType('type'), new UserAvatarUrl('avatarUrl'), new GravatarId('gravatarId'), new UserHtmlUrl('htmlUrl'), new UserApiUrl('apiUrl'), true));
+        $this->commitDate = new CommitDate('2018-01-01T00:01:00+00:00');
+        $this->author = new CommitAuthor(new AuthorName('name'), new EmailAddress('email'), new CommitDate('2018-01-01T00:01:00+00:00'), new CommitAuthorDetails(new UserId(1), new UserLogin('login'), new AccountType('type'), new UserAvatarUrl('avatarUrl'), new GravatarId('gravatarId'), new UserHtmlUrl('htmlUrl'), new UserApiUrl('apiUrl'), true));
+        $this->committer = new CommitCommitter(new CommitterName('name'), new EmailAddress('email'), new CommitDate('2018-01-01T00:01:00+00:00'), new CommitCommitterDetails(new UserId(1), new UserLogin('login'), new AccountType('type'), new UserAvatarUrl('avatarUrl'), new GravatarId('gravatarId'), new UserHtmlUrl('htmlUrl'), new UserApiUrl('apiUrl'), true));
         $this->tree = new CommitTree(new TreeSha('sha'), new TreeUrl('url'));
         $this->parents = new CommitParentCollection([new CommitParent(new CommitSha('sha'), new ParentApiUrl('apiUrl'), new ParentHtmlUrl('htmlUrl'))]);
         $this->verification = new CommitVerification(new VerificationVerified(true), new VerificationReason('reason'), new VerificationSignature('signature'), new VerificationPayload('payload'));
@@ -98,6 +97,12 @@ class GitHubCommitTest extends TestCase
     public function testGetSha()
     {
         self::assertSame($this->sha, $this->sut->getSha());
+    }
+
+
+    public function testGetId()
+    {
+        self::assertSame($this->htmlUrl, $this->sut->getId());
     }
 
 
@@ -155,7 +160,26 @@ class GitHubCommitTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'sha'=> 'sha',
+            'message'=> 'message',
+            'commitDate'=> '2018-01-01T00:01:00+00:00',
+            'author'=> ['name'=>'name', 'email'=>'email', 'date'=>'2018-01-01T00:01:00+00:00', 'authorDetails'=>['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]],
+            'committer'=> ['name'=>'name', 'email'=>'email', 'date'=>'2018-01-01T00:01:00+00:00', 'committerDetails'=>['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]],
+            'tree'=> ['sha'=>'sha', 'url'=>'url'],
+            'parents'=> [['sha'=>'sha', 'apiUrl'=>'apiUrl', 'htmlUrl'=>'htmlUrl']],
+            'verification'=> ['verified'=>true, 'reason'=>'reason', 'signature'=>'signature', 'payload'=>'payload'],
+            'apiUrl'=> 'apiUrl',
+            'htmlUrl'=> 'htmlUrl'
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, GitHubCommit::deserialize($serialized));

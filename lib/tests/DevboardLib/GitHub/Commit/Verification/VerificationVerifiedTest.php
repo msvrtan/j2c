@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit\Verification;
 use DevboardLib\GitHub\Commit\Verification\VerificationVerified;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\Verification\VerificationVerified
- * @group  todo
- */
 class VerificationVerifiedTest extends TestCase
 {
     /** @var bool */
@@ -30,6 +26,12 @@ class VerificationVerifiedTest extends TestCase
     public function testGetVerified()
     {
         self::assertSame($this->verified, $this->sut->getVerified());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->verified, $this->sut->getValue());
     }
 
 

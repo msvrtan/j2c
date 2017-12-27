@@ -55,14 +55,12 @@ class CommitVerificationSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn('payload');
-    }
-
-
     public function it_can_be_serialized(VerificationVerified $verified, VerificationReason $reason, VerificationSignature $signature, VerificationPayload $payload)
     {
+        $verified->serialize()->shouldBeCalled()->willReturn(true);
+        $reason->serialize()->shouldBeCalled()->willReturn('reason');
+        $signature->serialize()->shouldBeCalled()->willReturn('signature');
+        $payload->serialize()->shouldBeCalled()->willReturn('payload');
         $this->serialize()->shouldReturn(['verified' => true, 'reason' => 'reason', 'signature' => 'signature', 'payload' => 'payload']);
     }
 

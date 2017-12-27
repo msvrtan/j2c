@@ -54,20 +54,17 @@ class ProductEntitySpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn('2018-01-01 00:01:00');
-    }
-
-
     public function it_can_be_serialized(ProductId $id, ProductWeight $weight, DateTime $updatedAt)
     {
-        $this->serialize()->shouldReturn(['id' => 1, 'title' => 'title', 'description' => 'description', 'weight' => 1, 'updatedAt' => '2018-01-01 00:01:00']);
+        $id->serialize()->shouldBeCalled()->willReturn(1);
+        $weight->serialize()->shouldBeCalled()->willReturn(1);
+        $updatedAt->format('c')->shouldBeCalled()->willReturn('2018-01-01T00:01:00+00:00');
+        $this->serialize()->shouldReturn(['id' => 1, 'title' => 'title', 'description' => 'description', 'weight' => 1, 'updatedAt' => '2018-01-01T00:01:00+00:00']);
     }
 
 
     public function it_can_be_deserialized(ProductId $id, ProductWeight $weight, DateTime $updatedAt)
     {
-        $this->deserialize(['id' => 1, 'title' => 'title', 'description' => 'description', 'weight' => 1, 'updatedAt' => '2018-01-01 00:01:00'])->shouldReturnAnInstanceOf(ProductEntity::class);
+        $this->deserialize(['id' => 1, 'title' => 'title', 'description' => 'description', 'weight' => 1, 'updatedAt' => '2018-01-01T00:01:00+00:00'])->shouldReturnAnInstanceOf(ProductEntity::class);
     }
 }

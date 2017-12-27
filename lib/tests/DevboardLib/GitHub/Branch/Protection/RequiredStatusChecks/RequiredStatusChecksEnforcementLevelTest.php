@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\RequiredStatusChecksEnforcementLevel;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\RequiredStatusChecksEnforcementLevel
- * @group  todo
- */
 class RequiredStatusChecksEnforcementLevelTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class RequiredStatusChecksEnforcementLevelTest extends TestCase
     public function testGetEnforcementLevel()
     {
         self::assertSame($this->enforcementLevel, $this->sut->getEnforcementLevel());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->enforcementLevel, $this->sut->getValue());
     }
 
 

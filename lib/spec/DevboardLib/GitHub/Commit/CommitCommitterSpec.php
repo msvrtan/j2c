@@ -55,20 +55,18 @@ class CommitCommitterSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn(['id'=>1, 'login'=>'committerDetails', 'type'=>'committerDetails', 'avatarUrl'=>'committerDetails', 'gravatarId'=>'committerDetails', 'htmlUrl'=>'committerDetails', 'apiUrl'=>'committerDetails', 'siteAdmin'=>true]);
-    }
-
-
     public function it_can_be_serialized(CommitterName $name, EmailAddress $email, CommitDate $date, CommitCommitterDetails $committerDetails)
     {
-        $this->serialize()->shouldReturn(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01 00:01:00', 'committerDetails' => ['id'=>1, 'login'=>'committerDetails', 'type'=>'committerDetails', 'avatarUrl'=>'committerDetails', 'gravatarId'=>'committerDetails', 'htmlUrl'=>'committerDetails', 'apiUrl'=>'committerDetails', 'siteAdmin'=>true]]);
+        $name->serialize()->shouldBeCalled()->willReturn('name');
+        $email->serialize()->shouldBeCalled()->willReturn('email');
+        $date->serialize()->shouldBeCalled()->willReturn('2018-01-01T00:01:00+00:00');
+        $committerDetails->serialize()->shouldBeCalled()->willReturn(['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]);
+        $this->serialize()->shouldReturn(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01T00:01:00+00:00', 'committerDetails' => ['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]]);
     }
 
 
     public function it_can_be_deserialized(CommitterName $name, EmailAddress $email, CommitDate $date, CommitCommitterDetails $committerDetails)
     {
-        $this->deserialize(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01 00:01:00', 'committerDetails' => ['id'=>1, 'login'=>'committerDetails', 'type'=>'committerDetails', 'avatarUrl'=>'committerDetails', 'gravatarId'=>'committerDetails', 'htmlUrl'=>'committerDetails', 'apiUrl'=>'committerDetails', 'siteAdmin'=>true]])->shouldReturnAnInstanceOf(CommitCommitter::class);
+        $this->deserialize(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01T00:01:00+00:00', 'committerDetails' => ['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]])->shouldReturnAnInstanceOf(CommitCommitter::class);
     }
 }

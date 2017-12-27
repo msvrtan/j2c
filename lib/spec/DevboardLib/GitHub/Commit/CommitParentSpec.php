@@ -48,14 +48,11 @@ class CommitParentSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn('htmlUrl');
-    }
-
-
     public function it_can_be_serialized(CommitSha $sha, ParentApiUrl $apiUrl, ParentHtmlUrl $htmlUrl)
     {
+        $sha->serialize()->shouldBeCalled()->willReturn('sha');
+        $apiUrl->serialize()->shouldBeCalled()->willReturn('apiUrl');
+        $htmlUrl->serialize()->shouldBeCalled()->willReturn('htmlUrl');
         $this->serialize()->shouldReturn(['sha' => 'sha', 'apiUrl' => 'apiUrl', 'htmlUrl' => 'htmlUrl']);
     }
 

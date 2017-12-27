@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit\Tree;
 use DevboardLib\GitHub\Commit\Tree\TreeUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\Tree\TreeUrl
- * @group  todo
- */
 class TreeUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class TreeUrlTest extends TestCase
     public function testGetUrl()
     {
         self::assertSame($this->url, $this->sut->getUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->url, $this->sut->getValue());
     }
 
 

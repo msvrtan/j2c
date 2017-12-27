@@ -19,9 +19,8 @@ use DevboardLib\GitHub\User\UserLogin;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DevboardLib\GitHub\Commit\CommitCommitter
- * @group  todo
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ * @SuppressWarnings(PHPMD.ExcessiveParameterList)
  */
 class CommitCommitterTest extends TestCase
 {
@@ -34,7 +33,7 @@ class CommitCommitterTest extends TestCase
     /** @var CommitDate */
     private $date;
 
-    /** @var CommitCommitterDetails */
+    /** @var CommitCommitterDetails|null */
     private $committerDetails;
 
     /** @var CommitCommitter */
@@ -45,7 +44,7 @@ class CommitCommitterTest extends TestCase
     {
         $this->name = new CommitterName('name');
         $this->email = new EmailAddress('email');
-        $this->date = new CommitDate('2018-01-01 00:01:00');
+        $this->date = new CommitDate('2018-01-01T00:01:00+00:00');
         $this->committerDetails = new CommitCommitterDetails(new UserId(1), new UserLogin('login'), new AccountType('type'), new UserAvatarUrl('avatarUrl'), new GravatarId('gravatarId'), new UserHtmlUrl('htmlUrl'), new UserApiUrl('apiUrl'), true);
         $this->sut = new CommitCommitter($this->name, $this->email, $this->date, $this->committerDetails);
     }
@@ -54,6 +53,12 @@ class CommitCommitterTest extends TestCase
     public function testGetName()
     {
         self::assertSame($this->name, $this->sut->getName());
+    }
+
+
+    public function testGetId()
+    {
+        self::assertSame($this->committerDetails, $this->sut->getId());
     }
 
 
@@ -75,7 +80,20 @@ class CommitCommitterTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'name'=> 'name',
+            'email'=> 'email',
+            'date'=> '2018-01-01T00:01:00+00:00',
+            'committerDetails'=> ['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, CommitCommitter::deserialize($serialized));

@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Repo;
 use DevboardLib\GitHub\Repo\RepoDescription;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoDescription
- * @group  todo
- */
 class RepoDescriptionTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class RepoDescriptionTest extends TestCase
     public function testGetDescription()
     {
         self::assertSame($this->description, $this->sut->getDescription());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->description, $this->sut->getValue());
     }
 
 

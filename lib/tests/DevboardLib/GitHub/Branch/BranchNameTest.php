@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Branch;
 use DevboardLib\GitHub\Branch\BranchName;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Branch\BranchName
- * @group  todo
- */
 class BranchNameTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class BranchNameTest extends TestCase
     public function testGetName()
     {
         self::assertSame($this->name, $this->sut->getName());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->name, $this->sut->getValue());
     }
 
 

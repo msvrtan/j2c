@@ -61,12 +61,6 @@ class CommitCommitter
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->committerDetails;
-    }
-
-
     public function serialize(): array
     {
         if(null === $this->committerDetails){

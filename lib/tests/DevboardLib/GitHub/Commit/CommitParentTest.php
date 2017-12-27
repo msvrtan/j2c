@@ -10,10 +10,6 @@ use DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl;
 use DevboardLib\GitHub\Commit\CommitSha;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitParent
- * @group  todo
- */
 class CommitParentTest extends TestCase
 {
     /** @var CommitSha */
@@ -44,6 +40,12 @@ class CommitParentTest extends TestCase
     }
 
 
+    public function testGetId()
+    {
+        self::assertSame($this->htmlUrl, $this->sut->getId());
+    }
+
+
     public function testGetApiUrl()
     {
         self::assertSame($this->apiUrl, $this->sut->getApiUrl());
@@ -56,7 +58,19 @@ class CommitParentTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'sha'=> 'sha',
+            'apiUrl'=> 'apiUrl',
+            'htmlUrl'=> 'htmlUrl'
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, CommitParent::deserialize($serialized));

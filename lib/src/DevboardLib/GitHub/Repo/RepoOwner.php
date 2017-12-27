@@ -100,16 +100,6 @@ class RepoOwner
     }
 
 
-    public function __toString(): string
-    {
-        if(true === $this->siteAdmin){
-            return 'true';
-        }else{
-            return 'false';
-        }
-    }
-
-
     public function serialize(): array
     {
         return [

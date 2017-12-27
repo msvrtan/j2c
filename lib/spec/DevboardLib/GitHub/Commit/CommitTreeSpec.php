@@ -41,14 +41,10 @@ class CommitTreeSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn('url');
-    }
-
-
     public function it_can_be_serialized(TreeSha $sha, TreeUrl $url)
     {
+        $sha->serialize()->shouldBeCalled()->willReturn('sha');
+        $url->serialize()->shouldBeCalled()->willReturn('url');
         $this->serialize()->shouldReturn(['sha' => 'sha', 'url' => 'url']);
     }
 

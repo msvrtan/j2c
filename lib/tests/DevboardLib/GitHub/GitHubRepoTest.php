@@ -34,9 +34,8 @@ use DevboardLib\GitHub\Repo\RepoUpdatedAt;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DevboardLib\GitHub\GitHubRepo
- * @group  todo
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ * @SuppressWarnings(PHPMD.ExcessiveParameterList)
  */
 class GitHubRepoTest extends TestCase
 {
@@ -58,7 +57,7 @@ class GitHubRepoTest extends TestCase
     /** @var bool */
     private $fork;
 
-    /** @var RepoDescription */
+    /** @var RepoDescription|null */
     private $description;
 
     /** @var RepoHomepage */
@@ -67,7 +66,7 @@ class GitHubRepoTest extends TestCase
     /** @var RepoLanguage */
     private $language;
 
-    /** @var RepoMirrorUrl */
+    /** @var RepoMirrorUrl|null */
     private $mirrorUrl;
 
     /** @var bool */
@@ -101,14 +100,14 @@ class GitHubRepoTest extends TestCase
         $this->archived = true;
         $this->repoEndpoints = new RepoEndpoints(new RepoHtmlUrl('htmlUrl'), new RepoApiUrl('url'), new RepoGitUrl('gitUrl'), new RepoSshUrl('sshUrl'));
         $this->repoStats = new RepoStats(1, 1, 1, 1, 1, new RepoSize(1));
-        $this->repoTimestamps = new RepoTimestamps(new RepoCreatedAt('2018-01-01 00:01:00'), new RepoUpdatedAt('2018-01-01 00:01:00'), new RepoPushedAt('2018-01-01 00:01:00'));
+        $this->repoTimestamps = new RepoTimestamps(new RepoCreatedAt('2018-01-01T00:01:00+00:00'), new RepoUpdatedAt('2018-01-01T00:01:00+00:00'), new RepoPushedAt('2018-01-01T00:01:00+00:00'));
         $this->sut = new GitHubRepo($this->id, $this->fullName, $this->owner, $this->private, $this->defaultBranch, $this->fork, $this->description, $this->homepage, $this->language, $this->mirrorUrl, $this->archived, $this->repoEndpoints, $this->repoStats, $this->repoTimestamps);
     }
 
 
     public function testGetId()
     {
-        self::assertSame($this->id, $this->sut->getId());
+        self::assertSame($this->repoTimestamps, $this->sut->getId());
     }
 
 
@@ -190,7 +189,30 @@ class GitHubRepoTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'id'=> 1,
+            'fullName'=> 'fullName',
+            'owner'=> ['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'url'=>'url', 'siteAdmin'=>true],
+            'private'=> true,
+            'defaultBranch'=> 'name',
+            'fork'=> true,
+            'description'=> 'description',
+            'homepage'=> 'homepage',
+            'language'=> 'language',
+            'mirrorUrl'=> 'mirrorUrl',
+            'archived'=> true,
+            'repoEndpoints'=> ['htmlUrl'=>'htmlUrl', 'url'=>'url', 'gitUrl'=>'gitUrl', 'sshUrl'=>'sshUrl'],
+            'repoStats'=> ['networkCount'=>1, 'watchersCount'=>1, 'stargazersCount'=>1, 'subscribersCount'=>1, 'openIssuesCount'=>1, 'size'=>1],
+            'repoTimestamps'=> ['createdAt'=>'2018-01-01T00:01:00+00:00', 'updatedAt'=>'2018-01-01T00:01:00+00:00', 'pushedAt'=>'2018-01-01T00:01:00+00:00']
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, GitHubRepo::deserialize($serialized));
