@@ -1,0 +1,21 @@
+parameters:
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  NullDevelopment\Skeleton\ExampleMaker\ExampleMaker: ~
+  NullDevelopment\Skeleton\Path\Readers\FinderFactory: ~
+  Symfony\Component\Filesystem\Filesystem: ~
+
+
+  NullDevelopment\Skeleton\File\FileFactory: ~
+  NullDevelopment\Nemesis\Config\ConfigFactory: ~
+
+  NullDevelopment\Nemesis\Config\Config:
+    class: NullDevelopment\Nemesis\Config\Config
+    factory: ['@NullDevelopment\Nemesis\Config\ConfigFactory', create]
+
+

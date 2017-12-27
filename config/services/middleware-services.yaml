@@ -1,0 +1,25 @@
+parameters:
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  NullDevelopment\Skeleton\PhpSpec\DefinitionMiddleware\SpecSingleValueObjectMiddleware:
+    tags:
+      - { name: tactician.middleware , priority: 50 }
+
+  NullDevelopment\Skeleton\PhpSpec\DefinitionMiddleware\SpecSimpleIdentifierMiddleware:
+    tags:
+      - { name: tactician.middleware , priority: 50 }
+
+  NullDevelopment\Skeleton\PhpSpec\DefinitionMiddleware\SpecDateTimeValueObjectMiddleware:
+    tags:
+      - { name: tactician.middleware , priority: 50 }
+
+  NullDevelopment\Skeleton\PhpSpec\DefinitionMiddleware\SpecSimpleEntityMiddleware:
+    tags:
+      - { name: tactician.middleware , priority: 50 }
+
+
