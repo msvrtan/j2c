@@ -56,12 +56,6 @@ class CommitAuthorTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->authorDetails, $this->sut->getId());
-    }
-
-
     public function testGetEmail()
     {
         self::assertSame($this->email, $this->sut->getEmail());

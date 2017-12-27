@@ -33,12 +33,6 @@ class CommitParent
     }
 
 
-    public function getId(): ParentHtmlUrl
-    {
-        return $this->htmlUrl;
-    }
-
-
     public function getApiUrl(): ParentApiUrl
     {
         return $this->apiUrl;

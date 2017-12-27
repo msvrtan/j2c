@@ -41,9 +41,9 @@ class UserEntity
     }
 
 
-    public function getId(): DateTime
+    public function getId(): UserId
     {
-        return $this->updatedAt;
+        return $this->id;
     }
 
 

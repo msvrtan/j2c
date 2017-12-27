@@ -45,12 +45,6 @@ class CommitVerificationTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->payload, $this->sut->getId());
-    }
-
-
     public function testGetReason()
     {
         self::assertSame($this->reason, $this->sut->getReason());

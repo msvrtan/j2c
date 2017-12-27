@@ -8,7 +8,6 @@ use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context\ContextId;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Contexts;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class ContextsSpec extends ObjectBehavior
 {

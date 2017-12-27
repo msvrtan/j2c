@@ -31,12 +31,6 @@ class CommitAuthorSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(CommitAuthorDetails $authorDetails)
-    {
-        $this->getId()->shouldReturn($authorDetails);
-    }
-
-
     public function it_exposes_email(EmailAddress $email)
     {
         $this->getEmail()->shouldReturn($email);

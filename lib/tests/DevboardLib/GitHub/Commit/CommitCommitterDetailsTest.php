@@ -60,7 +60,7 @@ class CommitCommitterDetailsTest extends TestCase
 
     public function testGetId()
     {
-        self::assertSame($this->siteAdmin, $this->sut->getId());
+        self::assertSame($this->id, $this->sut->getId());
     }
 
 

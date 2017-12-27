@@ -41,12 +41,6 @@ class GitHubCommitSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(CommitHtmlUrl $htmlUrl)
-    {
-        $this->getId()->shouldReturn($htmlUrl);
-    }
-
-
     public function it_exposes_message(CommitMessage $message)
     {
         $this->getMessage()->shouldReturn($message);

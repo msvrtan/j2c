@@ -107,7 +107,7 @@ class GitHubRepoTest extends TestCase
 
     public function testGetId()
     {
-        self::assertSame($this->repoTimestamps, $this->sut->getId());
+        self::assertSame($this->id, $this->sut->getId());
     }
 
 

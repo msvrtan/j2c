@@ -25,9 +25,9 @@ class UserEntitySpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(DateTime $updatedAt)
+    public function it_exposes_id(UserId $id)
     {
-        $this->getId()->shouldReturn($updatedAt);
+        $this->getId()->shouldReturn($id);
     }
 
 

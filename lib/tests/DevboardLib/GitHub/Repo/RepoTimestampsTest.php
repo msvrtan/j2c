@@ -40,12 +40,6 @@ class RepoTimestampsTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->pushedAt, $this->sut->getId());
-    }
-
-
     public function testGetUpdatedAt()
     {
         self::assertSame($this->updatedAt, $this->sut->getUpdatedAt());

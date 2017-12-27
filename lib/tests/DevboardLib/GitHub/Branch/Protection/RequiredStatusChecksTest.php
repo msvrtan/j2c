@@ -37,12 +37,6 @@ class RequiredStatusChecksTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->contexts, $this->sut->getId());
-    }
-
-
     public function testGetContexts()
     {
         self::assertSame($this->contexts, $this->sut->getContexts());

@@ -30,12 +30,6 @@ class CommitParentSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(ParentHtmlUrl $htmlUrl)
-    {
-        $this->getId()->shouldReturn($htmlUrl);
-    }
-
-
     public function it_exposes_api_url(ParentApiUrl $apiUrl)
     {
         $this->getApiUrl()->shouldReturn($apiUrl);

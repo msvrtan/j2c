@@ -100,12 +100,6 @@ class GitHubCommitTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->htmlUrl, $this->sut->getId());
-    }
-
-
     public function testGetMessage()
     {
         self::assertSame($this->message, $this->sut->getMessage());

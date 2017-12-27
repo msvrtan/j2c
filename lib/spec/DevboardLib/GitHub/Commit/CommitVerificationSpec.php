@@ -31,12 +31,6 @@ class CommitVerificationSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(VerificationPayload $payload)
-    {
-        $this->getId()->shouldReturn($payload);
-    }
-
-
     public function it_exposes_reason(VerificationReason $reason)
     {
         $this->getReason()->shouldReturn($reason);

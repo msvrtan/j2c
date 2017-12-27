@@ -30,6 +30,7 @@ class ContextSpec extends ObjectBehavior
 
     public function it_can_be_serialized(ContextId $id)
     {
+        $id->serialize()->shouldBeCalled()->willReturn(1);
         $this->serialize()->shouldReturn(1);
     }
 

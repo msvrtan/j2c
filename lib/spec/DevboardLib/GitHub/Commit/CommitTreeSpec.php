@@ -29,12 +29,6 @@ class CommitTreeSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(TreeUrl $url)
-    {
-        $this->getId()->shouldReturn($url);
-    }
-
-
     public function it_exposes_url(TreeUrl $url)
     {
         $this->getUrl()->shouldReturn($url);

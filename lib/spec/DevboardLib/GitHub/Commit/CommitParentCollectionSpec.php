@@ -8,7 +8,6 @@ use DevboardLib\GitHub\Commit\CommitParent;
 use DevboardLib\GitHub\Commit\CommitParentCollection;
 use DevboardLib\GitHub\Commit\CommitSha;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class CommitParentCollectionSpec extends ObjectBehavior
 {
@@ -45,14 +44,14 @@ class CommitParentCollectionSpec extends ObjectBehavior
 
     public function it_knows_if_element_is_in_collection(CommitParent $commitParent, CommitSha $commitSha)
     {
-        $commitParent->getId()->shouldBeCalled()->willReturn($commitSha);
+        $commitParent->getSha()->shouldBeCalled()->willReturn($commitSha);
         $this->has($commitSha)->shouldReturn(true);
     }
 
 
     public function it_can_return_element_from_collection_by_given_id(CommitParent $commitParent, CommitSha $commitSha)
     {
-        $commitParent->getId()->shouldBeCalled()->willReturn($commitSha);
+        $commitParent->getSha()->shouldBeCalled()->willReturn($commitSha);
         $this->get($commitSha)->shouldReturn($commitParent);
     }
 }

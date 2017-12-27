@@ -56,12 +56,6 @@ class CommitCommitterTest extends TestCase
     }
 
 
-    public function testGetId()
-    {
-        self::assertSame($this->committerDetails, $this->sut->getId());
-    }
-
-
     public function testGetEmail()
     {
         self::assertSame($this->email, $this->sut->getEmail());

@@ -49,7 +49,7 @@ class UserEntityTest extends TestCase
 
     public function testGetId()
     {
-        self::assertSame($this->updatedAt, $this->sut->getId());
+        self::assertSame($this->id, $this->sut->getId());
     }
 
 

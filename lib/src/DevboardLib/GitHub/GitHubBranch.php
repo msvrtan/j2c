@@ -37,12 +37,6 @@ class GitHubBranch
     }
 
 
-    public function getId(): BranchProtectionUrl
-    {
-        return $this->protectionUrl;
-    }
-
-
     public function getCommit(): GitHubCommit
     {
         return $this->commit;
