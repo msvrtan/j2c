@@ -1,4 +1,4 @@
-namespace spec\MyVendor\Webshop;
+namespace spec\MyVendor;
 
 use PhpSpec\ObjectBehavior;
 

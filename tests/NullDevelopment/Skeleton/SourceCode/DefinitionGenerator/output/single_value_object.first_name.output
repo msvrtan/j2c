@@ -1,4 +1,4 @@
-namespace MyVendor\Webshop;
+namespace MyVendor;
 
 use MyVendor\User\UserFirstName;
 

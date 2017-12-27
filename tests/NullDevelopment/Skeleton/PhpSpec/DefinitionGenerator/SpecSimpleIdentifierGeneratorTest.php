@@ -61,11 +61,11 @@ class SpecSimpleIdentifierGeneratorTest extends SfTestCase
 
     public function provideSpecSimpleIdentifier(): array
     {
-        $sutClass = ClassName::create('MyVendor\\Webshop\\UserEntity');
+        $sutClass = Fixtures::userEntity();
 
         $firstName = Fixtures::firstNameProperty();
 
-        $class  = ClassName::create('spec\\MyVendor\\Webshop\\UserEntitySpec');
+        $class  = ClassName::create('spec\\MyVendor\\UserEntitySpec');
         $parent = ClassName::create('PhpSpec\\ObjectBehavior');
 
         $letMethod           = new LetMethod([$firstName]);

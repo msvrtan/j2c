@@ -1,8 +1,8 @@
-namespace spec\MyVendor\Webshop;
+namespace spec\MyVendor;
 
+use MyVendor\UserEntity;
 use MyVendor\User\UserId;
 use MyVendor\User\Username;
-use MyVendor\Webshop\UserEntity;
 use PhpSpec\ObjectBehavior;
 
 class UserEntitySpec extends ObjectBehavior

@@ -61,11 +61,11 @@ class TestSimpleCollectionGeneratorTest extends SfTestCase
 
     public function provideTestSimpleCollection(): array
     {
-        $sutClass = ClassName::create('MyVendor\\Webshop\\UserEntity');
+        $sutClass = Fixtures::userEntity();
 
         $firstName = Fixtures::firstNameProperty();
 
-        $class  = ClassName::create('spec\\MyVendor\\Webshop\\UserEntityTest');
+        $class  = ClassName::create('spec\\MyVendor\\UserEntityTest');
         $parent = ClassName::create('PhpUnit\\ObjectBehavior');
 
         $letMethod        = new SetUpMethod($sutClass, [$firstName]);

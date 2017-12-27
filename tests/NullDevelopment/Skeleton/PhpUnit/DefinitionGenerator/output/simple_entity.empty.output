@@ -1,7 +1,7 @@
-namespace spec\MyVendor\Webshop;
+namespace spec\MyVendor;
 
+use MyVendor\UserEntity;
 use MyVendor\User\UserFirstName;
-use MyVendor\Webshop\UserEntity;
 use PhpUnit\ObjectBehavior;
 
 class UserEntityTest extends ObjectBehavior
