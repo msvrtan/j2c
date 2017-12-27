@@ -14,13 +14,13 @@ class UserEntity
 	}
 
 
-	public function getFirstName(): \UserFirstName
+	public function getFirstName(): UserFirstName
 	{
 		return $this->firstName;
 	}
 
 
-	public function getValue(): \UserFirstName
+	public function getValue(): UserFirstName
 	{
 		return $this->firstName;
 	}
@@ -32,7 +32,7 @@ class UserEntity
 	}
 
 
-	public function serialize(): \UserFirstName
+	public function serialize(): string
 	{
 		return $this->firstName->serialize();
 	}
@@ -40,6 +40,6 @@ class UserEntity
 
 	public static function deserialize(string $firstName): self
 	{
-		return new self(new MyVendor\User\UserFirstName($firstName));
+		return new self(UserFirstName::deserialize($firstName));
 	}
 }

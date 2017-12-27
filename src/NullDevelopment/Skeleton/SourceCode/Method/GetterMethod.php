@@ -53,7 +53,7 @@ class GetterMethod implements Method
 
     public function getReturnType(): string
     {
-        return $this->property->getInstanceNameAsString();
+        return $this->property->getInstanceFullName();
     }
 
     public function isNullableReturnType(): bool

@@ -64,7 +64,7 @@ class GetterMethodTest extends TestCase
 
     public function testGetReturnType()
     {
-        self::assertEquals('UserFirstName', $this->sut->getReturnType());
+        self::assertEquals('MyVendor\\User\\UserFirstName', $this->sut->getReturnType());
     }
 
     public function testIsNullableReturnType()

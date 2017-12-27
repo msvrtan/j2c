@@ -123,6 +123,7 @@ class SimpleEntityGeneratorSpec extends ObjectBehavior
         $firstName->getVisibility()->shouldBeCalled()->willReturn(new Visibility('private'));
         $firstName->hasDefaultValue()->shouldBeCalled()->willReturn(false);
         $firstName->isObject()->shouldBeCalled()->willReturn(true);
+        $firstName->isNullable()->shouldBeCalled()->willReturn(false);
         $definition->getMethods()->shouldBeCalled()->willReturn([]);
 
         $lines = [
@@ -162,6 +163,7 @@ class SimpleEntityGeneratorSpec extends ObjectBehavior
         $lastName->getVisibility()->shouldBeCalled()->willReturn(new Visibility('private'));
         $lastName->hasDefaultValue()->shouldBeCalled()->willReturn(true);
         $lastName->isObject()->shouldBeCalled()->willReturn(true);
+        $lastName->isNullable()->shouldBeCalled()->willReturn(false);
         $lastName->getDefaultValue()->shouldBeCalled()->willReturn('Smith');
 
         $lines = [

@@ -73,7 +73,7 @@ class ConstructorMethodTest extends TestCase
 
     public function testGetImports()
     {
-        self::assertEquals([], $this->sut->getImports());
+        self::assertEquals(['MyVendor\\User\\UserFirstName', 'MyVendor\\User\\UserLastName'], $this->sut->getImports());
     }
 
     public function testIsStatic()

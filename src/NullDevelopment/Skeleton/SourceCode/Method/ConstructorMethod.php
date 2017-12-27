@@ -52,7 +52,15 @@ class ConstructorMethod implements ConstructorMethodInterface
 
     public function getImports(): array
     {
-        return [];
+        $imports = [];
+
+        foreach ($this->properties as $property) {
+            if (true === $property->isObject()) {
+                $imports[]= $property->getInstanceFullName();
+            }
+        }
+
+        return $imports;
     }
 
     public function isStatic(): bool

@@ -1,4 +1,4 @@
 public static function deserialize(string $firstName): self
 {
-	return new self(new MyVendor\User\UserFirstName($firstName));
+	return new self(UserFirstName::deserialize($firstName));
 }

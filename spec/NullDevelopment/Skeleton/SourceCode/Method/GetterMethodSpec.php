@@ -51,8 +51,8 @@ class GetterMethodSpec extends ObjectBehavior
 
     public function it_exposes_return_type(Property $property)
     {
-        $property->getInstanceNameAsString()->shouldBeCalled()->willReturn('UserFirstName');
-        $this->getReturnType()->shouldReturn('UserFirstName');
+        $property->getInstanceFullName()->shouldBeCalled()->willReturn('MyVendor\\User\\UserFirstName');
+        $this->getReturnType()->shouldReturn('MyVendor\\User\\UserFirstName');
     }
 
     public function it_exposes_if_return_type_is_nullable(Property $property)

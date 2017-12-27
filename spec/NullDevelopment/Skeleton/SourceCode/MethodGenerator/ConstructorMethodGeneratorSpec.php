@@ -34,6 +34,7 @@ class ConstructorMethodGeneratorSpec extends ObjectBehavior
 
         $property->getName()->shouldBeCalled()->willReturn('firstName');
         $property->getInstanceFullName()->shouldBeCalled()->willReturn('MyVendor\\User\\UserFirstName');
+        $property->isNullable()->shouldBeCalled()->willReturn(false);
         $property->hasDefaultValue()->shouldBeCalled()->willReturn(false);
 
         $lines = [
