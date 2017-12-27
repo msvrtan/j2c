@@ -43,4 +43,16 @@ class Fixtures
             new Visibility('private')
         );
     }
+
+    public static function integerIdProperty(): Property
+    {
+        return new Property(
+            'id',
+            ClassName::create('int'),
+            false,
+            false,
+            false,
+            new Visibility('private')
+        );
+    }
 }
