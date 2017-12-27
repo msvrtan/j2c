@@ -7,11 +7,10 @@ namespace spec\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context\ContextId;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class ContextSpec extends ObjectBehavior
 {
-    public function let(ContextId $id)
+    public function let(\ContextId $id)
     {
         $this->beConstructedWith($id);
     }
@@ -29,14 +28,19 @@ class ContextSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable(ContextId $id)
+    public function it_is_castable_to_string()
     {
-        $id->serialize()->shouldBeCalled()->willReturn(1);
+        $this->__toString()->shouldReturn(1);
+    }
+
+
+    public function it_can_be_serialized(ContextId $id)
+    {
         $this->serialize()->shouldReturn(1);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized(ContextId $id)
     {
         $this->deserialize(1)->shouldReturnAnInstanceOf(Context::class);
     }

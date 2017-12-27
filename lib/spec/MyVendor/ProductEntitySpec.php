@@ -9,11 +9,10 @@ use MyVendor\ProductEntity;
 use MyVendor\Product\ProductId;
 use MyVendor\Product\ProductWeight;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class ProductEntitySpec extends ObjectBehavior
 {
-    public function let(ProductId $id, ProductWeight $weight, DateTime $updatedAt)
+    public function let(\ProductId $id, \ProductWeight $weight, DateTime $updatedAt)
     {
         $this->beConstructedWith($id, $title = 'title', $description = 'description', $weight, $updatedAt);
     }
@@ -25,9 +24,9 @@ class ProductEntitySpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_id(ProductId $id)
+    public function it_exposes_id(DateTime $updatedAt)
     {
-        $this->getId()->shouldReturn($id);
+        $this->getId()->shouldReturn($updatedAt);
     }
 
 
@@ -49,22 +48,25 @@ class ProductEntitySpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_updatedAt(DateTime $updatedAt)
+    public function it_exposes_updated_at(DateTime $updatedAt)
     {
         $this->getUpdatedAt()->shouldReturn($updatedAt);
     }
 
 
-    public function it_is_serializable(ProductId $id, ProductWeight $weight, DateTime $updatedAt)
+    public function it_is_castable_to_string()
     {
-        $id->serialize()->shouldBeCalled()->willReturn(1);
-        $weight->serialize()->shouldBeCalled()->willReturn(1);
-        $updatedAt->format('c')->shouldBeCalled()->willReturn('2018-01-01 00:01:00');
+        $this->__toString()->shouldReturn('2018-01-01 00:01:00');
+    }
+
+
+    public function it_can_be_serialized(ProductId $id, ProductWeight $weight, DateTime $updatedAt)
+    {
         $this->serialize()->shouldReturn(['id' => 1, 'title' => 'title', 'description' => 'description', 'weight' => 1, 'updatedAt' => '2018-01-01 00:01:00']);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized(ProductId $id, ProductWeight $weight, DateTime $updatedAt)
     {
         $this->deserialize(['id' => 1, 'title' => 'title', 'description' => 'description', 'weight' => 1, 'updatedAt' => '2018-01-01 00:01:00'])->shouldReturnAnInstanceOf(ProductEntity::class);
     }

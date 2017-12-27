@@ -7,11 +7,10 @@ namespace spec\DevboardLib\GitHub\Branch;
 use DevboardLib\GitHub\Branch\Protection;
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class ProtectionSpec extends ObjectBehavior
 {
-    public function let(RequiredStatusChecks $requiredStatusChecks)
+    public function let(\RequiredStatusChecks $requiredStatusChecks)
     {
         $this->beConstructedWith($enabled = true, $requiredStatusChecks);
     }
@@ -29,21 +28,32 @@ class ProtectionSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_requiredStatusChecks(RequiredStatusChecks $requiredStatusChecks)
+    public function it_exposes_id(RequiredStatusChecks $requiredStatusChecks)
+    {
+        $this->getId()->shouldReturn($requiredStatusChecks);
+    }
+
+
+    public function it_exposes_required_status_checks(RequiredStatusChecks $requiredStatusChecks)
     {
         $this->getRequiredStatusChecks()->shouldReturn($requiredStatusChecks);
     }
 
 
-    public function it_is_serializable(RequiredStatusChecks $requiredStatusChecks)
+    public function it_is_castable_to_string()
     {
-        $requiredStatusChecks->serialize()->shouldBeCalled()->willReturn(['requiredStatusChecks', ['data']]);
-        $this->serialize()->shouldReturn(['enabled' => true, 'requiredStatusChecks' => ['requiredStatusChecks', ['data']]]);
+        $this->__toString()->shouldReturn(['enforcementLevel'=>'requiredStatusChecks', 'contexts'=>[1]]);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_serialized(RequiredStatusChecks $requiredStatusChecks)
     {
-        $this->deserialize(['enabled' => true, 'requiredStatusChecks' => ['requiredStatusChecks', ['data']]])->shouldReturnAnInstanceOf(Protection::class);
+        $this->serialize()->shouldReturn(['enabled' => true, 'requiredStatusChecks' => ['enforcementLevel'=>'requiredStatusChecks', 'contexts'=>[1]]]);
+    }
+
+
+    public function it_can_be_deserialized(RequiredStatusChecks $requiredStatusChecks)
+    {
+        $this->deserialize(['enabled' => true, 'requiredStatusChecks' => ['enforcementLevel'=>'requiredStatusChecks', 'contexts'=>[1]]])->shouldReturnAnInstanceOf(Protection::class);
     }
 }

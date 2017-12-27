@@ -37,6 +37,12 @@ class CommitAuthor
     }
 
 
+    public function getId(): ?CommitAuthorDetails
+    {
+        return $this->authorDetails;
+    }
+
+
     public function getEmail(): EmailAddress
     {
         return $this->email;
@@ -52,6 +58,12 @@ class CommitAuthor
     public function getAuthorDetails(): ?CommitAuthorDetails
     {
         return $this->authorDetails;
+    }
+
+
+    public function __toString(): string
+    {
+        return (string) $this->authorDetails;
     }
 
 

@@ -10,11 +10,10 @@ use DevboardLib\GitHub\Commit\CommitCommitterDetails;
 use DevboardLib\GitHub\Commit\CommitDate;
 use DevboardLib\GitHub\Commit\Committer\CommitterName;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class CommitCommitterSpec extends ObjectBehavior
 {
-    public function let(CommitterName $name, EmailAddress $email, CommitDate $date, CommitCommitterDetails $committerDetails)
+    public function let(\CommitterName $name, \EmailAddress $email, \CommitDate $date, \CommitCommitterDetails $committerDetails)
     {
         $this->beConstructedWith($name, $email, $date, $committerDetails);
     }
@@ -32,6 +31,12 @@ class CommitCommitterSpec extends ObjectBehavior
     }
 
 
+    public function it_exposes_id(CommitCommitterDetails $committerDetails)
+    {
+        $this->getId()->shouldReturn($committerDetails);
+    }
+
+
     public function it_exposes_email(EmailAddress $email)
     {
         $this->getEmail()->shouldReturn($email);
@@ -44,24 +49,26 @@ class CommitCommitterSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_committerDetails(CommitCommitterDetails $committerDetails)
+    public function it_exposes_committer_details(CommitCommitterDetails $committerDetails)
     {
         $this->getCommitterDetails()->shouldReturn($committerDetails);
     }
 
 
-    public function it_is_serializable(CommitterName $name, EmailAddress $email, CommitDate $date, CommitCommitterDetails $committerDetails)
+    public function it_is_castable_to_string()
     {
-        $name->serialize()->shouldBeCalled()->willReturn('name');
-        $email->serialize()->shouldBeCalled()->willReturn('email');
-        $date->serialize()->shouldBeCalled()->willReturn('2018-01-01 00:01:00');
-        $committerDetails->serialize()->shouldBeCalled()->willReturn([1, 'committerDetails', 'committerDetails', 'committerDetails', 'committerDetails', 'committerDetails', 'committerDetails', true]);
-        $this->serialize()->shouldReturn(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01 00:01:00', 'committerDetails' => [1, 'committerDetails', 'committerDetails', 'committerDetails', 'committerDetails', 'committerDetails', 'committerDetails', true]]);
+        $this->__toString()->shouldReturn(['id'=>1, 'login'=>'committerDetails', 'type'=>'committerDetails', 'avatarUrl'=>'committerDetails', 'gravatarId'=>'committerDetails', 'htmlUrl'=>'committerDetails', 'apiUrl'=>'committerDetails', 'siteAdmin'=>true]);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_serialized(CommitterName $name, EmailAddress $email, CommitDate $date, CommitCommitterDetails $committerDetails)
     {
-        $this->deserialize(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01 00:01:00', 'committerDetails' => [1, 'committerDetails', 'committerDetails', 'committerDetails', 'committerDetails', 'committerDetails', 'committerDetails', true]])->shouldReturnAnInstanceOf(CommitCommitter::class);
+        $this->serialize()->shouldReturn(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01 00:01:00', 'committerDetails' => ['id'=>1, 'login'=>'committerDetails', 'type'=>'committerDetails', 'avatarUrl'=>'committerDetails', 'gravatarId'=>'committerDetails', 'htmlUrl'=>'committerDetails', 'apiUrl'=>'committerDetails', 'siteAdmin'=>true]]);
+    }
+
+
+    public function it_can_be_deserialized(CommitterName $name, EmailAddress $email, CommitDate $date, CommitCommitterDetails $committerDetails)
+    {
+        $this->deserialize(['name' => 'name', 'email' => 'email', 'date' => '2018-01-01 00:01:00', 'committerDetails' => ['id'=>1, 'login'=>'committerDetails', 'type'=>'committerDetails', 'avatarUrl'=>'committerDetails', 'gravatarId'=>'committerDetails', 'htmlUrl'=>'committerDetails', 'apiUrl'=>'committerDetails', 'siteAdmin'=>true]])->shouldReturnAnInstanceOf(CommitCommitter::class);
     }
 }

@@ -52,9 +52,9 @@ class CommitCommitterDetails
     }
 
 
-    public function getId(): UserId
+    public function getId(): bool
     {
-        return $this->id;
+        return $this->siteAdmin;
     }
 
 
@@ -97,6 +97,16 @@ class CommitCommitterDetails
     public function getSiteAdmin(): bool
     {
         return $this->siteAdmin;
+    }
+
+
+    public function __toString(): string
+    {
+        if(true === $this->siteAdmin){
+            return 'true';
+        }else{
+            return 'false';
+        }
     }
 
 

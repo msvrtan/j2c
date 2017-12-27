@@ -15,6 +15,10 @@ use DevboardLib\GitHub\Commit\CommitSha;
 use DevboardLib\GitHub\Commit\CommitTree;
 use DevboardLib\GitHub\Commit\CommitVerification;
 
+/**
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ * @SuppressWarnings(PHPMD.ExcessiveParameterList)
+ */
 class GitHubCommit
 {
     /** @var CommitSha */
@@ -48,9 +52,6 @@ class GitHubCommit
     private $htmlUrl;
 
 
-    /**
-     * @SuppressWarnings(PHPMD.ExcessiveParameterList)
-     */
     public function __construct(CommitSha $sha, CommitMessage $message, CommitDate $commitDate, CommitAuthor $author, CommitCommitter $committer, CommitTree $tree, CommitParentCollection $parents, CommitVerification $verification, CommitApiUrl $apiUrl, CommitHtmlUrl $htmlUrl)
     {
         $this->sha = $sha;
@@ -69,6 +70,12 @@ class GitHubCommit
     public function getSha(): CommitSha
     {
         return $this->sha;
+    }
+
+
+    public function getId(): CommitHtmlUrl
+    {
+        return $this->htmlUrl;
     }
 
 
@@ -123,6 +130,12 @@ class GitHubCommit
     public function getHtmlUrl(): CommitHtmlUrl
     {
         return $this->htmlUrl;
+    }
+
+
+    public function __toString(): string
+    {
+        return (string) $this->htmlUrl;
     }
 
 

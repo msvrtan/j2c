@@ -39,6 +39,12 @@ class CommitVerification
     }
 
 
+    public function getId(): ?VerificationPayload
+    {
+        return $this->payload;
+    }
+
+
     public function getReason(): VerificationReason
     {
         return $this->reason;
@@ -54,6 +60,12 @@ class CommitVerification
     public function getPayload(): ?VerificationPayload
     {
         return $this->payload;
+    }
+
+
+    public function __toString(): string
+    {
+        return (string) $this->payload;
     }
 
 

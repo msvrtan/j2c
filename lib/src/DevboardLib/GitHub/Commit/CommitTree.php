@@ -29,9 +29,21 @@ class CommitTree
     }
 
 
+    public function getId(): TreeUrl
+    {
+        return $this->url;
+    }
+
+
     public function getUrl(): TreeUrl
     {
         return $this->url;
+    }
+
+
+    public function __toString(): string
+    {
+        return (string) $this->url;
     }
 
 

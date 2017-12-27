@@ -10,11 +10,10 @@ use DevboardLib\GitHub\Commit\Verification\VerificationReason;
 use DevboardLib\GitHub\Commit\Verification\VerificationSignature;
 use DevboardLib\GitHub\Commit\Verification\VerificationVerified;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class CommitVerificationSpec extends ObjectBehavior
 {
-    public function let(VerificationVerified $verified, VerificationReason $reason, VerificationSignature $signature, VerificationPayload $payload)
+    public function let(\VerificationVerified $verified, \VerificationReason $reason, \VerificationSignature $signature, \VerificationPayload $payload)
     {
         $this->beConstructedWith($verified, $reason, $signature, $payload);
     }
@@ -29,6 +28,12 @@ class CommitVerificationSpec extends ObjectBehavior
     public function it_exposes_verified(VerificationVerified $verified)
     {
         $this->getVerified()->shouldReturn($verified);
+    }
+
+
+    public function it_exposes_id(VerificationPayload $payload)
+    {
+        $this->getId()->shouldReturn($payload);
     }
 
 
@@ -50,17 +55,19 @@ class CommitVerificationSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable(VerificationVerified $verified, VerificationReason $reason, VerificationSignature $signature, VerificationPayload $payload)
+    public function it_is_castable_to_string()
     {
-        $verified->serialize()->shouldBeCalled()->willReturn(true);
-        $reason->serialize()->shouldBeCalled()->willReturn('reason');
-        $signature->serialize()->shouldBeCalled()->willReturn('signature');
-        $payload->serialize()->shouldBeCalled()->willReturn('payload');
+        $this->__toString()->shouldReturn('payload');
+    }
+
+
+    public function it_can_be_serialized(VerificationVerified $verified, VerificationReason $reason, VerificationSignature $signature, VerificationPayload $payload)
+    {
         $this->serialize()->shouldReturn(['verified' => true, 'reason' => 'reason', 'signature' => 'signature', 'payload' => 'payload']);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized(VerificationVerified $verified, VerificationReason $reason, VerificationSignature $signature, VerificationPayload $payload)
     {
         $this->deserialize(['verified' => true, 'reason' => 'reason', 'signature' => 'signature', 'payload' => 'payload'])->shouldReturnAnInstanceOf(CommitVerification::class);
     }

@@ -7,11 +7,10 @@ namespace spec\DevboardLib\GitHub\Repo;
 use DevboardLib\GitHub\Repo\RepoStats;
 use DevboardLib\GitHub\Repo\RepoStats\RepoSize;
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class RepoStatsSpec extends ObjectBehavior
 {
-    public function let(RepoSize $size)
+    public function let(\RepoSize $size)
     {
         $this->beConstructedWith($networkCount = 1, $watchersCount = 1, $stargazersCount = 1, $subscribersCount = 1, $openIssuesCount = 1, $size);
     }
@@ -23,31 +22,37 @@ class RepoStatsSpec extends ObjectBehavior
     }
 
 
-    public function it_exposes_networkCount()
+    public function it_exposes_network_count()
     {
         $this->getNetworkCount()->shouldReturn(1);
     }
 
 
-    public function it_exposes_watchersCount()
+    public function it_exposes_id(RepoSize $size)
+    {
+        $this->getId()->shouldReturn($size);
+    }
+
+
+    public function it_exposes_watchers_count()
     {
         $this->getWatchersCount()->shouldReturn(1);
     }
 
 
-    public function it_exposes_stargazersCount()
+    public function it_exposes_stargazers_count()
     {
         $this->getStargazersCount()->shouldReturn(1);
     }
 
 
-    public function it_exposes_subscribersCount()
+    public function it_exposes_subscribers_count()
     {
         $this->getSubscribersCount()->shouldReturn(1);
     }
 
 
-    public function it_exposes_openIssuesCount()
+    public function it_exposes_open_issues_count()
     {
         $this->getOpenIssuesCount()->shouldReturn(1);
     }
@@ -59,14 +64,19 @@ class RepoStatsSpec extends ObjectBehavior
     }
 
 
-    public function it_is_serializable(RepoSize $size)
+    public function it_is_castable_to_string()
     {
-        $size->serialize()->shouldBeCalled()->willReturn(1);
+        $this->__toString()->shouldReturn(1);
+    }
+
+
+    public function it_can_be_serialized(RepoSize $size)
+    {
         $this->serialize()->shouldReturn(['networkCount' => 1, 'watchersCount' => 1, 'stargazersCount' => 1, 'subscribersCount' => 1, 'openIssuesCount' => 1, 'size' => 1]);
     }
 
 
-    public function it_is_deserializable()
+    public function it_can_be_deserialized(RepoSize $size)
     {
         $this->deserialize(['networkCount' => 1, 'watchersCount' => 1, 'stargazersCount' => 1, 'subscribersCount' => 1, 'openIssuesCount' => 1, 'size' => 1])->shouldReturnAnInstanceOf(RepoStats::class);
     }
