@@ -70,12 +70,12 @@ class SimpleEntityLoaderTest extends SfTestCase
             [
                 [
                     'type'        => 'SimpleEntity',
-                    'instanceOf'  => 'MyCompany\User\UserName',
+                    'instanceOf'  => 'MyVendor\User\Username',
                     'constructor' => ['name' => ['instanceOf' => 'string']],
                     'properties'  => [],
                 ],
                 new SimpleEntity(
-                    ClassName::create('MyCompany\User\UserName'),
+                    ClassName::create('MyVendor\User\Username'),
                     null,
                     [],
                     [],
@@ -83,17 +83,16 @@ class SimpleEntityLoaderTest extends SfTestCase
                     [
                         new ConstructorMethod([$nameProperty]),
                         new GetterMethod('getName', $nameProperty),
-                        new GetterMethod('getId', $nameProperty),
                         new ToStringMethod($nameProperty),
-                        new SerializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
-                        new DeserializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
+                        new SerializeMethod(ClassName::create('MyVendor\User\Username'), [$nameProperty]),
+                        new DeserializeMethod(ClassName::create('MyVendor\User\Username'), [$nameProperty]),
                     ]
                 ),
             ],
             [
                 [
                     'type'        => 'SimpleEntity',
-                    'instanceOf'  => 'MyCompany\User\UserName',
+                    'instanceOf'  => 'MyVendor\User\Username',
                     'parent'      => null,
                     'interfaces'  => [],
                     'traits'      => [],
@@ -108,7 +107,7 @@ class SimpleEntityLoaderTest extends SfTestCase
                     'properties'  => ['name' => ['instanceOf' => 'string']],
                 ],
                 new SimpleEntity(
-                    ClassName::create('MyCompany\User\UserName'),
+                    ClassName::create('MyVendor\User\Username'),
                     null,
                     [],
                     [],
@@ -116,17 +115,16 @@ class SimpleEntityLoaderTest extends SfTestCase
                     [
                         new ConstructorMethod([$nameProperty]),
                         new GetterMethod('getName', $nameProperty),
-                        new GetterMethod('getId', $nameProperty),
                         new ToStringMethod($nameProperty),
-                        new SerializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
-                        new DeserializeMethod(ClassName::create('MyCompany\User\UserName'), [$nameProperty]),
+                        new SerializeMethod(ClassName::create('MyVendor\User\Username'), [$nameProperty]),
+                        new DeserializeMethod(ClassName::create('MyVendor\User\Username'), [$nameProperty]),
                     ]
                 ),
             ],
             [
                 [
                     'type'        => 'SimpleEntity',
-                    'instanceOf'  => 'MyCompany\User\UserName',
+                    'instanceOf'  => 'MyVendor\User\Username',
                     'parent'      => null,
                     'interfaces'  => [],
                     'traits'      => [],
@@ -134,7 +132,7 @@ class SimpleEntityLoaderTest extends SfTestCase
                     'properties'  => [],
                 ],
                 new SimpleEntity(
-                    ClassName::create('MyCompany\User\UserName'),
+                    ClassName::create('MyVendor\User\Username'),
                     null,
                     [],
                     [],
@@ -142,10 +140,9 @@ class SimpleEntityLoaderTest extends SfTestCase
                     [
                         new ConstructorMethod([$idProperty]),
                         new GetterMethod('getId', $idProperty),
-                        new GetterMethod('getId', $idProperty),
                         new ToStringMethod($idProperty),
-                        new SerializeMethod(ClassName::create('MyCompany\User\UserName'), [$idProperty]),
-                        new DeserializeMethod(ClassName::create('MyCompany\User\UserName'), [$idProperty]),
+                        new SerializeMethod(ClassName::create('MyVendor\User\Username'), [$idProperty]),
+                        new DeserializeMethod(ClassName::create('MyVendor\User\Username'), [$idProperty]),
                     ]
                 ),
             ],

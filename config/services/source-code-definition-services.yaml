@@ -46,6 +46,11 @@ services:
     tags:
       - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleEntity' }
 
+  NullDevelopment\Skeleton\SourceCode\DefinitionGenerator\SimpleCollectionGenerator:
+    tags:
+      - { name: tactician.handler, command: 'NullDevelopment\Skeleton\SourceCode\Definition\SimpleCollection' }
+
+
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator: ~
   NullDevelopment\Skeleton\SourceCode\MethodGenerator\ToStringMethodGenerator: ~
@@ -67,12 +72,14 @@ services:
         - '@NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleIdentifierLoader'
         - '@NullDevelopment\Skeleton\SourceCode\DefinitionLoader\DateTimeValueObjectLoader'
         - '@NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleEntityLoader'
+        - '@NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleCollectionLoader'
 
 
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SingleValueObjectLoader: ~
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleIdentifierLoader: ~
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\DateTimeValueObjectLoader: ~
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleEntityLoader: ~
+  NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleCollectionLoader: ~
 
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\ConstructorMethodFactory: ~
   NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\InterfaceNameCollectionFactory: ~

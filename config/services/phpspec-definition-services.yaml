@@ -90,6 +90,17 @@ services:
         - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecSerializeMethodFactory'
         - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecDeserializeMethodFactory'
 
+  NullDevelopment\Skeleton\PhpSpec\DefinitionGenerator\SpecSimpleCollectionGenerator: ~
+
+  NullDevelopment\Skeleton\PhpSpec\DefinitionFactory\SpecSimpleCollectionFactory:
+    arguments:
+      $factories:
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\LetMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\InitializableMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\GetterSpecMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecSerializeMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecDeserializeMethodFactory'
+
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\LetMethodGenerator: ~
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\InitializableMethodGenerator: ~
   NullDevelopment\Skeleton\PhpSpec\MethodGenerator\GetterSpecMethodGenerator: ~

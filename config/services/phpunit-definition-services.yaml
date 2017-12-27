@@ -82,6 +82,17 @@ services:
         - '@NullDevelopment\Skeleton\PhpUnit\MethodFactory\TestSerializeMethodFactory'
         - '@NullDevelopment\Skeleton\PhpUnit\MethodFactory\TestDeserializeMethodFactory'
 
+
+  NullDevelopment\Skeleton\PhpUnit\DefinitionGenerator\TestSimpleCollectionGenerator: ~
+
+  NullDevelopment\Skeleton\PhpUnit\DefinitionFactory\TestSimpleCollectionFactory:
+    arguments:
+      $factories:
+        - '@NullDevelopment\Skeleton\PhpUnit\MethodFactory\SetUpMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpUnit\MethodFactory\TestGetterMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpUnit\MethodFactory\TestSerializeMethodFactory'
+        - '@NullDevelopment\Skeleton\PhpUnit\MethodFactory\TestDeserializeMethodFactory'
+
   NullDevelopment\Skeleton\PhpUnit\MethodGenerator\SetUpMethodGenerator: ~
   NullDevelopment\Skeleton\PhpUnit\MethodGenerator\TestGetterMethodGenerator: ~
   NullDevelopment\Skeleton\PhpUnit\MethodGenerator\TestToStringMethodGenerator: ~

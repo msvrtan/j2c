@@ -4,23 +4,22 @@ declare(strict_types=1);
 
 namespace NullDevelopment\Skeleton\SourceCode\DefinitionLoader;
 
+use NullDevelopment\PhpStructure\CustomType\CollectionOf;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
-use NullDevelopment\Skeleton\SourceCode\Definition\SimpleEntity;
+use NullDevelopment\Skeleton\SourceCode\Definition\SimpleCollection;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\ConstructorMethodFactory;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\InterfaceNameCollectionFactory;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\PropertyCollectionFactory;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\TraitNameCollectionFactory;
 use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
-use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
-use NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod;
 
 /**
- * @see SimpleEntityLoaderSpec
- * @see SimpleEntityLoaderTest
+ * @see SimpleCollectionLoaderSpec
+ * @see SimpleCollectionLoaderTest
  */
-class SimpleEntityLoader implements DefinitionLoader
+class SimpleCollectionLoader implements DefinitionLoader
 {
     /** @var InterfaceNameCollectionFactory */
     private $interfaceNameCollectionFactory;
@@ -45,14 +44,14 @@ class SimpleEntityLoader implements DefinitionLoader
 
     public function supports(array $input): bool
     {
-        if ('SimpleEntity' === $input['type']) {
+        if ('SimpleCollection' === $input['type']) {
             return true;
         }
 
         return false;
     }
 
-    public function load(array $input): SimpleEntity
+    public function load(array $input): SimpleCollection
     {
         $data = array_merge($this->getDefaultValues(), $input);
 
@@ -64,29 +63,30 @@ class SimpleEntityLoader implements DefinitionLoader
         $constructorMethod = $this->constructorMethodFactory->create($data['constructor']);
         $methods           = [$constructorMethod];
 
-        foreach ($properties as $property) {
-            $methodName = 'get'.ucfirst($property->getName());
-            $methods[]  = new GetterMethod($methodName, $property);
-            $methods[]  = new ToStringMethod($property);
-        }
+        //$methods[] = new SerializeMethod($className, $properties);
+        //$methods[] = new DeserializeMethod($className, $properties);
 
-        $methods[] = new SerializeMethod($className, $properties);
-        $methods[] = new DeserializeMethod($className, $properties);
+        $collectionOf      = new CollectionOf(
+            ClassName::create($data['collectionOf']['instanceOf']),
+            $data['collectionOf']['accessor'],
+            ClassName::create($data['collectionOf']['has'])
+        );
 
-        return new SimpleEntity(
+        return new SimpleCollection(
             $className,
             $parent,
             $interfaces,
             $traits,
             $properties,
-            $methods
+            $methods,
+            $collectionOf
         );
     }
 
     public function getDefaultValues(): array
     {
         return [
-            'type'        => 'SimpleEntity',
+            'type'        => 'SimpleCollection',
             'instanceOf'  => null,
             'parent'      => null,
             'interfaces'  => [],

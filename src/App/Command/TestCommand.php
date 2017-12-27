@@ -67,18 +67,13 @@ class TestCommand extends ContainerAwareCommand
 
     public function provideInput(): Generator
     {
-        $generateList = ['SingleValueObject', 'SimpleIdentifier', 'DateTimeValueObject', 'SimpleEntity'];
-        //$generateList = ['SingleValueObject', 'SimpleIdentifier', 'DateTimeValueObject'];
-
         $path  = getcwd().'/definitions';
         $yamls = $this->getService(FinderFactory::class)->create()->files()->in($path)->name('*.yaml');
 
         /** @var SplFileInfo $yaml */
         foreach ($yamls as $yaml) {
             $config = $this->loadDefinitionYaml($yaml->getFilename(), $yaml->getPath());
-            if (true === in_array($config['type'], $generateList)) {
-                yield $config;
-            }
+            yield $config;
         }
     }
 
