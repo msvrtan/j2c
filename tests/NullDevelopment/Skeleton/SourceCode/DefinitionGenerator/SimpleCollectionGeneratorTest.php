@@ -6,8 +6,6 @@ namespace Tests\NullDevelopment\Skeleton\SourceCode\DefinitionGenerator;
 
 use Nette\PhpGenerator\PhpNamespace;
 use NullDevelopment\PhpStructure\CustomType\CollectionOf;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Definition\SimpleCollection;
 use NullDevelopment\Skeleton\SourceCode\DefinitionGenerator\SimpleCollectionGenerator;
@@ -16,6 +14,7 @@ use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod;
+use Tests\TestCase\Fixtures;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -68,14 +67,7 @@ class SimpleCollectionGeneratorTest extends SfTestCase
     public function provideSimpleCollection(): array
     {
         $class   = ClassName::create('MyVendor\\Webshop\\UserEntity');
-        $integer = new Property(
-            'id',
-            ClassName::create('int'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $integer = Fixtures::integerIdProperty();
 
         $constructorMethod = new ConstructorMethod([$integer]);
         $getIdMethod       = new GetterMethod('getId', $integer);

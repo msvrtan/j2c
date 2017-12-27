@@ -15,6 +15,7 @@ use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod;
+use Tests\TestCase\Fixtures;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -64,7 +65,7 @@ class SimpleEntityLoaderTest extends SfTestCase
     public function provideInputs(): array
     {
         $nameProperty  = new Property('name', ClassName::create('string'), false, false, null, new Visibility('private'));
-        $idProperty    = new Property('id', ClassName::create('string'), false, false, null, new Visibility('private'));
+        $idProperty    = Fixtures::integerIdProperty();
 
         return [
             [
@@ -128,7 +129,7 @@ class SimpleEntityLoaderTest extends SfTestCase
                     'parent'      => null,
                     'interfaces'  => [],
                     'traits'      => [],
-                    'constructor' => ['id' => ['instanceOf' => 'string']],
+                    'constructor' => ['id' => ['instanceOf' => 'int']],
                     'properties'  => [],
                 ],
                 new SimpleEntity(
