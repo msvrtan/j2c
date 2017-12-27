@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \NullDevelopment\Skeleton\SourceCode\MethodGenerator\DateTimeToStringMethodGenerator
- * @group todo
+ * @group  todo
  */
 class DateTimeToStringMethodGeneratorTest extends TestCase
 {

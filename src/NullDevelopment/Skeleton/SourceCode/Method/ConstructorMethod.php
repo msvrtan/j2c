@@ -56,7 +56,7 @@ class ConstructorMethod implements ConstructorMethodInterface
 
         foreach ($this->properties as $property) {
             if (true === $property->isObject()) {
-                $imports[]= $property->getInstanceFullName();
+                $imports[] = $property->getInstanceFullName();
             }
         }
 

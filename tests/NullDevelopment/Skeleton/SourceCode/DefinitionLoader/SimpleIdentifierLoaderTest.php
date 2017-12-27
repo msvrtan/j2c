@@ -48,14 +48,14 @@ class SimpleIdentifierLoaderTest extends SfTestCase
     public function testGetDefaultValues()
     {
         $expected = [
-            'type'       => 'SimpleIdentifier',
-            'instanceOf' => null,
-            'parent'     => null,
-            'interfaces' => [],
-            'traits'     => [],
-            'properties' => [],
-            'methods'    => [],
-            'constructor'=> [],
+            'type'        => 'SimpleIdentifier',
+            'instanceOf'  => null,
+            'parent'      => null,
+            'interfaces'  => [],
+            'traits'      => [],
+            'properties'  => [],
+            'methods'     => [],
+            'constructor' => [],
         ];
 
         $this->assertEquals($expected, $this->sut->getDefaultValues());
@@ -105,7 +105,7 @@ class SimpleIdentifierLoaderTest extends SfTestCase
                             'default'    => null,
                         ],
                     ],
-                    'properties' => ['name' => ['instanceOf' => 'string']],
+                    'properties'  => ['name' => ['instanceOf' => 'string']],
                 ],
                 new SimpleIdentifier(
                     ClassName::create('MyCompany\User\UserName'),

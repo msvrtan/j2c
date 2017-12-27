@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\Method\SpecDateTimeCreateFromFormatMethod
- * @group todo
+ * @group  todo
  */
 class SpecDateTimeCreateFromFormatMethodTest extends TestCase
 {

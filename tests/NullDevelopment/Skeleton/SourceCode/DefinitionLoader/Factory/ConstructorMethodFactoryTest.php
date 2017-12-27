@@ -26,25 +26,25 @@ class ConstructorMethodFactoryTest extends TestCase
     {
         $input = [
             'name'      => [
-                'instanceOf'  => 'string',
-                'nullable'    => false,
-                'hasDefault'  => false,
-                'default'     => null,
+                'instanceOf' => 'string',
+                'nullable'   => false,
+                'hasDefault' => false,
+                'default'    => null,
             ],
             'something' => [
                 'instanceOf' => 'string',
             ],
             'another'   => [
-                'instanceOf'  => 'string',
-                'nullable'    => true,
-                'hasDefault'  => false,
-                'default'     => null,
+                'instanceOf' => 'string',
+                'nullable'   => true,
+                'hasDefault' => false,
+                'default'    => null,
             ],
             'more'      => [
-                'instanceOf'  => 'string',
-                'nullable'    => false,
-                'hasDefault'  => true,
-                'default'     => null,
+                'instanceOf' => 'string',
+                'nullable'   => false,
+                'hasDefault' => true,
+                'default'    => null,
             ],
         ];
 

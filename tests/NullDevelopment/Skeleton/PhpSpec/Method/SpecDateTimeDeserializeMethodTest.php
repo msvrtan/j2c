@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\Method\SpecDateTimeDeserializeMethod
- * @group todo
+ * @group  todo
  */
 class SpecDateTimeDeserializeMethodTest extends TestCase
 {

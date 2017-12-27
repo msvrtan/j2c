@@ -35,18 +35,18 @@ class PropertyCollectionFactoryTest extends TestCase
                 'instanceOf' => 'string',
             ],
             'something' => [
-                'instanceOf'  => 'int',
-                'nullable'    => true,
-                'hasDefault'  => false,
-                'default'     => null,
-                'visibility'  => Visibility::PRIVATE,
+                'instanceOf' => 'int',
+                'nullable'   => true,
+                'hasDefault' => false,
+                'default'    => null,
+                'visibility' => Visibility::PRIVATE,
             ],
             'another'   => [
-                'instanceOf'  => 'int',
-                'nullable'    => false,
-                'hasDefault'  => true,
-                'default'     => 7,
-                'visibility'  => Visibility::PRIVATE,
+                'instanceOf' => 'int',
+                'nullable'   => false,
+                'hasDefault' => true,
+                'default'    => 7,
+                'visibility' => Visibility::PRIVATE,
             ],
         ];
 

@@ -48,14 +48,14 @@ class SimpleEntityLoaderTest extends SfTestCase
     public function testGetDefaultValues()
     {
         $expected = [
-            'type'       => 'SimpleEntity',
-            'instanceOf' => null,
-            'parent'     => null,
-            'interfaces' => [],
-            'traits'     => [],
-            'properties' => [],
-            'methods'    => [],
-            'constructor'=> [],
+            'type'        => 'SimpleEntity',
+            'instanceOf'  => null,
+            'parent'      => null,
+            'interfaces'  => [],
+            'traits'      => [],
+            'properties'  => [],
+            'methods'     => [],
+            'constructor' => [],
         ];
 
         $this->assertEquals($expected, $this->sut->getDefaultValues());
@@ -105,7 +105,7 @@ class SimpleEntityLoaderTest extends SfTestCase
                             'default'    => null,
                         ],
                     ],
-                    'properties' => ['name' => ['instanceOf' => 'string']],
+                    'properties'  => ['name' => ['instanceOf' => 'string']],
                 ],
                 new SimpleEntity(
                     ClassName::create('MyCompany\User\UserName'),

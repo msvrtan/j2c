@@ -66,8 +66,8 @@ class SimpleEntityGeneratorTest extends SfTestCase
 
     public function provideSimpleEntity(): array
     {
-        $class      = ClassName::create('MyVendor\\Webshop\\UserEntity');
-        $integer    = new Property(
+        $class   = ClassName::create('MyVendor\\Webshop\\UserEntity');
+        $integer = new Property(
             'id',
             ClassName::create('int'),
             false,
@@ -79,9 +79,9 @@ class SimpleEntityGeneratorTest extends SfTestCase
         $constructorMethod = new ConstructorMethod([$integer]);
         $getIdMethod       = new GetterMethod('getId', $integer);
 
-        $toStringMethod   = new ToStringMethod($integer);
-        $serializeMethod  = new SerializeMethod($class, [$integer]);
-        $deserializeMethod= new DeserializeMethod($class, [$integer]);
+        $toStringMethod    = new ToStringMethod($integer);
+        $serializeMethod   = new SerializeMethod($class, [$integer]);
+        $deserializeMethod = new DeserializeMethod($class, [$integer]);
 
         return [
             [

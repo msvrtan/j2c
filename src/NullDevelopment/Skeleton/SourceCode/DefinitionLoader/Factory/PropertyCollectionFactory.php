@@ -42,11 +42,11 @@ class PropertyCollectionFactory
     private function getDefaultValues()
     {
         return [
-            'instanceOf'       => 'int',
-            'nullable'         => false,
-            'hasDefault'       => false,
-            'default'          => null,
-            'visibility'       => Visibility::PRIVATE,
+            'instanceOf' => 'int',
+            'nullable'   => false,
+            'hasDefault' => false,
+            'default'    => null,
+            'visibility' => Visibility::PRIVATE,
         ];
     }
 }

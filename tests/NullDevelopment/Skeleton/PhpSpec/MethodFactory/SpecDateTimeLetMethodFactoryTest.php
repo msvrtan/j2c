@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecDateTimeLetMethodFactory
- * @group todo
+ * @group  todo
  */
 class SpecDateTimeLetMethodFactoryTest extends TestCase
 {
