@@ -100,7 +100,7 @@ class UserEntityTest extends TestCase
 
     public function testDeserialize()
     {
-        $serialized = $this->sut->serialize();
-        self::assertEquals($this->sut, UserEntity::deserialize($serialized));
+        $serialized = json_encode($this->sut->serialize());
+        self::assertEquals($this->sut, UserEntity::deserialize(json_decode($serialized,true)));
     }
 }

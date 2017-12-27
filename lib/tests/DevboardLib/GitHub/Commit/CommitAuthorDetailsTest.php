@@ -125,7 +125,7 @@ class CommitAuthorDetailsTest extends TestCase
 
     public function testDeserialize()
     {
-        $serialized = $this->sut->serialize();
-        self::assertEquals($this->sut, CommitAuthorDetails::deserialize($serialized));
+        $serialized = json_encode($this->sut->serialize());
+        self::assertEquals($this->sut, CommitAuthorDetails::deserialize(json_decode($serialized,true)));
     }
 }

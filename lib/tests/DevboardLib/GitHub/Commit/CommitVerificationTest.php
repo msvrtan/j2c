@@ -84,7 +84,7 @@ class CommitVerificationTest extends TestCase
 
     public function testDeserialize()
     {
-        $serialized = $this->sut->serialize();
-        self::assertEquals($this->sut, CommitVerification::deserialize($serialized));
+        $serialized = json_encode($this->sut->serialize());
+        self::assertEquals($this->sut, CommitVerification::deserialize(json_decode($serialized,true)));
     }
 }

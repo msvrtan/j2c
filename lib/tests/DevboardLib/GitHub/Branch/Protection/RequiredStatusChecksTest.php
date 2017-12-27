@@ -62,7 +62,7 @@ class RequiredStatusChecksTest extends TestCase
 
     public function testDeserialize()
     {
-        $serialized = $this->sut->serialize();
-        self::assertEquals($this->sut, RequiredStatusChecks::deserialize($serialized));
+        $serialized = json_encode($this->sut->serialize());
+        self::assertEquals($this->sut, RequiredStatusChecks::deserialize(json_decode($serialized,true)));
     }
 }

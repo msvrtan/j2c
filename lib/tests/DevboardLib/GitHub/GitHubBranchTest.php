@@ -118,7 +118,7 @@ class GitHubBranchTest extends TestCase
 
     public function testDeserialize()
     {
-        $serialized = $this->sut->serialize();
-        self::assertEquals($this->sut, GitHubBranch::deserialize($serialized));
+        $serialized = json_encode($this->sut->serialize());
+        self::assertEquals($this->sut, GitHubBranch::deserialize(json_decode($serialized,true)));
     }
 }

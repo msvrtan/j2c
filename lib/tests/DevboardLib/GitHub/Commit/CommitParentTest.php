@@ -72,7 +72,7 @@ class CommitParentTest extends TestCase
 
     public function testDeserialize()
     {
-        $serialized = $this->sut->serialize();
-        self::assertEquals($this->sut, CommitParent::deserialize($serialized));
+        $serialized = json_encode($this->sut->serialize());
+        self::assertEquals($this->sut, CommitParent::deserialize(json_decode($serialized,true)));
     }
 }

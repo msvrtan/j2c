@@ -181,7 +181,7 @@ class GitHubCommitTest extends TestCase
 
     public function testDeserialize()
     {
-        $serialized = $this->sut->serialize();
-        self::assertEquals($this->sut, GitHubCommit::deserialize($serialized));
+        $serialized = json_encode($this->sut->serialize());
+        self::assertEquals($this->sut, GitHubCommit::deserialize(json_decode($serialized,true)));
     }
 }
