@@ -13,7 +13,7 @@ use PhpSpec\ObjectBehavior;
 
 class RepoEndpointsSpec extends ObjectBehavior
 {
-    public function let(\RepoHtmlUrl $htmlUrl, \RepoApiUrl $url, \RepoGitUrl $gitUrl, \RepoSshUrl $sshUrl)
+    public function let(RepoHtmlUrl $htmlUrl, RepoApiUrl $url, RepoGitUrl $gitUrl, RepoSshUrl $sshUrl)
     {
         $this->beConstructedWith($htmlUrl, $url, $gitUrl, $sshUrl);
     }

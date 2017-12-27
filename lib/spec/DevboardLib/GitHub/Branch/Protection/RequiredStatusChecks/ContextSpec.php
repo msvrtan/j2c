@@ -10,7 +10,7 @@ use PhpSpec\ObjectBehavior;
 
 class ContextSpec extends ObjectBehavior
 {
-    public function let(\ContextId $id)
+    public function let(ContextId $id)
     {
         $this->beConstructedWith($id);
     }

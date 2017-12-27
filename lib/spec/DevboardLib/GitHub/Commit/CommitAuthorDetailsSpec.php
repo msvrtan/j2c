@@ -16,7 +16,7 @@ use PhpSpec\ObjectBehavior;
 
 class CommitAuthorDetailsSpec extends ObjectBehavior
 {
-    public function let(\UserId $id, \UserLogin $login, \AccountType $type, \UserAvatarUrl $avatarUrl, \GravatarId $gravatarId, \UserHtmlUrl $htmlUrl, \UserApiUrl $apiUrl)
+    public function let(UserId $id, UserLogin $login, AccountType $type, UserAvatarUrl $avatarUrl, GravatarId $gravatarId, UserHtmlUrl $htmlUrl, UserApiUrl $apiUrl)
     {
         $this->beConstructedWith($id, $login, $type, $avatarUrl, $gravatarId, $htmlUrl, $apiUrl, $siteAdmin = true);
     }

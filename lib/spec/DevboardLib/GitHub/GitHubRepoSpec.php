@@ -24,7 +24,7 @@ use PhpSpec\ObjectBehavior;
  */
 class GitHubRepoSpec extends ObjectBehavior
 {
-    public function let(\RepoId $id, \RepoFullName $fullName, \RepoOwner $owner, \BranchName $defaultBranch, \RepoDescription $description, \RepoHomepage $homepage, \RepoLanguage $language, \RepoMirrorUrl $mirrorUrl, \RepoEndpoints $repoEndpoints, \RepoStats $repoStats, \RepoTimestamps $repoTimestamps)
+    public function let(RepoId $id, RepoFullName $fullName, RepoOwner $owner, BranchName $defaultBranch, RepoDescription $description, RepoHomepage $homepage, RepoLanguage $language, RepoMirrorUrl $mirrorUrl, RepoEndpoints $repoEndpoints, RepoStats $repoStats, RepoTimestamps $repoTimestamps)
     {
         $this->beConstructedWith($id, $fullName, $owner, $private = true, $defaultBranch, $fork = true, $description, $homepage, $language, $mirrorUrl, $archived = true, $repoEndpoints, $repoStats, $repoTimestamps);
     }

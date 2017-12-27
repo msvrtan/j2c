@@ -11,7 +11,7 @@ use PhpSpec\ObjectBehavior;
 
 class CommitTreeSpec extends ObjectBehavior
 {
-    public function let(\TreeSha $sha, \TreeUrl $url)
+    public function let(TreeSha $sha, TreeUrl $url)
     {
         $this->beConstructedWith($sha, $url);
     }

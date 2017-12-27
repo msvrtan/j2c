@@ -13,7 +13,7 @@ use PhpSpec\ObjectBehavior;
 
 class CommitCommitterSpec extends ObjectBehavior
 {
-    public function let(\CommitterName $name, \EmailAddress $email, \CommitDate $date, \CommitCommitterDetails $committerDetails)
+    public function let(CommitterName $name, EmailAddress $email, CommitDate $date, CommitCommitterDetails $committerDetails)
     {
         $this->beConstructedWith($name, $email, $date, $committerDetails);
     }

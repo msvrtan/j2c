@@ -23,7 +23,7 @@ use PhpSpec\ObjectBehavior;
  */
 class GitHubCommitSpec extends ObjectBehavior
 {
-    public function let(\CommitSha $sha, \CommitMessage $message, \CommitDate $commitDate, \CommitAuthor $author, \CommitCommitter $committer, \CommitTree $tree, \CommitParentCollection $parents, \CommitVerification $verification, \CommitApiUrl $apiUrl, \CommitHtmlUrl $htmlUrl)
+    public function let(CommitSha $sha, CommitMessage $message, CommitDate $commitDate, CommitAuthor $author, CommitCommitter $committer, CommitTree $tree, CommitParentCollection $parents, CommitVerification $verification, CommitApiUrl $apiUrl, CommitHtmlUrl $htmlUrl)
     {
         $this->beConstructedWith($sha, $message, $commitDate, $author, $committer, $tree, $parents, $verification, $apiUrl, $htmlUrl);
     }

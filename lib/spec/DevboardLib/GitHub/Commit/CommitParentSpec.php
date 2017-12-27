@@ -12,7 +12,7 @@ use PhpSpec\ObjectBehavior;
 
 class CommitParentSpec extends ObjectBehavior
 {
-    public function let(\CommitSha $sha, \ParentApiUrl $apiUrl, \ParentHtmlUrl $htmlUrl)
+    public function let(CommitSha $sha, ParentApiUrl $apiUrl, ParentHtmlUrl $htmlUrl)
     {
         $this->beConstructedWith($sha, $apiUrl, $htmlUrl);
     }

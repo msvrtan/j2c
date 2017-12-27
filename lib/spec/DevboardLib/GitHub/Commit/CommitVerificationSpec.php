@@ -13,7 +13,7 @@ use PhpSpec\ObjectBehavior;
 
 class CommitVerificationSpec extends ObjectBehavior
 {
-    public function let(\VerificationVerified $verified, \VerificationReason $reason, \VerificationSignature $signature, \VerificationPayload $payload)
+    public function let(VerificationVerified $verified, VerificationReason $reason, VerificationSignature $signature, VerificationPayload $payload)
     {
         $this->beConstructedWith($verified, $reason, $signature, $payload);
     }
