@@ -6,7 +6,7 @@ use PhpSpec\ObjectBehavior;
 
 class UserEntitySpec extends ObjectBehavior
 {
-	public function let(\UserFirstName $firstName)
+	public function let(UserFirstName $firstName)
 	{
 		$this->beConstructedWith($firstName);
 	}
