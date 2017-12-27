@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\Skeleton\PhpSpec\MethodGenerator;
 
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\PhpSpec\Method\LetMethod;
 use NullDevelopment\Skeleton\PhpSpec\MethodGenerator\LetMethodGenerator;
@@ -55,15 +52,7 @@ class LetMethodGeneratorTest extends TestCase
     public function provideMethods(): array
     {
         $firstName = Fixtures::firstNameProperty();
-
-        $name = new Property(
-            'name',
-            ClassName::create('string'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $name      = Fixtures::nameProperty();
 
         return [
             [new LetMethod([]), 'let.empty.output'],

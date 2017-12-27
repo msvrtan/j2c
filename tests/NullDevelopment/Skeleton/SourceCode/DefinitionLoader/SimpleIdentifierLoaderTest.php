@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Tests\NullDevelopment\Skeleton\SourceCode\DefinitionLoader;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Definition\SimpleIdentifier;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleIdentifierLoader;
@@ -64,7 +62,7 @@ class SimpleIdentifierLoaderTest extends SfTestCase
 
     public function provideInputs(): array
     {
-        $nameProperty  = new Property('name', ClassName::create('string'), false, false, null, new Visibility('private'));
+        $nameProperty  = Fixtures::nameProperty();
         $idProperty    = Fixtures::integerIdProperty();
 
         return [
