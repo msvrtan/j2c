@@ -44,8 +44,8 @@ class TestDeserializeMethodGeneratorSpec extends ObjectBehavior
         $lines = [
             'public function testDeserialize()',
             '{',
-            "\t".'$serialized = $this->sut->serialize();',
-            "\t".'self::assertEquals($this->sut, UserEntity::deserialize($serialized));',
+            "\t".'$serialized = json_encode($this->sut->serialize());',
+            "\t".'self::assertEquals($this->sut, UserEntity::deserialize(json_decode($serialized,true)));',
             '}',
         ];
 

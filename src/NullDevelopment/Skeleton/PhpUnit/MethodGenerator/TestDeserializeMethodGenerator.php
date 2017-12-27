@@ -38,9 +38,9 @@ class TestDeserializeMethodGenerator extends BaseTestMethodGenerator
             }
         } else {
             $code
-                ->addBody('$serialized = $this->sut->serialize();')
+                ->addBody('$serialized = json_encode($this->sut->serialize());')
                 ->addBody(
-                    'self::assertEquals($this->sut, '.$method->getClassName()->getName().'::deserialize($serialized));'
+                    'self::assertEquals($this->sut, '.$method->getClassName()->getName().'::deserialize(json_decode($serialized,true)));'
                 );
         }
     }
