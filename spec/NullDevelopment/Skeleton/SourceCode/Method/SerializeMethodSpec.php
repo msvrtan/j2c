@@ -51,7 +51,8 @@ class SerializeMethodSpec extends ObjectBehavior
 
     public function it_exposes_return_type(Property $property1)
     {
-        $property1->getInstanceNameAsString()->shouldBeCalled()->willReturn('string');
+        $property1->isObject()->shouldBeCalled()->willReturn(false);
+        $property1->getInstanceFullName()->shouldBeCalled()->willReturn('string');
         $this->getReturnType()->shouldReturn('string');
     }
 

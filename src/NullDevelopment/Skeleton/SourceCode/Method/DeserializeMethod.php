@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace NullDevelopment\Skeleton\SourceCode\Method;
 
 use NullDevelopment\PhpStructure\Behaviour\Method;
+use NullDevelopment\PhpStructure\DataType\MethodParameter;
 use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\SimpleVariable;
 use NullDevelopment\PhpStructure\DataType\Variable;
 use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
@@ -56,9 +56,9 @@ class DeserializeMethod implements Method
     public function getParameters(): array
     {
         if (0 === count($this->properties)) {
-            return [new SimpleVariable('data', ClassName::create('array'))];
+            return [new MethodParameter('data', ClassName::create('array'), false, false, null)];
         } elseif (count($this->properties) > 1) {
-            return [new SimpleVariable('data', ClassName::create('array'))];
+            return [new MethodParameter('data', ClassName::create('array'), false, false, null)];
         } else {
             return $this->properties;
         }

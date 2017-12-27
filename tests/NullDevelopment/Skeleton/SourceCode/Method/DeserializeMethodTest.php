@@ -7,7 +7,7 @@ namespace Tests\NullDevelopment\Skeleton\SourceCode\Method;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use Mockery\MockInterface;
-use NullDevelopment\PhpStructure\DataType\SimpleVariable;
+use NullDevelopment\PhpStructure\DataType\MethodParameter;
 use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
@@ -56,7 +56,10 @@ class DeserializeMethodTest extends TestCase
 
     public function testGetParameters()
     {
-        self::assertEquals([new SimpleVariable('data', ClassName::create('array'))], $this->sut->getParameters());
+        self::assertEquals(
+            [new MethodParameter('data', ClassName::create('array'), false, false, null)],
+            $this->sut->getParameters()
+        );
     }
 
     public function testGetReturnType()

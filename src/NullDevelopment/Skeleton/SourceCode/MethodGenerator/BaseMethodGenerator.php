@@ -34,6 +34,10 @@ abstract class BaseMethodGenerator implements MethodGenerator
             $parameterCode = $code->addParameter($parameter->getName())
                 ->setTypeHint($parameter->getInstanceFullName());
 
+            if (true === $parameter->isNullable()) {
+                $parameterCode->setNullable(true);
+            }
+
             if (true === $parameter->hasDefaultValue()) {
                 $parameterCode->setDefaultValue($parameter->getDefaultValue());
             }

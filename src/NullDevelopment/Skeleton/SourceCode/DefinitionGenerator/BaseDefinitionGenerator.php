@@ -61,7 +61,11 @@ abstract class BaseDefinitionGenerator implements DefinitionGenerator
             if (true === $property->hasDefaultValue()) {
                 $propertyCode->setValue($property->getDefaultValue());
             }
-            $propertyCode->addComment(sprintf('@var %s', $property->getInstanceNameAsString()));
+            if (true === $property->isNullable()) {
+                $propertyCode->addComment(sprintf('@var %s|null', $property->getInstanceNameAsString()));
+            } else {
+                $propertyCode->addComment(sprintf('@var %s', $property->getInstanceNameAsString()));
+            }
 
             if (true === $property->isObject()) {
                 $namespace->addUse($property->getInstanceFullName());
@@ -81,6 +85,12 @@ abstract class BaseDefinitionGenerator implements DefinitionGenerator
         }
 
         $code->setMethods($methods);
+
+        //@TODO: move this to a middleware!
+        if (count($namespace->getUses()) > 10) {
+            $code->addComment('@SuppressWarnings(PHPMD.CouplingBetweenObjects)');
+            $code->addComment('@SuppressWarnings(PHPMD.ExcessiveParameterList)');
+        }
 
         return $namespace;
     }

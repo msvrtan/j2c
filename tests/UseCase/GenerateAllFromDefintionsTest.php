@@ -12,6 +12,7 @@ use NullDevelopment\Skeleton\SourceCode\DefinitionLoaderCollection;
 use SplFileInfo;
 use Symfony\Component\Filesystem\Filesystem;
 use Tests\TestCase\SfTestCase;
+use Throwable;
 
 class GenerateAllFromDefintionsTest extends SfTestCase
 {
@@ -28,23 +29,21 @@ class GenerateAllFromDefintionsTest extends SfTestCase
             if (false === in_array($input['type'], $generateList)) {
                 continue;
             }
-            try{
+            try {
+                $definition = $loaderCollection->findAndLoad($input);
 
-            $definition = $loaderCollection->findAndLoad($input);
+                $results = $commandBus->handle($definition);
 
-            $results = $commandBus->handle($definition);
+                self::assertCount(2, $results);
+                foreach ($results as $result) {
+                    $fileName = $fileFactory->getPath2($result->getClassType()->getName());
 
-            self::assertCount(2, $results);
-            foreach ($results as $result) {
-                $fileName = $fileFactory->getPath2($result->getClassType()->getName());
-
-                $generated = $result->getGenerated();
-                $output    = '<?php'.PHP_EOL.PHP_EOL.'declare(strict_types=1);'.PHP_EOL.PHP_EOL.str_replace("\t", '    ', $generated);
-                $fileSystem->dumpFile($fileName, $output);
-            }
-
-            }catch (\Throwable $exception){
-                var_dump($exception->getMessage());
+                    $generated = $result->getGenerated();
+                    $output    = '<?php'.PHP_EOL.PHP_EOL.'declare(strict_types=1);'.PHP_EOL.PHP_EOL.str_replace("\t", '    ', $generated);
+                    $fileSystem->dumpFile($fileName, $output);
+                }
+            } catch (Throwable $exception) {
+                echo $exception->getMessage().PHP_EOL;
             }
         }
         self::assertTrue(true);

@@ -8,6 +8,7 @@ use NullDevelopment\PhpStructure\Behaviour\Method;
 use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
+use Roave\BetterReflection\BetterReflection;
 use Webmozart\Assert\Assert;
 
 /**
@@ -63,7 +64,21 @@ class SerializeMethod implements Method
         } elseif (count($this->properties) > 1) {
             return 'array';
         } else {
-            return $this->properties[0]->getInstanceNameAsString();
+            $property = $this->properties[0];
+
+            if (true === $property->isObject()) {
+                $refl = (new BetterReflection())
+                    ->classReflector()
+                    ->reflect($property->getInstanceFullName());
+
+                if (count($refl->getConstructor()->getParameters()) > 1) {
+                    return 'array';
+                }
+
+                return $refl->getConstructor()->getParameters()[0]->getType()->__toString();
+            } else {
+                return $property->getInstanceFullName();
+            }
         }
     }
 
