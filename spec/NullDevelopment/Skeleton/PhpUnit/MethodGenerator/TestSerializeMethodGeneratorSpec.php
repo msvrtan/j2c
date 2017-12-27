@@ -7,7 +7,6 @@ namespace spec\NullDevelopment\Skeleton\PhpUnit\MethodGenerator;
 use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
-use NullDevelopment\Skeleton\ExampleMaker\SimpleExample;
 use NullDevelopment\Skeleton\PhpUnit\Method\TestSerializeMethod;
 use NullDevelopment\Skeleton\PhpUnit\MethodGenerator\TestSerializeMethodGenerator;
 use NullDevelopment\Skeleton\SourceCode\MethodGenerator;
@@ -27,7 +26,6 @@ class TestSerializeMethodGeneratorSpec extends ObjectBehavior
     }
 
     public function it_creates_test_serialize_method_for_object_properties(
-        ExampleMaker $exampleMaker,
         TestSerializeMethod $method,
         Property $property
     ) {
@@ -38,9 +36,6 @@ class TestSerializeMethodGeneratorSpec extends ObjectBehavior
 
         $property->isObject()->shouldBeCalled()->willReturn(true);
         $property->getName()->shouldBeCalled()->willReturn('firstName');
-        //$property->getInstanceFullName()->shouldBeCalled()->willReturn('MyVendor\\User\\UserFirstName');
-
-        //$exampleMaker->value($property)->shouldBeCalled()->willReturn(new SimpleExample('firstName'));
 
         $lines = [
             'public function testSerialize()',

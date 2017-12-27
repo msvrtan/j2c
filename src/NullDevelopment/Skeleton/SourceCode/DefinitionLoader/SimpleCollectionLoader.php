@@ -12,8 +12,6 @@ use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\ConstructorMeth
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\InterfaceNameCollectionFactory;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\PropertyCollectionFactory;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\Factory\TraitNameCollectionFactory;
-use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
-use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
 
 /**
  * @see SimpleCollectionLoaderSpec
@@ -62,9 +60,6 @@ class SimpleCollectionLoader implements DefinitionLoader
         $properties        = $this->propertyCollectionFactory->create(array_merge($data['properties'], $data['constructor']));
         $constructorMethod = $this->constructorMethodFactory->create($data['constructor']);
         $methods           = [$constructorMethod];
-
-        //$methods[] = new SerializeMethod($className, $properties);
-        //$methods[] = new DeserializeMethod($className, $properties);
 
         $collectionOf      = new CollectionOf(
             ClassName::create($data['collectionOf']['instanceOf']),

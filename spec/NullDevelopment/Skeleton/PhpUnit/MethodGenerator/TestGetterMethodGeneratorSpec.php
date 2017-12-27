@@ -35,9 +35,7 @@ class TestGetterMethodGeneratorSpec extends ObjectBehavior
         $method->getProperty()->shouldBeCalled()->willReturn($property);
         $method->getMethodUnderTest()->shouldBeCalled()->willReturn('getFirstName');
 
-        //$property->isObject()->shouldBeCalled()->willReturn(true);
         $property->getName()->shouldBeCalled()->willReturn('firstName');
-        //$property->getInstanceFullName()->shouldBeCalled()->willReturn('MyVendor\\User\\UserFirstName');
 
         $lines = [
             'public function testGetFirstName()',

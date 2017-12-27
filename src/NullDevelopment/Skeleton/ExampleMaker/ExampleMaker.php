@@ -9,7 +9,6 @@ use Exception;
 use NullDevelopment\PhpStructure\DataType\SimpleVariable;
 use NullDevelopment\PhpStructure\DataType\Variable;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
-use ReflectionClass;
 use Roave\BetterReflection\BetterReflection;
 
 /**
@@ -35,8 +34,6 @@ class ExampleMaker
         $refl = (new BetterReflection())
             ->classReflector()
             ->reflect($variable->getInstanceFullName());
-
-        //$refl = new ReflectionClass($variable->getInstanceFullName());
 
         while ($parent = $refl->getParentClass()) {
             if (DateTime::class === $parent->getName()) {
@@ -70,7 +67,6 @@ class ExampleMaker
 
                 $arguments[] = $this->instance($paramAsVar);
             } else {
-                //var_dump($parameter);
                 throw new Exception('Err xxx1: Ha? No type on param?');
             }
         }
@@ -102,8 +98,6 @@ class ExampleMaker
         $refl = (new BetterReflection())
             ->classReflector()
             ->reflect($variable->getInstanceFullName());
-
-        //$refl = new ReflectionClass($variable->getInstanceFullName());
 
         while ($parent = $refl->getParentClass()) {
             if (DateTime::class === $parent->getName()) {
@@ -137,7 +131,6 @@ class ExampleMaker
 
                 $arguments[$parameter->getName()] = $this->value($paramAsVar);
             } else {
-                //var_dump($parameter);
                 throw new Exception('Err xxx2: Ha? No type on param?');
             }
         }

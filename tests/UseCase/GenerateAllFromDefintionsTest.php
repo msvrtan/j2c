@@ -24,8 +24,7 @@ class GenerateAllFromDefintionsTest extends SfTestCase
         $fileFactory      = $this->getService(FileFactory::class);
 
         $generateList = ['SingleValueObject', 'SimpleIdentifier', 'DateTimeValueObject', 'SimpleEntity', 'SimpleCollection'];
-        //$generateList = ['SingleValueObject', 'SimpleIdentifier', 'DateTimeValueObject'];
-        $generateList = ['SimpleCollection'];
+        $generateList = ['SingleValueObject', 'SimpleIdentifier', 'DateTimeValueObject'];
 
         foreach ($this->provideInput() as $input) {
             if (false === in_array($input['type'], $generateList)) {

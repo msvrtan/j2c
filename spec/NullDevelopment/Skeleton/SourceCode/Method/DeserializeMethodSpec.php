@@ -47,7 +47,6 @@ class DeserializeMethodSpec extends ObjectBehavior
      */
     public function it_has_parameters(Property $property1)
     {
-        //$property1->getInstanceNameAsString()->shouldBeCalled()->willReturn('string');
         $this->getParameters()->shouldBeLike([$property1]);
     }
 

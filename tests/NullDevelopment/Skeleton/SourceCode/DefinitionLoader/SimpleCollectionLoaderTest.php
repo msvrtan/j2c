@@ -12,8 +12,6 @@ use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Definition\SimpleCollection;
 use NullDevelopment\Skeleton\SourceCode\DefinitionLoader\SimpleCollectionLoader;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
-use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
-use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -92,8 +90,6 @@ class SimpleCollectionLoaderTest extends SfTestCase
                     [$elements],
                     [
                         new ConstructorMethod([$elements]),
-                        //new SerializeMethod(ClassName::create('MyVendor\UserCollection'), [$elements]),
-                        //new DeserializeMethod(ClassName::create('MyVendor\UserCollection'), [$elements]),
                     ],
                     new CollectionOf(
                         ClassName::create('MyVendor\UserEntity'),
