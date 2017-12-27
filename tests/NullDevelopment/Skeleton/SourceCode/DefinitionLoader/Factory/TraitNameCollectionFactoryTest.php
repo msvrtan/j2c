@@ -25,8 +25,8 @@ class TraitNameCollectionFactoryTest extends TestCase
     public function testCreate()
     {
         $input = [
-            'MyCompany\\SomeTrait',
-            'MyCompany\\AnotherTrait',
+            'MyVendor\SomeTrait',
+            'MyVendor\AnotherTrait',
         ];
 
         $resultCollection = $this->sut->create($input);

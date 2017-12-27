@@ -2,27 +2,38 @@
 
 declare(strict_types=1);
 
-namespace NullDevelopment\Skeleton\SourceCode\DefinitionGenerator;
+namespace NullDevelopment\Skeleton\PhpUnit\DefinitionGenerator;
 
 use Nette\PhpGenerator\PhpNamespace;
+use NullDevelopment\PhpStructure\DataType\SimpleVariable;
+use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\Type\ClassType;
+use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
+use NullDevelopment\Skeleton\PhpUnit\Definition\TestSimpleCollection;
 use NullDevelopment\Skeleton\SourceCode\DefinitionGenerator;
-use NullDevelopment\Skeleton\SourceCode\MethodGenerator;
-use Webmozart\Assert\Assert;
 
-/** @SuppressWarnings("PHPMD.NumberOfChildren") */
-abstract class BaseDefinitionGenerator implements DefinitionGenerator
+/**
+ * @see TestSimpleCollectionGeneratorSpec
+ * @see TestSimpleCollectionGeneratorTest
+ */
+class TestSimpleCollectionGenerator implements DefinitionGenerator
 {
-    /** @var MethodGenerator[] */
-    private $methodGenerators;
+    /** @var ExampleMaker */
+    private $exampleMaker;
 
-    public function __construct(array $methodGenerators)
+    public function __construct(ExampleMaker $exampleMaker)
     {
-        Assert::allIsInstanceOf($methodGenerators, MethodGenerator::class);
-        $this->methodGenerators = $methodGenerators;
+        $this->exampleMaker = $exampleMaker;
     }
 
-    abstract public function supports(ClassType $definition): bool;
+    public function supports(ClassType $definition): bool
+    {
+        if ($definition instanceof TestSimpleCollection) {
+            return true;
+        }
+
+        return false;
+    }
 
     public function generateAsString(ClassType $definition): string
     {
@@ -72,26 +83,27 @@ abstract class BaseDefinitionGenerator implements DefinitionGenerator
                 $namespace->addUse($property->getInstanceFullName());
             }
         }
-        $methods = [];
 
-        foreach ($this->methodGenerators as $methodGenerator) {
-            foreach ($definition->getMethods() as $method) {
-                if (true === $methodGenerator->supports($method)) {
-                    $methods[] = $methodGenerator->generate($method);
-                    foreach ($method->getImports() as $import) {
-                        $namespace->addUse($import);
-                    }
-                }
-            }
+        $var = new SimpleVariable('zzz', $definition->getCollectionOf()->getClassName());
+
+        $exampleValue =$this->exampleMaker->instance($var);
+
+        foreach ($exampleValue->classesToImport() as $codeToImport) {
+            $namespace->addUse($codeToImport->getFullName());
         }
 
-        $code->setMethods($methods);
+        $code->addMethod('setUp')
+                ->setVisibility(Visibility::PUBLIC)
+                ->addBody(sprintf('$this->elements = [%s];', $exampleValue))
+                ->addBody(sprintf('$this->sut = new %s(%s);', substr($definition->getClassName(), 0, -4), '$this->elements'));
 
-        //@TODO: move this to a middleware!
-        if (count($namespace->getUses()) > 10) {
-            $code->addComment('@SuppressWarnings(PHPMD.CouplingBetweenObjects)');
-            $code->addComment('@SuppressWarnings(PHPMD.ExcessiveParameterList)');
-        }
+        $code->addMethod('testGetElements')
+                ->addBody('self::assertSame($this->elements, $this->sut->toArray());');
+
+        $code->addMethod('testSerializeAndDeserialize')
+                ->addBody('$serialized = $this->sut->serialize();')
+                ->addBody('$serializedJson = json_encode($serialized);')
+                ->addBody('self::assertEquals($this->sut, $this->sut->deserialize(json_decode($serializedJson, true)));');
 
         return $namespace;
     }

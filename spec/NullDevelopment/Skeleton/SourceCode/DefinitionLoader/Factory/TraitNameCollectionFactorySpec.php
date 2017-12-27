@@ -23,8 +23,8 @@ class TraitNameCollectionFactorySpec extends ObjectBehavior
     public function it_will_convert_list_of_trait_name_strings_to_trait_name_collection()
     {
         $input = [
-            'MyCompany\\SomeTrait',
-            'MyCompany\\AnotherTrait',
+            'MyVendor\SomeTrait',
+            'MyVendor\AnotherTrait',
         ];
 
         $resultCollection = $this->create($input);

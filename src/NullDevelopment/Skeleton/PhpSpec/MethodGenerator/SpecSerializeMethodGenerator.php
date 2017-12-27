@@ -68,6 +68,12 @@ class SpecSerializeMethodGenerator implements MethodGenerator
         if (1 === count($method->getProperties())) {
             $property = $method->getProperties()[0];
             $value    = $this->exampleMaker->value($property);
+
+            if (true === $property->isObject()) {
+                $code->addBody(
+                    sprintf('$%s->serialize()->shouldBeCalled()->willReturn(%s);', $property->getName(), $value)
+                );
+            }
         } else {
             $values = [];
             foreach ($method->getProperties() as $property) {

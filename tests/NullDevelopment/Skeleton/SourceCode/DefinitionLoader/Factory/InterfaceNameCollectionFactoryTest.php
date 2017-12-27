@@ -27,8 +27,8 @@ class InterfaceNameCollectionFactoryTest extends TestCase
     public function testCreate()
     {
         $input = [
-            'MyCompany\\SomeInterface',
-            'MyCompany\\AnotherInterface',
+            'MyVendor\SomeInterface',
+            'MyVendor\AnotherInterface',
         ];
 
         $resultCollection = $this->sut->create($input);

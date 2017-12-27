@@ -46,6 +46,7 @@ class SpecSerializeMethodGeneratorSpec extends ObjectBehavior
         $lines = [
             'public function it_can_be_serialized(MyVendor\User\UserFirstName $firstName)',
             '{',
+            "\t".'$firstName->serialize()->shouldBeCalled()->willReturn(\'firstName\');',
             "\t"."\$this->serialize()->shouldReturn('firstName');",
             '}',
         ];
@@ -103,7 +104,7 @@ class SpecSerializeMethodGeneratorSpec extends ObjectBehavior
         $method->getParameters()->shouldBeCalled()->willReturn([]);
         $method->getProperties()->shouldBeCalled()->willReturn([$firstName]);
 
-        //$firstName->isObject()->shouldBeCalled()->willReturn(false);
+        $firstName->isObject()->shouldBeCalled()->willReturn(false);
         $exampleMaker->value($firstName)->shouldBeCalled()->willReturn(new SimpleExample('name'));
 
         $lines = [

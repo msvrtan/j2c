@@ -16,6 +16,7 @@ use Webmozart\Assert\Assert;
 /**
  * @see ClassTypeSpec
  * @see ClassTypeTest
+ * @SuppressWarnings("PHPMD.NumberOfChildren")
  */
 class ClassType
 {

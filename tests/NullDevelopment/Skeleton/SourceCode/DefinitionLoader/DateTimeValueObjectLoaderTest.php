@@ -57,13 +57,13 @@ class DateTimeValueObjectLoaderTest extends SfTestCase
 
     public function provideInputs(): array
     {
-        $className = ClassName::create('MyCompany\User\UserCreatedAt');
+        $className = ClassName::create('MyVendor\User\UserCreatedAt');
 
         return [
             [
                 [
                     'type'       => 'DateTimeValueObject',
-                    'instanceOf' => 'MyCompany\User\UserCreatedAt',
+                    'instanceOf' => 'MyVendor\User\UserCreatedAt',
                 ],
                 new DateTimeValueObject(
                     $className,
