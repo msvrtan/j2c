@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\Skeleton\SourceCode\MethodGenerator;
 
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
 use NullDevelopment\Skeleton\SourceCode\MethodGenerator\SerializeMethodGenerator;
@@ -52,14 +50,7 @@ class SerializeMethodGeneratorTest extends TestCase
     {
         $className = ClassName::create('MyVendor\\UserEntity');
         $firstName = Fixtures::firstNameProperty();
-        $name      = new Property(
-            'name',
-            ClassName::create('string'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $name      = Fixtures::nameProperty();
 
         return [
             [new SerializeMethod($className, [$firstName]), 'serialize.first_name.output'],

@@ -15,6 +15,7 @@ use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod;
+use Tests\TestCase\Fixtures;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -63,7 +64,7 @@ class SingleValueObjectLoaderTest extends SfTestCase
 
     public function provideInputs(): array
     {
-        $nameProperty  = new Property('name', ClassName::create('string'), false, false, null, new Visibility('private'));
+        $nameProperty  = Fixtures::nameProperty();
         $valueProperty = new Property('value', ClassName::create('string'), false, false, null, new Visibility('private'));
 
         return [

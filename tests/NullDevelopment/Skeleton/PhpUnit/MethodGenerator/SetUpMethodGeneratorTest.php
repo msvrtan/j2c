@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\Skeleton\PhpUnit\MethodGenerator;
 
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\PhpUnit\Method\SetUpMethod;
@@ -57,14 +55,7 @@ class SetUpMethodGeneratorTest extends TestCase
         $className = ClassName::create('MyVendor\\UserEntity');
         $firstName = Fixtures::firstNameProperty();
 
-        $name = new Property(
-            'name',
-            ClassName::create('string'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $name = Fixtures::nameProperty();
 
         return [
             [new SetUpMethod($className, []), 'setup.empty.output'],

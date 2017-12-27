@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\Skeleton\SourceCode\MethodGenerator;
 
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use NullDevelopment\Skeleton\SourceCode\MethodGenerator\DeserializeMethodGenerator;
@@ -52,14 +50,7 @@ class DeserializeMethodGeneratorTest extends TestCase
     {
         $className = ClassName::create('MyVendor\\UserEntity');
         $firstName = Fixtures::firstNameProperty();
-        $name      = new Property(
-            'name',
-            ClassName::create('string'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $name      = Fixtures::nameProperty();
 
         return [
             [new DeserializeMethod($className, [$firstName]), 'deserialize.first_name.output'],
