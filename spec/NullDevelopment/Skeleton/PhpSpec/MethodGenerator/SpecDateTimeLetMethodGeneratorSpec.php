@@ -34,7 +34,7 @@ class SpecDateTimeLetMethodGeneratorSpec extends ObjectBehavior
         $lines = [
             'public function let()',
             '{',
-            "\t".'$this->beConstructedWith(\'2018-01-01 11:22:33\');',
+            "\t".'$this->beConstructedWith(\'2018-01-01T11:22:33+00:00\');',
             '}',
         ];
 

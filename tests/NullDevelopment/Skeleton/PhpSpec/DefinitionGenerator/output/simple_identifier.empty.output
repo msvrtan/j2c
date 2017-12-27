@@ -1,0 +1,31 @@
+namespace spec\MyVendor\Webshop;
+
+use MyVendor\User\UserFirstName;
+use MyVendor\Webshop\UserEntity;
+use PhpSpec\ObjectBehavior;
+
+class UserEntitySpec extends ObjectBehavior
+{
+	public function let(UserFirstName $firstName)
+	{
+		$this->beConstructedWith($firstName);
+	}
+
+
+	public function it_is_initializable()
+	{
+		$this->shouldHaveType(UserEntity::class);
+	}
+
+
+	public function it_exposes_first_name(UserFirstName $firstName)
+	{
+		$this->getFirstName()->shouldReturn($firstName);
+	}
+
+
+	public function it_exposes_value(UserFirstName $firstName)
+	{
+		$this->getValue()->shouldReturn($firstName);
+	}
+}

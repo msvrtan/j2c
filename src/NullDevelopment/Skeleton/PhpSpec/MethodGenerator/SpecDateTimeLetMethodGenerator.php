@@ -57,6 +57,6 @@ class SpecDateTimeLetMethodGenerator implements MethodGenerator
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
     protected function generateMethodBody($method, NetteMethod $code)
     {
-        $code->addBody('$this->beConstructedWith(\'2018-01-01 11:22:33\');');
+        $code->addBody('$this->beConstructedWith(\'2018-01-01T11:22:33+00:00\');');
     }
 }

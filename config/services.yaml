@@ -2,6 +2,7 @@ imports:
     - { resource: 'tactician-services.yaml' }
     - { resource: 'services/source-code-definition-services.yaml' }
     - { resource: 'services/phpspec-definition-services.yaml' }
+    - { resource: 'services/phpunit-definition-services.yaml' }
     - { resource: 'services/middleware-services.yaml' }
     - { resource: 'services/misc-services.yaml' }
 parameters:

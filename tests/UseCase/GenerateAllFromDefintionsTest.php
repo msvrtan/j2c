@@ -24,6 +24,7 @@ class GenerateAllFromDefintionsTest extends SfTestCase
         $fileFactory      = $this->getService(FileFactory::class);
 
         $generateList = ['SingleValueObject', 'SimpleIdentifier', 'DateTimeValueObject', 'SimpleEntity'];
+        $generateList = ['SingleValueObject', 'SimpleIdentifier', 'DateTimeValueObject'];
 
         foreach ($this->provideInput() as $input) {
             if (false === in_array($input['type'], $generateList)) {
@@ -34,7 +35,7 @@ class GenerateAllFromDefintionsTest extends SfTestCase
 
                 $results = $commandBus->handle($definition);
 
-                self::assertCount(2, $results);
+                self::assertCount(3, $results);
                 foreach ($results as $result) {
                     $fileName = $fileFactory->getPath2($result->getClassType()->getName());
 

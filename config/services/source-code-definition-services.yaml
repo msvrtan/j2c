@@ -41,7 +41,6 @@ services:
       $methodGenerators:
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator'
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\GetterMethodGenerator'
-        - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\ToStringMethodGenerator'
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\SerializeMethodGenerator'
         - '@NullDevelopment\Skeleton\SourceCode\MethodGenerator\DeserializeMethodGenerator'
     tags:

@@ -81,6 +81,8 @@ class SpecSerializeMethodGeneratorSpec extends ObjectBehavior
         $lines = [
             'public function it_can_be_serialized(MyVendor\User\UserFirstName $firstName, MyVendor\User\UserFirstName $lastName)',
             '{',
+            "\t".'$firstName->serialize()->shouldBeCalled()->willReturn(\'firstName\');',
+            "\t".'$lastName->serialize()->shouldBeCalled()->willReturn(\'lastName\');',
             "\t"."\$this->serialize()->shouldReturn(['firstName' => 'firstName', 'lastName' => 'lastName']);",
             '}',
         ];

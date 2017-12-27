@@ -40,7 +40,7 @@ class ExampleMaker
 
         while ($parent = $refl->getParentClass()) {
             if (DateTime::class === $parent->getName()) {
-                return new InstanceExample($variable->getInstanceName(), [new SimpleExample('2018-01-01 00:01:00')]);
+                return new InstanceExample($variable->getInstanceName(), [new SimpleExample('2018-01-01T00:01:00+00:00')]);
             }
         }
 
@@ -96,7 +96,7 @@ class ExampleMaker
             case 'array':
                 return new ArrayExample([new SimpleExample('data')]);
             case 'DateTime':
-                return new SimpleExample('2018-01-01 00:01:00');
+                return new SimpleExample('2018-01-01T00:01:00+00:00');
         }
 
         $refl = (new BetterReflection())
@@ -107,7 +107,7 @@ class ExampleMaker
 
         while ($parent = $refl->getParentClass()) {
             if (DateTime::class === $parent->getName()) {
-                return new SimpleExample('2018-01-01 00:01:00');
+                return new SimpleExample('2018-01-01T00:01:00+00:00');
             }
         }
 
@@ -131,7 +131,7 @@ class ExampleMaker
                 }
 
                 $paramAsVar = new SimpleVariable(
-                    $variable->getName(),
+                    $parameter->getName(),
                     ClassName::create($parameter->getType()->__toString())
                 );
 
