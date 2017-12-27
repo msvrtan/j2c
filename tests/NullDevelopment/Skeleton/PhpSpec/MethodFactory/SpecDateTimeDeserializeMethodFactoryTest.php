@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecDateTimeDeserializeMethodFactory
- * @group todo
+ * @group  todo
  */
 class SpecDateTimeDeserializeMethodFactoryTest extends TestCase
 {

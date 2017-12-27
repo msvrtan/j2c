@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\Method\SpecDateTimeToStringMethod
- * @group todo
+ * @group  todo
  */
 class SpecDateTimeToStringMethodTest extends TestCase
 {

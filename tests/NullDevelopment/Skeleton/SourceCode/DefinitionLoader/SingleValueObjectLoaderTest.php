@@ -48,14 +48,14 @@ class SingleValueObjectLoaderTest extends SfTestCase
     public function testGetDefaultValues()
     {
         $expected = [
-            'type'       => 'SingleValueObject',
-            'instanceOf' => null,
-            'parent'     => null,
-            'interfaces' => [],
-            'traits'     => [],
-            'properties' => [],
-            'methods'    => [],
-            'constructor'=> [],
+            'type'        => 'SingleValueObject',
+            'instanceOf'  => null,
+            'parent'      => null,
+            'interfaces'  => [],
+            'traits'      => [],
+            'properties'  => [],
+            'methods'     => [],
+            'constructor' => [],
         ];
 
         $this->assertEquals($expected, $this->sut->getDefaultValues());
@@ -105,7 +105,7 @@ class SingleValueObjectLoaderTest extends SfTestCase
                             'default'    => null,
                         ],
                     ],
-                    'properties' => ['name' => ['instanceOf' => 'string']],
+                    'properties'  => ['name' => ['instanceOf' => 'string']],
                 ],
                 new SingleValueObject(
                     ClassName::create('MyCompany\User\UserName'),

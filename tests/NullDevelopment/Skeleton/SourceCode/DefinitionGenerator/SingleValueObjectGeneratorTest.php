@@ -85,9 +85,9 @@ class SingleValueObjectGeneratorTest extends SfTestCase
         $getterMethod      = new GetterMethod('getFirstName', $firstName);
         $getValueMethod    = new GetterMethod('getValue', $firstName);
 
-        $toStringMethod   = new ToStringMethod($firstName);
-        $serializeMethod  = new SerializeMethod($class, [$firstName]);
-        $deserializeMethod= new DeserializeMethod($class, [$firstName]);
+        $toStringMethod    = new ToStringMethod($firstName);
+        $serializeMethod   = new SerializeMethod($class, [$firstName]);
+        $deserializeMethod = new DeserializeMethod($class, [$firstName]);
 
         return [
             [

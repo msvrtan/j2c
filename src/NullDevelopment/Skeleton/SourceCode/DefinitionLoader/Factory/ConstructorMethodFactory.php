@@ -42,10 +42,10 @@ class ConstructorMethodFactory
     private function getDefaultParameterValues()
     {
         return [
-            'instanceOf'  => 'int',
-            'nullable'    => false,
-            'hasDefault'  => false,
-            'default'     => null,
+            'instanceOf' => 'int',
+            'nullable'   => false,
+            'hasDefault' => false,
+            'default'    => null,
         ];
     }
 }

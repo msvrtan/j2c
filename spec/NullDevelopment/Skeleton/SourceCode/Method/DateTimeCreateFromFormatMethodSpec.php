@@ -36,11 +36,13 @@ class DateTimeCreateFromFormatMethodSpec extends ObjectBehavior
 
     public function it_has_no_parameters()
     {
-        $this->getParameters()->shouldBeLike([
-            new MethodParameter('format', new ClassName('', ''), false, false, null),
-            new MethodParameter('time', new ClassName('', ''), false, false, null),
-            new MethodParameter('object', new ClassName('', ''), false, true, null),
-        ]);
+        $this->getParameters()->shouldBeLike(
+            [
+                new MethodParameter('format', new ClassName('', ''), false, false, null),
+                new MethodParameter('time', new ClassName('', ''), false, false, null),
+                new MethodParameter('object', new ClassName('', ''), false, true, null),
+            ]
+        );
     }
 
     public function it_exposes_return_type()
