@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Tests\NullDevelopment\Skeleton\SourceCode\DefinitionGenerator;
 
 use Nette\PhpGenerator\PhpNamespace;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Definition\SimpleIdentifier;
 use NullDevelopment\Skeleton\SourceCode\DefinitionGenerator\SimpleIdentifierGenerator;
@@ -15,6 +13,7 @@ use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod;
+use Tests\TestCase\Fixtures;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -67,14 +66,7 @@ class SimpleIdentifierGeneratorTest extends SfTestCase
     public function provideSimpleIdentifier(): array
     {
         $class   = ClassName::create('MyVendor\\Webshop\\UserEntity');
-        $integer = new Property(
-            'id',
-            ClassName::create('int'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $integer = Fixtures::integerIdProperty();
 
         $constructorMethod = new ConstructorMethod([$integer]);
         $getIdMethod       = new GetterMethod('getId', $integer);
