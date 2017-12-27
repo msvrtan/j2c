@@ -66,7 +66,7 @@ class SimpleCollectionGeneratorTest extends SfTestCase
 
     public function provideSimpleCollection(): array
     {
-        $class   = ClassName::create('MyVendor\\Webshop\\UserEntity');
+        $class   = Fixtures::userEntity();
         $integer = Fixtures::integerIdProperty();
 
         $constructorMethod = new ConstructorMethod([$integer]);

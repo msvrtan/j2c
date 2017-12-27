@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Tests\NullDevelopment\Skeleton\SourceCode\DefinitionGenerator;
 
 use Nette\PhpGenerator\PhpNamespace;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Definition\SimpleEntity;
 use NullDevelopment\Skeleton\SourceCode\DefinitionGenerator\SimpleEntityGenerator;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
@@ -65,7 +64,7 @@ class SimpleEntityGeneratorTest extends SfTestCase
 
     public function provideSimpleEntity(): array
     {
-        $class   = ClassName::create('MyVendor\\Webshop\\UserEntity');
+        $class   = Fixtures::userEntity();
         $integer = Fixtures::integerIdProperty();
 
         $constructorMethod = new ConstructorMethod([$integer]);

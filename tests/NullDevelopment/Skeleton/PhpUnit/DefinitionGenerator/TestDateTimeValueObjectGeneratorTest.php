@@ -61,8 +61,8 @@ class TestDateTimeValueObjectGeneratorTest extends SfTestCase
 
     public function provideTestDateTimeValueObject(): array
     {
-        $sutClassName = ClassName::create('MyVendor\\Webshop\\UserCreatedAt');
-        $class        = ClassName::create('spec\\MyVendor\\Webshop\\UserCreatedAtTest');
+        $sutClassName = ClassName::create('MyVendor\\UserCreatedAt');
+        $class        = ClassName::create('spec\\MyVendor\\UserCreatedAtTest');
         $parent       = ClassName::create('PhpUnit\\ObjectBehavior');
 
         return [

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Tests\NullDevelopment\Skeleton\PhpSpec\MethodFactory;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\PhpSpec\Method\SpecDeserializeMethod;
 use NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecDeserializeMethodFactory;
 use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
@@ -40,7 +39,7 @@ class SpecDeserializeMethodFactoryTest extends TestCase
 
     public function provideDeserializeMethods(): array
     {
-        $className = ClassName::create('MyVendor\\UserEntity');
+        $className = Fixtures::userEntity();
         $firstName = Fixtures::firstNameProperty();
 
         return [

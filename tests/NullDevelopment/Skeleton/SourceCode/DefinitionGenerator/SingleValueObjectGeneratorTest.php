@@ -67,7 +67,7 @@ class SingleValueObjectGeneratorTest extends SfTestCase
 
     public function provideSingleValueObject(): array
     {
-        $class      = ClassName::create('MyVendor\\Webshop\\UserEntity');
+        $class      = Fixtures::userEntity();
         $parent     = ClassName::create('MyVendor\\Core\\BaseModel');
         $interface1 = InterfaceName::create('MyVendor\\Core\\SomeInterface');
         $trait1     = TraitName::create('MyVendor\\Core\\ImportantTrait');

@@ -47,7 +47,7 @@ class SimpleCollectionTest extends TestCase
     {
         $firstName = Fixtures::firstNameProperty();
 
-        $this->name              = ClassName::create('MyVendor\\Webshop\\UserEntity');
+        $this->name              = Fixtures::userEntity();
         $this->parent            = ClassName::create('MyVendor\\Core\\BaseModel');
         $this->interfaces        = [InterfaceName::create('MyVendor\\Core\\SomeInterface')];
         $this->traits            = [TraitName::create('MyVendor\\Core\\ImportantTrait')];
@@ -76,12 +76,12 @@ class SimpleCollectionTest extends TestCase
 
     public function testGetNamespace()
     {
-        self::assertEquals('MyVendor\\Webshop', $this->sut->getNamespace());
+        self::assertEquals('MyVendor', $this->sut->getNamespace());
     }
 
     public function testGetFullClassName()
     {
-        self::assertEquals('MyVendor\\Webshop\\UserEntity', $this->sut->getFullClassName());
+        self::assertEquals('MyVendor\\UserEntity', $this->sut->getFullClassName());
     }
 
     public function testHasParent()

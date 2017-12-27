@@ -63,7 +63,7 @@ class DateTimeValueObjectGeneratorTest extends SfTestCase
 
     public function provideDateTimeValueObject(): array
     {
-        $class  = ClassName::create('MyVendor\\Webshop\\UserCreatedAt');
+        $class  = ClassName::create('MyVendor\\UserCreatedAt');
         $parent = ClassName::create('DateTime');
 
         $toString               = new DateTimeToStringMethod();
