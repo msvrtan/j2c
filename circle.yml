@@ -176,9 +176,9 @@ workflows:
       - build
       - phpunit
       - code_quality
-      - humbug:
-          requires:
-            - phpunit
+#      - humbug:
+#          requires:
+#            - phpunit
       - codecoverage_phpunit:
           requires:
             - phpunit
