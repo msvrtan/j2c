@@ -15,11 +15,28 @@ class Fixtures
         return ClassName::create('MyVendor\\User\\UserFirstName');
     }
 
+    public static function lastName(): ClassName
+    {
+        return ClassName::create('MyVendor\\User\\UserLastName');
+    }
+
     public static function firstNameProperty(): Property
     {
         return new Property(
             'firstName',
             self::firstName(),
+            false,
+            false,
+            false,
+            new Visibility('private')
+        );
+    }
+
+    public static function lastNameProperty(): Property
+    {
+        return new Property(
+            'lastName',
+            self::lastName(),
             false,
             false,
             false,
