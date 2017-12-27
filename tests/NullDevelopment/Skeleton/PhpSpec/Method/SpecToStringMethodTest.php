@@ -6,9 +6,9 @@ namespace Tests\NullDevelopment\Skeleton\PhpSpec\Method;
 
 use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\PhpSpec\Method\SpecToStringMethod;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\Method\SpecToStringMethod
@@ -23,15 +23,8 @@ class SpecToStringMethodTest extends TestCase
 
     public function setUp()
     {
-        $this->property = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
-        $this->sut = new SpecToStringMethod($this->property);
+        $this->property = Fixtures::firstNameProperty();
+        $this->sut      = new SpecToStringMethod($this->property);
     }
 
     public function testGetProperty()

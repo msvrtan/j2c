@@ -1,4 +1,4 @@
 public function testToString()
 {
-	self::assertSame($this->username, $this->sut->__toString());
+	self::assertSame($this->firstName, $this->sut->__toString());
 }

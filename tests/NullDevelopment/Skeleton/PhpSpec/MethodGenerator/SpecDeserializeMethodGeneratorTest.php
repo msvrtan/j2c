@@ -6,13 +6,12 @@ namespace Tests\NullDevelopment\Skeleton\PhpSpec\MethodGenerator;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use Mockery\MockInterface;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\PhpSpec\Method\SpecDeserializeMethod;
 use NullDevelopment\Skeleton\PhpSpec\MethodGenerator\SpecDeserializeMethodGenerator;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\MethodGenerator\SpecDeserializeMethodGenerator
@@ -57,14 +56,7 @@ class SpecDeserializeMethodGeneratorTest extends TestCase
     public function provideMethods(): array
     {
         $className = ClassName::create('MyVendor\\User');
-        $firstName = new Property(
-            'username',
-            ClassName::create('MyVendor\\User\\Username'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         return [
             [new SpecDeserializeMethod($className, [$firstName]), 'it_can_be_deserialized.output'],

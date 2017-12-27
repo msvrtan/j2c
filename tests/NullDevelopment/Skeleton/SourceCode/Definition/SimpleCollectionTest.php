@@ -9,13 +9,13 @@ use Mockery\MockInterface;
 use NullDevelopment\PhpStructure\Behaviour\Method;
 use NullDevelopment\PhpStructure\CustomType\CollectionOf;
 use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\PhpStructure\DataTypeName\InterfaceName;
 use NullDevelopment\PhpStructure\DataTypeName\TraitName;
 use NullDevelopment\Skeleton\SourceCode\Definition\SimpleCollection;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\SourceCode\Definition\SimpleCollection
@@ -45,7 +45,7 @@ class SimpleCollectionTest extends TestCase
 
     public function setUp()
     {
-        $firstName = new Property('firstName', ClassName::create('MyVendor\\User\\UserFirstName'), false, false, false, new Visibility('private'));
+        $firstName = Fixtures::firstNameProperty();
 
         $this->name              = ClassName::create('MyVendor\\Webshop\\UserEntity');
         $this->parent            = ClassName::create('MyVendor\\Core\\BaseModel');

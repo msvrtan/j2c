@@ -6,8 +6,6 @@ namespace Tests\NullDevelopment\Skeleton\PhpSpec\DefinitionFactory;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use NullDevelopment\PhpStructure\CustomType\CollectionOf;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\PhpSpec\Definition\SpecSimpleCollection;
 use NullDevelopment\Skeleton\PhpSpec\DefinitionFactory\SpecSimpleCollectionFactory;
@@ -17,6 +15,7 @@ use NullDevelopment\Skeleton\PhpSpec\Method\LetMethod;
 use NullDevelopment\Skeleton\SourceCode\Definition\SimpleCollection;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
+use Tests\TestCase\Fixtures;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -43,14 +42,7 @@ class SpecSimpleCollectionFactoryTest extends SfTestCase
 
     public function provideSamples()
     {
-        $firstName = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         $constructorMethod = new ConstructorMethod([$firstName]);
         $getterMethod      = new GetterMethod('getFirstName', $firstName);

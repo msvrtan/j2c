@@ -10,6 +10,7 @@ use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
 use NullDevelopment\Skeleton\SourceCode\MethodGenerator\SerializeMethodGenerator;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\SourceCode\MethodGenerator\SerializeMethodGenerator
@@ -50,15 +51,8 @@ class SerializeMethodGeneratorTest extends TestCase
     public function provideMethods(): array
     {
         $className = ClassName::create('MyVendor\\UserEntity');
-        $firstName = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
-        $name = new Property(
+        $firstName = Fixtures::firstNameProperty();
+        $name      = new Property(
             'name',
             ClassName::create('string'),
             false,

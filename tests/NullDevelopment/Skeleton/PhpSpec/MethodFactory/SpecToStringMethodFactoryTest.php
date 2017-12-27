@@ -5,13 +5,11 @@ declare(strict_types=1);
 namespace Tests\NullDevelopment\Skeleton\PhpSpec\MethodFactory;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\PhpSpec\Method\SpecToStringMethod;
 use NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecToStringMethodFactory;
 use NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\MethodFactory\SpecToStringMethodFactory
@@ -41,14 +39,7 @@ class SpecToStringMethodFactoryTest extends TestCase
 
     public function provideToStringMethods(): array
     {
-        $firstName = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         return [
             [new ToStringMethod($firstName)],

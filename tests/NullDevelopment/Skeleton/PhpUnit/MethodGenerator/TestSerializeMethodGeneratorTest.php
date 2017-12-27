@@ -6,13 +6,11 @@ namespace Tests\NullDevelopment\Skeleton\PhpUnit\MethodGenerator;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use Mockery\MockInterface;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\ExampleMaker\ExampleMaker;
 use NullDevelopment\Skeleton\PhpUnit\Method\TestSerializeMethod;
 use NullDevelopment\Skeleton\PhpUnit\MethodGenerator\TestSerializeMethodGenerator;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpUnit\MethodGenerator\TestSerializeMethodGenerator
@@ -56,14 +54,7 @@ class TestSerializeMethodGeneratorTest extends TestCase
 
     public function provideMethods(): array
     {
-        $firstName = new Property(
-            'username',
-            ClassName::create('MyVendor\\User\\Username'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         return [
             [new TestSerializeMethod([$firstName]), 'it_can_be_serialized.output'],

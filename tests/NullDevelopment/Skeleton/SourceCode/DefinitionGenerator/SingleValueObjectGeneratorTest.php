@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Tests\NullDevelopment\Skeleton\SourceCode\DefinitionGenerator;
 
 use Nette\PhpGenerator\PhpNamespace;
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\PhpStructure\DataTypeName\InterfaceName;
 use NullDevelopment\PhpStructure\DataTypeName\TraitName;
@@ -17,6 +15,7 @@ use NullDevelopment\Skeleton\SourceCode\Method\DeserializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\SerializeMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\ToStringMethod;
+use Tests\TestCase\Fixtures;
 use Tests\TestCase\SfTestCase;
 
 /**
@@ -72,14 +71,8 @@ class SingleValueObjectGeneratorTest extends SfTestCase
         $parent     = ClassName::create('MyVendor\\Core\\BaseModel');
         $interface1 = InterfaceName::create('MyVendor\\Core\\SomeInterface');
         $trait1     = TraitName::create('MyVendor\\Core\\ImportantTrait');
-        $firstName  = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+
+        $firstName = Fixtures::firstNameProperty();
 
         $constructorMethod = new ConstructorMethod([$firstName]);
         $getterMethod      = new GetterMethod('getFirstName', $firstName);

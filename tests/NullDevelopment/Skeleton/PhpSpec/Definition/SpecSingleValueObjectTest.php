@@ -7,7 +7,6 @@ namespace Tests\NullDevelopment\Skeleton\PhpSpec\Definition;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use NullDevelopment\PhpStructure\Behaviour\Method;
 use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
 use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\PhpStructure\DataTypeName\InterfaceName;
 use NullDevelopment\PhpStructure\DataTypeName\TraitName;
@@ -16,6 +15,7 @@ use NullDevelopment\Skeleton\PhpSpec\Method\InitializableMethod;
 use NullDevelopment\Skeleton\PhpSpec\Method\LetMethod;
 use NullDevelopment\Skeleton\SourceCode\Method\GetterMethod;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\Definition\SpecSingleValueObject
@@ -41,14 +41,7 @@ class SpecSingleValueObjectTest extends TestCase
 
     public function setUp()
     {
-        $firstName = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         $this->name       = ClassName::create('MyVendor\\Webshop\\UserEntity');
         $this->parent     = ClassName::create('MyVendor\\Core\\BaseModel');

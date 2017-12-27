@@ -6,9 +6,9 @@ namespace Tests\NullDevelopment\Skeleton\PhpSpec\Method;
 
 use NullDevelopment\PhpStructure\DataType\Property;
 use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\PhpSpec\Method\GetterSpecMethod;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\PhpSpec\Method\GetterSpecMethod
@@ -29,15 +29,8 @@ class GetterSpecMethodTest extends TestCase
     {
         $this->name            = 'it_exposes_first_name';
         $this->methodUnderTest = 'methodUnderTest';
-        $this->property        = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
-        $this->sut = new GetterSpecMethod($this->name, $this->methodUnderTest, $this->property);
+        $this->property        =  Fixtures::firstNameProperty();
+        $this->sut             = new GetterSpecMethod($this->name, $this->methodUnderTest, $this->property);
     }
 
     public function testGetMethodUnderTest()

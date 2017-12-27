@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace Tests\NullDevelopment\Skeleton\SourceCode\MethodGenerator;
 
-use NullDevelopment\PhpStructure\DataType\Property;
-use NullDevelopment\PhpStructure\DataType\Visibility;
-use NullDevelopment\PhpStructure\DataTypeName\ClassName;
 use NullDevelopment\Skeleton\SourceCode\Method\ConstructorMethod;
 use NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator;
 use PHPUnit\Framework\TestCase;
+use Tests\TestCase\Fixtures;
 
 /**
  * @covers \NullDevelopment\Skeleton\SourceCode\MethodGenerator\ConstructorMethodGenerator
@@ -49,14 +47,7 @@ class ConstructorMethodGeneratorTest extends TestCase
 
     public function provideMethods(): array
     {
-        $firstName = new Property(
-            'firstName',
-            ClassName::create('MyVendor\\User\\UserFirstName'),
-            false,
-            false,
-            false,
-            new Visibility('private')
-        );
+        $firstName = Fixtures::firstNameProperty();
 
         return [
             [new ConstructorMethod([]), '__construct.empty.output'],
