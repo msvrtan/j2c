@@ -80,12 +80,6 @@ class RepoStats
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->size;
-    }
-
-
     public function serialize(): array
     {
         return [

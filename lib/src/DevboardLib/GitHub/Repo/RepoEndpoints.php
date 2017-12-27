@@ -63,12 +63,6 @@ class RepoEndpoints
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->sshUrl;
-    }
-
-
     public function serialize(): array
     {
         return [

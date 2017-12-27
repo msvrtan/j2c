@@ -14,10 +14,6 @@ use DevboardLib\GitHub\User\UserId;
 use DevboardLib\GitHub\User\UserLogin;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitCommitterDetails
- * @group  todo
- */
 class CommitCommitterDetailsTest extends TestCase
 {
     /** @var UserId */
@@ -64,7 +60,7 @@ class CommitCommitterDetailsTest extends TestCase
 
     public function testGetId()
     {
-        self::assertSame($this->id, $this->sut->getId());
+        self::assertSame($this->siteAdmin, $this->sut->getId());
     }
 
 
@@ -110,7 +106,24 @@ class CommitCommitterDetailsTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'id'=> 1,
+            'login'=> 'login',
+            'type'=> 'type',
+            'avatarUrl'=> 'avatarUrl',
+            'gravatarId'=> 'gravatarId',
+            'htmlUrl'=> 'htmlUrl',
+            'apiUrl'=> 'apiUrl',
+            'siteAdmin'=> true
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, CommitCommitterDetails::deserialize($serialized));

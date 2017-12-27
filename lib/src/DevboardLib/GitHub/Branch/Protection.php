@@ -40,12 +40,6 @@ class Protection
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->requiredStatusChecks;
-    }
-
-
     public function serialize(): array
     {
         return [

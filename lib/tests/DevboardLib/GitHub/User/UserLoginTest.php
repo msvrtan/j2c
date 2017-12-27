@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\User;
 use DevboardLib\GitHub\User\UserLogin;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\User\UserLogin
- * @group  todo
- */
 class UserLoginTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class UserLoginTest extends TestCase
     public function testGetLogin()
     {
         self::assertSame($this->login, $this->sut->getLogin());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->login, $this->sut->getValue());
     }
 
 

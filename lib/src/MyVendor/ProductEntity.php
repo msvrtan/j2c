@@ -66,12 +66,6 @@ class ProductEntity
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->updatedAt;
-    }
-
-
     public function serialize(): array
     {
         if(null === $this->weight){

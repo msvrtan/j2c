@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit;
 use DevboardLib\GitHub\Commit\CommitSha;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitSha
- * @group  todo
- */
 class CommitShaTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class CommitShaTest extends TestCase
     public function testGetSha()
     {
         self::assertSame($this->sha, $this->sut->getSha());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->sha, $this->sut->getValue());
     }
 
 

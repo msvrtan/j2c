@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Account;
 use DevboardLib\GitHub\Account\AccountType;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Account\AccountType
- * @group  todo
- */
 class AccountTypeTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class AccountTypeTest extends TestCase
     public function testGetType()
     {
         self::assertSame($this->type, $this->sut->getType());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->type, $this->sut->getValue());
     }
 
 

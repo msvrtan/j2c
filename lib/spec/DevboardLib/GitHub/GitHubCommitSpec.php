@@ -101,20 +101,24 @@ class GitHubCommitSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn('htmlUrl');
-    }
-
-
     public function it_can_be_serialized(CommitSha $sha, CommitMessage $message, CommitDate $commitDate, CommitAuthor $author, CommitCommitter $committer, CommitTree $tree, CommitParentCollection $parents, CommitVerification $verification, CommitApiUrl $apiUrl, CommitHtmlUrl $htmlUrl)
     {
-        $this->serialize()->shouldReturn(['sha' => 'sha', 'message' => 'message', 'commitDate' => '2018-01-01 00:01:00', 'author' => ['name'=>'author', 'email'=>'author', 'date'=>'2018-01-01 00:01:00', 'authorDetails'=>['id'=>1, 'login'=>'author', 'type'=>'author', 'avatarUrl'=>'author', 'gravatarId'=>'author', 'htmlUrl'=>'author', 'apiUrl'=>'author', 'siteAdmin'=>true]], 'committer' => ['name'=>'committer', 'email'=>'committer', 'date'=>'2018-01-01 00:01:00', 'committerDetails'=>['id'=>1, 'login'=>'committer', 'type'=>'committer', 'avatarUrl'=>'committer', 'gravatarId'=>'committer', 'htmlUrl'=>'committer', 'apiUrl'=>'committer', 'siteAdmin'=>true]], 'tree' => ['sha'=>'tree', 'url'=>'tree'], 'parents' => [['sha'=>'elements', 'apiUrl'=>'elements', 'htmlUrl'=>'elements']], 'verification' => ['verified'=>true, 'reason'=>'verification', 'signature'=>'verification', 'payload'=>'verification'], 'apiUrl' => 'apiUrl', 'htmlUrl' => 'htmlUrl']);
+        $sha->serialize()->shouldBeCalled()->willReturn('sha');
+        $message->serialize()->shouldBeCalled()->willReturn('message');
+        $commitDate->serialize()->shouldBeCalled()->willReturn('2018-01-01T00:01:00+00:00');
+        $author->serialize()->shouldBeCalled()->willReturn(['name'=>'name', 'email'=>'email', 'date'=>'2018-01-01T00:01:00+00:00', 'authorDetails'=>['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]]);
+        $committer->serialize()->shouldBeCalled()->willReturn(['name'=>'name', 'email'=>'email', 'date'=>'2018-01-01T00:01:00+00:00', 'committerDetails'=>['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]]);
+        $tree->serialize()->shouldBeCalled()->willReturn(['sha'=>'sha', 'url'=>'url']);
+        $parents->serialize()->shouldBeCalled()->willReturn([['sha'=>'sha', 'apiUrl'=>'apiUrl', 'htmlUrl'=>'htmlUrl']]);
+        $verification->serialize()->shouldBeCalled()->willReturn(['verified'=>true, 'reason'=>'reason', 'signature'=>'signature', 'payload'=>'payload']);
+        $apiUrl->serialize()->shouldBeCalled()->willReturn('apiUrl');
+        $htmlUrl->serialize()->shouldBeCalled()->willReturn('htmlUrl');
+        $this->serialize()->shouldReturn(['sha' => 'sha', 'message' => 'message', 'commitDate' => '2018-01-01T00:01:00+00:00', 'author' => ['name'=>'name', 'email'=>'email', 'date'=>'2018-01-01T00:01:00+00:00', 'authorDetails'=>['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]], 'committer' => ['name'=>'name', 'email'=>'email', 'date'=>'2018-01-01T00:01:00+00:00', 'committerDetails'=>['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]], 'tree' => ['sha'=>'sha', 'url'=>'url'], 'parents' => [['sha'=>'sha', 'apiUrl'=>'apiUrl', 'htmlUrl'=>'htmlUrl']], 'verification' => ['verified'=>true, 'reason'=>'reason', 'signature'=>'signature', 'payload'=>'payload'], 'apiUrl' => 'apiUrl', 'htmlUrl' => 'htmlUrl']);
     }
 
 
     public function it_can_be_deserialized(CommitSha $sha, CommitMessage $message, CommitDate $commitDate, CommitAuthor $author, CommitCommitter $committer, CommitTree $tree, CommitParentCollection $parents, CommitVerification $verification, CommitApiUrl $apiUrl, CommitHtmlUrl $htmlUrl)
     {
-        $this->deserialize(['sha' => 'sha', 'message' => 'message', 'commitDate' => '2018-01-01 00:01:00', 'author' => ['name'=>'author', 'email'=>'author', 'date'=>'2018-01-01 00:01:00', 'authorDetails'=>['id'=>1, 'login'=>'author', 'type'=>'author', 'avatarUrl'=>'author', 'gravatarId'=>'author', 'htmlUrl'=>'author', 'apiUrl'=>'author', 'siteAdmin'=>true]], 'committer' => ['name'=>'committer', 'email'=>'committer', 'date'=>'2018-01-01 00:01:00', 'committerDetails'=>['id'=>1, 'login'=>'committer', 'type'=>'committer', 'avatarUrl'=>'committer', 'gravatarId'=>'committer', 'htmlUrl'=>'committer', 'apiUrl'=>'committer', 'siteAdmin'=>true]], 'tree' => ['sha'=>'tree', 'url'=>'tree'], 'parents' => [['sha'=>'elements', 'apiUrl'=>'elements', 'htmlUrl'=>'elements']], 'verification' => ['verified'=>true, 'reason'=>'verification', 'signature'=>'verification', 'payload'=>'verification'], 'apiUrl' => 'apiUrl', 'htmlUrl' => 'htmlUrl'])->shouldReturnAnInstanceOf(GitHubCommit::class);
+        $this->deserialize(['sha' => 'sha', 'message' => 'message', 'commitDate' => '2018-01-01T00:01:00+00:00', 'author' => ['name'=>'name', 'email'=>'email', 'date'=>'2018-01-01T00:01:00+00:00', 'authorDetails'=>['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]], 'committer' => ['name'=>'name', 'email'=>'email', 'date'=>'2018-01-01T00:01:00+00:00', 'committerDetails'=>['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'apiUrl'=>'apiUrl', 'siteAdmin'=>true]], 'tree' => ['sha'=>'sha', 'url'=>'url'], 'parents' => [['sha'=>'sha', 'apiUrl'=>'apiUrl', 'htmlUrl'=>'htmlUrl']], 'verification' => ['verified'=>true, 'reason'=>'reason', 'signature'=>'signature', 'payload'=>'payload'], 'apiUrl' => 'apiUrl', 'htmlUrl' => 'htmlUrl'])->shouldReturnAnInstanceOf(GitHubCommit::class);
     }
 }

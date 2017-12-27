@@ -40,20 +40,15 @@ class ProtectionSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn(['enforcementLevel'=>'requiredStatusChecks', 'contexts'=>[1]]);
-    }
-
-
     public function it_can_be_serialized(RequiredStatusChecks $requiredStatusChecks)
     {
-        $this->serialize()->shouldReturn(['enabled' => true, 'requiredStatusChecks' => ['enforcementLevel'=>'requiredStatusChecks', 'contexts'=>[1]]]);
+        $requiredStatusChecks->serialize()->shouldBeCalled()->willReturn(['enforcementLevel'=>'enforcementLevel', 'contexts'=>[1]]);
+        $this->serialize()->shouldReturn(['enabled' => true, 'requiredStatusChecks' => ['enforcementLevel'=>'enforcementLevel', 'contexts'=>[1]]]);
     }
 
 
     public function it_can_be_deserialized(RequiredStatusChecks $requiredStatusChecks)
     {
-        $this->deserialize(['enabled' => true, 'requiredStatusChecks' => ['enforcementLevel'=>'requiredStatusChecks', 'contexts'=>[1]]])->shouldReturnAnInstanceOf(Protection::class);
+        $this->deserialize(['enabled' => true, 'requiredStatusChecks' => ['enforcementLevel'=>'enforcementLevel', 'contexts'=>[1]]])->shouldReturnAnInstanceOf(Protection::class);
     }
 }

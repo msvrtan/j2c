@@ -41,12 +41,6 @@ class RequiredStatusChecks
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->contexts;
-    }
-
-
     public function serialize(): array
     {
         return [

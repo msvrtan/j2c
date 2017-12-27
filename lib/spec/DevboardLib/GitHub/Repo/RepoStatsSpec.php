@@ -64,14 +64,9 @@ class RepoStatsSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn(1);
-    }
-
-
     public function it_can_be_serialized(RepoSize $size)
     {
+        $size->serialize()->shouldBeCalled()->willReturn(1);
         $this->serialize()->shouldReturn(['networkCount' => 1, 'watchersCount' => 1, 'stargazersCount' => 1, 'subscribersCount' => 1, 'openIssuesCount' => 1, 'size' => 1]);
     }
 

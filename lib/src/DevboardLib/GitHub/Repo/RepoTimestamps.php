@@ -48,12 +48,6 @@ class RepoTimestamps
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->pushedAt;
-    }
-
-
     public function serialize(): array
     {
         return [

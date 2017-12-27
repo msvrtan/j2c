@@ -11,10 +11,6 @@ use MyVendor\User\UserId;
 use MyVendor\User\Username;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \MyVendor\UserEntity
- * @group  todo
- */
 class UserEntityTest extends TestCase
 {
     /** @var UserId */
@@ -44,16 +40,16 @@ class UserEntityTest extends TestCase
         $this->id = new UserId(1);
         $this->firstName = 'firstName';
         $this->lastName = 'lastName';
-        $this->username = new Username('value');
-        $this->createdAt = new UserCreatedAt('2018-01-01 00:01:00');
-        $this->updatedAt = new DateTime('2018-01-01 00:01:00');
+        $this->username = new Username('username');
+        $this->createdAt = new UserCreatedAt('2018-01-01T00:01:00+00:00');
+        $this->updatedAt = new DateTime('2018-01-01T00:01:00+00:00');
         $this->sut = new UserEntity($this->id, $this->firstName, $this->lastName, $this->username, $this->createdAt, $this->updatedAt);
     }
 
 
     public function testGetId()
     {
-        self::assertSame($this->id, $this->sut->getId());
+        self::assertSame($this->updatedAt, $this->sut->getId());
     }
 
 
@@ -87,7 +83,22 @@ class UserEntityTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'id'=> 1,
+            'firstName'=> 'firstName',
+            'lastName'=> 'lastName',
+            'username'=> 'username',
+            'createdAt'=> '2018-01-01T00:01:00+00:00',
+            'updatedAt'=> '2018-01-01T00:01:00+00:00'
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, UserEntity::deserialize($serialized));

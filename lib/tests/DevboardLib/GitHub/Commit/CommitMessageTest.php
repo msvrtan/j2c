@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit;
 use DevboardLib\GitHub\Commit\CommitMessage;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitMessage
- * @group  todo
- */
 class CommitMessageTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class CommitMessageTest extends TestCase
     public function testGetMessage()
     {
         self::assertSame($this->message, $this->sut->getMessage());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->message, $this->sut->getValue());
     }
 
 

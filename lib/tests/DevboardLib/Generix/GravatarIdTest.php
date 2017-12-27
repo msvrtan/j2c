@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\Generix;
 use DevboardLib\Generix\GravatarId;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\Generix\GravatarId
- * @group  todo
- */
 class GravatarIdTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class GravatarIdTest extends TestCase
     public function testGetGravatarId()
     {
         self::assertSame($this->gravatarId, $this->sut->getGravatarId());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->gravatarId, $this->sut->getValue());
     }
 
 

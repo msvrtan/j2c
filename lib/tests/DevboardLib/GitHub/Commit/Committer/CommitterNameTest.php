@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit\Committer;
 use DevboardLib\GitHub\Commit\Committer\CommitterName;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\Committer\CommitterName
- * @group  todo
- */
 class CommitterNameTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class CommitterNameTest extends TestCase
     public function testGetName()
     {
         self::assertSame($this->name, $this->sut->getName());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->name, $this->sut->getValue());
     }
 
 

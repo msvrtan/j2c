@@ -61,12 +61,6 @@ class CommitAuthor
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->authorDetails;
-    }
-
-
     public function serialize(): array
     {
         if(null === $this->authorDetails){

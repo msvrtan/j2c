@@ -11,10 +11,6 @@ use DevboardLib\GitHub\Repo\RepoEndpoints\RepoHtmlUrl;
 use DevboardLib\GitHub\Repo\RepoEndpoints\RepoSshUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoEndpoints
- * @group  todo
- */
 class RepoEndpointsTest extends TestCase
 {
     /** @var RepoHtmlUrl */
@@ -49,6 +45,12 @@ class RepoEndpointsTest extends TestCase
     }
 
 
+    public function testGetId()
+    {
+        self::assertSame($this->sshUrl, $this->sut->getId());
+    }
+
+
     public function testGetUrl()
     {
         self::assertSame($this->url, $this->sut->getUrl());
@@ -67,7 +69,20 @@ class RepoEndpointsTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'htmlUrl'=> 'htmlUrl',
+            'url'=> 'url',
+            'gitUrl'=> 'gitUrl',
+            'sshUrl'=> 'sshUrl'
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, RepoEndpoints::deserialize($serialized));

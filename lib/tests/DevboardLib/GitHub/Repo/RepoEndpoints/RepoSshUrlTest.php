@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Repo\RepoEndpoints;
 use DevboardLib\GitHub\Repo\RepoEndpoints\RepoSshUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoEndpoints\RepoSshUrl
- * @group  todo
- */
 class RepoSshUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class RepoSshUrlTest extends TestCase
     public function testGetSshUrl()
     {
         self::assertSame($this->sshUrl, $this->sut->getSshUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->sshUrl, $this->sut->getValue());
     }
 
 

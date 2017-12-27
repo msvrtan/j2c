@@ -48,20 +48,17 @@ class RepoTimestampsSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn('2018-01-01 00:01:00');
-    }
-
-
     public function it_can_be_serialized(RepoCreatedAt $createdAt, RepoUpdatedAt $updatedAt, RepoPushedAt $pushedAt)
     {
-        $this->serialize()->shouldReturn(['createdAt' => '2018-01-01 00:01:00', 'updatedAt' => '2018-01-01 00:01:00', 'pushedAt' => '2018-01-01 00:01:00']);
+        $createdAt->serialize()->shouldBeCalled()->willReturn('2018-01-01T00:01:00+00:00');
+        $updatedAt->serialize()->shouldBeCalled()->willReturn('2018-01-01T00:01:00+00:00');
+        $pushedAt->serialize()->shouldBeCalled()->willReturn('2018-01-01T00:01:00+00:00');
+        $this->serialize()->shouldReturn(['createdAt' => '2018-01-01T00:01:00+00:00', 'updatedAt' => '2018-01-01T00:01:00+00:00', 'pushedAt' => '2018-01-01T00:01:00+00:00']);
     }
 
 
     public function it_can_be_deserialized(RepoCreatedAt $createdAt, RepoUpdatedAt $updatedAt, RepoPushedAt $pushedAt)
     {
-        $this->deserialize(['createdAt' => '2018-01-01 00:01:00', 'updatedAt' => '2018-01-01 00:01:00', 'pushedAt' => '2018-01-01 00:01:00'])->shouldReturnAnInstanceOf(RepoTimestamps::class);
+        $this->deserialize(['createdAt' => '2018-01-01T00:01:00+00:00', 'updatedAt' => '2018-01-01T00:01:00+00:00', 'pushedAt' => '2018-01-01T00:01:00+00:00'])->shouldReturnAnInstanceOf(RepoTimestamps::class);
     }
 }

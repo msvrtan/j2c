@@ -77,12 +77,6 @@ class UserEntity
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->updatedAt;
-    }
-
-
     public function serialize(): array
     {
         return [

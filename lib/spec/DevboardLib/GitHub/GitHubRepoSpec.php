@@ -120,20 +120,25 @@ class GitHubRepoSpec extends ObjectBehavior
     }
 
 
-    public function it_is_castable_to_string()
-    {
-        $this->__toString()->shouldReturn(['createdAt'=>'2018-01-01 00:01:00', 'updatedAt'=>'2018-01-01 00:01:00', 'pushedAt'=>'2018-01-01 00:01:00']);
-    }
-
-
     public function it_can_be_serialized(RepoId $id, RepoFullName $fullName, RepoOwner $owner, BranchName $defaultBranch, RepoDescription $description, RepoHomepage $homepage, RepoLanguage $language, RepoMirrorUrl $mirrorUrl, RepoEndpoints $repoEndpoints, RepoStats $repoStats, RepoTimestamps $repoTimestamps)
     {
-        $this->serialize()->shouldReturn(['id' => 1, 'fullName' => 'fullName', 'owner' => ['id'=>1, 'login'=>'owner', 'type'=>'owner', 'avatarUrl'=>'owner', 'gravatarId'=>'owner', 'htmlUrl'=>'owner', 'url'=>'owner', 'siteAdmin'=>true], 'private' => true, 'defaultBranch' => 'defaultBranch', 'fork' => true, 'description' => 'description', 'homepage' => 'homepage', 'language' => 'language', 'mirrorUrl' => 'mirrorUrl', 'archived' => true, 'repoEndpoints' => ['htmlUrl'=>'repoEndpoints', 'url'=>'repoEndpoints', 'gitUrl'=>'repoEndpoints', 'sshUrl'=>'repoEndpoints'], 'repoStats' => ['networkCount'=>1, 'watchersCount'=>1, 'stargazersCount'=>1, 'subscribersCount'=>1, 'openIssuesCount'=>1, 'size'=>1], 'repoTimestamps' => ['createdAt'=>'2018-01-01 00:01:00', 'updatedAt'=>'2018-01-01 00:01:00', 'pushedAt'=>'2018-01-01 00:01:00']]);
+        $id->serialize()->shouldBeCalled()->willReturn(1);
+        $fullName->serialize()->shouldBeCalled()->willReturn('fullName');
+        $owner->serialize()->shouldBeCalled()->willReturn(['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'url'=>'url', 'siteAdmin'=>true]);
+        $defaultBranch->serialize()->shouldBeCalled()->willReturn('name');
+        $description->serialize()->shouldBeCalled()->willReturn('description');
+        $homepage->serialize()->shouldBeCalled()->willReturn('homepage');
+        $language->serialize()->shouldBeCalled()->willReturn('language');
+        $mirrorUrl->serialize()->shouldBeCalled()->willReturn('mirrorUrl');
+        $repoEndpoints->serialize()->shouldBeCalled()->willReturn(['htmlUrl'=>'htmlUrl', 'url'=>'url', 'gitUrl'=>'gitUrl', 'sshUrl'=>'sshUrl']);
+        $repoStats->serialize()->shouldBeCalled()->willReturn(['networkCount'=>1, 'watchersCount'=>1, 'stargazersCount'=>1, 'subscribersCount'=>1, 'openIssuesCount'=>1, 'size'=>1]);
+        $repoTimestamps->serialize()->shouldBeCalled()->willReturn(['createdAt'=>'2018-01-01T00:01:00+00:00', 'updatedAt'=>'2018-01-01T00:01:00+00:00', 'pushedAt'=>'2018-01-01T00:01:00+00:00']);
+        $this->serialize()->shouldReturn(['id' => 1, 'fullName' => 'fullName', 'owner' => ['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'url'=>'url', 'siteAdmin'=>true], 'private' => true, 'defaultBranch' => 'name', 'fork' => true, 'description' => 'description', 'homepage' => 'homepage', 'language' => 'language', 'mirrorUrl' => 'mirrorUrl', 'archived' => true, 'repoEndpoints' => ['htmlUrl'=>'htmlUrl', 'url'=>'url', 'gitUrl'=>'gitUrl', 'sshUrl'=>'sshUrl'], 'repoStats' => ['networkCount'=>1, 'watchersCount'=>1, 'stargazersCount'=>1, 'subscribersCount'=>1, 'openIssuesCount'=>1, 'size'=>1], 'repoTimestamps' => ['createdAt'=>'2018-01-01T00:01:00+00:00', 'updatedAt'=>'2018-01-01T00:01:00+00:00', 'pushedAt'=>'2018-01-01T00:01:00+00:00']]);
     }
 
 
     public function it_can_be_deserialized(RepoId $id, RepoFullName $fullName, RepoOwner $owner, BranchName $defaultBranch, RepoDescription $description, RepoHomepage $homepage, RepoLanguage $language, RepoMirrorUrl $mirrorUrl, RepoEndpoints $repoEndpoints, RepoStats $repoStats, RepoTimestamps $repoTimestamps)
     {
-        $this->deserialize(['id' => 1, 'fullName' => 'fullName', 'owner' => ['id'=>1, 'login'=>'owner', 'type'=>'owner', 'avatarUrl'=>'owner', 'gravatarId'=>'owner', 'htmlUrl'=>'owner', 'url'=>'owner', 'siteAdmin'=>true], 'private' => true, 'defaultBranch' => 'defaultBranch', 'fork' => true, 'description' => 'description', 'homepage' => 'homepage', 'language' => 'language', 'mirrorUrl' => 'mirrorUrl', 'archived' => true, 'repoEndpoints' => ['htmlUrl'=>'repoEndpoints', 'url'=>'repoEndpoints', 'gitUrl'=>'repoEndpoints', 'sshUrl'=>'repoEndpoints'], 'repoStats' => ['networkCount'=>1, 'watchersCount'=>1, 'stargazersCount'=>1, 'subscribersCount'=>1, 'openIssuesCount'=>1, 'size'=>1], 'repoTimestamps' => ['createdAt'=>'2018-01-01 00:01:00', 'updatedAt'=>'2018-01-01 00:01:00', 'pushedAt'=>'2018-01-01 00:01:00']])->shouldReturnAnInstanceOf(GitHubRepo::class);
+        $this->deserialize(['id' => 1, 'fullName' => 'fullName', 'owner' => ['id'=>1, 'login'=>'login', 'type'=>'type', 'avatarUrl'=>'avatarUrl', 'gravatarId'=>'gravatarId', 'htmlUrl'=>'htmlUrl', 'url'=>'url', 'siteAdmin'=>true], 'private' => true, 'defaultBranch' => 'name', 'fork' => true, 'description' => 'description', 'homepage' => 'homepage', 'language' => 'language', 'mirrorUrl' => 'mirrorUrl', 'archived' => true, 'repoEndpoints' => ['htmlUrl'=>'htmlUrl', 'url'=>'url', 'gitUrl'=>'gitUrl', 'sshUrl'=>'sshUrl'], 'repoStats' => ['networkCount'=>1, 'watchersCount'=>1, 'stargazersCount'=>1, 'subscribersCount'=>1, 'openIssuesCount'=>1, 'size'=>1], 'repoTimestamps' => ['createdAt'=>'2018-01-01T00:01:00+00:00', 'updatedAt'=>'2018-01-01T00:01:00+00:00', 'pushedAt'=>'2018-01-01T00:01:00+00:00']])->shouldReturnAnInstanceOf(GitHubRepo::class);
     }
 }

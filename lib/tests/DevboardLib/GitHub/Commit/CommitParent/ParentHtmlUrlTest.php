@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit\CommitParent;
 use DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitParent\ParentHtmlUrl
- * @group  todo
- */
 class ParentHtmlUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class ParentHtmlUrlTest extends TestCase
     public function testGetHtmlUrl()
     {
         self::assertSame($this->htmlUrl, $this->sut->getHtmlUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->htmlUrl, $this->sut->getValue());
     }
 
 

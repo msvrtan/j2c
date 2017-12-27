@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\Generix;
 use DevboardLib\Generix\EmailAddress;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\Generix\EmailAddress
- * @group  todo
- */
 class EmailAddressTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class EmailAddressTest extends TestCase
     public function testGetEmail()
     {
         self::assertSame($this->email, $this->sut->getEmail());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->email, $this->sut->getValue());
     }
 
 

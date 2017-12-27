@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\User;
 use DevboardLib\GitHub\User\UserId;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\User\UserId
- * @group  todo
- */
 class UserIdTest extends TestCase
 {
     /** @var int */

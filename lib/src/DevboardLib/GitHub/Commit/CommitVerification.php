@@ -63,12 +63,6 @@ class CommitVerification
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->payload;
-    }
-
-
     public function serialize(): array
     {
         if(null === $this->signature){

@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Repo;
 use DevboardLib\GitHub\Repo\RepoFullName;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoFullName
- * @group  todo
- */
 class RepoFullNameTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class RepoFullNameTest extends TestCase
     public function testGetFullName()
     {
         self::assertSame($this->fullName, $this->sut->getFullName());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->fullName, $this->sut->getValue());
     }
 
 

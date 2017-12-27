@@ -14,10 +14,6 @@ use DevboardLib\GitHub\Account\AccountType;
 use DevboardLib\GitHub\Repo\RepoOwner;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoOwner
- * @group  todo
- */
 class RepoOwnerTest extends TestCase
 {
     /** @var AccountId */
@@ -64,7 +60,7 @@ class RepoOwnerTest extends TestCase
 
     public function testGetId()
     {
-        self::assertSame($this->id, $this->sut->getId());
+        self::assertSame($this->siteAdmin, $this->sut->getId());
     }
 
 
@@ -110,7 +106,24 @@ class RepoOwnerTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'id'=> 1,
+            'login'=> 'login',
+            'type'=> 'type',
+            'avatarUrl'=> 'avatarUrl',
+            'gravatarId'=> 'gravatarId',
+            'htmlUrl'=> 'htmlUrl',
+            'url'=> 'url',
+            'siteAdmin'=> true
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, RepoOwner::deserialize($serialized));

@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit\Tree;
 use DevboardLib\GitHub\Commit\Tree\TreeSha;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\Tree\TreeSha
- * @group  todo
- */
 class TreeShaTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class TreeShaTest extends TestCase
     public function testGetSha()
     {
         self::assertSame($this->sha, $this->sut->getSha());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->sha, $this->sut->getValue());
     }
 
 

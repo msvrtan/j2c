@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit;
 use DevboardLib\GitHub\Commit\CommitCommentsUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitCommentsUrl
- * @group  todo
- */
 class CommitCommentsUrlTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class CommitCommentsUrlTest extends TestCase
     public function testGetCommentsUrl()
     {
         self::assertSame($this->commentsUrl, $this->sut->getCommentsUrl());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->commentsUrl, $this->sut->getValue());
     }
 
 

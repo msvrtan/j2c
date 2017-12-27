@@ -61,12 +61,6 @@ class GitHubBranch
     }
 
 
-    public function __toString(): string
-    {
-        return (string) $this->protectionUrl;
-    }
-
-
     public function serialize(): array
     {
         return [

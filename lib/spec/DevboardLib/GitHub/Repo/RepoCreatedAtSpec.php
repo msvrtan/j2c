@@ -12,7 +12,7 @@ class RepoCreatedAtSpec extends ObjectBehavior
 {
     public function let()
     {
-        $this->beConstructedWith('2018-01-01 11:22:33');
+        $this->beConstructedWith('2018-01-01T11:22:33+00:00');
     }
 
 

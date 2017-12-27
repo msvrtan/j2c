@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Repo;
 use DevboardLib\GitHub\Repo\RepoHomepage;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoHomepage
- * @group  todo
- */
 class RepoHomepageTest extends TestCase
 {
     /** @var string */
@@ -30,6 +26,12 @@ class RepoHomepageTest extends TestCase
     public function testGetHomepage()
     {
         self::assertSame($this->homepage, $this->sut->getHomepage());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->homepage, $this->sut->getValue());
     }
 
 

@@ -10,10 +10,6 @@ use DevboardLib\GitHub\Repo\RepoTimestamps;
 use DevboardLib\GitHub\Repo\RepoUpdatedAt;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Repo\RepoTimestamps
- * @group  todo
- */
 class RepoTimestampsTest extends TestCase
 {
     /** @var RepoCreatedAt */
@@ -31,9 +27,9 @@ class RepoTimestampsTest extends TestCase
 
     public function setUp()
     {
-        $this->createdAt = new RepoCreatedAt('2018-01-01 00:01:00');
-        $this->updatedAt = new RepoUpdatedAt('2018-01-01 00:01:00');
-        $this->pushedAt = new RepoPushedAt('2018-01-01 00:01:00');
+        $this->createdAt = new RepoCreatedAt('2018-01-01T00:01:00+00:00');
+        $this->updatedAt = new RepoUpdatedAt('2018-01-01T00:01:00+00:00');
+        $this->pushedAt = new RepoPushedAt('2018-01-01T00:01:00+00:00');
         $this->sut = new RepoTimestamps($this->createdAt, $this->updatedAt, $this->pushedAt);
     }
 
@@ -41,6 +37,12 @@ class RepoTimestampsTest extends TestCase
     public function testGetCreatedAt()
     {
         self::assertSame($this->createdAt, $this->sut->getCreatedAt());
+    }
+
+
+    public function testGetId()
+    {
+        self::assertSame($this->pushedAt, $this->sut->getId());
     }
 
 
@@ -56,7 +58,19 @@ class RepoTimestampsTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'createdAt'=> '2018-01-01T00:01:00+00:00',
+            'updatedAt'=> '2018-01-01T00:01:00+00:00',
+            'pushedAt'=> '2018-01-01T00:01:00+00:00'
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, RepoTimestamps::deserialize($serialized));

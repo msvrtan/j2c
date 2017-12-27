@@ -9,10 +9,6 @@ use DevboardLib\GitHub\Commit\Tree\TreeSha;
 use DevboardLib\GitHub\Commit\Tree\TreeUrl;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitTree
- * @group  todo
- */
 class CommitTreeTest extends TestCase
 {
     /** @var TreeSha */
@@ -39,13 +35,30 @@ class CommitTreeTest extends TestCase
     }
 
 
+    public function testGetId()
+    {
+        self::assertSame($this->url, $this->sut->getId());
+    }
+
+
     public function testGetUrl()
     {
         self::assertSame($this->url, $this->sut->getUrl());
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'sha'=> 'sha',
+            'url'=> 'url'
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, CommitTree::deserialize($serialized));

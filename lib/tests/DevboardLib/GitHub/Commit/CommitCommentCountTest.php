@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Commit;
 use DevboardLib\GitHub\Commit\CommitCommentCount;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Commit\CommitCommentCount
- * @group  todo
- */
 class CommitCommentCountTest extends TestCase
 {
     /** @var int */
@@ -30,6 +26,12 @@ class CommitCommentCountTest extends TestCase
     public function testGetCommentCount()
     {
         self::assertSame($this->commentCount, $this->sut->getCommentCount());
+    }
+
+
+    public function testGetValue()
+    {
+        self::assertSame($this->commentCount, $this->sut->getValue());
     }
 
 

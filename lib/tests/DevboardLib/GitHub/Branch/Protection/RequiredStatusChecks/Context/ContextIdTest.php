@@ -7,10 +7,6 @@ namespace Tests\DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Contex
 use DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context\ContextId;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \DevboardLib\GitHub\Branch\Protection\RequiredStatusChecks\Context\ContextId
- * @group  todo
- */
 class ContextIdTest extends TestCase
 {
     /** @var int */

@@ -10,10 +10,6 @@ use MyVendor\Product\ProductId;
 use MyVendor\Product\ProductWeight;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \MyVendor\ProductEntity
- * @group  todo
- */
 class ProductEntityTest extends TestCase
 {
     /** @var ProductId */
@@ -22,10 +18,10 @@ class ProductEntityTest extends TestCase
     /** @var string */
     private $title;
 
-    /** @var string */
+    /** @var string|null */
     private $description;
 
-    /** @var ProductWeight */
+    /** @var ProductWeight|null */
     private $weight;
 
     /** @var DateTime */
@@ -41,14 +37,14 @@ class ProductEntityTest extends TestCase
         $this->title = 'title';
         $this->description = 'description';
         $this->weight = new ProductWeight(1);
-        $this->updatedAt = new DateTime('2018-01-01 00:01:00');
+        $this->updatedAt = new DateTime('2018-01-01T00:01:00+00:00');
         $this->sut = new ProductEntity($this->id, $this->title, $this->description, $this->weight, $this->updatedAt);
     }
 
 
     public function testGetId()
     {
-        self::assertSame($this->id, $this->sut->getId());
+        self::assertSame($this->updatedAt, $this->sut->getId());
     }
 
 
@@ -76,7 +72,21 @@ class ProductEntityTest extends TestCase
     }
 
 
-    public function testSerializeAndDeserialize()
+    public function testSerialize()
+    {
+        $expected = [
+            'id'=> 1,
+            'title'=> 'title',
+            'description'=> 'description',
+            'weight'=> 1,
+            'updatedAt'=> '2018-01-01T00:01:00+00:00'
+        ];
+
+        self::assertSame($expected, $this->sut->serialize());
+    }
+
+
+    public function testDeserialize()
     {
         $serialized = $this->sut->serialize();
         self::assertEquals($this->sut, ProductEntity::deserialize($serialized));
